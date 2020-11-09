@@ -16,10 +16,10 @@ var _ clients.VoidFuture
 
 type Client interface {
 	DescribeDimensionKeys(ctx workflow.Context, input *pi.DescribeDimensionKeysInput) (*pi.DescribeDimensionKeysOutput, error)
-	DescribeDimensionKeysAsync(ctx workflow.Context, input *pi.DescribeDimensionKeysInput) *PIDescribeDimensionKeysFuture
+	DescribeDimensionKeysAsync(ctx workflow.Context, input *pi.DescribeDimensionKeysInput) *DescribeDimensionKeysFuture
 
 	GetResourceMetrics(ctx workflow.Context, input *pi.GetResourceMetricsInput) (*pi.GetResourceMetricsOutput, error)
-	GetResourceMetricsAsync(ctx workflow.Context, input *pi.GetResourceMetricsInput) *PIGetResourceMetricsFuture
+	GetResourceMetricsAsync(ctx workflow.Context, input *pi.GetResourceMetricsInput) *GetResourceMetricsFuture
 }
 
 func NewClient() Client {

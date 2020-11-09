@@ -16,56 +16,56 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type AugmentedAIRuntimeDeleteHumanLoopFuture struct {
+type DeleteHumanLoopFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AugmentedAIRuntimeDeleteHumanLoopFuture) Get(ctx workflow.Context) (*augmentedairuntime.DeleteHumanLoopOutput, error) {
+func (r *DeleteHumanLoopFuture) Get(ctx workflow.Context) (*augmentedairuntime.DeleteHumanLoopOutput, error) {
 	var output augmentedairuntime.DeleteHumanLoopOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AugmentedAIRuntimeDescribeHumanLoopFuture struct {
+type DescribeHumanLoopFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AugmentedAIRuntimeDescribeHumanLoopFuture) Get(ctx workflow.Context) (*augmentedairuntime.DescribeHumanLoopOutput, error) {
+func (r *DescribeHumanLoopFuture) Get(ctx workflow.Context) (*augmentedairuntime.DescribeHumanLoopOutput, error) {
 	var output augmentedairuntime.DescribeHumanLoopOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AugmentedAIRuntimeListHumanLoopsFuture struct {
+type ListHumanLoopsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AugmentedAIRuntimeListHumanLoopsFuture) Get(ctx workflow.Context) (*augmentedairuntime.ListHumanLoopsOutput, error) {
+func (r *ListHumanLoopsFuture) Get(ctx workflow.Context) (*augmentedairuntime.ListHumanLoopsOutput, error) {
 	var output augmentedairuntime.ListHumanLoopsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AugmentedAIRuntimeStartHumanLoopFuture struct {
+type StartHumanLoopFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AugmentedAIRuntimeStartHumanLoopFuture) Get(ctx workflow.Context) (*augmentedairuntime.StartHumanLoopOutput, error) {
+func (r *StartHumanLoopFuture) Get(ctx workflow.Context) (*augmentedairuntime.StartHumanLoopOutput, error) {
 	var output augmentedairuntime.StartHumanLoopOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AugmentedAIRuntimeStopHumanLoopFuture struct {
+type StopHumanLoopFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AugmentedAIRuntimeStopHumanLoopFuture) Get(ctx workflow.Context) (*augmentedairuntime.StopHumanLoopOutput, error) {
+func (r *StopHumanLoopFuture) Get(ctx workflow.Context) (*augmentedairuntime.StopHumanLoopOutput, error) {
 	var output augmentedairuntime.StopHumanLoopOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -77,9 +77,9 @@ func (a *stub) DeleteHumanLoop(ctx workflow.Context, input *augmentedairuntime.D
 	return &output, err
 }
 
-func (a *stub) DeleteHumanLoopAsync(ctx workflow.Context, input *augmentedairuntime.DeleteHumanLoopInput) *AugmentedAIRuntimeDeleteHumanLoopFuture {
+func (a *stub) DeleteHumanLoopAsync(ctx workflow.Context, input *augmentedairuntime.DeleteHumanLoopInput) *DeleteHumanLoopFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.augmentedairuntime.DeleteHumanLoop", input)
-	return &AugmentedAIRuntimeDeleteHumanLoopFuture{Future: future}
+	return &DeleteHumanLoopFuture{Future: future}
 }
 
 func (a *stub) DescribeHumanLoop(ctx workflow.Context, input *augmentedairuntime.DescribeHumanLoopInput) (*augmentedairuntime.DescribeHumanLoopOutput, error) {
@@ -88,9 +88,9 @@ func (a *stub) DescribeHumanLoop(ctx workflow.Context, input *augmentedairuntime
 	return &output, err
 }
 
-func (a *stub) DescribeHumanLoopAsync(ctx workflow.Context, input *augmentedairuntime.DescribeHumanLoopInput) *AugmentedAIRuntimeDescribeHumanLoopFuture {
+func (a *stub) DescribeHumanLoopAsync(ctx workflow.Context, input *augmentedairuntime.DescribeHumanLoopInput) *DescribeHumanLoopFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.augmentedairuntime.DescribeHumanLoop", input)
-	return &AugmentedAIRuntimeDescribeHumanLoopFuture{Future: future}
+	return &DescribeHumanLoopFuture{Future: future}
 }
 
 func (a *stub) ListHumanLoops(ctx workflow.Context, input *augmentedairuntime.ListHumanLoopsInput) (*augmentedairuntime.ListHumanLoopsOutput, error) {
@@ -99,9 +99,9 @@ func (a *stub) ListHumanLoops(ctx workflow.Context, input *augmentedairuntime.Li
 	return &output, err
 }
 
-func (a *stub) ListHumanLoopsAsync(ctx workflow.Context, input *augmentedairuntime.ListHumanLoopsInput) *AugmentedAIRuntimeListHumanLoopsFuture {
+func (a *stub) ListHumanLoopsAsync(ctx workflow.Context, input *augmentedairuntime.ListHumanLoopsInput) *ListHumanLoopsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.augmentedairuntime.ListHumanLoops", input)
-	return &AugmentedAIRuntimeListHumanLoopsFuture{Future: future}
+	return &ListHumanLoopsFuture{Future: future}
 }
 
 func (a *stub) StartHumanLoop(ctx workflow.Context, input *augmentedairuntime.StartHumanLoopInput) (*augmentedairuntime.StartHumanLoopOutput, error) {
@@ -110,9 +110,9 @@ func (a *stub) StartHumanLoop(ctx workflow.Context, input *augmentedairuntime.St
 	return &output, err
 }
 
-func (a *stub) StartHumanLoopAsync(ctx workflow.Context, input *augmentedairuntime.StartHumanLoopInput) *AugmentedAIRuntimeStartHumanLoopFuture {
+func (a *stub) StartHumanLoopAsync(ctx workflow.Context, input *augmentedairuntime.StartHumanLoopInput) *StartHumanLoopFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.augmentedairuntime.StartHumanLoop", input)
-	return &AugmentedAIRuntimeStartHumanLoopFuture{Future: future}
+	return &StartHumanLoopFuture{Future: future}
 }
 
 func (a *stub) StopHumanLoop(ctx workflow.Context, input *augmentedairuntime.StopHumanLoopInput) (*augmentedairuntime.StopHumanLoopOutput, error) {
@@ -121,7 +121,7 @@ func (a *stub) StopHumanLoop(ctx workflow.Context, input *augmentedairuntime.Sto
 	return &output, err
 }
 
-func (a *stub) StopHumanLoopAsync(ctx workflow.Context, input *augmentedairuntime.StopHumanLoopInput) *AugmentedAIRuntimeStopHumanLoopFuture {
+func (a *stub) StopHumanLoopAsync(ctx workflow.Context, input *augmentedairuntime.StopHumanLoopInput) *StopHumanLoopFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.augmentedairuntime.StopHumanLoop", input)
-	return &AugmentedAIRuntimeStopHumanLoopFuture{Future: future}
+	return &StopHumanLoopFuture{Future: future}
 }

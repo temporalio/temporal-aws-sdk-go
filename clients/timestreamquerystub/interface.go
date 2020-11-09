@@ -16,13 +16,13 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CancelQuery(ctx workflow.Context, input *timestreamquery.CancelQueryInput) (*timestreamquery.CancelQueryOutput, error)
-	CancelQueryAsync(ctx workflow.Context, input *timestreamquery.CancelQueryInput) *TimestreamQueryCancelQueryFuture
+	CancelQueryAsync(ctx workflow.Context, input *timestreamquery.CancelQueryInput) *CancelQueryFuture
 
 	DescribeEndpoints(ctx workflow.Context, input *timestreamquery.DescribeEndpointsInput) (*timestreamquery.DescribeEndpointsOutput, error)
-	DescribeEndpointsAsync(ctx workflow.Context, input *timestreamquery.DescribeEndpointsInput) *TimestreamQueryDescribeEndpointsFuture
+	DescribeEndpointsAsync(ctx workflow.Context, input *timestreamquery.DescribeEndpointsInput) *DescribeEndpointsFuture
 
 	Query(ctx workflow.Context, input *timestreamquery.QueryInput) (*timestreamquery.QueryOutput, error)
-	QueryAsync(ctx workflow.Context, input *timestreamquery.QueryInput) *TimestreamQueryQueryFuture
+	QueryAsync(ctx workflow.Context, input *timestreamquery.QueryInput) *QueryFuture
 }
 
 func NewClient() Client {

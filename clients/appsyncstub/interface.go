@@ -16,127 +16,127 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateApiCache(ctx workflow.Context, input *appsync.CreateApiCacheInput) (*appsync.CreateApiCacheOutput, error)
-	CreateApiCacheAsync(ctx workflow.Context, input *appsync.CreateApiCacheInput) *AppSyncCreateApiCacheFuture
+	CreateApiCacheAsync(ctx workflow.Context, input *appsync.CreateApiCacheInput) *CreateApiCacheFuture
 
 	CreateApiKey(ctx workflow.Context, input *appsync.CreateApiKeyInput) (*appsync.CreateApiKeyOutput, error)
-	CreateApiKeyAsync(ctx workflow.Context, input *appsync.CreateApiKeyInput) *AppSyncCreateApiKeyFuture
+	CreateApiKeyAsync(ctx workflow.Context, input *appsync.CreateApiKeyInput) *CreateApiKeyFuture
 
 	CreateDataSource(ctx workflow.Context, input *appsync.CreateDataSourceInput) (*appsync.CreateDataSourceOutput, error)
-	CreateDataSourceAsync(ctx workflow.Context, input *appsync.CreateDataSourceInput) *AppSyncCreateDataSourceFuture
+	CreateDataSourceAsync(ctx workflow.Context, input *appsync.CreateDataSourceInput) *CreateDataSourceFuture
 
 	CreateFunction(ctx workflow.Context, input *appsync.CreateFunctionInput) (*appsync.CreateFunctionOutput, error)
-	CreateFunctionAsync(ctx workflow.Context, input *appsync.CreateFunctionInput) *AppSyncCreateFunctionFuture
+	CreateFunctionAsync(ctx workflow.Context, input *appsync.CreateFunctionInput) *CreateFunctionFuture
 
 	CreateGraphqlApi(ctx workflow.Context, input *appsync.CreateGraphqlApiInput) (*appsync.CreateGraphqlApiOutput, error)
-	CreateGraphqlApiAsync(ctx workflow.Context, input *appsync.CreateGraphqlApiInput) *AppSyncCreateGraphqlApiFuture
+	CreateGraphqlApiAsync(ctx workflow.Context, input *appsync.CreateGraphqlApiInput) *CreateGraphqlApiFuture
 
 	CreateResolver(ctx workflow.Context, input *appsync.CreateResolverInput) (*appsync.CreateResolverOutput, error)
-	CreateResolverAsync(ctx workflow.Context, input *appsync.CreateResolverInput) *AppSyncCreateResolverFuture
+	CreateResolverAsync(ctx workflow.Context, input *appsync.CreateResolverInput) *CreateResolverFuture
 
 	CreateType(ctx workflow.Context, input *appsync.CreateTypeInput) (*appsync.CreateTypeOutput, error)
-	CreateTypeAsync(ctx workflow.Context, input *appsync.CreateTypeInput) *AppSyncCreateTypeFuture
+	CreateTypeAsync(ctx workflow.Context, input *appsync.CreateTypeInput) *CreateTypeFuture
 
 	DeleteApiCache(ctx workflow.Context, input *appsync.DeleteApiCacheInput) (*appsync.DeleteApiCacheOutput, error)
-	DeleteApiCacheAsync(ctx workflow.Context, input *appsync.DeleteApiCacheInput) *AppSyncDeleteApiCacheFuture
+	DeleteApiCacheAsync(ctx workflow.Context, input *appsync.DeleteApiCacheInput) *DeleteApiCacheFuture
 
 	DeleteApiKey(ctx workflow.Context, input *appsync.DeleteApiKeyInput) (*appsync.DeleteApiKeyOutput, error)
-	DeleteApiKeyAsync(ctx workflow.Context, input *appsync.DeleteApiKeyInput) *AppSyncDeleteApiKeyFuture
+	DeleteApiKeyAsync(ctx workflow.Context, input *appsync.DeleteApiKeyInput) *DeleteApiKeyFuture
 
 	DeleteDataSource(ctx workflow.Context, input *appsync.DeleteDataSourceInput) (*appsync.DeleteDataSourceOutput, error)
-	DeleteDataSourceAsync(ctx workflow.Context, input *appsync.DeleteDataSourceInput) *AppSyncDeleteDataSourceFuture
+	DeleteDataSourceAsync(ctx workflow.Context, input *appsync.DeleteDataSourceInput) *DeleteDataSourceFuture
 
 	DeleteFunction(ctx workflow.Context, input *appsync.DeleteFunctionInput) (*appsync.DeleteFunctionOutput, error)
-	DeleteFunctionAsync(ctx workflow.Context, input *appsync.DeleteFunctionInput) *AppSyncDeleteFunctionFuture
+	DeleteFunctionAsync(ctx workflow.Context, input *appsync.DeleteFunctionInput) *DeleteFunctionFuture
 
 	DeleteGraphqlApi(ctx workflow.Context, input *appsync.DeleteGraphqlApiInput) (*appsync.DeleteGraphqlApiOutput, error)
-	DeleteGraphqlApiAsync(ctx workflow.Context, input *appsync.DeleteGraphqlApiInput) *AppSyncDeleteGraphqlApiFuture
+	DeleteGraphqlApiAsync(ctx workflow.Context, input *appsync.DeleteGraphqlApiInput) *DeleteGraphqlApiFuture
 
 	DeleteResolver(ctx workflow.Context, input *appsync.DeleteResolverInput) (*appsync.DeleteResolverOutput, error)
-	DeleteResolverAsync(ctx workflow.Context, input *appsync.DeleteResolverInput) *AppSyncDeleteResolverFuture
+	DeleteResolverAsync(ctx workflow.Context, input *appsync.DeleteResolverInput) *DeleteResolverFuture
 
 	DeleteType(ctx workflow.Context, input *appsync.DeleteTypeInput) (*appsync.DeleteTypeOutput, error)
-	DeleteTypeAsync(ctx workflow.Context, input *appsync.DeleteTypeInput) *AppSyncDeleteTypeFuture
+	DeleteTypeAsync(ctx workflow.Context, input *appsync.DeleteTypeInput) *DeleteTypeFuture
 
 	FlushApiCache(ctx workflow.Context, input *appsync.FlushApiCacheInput) (*appsync.FlushApiCacheOutput, error)
-	FlushApiCacheAsync(ctx workflow.Context, input *appsync.FlushApiCacheInput) *AppSyncFlushApiCacheFuture
+	FlushApiCacheAsync(ctx workflow.Context, input *appsync.FlushApiCacheInput) *FlushApiCacheFuture
 
 	GetApiCache(ctx workflow.Context, input *appsync.GetApiCacheInput) (*appsync.GetApiCacheOutput, error)
-	GetApiCacheAsync(ctx workflow.Context, input *appsync.GetApiCacheInput) *AppSyncGetApiCacheFuture
+	GetApiCacheAsync(ctx workflow.Context, input *appsync.GetApiCacheInput) *GetApiCacheFuture
 
 	GetDataSource(ctx workflow.Context, input *appsync.GetDataSourceInput) (*appsync.GetDataSourceOutput, error)
-	GetDataSourceAsync(ctx workflow.Context, input *appsync.GetDataSourceInput) *AppSyncGetDataSourceFuture
+	GetDataSourceAsync(ctx workflow.Context, input *appsync.GetDataSourceInput) *GetDataSourceFuture
 
 	GetFunction(ctx workflow.Context, input *appsync.GetFunctionInput) (*appsync.GetFunctionOutput, error)
-	GetFunctionAsync(ctx workflow.Context, input *appsync.GetFunctionInput) *AppSyncGetFunctionFuture
+	GetFunctionAsync(ctx workflow.Context, input *appsync.GetFunctionInput) *GetFunctionFuture
 
 	GetGraphqlApi(ctx workflow.Context, input *appsync.GetGraphqlApiInput) (*appsync.GetGraphqlApiOutput, error)
-	GetGraphqlApiAsync(ctx workflow.Context, input *appsync.GetGraphqlApiInput) *AppSyncGetGraphqlApiFuture
+	GetGraphqlApiAsync(ctx workflow.Context, input *appsync.GetGraphqlApiInput) *GetGraphqlApiFuture
 
 	GetIntrospectionSchema(ctx workflow.Context, input *appsync.GetIntrospectionSchemaInput) (*appsync.GetIntrospectionSchemaOutput, error)
-	GetIntrospectionSchemaAsync(ctx workflow.Context, input *appsync.GetIntrospectionSchemaInput) *AppSyncGetIntrospectionSchemaFuture
+	GetIntrospectionSchemaAsync(ctx workflow.Context, input *appsync.GetIntrospectionSchemaInput) *GetIntrospectionSchemaFuture
 
 	GetResolver(ctx workflow.Context, input *appsync.GetResolverInput) (*appsync.GetResolverOutput, error)
-	GetResolverAsync(ctx workflow.Context, input *appsync.GetResolverInput) *AppSyncGetResolverFuture
+	GetResolverAsync(ctx workflow.Context, input *appsync.GetResolverInput) *GetResolverFuture
 
 	GetSchemaCreationStatus(ctx workflow.Context, input *appsync.GetSchemaCreationStatusInput) (*appsync.GetSchemaCreationStatusOutput, error)
-	GetSchemaCreationStatusAsync(ctx workflow.Context, input *appsync.GetSchemaCreationStatusInput) *AppSyncGetSchemaCreationStatusFuture
+	GetSchemaCreationStatusAsync(ctx workflow.Context, input *appsync.GetSchemaCreationStatusInput) *GetSchemaCreationStatusFuture
 
 	GetType(ctx workflow.Context, input *appsync.GetTypeInput) (*appsync.GetTypeOutput, error)
-	GetTypeAsync(ctx workflow.Context, input *appsync.GetTypeInput) *AppSyncGetTypeFuture
+	GetTypeAsync(ctx workflow.Context, input *appsync.GetTypeInput) *GetTypeFuture
 
 	ListApiKeys(ctx workflow.Context, input *appsync.ListApiKeysInput) (*appsync.ListApiKeysOutput, error)
-	ListApiKeysAsync(ctx workflow.Context, input *appsync.ListApiKeysInput) *AppSyncListApiKeysFuture
+	ListApiKeysAsync(ctx workflow.Context, input *appsync.ListApiKeysInput) *ListApiKeysFuture
 
 	ListDataSources(ctx workflow.Context, input *appsync.ListDataSourcesInput) (*appsync.ListDataSourcesOutput, error)
-	ListDataSourcesAsync(ctx workflow.Context, input *appsync.ListDataSourcesInput) *AppSyncListDataSourcesFuture
+	ListDataSourcesAsync(ctx workflow.Context, input *appsync.ListDataSourcesInput) *ListDataSourcesFuture
 
 	ListFunctions(ctx workflow.Context, input *appsync.ListFunctionsInput) (*appsync.ListFunctionsOutput, error)
-	ListFunctionsAsync(ctx workflow.Context, input *appsync.ListFunctionsInput) *AppSyncListFunctionsFuture
+	ListFunctionsAsync(ctx workflow.Context, input *appsync.ListFunctionsInput) *ListFunctionsFuture
 
 	ListGraphqlApis(ctx workflow.Context, input *appsync.ListGraphqlApisInput) (*appsync.ListGraphqlApisOutput, error)
-	ListGraphqlApisAsync(ctx workflow.Context, input *appsync.ListGraphqlApisInput) *AppSyncListGraphqlApisFuture
+	ListGraphqlApisAsync(ctx workflow.Context, input *appsync.ListGraphqlApisInput) *ListGraphqlApisFuture
 
 	ListResolvers(ctx workflow.Context, input *appsync.ListResolversInput) (*appsync.ListResolversOutput, error)
-	ListResolversAsync(ctx workflow.Context, input *appsync.ListResolversInput) *AppSyncListResolversFuture
+	ListResolversAsync(ctx workflow.Context, input *appsync.ListResolversInput) *ListResolversFuture
 
 	ListResolversByFunction(ctx workflow.Context, input *appsync.ListResolversByFunctionInput) (*appsync.ListResolversByFunctionOutput, error)
-	ListResolversByFunctionAsync(ctx workflow.Context, input *appsync.ListResolversByFunctionInput) *AppSyncListResolversByFunctionFuture
+	ListResolversByFunctionAsync(ctx workflow.Context, input *appsync.ListResolversByFunctionInput) *ListResolversByFunctionFuture
 
 	ListTagsForResource(ctx workflow.Context, input *appsync.ListTagsForResourceInput) (*appsync.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *appsync.ListTagsForResourceInput) *AppSyncListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *appsync.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	ListTypes(ctx workflow.Context, input *appsync.ListTypesInput) (*appsync.ListTypesOutput, error)
-	ListTypesAsync(ctx workflow.Context, input *appsync.ListTypesInput) *AppSyncListTypesFuture
+	ListTypesAsync(ctx workflow.Context, input *appsync.ListTypesInput) *ListTypesFuture
 
 	StartSchemaCreation(ctx workflow.Context, input *appsync.StartSchemaCreationInput) (*appsync.StartSchemaCreationOutput, error)
-	StartSchemaCreationAsync(ctx workflow.Context, input *appsync.StartSchemaCreationInput) *AppSyncStartSchemaCreationFuture
+	StartSchemaCreationAsync(ctx workflow.Context, input *appsync.StartSchemaCreationInput) *StartSchemaCreationFuture
 
 	TagResource(ctx workflow.Context, input *appsync.TagResourceInput) (*appsync.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *appsync.TagResourceInput) *AppSyncTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *appsync.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *appsync.UntagResourceInput) (*appsync.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *appsync.UntagResourceInput) *AppSyncUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *appsync.UntagResourceInput) *UntagResourceFuture
 
 	UpdateApiCache(ctx workflow.Context, input *appsync.UpdateApiCacheInput) (*appsync.UpdateApiCacheOutput, error)
-	UpdateApiCacheAsync(ctx workflow.Context, input *appsync.UpdateApiCacheInput) *AppSyncUpdateApiCacheFuture
+	UpdateApiCacheAsync(ctx workflow.Context, input *appsync.UpdateApiCacheInput) *UpdateApiCacheFuture
 
 	UpdateApiKey(ctx workflow.Context, input *appsync.UpdateApiKeyInput) (*appsync.UpdateApiKeyOutput, error)
-	UpdateApiKeyAsync(ctx workflow.Context, input *appsync.UpdateApiKeyInput) *AppSyncUpdateApiKeyFuture
+	UpdateApiKeyAsync(ctx workflow.Context, input *appsync.UpdateApiKeyInput) *UpdateApiKeyFuture
 
 	UpdateDataSource(ctx workflow.Context, input *appsync.UpdateDataSourceInput) (*appsync.UpdateDataSourceOutput, error)
-	UpdateDataSourceAsync(ctx workflow.Context, input *appsync.UpdateDataSourceInput) *AppSyncUpdateDataSourceFuture
+	UpdateDataSourceAsync(ctx workflow.Context, input *appsync.UpdateDataSourceInput) *UpdateDataSourceFuture
 
 	UpdateFunction(ctx workflow.Context, input *appsync.UpdateFunctionInput) (*appsync.UpdateFunctionOutput, error)
-	UpdateFunctionAsync(ctx workflow.Context, input *appsync.UpdateFunctionInput) *AppSyncUpdateFunctionFuture
+	UpdateFunctionAsync(ctx workflow.Context, input *appsync.UpdateFunctionInput) *UpdateFunctionFuture
 
 	UpdateGraphqlApi(ctx workflow.Context, input *appsync.UpdateGraphqlApiInput) (*appsync.UpdateGraphqlApiOutput, error)
-	UpdateGraphqlApiAsync(ctx workflow.Context, input *appsync.UpdateGraphqlApiInput) *AppSyncUpdateGraphqlApiFuture
+	UpdateGraphqlApiAsync(ctx workflow.Context, input *appsync.UpdateGraphqlApiInput) *UpdateGraphqlApiFuture
 
 	UpdateResolver(ctx workflow.Context, input *appsync.UpdateResolverInput) (*appsync.UpdateResolverOutput, error)
-	UpdateResolverAsync(ctx workflow.Context, input *appsync.UpdateResolverInput) *AppSyncUpdateResolverFuture
+	UpdateResolverAsync(ctx workflow.Context, input *appsync.UpdateResolverInput) *UpdateResolverFuture
 
 	UpdateType(ctx workflow.Context, input *appsync.UpdateTypeInput) (*appsync.UpdateTypeOutput, error)
-	UpdateTypeAsync(ctx workflow.Context, input *appsync.UpdateTypeInput) *AppSyncUpdateTypeFuture
+	UpdateTypeAsync(ctx workflow.Context, input *appsync.UpdateTypeInput) *UpdateTypeFuture
 }
 
 func NewClient() Client {

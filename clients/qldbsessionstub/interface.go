@@ -16,7 +16,7 @@ var _ clients.VoidFuture
 
 type Client interface {
 	SendCommand(ctx workflow.Context, input *qldbsession.SendCommandInput) (*qldbsession.SendCommandOutput, error)
-	SendCommandAsync(ctx workflow.Context, input *qldbsession.SendCommandInput) *QLDBSessionSendCommandFuture
+	SendCommandAsync(ctx workflow.Context, input *qldbsession.SendCommandInput) *SendCommandFuture
 }
 
 func NewClient() Client {

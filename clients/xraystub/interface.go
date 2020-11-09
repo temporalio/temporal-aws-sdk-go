@@ -16,73 +16,73 @@ var _ clients.VoidFuture
 
 type Client interface {
 	BatchGetTraces(ctx workflow.Context, input *xray.BatchGetTracesInput) (*xray.BatchGetTracesOutput, error)
-	BatchGetTracesAsync(ctx workflow.Context, input *xray.BatchGetTracesInput) *XRayBatchGetTracesFuture
+	BatchGetTracesAsync(ctx workflow.Context, input *xray.BatchGetTracesInput) *BatchGetTracesFuture
 
 	CreateGroup(ctx workflow.Context, input *xray.CreateGroupInput) (*xray.CreateGroupOutput, error)
-	CreateGroupAsync(ctx workflow.Context, input *xray.CreateGroupInput) *XRayCreateGroupFuture
+	CreateGroupAsync(ctx workflow.Context, input *xray.CreateGroupInput) *CreateGroupFuture
 
 	CreateSamplingRule(ctx workflow.Context, input *xray.CreateSamplingRuleInput) (*xray.CreateSamplingRuleOutput, error)
-	CreateSamplingRuleAsync(ctx workflow.Context, input *xray.CreateSamplingRuleInput) *XRayCreateSamplingRuleFuture
+	CreateSamplingRuleAsync(ctx workflow.Context, input *xray.CreateSamplingRuleInput) *CreateSamplingRuleFuture
 
 	DeleteGroup(ctx workflow.Context, input *xray.DeleteGroupInput) (*xray.DeleteGroupOutput, error)
-	DeleteGroupAsync(ctx workflow.Context, input *xray.DeleteGroupInput) *XRayDeleteGroupFuture
+	DeleteGroupAsync(ctx workflow.Context, input *xray.DeleteGroupInput) *DeleteGroupFuture
 
 	DeleteSamplingRule(ctx workflow.Context, input *xray.DeleteSamplingRuleInput) (*xray.DeleteSamplingRuleOutput, error)
-	DeleteSamplingRuleAsync(ctx workflow.Context, input *xray.DeleteSamplingRuleInput) *XRayDeleteSamplingRuleFuture
+	DeleteSamplingRuleAsync(ctx workflow.Context, input *xray.DeleteSamplingRuleInput) *DeleteSamplingRuleFuture
 
 	GetEncryptionConfig(ctx workflow.Context, input *xray.GetEncryptionConfigInput) (*xray.GetEncryptionConfigOutput, error)
-	GetEncryptionConfigAsync(ctx workflow.Context, input *xray.GetEncryptionConfigInput) *XRayGetEncryptionConfigFuture
+	GetEncryptionConfigAsync(ctx workflow.Context, input *xray.GetEncryptionConfigInput) *GetEncryptionConfigFuture
 
 	GetGroup(ctx workflow.Context, input *xray.GetGroupInput) (*xray.GetGroupOutput, error)
-	GetGroupAsync(ctx workflow.Context, input *xray.GetGroupInput) *XRayGetGroupFuture
+	GetGroupAsync(ctx workflow.Context, input *xray.GetGroupInput) *GetGroupFuture
 
 	GetGroups(ctx workflow.Context, input *xray.GetGroupsInput) (*xray.GetGroupsOutput, error)
-	GetGroupsAsync(ctx workflow.Context, input *xray.GetGroupsInput) *XRayGetGroupsFuture
+	GetGroupsAsync(ctx workflow.Context, input *xray.GetGroupsInput) *GetGroupsFuture
 
 	GetSamplingRules(ctx workflow.Context, input *xray.GetSamplingRulesInput) (*xray.GetSamplingRulesOutput, error)
-	GetSamplingRulesAsync(ctx workflow.Context, input *xray.GetSamplingRulesInput) *XRayGetSamplingRulesFuture
+	GetSamplingRulesAsync(ctx workflow.Context, input *xray.GetSamplingRulesInput) *GetSamplingRulesFuture
 
 	GetSamplingStatisticSummaries(ctx workflow.Context, input *xray.GetSamplingStatisticSummariesInput) (*xray.GetSamplingStatisticSummariesOutput, error)
-	GetSamplingStatisticSummariesAsync(ctx workflow.Context, input *xray.GetSamplingStatisticSummariesInput) *XRayGetSamplingStatisticSummariesFuture
+	GetSamplingStatisticSummariesAsync(ctx workflow.Context, input *xray.GetSamplingStatisticSummariesInput) *GetSamplingStatisticSummariesFuture
 
 	GetSamplingTargets(ctx workflow.Context, input *xray.GetSamplingTargetsInput) (*xray.GetSamplingTargetsOutput, error)
-	GetSamplingTargetsAsync(ctx workflow.Context, input *xray.GetSamplingTargetsInput) *XRayGetSamplingTargetsFuture
+	GetSamplingTargetsAsync(ctx workflow.Context, input *xray.GetSamplingTargetsInput) *GetSamplingTargetsFuture
 
 	GetServiceGraph(ctx workflow.Context, input *xray.GetServiceGraphInput) (*xray.GetServiceGraphOutput, error)
-	GetServiceGraphAsync(ctx workflow.Context, input *xray.GetServiceGraphInput) *XRayGetServiceGraphFuture
+	GetServiceGraphAsync(ctx workflow.Context, input *xray.GetServiceGraphInput) *GetServiceGraphFuture
 
 	GetTimeSeriesServiceStatistics(ctx workflow.Context, input *xray.GetTimeSeriesServiceStatisticsInput) (*xray.GetTimeSeriesServiceStatisticsOutput, error)
-	GetTimeSeriesServiceStatisticsAsync(ctx workflow.Context, input *xray.GetTimeSeriesServiceStatisticsInput) *XRayGetTimeSeriesServiceStatisticsFuture
+	GetTimeSeriesServiceStatisticsAsync(ctx workflow.Context, input *xray.GetTimeSeriesServiceStatisticsInput) *GetTimeSeriesServiceStatisticsFuture
 
 	GetTraceGraph(ctx workflow.Context, input *xray.GetTraceGraphInput) (*xray.GetTraceGraphOutput, error)
-	GetTraceGraphAsync(ctx workflow.Context, input *xray.GetTraceGraphInput) *XRayGetTraceGraphFuture
+	GetTraceGraphAsync(ctx workflow.Context, input *xray.GetTraceGraphInput) *GetTraceGraphFuture
 
 	GetTraceSummaries(ctx workflow.Context, input *xray.GetTraceSummariesInput) (*xray.GetTraceSummariesOutput, error)
-	GetTraceSummariesAsync(ctx workflow.Context, input *xray.GetTraceSummariesInput) *XRayGetTraceSummariesFuture
+	GetTraceSummariesAsync(ctx workflow.Context, input *xray.GetTraceSummariesInput) *GetTraceSummariesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *xray.ListTagsForResourceInput) (*xray.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *xray.ListTagsForResourceInput) *XRayListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *xray.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	PutEncryptionConfig(ctx workflow.Context, input *xray.PutEncryptionConfigInput) (*xray.PutEncryptionConfigOutput, error)
-	PutEncryptionConfigAsync(ctx workflow.Context, input *xray.PutEncryptionConfigInput) *XRayPutEncryptionConfigFuture
+	PutEncryptionConfigAsync(ctx workflow.Context, input *xray.PutEncryptionConfigInput) *PutEncryptionConfigFuture
 
 	PutTelemetryRecords(ctx workflow.Context, input *xray.PutTelemetryRecordsInput) (*xray.PutTelemetryRecordsOutput, error)
-	PutTelemetryRecordsAsync(ctx workflow.Context, input *xray.PutTelemetryRecordsInput) *XRayPutTelemetryRecordsFuture
+	PutTelemetryRecordsAsync(ctx workflow.Context, input *xray.PutTelemetryRecordsInput) *PutTelemetryRecordsFuture
 
 	PutTraceSegments(ctx workflow.Context, input *xray.PutTraceSegmentsInput) (*xray.PutTraceSegmentsOutput, error)
-	PutTraceSegmentsAsync(ctx workflow.Context, input *xray.PutTraceSegmentsInput) *XRayPutTraceSegmentsFuture
+	PutTraceSegmentsAsync(ctx workflow.Context, input *xray.PutTraceSegmentsInput) *PutTraceSegmentsFuture
 
 	TagResource(ctx workflow.Context, input *xray.TagResourceInput) (*xray.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *xray.TagResourceInput) *XRayTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *xray.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *xray.UntagResourceInput) (*xray.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *xray.UntagResourceInput) *XRayUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *xray.UntagResourceInput) *UntagResourceFuture
 
 	UpdateGroup(ctx workflow.Context, input *xray.UpdateGroupInput) (*xray.UpdateGroupOutput, error)
-	UpdateGroupAsync(ctx workflow.Context, input *xray.UpdateGroupInput) *XRayUpdateGroupFuture
+	UpdateGroupAsync(ctx workflow.Context, input *xray.UpdateGroupInput) *UpdateGroupFuture
 
 	UpdateSamplingRule(ctx workflow.Context, input *xray.UpdateSamplingRuleInput) (*xray.UpdateSamplingRuleOutput, error)
-	UpdateSamplingRuleAsync(ctx workflow.Context, input *xray.UpdateSamplingRuleInput) *XRayUpdateSamplingRuleFuture
+	UpdateSamplingRuleAsync(ctx workflow.Context, input *xray.UpdateSamplingRuleInput) *UpdateSamplingRuleFuture
 }
 
 func NewClient() Client {

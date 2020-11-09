@@ -16,100 +16,100 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateAccessPoint(ctx workflow.Context, input *s3control.CreateAccessPointInput) (*s3control.CreateAccessPointOutput, error)
-	CreateAccessPointAsync(ctx workflow.Context, input *s3control.CreateAccessPointInput) *S3ControlCreateAccessPointFuture
+	CreateAccessPointAsync(ctx workflow.Context, input *s3control.CreateAccessPointInput) *CreateAccessPointFuture
 
 	CreateBucket(ctx workflow.Context, input *s3control.CreateBucketInput) (*s3control.CreateBucketOutput, error)
-	CreateBucketAsync(ctx workflow.Context, input *s3control.CreateBucketInput) *S3ControlCreateBucketFuture
+	CreateBucketAsync(ctx workflow.Context, input *s3control.CreateBucketInput) *CreateBucketFuture
 
 	CreateJob(ctx workflow.Context, input *s3control.CreateJobInput) (*s3control.CreateJobOutput, error)
-	CreateJobAsync(ctx workflow.Context, input *s3control.CreateJobInput) *S3ControlCreateJobFuture
+	CreateJobAsync(ctx workflow.Context, input *s3control.CreateJobInput) *CreateJobFuture
 
 	DeleteAccessPoint(ctx workflow.Context, input *s3control.DeleteAccessPointInput) (*s3control.DeleteAccessPointOutput, error)
-	DeleteAccessPointAsync(ctx workflow.Context, input *s3control.DeleteAccessPointInput) *S3ControlDeleteAccessPointFuture
+	DeleteAccessPointAsync(ctx workflow.Context, input *s3control.DeleteAccessPointInput) *DeleteAccessPointFuture
 
 	DeleteAccessPointPolicy(ctx workflow.Context, input *s3control.DeleteAccessPointPolicyInput) (*s3control.DeleteAccessPointPolicyOutput, error)
-	DeleteAccessPointPolicyAsync(ctx workflow.Context, input *s3control.DeleteAccessPointPolicyInput) *S3ControlDeleteAccessPointPolicyFuture
+	DeleteAccessPointPolicyAsync(ctx workflow.Context, input *s3control.DeleteAccessPointPolicyInput) *DeleteAccessPointPolicyFuture
 
 	DeleteBucket(ctx workflow.Context, input *s3control.DeleteBucketInput) (*s3control.DeleteBucketOutput, error)
-	DeleteBucketAsync(ctx workflow.Context, input *s3control.DeleteBucketInput) *S3ControlDeleteBucketFuture
+	DeleteBucketAsync(ctx workflow.Context, input *s3control.DeleteBucketInput) *DeleteBucketFuture
 
 	DeleteBucketLifecycleConfiguration(ctx workflow.Context, input *s3control.DeleteBucketLifecycleConfigurationInput) (*s3control.DeleteBucketLifecycleConfigurationOutput, error)
-	DeleteBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3control.DeleteBucketLifecycleConfigurationInput) *S3ControlDeleteBucketLifecycleConfigurationFuture
+	DeleteBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3control.DeleteBucketLifecycleConfigurationInput) *DeleteBucketLifecycleConfigurationFuture
 
 	DeleteBucketPolicy(ctx workflow.Context, input *s3control.DeleteBucketPolicyInput) (*s3control.DeleteBucketPolicyOutput, error)
-	DeleteBucketPolicyAsync(ctx workflow.Context, input *s3control.DeleteBucketPolicyInput) *S3ControlDeleteBucketPolicyFuture
+	DeleteBucketPolicyAsync(ctx workflow.Context, input *s3control.DeleteBucketPolicyInput) *DeleteBucketPolicyFuture
 
 	DeleteBucketTagging(ctx workflow.Context, input *s3control.DeleteBucketTaggingInput) (*s3control.DeleteBucketTaggingOutput, error)
-	DeleteBucketTaggingAsync(ctx workflow.Context, input *s3control.DeleteBucketTaggingInput) *S3ControlDeleteBucketTaggingFuture
+	DeleteBucketTaggingAsync(ctx workflow.Context, input *s3control.DeleteBucketTaggingInput) *DeleteBucketTaggingFuture
 
 	DeleteJobTagging(ctx workflow.Context, input *s3control.DeleteJobTaggingInput) (*s3control.DeleteJobTaggingOutput, error)
-	DeleteJobTaggingAsync(ctx workflow.Context, input *s3control.DeleteJobTaggingInput) *S3ControlDeleteJobTaggingFuture
+	DeleteJobTaggingAsync(ctx workflow.Context, input *s3control.DeleteJobTaggingInput) *DeleteJobTaggingFuture
 
 	DeletePublicAccessBlock(ctx workflow.Context, input *s3control.DeletePublicAccessBlockInput) (*s3control.DeletePublicAccessBlockOutput, error)
-	DeletePublicAccessBlockAsync(ctx workflow.Context, input *s3control.DeletePublicAccessBlockInput) *S3ControlDeletePublicAccessBlockFuture
+	DeletePublicAccessBlockAsync(ctx workflow.Context, input *s3control.DeletePublicAccessBlockInput) *DeletePublicAccessBlockFuture
 
 	DescribeJob(ctx workflow.Context, input *s3control.DescribeJobInput) (*s3control.DescribeJobOutput, error)
-	DescribeJobAsync(ctx workflow.Context, input *s3control.DescribeJobInput) *S3ControlDescribeJobFuture
+	DescribeJobAsync(ctx workflow.Context, input *s3control.DescribeJobInput) *DescribeJobFuture
 
 	GetAccessPoint(ctx workflow.Context, input *s3control.GetAccessPointInput) (*s3control.GetAccessPointOutput, error)
-	GetAccessPointAsync(ctx workflow.Context, input *s3control.GetAccessPointInput) *S3ControlGetAccessPointFuture
+	GetAccessPointAsync(ctx workflow.Context, input *s3control.GetAccessPointInput) *GetAccessPointFuture
 
 	GetAccessPointPolicy(ctx workflow.Context, input *s3control.GetAccessPointPolicyInput) (*s3control.GetAccessPointPolicyOutput, error)
-	GetAccessPointPolicyAsync(ctx workflow.Context, input *s3control.GetAccessPointPolicyInput) *S3ControlGetAccessPointPolicyFuture
+	GetAccessPointPolicyAsync(ctx workflow.Context, input *s3control.GetAccessPointPolicyInput) *GetAccessPointPolicyFuture
 
 	GetAccessPointPolicyStatus(ctx workflow.Context, input *s3control.GetAccessPointPolicyStatusInput) (*s3control.GetAccessPointPolicyStatusOutput, error)
-	GetAccessPointPolicyStatusAsync(ctx workflow.Context, input *s3control.GetAccessPointPolicyStatusInput) *S3ControlGetAccessPointPolicyStatusFuture
+	GetAccessPointPolicyStatusAsync(ctx workflow.Context, input *s3control.GetAccessPointPolicyStatusInput) *GetAccessPointPolicyStatusFuture
 
 	GetBucket(ctx workflow.Context, input *s3control.GetBucketInput) (*s3control.GetBucketOutput, error)
-	GetBucketAsync(ctx workflow.Context, input *s3control.GetBucketInput) *S3ControlGetBucketFuture
+	GetBucketAsync(ctx workflow.Context, input *s3control.GetBucketInput) *GetBucketFuture
 
 	GetBucketLifecycleConfiguration(ctx workflow.Context, input *s3control.GetBucketLifecycleConfigurationInput) (*s3control.GetBucketLifecycleConfigurationOutput, error)
-	GetBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3control.GetBucketLifecycleConfigurationInput) *S3ControlGetBucketLifecycleConfigurationFuture
+	GetBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3control.GetBucketLifecycleConfigurationInput) *GetBucketLifecycleConfigurationFuture
 
 	GetBucketPolicy(ctx workflow.Context, input *s3control.GetBucketPolicyInput) (*s3control.GetBucketPolicyOutput, error)
-	GetBucketPolicyAsync(ctx workflow.Context, input *s3control.GetBucketPolicyInput) *S3ControlGetBucketPolicyFuture
+	GetBucketPolicyAsync(ctx workflow.Context, input *s3control.GetBucketPolicyInput) *GetBucketPolicyFuture
 
 	GetBucketTagging(ctx workflow.Context, input *s3control.GetBucketTaggingInput) (*s3control.GetBucketTaggingOutput, error)
-	GetBucketTaggingAsync(ctx workflow.Context, input *s3control.GetBucketTaggingInput) *S3ControlGetBucketTaggingFuture
+	GetBucketTaggingAsync(ctx workflow.Context, input *s3control.GetBucketTaggingInput) *GetBucketTaggingFuture
 
 	GetJobTagging(ctx workflow.Context, input *s3control.GetJobTaggingInput) (*s3control.GetJobTaggingOutput, error)
-	GetJobTaggingAsync(ctx workflow.Context, input *s3control.GetJobTaggingInput) *S3ControlGetJobTaggingFuture
+	GetJobTaggingAsync(ctx workflow.Context, input *s3control.GetJobTaggingInput) *GetJobTaggingFuture
 
 	GetPublicAccessBlock(ctx workflow.Context, input *s3control.GetPublicAccessBlockInput) (*s3control.GetPublicAccessBlockOutput, error)
-	GetPublicAccessBlockAsync(ctx workflow.Context, input *s3control.GetPublicAccessBlockInput) *S3ControlGetPublicAccessBlockFuture
+	GetPublicAccessBlockAsync(ctx workflow.Context, input *s3control.GetPublicAccessBlockInput) *GetPublicAccessBlockFuture
 
 	ListAccessPoints(ctx workflow.Context, input *s3control.ListAccessPointsInput) (*s3control.ListAccessPointsOutput, error)
-	ListAccessPointsAsync(ctx workflow.Context, input *s3control.ListAccessPointsInput) *S3ControlListAccessPointsFuture
+	ListAccessPointsAsync(ctx workflow.Context, input *s3control.ListAccessPointsInput) *ListAccessPointsFuture
 
 	ListJobs(ctx workflow.Context, input *s3control.ListJobsInput) (*s3control.ListJobsOutput, error)
-	ListJobsAsync(ctx workflow.Context, input *s3control.ListJobsInput) *S3ControlListJobsFuture
+	ListJobsAsync(ctx workflow.Context, input *s3control.ListJobsInput) *ListJobsFuture
 
 	ListRegionalBuckets(ctx workflow.Context, input *s3control.ListRegionalBucketsInput) (*s3control.ListRegionalBucketsOutput, error)
-	ListRegionalBucketsAsync(ctx workflow.Context, input *s3control.ListRegionalBucketsInput) *S3ControlListRegionalBucketsFuture
+	ListRegionalBucketsAsync(ctx workflow.Context, input *s3control.ListRegionalBucketsInput) *ListRegionalBucketsFuture
 
 	PutAccessPointPolicy(ctx workflow.Context, input *s3control.PutAccessPointPolicyInput) (*s3control.PutAccessPointPolicyOutput, error)
-	PutAccessPointPolicyAsync(ctx workflow.Context, input *s3control.PutAccessPointPolicyInput) *S3ControlPutAccessPointPolicyFuture
+	PutAccessPointPolicyAsync(ctx workflow.Context, input *s3control.PutAccessPointPolicyInput) *PutAccessPointPolicyFuture
 
 	PutBucketLifecycleConfiguration(ctx workflow.Context, input *s3control.PutBucketLifecycleConfigurationInput) (*s3control.PutBucketLifecycleConfigurationOutput, error)
-	PutBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3control.PutBucketLifecycleConfigurationInput) *S3ControlPutBucketLifecycleConfigurationFuture
+	PutBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3control.PutBucketLifecycleConfigurationInput) *PutBucketLifecycleConfigurationFuture
 
 	PutBucketPolicy(ctx workflow.Context, input *s3control.PutBucketPolicyInput) (*s3control.PutBucketPolicyOutput, error)
-	PutBucketPolicyAsync(ctx workflow.Context, input *s3control.PutBucketPolicyInput) *S3ControlPutBucketPolicyFuture
+	PutBucketPolicyAsync(ctx workflow.Context, input *s3control.PutBucketPolicyInput) *PutBucketPolicyFuture
 
 	PutBucketTagging(ctx workflow.Context, input *s3control.PutBucketTaggingInput) (*s3control.PutBucketTaggingOutput, error)
-	PutBucketTaggingAsync(ctx workflow.Context, input *s3control.PutBucketTaggingInput) *S3ControlPutBucketTaggingFuture
+	PutBucketTaggingAsync(ctx workflow.Context, input *s3control.PutBucketTaggingInput) *PutBucketTaggingFuture
 
 	PutJobTagging(ctx workflow.Context, input *s3control.PutJobTaggingInput) (*s3control.PutJobTaggingOutput, error)
-	PutJobTaggingAsync(ctx workflow.Context, input *s3control.PutJobTaggingInput) *S3ControlPutJobTaggingFuture
+	PutJobTaggingAsync(ctx workflow.Context, input *s3control.PutJobTaggingInput) *PutJobTaggingFuture
 
 	PutPublicAccessBlock(ctx workflow.Context, input *s3control.PutPublicAccessBlockInput) (*s3control.PutPublicAccessBlockOutput, error)
-	PutPublicAccessBlockAsync(ctx workflow.Context, input *s3control.PutPublicAccessBlockInput) *S3ControlPutPublicAccessBlockFuture
+	PutPublicAccessBlockAsync(ctx workflow.Context, input *s3control.PutPublicAccessBlockInput) *PutPublicAccessBlockFuture
 
 	UpdateJobPriority(ctx workflow.Context, input *s3control.UpdateJobPriorityInput) (*s3control.UpdateJobPriorityOutput, error)
-	UpdateJobPriorityAsync(ctx workflow.Context, input *s3control.UpdateJobPriorityInput) *S3ControlUpdateJobPriorityFuture
+	UpdateJobPriorityAsync(ctx workflow.Context, input *s3control.UpdateJobPriorityInput) *UpdateJobPriorityFuture
 
 	UpdateJobStatus(ctx workflow.Context, input *s3control.UpdateJobStatusInput) (*s3control.UpdateJobStatusOutput, error)
-	UpdateJobStatusAsync(ctx workflow.Context, input *s3control.UpdateJobStatusInput) *S3ControlUpdateJobStatusFuture
+	UpdateJobStatusAsync(ctx workflow.Context, input *s3control.UpdateJobStatusInput) *UpdateJobStatusFuture
 }
 
 func NewClient() Client {

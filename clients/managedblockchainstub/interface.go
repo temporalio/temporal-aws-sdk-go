@@ -16,64 +16,64 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateMember(ctx workflow.Context, input *managedblockchain.CreateMemberInput) (*managedblockchain.CreateMemberOutput, error)
-	CreateMemberAsync(ctx workflow.Context, input *managedblockchain.CreateMemberInput) *ManagedBlockchainCreateMemberFuture
+	CreateMemberAsync(ctx workflow.Context, input *managedblockchain.CreateMemberInput) *CreateMemberFuture
 
 	CreateNetwork(ctx workflow.Context, input *managedblockchain.CreateNetworkInput) (*managedblockchain.CreateNetworkOutput, error)
-	CreateNetworkAsync(ctx workflow.Context, input *managedblockchain.CreateNetworkInput) *ManagedBlockchainCreateNetworkFuture
+	CreateNetworkAsync(ctx workflow.Context, input *managedblockchain.CreateNetworkInput) *CreateNetworkFuture
 
 	CreateNode(ctx workflow.Context, input *managedblockchain.CreateNodeInput) (*managedblockchain.CreateNodeOutput, error)
-	CreateNodeAsync(ctx workflow.Context, input *managedblockchain.CreateNodeInput) *ManagedBlockchainCreateNodeFuture
+	CreateNodeAsync(ctx workflow.Context, input *managedblockchain.CreateNodeInput) *CreateNodeFuture
 
 	CreateProposal(ctx workflow.Context, input *managedblockchain.CreateProposalInput) (*managedblockchain.CreateProposalOutput, error)
-	CreateProposalAsync(ctx workflow.Context, input *managedblockchain.CreateProposalInput) *ManagedBlockchainCreateProposalFuture
+	CreateProposalAsync(ctx workflow.Context, input *managedblockchain.CreateProposalInput) *CreateProposalFuture
 
 	DeleteMember(ctx workflow.Context, input *managedblockchain.DeleteMemberInput) (*managedblockchain.DeleteMemberOutput, error)
-	DeleteMemberAsync(ctx workflow.Context, input *managedblockchain.DeleteMemberInput) *ManagedBlockchainDeleteMemberFuture
+	DeleteMemberAsync(ctx workflow.Context, input *managedblockchain.DeleteMemberInput) *DeleteMemberFuture
 
 	DeleteNode(ctx workflow.Context, input *managedblockchain.DeleteNodeInput) (*managedblockchain.DeleteNodeOutput, error)
-	DeleteNodeAsync(ctx workflow.Context, input *managedblockchain.DeleteNodeInput) *ManagedBlockchainDeleteNodeFuture
+	DeleteNodeAsync(ctx workflow.Context, input *managedblockchain.DeleteNodeInput) *DeleteNodeFuture
 
 	GetMember(ctx workflow.Context, input *managedblockchain.GetMemberInput) (*managedblockchain.GetMemberOutput, error)
-	GetMemberAsync(ctx workflow.Context, input *managedblockchain.GetMemberInput) *ManagedBlockchainGetMemberFuture
+	GetMemberAsync(ctx workflow.Context, input *managedblockchain.GetMemberInput) *GetMemberFuture
 
 	GetNetwork(ctx workflow.Context, input *managedblockchain.GetNetworkInput) (*managedblockchain.GetNetworkOutput, error)
-	GetNetworkAsync(ctx workflow.Context, input *managedblockchain.GetNetworkInput) *ManagedBlockchainGetNetworkFuture
+	GetNetworkAsync(ctx workflow.Context, input *managedblockchain.GetNetworkInput) *GetNetworkFuture
 
 	GetNode(ctx workflow.Context, input *managedblockchain.GetNodeInput) (*managedblockchain.GetNodeOutput, error)
-	GetNodeAsync(ctx workflow.Context, input *managedblockchain.GetNodeInput) *ManagedBlockchainGetNodeFuture
+	GetNodeAsync(ctx workflow.Context, input *managedblockchain.GetNodeInput) *GetNodeFuture
 
 	GetProposal(ctx workflow.Context, input *managedblockchain.GetProposalInput) (*managedblockchain.GetProposalOutput, error)
-	GetProposalAsync(ctx workflow.Context, input *managedblockchain.GetProposalInput) *ManagedBlockchainGetProposalFuture
+	GetProposalAsync(ctx workflow.Context, input *managedblockchain.GetProposalInput) *GetProposalFuture
 
 	ListInvitations(ctx workflow.Context, input *managedblockchain.ListInvitationsInput) (*managedblockchain.ListInvitationsOutput, error)
-	ListInvitationsAsync(ctx workflow.Context, input *managedblockchain.ListInvitationsInput) *ManagedBlockchainListInvitationsFuture
+	ListInvitationsAsync(ctx workflow.Context, input *managedblockchain.ListInvitationsInput) *ListInvitationsFuture
 
 	ListMembers(ctx workflow.Context, input *managedblockchain.ListMembersInput) (*managedblockchain.ListMembersOutput, error)
-	ListMembersAsync(ctx workflow.Context, input *managedblockchain.ListMembersInput) *ManagedBlockchainListMembersFuture
+	ListMembersAsync(ctx workflow.Context, input *managedblockchain.ListMembersInput) *ListMembersFuture
 
 	ListNetworks(ctx workflow.Context, input *managedblockchain.ListNetworksInput) (*managedblockchain.ListNetworksOutput, error)
-	ListNetworksAsync(ctx workflow.Context, input *managedblockchain.ListNetworksInput) *ManagedBlockchainListNetworksFuture
+	ListNetworksAsync(ctx workflow.Context, input *managedblockchain.ListNetworksInput) *ListNetworksFuture
 
 	ListNodes(ctx workflow.Context, input *managedblockchain.ListNodesInput) (*managedblockchain.ListNodesOutput, error)
-	ListNodesAsync(ctx workflow.Context, input *managedblockchain.ListNodesInput) *ManagedBlockchainListNodesFuture
+	ListNodesAsync(ctx workflow.Context, input *managedblockchain.ListNodesInput) *ListNodesFuture
 
 	ListProposalVotes(ctx workflow.Context, input *managedblockchain.ListProposalVotesInput) (*managedblockchain.ListProposalVotesOutput, error)
-	ListProposalVotesAsync(ctx workflow.Context, input *managedblockchain.ListProposalVotesInput) *ManagedBlockchainListProposalVotesFuture
+	ListProposalVotesAsync(ctx workflow.Context, input *managedblockchain.ListProposalVotesInput) *ListProposalVotesFuture
 
 	ListProposals(ctx workflow.Context, input *managedblockchain.ListProposalsInput) (*managedblockchain.ListProposalsOutput, error)
-	ListProposalsAsync(ctx workflow.Context, input *managedblockchain.ListProposalsInput) *ManagedBlockchainListProposalsFuture
+	ListProposalsAsync(ctx workflow.Context, input *managedblockchain.ListProposalsInput) *ListProposalsFuture
 
 	RejectInvitation(ctx workflow.Context, input *managedblockchain.RejectInvitationInput) (*managedblockchain.RejectInvitationOutput, error)
-	RejectInvitationAsync(ctx workflow.Context, input *managedblockchain.RejectInvitationInput) *ManagedBlockchainRejectInvitationFuture
+	RejectInvitationAsync(ctx workflow.Context, input *managedblockchain.RejectInvitationInput) *RejectInvitationFuture
 
 	UpdateMember(ctx workflow.Context, input *managedblockchain.UpdateMemberInput) (*managedblockchain.UpdateMemberOutput, error)
-	UpdateMemberAsync(ctx workflow.Context, input *managedblockchain.UpdateMemberInput) *ManagedBlockchainUpdateMemberFuture
+	UpdateMemberAsync(ctx workflow.Context, input *managedblockchain.UpdateMemberInput) *UpdateMemberFuture
 
 	UpdateNode(ctx workflow.Context, input *managedblockchain.UpdateNodeInput) (*managedblockchain.UpdateNodeOutput, error)
-	UpdateNodeAsync(ctx workflow.Context, input *managedblockchain.UpdateNodeInput) *ManagedBlockchainUpdateNodeFuture
+	UpdateNodeAsync(ctx workflow.Context, input *managedblockchain.UpdateNodeInput) *UpdateNodeFuture
 
 	VoteOnProposal(ctx workflow.Context, input *managedblockchain.VoteOnProposalInput) (*managedblockchain.VoteOnProposalOutput, error)
-	VoteOnProposalAsync(ctx workflow.Context, input *managedblockchain.VoteOnProposalInput) *ManagedBlockchainVoteOnProposalFuture
+	VoteOnProposalAsync(ctx workflow.Context, input *managedblockchain.VoteOnProposalInput) *VoteOnProposalFuture
 }
 
 func NewClient() Client {

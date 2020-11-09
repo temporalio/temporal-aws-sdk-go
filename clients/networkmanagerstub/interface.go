@@ -16,88 +16,88 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AssociateCustomerGateway(ctx workflow.Context, input *networkmanager.AssociateCustomerGatewayInput) (*networkmanager.AssociateCustomerGatewayOutput, error)
-	AssociateCustomerGatewayAsync(ctx workflow.Context, input *networkmanager.AssociateCustomerGatewayInput) *NetworkManagerAssociateCustomerGatewayFuture
+	AssociateCustomerGatewayAsync(ctx workflow.Context, input *networkmanager.AssociateCustomerGatewayInput) *AssociateCustomerGatewayFuture
 
 	AssociateLink(ctx workflow.Context, input *networkmanager.AssociateLinkInput) (*networkmanager.AssociateLinkOutput, error)
-	AssociateLinkAsync(ctx workflow.Context, input *networkmanager.AssociateLinkInput) *NetworkManagerAssociateLinkFuture
+	AssociateLinkAsync(ctx workflow.Context, input *networkmanager.AssociateLinkInput) *AssociateLinkFuture
 
 	CreateDevice(ctx workflow.Context, input *networkmanager.CreateDeviceInput) (*networkmanager.CreateDeviceOutput, error)
-	CreateDeviceAsync(ctx workflow.Context, input *networkmanager.CreateDeviceInput) *NetworkManagerCreateDeviceFuture
+	CreateDeviceAsync(ctx workflow.Context, input *networkmanager.CreateDeviceInput) *CreateDeviceFuture
 
 	CreateGlobalNetwork(ctx workflow.Context, input *networkmanager.CreateGlobalNetworkInput) (*networkmanager.CreateGlobalNetworkOutput, error)
-	CreateGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.CreateGlobalNetworkInput) *NetworkManagerCreateGlobalNetworkFuture
+	CreateGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.CreateGlobalNetworkInput) *CreateGlobalNetworkFuture
 
 	CreateLink(ctx workflow.Context, input *networkmanager.CreateLinkInput) (*networkmanager.CreateLinkOutput, error)
-	CreateLinkAsync(ctx workflow.Context, input *networkmanager.CreateLinkInput) *NetworkManagerCreateLinkFuture
+	CreateLinkAsync(ctx workflow.Context, input *networkmanager.CreateLinkInput) *CreateLinkFuture
 
 	CreateSite(ctx workflow.Context, input *networkmanager.CreateSiteInput) (*networkmanager.CreateSiteOutput, error)
-	CreateSiteAsync(ctx workflow.Context, input *networkmanager.CreateSiteInput) *NetworkManagerCreateSiteFuture
+	CreateSiteAsync(ctx workflow.Context, input *networkmanager.CreateSiteInput) *CreateSiteFuture
 
 	DeleteDevice(ctx workflow.Context, input *networkmanager.DeleteDeviceInput) (*networkmanager.DeleteDeviceOutput, error)
-	DeleteDeviceAsync(ctx workflow.Context, input *networkmanager.DeleteDeviceInput) *NetworkManagerDeleteDeviceFuture
+	DeleteDeviceAsync(ctx workflow.Context, input *networkmanager.DeleteDeviceInput) *DeleteDeviceFuture
 
 	DeleteGlobalNetwork(ctx workflow.Context, input *networkmanager.DeleteGlobalNetworkInput) (*networkmanager.DeleteGlobalNetworkOutput, error)
-	DeleteGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.DeleteGlobalNetworkInput) *NetworkManagerDeleteGlobalNetworkFuture
+	DeleteGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.DeleteGlobalNetworkInput) *DeleteGlobalNetworkFuture
 
 	DeleteLink(ctx workflow.Context, input *networkmanager.DeleteLinkInput) (*networkmanager.DeleteLinkOutput, error)
-	DeleteLinkAsync(ctx workflow.Context, input *networkmanager.DeleteLinkInput) *NetworkManagerDeleteLinkFuture
+	DeleteLinkAsync(ctx workflow.Context, input *networkmanager.DeleteLinkInput) *DeleteLinkFuture
 
 	DeleteSite(ctx workflow.Context, input *networkmanager.DeleteSiteInput) (*networkmanager.DeleteSiteOutput, error)
-	DeleteSiteAsync(ctx workflow.Context, input *networkmanager.DeleteSiteInput) *NetworkManagerDeleteSiteFuture
+	DeleteSiteAsync(ctx workflow.Context, input *networkmanager.DeleteSiteInput) *DeleteSiteFuture
 
 	DeregisterTransitGateway(ctx workflow.Context, input *networkmanager.DeregisterTransitGatewayInput) (*networkmanager.DeregisterTransitGatewayOutput, error)
-	DeregisterTransitGatewayAsync(ctx workflow.Context, input *networkmanager.DeregisterTransitGatewayInput) *NetworkManagerDeregisterTransitGatewayFuture
+	DeregisterTransitGatewayAsync(ctx workflow.Context, input *networkmanager.DeregisterTransitGatewayInput) *DeregisterTransitGatewayFuture
 
 	DescribeGlobalNetworks(ctx workflow.Context, input *networkmanager.DescribeGlobalNetworksInput) (*networkmanager.DescribeGlobalNetworksOutput, error)
-	DescribeGlobalNetworksAsync(ctx workflow.Context, input *networkmanager.DescribeGlobalNetworksInput) *NetworkManagerDescribeGlobalNetworksFuture
+	DescribeGlobalNetworksAsync(ctx workflow.Context, input *networkmanager.DescribeGlobalNetworksInput) *DescribeGlobalNetworksFuture
 
 	DisassociateCustomerGateway(ctx workflow.Context, input *networkmanager.DisassociateCustomerGatewayInput) (*networkmanager.DisassociateCustomerGatewayOutput, error)
-	DisassociateCustomerGatewayAsync(ctx workflow.Context, input *networkmanager.DisassociateCustomerGatewayInput) *NetworkManagerDisassociateCustomerGatewayFuture
+	DisassociateCustomerGatewayAsync(ctx workflow.Context, input *networkmanager.DisassociateCustomerGatewayInput) *DisassociateCustomerGatewayFuture
 
 	DisassociateLink(ctx workflow.Context, input *networkmanager.DisassociateLinkInput) (*networkmanager.DisassociateLinkOutput, error)
-	DisassociateLinkAsync(ctx workflow.Context, input *networkmanager.DisassociateLinkInput) *NetworkManagerDisassociateLinkFuture
+	DisassociateLinkAsync(ctx workflow.Context, input *networkmanager.DisassociateLinkInput) *DisassociateLinkFuture
 
 	GetCustomerGatewayAssociations(ctx workflow.Context, input *networkmanager.GetCustomerGatewayAssociationsInput) (*networkmanager.GetCustomerGatewayAssociationsOutput, error)
-	GetCustomerGatewayAssociationsAsync(ctx workflow.Context, input *networkmanager.GetCustomerGatewayAssociationsInput) *NetworkManagerGetCustomerGatewayAssociationsFuture
+	GetCustomerGatewayAssociationsAsync(ctx workflow.Context, input *networkmanager.GetCustomerGatewayAssociationsInput) *GetCustomerGatewayAssociationsFuture
 
 	GetDevices(ctx workflow.Context, input *networkmanager.GetDevicesInput) (*networkmanager.GetDevicesOutput, error)
-	GetDevicesAsync(ctx workflow.Context, input *networkmanager.GetDevicesInput) *NetworkManagerGetDevicesFuture
+	GetDevicesAsync(ctx workflow.Context, input *networkmanager.GetDevicesInput) *GetDevicesFuture
 
 	GetLinkAssociations(ctx workflow.Context, input *networkmanager.GetLinkAssociationsInput) (*networkmanager.GetLinkAssociationsOutput, error)
-	GetLinkAssociationsAsync(ctx workflow.Context, input *networkmanager.GetLinkAssociationsInput) *NetworkManagerGetLinkAssociationsFuture
+	GetLinkAssociationsAsync(ctx workflow.Context, input *networkmanager.GetLinkAssociationsInput) *GetLinkAssociationsFuture
 
 	GetLinks(ctx workflow.Context, input *networkmanager.GetLinksInput) (*networkmanager.GetLinksOutput, error)
-	GetLinksAsync(ctx workflow.Context, input *networkmanager.GetLinksInput) *NetworkManagerGetLinksFuture
+	GetLinksAsync(ctx workflow.Context, input *networkmanager.GetLinksInput) *GetLinksFuture
 
 	GetSites(ctx workflow.Context, input *networkmanager.GetSitesInput) (*networkmanager.GetSitesOutput, error)
-	GetSitesAsync(ctx workflow.Context, input *networkmanager.GetSitesInput) *NetworkManagerGetSitesFuture
+	GetSitesAsync(ctx workflow.Context, input *networkmanager.GetSitesInput) *GetSitesFuture
 
 	GetTransitGatewayRegistrations(ctx workflow.Context, input *networkmanager.GetTransitGatewayRegistrationsInput) (*networkmanager.GetTransitGatewayRegistrationsOutput, error)
-	GetTransitGatewayRegistrationsAsync(ctx workflow.Context, input *networkmanager.GetTransitGatewayRegistrationsInput) *NetworkManagerGetTransitGatewayRegistrationsFuture
+	GetTransitGatewayRegistrationsAsync(ctx workflow.Context, input *networkmanager.GetTransitGatewayRegistrationsInput) *GetTransitGatewayRegistrationsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *networkmanager.ListTagsForResourceInput) (*networkmanager.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *networkmanager.ListTagsForResourceInput) *NetworkManagerListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *networkmanager.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	RegisterTransitGateway(ctx workflow.Context, input *networkmanager.RegisterTransitGatewayInput) (*networkmanager.RegisterTransitGatewayOutput, error)
-	RegisterTransitGatewayAsync(ctx workflow.Context, input *networkmanager.RegisterTransitGatewayInput) *NetworkManagerRegisterTransitGatewayFuture
+	RegisterTransitGatewayAsync(ctx workflow.Context, input *networkmanager.RegisterTransitGatewayInput) *RegisterTransitGatewayFuture
 
 	TagResource(ctx workflow.Context, input *networkmanager.TagResourceInput) (*networkmanager.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *networkmanager.TagResourceInput) *NetworkManagerTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *networkmanager.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *networkmanager.UntagResourceInput) (*networkmanager.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *networkmanager.UntagResourceInput) *NetworkManagerUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *networkmanager.UntagResourceInput) *UntagResourceFuture
 
 	UpdateDevice(ctx workflow.Context, input *networkmanager.UpdateDeviceInput) (*networkmanager.UpdateDeviceOutput, error)
-	UpdateDeviceAsync(ctx workflow.Context, input *networkmanager.UpdateDeviceInput) *NetworkManagerUpdateDeviceFuture
+	UpdateDeviceAsync(ctx workflow.Context, input *networkmanager.UpdateDeviceInput) *UpdateDeviceFuture
 
 	UpdateGlobalNetwork(ctx workflow.Context, input *networkmanager.UpdateGlobalNetworkInput) (*networkmanager.UpdateGlobalNetworkOutput, error)
-	UpdateGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.UpdateGlobalNetworkInput) *NetworkManagerUpdateGlobalNetworkFuture
+	UpdateGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.UpdateGlobalNetworkInput) *UpdateGlobalNetworkFuture
 
 	UpdateLink(ctx workflow.Context, input *networkmanager.UpdateLinkInput) (*networkmanager.UpdateLinkOutput, error)
-	UpdateLinkAsync(ctx workflow.Context, input *networkmanager.UpdateLinkInput) *NetworkManagerUpdateLinkFuture
+	UpdateLinkAsync(ctx workflow.Context, input *networkmanager.UpdateLinkInput) *UpdateLinkFuture
 
 	UpdateSite(ctx workflow.Context, input *networkmanager.UpdateSiteInput) (*networkmanager.UpdateSiteOutput, error)
-	UpdateSiteAsync(ctx workflow.Context, input *networkmanager.UpdateSiteInput) *NetworkManagerUpdateSiteFuture
+	UpdateSiteAsync(ctx workflow.Context, input *networkmanager.UpdateSiteInput) *UpdateSiteFuture
 }
 
 func NewClient() Client {

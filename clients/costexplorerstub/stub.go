@@ -16,320 +16,320 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type CostExplorerCreateAnomalyMonitorFuture struct {
+type CreateAnomalyMonitorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerCreateAnomalyMonitorFuture) Get(ctx workflow.Context) (*costexplorer.CreateAnomalyMonitorOutput, error) {
+func (r *CreateAnomalyMonitorFuture) Get(ctx workflow.Context) (*costexplorer.CreateAnomalyMonitorOutput, error) {
 	var output costexplorer.CreateAnomalyMonitorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerCreateAnomalySubscriptionFuture struct {
+type CreateAnomalySubscriptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerCreateAnomalySubscriptionFuture) Get(ctx workflow.Context) (*costexplorer.CreateAnomalySubscriptionOutput, error) {
+func (r *CreateAnomalySubscriptionFuture) Get(ctx workflow.Context) (*costexplorer.CreateAnomalySubscriptionOutput, error) {
 	var output costexplorer.CreateAnomalySubscriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerCreateCostCategoryDefinitionFuture struct {
+type CreateCostCategoryDefinitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerCreateCostCategoryDefinitionFuture) Get(ctx workflow.Context) (*costexplorer.CreateCostCategoryDefinitionOutput, error) {
+func (r *CreateCostCategoryDefinitionFuture) Get(ctx workflow.Context) (*costexplorer.CreateCostCategoryDefinitionOutput, error) {
 	var output costexplorer.CreateCostCategoryDefinitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerDeleteAnomalyMonitorFuture struct {
+type DeleteAnomalyMonitorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerDeleteAnomalyMonitorFuture) Get(ctx workflow.Context) (*costexplorer.DeleteAnomalyMonitorOutput, error) {
+func (r *DeleteAnomalyMonitorFuture) Get(ctx workflow.Context) (*costexplorer.DeleteAnomalyMonitorOutput, error) {
 	var output costexplorer.DeleteAnomalyMonitorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerDeleteAnomalySubscriptionFuture struct {
+type DeleteAnomalySubscriptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerDeleteAnomalySubscriptionFuture) Get(ctx workflow.Context) (*costexplorer.DeleteAnomalySubscriptionOutput, error) {
+func (r *DeleteAnomalySubscriptionFuture) Get(ctx workflow.Context) (*costexplorer.DeleteAnomalySubscriptionOutput, error) {
 	var output costexplorer.DeleteAnomalySubscriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerDeleteCostCategoryDefinitionFuture struct {
+type DeleteCostCategoryDefinitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerDeleteCostCategoryDefinitionFuture) Get(ctx workflow.Context) (*costexplorer.DeleteCostCategoryDefinitionOutput, error) {
+func (r *DeleteCostCategoryDefinitionFuture) Get(ctx workflow.Context) (*costexplorer.DeleteCostCategoryDefinitionOutput, error) {
 	var output costexplorer.DeleteCostCategoryDefinitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerDescribeCostCategoryDefinitionFuture struct {
+type DescribeCostCategoryDefinitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerDescribeCostCategoryDefinitionFuture) Get(ctx workflow.Context) (*costexplorer.DescribeCostCategoryDefinitionOutput, error) {
+func (r *DescribeCostCategoryDefinitionFuture) Get(ctx workflow.Context) (*costexplorer.DescribeCostCategoryDefinitionOutput, error) {
 	var output costexplorer.DescribeCostCategoryDefinitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerGetAnomaliesFuture struct {
+type GetAnomaliesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerGetAnomaliesFuture) Get(ctx workflow.Context) (*costexplorer.GetAnomaliesOutput, error) {
+func (r *GetAnomaliesFuture) Get(ctx workflow.Context) (*costexplorer.GetAnomaliesOutput, error) {
 	var output costexplorer.GetAnomaliesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerGetAnomalyMonitorsFuture struct {
+type GetAnomalyMonitorsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerGetAnomalyMonitorsFuture) Get(ctx workflow.Context) (*costexplorer.GetAnomalyMonitorsOutput, error) {
+func (r *GetAnomalyMonitorsFuture) Get(ctx workflow.Context) (*costexplorer.GetAnomalyMonitorsOutput, error) {
 	var output costexplorer.GetAnomalyMonitorsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerGetAnomalySubscriptionsFuture struct {
+type GetAnomalySubscriptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerGetAnomalySubscriptionsFuture) Get(ctx workflow.Context) (*costexplorer.GetAnomalySubscriptionsOutput, error) {
+func (r *GetAnomalySubscriptionsFuture) Get(ctx workflow.Context) (*costexplorer.GetAnomalySubscriptionsOutput, error) {
 	var output costexplorer.GetAnomalySubscriptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerGetCostAndUsageFuture struct {
+type GetCostAndUsageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerGetCostAndUsageFuture) Get(ctx workflow.Context) (*costexplorer.GetCostAndUsageOutput, error) {
+func (r *GetCostAndUsageFuture) Get(ctx workflow.Context) (*costexplorer.GetCostAndUsageOutput, error) {
 	var output costexplorer.GetCostAndUsageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerGetCostAndUsageWithResourcesFuture struct {
+type GetCostAndUsageWithResourcesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerGetCostAndUsageWithResourcesFuture) Get(ctx workflow.Context) (*costexplorer.GetCostAndUsageWithResourcesOutput, error) {
+func (r *GetCostAndUsageWithResourcesFuture) Get(ctx workflow.Context) (*costexplorer.GetCostAndUsageWithResourcesOutput, error) {
 	var output costexplorer.GetCostAndUsageWithResourcesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerGetCostForecastFuture struct {
+type GetCostForecastFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerGetCostForecastFuture) Get(ctx workflow.Context) (*costexplorer.GetCostForecastOutput, error) {
+func (r *GetCostForecastFuture) Get(ctx workflow.Context) (*costexplorer.GetCostForecastOutput, error) {
 	var output costexplorer.GetCostForecastOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerGetDimensionValuesFuture struct {
+type GetDimensionValuesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerGetDimensionValuesFuture) Get(ctx workflow.Context) (*costexplorer.GetDimensionValuesOutput, error) {
+func (r *GetDimensionValuesFuture) Get(ctx workflow.Context) (*costexplorer.GetDimensionValuesOutput, error) {
 	var output costexplorer.GetDimensionValuesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerGetReservationCoverageFuture struct {
+type GetReservationCoverageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerGetReservationCoverageFuture) Get(ctx workflow.Context) (*costexplorer.GetReservationCoverageOutput, error) {
+func (r *GetReservationCoverageFuture) Get(ctx workflow.Context) (*costexplorer.GetReservationCoverageOutput, error) {
 	var output costexplorer.GetReservationCoverageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerGetReservationPurchaseRecommendationFuture struct {
+type GetReservationPurchaseRecommendationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerGetReservationPurchaseRecommendationFuture) Get(ctx workflow.Context) (*costexplorer.GetReservationPurchaseRecommendationOutput, error) {
+func (r *GetReservationPurchaseRecommendationFuture) Get(ctx workflow.Context) (*costexplorer.GetReservationPurchaseRecommendationOutput, error) {
 	var output costexplorer.GetReservationPurchaseRecommendationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerGetReservationUtilizationFuture struct {
+type GetReservationUtilizationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerGetReservationUtilizationFuture) Get(ctx workflow.Context) (*costexplorer.GetReservationUtilizationOutput, error) {
+func (r *GetReservationUtilizationFuture) Get(ctx workflow.Context) (*costexplorer.GetReservationUtilizationOutput, error) {
 	var output costexplorer.GetReservationUtilizationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerGetRightsizingRecommendationFuture struct {
+type GetRightsizingRecommendationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerGetRightsizingRecommendationFuture) Get(ctx workflow.Context) (*costexplorer.GetRightsizingRecommendationOutput, error) {
+func (r *GetRightsizingRecommendationFuture) Get(ctx workflow.Context) (*costexplorer.GetRightsizingRecommendationOutput, error) {
 	var output costexplorer.GetRightsizingRecommendationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerGetSavingsPlansCoverageFuture struct {
+type GetSavingsPlansCoverageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerGetSavingsPlansCoverageFuture) Get(ctx workflow.Context) (*costexplorer.GetSavingsPlansCoverageOutput, error) {
+func (r *GetSavingsPlansCoverageFuture) Get(ctx workflow.Context) (*costexplorer.GetSavingsPlansCoverageOutput, error) {
 	var output costexplorer.GetSavingsPlansCoverageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerGetSavingsPlansPurchaseRecommendationFuture struct {
+type GetSavingsPlansPurchaseRecommendationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerGetSavingsPlansPurchaseRecommendationFuture) Get(ctx workflow.Context) (*costexplorer.GetSavingsPlansPurchaseRecommendationOutput, error) {
+func (r *GetSavingsPlansPurchaseRecommendationFuture) Get(ctx workflow.Context) (*costexplorer.GetSavingsPlansPurchaseRecommendationOutput, error) {
 	var output costexplorer.GetSavingsPlansPurchaseRecommendationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerGetSavingsPlansUtilizationFuture struct {
+type GetSavingsPlansUtilizationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerGetSavingsPlansUtilizationFuture) Get(ctx workflow.Context) (*costexplorer.GetSavingsPlansUtilizationOutput, error) {
+func (r *GetSavingsPlansUtilizationFuture) Get(ctx workflow.Context) (*costexplorer.GetSavingsPlansUtilizationOutput, error) {
 	var output costexplorer.GetSavingsPlansUtilizationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerGetSavingsPlansUtilizationDetailsFuture struct {
+type GetSavingsPlansUtilizationDetailsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerGetSavingsPlansUtilizationDetailsFuture) Get(ctx workflow.Context) (*costexplorer.GetSavingsPlansUtilizationDetailsOutput, error) {
+func (r *GetSavingsPlansUtilizationDetailsFuture) Get(ctx workflow.Context) (*costexplorer.GetSavingsPlansUtilizationDetailsOutput, error) {
 	var output costexplorer.GetSavingsPlansUtilizationDetailsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerGetTagsFuture struct {
+type GetTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerGetTagsFuture) Get(ctx workflow.Context) (*costexplorer.GetTagsOutput, error) {
+func (r *GetTagsFuture) Get(ctx workflow.Context) (*costexplorer.GetTagsOutput, error) {
 	var output costexplorer.GetTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerGetUsageForecastFuture struct {
+type GetUsageForecastFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerGetUsageForecastFuture) Get(ctx workflow.Context) (*costexplorer.GetUsageForecastOutput, error) {
+func (r *GetUsageForecastFuture) Get(ctx workflow.Context) (*costexplorer.GetUsageForecastOutput, error) {
 	var output costexplorer.GetUsageForecastOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerListCostCategoryDefinitionsFuture struct {
+type ListCostCategoryDefinitionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerListCostCategoryDefinitionsFuture) Get(ctx workflow.Context) (*costexplorer.ListCostCategoryDefinitionsOutput, error) {
+func (r *ListCostCategoryDefinitionsFuture) Get(ctx workflow.Context) (*costexplorer.ListCostCategoryDefinitionsOutput, error) {
 	var output costexplorer.ListCostCategoryDefinitionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerProvideAnomalyFeedbackFuture struct {
+type ProvideAnomalyFeedbackFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerProvideAnomalyFeedbackFuture) Get(ctx workflow.Context) (*costexplorer.ProvideAnomalyFeedbackOutput, error) {
+func (r *ProvideAnomalyFeedbackFuture) Get(ctx workflow.Context) (*costexplorer.ProvideAnomalyFeedbackOutput, error) {
 	var output costexplorer.ProvideAnomalyFeedbackOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerUpdateAnomalyMonitorFuture struct {
+type UpdateAnomalyMonitorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerUpdateAnomalyMonitorFuture) Get(ctx workflow.Context) (*costexplorer.UpdateAnomalyMonitorOutput, error) {
+func (r *UpdateAnomalyMonitorFuture) Get(ctx workflow.Context) (*costexplorer.UpdateAnomalyMonitorOutput, error) {
 	var output costexplorer.UpdateAnomalyMonitorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerUpdateAnomalySubscriptionFuture struct {
+type UpdateAnomalySubscriptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerUpdateAnomalySubscriptionFuture) Get(ctx workflow.Context) (*costexplorer.UpdateAnomalySubscriptionOutput, error) {
+func (r *UpdateAnomalySubscriptionFuture) Get(ctx workflow.Context) (*costexplorer.UpdateAnomalySubscriptionOutput, error) {
 	var output costexplorer.UpdateAnomalySubscriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CostExplorerUpdateCostCategoryDefinitionFuture struct {
+type UpdateCostCategoryDefinitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CostExplorerUpdateCostCategoryDefinitionFuture) Get(ctx workflow.Context) (*costexplorer.UpdateCostCategoryDefinitionOutput, error) {
+func (r *UpdateCostCategoryDefinitionFuture) Get(ctx workflow.Context) (*costexplorer.UpdateCostCategoryDefinitionOutput, error) {
 	var output costexplorer.UpdateCostCategoryDefinitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -341,9 +341,9 @@ func (a *stub) CreateAnomalyMonitor(ctx workflow.Context, input *costexplorer.Cr
 	return &output, err
 }
 
-func (a *stub) CreateAnomalyMonitorAsync(ctx workflow.Context, input *costexplorer.CreateAnomalyMonitorInput) *CostExplorerCreateAnomalyMonitorFuture {
+func (a *stub) CreateAnomalyMonitorAsync(ctx workflow.Context, input *costexplorer.CreateAnomalyMonitorInput) *CreateAnomalyMonitorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.CreateAnomalyMonitor", input)
-	return &CostExplorerCreateAnomalyMonitorFuture{Future: future}
+	return &CreateAnomalyMonitorFuture{Future: future}
 }
 
 func (a *stub) CreateAnomalySubscription(ctx workflow.Context, input *costexplorer.CreateAnomalySubscriptionInput) (*costexplorer.CreateAnomalySubscriptionOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) CreateAnomalySubscription(ctx workflow.Context, input *costexplor
 	return &output, err
 }
 
-func (a *stub) CreateAnomalySubscriptionAsync(ctx workflow.Context, input *costexplorer.CreateAnomalySubscriptionInput) *CostExplorerCreateAnomalySubscriptionFuture {
+func (a *stub) CreateAnomalySubscriptionAsync(ctx workflow.Context, input *costexplorer.CreateAnomalySubscriptionInput) *CreateAnomalySubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.CreateAnomalySubscription", input)
-	return &CostExplorerCreateAnomalySubscriptionFuture{Future: future}
+	return &CreateAnomalySubscriptionFuture{Future: future}
 }
 
 func (a *stub) CreateCostCategoryDefinition(ctx workflow.Context, input *costexplorer.CreateCostCategoryDefinitionInput) (*costexplorer.CreateCostCategoryDefinitionOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) CreateCostCategoryDefinition(ctx workflow.Context, input *costexp
 	return &output, err
 }
 
-func (a *stub) CreateCostCategoryDefinitionAsync(ctx workflow.Context, input *costexplorer.CreateCostCategoryDefinitionInput) *CostExplorerCreateCostCategoryDefinitionFuture {
+func (a *stub) CreateCostCategoryDefinitionAsync(ctx workflow.Context, input *costexplorer.CreateCostCategoryDefinitionInput) *CreateCostCategoryDefinitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.CreateCostCategoryDefinition", input)
-	return &CostExplorerCreateCostCategoryDefinitionFuture{Future: future}
+	return &CreateCostCategoryDefinitionFuture{Future: future}
 }
 
 func (a *stub) DeleteAnomalyMonitor(ctx workflow.Context, input *costexplorer.DeleteAnomalyMonitorInput) (*costexplorer.DeleteAnomalyMonitorOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) DeleteAnomalyMonitor(ctx workflow.Context, input *costexplorer.De
 	return &output, err
 }
 
-func (a *stub) DeleteAnomalyMonitorAsync(ctx workflow.Context, input *costexplorer.DeleteAnomalyMonitorInput) *CostExplorerDeleteAnomalyMonitorFuture {
+func (a *stub) DeleteAnomalyMonitorAsync(ctx workflow.Context, input *costexplorer.DeleteAnomalyMonitorInput) *DeleteAnomalyMonitorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.DeleteAnomalyMonitor", input)
-	return &CostExplorerDeleteAnomalyMonitorFuture{Future: future}
+	return &DeleteAnomalyMonitorFuture{Future: future}
 }
 
 func (a *stub) DeleteAnomalySubscription(ctx workflow.Context, input *costexplorer.DeleteAnomalySubscriptionInput) (*costexplorer.DeleteAnomalySubscriptionOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) DeleteAnomalySubscription(ctx workflow.Context, input *costexplor
 	return &output, err
 }
 
-func (a *stub) DeleteAnomalySubscriptionAsync(ctx workflow.Context, input *costexplorer.DeleteAnomalySubscriptionInput) *CostExplorerDeleteAnomalySubscriptionFuture {
+func (a *stub) DeleteAnomalySubscriptionAsync(ctx workflow.Context, input *costexplorer.DeleteAnomalySubscriptionInput) *DeleteAnomalySubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.DeleteAnomalySubscription", input)
-	return &CostExplorerDeleteAnomalySubscriptionFuture{Future: future}
+	return &DeleteAnomalySubscriptionFuture{Future: future}
 }
 
 func (a *stub) DeleteCostCategoryDefinition(ctx workflow.Context, input *costexplorer.DeleteCostCategoryDefinitionInput) (*costexplorer.DeleteCostCategoryDefinitionOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) DeleteCostCategoryDefinition(ctx workflow.Context, input *costexp
 	return &output, err
 }
 
-func (a *stub) DeleteCostCategoryDefinitionAsync(ctx workflow.Context, input *costexplorer.DeleteCostCategoryDefinitionInput) *CostExplorerDeleteCostCategoryDefinitionFuture {
+func (a *stub) DeleteCostCategoryDefinitionAsync(ctx workflow.Context, input *costexplorer.DeleteCostCategoryDefinitionInput) *DeleteCostCategoryDefinitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.DeleteCostCategoryDefinition", input)
-	return &CostExplorerDeleteCostCategoryDefinitionFuture{Future: future}
+	return &DeleteCostCategoryDefinitionFuture{Future: future}
 }
 
 func (a *stub) DescribeCostCategoryDefinition(ctx workflow.Context, input *costexplorer.DescribeCostCategoryDefinitionInput) (*costexplorer.DescribeCostCategoryDefinitionOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) DescribeCostCategoryDefinition(ctx workflow.Context, input *coste
 	return &output, err
 }
 
-func (a *stub) DescribeCostCategoryDefinitionAsync(ctx workflow.Context, input *costexplorer.DescribeCostCategoryDefinitionInput) *CostExplorerDescribeCostCategoryDefinitionFuture {
+func (a *stub) DescribeCostCategoryDefinitionAsync(ctx workflow.Context, input *costexplorer.DescribeCostCategoryDefinitionInput) *DescribeCostCategoryDefinitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.DescribeCostCategoryDefinition", input)
-	return &CostExplorerDescribeCostCategoryDefinitionFuture{Future: future}
+	return &DescribeCostCategoryDefinitionFuture{Future: future}
 }
 
 func (a *stub) GetAnomalies(ctx workflow.Context, input *costexplorer.GetAnomaliesInput) (*costexplorer.GetAnomaliesOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) GetAnomalies(ctx workflow.Context, input *costexplorer.GetAnomali
 	return &output, err
 }
 
-func (a *stub) GetAnomaliesAsync(ctx workflow.Context, input *costexplorer.GetAnomaliesInput) *CostExplorerGetAnomaliesFuture {
+func (a *stub) GetAnomaliesAsync(ctx workflow.Context, input *costexplorer.GetAnomaliesInput) *GetAnomaliesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.GetAnomalies", input)
-	return &CostExplorerGetAnomaliesFuture{Future: future}
+	return &GetAnomaliesFuture{Future: future}
 }
 
 func (a *stub) GetAnomalyMonitors(ctx workflow.Context, input *costexplorer.GetAnomalyMonitorsInput) (*costexplorer.GetAnomalyMonitorsOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) GetAnomalyMonitors(ctx workflow.Context, input *costexplorer.GetA
 	return &output, err
 }
 
-func (a *stub) GetAnomalyMonitorsAsync(ctx workflow.Context, input *costexplorer.GetAnomalyMonitorsInput) *CostExplorerGetAnomalyMonitorsFuture {
+func (a *stub) GetAnomalyMonitorsAsync(ctx workflow.Context, input *costexplorer.GetAnomalyMonitorsInput) *GetAnomalyMonitorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.GetAnomalyMonitors", input)
-	return &CostExplorerGetAnomalyMonitorsFuture{Future: future}
+	return &GetAnomalyMonitorsFuture{Future: future}
 }
 
 func (a *stub) GetAnomalySubscriptions(ctx workflow.Context, input *costexplorer.GetAnomalySubscriptionsInput) (*costexplorer.GetAnomalySubscriptionsOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) GetAnomalySubscriptions(ctx workflow.Context, input *costexplorer
 	return &output, err
 }
 
-func (a *stub) GetAnomalySubscriptionsAsync(ctx workflow.Context, input *costexplorer.GetAnomalySubscriptionsInput) *CostExplorerGetAnomalySubscriptionsFuture {
+func (a *stub) GetAnomalySubscriptionsAsync(ctx workflow.Context, input *costexplorer.GetAnomalySubscriptionsInput) *GetAnomalySubscriptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.GetAnomalySubscriptions", input)
-	return &CostExplorerGetAnomalySubscriptionsFuture{Future: future}
+	return &GetAnomalySubscriptionsFuture{Future: future}
 }
 
 func (a *stub) GetCostAndUsage(ctx workflow.Context, input *costexplorer.GetCostAndUsageInput) (*costexplorer.GetCostAndUsageOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) GetCostAndUsage(ctx workflow.Context, input *costexplorer.GetCost
 	return &output, err
 }
 
-func (a *stub) GetCostAndUsageAsync(ctx workflow.Context, input *costexplorer.GetCostAndUsageInput) *CostExplorerGetCostAndUsageFuture {
+func (a *stub) GetCostAndUsageAsync(ctx workflow.Context, input *costexplorer.GetCostAndUsageInput) *GetCostAndUsageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.GetCostAndUsage", input)
-	return &CostExplorerGetCostAndUsageFuture{Future: future}
+	return &GetCostAndUsageFuture{Future: future}
 }
 
 func (a *stub) GetCostAndUsageWithResources(ctx workflow.Context, input *costexplorer.GetCostAndUsageWithResourcesInput) (*costexplorer.GetCostAndUsageWithResourcesOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) GetCostAndUsageWithResources(ctx workflow.Context, input *costexp
 	return &output, err
 }
 
-func (a *stub) GetCostAndUsageWithResourcesAsync(ctx workflow.Context, input *costexplorer.GetCostAndUsageWithResourcesInput) *CostExplorerGetCostAndUsageWithResourcesFuture {
+func (a *stub) GetCostAndUsageWithResourcesAsync(ctx workflow.Context, input *costexplorer.GetCostAndUsageWithResourcesInput) *GetCostAndUsageWithResourcesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.GetCostAndUsageWithResources", input)
-	return &CostExplorerGetCostAndUsageWithResourcesFuture{Future: future}
+	return &GetCostAndUsageWithResourcesFuture{Future: future}
 }
 
 func (a *stub) GetCostForecast(ctx workflow.Context, input *costexplorer.GetCostForecastInput) (*costexplorer.GetCostForecastOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) GetCostForecast(ctx workflow.Context, input *costexplorer.GetCost
 	return &output, err
 }
 
-func (a *stub) GetCostForecastAsync(ctx workflow.Context, input *costexplorer.GetCostForecastInput) *CostExplorerGetCostForecastFuture {
+func (a *stub) GetCostForecastAsync(ctx workflow.Context, input *costexplorer.GetCostForecastInput) *GetCostForecastFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.GetCostForecast", input)
-	return &CostExplorerGetCostForecastFuture{Future: future}
+	return &GetCostForecastFuture{Future: future}
 }
 
 func (a *stub) GetDimensionValues(ctx workflow.Context, input *costexplorer.GetDimensionValuesInput) (*costexplorer.GetDimensionValuesOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) GetDimensionValues(ctx workflow.Context, input *costexplorer.GetD
 	return &output, err
 }
 
-func (a *stub) GetDimensionValuesAsync(ctx workflow.Context, input *costexplorer.GetDimensionValuesInput) *CostExplorerGetDimensionValuesFuture {
+func (a *stub) GetDimensionValuesAsync(ctx workflow.Context, input *costexplorer.GetDimensionValuesInput) *GetDimensionValuesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.GetDimensionValues", input)
-	return &CostExplorerGetDimensionValuesFuture{Future: future}
+	return &GetDimensionValuesFuture{Future: future}
 }
 
 func (a *stub) GetReservationCoverage(ctx workflow.Context, input *costexplorer.GetReservationCoverageInput) (*costexplorer.GetReservationCoverageOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) GetReservationCoverage(ctx workflow.Context, input *costexplorer.
 	return &output, err
 }
 
-func (a *stub) GetReservationCoverageAsync(ctx workflow.Context, input *costexplorer.GetReservationCoverageInput) *CostExplorerGetReservationCoverageFuture {
+func (a *stub) GetReservationCoverageAsync(ctx workflow.Context, input *costexplorer.GetReservationCoverageInput) *GetReservationCoverageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.GetReservationCoverage", input)
-	return &CostExplorerGetReservationCoverageFuture{Future: future}
+	return &GetReservationCoverageFuture{Future: future}
 }
 
 func (a *stub) GetReservationPurchaseRecommendation(ctx workflow.Context, input *costexplorer.GetReservationPurchaseRecommendationInput) (*costexplorer.GetReservationPurchaseRecommendationOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) GetReservationPurchaseRecommendation(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) GetReservationPurchaseRecommendationAsync(ctx workflow.Context, input *costexplorer.GetReservationPurchaseRecommendationInput) *CostExplorerGetReservationPurchaseRecommendationFuture {
+func (a *stub) GetReservationPurchaseRecommendationAsync(ctx workflow.Context, input *costexplorer.GetReservationPurchaseRecommendationInput) *GetReservationPurchaseRecommendationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.GetReservationPurchaseRecommendation", input)
-	return &CostExplorerGetReservationPurchaseRecommendationFuture{Future: future}
+	return &GetReservationPurchaseRecommendationFuture{Future: future}
 }
 
 func (a *stub) GetReservationUtilization(ctx workflow.Context, input *costexplorer.GetReservationUtilizationInput) (*costexplorer.GetReservationUtilizationOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) GetReservationUtilization(ctx workflow.Context, input *costexplor
 	return &output, err
 }
 
-func (a *stub) GetReservationUtilizationAsync(ctx workflow.Context, input *costexplorer.GetReservationUtilizationInput) *CostExplorerGetReservationUtilizationFuture {
+func (a *stub) GetReservationUtilizationAsync(ctx workflow.Context, input *costexplorer.GetReservationUtilizationInput) *GetReservationUtilizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.GetReservationUtilization", input)
-	return &CostExplorerGetReservationUtilizationFuture{Future: future}
+	return &GetReservationUtilizationFuture{Future: future}
 }
 
 func (a *stub) GetRightsizingRecommendation(ctx workflow.Context, input *costexplorer.GetRightsizingRecommendationInput) (*costexplorer.GetRightsizingRecommendationOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) GetRightsizingRecommendation(ctx workflow.Context, input *costexp
 	return &output, err
 }
 
-func (a *stub) GetRightsizingRecommendationAsync(ctx workflow.Context, input *costexplorer.GetRightsizingRecommendationInput) *CostExplorerGetRightsizingRecommendationFuture {
+func (a *stub) GetRightsizingRecommendationAsync(ctx workflow.Context, input *costexplorer.GetRightsizingRecommendationInput) *GetRightsizingRecommendationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.GetRightsizingRecommendation", input)
-	return &CostExplorerGetRightsizingRecommendationFuture{Future: future}
+	return &GetRightsizingRecommendationFuture{Future: future}
 }
 
 func (a *stub) GetSavingsPlansCoverage(ctx workflow.Context, input *costexplorer.GetSavingsPlansCoverageInput) (*costexplorer.GetSavingsPlansCoverageOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) GetSavingsPlansCoverage(ctx workflow.Context, input *costexplorer
 	return &output, err
 }
 
-func (a *stub) GetSavingsPlansCoverageAsync(ctx workflow.Context, input *costexplorer.GetSavingsPlansCoverageInput) *CostExplorerGetSavingsPlansCoverageFuture {
+func (a *stub) GetSavingsPlansCoverageAsync(ctx workflow.Context, input *costexplorer.GetSavingsPlansCoverageInput) *GetSavingsPlansCoverageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.GetSavingsPlansCoverage", input)
-	return &CostExplorerGetSavingsPlansCoverageFuture{Future: future}
+	return &GetSavingsPlansCoverageFuture{Future: future}
 }
 
 func (a *stub) GetSavingsPlansPurchaseRecommendation(ctx workflow.Context, input *costexplorer.GetSavingsPlansPurchaseRecommendationInput) (*costexplorer.GetSavingsPlansPurchaseRecommendationOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) GetSavingsPlansPurchaseRecommendation(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *stub) GetSavingsPlansPurchaseRecommendationAsync(ctx workflow.Context, input *costexplorer.GetSavingsPlansPurchaseRecommendationInput) *CostExplorerGetSavingsPlansPurchaseRecommendationFuture {
+func (a *stub) GetSavingsPlansPurchaseRecommendationAsync(ctx workflow.Context, input *costexplorer.GetSavingsPlansPurchaseRecommendationInput) *GetSavingsPlansPurchaseRecommendationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.GetSavingsPlansPurchaseRecommendation", input)
-	return &CostExplorerGetSavingsPlansPurchaseRecommendationFuture{Future: future}
+	return &GetSavingsPlansPurchaseRecommendationFuture{Future: future}
 }
 
 func (a *stub) GetSavingsPlansUtilization(ctx workflow.Context, input *costexplorer.GetSavingsPlansUtilizationInput) (*costexplorer.GetSavingsPlansUtilizationOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) GetSavingsPlansUtilization(ctx workflow.Context, input *costexplo
 	return &output, err
 }
 
-func (a *stub) GetSavingsPlansUtilizationAsync(ctx workflow.Context, input *costexplorer.GetSavingsPlansUtilizationInput) *CostExplorerGetSavingsPlansUtilizationFuture {
+func (a *stub) GetSavingsPlansUtilizationAsync(ctx workflow.Context, input *costexplorer.GetSavingsPlansUtilizationInput) *GetSavingsPlansUtilizationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.GetSavingsPlansUtilization", input)
-	return &CostExplorerGetSavingsPlansUtilizationFuture{Future: future}
+	return &GetSavingsPlansUtilizationFuture{Future: future}
 }
 
 func (a *stub) GetSavingsPlansUtilizationDetails(ctx workflow.Context, input *costexplorer.GetSavingsPlansUtilizationDetailsInput) (*costexplorer.GetSavingsPlansUtilizationDetailsOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) GetSavingsPlansUtilizationDetails(ctx workflow.Context, input *co
 	return &output, err
 }
 
-func (a *stub) GetSavingsPlansUtilizationDetailsAsync(ctx workflow.Context, input *costexplorer.GetSavingsPlansUtilizationDetailsInput) *CostExplorerGetSavingsPlansUtilizationDetailsFuture {
+func (a *stub) GetSavingsPlansUtilizationDetailsAsync(ctx workflow.Context, input *costexplorer.GetSavingsPlansUtilizationDetailsInput) *GetSavingsPlansUtilizationDetailsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.GetSavingsPlansUtilizationDetails", input)
-	return &CostExplorerGetSavingsPlansUtilizationDetailsFuture{Future: future}
+	return &GetSavingsPlansUtilizationDetailsFuture{Future: future}
 }
 
 func (a *stub) GetTags(ctx workflow.Context, input *costexplorer.GetTagsInput) (*costexplorer.GetTagsOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) GetTags(ctx workflow.Context, input *costexplorer.GetTagsInput) (
 	return &output, err
 }
 
-func (a *stub) GetTagsAsync(ctx workflow.Context, input *costexplorer.GetTagsInput) *CostExplorerGetTagsFuture {
+func (a *stub) GetTagsAsync(ctx workflow.Context, input *costexplorer.GetTagsInput) *GetTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.GetTags", input)
-	return &CostExplorerGetTagsFuture{Future: future}
+	return &GetTagsFuture{Future: future}
 }
 
 func (a *stub) GetUsageForecast(ctx workflow.Context, input *costexplorer.GetUsageForecastInput) (*costexplorer.GetUsageForecastOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) GetUsageForecast(ctx workflow.Context, input *costexplorer.GetUsa
 	return &output, err
 }
 
-func (a *stub) GetUsageForecastAsync(ctx workflow.Context, input *costexplorer.GetUsageForecastInput) *CostExplorerGetUsageForecastFuture {
+func (a *stub) GetUsageForecastAsync(ctx workflow.Context, input *costexplorer.GetUsageForecastInput) *GetUsageForecastFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.GetUsageForecast", input)
-	return &CostExplorerGetUsageForecastFuture{Future: future}
+	return &GetUsageForecastFuture{Future: future}
 }
 
 func (a *stub) ListCostCategoryDefinitions(ctx workflow.Context, input *costexplorer.ListCostCategoryDefinitionsInput) (*costexplorer.ListCostCategoryDefinitionsOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) ListCostCategoryDefinitions(ctx workflow.Context, input *costexpl
 	return &output, err
 }
 
-func (a *stub) ListCostCategoryDefinitionsAsync(ctx workflow.Context, input *costexplorer.ListCostCategoryDefinitionsInput) *CostExplorerListCostCategoryDefinitionsFuture {
+func (a *stub) ListCostCategoryDefinitionsAsync(ctx workflow.Context, input *costexplorer.ListCostCategoryDefinitionsInput) *ListCostCategoryDefinitionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.ListCostCategoryDefinitions", input)
-	return &CostExplorerListCostCategoryDefinitionsFuture{Future: future}
+	return &ListCostCategoryDefinitionsFuture{Future: future}
 }
 
 func (a *stub) ProvideAnomalyFeedback(ctx workflow.Context, input *costexplorer.ProvideAnomalyFeedbackInput) (*costexplorer.ProvideAnomalyFeedbackOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) ProvideAnomalyFeedback(ctx workflow.Context, input *costexplorer.
 	return &output, err
 }
 
-func (a *stub) ProvideAnomalyFeedbackAsync(ctx workflow.Context, input *costexplorer.ProvideAnomalyFeedbackInput) *CostExplorerProvideAnomalyFeedbackFuture {
+func (a *stub) ProvideAnomalyFeedbackAsync(ctx workflow.Context, input *costexplorer.ProvideAnomalyFeedbackInput) *ProvideAnomalyFeedbackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.ProvideAnomalyFeedback", input)
-	return &CostExplorerProvideAnomalyFeedbackFuture{Future: future}
+	return &ProvideAnomalyFeedbackFuture{Future: future}
 }
 
 func (a *stub) UpdateAnomalyMonitor(ctx workflow.Context, input *costexplorer.UpdateAnomalyMonitorInput) (*costexplorer.UpdateAnomalyMonitorOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) UpdateAnomalyMonitor(ctx workflow.Context, input *costexplorer.Up
 	return &output, err
 }
 
-func (a *stub) UpdateAnomalyMonitorAsync(ctx workflow.Context, input *costexplorer.UpdateAnomalyMonitorInput) *CostExplorerUpdateAnomalyMonitorFuture {
+func (a *stub) UpdateAnomalyMonitorAsync(ctx workflow.Context, input *costexplorer.UpdateAnomalyMonitorInput) *UpdateAnomalyMonitorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.UpdateAnomalyMonitor", input)
-	return &CostExplorerUpdateAnomalyMonitorFuture{Future: future}
+	return &UpdateAnomalyMonitorFuture{Future: future}
 }
 
 func (a *stub) UpdateAnomalySubscription(ctx workflow.Context, input *costexplorer.UpdateAnomalySubscriptionInput) (*costexplorer.UpdateAnomalySubscriptionOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) UpdateAnomalySubscription(ctx workflow.Context, input *costexplor
 	return &output, err
 }
 
-func (a *stub) UpdateAnomalySubscriptionAsync(ctx workflow.Context, input *costexplorer.UpdateAnomalySubscriptionInput) *CostExplorerUpdateAnomalySubscriptionFuture {
+func (a *stub) UpdateAnomalySubscriptionAsync(ctx workflow.Context, input *costexplorer.UpdateAnomalySubscriptionInput) *UpdateAnomalySubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.UpdateAnomalySubscription", input)
-	return &CostExplorerUpdateAnomalySubscriptionFuture{Future: future}
+	return &UpdateAnomalySubscriptionFuture{Future: future}
 }
 
 func (a *stub) UpdateCostCategoryDefinition(ctx workflow.Context, input *costexplorer.UpdateCostCategoryDefinitionInput) (*costexplorer.UpdateCostCategoryDefinitionOutput, error) {
@@ -649,7 +649,7 @@ func (a *stub) UpdateCostCategoryDefinition(ctx workflow.Context, input *costexp
 	return &output, err
 }
 
-func (a *stub) UpdateCostCategoryDefinitionAsync(ctx workflow.Context, input *costexplorer.UpdateCostCategoryDefinitionInput) *CostExplorerUpdateCostCategoryDefinitionFuture {
+func (a *stub) UpdateCostCategoryDefinitionAsync(ctx workflow.Context, input *costexplorer.UpdateCostCategoryDefinitionInput) *UpdateCostCategoryDefinitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.costexplorer.UpdateCostCategoryDefinition", input)
-	return &CostExplorerUpdateCostCategoryDefinitionFuture{Future: future}
+	return &UpdateCostCategoryDefinitionFuture{Future: future}
 }

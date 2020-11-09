@@ -16,815 +16,815 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type OpsWorksAssignInstanceFuture struct {
+type AssignInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksAssignInstanceFuture) Get(ctx workflow.Context) (*opsworks.AssignInstanceOutput, error) {
+func (r *AssignInstanceFuture) Get(ctx workflow.Context) (*opsworks.AssignInstanceOutput, error) {
 	var output opsworks.AssignInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksAssignVolumeFuture struct {
+type AssignVolumeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksAssignVolumeFuture) Get(ctx workflow.Context) (*opsworks.AssignVolumeOutput, error) {
+func (r *AssignVolumeFuture) Get(ctx workflow.Context) (*opsworks.AssignVolumeOutput, error) {
 	var output opsworks.AssignVolumeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksAssociateElasticIpFuture struct {
+type AssociateElasticIpFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksAssociateElasticIpFuture) Get(ctx workflow.Context) (*opsworks.AssociateElasticIpOutput, error) {
+func (r *AssociateElasticIpFuture) Get(ctx workflow.Context) (*opsworks.AssociateElasticIpOutput, error) {
 	var output opsworks.AssociateElasticIpOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksAttachElasticLoadBalancerFuture struct {
+type AttachElasticLoadBalancerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksAttachElasticLoadBalancerFuture) Get(ctx workflow.Context) (*opsworks.AttachElasticLoadBalancerOutput, error) {
+func (r *AttachElasticLoadBalancerFuture) Get(ctx workflow.Context) (*opsworks.AttachElasticLoadBalancerOutput, error) {
 	var output opsworks.AttachElasticLoadBalancerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksCloneStackFuture struct {
+type CloneStackFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksCloneStackFuture) Get(ctx workflow.Context) (*opsworks.CloneStackOutput, error) {
+func (r *CloneStackFuture) Get(ctx workflow.Context) (*opsworks.CloneStackOutput, error) {
 	var output opsworks.CloneStackOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksCreateAppFuture struct {
+type CreateAppFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksCreateAppFuture) Get(ctx workflow.Context) (*opsworks.CreateAppOutput, error) {
+func (r *CreateAppFuture) Get(ctx workflow.Context) (*opsworks.CreateAppOutput, error) {
 	var output opsworks.CreateAppOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksCreateDeploymentFuture struct {
+type CreateDeploymentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksCreateDeploymentFuture) Get(ctx workflow.Context) (*opsworks.CreateDeploymentOutput, error) {
+func (r *CreateDeploymentFuture) Get(ctx workflow.Context) (*opsworks.CreateDeploymentOutput, error) {
 	var output opsworks.CreateDeploymentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksCreateInstanceFuture struct {
+type CreateInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksCreateInstanceFuture) Get(ctx workflow.Context) (*opsworks.CreateInstanceOutput, error) {
+func (r *CreateInstanceFuture) Get(ctx workflow.Context) (*opsworks.CreateInstanceOutput, error) {
 	var output opsworks.CreateInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksCreateLayerFuture struct {
+type CreateLayerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksCreateLayerFuture) Get(ctx workflow.Context) (*opsworks.CreateLayerOutput, error) {
+func (r *CreateLayerFuture) Get(ctx workflow.Context) (*opsworks.CreateLayerOutput, error) {
 	var output opsworks.CreateLayerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksCreateStackFuture struct {
+type CreateStackFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksCreateStackFuture) Get(ctx workflow.Context) (*opsworks.CreateStackOutput, error) {
+func (r *CreateStackFuture) Get(ctx workflow.Context) (*opsworks.CreateStackOutput, error) {
 	var output opsworks.CreateStackOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksCreateUserProfileFuture struct {
+type CreateUserProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksCreateUserProfileFuture) Get(ctx workflow.Context) (*opsworks.CreateUserProfileOutput, error) {
+func (r *CreateUserProfileFuture) Get(ctx workflow.Context) (*opsworks.CreateUserProfileOutput, error) {
 	var output opsworks.CreateUserProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDeleteAppFuture struct {
+type DeleteAppFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDeleteAppFuture) Get(ctx workflow.Context) (*opsworks.DeleteAppOutput, error) {
+func (r *DeleteAppFuture) Get(ctx workflow.Context) (*opsworks.DeleteAppOutput, error) {
 	var output opsworks.DeleteAppOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDeleteInstanceFuture struct {
+type DeleteInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDeleteInstanceFuture) Get(ctx workflow.Context) (*opsworks.DeleteInstanceOutput, error) {
+func (r *DeleteInstanceFuture) Get(ctx workflow.Context) (*opsworks.DeleteInstanceOutput, error) {
 	var output opsworks.DeleteInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDeleteLayerFuture struct {
+type DeleteLayerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDeleteLayerFuture) Get(ctx workflow.Context) (*opsworks.DeleteLayerOutput, error) {
+func (r *DeleteLayerFuture) Get(ctx workflow.Context) (*opsworks.DeleteLayerOutput, error) {
 	var output opsworks.DeleteLayerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDeleteStackFuture struct {
+type DeleteStackFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDeleteStackFuture) Get(ctx workflow.Context) (*opsworks.DeleteStackOutput, error) {
+func (r *DeleteStackFuture) Get(ctx workflow.Context) (*opsworks.DeleteStackOutput, error) {
 	var output opsworks.DeleteStackOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDeleteUserProfileFuture struct {
+type DeleteUserProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDeleteUserProfileFuture) Get(ctx workflow.Context) (*opsworks.DeleteUserProfileOutput, error) {
+func (r *DeleteUserProfileFuture) Get(ctx workflow.Context) (*opsworks.DeleteUserProfileOutput, error) {
 	var output opsworks.DeleteUserProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDeregisterEcsClusterFuture struct {
+type DeregisterEcsClusterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDeregisterEcsClusterFuture) Get(ctx workflow.Context) (*opsworks.DeregisterEcsClusterOutput, error) {
+func (r *DeregisterEcsClusterFuture) Get(ctx workflow.Context) (*opsworks.DeregisterEcsClusterOutput, error) {
 	var output opsworks.DeregisterEcsClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDeregisterElasticIpFuture struct {
+type DeregisterElasticIpFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDeregisterElasticIpFuture) Get(ctx workflow.Context) (*opsworks.DeregisterElasticIpOutput, error) {
+func (r *DeregisterElasticIpFuture) Get(ctx workflow.Context) (*opsworks.DeregisterElasticIpOutput, error) {
 	var output opsworks.DeregisterElasticIpOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDeregisterInstanceFuture struct {
+type DeregisterInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDeregisterInstanceFuture) Get(ctx workflow.Context) (*opsworks.DeregisterInstanceOutput, error) {
+func (r *DeregisterInstanceFuture) Get(ctx workflow.Context) (*opsworks.DeregisterInstanceOutput, error) {
 	var output opsworks.DeregisterInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDeregisterRdsDbInstanceFuture struct {
+type DeregisterRdsDbInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDeregisterRdsDbInstanceFuture) Get(ctx workflow.Context) (*opsworks.DeregisterRdsDbInstanceOutput, error) {
+func (r *DeregisterRdsDbInstanceFuture) Get(ctx workflow.Context) (*opsworks.DeregisterRdsDbInstanceOutput, error) {
 	var output opsworks.DeregisterRdsDbInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDeregisterVolumeFuture struct {
+type DeregisterVolumeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDeregisterVolumeFuture) Get(ctx workflow.Context) (*opsworks.DeregisterVolumeOutput, error) {
+func (r *DeregisterVolumeFuture) Get(ctx workflow.Context) (*opsworks.DeregisterVolumeOutput, error) {
 	var output opsworks.DeregisterVolumeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeAgentVersionsFuture struct {
+type DescribeAgentVersionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeAgentVersionsFuture) Get(ctx workflow.Context) (*opsworks.DescribeAgentVersionsOutput, error) {
+func (r *DescribeAgentVersionsFuture) Get(ctx workflow.Context) (*opsworks.DescribeAgentVersionsOutput, error) {
 	var output opsworks.DescribeAgentVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeAppsFuture struct {
+type DescribeAppsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeAppsFuture) Get(ctx workflow.Context) (*opsworks.DescribeAppsOutput, error) {
+func (r *DescribeAppsFuture) Get(ctx workflow.Context) (*opsworks.DescribeAppsOutput, error) {
 	var output opsworks.DescribeAppsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeCommandsFuture struct {
+type DescribeCommandsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeCommandsFuture) Get(ctx workflow.Context) (*opsworks.DescribeCommandsOutput, error) {
+func (r *DescribeCommandsFuture) Get(ctx workflow.Context) (*opsworks.DescribeCommandsOutput, error) {
 	var output opsworks.DescribeCommandsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeDeploymentsFuture struct {
+type DescribeDeploymentsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeDeploymentsFuture) Get(ctx workflow.Context) (*opsworks.DescribeDeploymentsOutput, error) {
+func (r *DescribeDeploymentsFuture) Get(ctx workflow.Context) (*opsworks.DescribeDeploymentsOutput, error) {
 	var output opsworks.DescribeDeploymentsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeEcsClustersFuture struct {
+type DescribeEcsClustersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeEcsClustersFuture) Get(ctx workflow.Context) (*opsworks.DescribeEcsClustersOutput, error) {
+func (r *DescribeEcsClustersFuture) Get(ctx workflow.Context) (*opsworks.DescribeEcsClustersOutput, error) {
 	var output opsworks.DescribeEcsClustersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeElasticIpsFuture struct {
+type DescribeElasticIpsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeElasticIpsFuture) Get(ctx workflow.Context) (*opsworks.DescribeElasticIpsOutput, error) {
+func (r *DescribeElasticIpsFuture) Get(ctx workflow.Context) (*opsworks.DescribeElasticIpsOutput, error) {
 	var output opsworks.DescribeElasticIpsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeElasticLoadBalancersFuture struct {
+type DescribeElasticLoadBalancersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeElasticLoadBalancersFuture) Get(ctx workflow.Context) (*opsworks.DescribeElasticLoadBalancersOutput, error) {
+func (r *DescribeElasticLoadBalancersFuture) Get(ctx workflow.Context) (*opsworks.DescribeElasticLoadBalancersOutput, error) {
 	var output opsworks.DescribeElasticLoadBalancersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeInstancesFuture struct {
+type DescribeInstancesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeInstancesFuture) Get(ctx workflow.Context) (*opsworks.DescribeInstancesOutput, error) {
+func (r *DescribeInstancesFuture) Get(ctx workflow.Context) (*opsworks.DescribeInstancesOutput, error) {
 	var output opsworks.DescribeInstancesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeLayersFuture struct {
+type DescribeLayersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeLayersFuture) Get(ctx workflow.Context) (*opsworks.DescribeLayersOutput, error) {
+func (r *DescribeLayersFuture) Get(ctx workflow.Context) (*opsworks.DescribeLayersOutput, error) {
 	var output opsworks.DescribeLayersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeLoadBasedAutoScalingFuture struct {
+type DescribeLoadBasedAutoScalingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeLoadBasedAutoScalingFuture) Get(ctx workflow.Context) (*opsworks.DescribeLoadBasedAutoScalingOutput, error) {
+func (r *DescribeLoadBasedAutoScalingFuture) Get(ctx workflow.Context) (*opsworks.DescribeLoadBasedAutoScalingOutput, error) {
 	var output opsworks.DescribeLoadBasedAutoScalingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeMyUserProfileFuture struct {
+type DescribeMyUserProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeMyUserProfileFuture) Get(ctx workflow.Context) (*opsworks.DescribeMyUserProfileOutput, error) {
+func (r *DescribeMyUserProfileFuture) Get(ctx workflow.Context) (*opsworks.DescribeMyUserProfileOutput, error) {
 	var output opsworks.DescribeMyUserProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeOperatingSystemsFuture struct {
+type DescribeOperatingSystemsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeOperatingSystemsFuture) Get(ctx workflow.Context) (*opsworks.DescribeOperatingSystemsOutput, error) {
+func (r *DescribeOperatingSystemsFuture) Get(ctx workflow.Context) (*opsworks.DescribeOperatingSystemsOutput, error) {
 	var output opsworks.DescribeOperatingSystemsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribePermissionsFuture struct {
+type DescribePermissionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribePermissionsFuture) Get(ctx workflow.Context) (*opsworks.DescribePermissionsOutput, error) {
+func (r *DescribePermissionsFuture) Get(ctx workflow.Context) (*opsworks.DescribePermissionsOutput, error) {
 	var output opsworks.DescribePermissionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeRaidArraysFuture struct {
+type DescribeRaidArraysFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeRaidArraysFuture) Get(ctx workflow.Context) (*opsworks.DescribeRaidArraysOutput, error) {
+func (r *DescribeRaidArraysFuture) Get(ctx workflow.Context) (*opsworks.DescribeRaidArraysOutput, error) {
 	var output opsworks.DescribeRaidArraysOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeRdsDbInstancesFuture struct {
+type DescribeRdsDbInstancesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeRdsDbInstancesFuture) Get(ctx workflow.Context) (*opsworks.DescribeRdsDbInstancesOutput, error) {
+func (r *DescribeRdsDbInstancesFuture) Get(ctx workflow.Context) (*opsworks.DescribeRdsDbInstancesOutput, error) {
 	var output opsworks.DescribeRdsDbInstancesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeServiceErrorsFuture struct {
+type DescribeServiceErrorsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeServiceErrorsFuture) Get(ctx workflow.Context) (*opsworks.DescribeServiceErrorsOutput, error) {
+func (r *DescribeServiceErrorsFuture) Get(ctx workflow.Context) (*opsworks.DescribeServiceErrorsOutput, error) {
 	var output opsworks.DescribeServiceErrorsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeStackProvisioningParametersFuture struct {
+type DescribeStackProvisioningParametersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeStackProvisioningParametersFuture) Get(ctx workflow.Context) (*opsworks.DescribeStackProvisioningParametersOutput, error) {
+func (r *DescribeStackProvisioningParametersFuture) Get(ctx workflow.Context) (*opsworks.DescribeStackProvisioningParametersOutput, error) {
 	var output opsworks.DescribeStackProvisioningParametersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeStackSummaryFuture struct {
+type DescribeStackSummaryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeStackSummaryFuture) Get(ctx workflow.Context) (*opsworks.DescribeStackSummaryOutput, error) {
+func (r *DescribeStackSummaryFuture) Get(ctx workflow.Context) (*opsworks.DescribeStackSummaryOutput, error) {
 	var output opsworks.DescribeStackSummaryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeStacksFuture struct {
+type DescribeStacksFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeStacksFuture) Get(ctx workflow.Context) (*opsworks.DescribeStacksOutput, error) {
+func (r *DescribeStacksFuture) Get(ctx workflow.Context) (*opsworks.DescribeStacksOutput, error) {
 	var output opsworks.DescribeStacksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeTimeBasedAutoScalingFuture struct {
+type DescribeTimeBasedAutoScalingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeTimeBasedAutoScalingFuture) Get(ctx workflow.Context) (*opsworks.DescribeTimeBasedAutoScalingOutput, error) {
+func (r *DescribeTimeBasedAutoScalingFuture) Get(ctx workflow.Context) (*opsworks.DescribeTimeBasedAutoScalingOutput, error) {
 	var output opsworks.DescribeTimeBasedAutoScalingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeUserProfilesFuture struct {
+type DescribeUserProfilesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeUserProfilesFuture) Get(ctx workflow.Context) (*opsworks.DescribeUserProfilesOutput, error) {
+func (r *DescribeUserProfilesFuture) Get(ctx workflow.Context) (*opsworks.DescribeUserProfilesOutput, error) {
 	var output opsworks.DescribeUserProfilesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDescribeVolumesFuture struct {
+type DescribeVolumesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDescribeVolumesFuture) Get(ctx workflow.Context) (*opsworks.DescribeVolumesOutput, error) {
+func (r *DescribeVolumesFuture) Get(ctx workflow.Context) (*opsworks.DescribeVolumesOutput, error) {
 	var output opsworks.DescribeVolumesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDetachElasticLoadBalancerFuture struct {
+type DetachElasticLoadBalancerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDetachElasticLoadBalancerFuture) Get(ctx workflow.Context) (*opsworks.DetachElasticLoadBalancerOutput, error) {
+func (r *DetachElasticLoadBalancerFuture) Get(ctx workflow.Context) (*opsworks.DetachElasticLoadBalancerOutput, error) {
 	var output opsworks.DetachElasticLoadBalancerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksDisassociateElasticIpFuture struct {
+type DisassociateElasticIpFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksDisassociateElasticIpFuture) Get(ctx workflow.Context) (*opsworks.DisassociateElasticIpOutput, error) {
+func (r *DisassociateElasticIpFuture) Get(ctx workflow.Context) (*opsworks.DisassociateElasticIpOutput, error) {
 	var output opsworks.DisassociateElasticIpOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksGetHostnameSuggestionFuture struct {
+type GetHostnameSuggestionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksGetHostnameSuggestionFuture) Get(ctx workflow.Context) (*opsworks.GetHostnameSuggestionOutput, error) {
+func (r *GetHostnameSuggestionFuture) Get(ctx workflow.Context) (*opsworks.GetHostnameSuggestionOutput, error) {
 	var output opsworks.GetHostnameSuggestionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksGrantAccessFuture struct {
+type GrantAccessFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksGrantAccessFuture) Get(ctx workflow.Context) (*opsworks.GrantAccessOutput, error) {
+func (r *GrantAccessFuture) Get(ctx workflow.Context) (*opsworks.GrantAccessOutput, error) {
 	var output opsworks.GrantAccessOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksListTagsFuture struct {
+type ListTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksListTagsFuture) Get(ctx workflow.Context) (*opsworks.ListTagsOutput, error) {
+func (r *ListTagsFuture) Get(ctx workflow.Context) (*opsworks.ListTagsOutput, error) {
 	var output opsworks.ListTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksRebootInstanceFuture struct {
+type RebootInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksRebootInstanceFuture) Get(ctx workflow.Context) (*opsworks.RebootInstanceOutput, error) {
+func (r *RebootInstanceFuture) Get(ctx workflow.Context) (*opsworks.RebootInstanceOutput, error) {
 	var output opsworks.RebootInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksRegisterEcsClusterFuture struct {
+type RegisterEcsClusterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksRegisterEcsClusterFuture) Get(ctx workflow.Context) (*opsworks.RegisterEcsClusterOutput, error) {
+func (r *RegisterEcsClusterFuture) Get(ctx workflow.Context) (*opsworks.RegisterEcsClusterOutput, error) {
 	var output opsworks.RegisterEcsClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksRegisterElasticIpFuture struct {
+type RegisterElasticIpFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksRegisterElasticIpFuture) Get(ctx workflow.Context) (*opsworks.RegisterElasticIpOutput, error) {
+func (r *RegisterElasticIpFuture) Get(ctx workflow.Context) (*opsworks.RegisterElasticIpOutput, error) {
 	var output opsworks.RegisterElasticIpOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksRegisterInstanceFuture struct {
+type RegisterInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksRegisterInstanceFuture) Get(ctx workflow.Context) (*opsworks.RegisterInstanceOutput, error) {
+func (r *RegisterInstanceFuture) Get(ctx workflow.Context) (*opsworks.RegisterInstanceOutput, error) {
 	var output opsworks.RegisterInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksRegisterRdsDbInstanceFuture struct {
+type RegisterRdsDbInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksRegisterRdsDbInstanceFuture) Get(ctx workflow.Context) (*opsworks.RegisterRdsDbInstanceOutput, error) {
+func (r *RegisterRdsDbInstanceFuture) Get(ctx workflow.Context) (*opsworks.RegisterRdsDbInstanceOutput, error) {
 	var output opsworks.RegisterRdsDbInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksRegisterVolumeFuture struct {
+type RegisterVolumeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksRegisterVolumeFuture) Get(ctx workflow.Context) (*opsworks.RegisterVolumeOutput, error) {
+func (r *RegisterVolumeFuture) Get(ctx workflow.Context) (*opsworks.RegisterVolumeOutput, error) {
 	var output opsworks.RegisterVolumeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksSetLoadBasedAutoScalingFuture struct {
+type SetLoadBasedAutoScalingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksSetLoadBasedAutoScalingFuture) Get(ctx workflow.Context) (*opsworks.SetLoadBasedAutoScalingOutput, error) {
+func (r *SetLoadBasedAutoScalingFuture) Get(ctx workflow.Context) (*opsworks.SetLoadBasedAutoScalingOutput, error) {
 	var output opsworks.SetLoadBasedAutoScalingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksSetPermissionFuture struct {
+type SetPermissionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksSetPermissionFuture) Get(ctx workflow.Context) (*opsworks.SetPermissionOutput, error) {
+func (r *SetPermissionFuture) Get(ctx workflow.Context) (*opsworks.SetPermissionOutput, error) {
 	var output opsworks.SetPermissionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksSetTimeBasedAutoScalingFuture struct {
+type SetTimeBasedAutoScalingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksSetTimeBasedAutoScalingFuture) Get(ctx workflow.Context) (*opsworks.SetTimeBasedAutoScalingOutput, error) {
+func (r *SetTimeBasedAutoScalingFuture) Get(ctx workflow.Context) (*opsworks.SetTimeBasedAutoScalingOutput, error) {
 	var output opsworks.SetTimeBasedAutoScalingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksStartInstanceFuture struct {
+type StartInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksStartInstanceFuture) Get(ctx workflow.Context) (*opsworks.StartInstanceOutput, error) {
+func (r *StartInstanceFuture) Get(ctx workflow.Context) (*opsworks.StartInstanceOutput, error) {
 	var output opsworks.StartInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksStartStackFuture struct {
+type StartStackFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksStartStackFuture) Get(ctx workflow.Context) (*opsworks.StartStackOutput, error) {
+func (r *StartStackFuture) Get(ctx workflow.Context) (*opsworks.StartStackOutput, error) {
 	var output opsworks.StartStackOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksStopInstanceFuture struct {
+type StopInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksStopInstanceFuture) Get(ctx workflow.Context) (*opsworks.StopInstanceOutput, error) {
+func (r *StopInstanceFuture) Get(ctx workflow.Context) (*opsworks.StopInstanceOutput, error) {
 	var output opsworks.StopInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksStopStackFuture struct {
+type StopStackFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksStopStackFuture) Get(ctx workflow.Context) (*opsworks.StopStackOutput, error) {
+func (r *StopStackFuture) Get(ctx workflow.Context) (*opsworks.StopStackOutput, error) {
 	var output opsworks.StopStackOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksTagResourceFuture) Get(ctx workflow.Context) (*opsworks.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*opsworks.TagResourceOutput, error) {
 	var output opsworks.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksUnassignInstanceFuture struct {
+type UnassignInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksUnassignInstanceFuture) Get(ctx workflow.Context) (*opsworks.UnassignInstanceOutput, error) {
+func (r *UnassignInstanceFuture) Get(ctx workflow.Context) (*opsworks.UnassignInstanceOutput, error) {
 	var output opsworks.UnassignInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksUnassignVolumeFuture struct {
+type UnassignVolumeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksUnassignVolumeFuture) Get(ctx workflow.Context) (*opsworks.UnassignVolumeOutput, error) {
+func (r *UnassignVolumeFuture) Get(ctx workflow.Context) (*opsworks.UnassignVolumeOutput, error) {
 	var output opsworks.UnassignVolumeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksUntagResourceFuture) Get(ctx workflow.Context) (*opsworks.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*opsworks.UntagResourceOutput, error) {
 	var output opsworks.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksUpdateAppFuture struct {
+type UpdateAppFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksUpdateAppFuture) Get(ctx workflow.Context) (*opsworks.UpdateAppOutput, error) {
+func (r *UpdateAppFuture) Get(ctx workflow.Context) (*opsworks.UpdateAppOutput, error) {
 	var output opsworks.UpdateAppOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksUpdateElasticIpFuture struct {
+type UpdateElasticIpFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksUpdateElasticIpFuture) Get(ctx workflow.Context) (*opsworks.UpdateElasticIpOutput, error) {
+func (r *UpdateElasticIpFuture) Get(ctx workflow.Context) (*opsworks.UpdateElasticIpOutput, error) {
 	var output opsworks.UpdateElasticIpOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksUpdateInstanceFuture struct {
+type UpdateInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksUpdateInstanceFuture) Get(ctx workflow.Context) (*opsworks.UpdateInstanceOutput, error) {
+func (r *UpdateInstanceFuture) Get(ctx workflow.Context) (*opsworks.UpdateInstanceOutput, error) {
 	var output opsworks.UpdateInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksUpdateLayerFuture struct {
+type UpdateLayerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksUpdateLayerFuture) Get(ctx workflow.Context) (*opsworks.UpdateLayerOutput, error) {
+func (r *UpdateLayerFuture) Get(ctx workflow.Context) (*opsworks.UpdateLayerOutput, error) {
 	var output opsworks.UpdateLayerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksUpdateMyUserProfileFuture struct {
+type UpdateMyUserProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksUpdateMyUserProfileFuture) Get(ctx workflow.Context) (*opsworks.UpdateMyUserProfileOutput, error) {
+func (r *UpdateMyUserProfileFuture) Get(ctx workflow.Context) (*opsworks.UpdateMyUserProfileOutput, error) {
 	var output opsworks.UpdateMyUserProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksUpdateRdsDbInstanceFuture struct {
+type UpdateRdsDbInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksUpdateRdsDbInstanceFuture) Get(ctx workflow.Context) (*opsworks.UpdateRdsDbInstanceOutput, error) {
+func (r *UpdateRdsDbInstanceFuture) Get(ctx workflow.Context) (*opsworks.UpdateRdsDbInstanceOutput, error) {
 	var output opsworks.UpdateRdsDbInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksUpdateStackFuture struct {
+type UpdateStackFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksUpdateStackFuture) Get(ctx workflow.Context) (*opsworks.UpdateStackOutput, error) {
+func (r *UpdateStackFuture) Get(ctx workflow.Context) (*opsworks.UpdateStackOutput, error) {
 	var output opsworks.UpdateStackOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksUpdateUserProfileFuture struct {
+type UpdateUserProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksUpdateUserProfileFuture) Get(ctx workflow.Context) (*opsworks.UpdateUserProfileOutput, error) {
+func (r *UpdateUserProfileFuture) Get(ctx workflow.Context) (*opsworks.UpdateUserProfileOutput, error) {
 	var output opsworks.UpdateUserProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type OpsWorksUpdateVolumeFuture struct {
+type UpdateVolumeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *OpsWorksUpdateVolumeFuture) Get(ctx workflow.Context) (*opsworks.UpdateVolumeOutput, error) {
+func (r *UpdateVolumeFuture) Get(ctx workflow.Context) (*opsworks.UpdateVolumeOutput, error) {
 	var output opsworks.UpdateVolumeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -836,9 +836,9 @@ func (a *stub) AssignInstance(ctx workflow.Context, input *opsworks.AssignInstan
 	return &output, err
 }
 
-func (a *stub) AssignInstanceAsync(ctx workflow.Context, input *opsworks.AssignInstanceInput) *OpsWorksAssignInstanceFuture {
+func (a *stub) AssignInstanceAsync(ctx workflow.Context, input *opsworks.AssignInstanceInput) *AssignInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.AssignInstance", input)
-	return &OpsWorksAssignInstanceFuture{Future: future}
+	return &AssignInstanceFuture{Future: future}
 }
 
 func (a *stub) AssignVolume(ctx workflow.Context, input *opsworks.AssignVolumeInput) (*opsworks.AssignVolumeOutput, error) {
@@ -847,9 +847,9 @@ func (a *stub) AssignVolume(ctx workflow.Context, input *opsworks.AssignVolumeIn
 	return &output, err
 }
 
-func (a *stub) AssignVolumeAsync(ctx workflow.Context, input *opsworks.AssignVolumeInput) *OpsWorksAssignVolumeFuture {
+func (a *stub) AssignVolumeAsync(ctx workflow.Context, input *opsworks.AssignVolumeInput) *AssignVolumeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.AssignVolume", input)
-	return &OpsWorksAssignVolumeFuture{Future: future}
+	return &AssignVolumeFuture{Future: future}
 }
 
 func (a *stub) AssociateElasticIp(ctx workflow.Context, input *opsworks.AssociateElasticIpInput) (*opsworks.AssociateElasticIpOutput, error) {
@@ -858,9 +858,9 @@ func (a *stub) AssociateElasticIp(ctx workflow.Context, input *opsworks.Associat
 	return &output, err
 }
 
-func (a *stub) AssociateElasticIpAsync(ctx workflow.Context, input *opsworks.AssociateElasticIpInput) *OpsWorksAssociateElasticIpFuture {
+func (a *stub) AssociateElasticIpAsync(ctx workflow.Context, input *opsworks.AssociateElasticIpInput) *AssociateElasticIpFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.AssociateElasticIp", input)
-	return &OpsWorksAssociateElasticIpFuture{Future: future}
+	return &AssociateElasticIpFuture{Future: future}
 }
 
 func (a *stub) AttachElasticLoadBalancer(ctx workflow.Context, input *opsworks.AttachElasticLoadBalancerInput) (*opsworks.AttachElasticLoadBalancerOutput, error) {
@@ -869,9 +869,9 @@ func (a *stub) AttachElasticLoadBalancer(ctx workflow.Context, input *opsworks.A
 	return &output, err
 }
 
-func (a *stub) AttachElasticLoadBalancerAsync(ctx workflow.Context, input *opsworks.AttachElasticLoadBalancerInput) *OpsWorksAttachElasticLoadBalancerFuture {
+func (a *stub) AttachElasticLoadBalancerAsync(ctx workflow.Context, input *opsworks.AttachElasticLoadBalancerInput) *AttachElasticLoadBalancerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.AttachElasticLoadBalancer", input)
-	return &OpsWorksAttachElasticLoadBalancerFuture{Future: future}
+	return &AttachElasticLoadBalancerFuture{Future: future}
 }
 
 func (a *stub) CloneStack(ctx workflow.Context, input *opsworks.CloneStackInput) (*opsworks.CloneStackOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) CloneStack(ctx workflow.Context, input *opsworks.CloneStackInput)
 	return &output, err
 }
 
-func (a *stub) CloneStackAsync(ctx workflow.Context, input *opsworks.CloneStackInput) *OpsWorksCloneStackFuture {
+func (a *stub) CloneStackAsync(ctx workflow.Context, input *opsworks.CloneStackInput) *CloneStackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.CloneStack", input)
-	return &OpsWorksCloneStackFuture{Future: future}
+	return &CloneStackFuture{Future: future}
 }
 
 func (a *stub) CreateApp(ctx workflow.Context, input *opsworks.CreateAppInput) (*opsworks.CreateAppOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) CreateApp(ctx workflow.Context, input *opsworks.CreateAppInput) (
 	return &output, err
 }
 
-func (a *stub) CreateAppAsync(ctx workflow.Context, input *opsworks.CreateAppInput) *OpsWorksCreateAppFuture {
+func (a *stub) CreateAppAsync(ctx workflow.Context, input *opsworks.CreateAppInput) *CreateAppFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateApp", input)
-	return &OpsWorksCreateAppFuture{Future: future}
+	return &CreateAppFuture{Future: future}
 }
 
 func (a *stub) CreateDeployment(ctx workflow.Context, input *opsworks.CreateDeploymentInput) (*opsworks.CreateDeploymentOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) CreateDeployment(ctx workflow.Context, input *opsworks.CreateDepl
 	return &output, err
 }
 
-func (a *stub) CreateDeploymentAsync(ctx workflow.Context, input *opsworks.CreateDeploymentInput) *OpsWorksCreateDeploymentFuture {
+func (a *stub) CreateDeploymentAsync(ctx workflow.Context, input *opsworks.CreateDeploymentInput) *CreateDeploymentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateDeployment", input)
-	return &OpsWorksCreateDeploymentFuture{Future: future}
+	return &CreateDeploymentFuture{Future: future}
 }
 
 func (a *stub) CreateInstance(ctx workflow.Context, input *opsworks.CreateInstanceInput) (*opsworks.CreateInstanceOutput, error) {
@@ -913,9 +913,9 @@ func (a *stub) CreateInstance(ctx workflow.Context, input *opsworks.CreateInstan
 	return &output, err
 }
 
-func (a *stub) CreateInstanceAsync(ctx workflow.Context, input *opsworks.CreateInstanceInput) *OpsWorksCreateInstanceFuture {
+func (a *stub) CreateInstanceAsync(ctx workflow.Context, input *opsworks.CreateInstanceInput) *CreateInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateInstance", input)
-	return &OpsWorksCreateInstanceFuture{Future: future}
+	return &CreateInstanceFuture{Future: future}
 }
 
 func (a *stub) CreateLayer(ctx workflow.Context, input *opsworks.CreateLayerInput) (*opsworks.CreateLayerOutput, error) {
@@ -924,9 +924,9 @@ func (a *stub) CreateLayer(ctx workflow.Context, input *opsworks.CreateLayerInpu
 	return &output, err
 }
 
-func (a *stub) CreateLayerAsync(ctx workflow.Context, input *opsworks.CreateLayerInput) *OpsWorksCreateLayerFuture {
+func (a *stub) CreateLayerAsync(ctx workflow.Context, input *opsworks.CreateLayerInput) *CreateLayerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateLayer", input)
-	return &OpsWorksCreateLayerFuture{Future: future}
+	return &CreateLayerFuture{Future: future}
 }
 
 func (a *stub) CreateStack(ctx workflow.Context, input *opsworks.CreateStackInput) (*opsworks.CreateStackOutput, error) {
@@ -935,9 +935,9 @@ func (a *stub) CreateStack(ctx workflow.Context, input *opsworks.CreateStackInpu
 	return &output, err
 }
 
-func (a *stub) CreateStackAsync(ctx workflow.Context, input *opsworks.CreateStackInput) *OpsWorksCreateStackFuture {
+func (a *stub) CreateStackAsync(ctx workflow.Context, input *opsworks.CreateStackInput) *CreateStackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateStack", input)
-	return &OpsWorksCreateStackFuture{Future: future}
+	return &CreateStackFuture{Future: future}
 }
 
 func (a *stub) CreateUserProfile(ctx workflow.Context, input *opsworks.CreateUserProfileInput) (*opsworks.CreateUserProfileOutput, error) {
@@ -946,9 +946,9 @@ func (a *stub) CreateUserProfile(ctx workflow.Context, input *opsworks.CreateUse
 	return &output, err
 }
 
-func (a *stub) CreateUserProfileAsync(ctx workflow.Context, input *opsworks.CreateUserProfileInput) *OpsWorksCreateUserProfileFuture {
+func (a *stub) CreateUserProfileAsync(ctx workflow.Context, input *opsworks.CreateUserProfileInput) *CreateUserProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateUserProfile", input)
-	return &OpsWorksCreateUserProfileFuture{Future: future}
+	return &CreateUserProfileFuture{Future: future}
 }
 
 func (a *stub) DeleteApp(ctx workflow.Context, input *opsworks.DeleteAppInput) (*opsworks.DeleteAppOutput, error) {
@@ -957,9 +957,9 @@ func (a *stub) DeleteApp(ctx workflow.Context, input *opsworks.DeleteAppInput) (
 	return &output, err
 }
 
-func (a *stub) DeleteAppAsync(ctx workflow.Context, input *opsworks.DeleteAppInput) *OpsWorksDeleteAppFuture {
+func (a *stub) DeleteAppAsync(ctx workflow.Context, input *opsworks.DeleteAppInput) *DeleteAppFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeleteApp", input)
-	return &OpsWorksDeleteAppFuture{Future: future}
+	return &DeleteAppFuture{Future: future}
 }
 
 func (a *stub) DeleteInstance(ctx workflow.Context, input *opsworks.DeleteInstanceInput) (*opsworks.DeleteInstanceOutput, error) {
@@ -968,9 +968,9 @@ func (a *stub) DeleteInstance(ctx workflow.Context, input *opsworks.DeleteInstan
 	return &output, err
 }
 
-func (a *stub) DeleteInstanceAsync(ctx workflow.Context, input *opsworks.DeleteInstanceInput) *OpsWorksDeleteInstanceFuture {
+func (a *stub) DeleteInstanceAsync(ctx workflow.Context, input *opsworks.DeleteInstanceInput) *DeleteInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeleteInstance", input)
-	return &OpsWorksDeleteInstanceFuture{Future: future}
+	return &DeleteInstanceFuture{Future: future}
 }
 
 func (a *stub) DeleteLayer(ctx workflow.Context, input *opsworks.DeleteLayerInput) (*opsworks.DeleteLayerOutput, error) {
@@ -979,9 +979,9 @@ func (a *stub) DeleteLayer(ctx workflow.Context, input *opsworks.DeleteLayerInpu
 	return &output, err
 }
 
-func (a *stub) DeleteLayerAsync(ctx workflow.Context, input *opsworks.DeleteLayerInput) *OpsWorksDeleteLayerFuture {
+func (a *stub) DeleteLayerAsync(ctx workflow.Context, input *opsworks.DeleteLayerInput) *DeleteLayerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeleteLayer", input)
-	return &OpsWorksDeleteLayerFuture{Future: future}
+	return &DeleteLayerFuture{Future: future}
 }
 
 func (a *stub) DeleteStack(ctx workflow.Context, input *opsworks.DeleteStackInput) (*opsworks.DeleteStackOutput, error) {
@@ -990,9 +990,9 @@ func (a *stub) DeleteStack(ctx workflow.Context, input *opsworks.DeleteStackInpu
 	return &output, err
 }
 
-func (a *stub) DeleteStackAsync(ctx workflow.Context, input *opsworks.DeleteStackInput) *OpsWorksDeleteStackFuture {
+func (a *stub) DeleteStackAsync(ctx workflow.Context, input *opsworks.DeleteStackInput) *DeleteStackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeleteStack", input)
-	return &OpsWorksDeleteStackFuture{Future: future}
+	return &DeleteStackFuture{Future: future}
 }
 
 func (a *stub) DeleteUserProfile(ctx workflow.Context, input *opsworks.DeleteUserProfileInput) (*opsworks.DeleteUserProfileOutput, error) {
@@ -1001,9 +1001,9 @@ func (a *stub) DeleteUserProfile(ctx workflow.Context, input *opsworks.DeleteUse
 	return &output, err
 }
 
-func (a *stub) DeleteUserProfileAsync(ctx workflow.Context, input *opsworks.DeleteUserProfileInput) *OpsWorksDeleteUserProfileFuture {
+func (a *stub) DeleteUserProfileAsync(ctx workflow.Context, input *opsworks.DeleteUserProfileInput) *DeleteUserProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeleteUserProfile", input)
-	return &OpsWorksDeleteUserProfileFuture{Future: future}
+	return &DeleteUserProfileFuture{Future: future}
 }
 
 func (a *stub) DeregisterEcsCluster(ctx workflow.Context, input *opsworks.DeregisterEcsClusterInput) (*opsworks.DeregisterEcsClusterOutput, error) {
@@ -1012,9 +1012,9 @@ func (a *stub) DeregisterEcsCluster(ctx workflow.Context, input *opsworks.Deregi
 	return &output, err
 }
 
-func (a *stub) DeregisterEcsClusterAsync(ctx workflow.Context, input *opsworks.DeregisterEcsClusterInput) *OpsWorksDeregisterEcsClusterFuture {
+func (a *stub) DeregisterEcsClusterAsync(ctx workflow.Context, input *opsworks.DeregisterEcsClusterInput) *DeregisterEcsClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeregisterEcsCluster", input)
-	return &OpsWorksDeregisterEcsClusterFuture{Future: future}
+	return &DeregisterEcsClusterFuture{Future: future}
 }
 
 func (a *stub) DeregisterElasticIp(ctx workflow.Context, input *opsworks.DeregisterElasticIpInput) (*opsworks.DeregisterElasticIpOutput, error) {
@@ -1023,9 +1023,9 @@ func (a *stub) DeregisterElasticIp(ctx workflow.Context, input *opsworks.Deregis
 	return &output, err
 }
 
-func (a *stub) DeregisterElasticIpAsync(ctx workflow.Context, input *opsworks.DeregisterElasticIpInput) *OpsWorksDeregisterElasticIpFuture {
+func (a *stub) DeregisterElasticIpAsync(ctx workflow.Context, input *opsworks.DeregisterElasticIpInput) *DeregisterElasticIpFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeregisterElasticIp", input)
-	return &OpsWorksDeregisterElasticIpFuture{Future: future}
+	return &DeregisterElasticIpFuture{Future: future}
 }
 
 func (a *stub) DeregisterInstance(ctx workflow.Context, input *opsworks.DeregisterInstanceInput) (*opsworks.DeregisterInstanceOutput, error) {
@@ -1034,9 +1034,9 @@ func (a *stub) DeregisterInstance(ctx workflow.Context, input *opsworks.Deregist
 	return &output, err
 }
 
-func (a *stub) DeregisterInstanceAsync(ctx workflow.Context, input *opsworks.DeregisterInstanceInput) *OpsWorksDeregisterInstanceFuture {
+func (a *stub) DeregisterInstanceAsync(ctx workflow.Context, input *opsworks.DeregisterInstanceInput) *DeregisterInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeregisterInstance", input)
-	return &OpsWorksDeregisterInstanceFuture{Future: future}
+	return &DeregisterInstanceFuture{Future: future}
 }
 
 func (a *stub) DeregisterRdsDbInstance(ctx workflow.Context, input *opsworks.DeregisterRdsDbInstanceInput) (*opsworks.DeregisterRdsDbInstanceOutput, error) {
@@ -1045,9 +1045,9 @@ func (a *stub) DeregisterRdsDbInstance(ctx workflow.Context, input *opsworks.Der
 	return &output, err
 }
 
-func (a *stub) DeregisterRdsDbInstanceAsync(ctx workflow.Context, input *opsworks.DeregisterRdsDbInstanceInput) *OpsWorksDeregisterRdsDbInstanceFuture {
+func (a *stub) DeregisterRdsDbInstanceAsync(ctx workflow.Context, input *opsworks.DeregisterRdsDbInstanceInput) *DeregisterRdsDbInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeregisterRdsDbInstance", input)
-	return &OpsWorksDeregisterRdsDbInstanceFuture{Future: future}
+	return &DeregisterRdsDbInstanceFuture{Future: future}
 }
 
 func (a *stub) DeregisterVolume(ctx workflow.Context, input *opsworks.DeregisterVolumeInput) (*opsworks.DeregisterVolumeOutput, error) {
@@ -1056,9 +1056,9 @@ func (a *stub) DeregisterVolume(ctx workflow.Context, input *opsworks.Deregister
 	return &output, err
 }
 
-func (a *stub) DeregisterVolumeAsync(ctx workflow.Context, input *opsworks.DeregisterVolumeInput) *OpsWorksDeregisterVolumeFuture {
+func (a *stub) DeregisterVolumeAsync(ctx workflow.Context, input *opsworks.DeregisterVolumeInput) *DeregisterVolumeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeregisterVolume", input)
-	return &OpsWorksDeregisterVolumeFuture{Future: future}
+	return &DeregisterVolumeFuture{Future: future}
 }
 
 func (a *stub) DescribeAgentVersions(ctx workflow.Context, input *opsworks.DescribeAgentVersionsInput) (*opsworks.DescribeAgentVersionsOutput, error) {
@@ -1067,9 +1067,9 @@ func (a *stub) DescribeAgentVersions(ctx workflow.Context, input *opsworks.Descr
 	return &output, err
 }
 
-func (a *stub) DescribeAgentVersionsAsync(ctx workflow.Context, input *opsworks.DescribeAgentVersionsInput) *OpsWorksDescribeAgentVersionsFuture {
+func (a *stub) DescribeAgentVersionsAsync(ctx workflow.Context, input *opsworks.DescribeAgentVersionsInput) *DescribeAgentVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeAgentVersions", input)
-	return &OpsWorksDescribeAgentVersionsFuture{Future: future}
+	return &DescribeAgentVersionsFuture{Future: future}
 }
 
 func (a *stub) DescribeApps(ctx workflow.Context, input *opsworks.DescribeAppsInput) (*opsworks.DescribeAppsOutput, error) {
@@ -1078,9 +1078,9 @@ func (a *stub) DescribeApps(ctx workflow.Context, input *opsworks.DescribeAppsIn
 	return &output, err
 }
 
-func (a *stub) DescribeAppsAsync(ctx workflow.Context, input *opsworks.DescribeAppsInput) *OpsWorksDescribeAppsFuture {
+func (a *stub) DescribeAppsAsync(ctx workflow.Context, input *opsworks.DescribeAppsInput) *DescribeAppsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeApps", input)
-	return &OpsWorksDescribeAppsFuture{Future: future}
+	return &DescribeAppsFuture{Future: future}
 }
 
 func (a *stub) DescribeCommands(ctx workflow.Context, input *opsworks.DescribeCommandsInput) (*opsworks.DescribeCommandsOutput, error) {
@@ -1089,9 +1089,9 @@ func (a *stub) DescribeCommands(ctx workflow.Context, input *opsworks.DescribeCo
 	return &output, err
 }
 
-func (a *stub) DescribeCommandsAsync(ctx workflow.Context, input *opsworks.DescribeCommandsInput) *OpsWorksDescribeCommandsFuture {
+func (a *stub) DescribeCommandsAsync(ctx workflow.Context, input *opsworks.DescribeCommandsInput) *DescribeCommandsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeCommands", input)
-	return &OpsWorksDescribeCommandsFuture{Future: future}
+	return &DescribeCommandsFuture{Future: future}
 }
 
 func (a *stub) DescribeDeployments(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) (*opsworks.DescribeDeploymentsOutput, error) {
@@ -1100,9 +1100,9 @@ func (a *stub) DescribeDeployments(ctx workflow.Context, input *opsworks.Describ
 	return &output, err
 }
 
-func (a *stub) DescribeDeploymentsAsync(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) *OpsWorksDescribeDeploymentsFuture {
+func (a *stub) DescribeDeploymentsAsync(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) *DescribeDeploymentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeDeployments", input)
-	return &OpsWorksDescribeDeploymentsFuture{Future: future}
+	return &DescribeDeploymentsFuture{Future: future}
 }
 
 func (a *stub) DescribeEcsClusters(ctx workflow.Context, input *opsworks.DescribeEcsClustersInput) (*opsworks.DescribeEcsClustersOutput, error) {
@@ -1111,9 +1111,9 @@ func (a *stub) DescribeEcsClusters(ctx workflow.Context, input *opsworks.Describ
 	return &output, err
 }
 
-func (a *stub) DescribeEcsClustersAsync(ctx workflow.Context, input *opsworks.DescribeEcsClustersInput) *OpsWorksDescribeEcsClustersFuture {
+func (a *stub) DescribeEcsClustersAsync(ctx workflow.Context, input *opsworks.DescribeEcsClustersInput) *DescribeEcsClustersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeEcsClusters", input)
-	return &OpsWorksDescribeEcsClustersFuture{Future: future}
+	return &DescribeEcsClustersFuture{Future: future}
 }
 
 func (a *stub) DescribeElasticIps(ctx workflow.Context, input *opsworks.DescribeElasticIpsInput) (*opsworks.DescribeElasticIpsOutput, error) {
@@ -1122,9 +1122,9 @@ func (a *stub) DescribeElasticIps(ctx workflow.Context, input *opsworks.Describe
 	return &output, err
 }
 
-func (a *stub) DescribeElasticIpsAsync(ctx workflow.Context, input *opsworks.DescribeElasticIpsInput) *OpsWorksDescribeElasticIpsFuture {
+func (a *stub) DescribeElasticIpsAsync(ctx workflow.Context, input *opsworks.DescribeElasticIpsInput) *DescribeElasticIpsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeElasticIps", input)
-	return &OpsWorksDescribeElasticIpsFuture{Future: future}
+	return &DescribeElasticIpsFuture{Future: future}
 }
 
 func (a *stub) DescribeElasticLoadBalancers(ctx workflow.Context, input *opsworks.DescribeElasticLoadBalancersInput) (*opsworks.DescribeElasticLoadBalancersOutput, error) {
@@ -1133,9 +1133,9 @@ func (a *stub) DescribeElasticLoadBalancers(ctx workflow.Context, input *opswork
 	return &output, err
 }
 
-func (a *stub) DescribeElasticLoadBalancersAsync(ctx workflow.Context, input *opsworks.DescribeElasticLoadBalancersInput) *OpsWorksDescribeElasticLoadBalancersFuture {
+func (a *stub) DescribeElasticLoadBalancersAsync(ctx workflow.Context, input *opsworks.DescribeElasticLoadBalancersInput) *DescribeElasticLoadBalancersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeElasticLoadBalancers", input)
-	return &OpsWorksDescribeElasticLoadBalancersFuture{Future: future}
+	return &DescribeElasticLoadBalancersFuture{Future: future}
 }
 
 func (a *stub) DescribeInstances(ctx workflow.Context, input *opsworks.DescribeInstancesInput) (*opsworks.DescribeInstancesOutput, error) {
@@ -1144,9 +1144,9 @@ func (a *stub) DescribeInstances(ctx workflow.Context, input *opsworks.DescribeI
 	return &output, err
 }
 
-func (a *stub) DescribeInstancesAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) *OpsWorksDescribeInstancesFuture {
+func (a *stub) DescribeInstancesAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) *DescribeInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeInstances", input)
-	return &OpsWorksDescribeInstancesFuture{Future: future}
+	return &DescribeInstancesFuture{Future: future}
 }
 
 func (a *stub) DescribeLayers(ctx workflow.Context, input *opsworks.DescribeLayersInput) (*opsworks.DescribeLayersOutput, error) {
@@ -1155,9 +1155,9 @@ func (a *stub) DescribeLayers(ctx workflow.Context, input *opsworks.DescribeLaye
 	return &output, err
 }
 
-func (a *stub) DescribeLayersAsync(ctx workflow.Context, input *opsworks.DescribeLayersInput) *OpsWorksDescribeLayersFuture {
+func (a *stub) DescribeLayersAsync(ctx workflow.Context, input *opsworks.DescribeLayersInput) *DescribeLayersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeLayers", input)
-	return &OpsWorksDescribeLayersFuture{Future: future}
+	return &DescribeLayersFuture{Future: future}
 }
 
 func (a *stub) DescribeLoadBasedAutoScaling(ctx workflow.Context, input *opsworks.DescribeLoadBasedAutoScalingInput) (*opsworks.DescribeLoadBasedAutoScalingOutput, error) {
@@ -1166,9 +1166,9 @@ func (a *stub) DescribeLoadBasedAutoScaling(ctx workflow.Context, input *opswork
 	return &output, err
 }
 
-func (a *stub) DescribeLoadBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.DescribeLoadBasedAutoScalingInput) *OpsWorksDescribeLoadBasedAutoScalingFuture {
+func (a *stub) DescribeLoadBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.DescribeLoadBasedAutoScalingInput) *DescribeLoadBasedAutoScalingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeLoadBasedAutoScaling", input)
-	return &OpsWorksDescribeLoadBasedAutoScalingFuture{Future: future}
+	return &DescribeLoadBasedAutoScalingFuture{Future: future}
 }
 
 func (a *stub) DescribeMyUserProfile(ctx workflow.Context, input *opsworks.DescribeMyUserProfileInput) (*opsworks.DescribeMyUserProfileOutput, error) {
@@ -1177,9 +1177,9 @@ func (a *stub) DescribeMyUserProfile(ctx workflow.Context, input *opsworks.Descr
 	return &output, err
 }
 
-func (a *stub) DescribeMyUserProfileAsync(ctx workflow.Context, input *opsworks.DescribeMyUserProfileInput) *OpsWorksDescribeMyUserProfileFuture {
+func (a *stub) DescribeMyUserProfileAsync(ctx workflow.Context, input *opsworks.DescribeMyUserProfileInput) *DescribeMyUserProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeMyUserProfile", input)
-	return &OpsWorksDescribeMyUserProfileFuture{Future: future}
+	return &DescribeMyUserProfileFuture{Future: future}
 }
 
 func (a *stub) DescribeOperatingSystems(ctx workflow.Context, input *opsworks.DescribeOperatingSystemsInput) (*opsworks.DescribeOperatingSystemsOutput, error) {
@@ -1188,9 +1188,9 @@ func (a *stub) DescribeOperatingSystems(ctx workflow.Context, input *opsworks.De
 	return &output, err
 }
 
-func (a *stub) DescribeOperatingSystemsAsync(ctx workflow.Context, input *opsworks.DescribeOperatingSystemsInput) *OpsWorksDescribeOperatingSystemsFuture {
+func (a *stub) DescribeOperatingSystemsAsync(ctx workflow.Context, input *opsworks.DescribeOperatingSystemsInput) *DescribeOperatingSystemsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeOperatingSystems", input)
-	return &OpsWorksDescribeOperatingSystemsFuture{Future: future}
+	return &DescribeOperatingSystemsFuture{Future: future}
 }
 
 func (a *stub) DescribePermissions(ctx workflow.Context, input *opsworks.DescribePermissionsInput) (*opsworks.DescribePermissionsOutput, error) {
@@ -1199,9 +1199,9 @@ func (a *stub) DescribePermissions(ctx workflow.Context, input *opsworks.Describ
 	return &output, err
 }
 
-func (a *stub) DescribePermissionsAsync(ctx workflow.Context, input *opsworks.DescribePermissionsInput) *OpsWorksDescribePermissionsFuture {
+func (a *stub) DescribePermissionsAsync(ctx workflow.Context, input *opsworks.DescribePermissionsInput) *DescribePermissionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribePermissions", input)
-	return &OpsWorksDescribePermissionsFuture{Future: future}
+	return &DescribePermissionsFuture{Future: future}
 }
 
 func (a *stub) DescribeRaidArrays(ctx workflow.Context, input *opsworks.DescribeRaidArraysInput) (*opsworks.DescribeRaidArraysOutput, error) {
@@ -1210,9 +1210,9 @@ func (a *stub) DescribeRaidArrays(ctx workflow.Context, input *opsworks.Describe
 	return &output, err
 }
 
-func (a *stub) DescribeRaidArraysAsync(ctx workflow.Context, input *opsworks.DescribeRaidArraysInput) *OpsWorksDescribeRaidArraysFuture {
+func (a *stub) DescribeRaidArraysAsync(ctx workflow.Context, input *opsworks.DescribeRaidArraysInput) *DescribeRaidArraysFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeRaidArrays", input)
-	return &OpsWorksDescribeRaidArraysFuture{Future: future}
+	return &DescribeRaidArraysFuture{Future: future}
 }
 
 func (a *stub) DescribeRdsDbInstances(ctx workflow.Context, input *opsworks.DescribeRdsDbInstancesInput) (*opsworks.DescribeRdsDbInstancesOutput, error) {
@@ -1221,9 +1221,9 @@ func (a *stub) DescribeRdsDbInstances(ctx workflow.Context, input *opsworks.Desc
 	return &output, err
 }
 
-func (a *stub) DescribeRdsDbInstancesAsync(ctx workflow.Context, input *opsworks.DescribeRdsDbInstancesInput) *OpsWorksDescribeRdsDbInstancesFuture {
+func (a *stub) DescribeRdsDbInstancesAsync(ctx workflow.Context, input *opsworks.DescribeRdsDbInstancesInput) *DescribeRdsDbInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeRdsDbInstances", input)
-	return &OpsWorksDescribeRdsDbInstancesFuture{Future: future}
+	return &DescribeRdsDbInstancesFuture{Future: future}
 }
 
 func (a *stub) DescribeServiceErrors(ctx workflow.Context, input *opsworks.DescribeServiceErrorsInput) (*opsworks.DescribeServiceErrorsOutput, error) {
@@ -1232,9 +1232,9 @@ func (a *stub) DescribeServiceErrors(ctx workflow.Context, input *opsworks.Descr
 	return &output, err
 }
 
-func (a *stub) DescribeServiceErrorsAsync(ctx workflow.Context, input *opsworks.DescribeServiceErrorsInput) *OpsWorksDescribeServiceErrorsFuture {
+func (a *stub) DescribeServiceErrorsAsync(ctx workflow.Context, input *opsworks.DescribeServiceErrorsInput) *DescribeServiceErrorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeServiceErrors", input)
-	return &OpsWorksDescribeServiceErrorsFuture{Future: future}
+	return &DescribeServiceErrorsFuture{Future: future}
 }
 
 func (a *stub) DescribeStackProvisioningParameters(ctx workflow.Context, input *opsworks.DescribeStackProvisioningParametersInput) (*opsworks.DescribeStackProvisioningParametersOutput, error) {
@@ -1243,9 +1243,9 @@ func (a *stub) DescribeStackProvisioningParameters(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *stub) DescribeStackProvisioningParametersAsync(ctx workflow.Context, input *opsworks.DescribeStackProvisioningParametersInput) *OpsWorksDescribeStackProvisioningParametersFuture {
+func (a *stub) DescribeStackProvisioningParametersAsync(ctx workflow.Context, input *opsworks.DescribeStackProvisioningParametersInput) *DescribeStackProvisioningParametersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeStackProvisioningParameters", input)
-	return &OpsWorksDescribeStackProvisioningParametersFuture{Future: future}
+	return &DescribeStackProvisioningParametersFuture{Future: future}
 }
 
 func (a *stub) DescribeStackSummary(ctx workflow.Context, input *opsworks.DescribeStackSummaryInput) (*opsworks.DescribeStackSummaryOutput, error) {
@@ -1254,9 +1254,9 @@ func (a *stub) DescribeStackSummary(ctx workflow.Context, input *opsworks.Descri
 	return &output, err
 }
 
-func (a *stub) DescribeStackSummaryAsync(ctx workflow.Context, input *opsworks.DescribeStackSummaryInput) *OpsWorksDescribeStackSummaryFuture {
+func (a *stub) DescribeStackSummaryAsync(ctx workflow.Context, input *opsworks.DescribeStackSummaryInput) *DescribeStackSummaryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeStackSummary", input)
-	return &OpsWorksDescribeStackSummaryFuture{Future: future}
+	return &DescribeStackSummaryFuture{Future: future}
 }
 
 func (a *stub) DescribeStacks(ctx workflow.Context, input *opsworks.DescribeStacksInput) (*opsworks.DescribeStacksOutput, error) {
@@ -1265,9 +1265,9 @@ func (a *stub) DescribeStacks(ctx workflow.Context, input *opsworks.DescribeStac
 	return &output, err
 }
 
-func (a *stub) DescribeStacksAsync(ctx workflow.Context, input *opsworks.DescribeStacksInput) *OpsWorksDescribeStacksFuture {
+func (a *stub) DescribeStacksAsync(ctx workflow.Context, input *opsworks.DescribeStacksInput) *DescribeStacksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeStacks", input)
-	return &OpsWorksDescribeStacksFuture{Future: future}
+	return &DescribeStacksFuture{Future: future}
 }
 
 func (a *stub) DescribeTimeBasedAutoScaling(ctx workflow.Context, input *opsworks.DescribeTimeBasedAutoScalingInput) (*opsworks.DescribeTimeBasedAutoScalingOutput, error) {
@@ -1276,9 +1276,9 @@ func (a *stub) DescribeTimeBasedAutoScaling(ctx workflow.Context, input *opswork
 	return &output, err
 }
 
-func (a *stub) DescribeTimeBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.DescribeTimeBasedAutoScalingInput) *OpsWorksDescribeTimeBasedAutoScalingFuture {
+func (a *stub) DescribeTimeBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.DescribeTimeBasedAutoScalingInput) *DescribeTimeBasedAutoScalingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeTimeBasedAutoScaling", input)
-	return &OpsWorksDescribeTimeBasedAutoScalingFuture{Future: future}
+	return &DescribeTimeBasedAutoScalingFuture{Future: future}
 }
 
 func (a *stub) DescribeUserProfiles(ctx workflow.Context, input *opsworks.DescribeUserProfilesInput) (*opsworks.DescribeUserProfilesOutput, error) {
@@ -1287,9 +1287,9 @@ func (a *stub) DescribeUserProfiles(ctx workflow.Context, input *opsworks.Descri
 	return &output, err
 }
 
-func (a *stub) DescribeUserProfilesAsync(ctx workflow.Context, input *opsworks.DescribeUserProfilesInput) *OpsWorksDescribeUserProfilesFuture {
+func (a *stub) DescribeUserProfilesAsync(ctx workflow.Context, input *opsworks.DescribeUserProfilesInput) *DescribeUserProfilesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeUserProfiles", input)
-	return &OpsWorksDescribeUserProfilesFuture{Future: future}
+	return &DescribeUserProfilesFuture{Future: future}
 }
 
 func (a *stub) DescribeVolumes(ctx workflow.Context, input *opsworks.DescribeVolumesInput) (*opsworks.DescribeVolumesOutput, error) {
@@ -1298,9 +1298,9 @@ func (a *stub) DescribeVolumes(ctx workflow.Context, input *opsworks.DescribeVol
 	return &output, err
 }
 
-func (a *stub) DescribeVolumesAsync(ctx workflow.Context, input *opsworks.DescribeVolumesInput) *OpsWorksDescribeVolumesFuture {
+func (a *stub) DescribeVolumesAsync(ctx workflow.Context, input *opsworks.DescribeVolumesInput) *DescribeVolumesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeVolumes", input)
-	return &OpsWorksDescribeVolumesFuture{Future: future}
+	return &DescribeVolumesFuture{Future: future}
 }
 
 func (a *stub) DetachElasticLoadBalancer(ctx workflow.Context, input *opsworks.DetachElasticLoadBalancerInput) (*opsworks.DetachElasticLoadBalancerOutput, error) {
@@ -1309,9 +1309,9 @@ func (a *stub) DetachElasticLoadBalancer(ctx workflow.Context, input *opsworks.D
 	return &output, err
 }
 
-func (a *stub) DetachElasticLoadBalancerAsync(ctx workflow.Context, input *opsworks.DetachElasticLoadBalancerInput) *OpsWorksDetachElasticLoadBalancerFuture {
+func (a *stub) DetachElasticLoadBalancerAsync(ctx workflow.Context, input *opsworks.DetachElasticLoadBalancerInput) *DetachElasticLoadBalancerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DetachElasticLoadBalancer", input)
-	return &OpsWorksDetachElasticLoadBalancerFuture{Future: future}
+	return &DetachElasticLoadBalancerFuture{Future: future}
 }
 
 func (a *stub) DisassociateElasticIp(ctx workflow.Context, input *opsworks.DisassociateElasticIpInput) (*opsworks.DisassociateElasticIpOutput, error) {
@@ -1320,9 +1320,9 @@ func (a *stub) DisassociateElasticIp(ctx workflow.Context, input *opsworks.Disas
 	return &output, err
 }
 
-func (a *stub) DisassociateElasticIpAsync(ctx workflow.Context, input *opsworks.DisassociateElasticIpInput) *OpsWorksDisassociateElasticIpFuture {
+func (a *stub) DisassociateElasticIpAsync(ctx workflow.Context, input *opsworks.DisassociateElasticIpInput) *DisassociateElasticIpFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DisassociateElasticIp", input)
-	return &OpsWorksDisassociateElasticIpFuture{Future: future}
+	return &DisassociateElasticIpFuture{Future: future}
 }
 
 func (a *stub) GetHostnameSuggestion(ctx workflow.Context, input *opsworks.GetHostnameSuggestionInput) (*opsworks.GetHostnameSuggestionOutput, error) {
@@ -1331,9 +1331,9 @@ func (a *stub) GetHostnameSuggestion(ctx workflow.Context, input *opsworks.GetHo
 	return &output, err
 }
 
-func (a *stub) GetHostnameSuggestionAsync(ctx workflow.Context, input *opsworks.GetHostnameSuggestionInput) *OpsWorksGetHostnameSuggestionFuture {
+func (a *stub) GetHostnameSuggestionAsync(ctx workflow.Context, input *opsworks.GetHostnameSuggestionInput) *GetHostnameSuggestionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.GetHostnameSuggestion", input)
-	return &OpsWorksGetHostnameSuggestionFuture{Future: future}
+	return &GetHostnameSuggestionFuture{Future: future}
 }
 
 func (a *stub) GrantAccess(ctx workflow.Context, input *opsworks.GrantAccessInput) (*opsworks.GrantAccessOutput, error) {
@@ -1342,9 +1342,9 @@ func (a *stub) GrantAccess(ctx workflow.Context, input *opsworks.GrantAccessInpu
 	return &output, err
 }
 
-func (a *stub) GrantAccessAsync(ctx workflow.Context, input *opsworks.GrantAccessInput) *OpsWorksGrantAccessFuture {
+func (a *stub) GrantAccessAsync(ctx workflow.Context, input *opsworks.GrantAccessInput) *GrantAccessFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.GrantAccess", input)
-	return &OpsWorksGrantAccessFuture{Future: future}
+	return &GrantAccessFuture{Future: future}
 }
 
 func (a *stub) ListTags(ctx workflow.Context, input *opsworks.ListTagsInput) (*opsworks.ListTagsOutput, error) {
@@ -1353,9 +1353,9 @@ func (a *stub) ListTags(ctx workflow.Context, input *opsworks.ListTagsInput) (*o
 	return &output, err
 }
 
-func (a *stub) ListTagsAsync(ctx workflow.Context, input *opsworks.ListTagsInput) *OpsWorksListTagsFuture {
+func (a *stub) ListTagsAsync(ctx workflow.Context, input *opsworks.ListTagsInput) *ListTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.ListTags", input)
-	return &OpsWorksListTagsFuture{Future: future}
+	return &ListTagsFuture{Future: future}
 }
 
 func (a *stub) RebootInstance(ctx workflow.Context, input *opsworks.RebootInstanceInput) (*opsworks.RebootInstanceOutput, error) {
@@ -1364,9 +1364,9 @@ func (a *stub) RebootInstance(ctx workflow.Context, input *opsworks.RebootInstan
 	return &output, err
 }
 
-func (a *stub) RebootInstanceAsync(ctx workflow.Context, input *opsworks.RebootInstanceInput) *OpsWorksRebootInstanceFuture {
+func (a *stub) RebootInstanceAsync(ctx workflow.Context, input *opsworks.RebootInstanceInput) *RebootInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.RebootInstance", input)
-	return &OpsWorksRebootInstanceFuture{Future: future}
+	return &RebootInstanceFuture{Future: future}
 }
 
 func (a *stub) RegisterEcsCluster(ctx workflow.Context, input *opsworks.RegisterEcsClusterInput) (*opsworks.RegisterEcsClusterOutput, error) {
@@ -1375,9 +1375,9 @@ func (a *stub) RegisterEcsCluster(ctx workflow.Context, input *opsworks.Register
 	return &output, err
 }
 
-func (a *stub) RegisterEcsClusterAsync(ctx workflow.Context, input *opsworks.RegisterEcsClusterInput) *OpsWorksRegisterEcsClusterFuture {
+func (a *stub) RegisterEcsClusterAsync(ctx workflow.Context, input *opsworks.RegisterEcsClusterInput) *RegisterEcsClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.RegisterEcsCluster", input)
-	return &OpsWorksRegisterEcsClusterFuture{Future: future}
+	return &RegisterEcsClusterFuture{Future: future}
 }
 
 func (a *stub) RegisterElasticIp(ctx workflow.Context, input *opsworks.RegisterElasticIpInput) (*opsworks.RegisterElasticIpOutput, error) {
@@ -1386,9 +1386,9 @@ func (a *stub) RegisterElasticIp(ctx workflow.Context, input *opsworks.RegisterE
 	return &output, err
 }
 
-func (a *stub) RegisterElasticIpAsync(ctx workflow.Context, input *opsworks.RegisterElasticIpInput) *OpsWorksRegisterElasticIpFuture {
+func (a *stub) RegisterElasticIpAsync(ctx workflow.Context, input *opsworks.RegisterElasticIpInput) *RegisterElasticIpFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.RegisterElasticIp", input)
-	return &OpsWorksRegisterElasticIpFuture{Future: future}
+	return &RegisterElasticIpFuture{Future: future}
 }
 
 func (a *stub) RegisterInstance(ctx workflow.Context, input *opsworks.RegisterInstanceInput) (*opsworks.RegisterInstanceOutput, error) {
@@ -1397,9 +1397,9 @@ func (a *stub) RegisterInstance(ctx workflow.Context, input *opsworks.RegisterIn
 	return &output, err
 }
 
-func (a *stub) RegisterInstanceAsync(ctx workflow.Context, input *opsworks.RegisterInstanceInput) *OpsWorksRegisterInstanceFuture {
+func (a *stub) RegisterInstanceAsync(ctx workflow.Context, input *opsworks.RegisterInstanceInput) *RegisterInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.RegisterInstance", input)
-	return &OpsWorksRegisterInstanceFuture{Future: future}
+	return &RegisterInstanceFuture{Future: future}
 }
 
 func (a *stub) RegisterRdsDbInstance(ctx workflow.Context, input *opsworks.RegisterRdsDbInstanceInput) (*opsworks.RegisterRdsDbInstanceOutput, error) {
@@ -1408,9 +1408,9 @@ func (a *stub) RegisterRdsDbInstance(ctx workflow.Context, input *opsworks.Regis
 	return &output, err
 }
 
-func (a *stub) RegisterRdsDbInstanceAsync(ctx workflow.Context, input *opsworks.RegisterRdsDbInstanceInput) *OpsWorksRegisterRdsDbInstanceFuture {
+func (a *stub) RegisterRdsDbInstanceAsync(ctx workflow.Context, input *opsworks.RegisterRdsDbInstanceInput) *RegisterRdsDbInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.RegisterRdsDbInstance", input)
-	return &OpsWorksRegisterRdsDbInstanceFuture{Future: future}
+	return &RegisterRdsDbInstanceFuture{Future: future}
 }
 
 func (a *stub) RegisterVolume(ctx workflow.Context, input *opsworks.RegisterVolumeInput) (*opsworks.RegisterVolumeOutput, error) {
@@ -1419,9 +1419,9 @@ func (a *stub) RegisterVolume(ctx workflow.Context, input *opsworks.RegisterVolu
 	return &output, err
 }
 
-func (a *stub) RegisterVolumeAsync(ctx workflow.Context, input *opsworks.RegisterVolumeInput) *OpsWorksRegisterVolumeFuture {
+func (a *stub) RegisterVolumeAsync(ctx workflow.Context, input *opsworks.RegisterVolumeInput) *RegisterVolumeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.RegisterVolume", input)
-	return &OpsWorksRegisterVolumeFuture{Future: future}
+	return &RegisterVolumeFuture{Future: future}
 }
 
 func (a *stub) SetLoadBasedAutoScaling(ctx workflow.Context, input *opsworks.SetLoadBasedAutoScalingInput) (*opsworks.SetLoadBasedAutoScalingOutput, error) {
@@ -1430,9 +1430,9 @@ func (a *stub) SetLoadBasedAutoScaling(ctx workflow.Context, input *opsworks.Set
 	return &output, err
 }
 
-func (a *stub) SetLoadBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.SetLoadBasedAutoScalingInput) *OpsWorksSetLoadBasedAutoScalingFuture {
+func (a *stub) SetLoadBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.SetLoadBasedAutoScalingInput) *SetLoadBasedAutoScalingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.SetLoadBasedAutoScaling", input)
-	return &OpsWorksSetLoadBasedAutoScalingFuture{Future: future}
+	return &SetLoadBasedAutoScalingFuture{Future: future}
 }
 
 func (a *stub) SetPermission(ctx workflow.Context, input *opsworks.SetPermissionInput) (*opsworks.SetPermissionOutput, error) {
@@ -1441,9 +1441,9 @@ func (a *stub) SetPermission(ctx workflow.Context, input *opsworks.SetPermission
 	return &output, err
 }
 
-func (a *stub) SetPermissionAsync(ctx workflow.Context, input *opsworks.SetPermissionInput) *OpsWorksSetPermissionFuture {
+func (a *stub) SetPermissionAsync(ctx workflow.Context, input *opsworks.SetPermissionInput) *SetPermissionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.SetPermission", input)
-	return &OpsWorksSetPermissionFuture{Future: future}
+	return &SetPermissionFuture{Future: future}
 }
 
 func (a *stub) SetTimeBasedAutoScaling(ctx workflow.Context, input *opsworks.SetTimeBasedAutoScalingInput) (*opsworks.SetTimeBasedAutoScalingOutput, error) {
@@ -1452,9 +1452,9 @@ func (a *stub) SetTimeBasedAutoScaling(ctx workflow.Context, input *opsworks.Set
 	return &output, err
 }
 
-func (a *stub) SetTimeBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.SetTimeBasedAutoScalingInput) *OpsWorksSetTimeBasedAutoScalingFuture {
+func (a *stub) SetTimeBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.SetTimeBasedAutoScalingInput) *SetTimeBasedAutoScalingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.SetTimeBasedAutoScaling", input)
-	return &OpsWorksSetTimeBasedAutoScalingFuture{Future: future}
+	return &SetTimeBasedAutoScalingFuture{Future: future}
 }
 
 func (a *stub) StartInstance(ctx workflow.Context, input *opsworks.StartInstanceInput) (*opsworks.StartInstanceOutput, error) {
@@ -1463,9 +1463,9 @@ func (a *stub) StartInstance(ctx workflow.Context, input *opsworks.StartInstance
 	return &output, err
 }
 
-func (a *stub) StartInstanceAsync(ctx workflow.Context, input *opsworks.StartInstanceInput) *OpsWorksStartInstanceFuture {
+func (a *stub) StartInstanceAsync(ctx workflow.Context, input *opsworks.StartInstanceInput) *StartInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.StartInstance", input)
-	return &OpsWorksStartInstanceFuture{Future: future}
+	return &StartInstanceFuture{Future: future}
 }
 
 func (a *stub) StartStack(ctx workflow.Context, input *opsworks.StartStackInput) (*opsworks.StartStackOutput, error) {
@@ -1474,9 +1474,9 @@ func (a *stub) StartStack(ctx workflow.Context, input *opsworks.StartStackInput)
 	return &output, err
 }
 
-func (a *stub) StartStackAsync(ctx workflow.Context, input *opsworks.StartStackInput) *OpsWorksStartStackFuture {
+func (a *stub) StartStackAsync(ctx workflow.Context, input *opsworks.StartStackInput) *StartStackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.StartStack", input)
-	return &OpsWorksStartStackFuture{Future: future}
+	return &StartStackFuture{Future: future}
 }
 
 func (a *stub) StopInstance(ctx workflow.Context, input *opsworks.StopInstanceInput) (*opsworks.StopInstanceOutput, error) {
@@ -1485,9 +1485,9 @@ func (a *stub) StopInstance(ctx workflow.Context, input *opsworks.StopInstanceIn
 	return &output, err
 }
 
-func (a *stub) StopInstanceAsync(ctx workflow.Context, input *opsworks.StopInstanceInput) *OpsWorksStopInstanceFuture {
+func (a *stub) StopInstanceAsync(ctx workflow.Context, input *opsworks.StopInstanceInput) *StopInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.StopInstance", input)
-	return &OpsWorksStopInstanceFuture{Future: future}
+	return &StopInstanceFuture{Future: future}
 }
 
 func (a *stub) StopStack(ctx workflow.Context, input *opsworks.StopStackInput) (*opsworks.StopStackOutput, error) {
@@ -1496,9 +1496,9 @@ func (a *stub) StopStack(ctx workflow.Context, input *opsworks.StopStackInput) (
 	return &output, err
 }
 
-func (a *stub) StopStackAsync(ctx workflow.Context, input *opsworks.StopStackInput) *OpsWorksStopStackFuture {
+func (a *stub) StopStackAsync(ctx workflow.Context, input *opsworks.StopStackInput) *StopStackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.StopStack", input)
-	return &OpsWorksStopStackFuture{Future: future}
+	return &StopStackFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *opsworks.TagResourceInput) (*opsworks.TagResourceOutput, error) {
@@ -1507,9 +1507,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *opsworks.TagResourceInpu
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *opsworks.TagResourceInput) *OpsWorksTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *opsworks.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.TagResource", input)
-	return &OpsWorksTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UnassignInstance(ctx workflow.Context, input *opsworks.UnassignInstanceInput) (*opsworks.UnassignInstanceOutput, error) {
@@ -1518,9 +1518,9 @@ func (a *stub) UnassignInstance(ctx workflow.Context, input *opsworks.UnassignIn
 	return &output, err
 }
 
-func (a *stub) UnassignInstanceAsync(ctx workflow.Context, input *opsworks.UnassignInstanceInput) *OpsWorksUnassignInstanceFuture {
+func (a *stub) UnassignInstanceAsync(ctx workflow.Context, input *opsworks.UnassignInstanceInput) *UnassignInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UnassignInstance", input)
-	return &OpsWorksUnassignInstanceFuture{Future: future}
+	return &UnassignInstanceFuture{Future: future}
 }
 
 func (a *stub) UnassignVolume(ctx workflow.Context, input *opsworks.UnassignVolumeInput) (*opsworks.UnassignVolumeOutput, error) {
@@ -1529,9 +1529,9 @@ func (a *stub) UnassignVolume(ctx workflow.Context, input *opsworks.UnassignVolu
 	return &output, err
 }
 
-func (a *stub) UnassignVolumeAsync(ctx workflow.Context, input *opsworks.UnassignVolumeInput) *OpsWorksUnassignVolumeFuture {
+func (a *stub) UnassignVolumeAsync(ctx workflow.Context, input *opsworks.UnassignVolumeInput) *UnassignVolumeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UnassignVolume", input)
-	return &OpsWorksUnassignVolumeFuture{Future: future}
+	return &UnassignVolumeFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *opsworks.UntagResourceInput) (*opsworks.UntagResourceOutput, error) {
@@ -1540,9 +1540,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *opsworks.UntagResource
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *opsworks.UntagResourceInput) *OpsWorksUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *opsworks.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UntagResource", input)
-	return &OpsWorksUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateApp(ctx workflow.Context, input *opsworks.UpdateAppInput) (*opsworks.UpdateAppOutput, error) {
@@ -1551,9 +1551,9 @@ func (a *stub) UpdateApp(ctx workflow.Context, input *opsworks.UpdateAppInput) (
 	return &output, err
 }
 
-func (a *stub) UpdateAppAsync(ctx workflow.Context, input *opsworks.UpdateAppInput) *OpsWorksUpdateAppFuture {
+func (a *stub) UpdateAppAsync(ctx workflow.Context, input *opsworks.UpdateAppInput) *UpdateAppFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateApp", input)
-	return &OpsWorksUpdateAppFuture{Future: future}
+	return &UpdateAppFuture{Future: future}
 }
 
 func (a *stub) UpdateElasticIp(ctx workflow.Context, input *opsworks.UpdateElasticIpInput) (*opsworks.UpdateElasticIpOutput, error) {
@@ -1562,9 +1562,9 @@ func (a *stub) UpdateElasticIp(ctx workflow.Context, input *opsworks.UpdateElast
 	return &output, err
 }
 
-func (a *stub) UpdateElasticIpAsync(ctx workflow.Context, input *opsworks.UpdateElasticIpInput) *OpsWorksUpdateElasticIpFuture {
+func (a *stub) UpdateElasticIpAsync(ctx workflow.Context, input *opsworks.UpdateElasticIpInput) *UpdateElasticIpFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateElasticIp", input)
-	return &OpsWorksUpdateElasticIpFuture{Future: future}
+	return &UpdateElasticIpFuture{Future: future}
 }
 
 func (a *stub) UpdateInstance(ctx workflow.Context, input *opsworks.UpdateInstanceInput) (*opsworks.UpdateInstanceOutput, error) {
@@ -1573,9 +1573,9 @@ func (a *stub) UpdateInstance(ctx workflow.Context, input *opsworks.UpdateInstan
 	return &output, err
 }
 
-func (a *stub) UpdateInstanceAsync(ctx workflow.Context, input *opsworks.UpdateInstanceInput) *OpsWorksUpdateInstanceFuture {
+func (a *stub) UpdateInstanceAsync(ctx workflow.Context, input *opsworks.UpdateInstanceInput) *UpdateInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateInstance", input)
-	return &OpsWorksUpdateInstanceFuture{Future: future}
+	return &UpdateInstanceFuture{Future: future}
 }
 
 func (a *stub) UpdateLayer(ctx workflow.Context, input *opsworks.UpdateLayerInput) (*opsworks.UpdateLayerOutput, error) {
@@ -1584,9 +1584,9 @@ func (a *stub) UpdateLayer(ctx workflow.Context, input *opsworks.UpdateLayerInpu
 	return &output, err
 }
 
-func (a *stub) UpdateLayerAsync(ctx workflow.Context, input *opsworks.UpdateLayerInput) *OpsWorksUpdateLayerFuture {
+func (a *stub) UpdateLayerAsync(ctx workflow.Context, input *opsworks.UpdateLayerInput) *UpdateLayerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateLayer", input)
-	return &OpsWorksUpdateLayerFuture{Future: future}
+	return &UpdateLayerFuture{Future: future}
 }
 
 func (a *stub) UpdateMyUserProfile(ctx workflow.Context, input *opsworks.UpdateMyUserProfileInput) (*opsworks.UpdateMyUserProfileOutput, error) {
@@ -1595,9 +1595,9 @@ func (a *stub) UpdateMyUserProfile(ctx workflow.Context, input *opsworks.UpdateM
 	return &output, err
 }
 
-func (a *stub) UpdateMyUserProfileAsync(ctx workflow.Context, input *opsworks.UpdateMyUserProfileInput) *OpsWorksUpdateMyUserProfileFuture {
+func (a *stub) UpdateMyUserProfileAsync(ctx workflow.Context, input *opsworks.UpdateMyUserProfileInput) *UpdateMyUserProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateMyUserProfile", input)
-	return &OpsWorksUpdateMyUserProfileFuture{Future: future}
+	return &UpdateMyUserProfileFuture{Future: future}
 }
 
 func (a *stub) UpdateRdsDbInstance(ctx workflow.Context, input *opsworks.UpdateRdsDbInstanceInput) (*opsworks.UpdateRdsDbInstanceOutput, error) {
@@ -1606,9 +1606,9 @@ func (a *stub) UpdateRdsDbInstance(ctx workflow.Context, input *opsworks.UpdateR
 	return &output, err
 }
 
-func (a *stub) UpdateRdsDbInstanceAsync(ctx workflow.Context, input *opsworks.UpdateRdsDbInstanceInput) *OpsWorksUpdateRdsDbInstanceFuture {
+func (a *stub) UpdateRdsDbInstanceAsync(ctx workflow.Context, input *opsworks.UpdateRdsDbInstanceInput) *UpdateRdsDbInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateRdsDbInstance", input)
-	return &OpsWorksUpdateRdsDbInstanceFuture{Future: future}
+	return &UpdateRdsDbInstanceFuture{Future: future}
 }
 
 func (a *stub) UpdateStack(ctx workflow.Context, input *opsworks.UpdateStackInput) (*opsworks.UpdateStackOutput, error) {
@@ -1617,9 +1617,9 @@ func (a *stub) UpdateStack(ctx workflow.Context, input *opsworks.UpdateStackInpu
 	return &output, err
 }
 
-func (a *stub) UpdateStackAsync(ctx workflow.Context, input *opsworks.UpdateStackInput) *OpsWorksUpdateStackFuture {
+func (a *stub) UpdateStackAsync(ctx workflow.Context, input *opsworks.UpdateStackInput) *UpdateStackFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateStack", input)
-	return &OpsWorksUpdateStackFuture{Future: future}
+	return &UpdateStackFuture{Future: future}
 }
 
 func (a *stub) UpdateUserProfile(ctx workflow.Context, input *opsworks.UpdateUserProfileInput) (*opsworks.UpdateUserProfileOutput, error) {
@@ -1628,9 +1628,9 @@ func (a *stub) UpdateUserProfile(ctx workflow.Context, input *opsworks.UpdateUse
 	return &output, err
 }
 
-func (a *stub) UpdateUserProfileAsync(ctx workflow.Context, input *opsworks.UpdateUserProfileInput) *OpsWorksUpdateUserProfileFuture {
+func (a *stub) UpdateUserProfileAsync(ctx workflow.Context, input *opsworks.UpdateUserProfileInput) *UpdateUserProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateUserProfile", input)
-	return &OpsWorksUpdateUserProfileFuture{Future: future}
+	return &UpdateUserProfileFuture{Future: future}
 }
 
 func (a *stub) UpdateVolume(ctx workflow.Context, input *opsworks.UpdateVolumeInput) (*opsworks.UpdateVolumeOutput, error) {
@@ -1639,9 +1639,9 @@ func (a *stub) UpdateVolume(ctx workflow.Context, input *opsworks.UpdateVolumeIn
 	return &output, err
 }
 
-func (a *stub) UpdateVolumeAsync(ctx workflow.Context, input *opsworks.UpdateVolumeInput) *OpsWorksUpdateVolumeFuture {
+func (a *stub) UpdateVolumeAsync(ctx workflow.Context, input *opsworks.UpdateVolumeInput) *UpdateVolumeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateVolume", input)
-	return &OpsWorksUpdateVolumeFuture{Future: future}
+	return &UpdateVolumeFuture{Future: future}
 }
 
 func (a *stub) WaitUntilAppExists(ctx workflow.Context, input *opsworks.DescribeAppsInput) error {

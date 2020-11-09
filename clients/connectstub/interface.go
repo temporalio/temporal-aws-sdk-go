@@ -16,145 +16,145 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AssociateRoutingProfileQueues(ctx workflow.Context, input *connect.AssociateRoutingProfileQueuesInput) (*connect.AssociateRoutingProfileQueuesOutput, error)
-	AssociateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.AssociateRoutingProfileQueuesInput) *ConnectAssociateRoutingProfileQueuesFuture
+	AssociateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.AssociateRoutingProfileQueuesInput) *AssociateRoutingProfileQueuesFuture
 
 	CreateContactFlow(ctx workflow.Context, input *connect.CreateContactFlowInput) (*connect.CreateContactFlowOutput, error)
-	CreateContactFlowAsync(ctx workflow.Context, input *connect.CreateContactFlowInput) *ConnectCreateContactFlowFuture
+	CreateContactFlowAsync(ctx workflow.Context, input *connect.CreateContactFlowInput) *CreateContactFlowFuture
 
 	CreateRoutingProfile(ctx workflow.Context, input *connect.CreateRoutingProfileInput) (*connect.CreateRoutingProfileOutput, error)
-	CreateRoutingProfileAsync(ctx workflow.Context, input *connect.CreateRoutingProfileInput) *ConnectCreateRoutingProfileFuture
+	CreateRoutingProfileAsync(ctx workflow.Context, input *connect.CreateRoutingProfileInput) *CreateRoutingProfileFuture
 
 	CreateUser(ctx workflow.Context, input *connect.CreateUserInput) (*connect.CreateUserOutput, error)
-	CreateUserAsync(ctx workflow.Context, input *connect.CreateUserInput) *ConnectCreateUserFuture
+	CreateUserAsync(ctx workflow.Context, input *connect.CreateUserInput) *CreateUserFuture
 
 	DeleteUser(ctx workflow.Context, input *connect.DeleteUserInput) (*connect.DeleteUserOutput, error)
-	DeleteUserAsync(ctx workflow.Context, input *connect.DeleteUserInput) *ConnectDeleteUserFuture
+	DeleteUserAsync(ctx workflow.Context, input *connect.DeleteUserInput) *DeleteUserFuture
 
 	DescribeContactFlow(ctx workflow.Context, input *connect.DescribeContactFlowInput) (*connect.DescribeContactFlowOutput, error)
-	DescribeContactFlowAsync(ctx workflow.Context, input *connect.DescribeContactFlowInput) *ConnectDescribeContactFlowFuture
+	DescribeContactFlowAsync(ctx workflow.Context, input *connect.DescribeContactFlowInput) *DescribeContactFlowFuture
 
 	DescribeRoutingProfile(ctx workflow.Context, input *connect.DescribeRoutingProfileInput) (*connect.DescribeRoutingProfileOutput, error)
-	DescribeRoutingProfileAsync(ctx workflow.Context, input *connect.DescribeRoutingProfileInput) *ConnectDescribeRoutingProfileFuture
+	DescribeRoutingProfileAsync(ctx workflow.Context, input *connect.DescribeRoutingProfileInput) *DescribeRoutingProfileFuture
 
 	DescribeUser(ctx workflow.Context, input *connect.DescribeUserInput) (*connect.DescribeUserOutput, error)
-	DescribeUserAsync(ctx workflow.Context, input *connect.DescribeUserInput) *ConnectDescribeUserFuture
+	DescribeUserAsync(ctx workflow.Context, input *connect.DescribeUserInput) *DescribeUserFuture
 
 	DescribeUserHierarchyGroup(ctx workflow.Context, input *connect.DescribeUserHierarchyGroupInput) (*connect.DescribeUserHierarchyGroupOutput, error)
-	DescribeUserHierarchyGroupAsync(ctx workflow.Context, input *connect.DescribeUserHierarchyGroupInput) *ConnectDescribeUserHierarchyGroupFuture
+	DescribeUserHierarchyGroupAsync(ctx workflow.Context, input *connect.DescribeUserHierarchyGroupInput) *DescribeUserHierarchyGroupFuture
 
 	DescribeUserHierarchyStructure(ctx workflow.Context, input *connect.DescribeUserHierarchyStructureInput) (*connect.DescribeUserHierarchyStructureOutput, error)
-	DescribeUserHierarchyStructureAsync(ctx workflow.Context, input *connect.DescribeUserHierarchyStructureInput) *ConnectDescribeUserHierarchyStructureFuture
+	DescribeUserHierarchyStructureAsync(ctx workflow.Context, input *connect.DescribeUserHierarchyStructureInput) *DescribeUserHierarchyStructureFuture
 
 	DisassociateRoutingProfileQueues(ctx workflow.Context, input *connect.DisassociateRoutingProfileQueuesInput) (*connect.DisassociateRoutingProfileQueuesOutput, error)
-	DisassociateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.DisassociateRoutingProfileQueuesInput) *ConnectDisassociateRoutingProfileQueuesFuture
+	DisassociateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.DisassociateRoutingProfileQueuesInput) *DisassociateRoutingProfileQueuesFuture
 
 	GetContactAttributes(ctx workflow.Context, input *connect.GetContactAttributesInput) (*connect.GetContactAttributesOutput, error)
-	GetContactAttributesAsync(ctx workflow.Context, input *connect.GetContactAttributesInput) *ConnectGetContactAttributesFuture
+	GetContactAttributesAsync(ctx workflow.Context, input *connect.GetContactAttributesInput) *GetContactAttributesFuture
 
 	GetCurrentMetricData(ctx workflow.Context, input *connect.GetCurrentMetricDataInput) (*connect.GetCurrentMetricDataOutput, error)
-	GetCurrentMetricDataAsync(ctx workflow.Context, input *connect.GetCurrentMetricDataInput) *ConnectGetCurrentMetricDataFuture
+	GetCurrentMetricDataAsync(ctx workflow.Context, input *connect.GetCurrentMetricDataInput) *GetCurrentMetricDataFuture
 
 	GetFederationToken(ctx workflow.Context, input *connect.GetFederationTokenInput) (*connect.GetFederationTokenOutput, error)
-	GetFederationTokenAsync(ctx workflow.Context, input *connect.GetFederationTokenInput) *ConnectGetFederationTokenFuture
+	GetFederationTokenAsync(ctx workflow.Context, input *connect.GetFederationTokenInput) *GetFederationTokenFuture
 
 	GetMetricData(ctx workflow.Context, input *connect.GetMetricDataInput) (*connect.GetMetricDataOutput, error)
-	GetMetricDataAsync(ctx workflow.Context, input *connect.GetMetricDataInput) *ConnectGetMetricDataFuture
+	GetMetricDataAsync(ctx workflow.Context, input *connect.GetMetricDataInput) *GetMetricDataFuture
 
 	ListContactFlows(ctx workflow.Context, input *connect.ListContactFlowsInput) (*connect.ListContactFlowsOutput, error)
-	ListContactFlowsAsync(ctx workflow.Context, input *connect.ListContactFlowsInput) *ConnectListContactFlowsFuture
+	ListContactFlowsAsync(ctx workflow.Context, input *connect.ListContactFlowsInput) *ListContactFlowsFuture
 
 	ListHoursOfOperations(ctx workflow.Context, input *connect.ListHoursOfOperationsInput) (*connect.ListHoursOfOperationsOutput, error)
-	ListHoursOfOperationsAsync(ctx workflow.Context, input *connect.ListHoursOfOperationsInput) *ConnectListHoursOfOperationsFuture
+	ListHoursOfOperationsAsync(ctx workflow.Context, input *connect.ListHoursOfOperationsInput) *ListHoursOfOperationsFuture
 
 	ListPhoneNumbers(ctx workflow.Context, input *connect.ListPhoneNumbersInput) (*connect.ListPhoneNumbersOutput, error)
-	ListPhoneNumbersAsync(ctx workflow.Context, input *connect.ListPhoneNumbersInput) *ConnectListPhoneNumbersFuture
+	ListPhoneNumbersAsync(ctx workflow.Context, input *connect.ListPhoneNumbersInput) *ListPhoneNumbersFuture
 
 	ListPrompts(ctx workflow.Context, input *connect.ListPromptsInput) (*connect.ListPromptsOutput, error)
-	ListPromptsAsync(ctx workflow.Context, input *connect.ListPromptsInput) *ConnectListPromptsFuture
+	ListPromptsAsync(ctx workflow.Context, input *connect.ListPromptsInput) *ListPromptsFuture
 
 	ListQueues(ctx workflow.Context, input *connect.ListQueuesInput) (*connect.ListQueuesOutput, error)
-	ListQueuesAsync(ctx workflow.Context, input *connect.ListQueuesInput) *ConnectListQueuesFuture
+	ListQueuesAsync(ctx workflow.Context, input *connect.ListQueuesInput) *ListQueuesFuture
 
 	ListRoutingProfileQueues(ctx workflow.Context, input *connect.ListRoutingProfileQueuesInput) (*connect.ListRoutingProfileQueuesOutput, error)
-	ListRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.ListRoutingProfileQueuesInput) *ConnectListRoutingProfileQueuesFuture
+	ListRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.ListRoutingProfileQueuesInput) *ListRoutingProfileQueuesFuture
 
 	ListRoutingProfiles(ctx workflow.Context, input *connect.ListRoutingProfilesInput) (*connect.ListRoutingProfilesOutput, error)
-	ListRoutingProfilesAsync(ctx workflow.Context, input *connect.ListRoutingProfilesInput) *ConnectListRoutingProfilesFuture
+	ListRoutingProfilesAsync(ctx workflow.Context, input *connect.ListRoutingProfilesInput) *ListRoutingProfilesFuture
 
 	ListSecurityProfiles(ctx workflow.Context, input *connect.ListSecurityProfilesInput) (*connect.ListSecurityProfilesOutput, error)
-	ListSecurityProfilesAsync(ctx workflow.Context, input *connect.ListSecurityProfilesInput) *ConnectListSecurityProfilesFuture
+	ListSecurityProfilesAsync(ctx workflow.Context, input *connect.ListSecurityProfilesInput) *ListSecurityProfilesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *connect.ListTagsForResourceInput) (*connect.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *connect.ListTagsForResourceInput) *ConnectListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *connect.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	ListUserHierarchyGroups(ctx workflow.Context, input *connect.ListUserHierarchyGroupsInput) (*connect.ListUserHierarchyGroupsOutput, error)
-	ListUserHierarchyGroupsAsync(ctx workflow.Context, input *connect.ListUserHierarchyGroupsInput) *ConnectListUserHierarchyGroupsFuture
+	ListUserHierarchyGroupsAsync(ctx workflow.Context, input *connect.ListUserHierarchyGroupsInput) *ListUserHierarchyGroupsFuture
 
 	ListUsers(ctx workflow.Context, input *connect.ListUsersInput) (*connect.ListUsersOutput, error)
-	ListUsersAsync(ctx workflow.Context, input *connect.ListUsersInput) *ConnectListUsersFuture
+	ListUsersAsync(ctx workflow.Context, input *connect.ListUsersInput) *ListUsersFuture
 
 	ResumeContactRecording(ctx workflow.Context, input *connect.ResumeContactRecordingInput) (*connect.ResumeContactRecordingOutput, error)
-	ResumeContactRecordingAsync(ctx workflow.Context, input *connect.ResumeContactRecordingInput) *ConnectResumeContactRecordingFuture
+	ResumeContactRecordingAsync(ctx workflow.Context, input *connect.ResumeContactRecordingInput) *ResumeContactRecordingFuture
 
 	StartChatContact(ctx workflow.Context, input *connect.StartChatContactInput) (*connect.StartChatContactOutput, error)
-	StartChatContactAsync(ctx workflow.Context, input *connect.StartChatContactInput) *ConnectStartChatContactFuture
+	StartChatContactAsync(ctx workflow.Context, input *connect.StartChatContactInput) *StartChatContactFuture
 
 	StartContactRecording(ctx workflow.Context, input *connect.StartContactRecordingInput) (*connect.StartContactRecordingOutput, error)
-	StartContactRecordingAsync(ctx workflow.Context, input *connect.StartContactRecordingInput) *ConnectStartContactRecordingFuture
+	StartContactRecordingAsync(ctx workflow.Context, input *connect.StartContactRecordingInput) *StartContactRecordingFuture
 
 	StartOutboundVoiceContact(ctx workflow.Context, input *connect.StartOutboundVoiceContactInput) (*connect.StartOutboundVoiceContactOutput, error)
-	StartOutboundVoiceContactAsync(ctx workflow.Context, input *connect.StartOutboundVoiceContactInput) *ConnectStartOutboundVoiceContactFuture
+	StartOutboundVoiceContactAsync(ctx workflow.Context, input *connect.StartOutboundVoiceContactInput) *StartOutboundVoiceContactFuture
 
 	StopContact(ctx workflow.Context, input *connect.StopContactInput) (*connect.StopContactOutput, error)
-	StopContactAsync(ctx workflow.Context, input *connect.StopContactInput) *ConnectStopContactFuture
+	StopContactAsync(ctx workflow.Context, input *connect.StopContactInput) *StopContactFuture
 
 	StopContactRecording(ctx workflow.Context, input *connect.StopContactRecordingInput) (*connect.StopContactRecordingOutput, error)
-	StopContactRecordingAsync(ctx workflow.Context, input *connect.StopContactRecordingInput) *ConnectStopContactRecordingFuture
+	StopContactRecordingAsync(ctx workflow.Context, input *connect.StopContactRecordingInput) *StopContactRecordingFuture
 
 	SuspendContactRecording(ctx workflow.Context, input *connect.SuspendContactRecordingInput) (*connect.SuspendContactRecordingOutput, error)
-	SuspendContactRecordingAsync(ctx workflow.Context, input *connect.SuspendContactRecordingInput) *ConnectSuspendContactRecordingFuture
+	SuspendContactRecordingAsync(ctx workflow.Context, input *connect.SuspendContactRecordingInput) *SuspendContactRecordingFuture
 
 	TagResource(ctx workflow.Context, input *connect.TagResourceInput) (*connect.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *connect.TagResourceInput) *ConnectTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *connect.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *connect.UntagResourceInput) (*connect.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *connect.UntagResourceInput) *ConnectUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *connect.UntagResourceInput) *UntagResourceFuture
 
 	UpdateContactAttributes(ctx workflow.Context, input *connect.UpdateContactAttributesInput) (*connect.UpdateContactAttributesOutput, error)
-	UpdateContactAttributesAsync(ctx workflow.Context, input *connect.UpdateContactAttributesInput) *ConnectUpdateContactAttributesFuture
+	UpdateContactAttributesAsync(ctx workflow.Context, input *connect.UpdateContactAttributesInput) *UpdateContactAttributesFuture
 
 	UpdateContactFlowContent(ctx workflow.Context, input *connect.UpdateContactFlowContentInput) (*connect.UpdateContactFlowContentOutput, error)
-	UpdateContactFlowContentAsync(ctx workflow.Context, input *connect.UpdateContactFlowContentInput) *ConnectUpdateContactFlowContentFuture
+	UpdateContactFlowContentAsync(ctx workflow.Context, input *connect.UpdateContactFlowContentInput) *UpdateContactFlowContentFuture
 
 	UpdateContactFlowName(ctx workflow.Context, input *connect.UpdateContactFlowNameInput) (*connect.UpdateContactFlowNameOutput, error)
-	UpdateContactFlowNameAsync(ctx workflow.Context, input *connect.UpdateContactFlowNameInput) *ConnectUpdateContactFlowNameFuture
+	UpdateContactFlowNameAsync(ctx workflow.Context, input *connect.UpdateContactFlowNameInput) *UpdateContactFlowNameFuture
 
 	UpdateRoutingProfileConcurrency(ctx workflow.Context, input *connect.UpdateRoutingProfileConcurrencyInput) (*connect.UpdateRoutingProfileConcurrencyOutput, error)
-	UpdateRoutingProfileConcurrencyAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileConcurrencyInput) *ConnectUpdateRoutingProfileConcurrencyFuture
+	UpdateRoutingProfileConcurrencyAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileConcurrencyInput) *UpdateRoutingProfileConcurrencyFuture
 
 	UpdateRoutingProfileDefaultOutboundQueue(ctx workflow.Context, input *connect.UpdateRoutingProfileDefaultOutboundQueueInput) (*connect.UpdateRoutingProfileDefaultOutboundQueueOutput, error)
-	UpdateRoutingProfileDefaultOutboundQueueAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileDefaultOutboundQueueInput) *ConnectUpdateRoutingProfileDefaultOutboundQueueFuture
+	UpdateRoutingProfileDefaultOutboundQueueAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileDefaultOutboundQueueInput) *UpdateRoutingProfileDefaultOutboundQueueFuture
 
 	UpdateRoutingProfileName(ctx workflow.Context, input *connect.UpdateRoutingProfileNameInput) (*connect.UpdateRoutingProfileNameOutput, error)
-	UpdateRoutingProfileNameAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileNameInput) *ConnectUpdateRoutingProfileNameFuture
+	UpdateRoutingProfileNameAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileNameInput) *UpdateRoutingProfileNameFuture
 
 	UpdateRoutingProfileQueues(ctx workflow.Context, input *connect.UpdateRoutingProfileQueuesInput) (*connect.UpdateRoutingProfileQueuesOutput, error)
-	UpdateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileQueuesInput) *ConnectUpdateRoutingProfileQueuesFuture
+	UpdateRoutingProfileQueuesAsync(ctx workflow.Context, input *connect.UpdateRoutingProfileQueuesInput) *UpdateRoutingProfileQueuesFuture
 
 	UpdateUserHierarchy(ctx workflow.Context, input *connect.UpdateUserHierarchyInput) (*connect.UpdateUserHierarchyOutput, error)
-	UpdateUserHierarchyAsync(ctx workflow.Context, input *connect.UpdateUserHierarchyInput) *ConnectUpdateUserHierarchyFuture
+	UpdateUserHierarchyAsync(ctx workflow.Context, input *connect.UpdateUserHierarchyInput) *UpdateUserHierarchyFuture
 
 	UpdateUserIdentityInfo(ctx workflow.Context, input *connect.UpdateUserIdentityInfoInput) (*connect.UpdateUserIdentityInfoOutput, error)
-	UpdateUserIdentityInfoAsync(ctx workflow.Context, input *connect.UpdateUserIdentityInfoInput) *ConnectUpdateUserIdentityInfoFuture
+	UpdateUserIdentityInfoAsync(ctx workflow.Context, input *connect.UpdateUserIdentityInfoInput) *UpdateUserIdentityInfoFuture
 
 	UpdateUserPhoneConfig(ctx workflow.Context, input *connect.UpdateUserPhoneConfigInput) (*connect.UpdateUserPhoneConfigOutput, error)
-	UpdateUserPhoneConfigAsync(ctx workflow.Context, input *connect.UpdateUserPhoneConfigInput) *ConnectUpdateUserPhoneConfigFuture
+	UpdateUserPhoneConfigAsync(ctx workflow.Context, input *connect.UpdateUserPhoneConfigInput) *UpdateUserPhoneConfigFuture
 
 	UpdateUserRoutingProfile(ctx workflow.Context, input *connect.UpdateUserRoutingProfileInput) (*connect.UpdateUserRoutingProfileOutput, error)
-	UpdateUserRoutingProfileAsync(ctx workflow.Context, input *connect.UpdateUserRoutingProfileInput) *ConnectUpdateUserRoutingProfileFuture
+	UpdateUserRoutingProfileAsync(ctx workflow.Context, input *connect.UpdateUserRoutingProfileInput) *UpdateUserRoutingProfileFuture
 
 	UpdateUserSecurityProfiles(ctx workflow.Context, input *connect.UpdateUserSecurityProfilesInput) (*connect.UpdateUserSecurityProfilesOutput, error)
-	UpdateUserSecurityProfilesAsync(ctx workflow.Context, input *connect.UpdateUserSecurityProfilesInput) *ConnectUpdateUserSecurityProfilesFuture
+	UpdateUserSecurityProfilesAsync(ctx workflow.Context, input *connect.UpdateUserSecurityProfilesInput) *UpdateUserSecurityProfilesFuture
 }
 
 func NewClient() Client {

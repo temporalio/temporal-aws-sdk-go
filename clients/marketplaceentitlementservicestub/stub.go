@@ -16,12 +16,12 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type MarketplaceEntitlementServiceGetEntitlementsFuture struct {
+type GetEntitlementsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MarketplaceEntitlementServiceGetEntitlementsFuture) Get(ctx workflow.Context) (*marketplaceentitlementservice.GetEntitlementsOutput, error) {
+func (r *GetEntitlementsFuture) Get(ctx workflow.Context) (*marketplaceentitlementservice.GetEntitlementsOutput, error) {
 	var output marketplaceentitlementservice.GetEntitlementsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -33,7 +33,7 @@ func (a *stub) GetEntitlements(ctx workflow.Context, input *marketplaceentitleme
 	return &output, err
 }
 
-func (a *stub) GetEntitlementsAsync(ctx workflow.Context, input *marketplaceentitlementservice.GetEntitlementsInput) *MarketplaceEntitlementServiceGetEntitlementsFuture {
+func (a *stub) GetEntitlementsAsync(ctx workflow.Context, input *marketplaceentitlementservice.GetEntitlementsInput) *GetEntitlementsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.marketplaceentitlementservice.GetEntitlements", input)
-	return &MarketplaceEntitlementServiceGetEntitlementsFuture{Future: future}
+	return &GetEntitlementsFuture{Future: future}
 }

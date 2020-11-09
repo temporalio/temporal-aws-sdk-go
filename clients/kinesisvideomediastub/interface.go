@@ -16,7 +16,7 @@ var _ clients.VoidFuture
 
 type Client interface {
 	GetMedia(ctx workflow.Context, input *kinesisvideomedia.GetMediaInput) (*kinesisvideomedia.GetMediaOutput, error)
-	GetMediaAsync(ctx workflow.Context, input *kinesisvideomedia.GetMediaInput) *KinesisVideoMediaGetMediaFuture
+	GetMediaAsync(ctx workflow.Context, input *kinesisvideomedia.GetMediaInput) *GetMediaFuture
 }
 
 func NewClient() Client {

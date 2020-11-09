@@ -16,210 +16,210 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type QLDBCancelJournalKinesisStreamFuture struct {
+type CancelJournalKinesisStreamFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBCancelJournalKinesisStreamFuture) Get(ctx workflow.Context) (*qldb.CancelJournalKinesisStreamOutput, error) {
+func (r *CancelJournalKinesisStreamFuture) Get(ctx workflow.Context) (*qldb.CancelJournalKinesisStreamOutput, error) {
 	var output qldb.CancelJournalKinesisStreamOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBCreateLedgerFuture struct {
+type CreateLedgerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBCreateLedgerFuture) Get(ctx workflow.Context) (*qldb.CreateLedgerOutput, error) {
+func (r *CreateLedgerFuture) Get(ctx workflow.Context) (*qldb.CreateLedgerOutput, error) {
 	var output qldb.CreateLedgerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBDeleteLedgerFuture struct {
+type DeleteLedgerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBDeleteLedgerFuture) Get(ctx workflow.Context) (*qldb.DeleteLedgerOutput, error) {
+func (r *DeleteLedgerFuture) Get(ctx workflow.Context) (*qldb.DeleteLedgerOutput, error) {
 	var output qldb.DeleteLedgerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBDescribeJournalKinesisStreamFuture struct {
+type DescribeJournalKinesisStreamFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBDescribeJournalKinesisStreamFuture) Get(ctx workflow.Context) (*qldb.DescribeJournalKinesisStreamOutput, error) {
+func (r *DescribeJournalKinesisStreamFuture) Get(ctx workflow.Context) (*qldb.DescribeJournalKinesisStreamOutput, error) {
 	var output qldb.DescribeJournalKinesisStreamOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBDescribeJournalS3ExportFuture struct {
+type DescribeJournalS3ExportFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBDescribeJournalS3ExportFuture) Get(ctx workflow.Context) (*qldb.DescribeJournalS3ExportOutput, error) {
+func (r *DescribeJournalS3ExportFuture) Get(ctx workflow.Context) (*qldb.DescribeJournalS3ExportOutput, error) {
 	var output qldb.DescribeJournalS3ExportOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBDescribeLedgerFuture struct {
+type DescribeLedgerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBDescribeLedgerFuture) Get(ctx workflow.Context) (*qldb.DescribeLedgerOutput, error) {
+func (r *DescribeLedgerFuture) Get(ctx workflow.Context) (*qldb.DescribeLedgerOutput, error) {
 	var output qldb.DescribeLedgerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBExportJournalToS3Future struct {
+type ExportJournalToS3Future struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBExportJournalToS3Future) Get(ctx workflow.Context) (*qldb.ExportJournalToS3Output, error) {
+func (r *ExportJournalToS3Future) Get(ctx workflow.Context) (*qldb.ExportJournalToS3Output, error) {
 	var output qldb.ExportJournalToS3Output
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBGetBlockFuture struct {
+type GetBlockFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBGetBlockFuture) Get(ctx workflow.Context) (*qldb.GetBlockOutput, error) {
+func (r *GetBlockFuture) Get(ctx workflow.Context) (*qldb.GetBlockOutput, error) {
 	var output qldb.GetBlockOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBGetDigestFuture struct {
+type GetDigestFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBGetDigestFuture) Get(ctx workflow.Context) (*qldb.GetDigestOutput, error) {
+func (r *GetDigestFuture) Get(ctx workflow.Context) (*qldb.GetDigestOutput, error) {
 	var output qldb.GetDigestOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBGetRevisionFuture struct {
+type GetRevisionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBGetRevisionFuture) Get(ctx workflow.Context) (*qldb.GetRevisionOutput, error) {
+func (r *GetRevisionFuture) Get(ctx workflow.Context) (*qldb.GetRevisionOutput, error) {
 	var output qldb.GetRevisionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBListJournalKinesisStreamsForLedgerFuture struct {
+type ListJournalKinesisStreamsForLedgerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBListJournalKinesisStreamsForLedgerFuture) Get(ctx workflow.Context) (*qldb.ListJournalKinesisStreamsForLedgerOutput, error) {
+func (r *ListJournalKinesisStreamsForLedgerFuture) Get(ctx workflow.Context) (*qldb.ListJournalKinesisStreamsForLedgerOutput, error) {
 	var output qldb.ListJournalKinesisStreamsForLedgerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBListJournalS3ExportsFuture struct {
+type ListJournalS3ExportsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBListJournalS3ExportsFuture) Get(ctx workflow.Context) (*qldb.ListJournalS3ExportsOutput, error) {
+func (r *ListJournalS3ExportsFuture) Get(ctx workflow.Context) (*qldb.ListJournalS3ExportsOutput, error) {
 	var output qldb.ListJournalS3ExportsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBListJournalS3ExportsForLedgerFuture struct {
+type ListJournalS3ExportsForLedgerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBListJournalS3ExportsForLedgerFuture) Get(ctx workflow.Context) (*qldb.ListJournalS3ExportsForLedgerOutput, error) {
+func (r *ListJournalS3ExportsForLedgerFuture) Get(ctx workflow.Context) (*qldb.ListJournalS3ExportsForLedgerOutput, error) {
 	var output qldb.ListJournalS3ExportsForLedgerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBListLedgersFuture struct {
+type ListLedgersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBListLedgersFuture) Get(ctx workflow.Context) (*qldb.ListLedgersOutput, error) {
+func (r *ListLedgersFuture) Get(ctx workflow.Context) (*qldb.ListLedgersOutput, error) {
 	var output qldb.ListLedgersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBListTagsForResourceFuture) Get(ctx workflow.Context) (*qldb.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*qldb.ListTagsForResourceOutput, error) {
 	var output qldb.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBStreamJournalToKinesisFuture struct {
+type StreamJournalToKinesisFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBStreamJournalToKinesisFuture) Get(ctx workflow.Context) (*qldb.StreamJournalToKinesisOutput, error) {
+func (r *StreamJournalToKinesisFuture) Get(ctx workflow.Context) (*qldb.StreamJournalToKinesisOutput, error) {
 	var output qldb.StreamJournalToKinesisOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBTagResourceFuture) Get(ctx workflow.Context) (*qldb.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*qldb.TagResourceOutput, error) {
 	var output qldb.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBUntagResourceFuture) Get(ctx workflow.Context) (*qldb.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*qldb.UntagResourceOutput, error) {
 	var output qldb.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type QLDBUpdateLedgerFuture struct {
+type UpdateLedgerFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *QLDBUpdateLedgerFuture) Get(ctx workflow.Context) (*qldb.UpdateLedgerOutput, error) {
+func (r *UpdateLedgerFuture) Get(ctx workflow.Context) (*qldb.UpdateLedgerOutput, error) {
 	var output qldb.UpdateLedgerOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -231,9 +231,9 @@ func (a *stub) CancelJournalKinesisStream(ctx workflow.Context, input *qldb.Canc
 	return &output, err
 }
 
-func (a *stub) CancelJournalKinesisStreamAsync(ctx workflow.Context, input *qldb.CancelJournalKinesisStreamInput) *QLDBCancelJournalKinesisStreamFuture {
+func (a *stub) CancelJournalKinesisStreamAsync(ctx workflow.Context, input *qldb.CancelJournalKinesisStreamInput) *CancelJournalKinesisStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.CancelJournalKinesisStream", input)
-	return &QLDBCancelJournalKinesisStreamFuture{Future: future}
+	return &CancelJournalKinesisStreamFuture{Future: future}
 }
 
 func (a *stub) CreateLedger(ctx workflow.Context, input *qldb.CreateLedgerInput) (*qldb.CreateLedgerOutput, error) {
@@ -242,9 +242,9 @@ func (a *stub) CreateLedger(ctx workflow.Context, input *qldb.CreateLedgerInput)
 	return &output, err
 }
 
-func (a *stub) CreateLedgerAsync(ctx workflow.Context, input *qldb.CreateLedgerInput) *QLDBCreateLedgerFuture {
+func (a *stub) CreateLedgerAsync(ctx workflow.Context, input *qldb.CreateLedgerInput) *CreateLedgerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.CreateLedger", input)
-	return &QLDBCreateLedgerFuture{Future: future}
+	return &CreateLedgerFuture{Future: future}
 }
 
 func (a *stub) DeleteLedger(ctx workflow.Context, input *qldb.DeleteLedgerInput) (*qldb.DeleteLedgerOutput, error) {
@@ -253,9 +253,9 @@ func (a *stub) DeleteLedger(ctx workflow.Context, input *qldb.DeleteLedgerInput)
 	return &output, err
 }
 
-func (a *stub) DeleteLedgerAsync(ctx workflow.Context, input *qldb.DeleteLedgerInput) *QLDBDeleteLedgerFuture {
+func (a *stub) DeleteLedgerAsync(ctx workflow.Context, input *qldb.DeleteLedgerInput) *DeleteLedgerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.DeleteLedger", input)
-	return &QLDBDeleteLedgerFuture{Future: future}
+	return &DeleteLedgerFuture{Future: future}
 }
 
 func (a *stub) DescribeJournalKinesisStream(ctx workflow.Context, input *qldb.DescribeJournalKinesisStreamInput) (*qldb.DescribeJournalKinesisStreamOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) DescribeJournalKinesisStream(ctx workflow.Context, input *qldb.De
 	return &output, err
 }
 
-func (a *stub) DescribeJournalKinesisStreamAsync(ctx workflow.Context, input *qldb.DescribeJournalKinesisStreamInput) *QLDBDescribeJournalKinesisStreamFuture {
+func (a *stub) DescribeJournalKinesisStreamAsync(ctx workflow.Context, input *qldb.DescribeJournalKinesisStreamInput) *DescribeJournalKinesisStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.DescribeJournalKinesisStream", input)
-	return &QLDBDescribeJournalKinesisStreamFuture{Future: future}
+	return &DescribeJournalKinesisStreamFuture{Future: future}
 }
 
 func (a *stub) DescribeJournalS3Export(ctx workflow.Context, input *qldb.DescribeJournalS3ExportInput) (*qldb.DescribeJournalS3ExportOutput, error) {
@@ -275,9 +275,9 @@ func (a *stub) DescribeJournalS3Export(ctx workflow.Context, input *qldb.Describ
 	return &output, err
 }
 
-func (a *stub) DescribeJournalS3ExportAsync(ctx workflow.Context, input *qldb.DescribeJournalS3ExportInput) *QLDBDescribeJournalS3ExportFuture {
+func (a *stub) DescribeJournalS3ExportAsync(ctx workflow.Context, input *qldb.DescribeJournalS3ExportInput) *DescribeJournalS3ExportFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.DescribeJournalS3Export", input)
-	return &QLDBDescribeJournalS3ExportFuture{Future: future}
+	return &DescribeJournalS3ExportFuture{Future: future}
 }
 
 func (a *stub) DescribeLedger(ctx workflow.Context, input *qldb.DescribeLedgerInput) (*qldb.DescribeLedgerOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) DescribeLedger(ctx workflow.Context, input *qldb.DescribeLedgerIn
 	return &output, err
 }
 
-func (a *stub) DescribeLedgerAsync(ctx workflow.Context, input *qldb.DescribeLedgerInput) *QLDBDescribeLedgerFuture {
+func (a *stub) DescribeLedgerAsync(ctx workflow.Context, input *qldb.DescribeLedgerInput) *DescribeLedgerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.DescribeLedger", input)
-	return &QLDBDescribeLedgerFuture{Future: future}
+	return &DescribeLedgerFuture{Future: future}
 }
 
 func (a *stub) ExportJournalToS3(ctx workflow.Context, input *qldb.ExportJournalToS3Input) (*qldb.ExportJournalToS3Output, error) {
@@ -297,9 +297,9 @@ func (a *stub) ExportJournalToS3(ctx workflow.Context, input *qldb.ExportJournal
 	return &output, err
 }
 
-func (a *stub) ExportJournalToS3Async(ctx workflow.Context, input *qldb.ExportJournalToS3Input) *QLDBExportJournalToS3Future {
+func (a *stub) ExportJournalToS3Async(ctx workflow.Context, input *qldb.ExportJournalToS3Input) *ExportJournalToS3Future {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.ExportJournalToS3", input)
-	return &QLDBExportJournalToS3Future{Future: future}
+	return &ExportJournalToS3Future{Future: future}
 }
 
 func (a *stub) GetBlock(ctx workflow.Context, input *qldb.GetBlockInput) (*qldb.GetBlockOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) GetBlock(ctx workflow.Context, input *qldb.GetBlockInput) (*qldb.
 	return &output, err
 }
 
-func (a *stub) GetBlockAsync(ctx workflow.Context, input *qldb.GetBlockInput) *QLDBGetBlockFuture {
+func (a *stub) GetBlockAsync(ctx workflow.Context, input *qldb.GetBlockInput) *GetBlockFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.GetBlock", input)
-	return &QLDBGetBlockFuture{Future: future}
+	return &GetBlockFuture{Future: future}
 }
 
 func (a *stub) GetDigest(ctx workflow.Context, input *qldb.GetDigestInput) (*qldb.GetDigestOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) GetDigest(ctx workflow.Context, input *qldb.GetDigestInput) (*qld
 	return &output, err
 }
 
-func (a *stub) GetDigestAsync(ctx workflow.Context, input *qldb.GetDigestInput) *QLDBGetDigestFuture {
+func (a *stub) GetDigestAsync(ctx workflow.Context, input *qldb.GetDigestInput) *GetDigestFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.GetDigest", input)
-	return &QLDBGetDigestFuture{Future: future}
+	return &GetDigestFuture{Future: future}
 }
 
 func (a *stub) GetRevision(ctx workflow.Context, input *qldb.GetRevisionInput) (*qldb.GetRevisionOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) GetRevision(ctx workflow.Context, input *qldb.GetRevisionInput) (
 	return &output, err
 }
 
-func (a *stub) GetRevisionAsync(ctx workflow.Context, input *qldb.GetRevisionInput) *QLDBGetRevisionFuture {
+func (a *stub) GetRevisionAsync(ctx workflow.Context, input *qldb.GetRevisionInput) *GetRevisionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.GetRevision", input)
-	return &QLDBGetRevisionFuture{Future: future}
+	return &GetRevisionFuture{Future: future}
 }
 
 func (a *stub) ListJournalKinesisStreamsForLedger(ctx workflow.Context, input *qldb.ListJournalKinesisStreamsForLedgerInput) (*qldb.ListJournalKinesisStreamsForLedgerOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) ListJournalKinesisStreamsForLedger(ctx workflow.Context, input *q
 	return &output, err
 }
 
-func (a *stub) ListJournalKinesisStreamsForLedgerAsync(ctx workflow.Context, input *qldb.ListJournalKinesisStreamsForLedgerInput) *QLDBListJournalKinesisStreamsForLedgerFuture {
+func (a *stub) ListJournalKinesisStreamsForLedgerAsync(ctx workflow.Context, input *qldb.ListJournalKinesisStreamsForLedgerInput) *ListJournalKinesisStreamsForLedgerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.ListJournalKinesisStreamsForLedger", input)
-	return &QLDBListJournalKinesisStreamsForLedgerFuture{Future: future}
+	return &ListJournalKinesisStreamsForLedgerFuture{Future: future}
 }
 
 func (a *stub) ListJournalS3Exports(ctx workflow.Context, input *qldb.ListJournalS3ExportsInput) (*qldb.ListJournalS3ExportsOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) ListJournalS3Exports(ctx workflow.Context, input *qldb.ListJourna
 	return &output, err
 }
 
-func (a *stub) ListJournalS3ExportsAsync(ctx workflow.Context, input *qldb.ListJournalS3ExportsInput) *QLDBListJournalS3ExportsFuture {
+func (a *stub) ListJournalS3ExportsAsync(ctx workflow.Context, input *qldb.ListJournalS3ExportsInput) *ListJournalS3ExportsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.ListJournalS3Exports", input)
-	return &QLDBListJournalS3ExportsFuture{Future: future}
+	return &ListJournalS3ExportsFuture{Future: future}
 }
 
 func (a *stub) ListJournalS3ExportsForLedger(ctx workflow.Context, input *qldb.ListJournalS3ExportsForLedgerInput) (*qldb.ListJournalS3ExportsForLedgerOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) ListJournalS3ExportsForLedger(ctx workflow.Context, input *qldb.L
 	return &output, err
 }
 
-func (a *stub) ListJournalS3ExportsForLedgerAsync(ctx workflow.Context, input *qldb.ListJournalS3ExportsForLedgerInput) *QLDBListJournalS3ExportsForLedgerFuture {
+func (a *stub) ListJournalS3ExportsForLedgerAsync(ctx workflow.Context, input *qldb.ListJournalS3ExportsForLedgerInput) *ListJournalS3ExportsForLedgerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.ListJournalS3ExportsForLedger", input)
-	return &QLDBListJournalS3ExportsForLedgerFuture{Future: future}
+	return &ListJournalS3ExportsForLedgerFuture{Future: future}
 }
 
 func (a *stub) ListLedgers(ctx workflow.Context, input *qldb.ListLedgersInput) (*qldb.ListLedgersOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) ListLedgers(ctx workflow.Context, input *qldb.ListLedgersInput) (
 	return &output, err
 }
 
-func (a *stub) ListLedgersAsync(ctx workflow.Context, input *qldb.ListLedgersInput) *QLDBListLedgersFuture {
+func (a *stub) ListLedgersAsync(ctx workflow.Context, input *qldb.ListLedgersInput) *ListLedgersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.ListLedgers", input)
-	return &QLDBListLedgersFuture{Future: future}
+	return &ListLedgersFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *qldb.ListTagsForResourceInput) (*qldb.ListTagsForResourceOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *qldb.ListTagsFor
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *qldb.ListTagsForResourceInput) *QLDBListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *qldb.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.ListTagsForResource", input)
-	return &QLDBListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) StreamJournalToKinesis(ctx workflow.Context, input *qldb.StreamJournalToKinesisInput) (*qldb.StreamJournalToKinesisOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) StreamJournalToKinesis(ctx workflow.Context, input *qldb.StreamJo
 	return &output, err
 }
 
-func (a *stub) StreamJournalToKinesisAsync(ctx workflow.Context, input *qldb.StreamJournalToKinesisInput) *QLDBStreamJournalToKinesisFuture {
+func (a *stub) StreamJournalToKinesisAsync(ctx workflow.Context, input *qldb.StreamJournalToKinesisInput) *StreamJournalToKinesisFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.StreamJournalToKinesis", input)
-	return &QLDBStreamJournalToKinesisFuture{Future: future}
+	return &StreamJournalToKinesisFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *qldb.TagResourceInput) (*qldb.TagResourceOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *qldb.TagResourceInput) (
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *qldb.TagResourceInput) *QLDBTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *qldb.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.TagResource", input)
-	return &QLDBTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *qldb.UntagResourceInput) (*qldb.UntagResourceOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *qldb.UntagResourceInpu
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *qldb.UntagResourceInput) *QLDBUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *qldb.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.UntagResource", input)
-	return &QLDBUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateLedger(ctx workflow.Context, input *qldb.UpdateLedgerInput) (*qldb.UpdateLedgerOutput, error) {
@@ -429,7 +429,7 @@ func (a *stub) UpdateLedger(ctx workflow.Context, input *qldb.UpdateLedgerInput)
 	return &output, err
 }
 
-func (a *stub) UpdateLedgerAsync(ctx workflow.Context, input *qldb.UpdateLedgerInput) *QLDBUpdateLedgerFuture {
+func (a *stub) UpdateLedgerAsync(ctx workflow.Context, input *qldb.UpdateLedgerInput) *UpdateLedgerFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.qldb.UpdateLedger", input)
-	return &QLDBUpdateLedgerFuture{Future: future}
+	return &UpdateLedgerFuture{Future: future}
 }

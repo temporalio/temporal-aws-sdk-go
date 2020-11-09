@@ -16,89 +16,89 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type STSAssumeRoleFuture struct {
+type AssumeRoleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *STSAssumeRoleFuture) Get(ctx workflow.Context) (*sts.AssumeRoleOutput, error) {
+func (r *AssumeRoleFuture) Get(ctx workflow.Context) (*sts.AssumeRoleOutput, error) {
 	var output sts.AssumeRoleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type STSAssumeRoleWithSAMLFuture struct {
+type AssumeRoleWithSAMLFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *STSAssumeRoleWithSAMLFuture) Get(ctx workflow.Context) (*sts.AssumeRoleWithSAMLOutput, error) {
+func (r *AssumeRoleWithSAMLFuture) Get(ctx workflow.Context) (*sts.AssumeRoleWithSAMLOutput, error) {
 	var output sts.AssumeRoleWithSAMLOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type STSAssumeRoleWithWebIdentityFuture struct {
+type AssumeRoleWithWebIdentityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *STSAssumeRoleWithWebIdentityFuture) Get(ctx workflow.Context) (*sts.AssumeRoleWithWebIdentityOutput, error) {
+func (r *AssumeRoleWithWebIdentityFuture) Get(ctx workflow.Context) (*sts.AssumeRoleWithWebIdentityOutput, error) {
 	var output sts.AssumeRoleWithWebIdentityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type STSDecodeAuthorizationMessageFuture struct {
+type DecodeAuthorizationMessageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *STSDecodeAuthorizationMessageFuture) Get(ctx workflow.Context) (*sts.DecodeAuthorizationMessageOutput, error) {
+func (r *DecodeAuthorizationMessageFuture) Get(ctx workflow.Context) (*sts.DecodeAuthorizationMessageOutput, error) {
 	var output sts.DecodeAuthorizationMessageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type STSGetAccessKeyInfoFuture struct {
+type GetAccessKeyInfoFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *STSGetAccessKeyInfoFuture) Get(ctx workflow.Context) (*sts.GetAccessKeyInfoOutput, error) {
+func (r *GetAccessKeyInfoFuture) Get(ctx workflow.Context) (*sts.GetAccessKeyInfoOutput, error) {
 	var output sts.GetAccessKeyInfoOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type STSGetCallerIdentityFuture struct {
+type GetCallerIdentityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *STSGetCallerIdentityFuture) Get(ctx workflow.Context) (*sts.GetCallerIdentityOutput, error) {
+func (r *GetCallerIdentityFuture) Get(ctx workflow.Context) (*sts.GetCallerIdentityOutput, error) {
 	var output sts.GetCallerIdentityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type STSGetFederationTokenFuture struct {
+type GetFederationTokenFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *STSGetFederationTokenFuture) Get(ctx workflow.Context) (*sts.GetFederationTokenOutput, error) {
+func (r *GetFederationTokenFuture) Get(ctx workflow.Context) (*sts.GetFederationTokenOutput, error) {
 	var output sts.GetFederationTokenOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type STSGetSessionTokenFuture struct {
+type GetSessionTokenFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *STSGetSessionTokenFuture) Get(ctx workflow.Context) (*sts.GetSessionTokenOutput, error) {
+func (r *GetSessionTokenFuture) Get(ctx workflow.Context) (*sts.GetSessionTokenOutput, error) {
 	var output sts.GetSessionTokenOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -110,9 +110,9 @@ func (a *stub) AssumeRole(ctx workflow.Context, input *sts.AssumeRoleInput) (*st
 	return &output, err
 }
 
-func (a *stub) AssumeRoleAsync(ctx workflow.Context, input *sts.AssumeRoleInput) *STSAssumeRoleFuture {
+func (a *stub) AssumeRoleAsync(ctx workflow.Context, input *sts.AssumeRoleInput) *AssumeRoleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sts.AssumeRole", input)
-	return &STSAssumeRoleFuture{Future: future}
+	return &AssumeRoleFuture{Future: future}
 }
 
 func (a *stub) AssumeRoleWithSAML(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) (*sts.AssumeRoleWithSAMLOutput, error) {
@@ -121,9 +121,9 @@ func (a *stub) AssumeRoleWithSAML(ctx workflow.Context, input *sts.AssumeRoleWit
 	return &output, err
 }
 
-func (a *stub) AssumeRoleWithSAMLAsync(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) *STSAssumeRoleWithSAMLFuture {
+func (a *stub) AssumeRoleWithSAMLAsync(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) *AssumeRoleWithSAMLFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sts.AssumeRoleWithSAML", input)
-	return &STSAssumeRoleWithSAMLFuture{Future: future}
+	return &AssumeRoleWithSAMLFuture{Future: future}
 }
 
 func (a *stub) AssumeRoleWithWebIdentity(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) (*sts.AssumeRoleWithWebIdentityOutput, error) {
@@ -132,9 +132,9 @@ func (a *stub) AssumeRoleWithWebIdentity(ctx workflow.Context, input *sts.Assume
 	return &output, err
 }
 
-func (a *stub) AssumeRoleWithWebIdentityAsync(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) *STSAssumeRoleWithWebIdentityFuture {
+func (a *stub) AssumeRoleWithWebIdentityAsync(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) *AssumeRoleWithWebIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sts.AssumeRoleWithWebIdentity", input)
-	return &STSAssumeRoleWithWebIdentityFuture{Future: future}
+	return &AssumeRoleWithWebIdentityFuture{Future: future}
 }
 
 func (a *stub) DecodeAuthorizationMessage(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) (*sts.DecodeAuthorizationMessageOutput, error) {
@@ -143,9 +143,9 @@ func (a *stub) DecodeAuthorizationMessage(ctx workflow.Context, input *sts.Decod
 	return &output, err
 }
 
-func (a *stub) DecodeAuthorizationMessageAsync(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) *STSDecodeAuthorizationMessageFuture {
+func (a *stub) DecodeAuthorizationMessageAsync(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) *DecodeAuthorizationMessageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sts.DecodeAuthorizationMessage", input)
-	return &STSDecodeAuthorizationMessageFuture{Future: future}
+	return &DecodeAuthorizationMessageFuture{Future: future}
 }
 
 func (a *stub) GetAccessKeyInfo(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) (*sts.GetAccessKeyInfoOutput, error) {
@@ -154,9 +154,9 @@ func (a *stub) GetAccessKeyInfo(ctx workflow.Context, input *sts.GetAccessKeyInf
 	return &output, err
 }
 
-func (a *stub) GetAccessKeyInfoAsync(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) *STSGetAccessKeyInfoFuture {
+func (a *stub) GetAccessKeyInfoAsync(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) *GetAccessKeyInfoFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sts.GetAccessKeyInfo", input)
-	return &STSGetAccessKeyInfoFuture{Future: future}
+	return &GetAccessKeyInfoFuture{Future: future}
 }
 
 func (a *stub) GetCallerIdentity(ctx workflow.Context, input *sts.GetCallerIdentityInput) (*sts.GetCallerIdentityOutput, error) {
@@ -165,9 +165,9 @@ func (a *stub) GetCallerIdentity(ctx workflow.Context, input *sts.GetCallerIdent
 	return &output, err
 }
 
-func (a *stub) GetCallerIdentityAsync(ctx workflow.Context, input *sts.GetCallerIdentityInput) *STSGetCallerIdentityFuture {
+func (a *stub) GetCallerIdentityAsync(ctx workflow.Context, input *sts.GetCallerIdentityInput) *GetCallerIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sts.GetCallerIdentity", input)
-	return &STSGetCallerIdentityFuture{Future: future}
+	return &GetCallerIdentityFuture{Future: future}
 }
 
 func (a *stub) GetFederationToken(ctx workflow.Context, input *sts.GetFederationTokenInput) (*sts.GetFederationTokenOutput, error) {
@@ -176,9 +176,9 @@ func (a *stub) GetFederationToken(ctx workflow.Context, input *sts.GetFederation
 	return &output, err
 }
 
-func (a *stub) GetFederationTokenAsync(ctx workflow.Context, input *sts.GetFederationTokenInput) *STSGetFederationTokenFuture {
+func (a *stub) GetFederationTokenAsync(ctx workflow.Context, input *sts.GetFederationTokenInput) *GetFederationTokenFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sts.GetFederationToken", input)
-	return &STSGetFederationTokenFuture{Future: future}
+	return &GetFederationTokenFuture{Future: future}
 }
 
 func (a *stub) GetSessionToken(ctx workflow.Context, input *sts.GetSessionTokenInput) (*sts.GetSessionTokenOutput, error) {
@@ -187,7 +187,7 @@ func (a *stub) GetSessionToken(ctx workflow.Context, input *sts.GetSessionTokenI
 	return &output, err
 }
 
-func (a *stub) GetSessionTokenAsync(ctx workflow.Context, input *sts.GetSessionTokenInput) *STSGetSessionTokenFuture {
+func (a *stub) GetSessionTokenAsync(ctx workflow.Context, input *sts.GetSessionTokenInput) *GetSessionTokenFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sts.GetSessionToken", input)
-	return &STSGetSessionTokenFuture{Future: future}
+	return &GetSessionTokenFuture{Future: future}
 }

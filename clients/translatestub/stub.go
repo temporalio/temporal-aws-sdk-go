@@ -16,100 +16,100 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type TranslateDeleteTerminologyFuture struct {
+type DeleteTerminologyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TranslateDeleteTerminologyFuture) Get(ctx workflow.Context) (*translate.DeleteTerminologyOutput, error) {
+func (r *DeleteTerminologyFuture) Get(ctx workflow.Context) (*translate.DeleteTerminologyOutput, error) {
 	var output translate.DeleteTerminologyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TranslateDescribeTextTranslationJobFuture struct {
+type DescribeTextTranslationJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TranslateDescribeTextTranslationJobFuture) Get(ctx workflow.Context) (*translate.DescribeTextTranslationJobOutput, error) {
+func (r *DescribeTextTranslationJobFuture) Get(ctx workflow.Context) (*translate.DescribeTextTranslationJobOutput, error) {
 	var output translate.DescribeTextTranslationJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TranslateGetTerminologyFuture struct {
+type GetTerminologyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TranslateGetTerminologyFuture) Get(ctx workflow.Context) (*translate.GetTerminologyOutput, error) {
+func (r *GetTerminologyFuture) Get(ctx workflow.Context) (*translate.GetTerminologyOutput, error) {
 	var output translate.GetTerminologyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TranslateImportTerminologyFuture struct {
+type ImportTerminologyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TranslateImportTerminologyFuture) Get(ctx workflow.Context) (*translate.ImportTerminologyOutput, error) {
+func (r *ImportTerminologyFuture) Get(ctx workflow.Context) (*translate.ImportTerminologyOutput, error) {
 	var output translate.ImportTerminologyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TranslateListTerminologiesFuture struct {
+type ListTerminologiesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TranslateListTerminologiesFuture) Get(ctx workflow.Context) (*translate.ListTerminologiesOutput, error) {
+func (r *ListTerminologiesFuture) Get(ctx workflow.Context) (*translate.ListTerminologiesOutput, error) {
 	var output translate.ListTerminologiesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TranslateListTextTranslationJobsFuture struct {
+type ListTextTranslationJobsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TranslateListTextTranslationJobsFuture) Get(ctx workflow.Context) (*translate.ListTextTranslationJobsOutput, error) {
+func (r *ListTextTranslationJobsFuture) Get(ctx workflow.Context) (*translate.ListTextTranslationJobsOutput, error) {
 	var output translate.ListTextTranslationJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TranslateStartTextTranslationJobFuture struct {
+type StartTextTranslationJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TranslateStartTextTranslationJobFuture) Get(ctx workflow.Context) (*translate.StartTextTranslationJobOutput, error) {
+func (r *StartTextTranslationJobFuture) Get(ctx workflow.Context) (*translate.StartTextTranslationJobOutput, error) {
 	var output translate.StartTextTranslationJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TranslateStopTextTranslationJobFuture struct {
+type StopTextTranslationJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TranslateStopTextTranslationJobFuture) Get(ctx workflow.Context) (*translate.StopTextTranslationJobOutput, error) {
+func (r *StopTextTranslationJobFuture) Get(ctx workflow.Context) (*translate.StopTextTranslationJobOutput, error) {
 	var output translate.StopTextTranslationJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type TranslateTextFuture struct {
+type TextFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *TranslateTextFuture) Get(ctx workflow.Context) (*translate.TextOutput, error) {
+func (r *TextFuture) Get(ctx workflow.Context) (*translate.TextOutput, error) {
 	var output translate.TextOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -121,9 +121,9 @@ func (a *stub) DeleteTerminology(ctx workflow.Context, input *translate.DeleteTe
 	return &output, err
 }
 
-func (a *stub) DeleteTerminologyAsync(ctx workflow.Context, input *translate.DeleteTerminologyInput) *TranslateDeleteTerminologyFuture {
+func (a *stub) DeleteTerminologyAsync(ctx workflow.Context, input *translate.DeleteTerminologyInput) *DeleteTerminologyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.translate.DeleteTerminology", input)
-	return &TranslateDeleteTerminologyFuture{Future: future}
+	return &DeleteTerminologyFuture{Future: future}
 }
 
 func (a *stub) DescribeTextTranslationJob(ctx workflow.Context, input *translate.DescribeTextTranslationJobInput) (*translate.DescribeTextTranslationJobOutput, error) {
@@ -132,9 +132,9 @@ func (a *stub) DescribeTextTranslationJob(ctx workflow.Context, input *translate
 	return &output, err
 }
 
-func (a *stub) DescribeTextTranslationJobAsync(ctx workflow.Context, input *translate.DescribeTextTranslationJobInput) *TranslateDescribeTextTranslationJobFuture {
+func (a *stub) DescribeTextTranslationJobAsync(ctx workflow.Context, input *translate.DescribeTextTranslationJobInput) *DescribeTextTranslationJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.translate.DescribeTextTranslationJob", input)
-	return &TranslateDescribeTextTranslationJobFuture{Future: future}
+	return &DescribeTextTranslationJobFuture{Future: future}
 }
 
 func (a *stub) GetTerminology(ctx workflow.Context, input *translate.GetTerminologyInput) (*translate.GetTerminologyOutput, error) {
@@ -143,9 +143,9 @@ func (a *stub) GetTerminology(ctx workflow.Context, input *translate.GetTerminol
 	return &output, err
 }
 
-func (a *stub) GetTerminologyAsync(ctx workflow.Context, input *translate.GetTerminologyInput) *TranslateGetTerminologyFuture {
+func (a *stub) GetTerminologyAsync(ctx workflow.Context, input *translate.GetTerminologyInput) *GetTerminologyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.translate.GetTerminology", input)
-	return &TranslateGetTerminologyFuture{Future: future}
+	return &GetTerminologyFuture{Future: future}
 }
 
 func (a *stub) ImportTerminology(ctx workflow.Context, input *translate.ImportTerminologyInput) (*translate.ImportTerminologyOutput, error) {
@@ -154,9 +154,9 @@ func (a *stub) ImportTerminology(ctx workflow.Context, input *translate.ImportTe
 	return &output, err
 }
 
-func (a *stub) ImportTerminologyAsync(ctx workflow.Context, input *translate.ImportTerminologyInput) *TranslateImportTerminologyFuture {
+func (a *stub) ImportTerminologyAsync(ctx workflow.Context, input *translate.ImportTerminologyInput) *ImportTerminologyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.translate.ImportTerminology", input)
-	return &TranslateImportTerminologyFuture{Future: future}
+	return &ImportTerminologyFuture{Future: future}
 }
 
 func (a *stub) ListTerminologies(ctx workflow.Context, input *translate.ListTerminologiesInput) (*translate.ListTerminologiesOutput, error) {
@@ -165,9 +165,9 @@ func (a *stub) ListTerminologies(ctx workflow.Context, input *translate.ListTerm
 	return &output, err
 }
 
-func (a *stub) ListTerminologiesAsync(ctx workflow.Context, input *translate.ListTerminologiesInput) *TranslateListTerminologiesFuture {
+func (a *stub) ListTerminologiesAsync(ctx workflow.Context, input *translate.ListTerminologiesInput) *ListTerminologiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.translate.ListTerminologies", input)
-	return &TranslateListTerminologiesFuture{Future: future}
+	return &ListTerminologiesFuture{Future: future}
 }
 
 func (a *stub) ListTextTranslationJobs(ctx workflow.Context, input *translate.ListTextTranslationJobsInput) (*translate.ListTextTranslationJobsOutput, error) {
@@ -176,9 +176,9 @@ func (a *stub) ListTextTranslationJobs(ctx workflow.Context, input *translate.Li
 	return &output, err
 }
 
-func (a *stub) ListTextTranslationJobsAsync(ctx workflow.Context, input *translate.ListTextTranslationJobsInput) *TranslateListTextTranslationJobsFuture {
+func (a *stub) ListTextTranslationJobsAsync(ctx workflow.Context, input *translate.ListTextTranslationJobsInput) *ListTextTranslationJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.translate.ListTextTranslationJobs", input)
-	return &TranslateListTextTranslationJobsFuture{Future: future}
+	return &ListTextTranslationJobsFuture{Future: future}
 }
 
 func (a *stub) StartTextTranslationJob(ctx workflow.Context, input *translate.StartTextTranslationJobInput) (*translate.StartTextTranslationJobOutput, error) {
@@ -187,9 +187,9 @@ func (a *stub) StartTextTranslationJob(ctx workflow.Context, input *translate.St
 	return &output, err
 }
 
-func (a *stub) StartTextTranslationJobAsync(ctx workflow.Context, input *translate.StartTextTranslationJobInput) *TranslateStartTextTranslationJobFuture {
+func (a *stub) StartTextTranslationJobAsync(ctx workflow.Context, input *translate.StartTextTranslationJobInput) *StartTextTranslationJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.translate.StartTextTranslationJob", input)
-	return &TranslateStartTextTranslationJobFuture{Future: future}
+	return &StartTextTranslationJobFuture{Future: future}
 }
 
 func (a *stub) StopTextTranslationJob(ctx workflow.Context, input *translate.StopTextTranslationJobInput) (*translate.StopTextTranslationJobOutput, error) {
@@ -198,9 +198,9 @@ func (a *stub) StopTextTranslationJob(ctx workflow.Context, input *translate.Sto
 	return &output, err
 }
 
-func (a *stub) StopTextTranslationJobAsync(ctx workflow.Context, input *translate.StopTextTranslationJobInput) *TranslateStopTextTranslationJobFuture {
+func (a *stub) StopTextTranslationJobAsync(ctx workflow.Context, input *translate.StopTextTranslationJobInput) *StopTextTranslationJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.translate.StopTextTranslationJob", input)
-	return &TranslateStopTextTranslationJobFuture{Future: future}
+	return &StopTextTranslationJobFuture{Future: future}
 }
 
 func (a *stub) Text(ctx workflow.Context, input *translate.TextInput) (*translate.TextOutput, error) {
@@ -209,7 +209,7 @@ func (a *stub) Text(ctx workflow.Context, input *translate.TextInput) (*translat
 	return &output, err
 }
 
-func (a *stub) TextAsync(ctx workflow.Context, input *translate.TextInput) *TranslateTextFuture {
+func (a *stub) TextAsync(ctx workflow.Context, input *translate.TextInput) *TextFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.translate.Text", input)
-	return &TranslateTextFuture{Future: future}
+	return &TextFuture{Future: future}
 }

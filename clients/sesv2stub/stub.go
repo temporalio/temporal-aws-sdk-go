@@ -16,771 +16,771 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type SESV2CreateConfigurationSetFuture struct {
+type CreateConfigurationSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2CreateConfigurationSetFuture) Get(ctx workflow.Context) (*sesv2.CreateConfigurationSetOutput, error) {
+func (r *CreateConfigurationSetFuture) Get(ctx workflow.Context) (*sesv2.CreateConfigurationSetOutput, error) {
 	var output sesv2.CreateConfigurationSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2CreateConfigurationSetEventDestinationFuture struct {
+type CreateConfigurationSetEventDestinationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2CreateConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*sesv2.CreateConfigurationSetEventDestinationOutput, error) {
+func (r *CreateConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*sesv2.CreateConfigurationSetEventDestinationOutput, error) {
 	var output sesv2.CreateConfigurationSetEventDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2CreateCustomVerificationEmailTemplateFuture struct {
+type CreateCustomVerificationEmailTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2CreateCustomVerificationEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.CreateCustomVerificationEmailTemplateOutput, error) {
+func (r *CreateCustomVerificationEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.CreateCustomVerificationEmailTemplateOutput, error) {
 	var output sesv2.CreateCustomVerificationEmailTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2CreateDedicatedIpPoolFuture struct {
+type CreateDedicatedIpPoolFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2CreateDedicatedIpPoolFuture) Get(ctx workflow.Context) (*sesv2.CreateDedicatedIpPoolOutput, error) {
+func (r *CreateDedicatedIpPoolFuture) Get(ctx workflow.Context) (*sesv2.CreateDedicatedIpPoolOutput, error) {
 	var output sesv2.CreateDedicatedIpPoolOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2CreateDeliverabilityTestReportFuture struct {
+type CreateDeliverabilityTestReportFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2CreateDeliverabilityTestReportFuture) Get(ctx workflow.Context) (*sesv2.CreateDeliverabilityTestReportOutput, error) {
+func (r *CreateDeliverabilityTestReportFuture) Get(ctx workflow.Context) (*sesv2.CreateDeliverabilityTestReportOutput, error) {
 	var output sesv2.CreateDeliverabilityTestReportOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2CreateEmailIdentityFuture struct {
+type CreateEmailIdentityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2CreateEmailIdentityFuture) Get(ctx workflow.Context) (*sesv2.CreateEmailIdentityOutput, error) {
+func (r *CreateEmailIdentityFuture) Get(ctx workflow.Context) (*sesv2.CreateEmailIdentityOutput, error) {
 	var output sesv2.CreateEmailIdentityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2CreateEmailIdentityPolicyFuture struct {
+type CreateEmailIdentityPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2CreateEmailIdentityPolicyFuture) Get(ctx workflow.Context) (*sesv2.CreateEmailIdentityPolicyOutput, error) {
+func (r *CreateEmailIdentityPolicyFuture) Get(ctx workflow.Context) (*sesv2.CreateEmailIdentityPolicyOutput, error) {
 	var output sesv2.CreateEmailIdentityPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2CreateEmailTemplateFuture struct {
+type CreateEmailTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2CreateEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.CreateEmailTemplateOutput, error) {
+func (r *CreateEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.CreateEmailTemplateOutput, error) {
 	var output sesv2.CreateEmailTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2CreateImportJobFuture struct {
+type CreateImportJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2CreateImportJobFuture) Get(ctx workflow.Context) (*sesv2.CreateImportJobOutput, error) {
+func (r *CreateImportJobFuture) Get(ctx workflow.Context) (*sesv2.CreateImportJobOutput, error) {
 	var output sesv2.CreateImportJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2DeleteConfigurationSetFuture struct {
+type DeleteConfigurationSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2DeleteConfigurationSetFuture) Get(ctx workflow.Context) (*sesv2.DeleteConfigurationSetOutput, error) {
+func (r *DeleteConfigurationSetFuture) Get(ctx workflow.Context) (*sesv2.DeleteConfigurationSetOutput, error) {
 	var output sesv2.DeleteConfigurationSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2DeleteConfigurationSetEventDestinationFuture struct {
+type DeleteConfigurationSetEventDestinationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2DeleteConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*sesv2.DeleteConfigurationSetEventDestinationOutput, error) {
+func (r *DeleteConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*sesv2.DeleteConfigurationSetEventDestinationOutput, error) {
 	var output sesv2.DeleteConfigurationSetEventDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2DeleteCustomVerificationEmailTemplateFuture struct {
+type DeleteCustomVerificationEmailTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2DeleteCustomVerificationEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.DeleteCustomVerificationEmailTemplateOutput, error) {
+func (r *DeleteCustomVerificationEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.DeleteCustomVerificationEmailTemplateOutput, error) {
 	var output sesv2.DeleteCustomVerificationEmailTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2DeleteDedicatedIpPoolFuture struct {
+type DeleteDedicatedIpPoolFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2DeleteDedicatedIpPoolFuture) Get(ctx workflow.Context) (*sesv2.DeleteDedicatedIpPoolOutput, error) {
+func (r *DeleteDedicatedIpPoolFuture) Get(ctx workflow.Context) (*sesv2.DeleteDedicatedIpPoolOutput, error) {
 	var output sesv2.DeleteDedicatedIpPoolOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2DeleteEmailIdentityFuture struct {
+type DeleteEmailIdentityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2DeleteEmailIdentityFuture) Get(ctx workflow.Context) (*sesv2.DeleteEmailIdentityOutput, error) {
+func (r *DeleteEmailIdentityFuture) Get(ctx workflow.Context) (*sesv2.DeleteEmailIdentityOutput, error) {
 	var output sesv2.DeleteEmailIdentityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2DeleteEmailIdentityPolicyFuture struct {
+type DeleteEmailIdentityPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2DeleteEmailIdentityPolicyFuture) Get(ctx workflow.Context) (*sesv2.DeleteEmailIdentityPolicyOutput, error) {
+func (r *DeleteEmailIdentityPolicyFuture) Get(ctx workflow.Context) (*sesv2.DeleteEmailIdentityPolicyOutput, error) {
 	var output sesv2.DeleteEmailIdentityPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2DeleteEmailTemplateFuture struct {
+type DeleteEmailTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2DeleteEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.DeleteEmailTemplateOutput, error) {
+func (r *DeleteEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.DeleteEmailTemplateOutput, error) {
 	var output sesv2.DeleteEmailTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2DeleteSuppressedDestinationFuture struct {
+type DeleteSuppressedDestinationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2DeleteSuppressedDestinationFuture) Get(ctx workflow.Context) (*sesv2.DeleteSuppressedDestinationOutput, error) {
+func (r *DeleteSuppressedDestinationFuture) Get(ctx workflow.Context) (*sesv2.DeleteSuppressedDestinationOutput, error) {
 	var output sesv2.DeleteSuppressedDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2GetAccountFuture struct {
+type GetAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2GetAccountFuture) Get(ctx workflow.Context) (*sesv2.GetAccountOutput, error) {
+func (r *GetAccountFuture) Get(ctx workflow.Context) (*sesv2.GetAccountOutput, error) {
 	var output sesv2.GetAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2GetBlacklistReportsFuture struct {
+type GetBlacklistReportsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2GetBlacklistReportsFuture) Get(ctx workflow.Context) (*sesv2.GetBlacklistReportsOutput, error) {
+func (r *GetBlacklistReportsFuture) Get(ctx workflow.Context) (*sesv2.GetBlacklistReportsOutput, error) {
 	var output sesv2.GetBlacklistReportsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2GetConfigurationSetFuture struct {
+type GetConfigurationSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2GetConfigurationSetFuture) Get(ctx workflow.Context) (*sesv2.GetConfigurationSetOutput, error) {
+func (r *GetConfigurationSetFuture) Get(ctx workflow.Context) (*sesv2.GetConfigurationSetOutput, error) {
 	var output sesv2.GetConfigurationSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2GetConfigurationSetEventDestinationsFuture struct {
+type GetConfigurationSetEventDestinationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2GetConfigurationSetEventDestinationsFuture) Get(ctx workflow.Context) (*sesv2.GetConfigurationSetEventDestinationsOutput, error) {
+func (r *GetConfigurationSetEventDestinationsFuture) Get(ctx workflow.Context) (*sesv2.GetConfigurationSetEventDestinationsOutput, error) {
 	var output sesv2.GetConfigurationSetEventDestinationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2GetCustomVerificationEmailTemplateFuture struct {
+type GetCustomVerificationEmailTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2GetCustomVerificationEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.GetCustomVerificationEmailTemplateOutput, error) {
+func (r *GetCustomVerificationEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.GetCustomVerificationEmailTemplateOutput, error) {
 	var output sesv2.GetCustomVerificationEmailTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2GetDedicatedIpFuture struct {
+type GetDedicatedIpFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2GetDedicatedIpFuture) Get(ctx workflow.Context) (*sesv2.GetDedicatedIpOutput, error) {
+func (r *GetDedicatedIpFuture) Get(ctx workflow.Context) (*sesv2.GetDedicatedIpOutput, error) {
 	var output sesv2.GetDedicatedIpOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2GetDedicatedIpsFuture struct {
+type GetDedicatedIpsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2GetDedicatedIpsFuture) Get(ctx workflow.Context) (*sesv2.GetDedicatedIpsOutput, error) {
+func (r *GetDedicatedIpsFuture) Get(ctx workflow.Context) (*sesv2.GetDedicatedIpsOutput, error) {
 	var output sesv2.GetDedicatedIpsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2GetDeliverabilityDashboardOptionsFuture struct {
+type GetDeliverabilityDashboardOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2GetDeliverabilityDashboardOptionsFuture) Get(ctx workflow.Context) (*sesv2.GetDeliverabilityDashboardOptionsOutput, error) {
+func (r *GetDeliverabilityDashboardOptionsFuture) Get(ctx workflow.Context) (*sesv2.GetDeliverabilityDashboardOptionsOutput, error) {
 	var output sesv2.GetDeliverabilityDashboardOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2GetDeliverabilityTestReportFuture struct {
+type GetDeliverabilityTestReportFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2GetDeliverabilityTestReportFuture) Get(ctx workflow.Context) (*sesv2.GetDeliverabilityTestReportOutput, error) {
+func (r *GetDeliverabilityTestReportFuture) Get(ctx workflow.Context) (*sesv2.GetDeliverabilityTestReportOutput, error) {
 	var output sesv2.GetDeliverabilityTestReportOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2GetDomainDeliverabilityCampaignFuture struct {
+type GetDomainDeliverabilityCampaignFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2GetDomainDeliverabilityCampaignFuture) Get(ctx workflow.Context) (*sesv2.GetDomainDeliverabilityCampaignOutput, error) {
+func (r *GetDomainDeliverabilityCampaignFuture) Get(ctx workflow.Context) (*sesv2.GetDomainDeliverabilityCampaignOutput, error) {
 	var output sesv2.GetDomainDeliverabilityCampaignOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2GetDomainStatisticsReportFuture struct {
+type GetDomainStatisticsReportFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2GetDomainStatisticsReportFuture) Get(ctx workflow.Context) (*sesv2.GetDomainStatisticsReportOutput, error) {
+func (r *GetDomainStatisticsReportFuture) Get(ctx workflow.Context) (*sesv2.GetDomainStatisticsReportOutput, error) {
 	var output sesv2.GetDomainStatisticsReportOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2GetEmailIdentityFuture struct {
+type GetEmailIdentityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2GetEmailIdentityFuture) Get(ctx workflow.Context) (*sesv2.GetEmailIdentityOutput, error) {
+func (r *GetEmailIdentityFuture) Get(ctx workflow.Context) (*sesv2.GetEmailIdentityOutput, error) {
 	var output sesv2.GetEmailIdentityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2GetEmailIdentityPoliciesFuture struct {
+type GetEmailIdentityPoliciesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2GetEmailIdentityPoliciesFuture) Get(ctx workflow.Context) (*sesv2.GetEmailIdentityPoliciesOutput, error) {
+func (r *GetEmailIdentityPoliciesFuture) Get(ctx workflow.Context) (*sesv2.GetEmailIdentityPoliciesOutput, error) {
 	var output sesv2.GetEmailIdentityPoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2GetEmailTemplateFuture struct {
+type GetEmailTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2GetEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.GetEmailTemplateOutput, error) {
+func (r *GetEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.GetEmailTemplateOutput, error) {
 	var output sesv2.GetEmailTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2GetImportJobFuture struct {
+type GetImportJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2GetImportJobFuture) Get(ctx workflow.Context) (*sesv2.GetImportJobOutput, error) {
+func (r *GetImportJobFuture) Get(ctx workflow.Context) (*sesv2.GetImportJobOutput, error) {
 	var output sesv2.GetImportJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2GetSuppressedDestinationFuture struct {
+type GetSuppressedDestinationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2GetSuppressedDestinationFuture) Get(ctx workflow.Context) (*sesv2.GetSuppressedDestinationOutput, error) {
+func (r *GetSuppressedDestinationFuture) Get(ctx workflow.Context) (*sesv2.GetSuppressedDestinationOutput, error) {
 	var output sesv2.GetSuppressedDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2ListConfigurationSetsFuture struct {
+type ListConfigurationSetsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2ListConfigurationSetsFuture) Get(ctx workflow.Context) (*sesv2.ListConfigurationSetsOutput, error) {
+func (r *ListConfigurationSetsFuture) Get(ctx workflow.Context) (*sesv2.ListConfigurationSetsOutput, error) {
 	var output sesv2.ListConfigurationSetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2ListCustomVerificationEmailTemplatesFuture struct {
+type ListCustomVerificationEmailTemplatesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2ListCustomVerificationEmailTemplatesFuture) Get(ctx workflow.Context) (*sesv2.ListCustomVerificationEmailTemplatesOutput, error) {
+func (r *ListCustomVerificationEmailTemplatesFuture) Get(ctx workflow.Context) (*sesv2.ListCustomVerificationEmailTemplatesOutput, error) {
 	var output sesv2.ListCustomVerificationEmailTemplatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2ListDedicatedIpPoolsFuture struct {
+type ListDedicatedIpPoolsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2ListDedicatedIpPoolsFuture) Get(ctx workflow.Context) (*sesv2.ListDedicatedIpPoolsOutput, error) {
+func (r *ListDedicatedIpPoolsFuture) Get(ctx workflow.Context) (*sesv2.ListDedicatedIpPoolsOutput, error) {
 	var output sesv2.ListDedicatedIpPoolsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2ListDeliverabilityTestReportsFuture struct {
+type ListDeliverabilityTestReportsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2ListDeliverabilityTestReportsFuture) Get(ctx workflow.Context) (*sesv2.ListDeliverabilityTestReportsOutput, error) {
+func (r *ListDeliverabilityTestReportsFuture) Get(ctx workflow.Context) (*sesv2.ListDeliverabilityTestReportsOutput, error) {
 	var output sesv2.ListDeliverabilityTestReportsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2ListDomainDeliverabilityCampaignsFuture struct {
+type ListDomainDeliverabilityCampaignsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2ListDomainDeliverabilityCampaignsFuture) Get(ctx workflow.Context) (*sesv2.ListDomainDeliverabilityCampaignsOutput, error) {
+func (r *ListDomainDeliverabilityCampaignsFuture) Get(ctx workflow.Context) (*sesv2.ListDomainDeliverabilityCampaignsOutput, error) {
 	var output sesv2.ListDomainDeliverabilityCampaignsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2ListEmailIdentitiesFuture struct {
+type ListEmailIdentitiesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2ListEmailIdentitiesFuture) Get(ctx workflow.Context) (*sesv2.ListEmailIdentitiesOutput, error) {
+func (r *ListEmailIdentitiesFuture) Get(ctx workflow.Context) (*sesv2.ListEmailIdentitiesOutput, error) {
 	var output sesv2.ListEmailIdentitiesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2ListEmailTemplatesFuture struct {
+type ListEmailTemplatesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2ListEmailTemplatesFuture) Get(ctx workflow.Context) (*sesv2.ListEmailTemplatesOutput, error) {
+func (r *ListEmailTemplatesFuture) Get(ctx workflow.Context) (*sesv2.ListEmailTemplatesOutput, error) {
 	var output sesv2.ListEmailTemplatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2ListImportJobsFuture struct {
+type ListImportJobsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2ListImportJobsFuture) Get(ctx workflow.Context) (*sesv2.ListImportJobsOutput, error) {
+func (r *ListImportJobsFuture) Get(ctx workflow.Context) (*sesv2.ListImportJobsOutput, error) {
 	var output sesv2.ListImportJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2ListSuppressedDestinationsFuture struct {
+type ListSuppressedDestinationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2ListSuppressedDestinationsFuture) Get(ctx workflow.Context) (*sesv2.ListSuppressedDestinationsOutput, error) {
+func (r *ListSuppressedDestinationsFuture) Get(ctx workflow.Context) (*sesv2.ListSuppressedDestinationsOutput, error) {
 	var output sesv2.ListSuppressedDestinationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2ListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2ListTagsForResourceFuture) Get(ctx workflow.Context) (*sesv2.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*sesv2.ListTagsForResourceOutput, error) {
 	var output sesv2.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2PutAccountDedicatedIpWarmupAttributesFuture struct {
+type PutAccountDedicatedIpWarmupAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2PutAccountDedicatedIpWarmupAttributesFuture) Get(ctx workflow.Context) (*sesv2.PutAccountDedicatedIpWarmupAttributesOutput, error) {
+func (r *PutAccountDedicatedIpWarmupAttributesFuture) Get(ctx workflow.Context) (*sesv2.PutAccountDedicatedIpWarmupAttributesOutput, error) {
 	var output sesv2.PutAccountDedicatedIpWarmupAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2PutAccountDetailsFuture struct {
+type PutAccountDetailsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2PutAccountDetailsFuture) Get(ctx workflow.Context) (*sesv2.PutAccountDetailsOutput, error) {
+func (r *PutAccountDetailsFuture) Get(ctx workflow.Context) (*sesv2.PutAccountDetailsOutput, error) {
 	var output sesv2.PutAccountDetailsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2PutAccountSendingAttributesFuture struct {
+type PutAccountSendingAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2PutAccountSendingAttributesFuture) Get(ctx workflow.Context) (*sesv2.PutAccountSendingAttributesOutput, error) {
+func (r *PutAccountSendingAttributesFuture) Get(ctx workflow.Context) (*sesv2.PutAccountSendingAttributesOutput, error) {
 	var output sesv2.PutAccountSendingAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2PutAccountSuppressionAttributesFuture struct {
+type PutAccountSuppressionAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2PutAccountSuppressionAttributesFuture) Get(ctx workflow.Context) (*sesv2.PutAccountSuppressionAttributesOutput, error) {
+func (r *PutAccountSuppressionAttributesFuture) Get(ctx workflow.Context) (*sesv2.PutAccountSuppressionAttributesOutput, error) {
 	var output sesv2.PutAccountSuppressionAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2PutConfigurationSetDeliveryOptionsFuture struct {
+type PutConfigurationSetDeliveryOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2PutConfigurationSetDeliveryOptionsFuture) Get(ctx workflow.Context) (*sesv2.PutConfigurationSetDeliveryOptionsOutput, error) {
+func (r *PutConfigurationSetDeliveryOptionsFuture) Get(ctx workflow.Context) (*sesv2.PutConfigurationSetDeliveryOptionsOutput, error) {
 	var output sesv2.PutConfigurationSetDeliveryOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2PutConfigurationSetReputationOptionsFuture struct {
+type PutConfigurationSetReputationOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2PutConfigurationSetReputationOptionsFuture) Get(ctx workflow.Context) (*sesv2.PutConfigurationSetReputationOptionsOutput, error) {
+func (r *PutConfigurationSetReputationOptionsFuture) Get(ctx workflow.Context) (*sesv2.PutConfigurationSetReputationOptionsOutput, error) {
 	var output sesv2.PutConfigurationSetReputationOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2PutConfigurationSetSendingOptionsFuture struct {
+type PutConfigurationSetSendingOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2PutConfigurationSetSendingOptionsFuture) Get(ctx workflow.Context) (*sesv2.PutConfigurationSetSendingOptionsOutput, error) {
+func (r *PutConfigurationSetSendingOptionsFuture) Get(ctx workflow.Context) (*sesv2.PutConfigurationSetSendingOptionsOutput, error) {
 	var output sesv2.PutConfigurationSetSendingOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2PutConfigurationSetSuppressionOptionsFuture struct {
+type PutConfigurationSetSuppressionOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2PutConfigurationSetSuppressionOptionsFuture) Get(ctx workflow.Context) (*sesv2.PutConfigurationSetSuppressionOptionsOutput, error) {
+func (r *PutConfigurationSetSuppressionOptionsFuture) Get(ctx workflow.Context) (*sesv2.PutConfigurationSetSuppressionOptionsOutput, error) {
 	var output sesv2.PutConfigurationSetSuppressionOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2PutConfigurationSetTrackingOptionsFuture struct {
+type PutConfigurationSetTrackingOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2PutConfigurationSetTrackingOptionsFuture) Get(ctx workflow.Context) (*sesv2.PutConfigurationSetTrackingOptionsOutput, error) {
+func (r *PutConfigurationSetTrackingOptionsFuture) Get(ctx workflow.Context) (*sesv2.PutConfigurationSetTrackingOptionsOutput, error) {
 	var output sesv2.PutConfigurationSetTrackingOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2PutDedicatedIpInPoolFuture struct {
+type PutDedicatedIpInPoolFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2PutDedicatedIpInPoolFuture) Get(ctx workflow.Context) (*sesv2.PutDedicatedIpInPoolOutput, error) {
+func (r *PutDedicatedIpInPoolFuture) Get(ctx workflow.Context) (*sesv2.PutDedicatedIpInPoolOutput, error) {
 	var output sesv2.PutDedicatedIpInPoolOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2PutDedicatedIpWarmupAttributesFuture struct {
+type PutDedicatedIpWarmupAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2PutDedicatedIpWarmupAttributesFuture) Get(ctx workflow.Context) (*sesv2.PutDedicatedIpWarmupAttributesOutput, error) {
+func (r *PutDedicatedIpWarmupAttributesFuture) Get(ctx workflow.Context) (*sesv2.PutDedicatedIpWarmupAttributesOutput, error) {
 	var output sesv2.PutDedicatedIpWarmupAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2PutDeliverabilityDashboardOptionFuture struct {
+type PutDeliverabilityDashboardOptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2PutDeliverabilityDashboardOptionFuture) Get(ctx workflow.Context) (*sesv2.PutDeliverabilityDashboardOptionOutput, error) {
+func (r *PutDeliverabilityDashboardOptionFuture) Get(ctx workflow.Context) (*sesv2.PutDeliverabilityDashboardOptionOutput, error) {
 	var output sesv2.PutDeliverabilityDashboardOptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2PutEmailIdentityDkimAttributesFuture struct {
+type PutEmailIdentityDkimAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2PutEmailIdentityDkimAttributesFuture) Get(ctx workflow.Context) (*sesv2.PutEmailIdentityDkimAttributesOutput, error) {
+func (r *PutEmailIdentityDkimAttributesFuture) Get(ctx workflow.Context) (*sesv2.PutEmailIdentityDkimAttributesOutput, error) {
 	var output sesv2.PutEmailIdentityDkimAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2PutEmailIdentityDkimSigningAttributesFuture struct {
+type PutEmailIdentityDkimSigningAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2PutEmailIdentityDkimSigningAttributesFuture) Get(ctx workflow.Context) (*sesv2.PutEmailIdentityDkimSigningAttributesOutput, error) {
+func (r *PutEmailIdentityDkimSigningAttributesFuture) Get(ctx workflow.Context) (*sesv2.PutEmailIdentityDkimSigningAttributesOutput, error) {
 	var output sesv2.PutEmailIdentityDkimSigningAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2PutEmailIdentityFeedbackAttributesFuture struct {
+type PutEmailIdentityFeedbackAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2PutEmailIdentityFeedbackAttributesFuture) Get(ctx workflow.Context) (*sesv2.PutEmailIdentityFeedbackAttributesOutput, error) {
+func (r *PutEmailIdentityFeedbackAttributesFuture) Get(ctx workflow.Context) (*sesv2.PutEmailIdentityFeedbackAttributesOutput, error) {
 	var output sesv2.PutEmailIdentityFeedbackAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2PutEmailIdentityMailFromAttributesFuture struct {
+type PutEmailIdentityMailFromAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2PutEmailIdentityMailFromAttributesFuture) Get(ctx workflow.Context) (*sesv2.PutEmailIdentityMailFromAttributesOutput, error) {
+func (r *PutEmailIdentityMailFromAttributesFuture) Get(ctx workflow.Context) (*sesv2.PutEmailIdentityMailFromAttributesOutput, error) {
 	var output sesv2.PutEmailIdentityMailFromAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2PutSuppressedDestinationFuture struct {
+type PutSuppressedDestinationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2PutSuppressedDestinationFuture) Get(ctx workflow.Context) (*sesv2.PutSuppressedDestinationOutput, error) {
+func (r *PutSuppressedDestinationFuture) Get(ctx workflow.Context) (*sesv2.PutSuppressedDestinationOutput, error) {
 	var output sesv2.PutSuppressedDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2SendBulkEmailFuture struct {
+type SendBulkEmailFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2SendBulkEmailFuture) Get(ctx workflow.Context) (*sesv2.SendBulkEmailOutput, error) {
+func (r *SendBulkEmailFuture) Get(ctx workflow.Context) (*sesv2.SendBulkEmailOutput, error) {
 	var output sesv2.SendBulkEmailOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2SendCustomVerificationEmailFuture struct {
+type SendCustomVerificationEmailFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2SendCustomVerificationEmailFuture) Get(ctx workflow.Context) (*sesv2.SendCustomVerificationEmailOutput, error) {
+func (r *SendCustomVerificationEmailFuture) Get(ctx workflow.Context) (*sesv2.SendCustomVerificationEmailOutput, error) {
 	var output sesv2.SendCustomVerificationEmailOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2SendEmailFuture struct {
+type SendEmailFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2SendEmailFuture) Get(ctx workflow.Context) (*sesv2.SendEmailOutput, error) {
+func (r *SendEmailFuture) Get(ctx workflow.Context) (*sesv2.SendEmailOutput, error) {
 	var output sesv2.SendEmailOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2TagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2TagResourceFuture) Get(ctx workflow.Context) (*sesv2.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*sesv2.TagResourceOutput, error) {
 	var output sesv2.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2TestRenderEmailTemplateFuture struct {
+type TestRenderEmailTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2TestRenderEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.TestRenderEmailTemplateOutput, error) {
+func (r *TestRenderEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.TestRenderEmailTemplateOutput, error) {
 	var output sesv2.TestRenderEmailTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2UntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2UntagResourceFuture) Get(ctx workflow.Context) (*sesv2.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*sesv2.UntagResourceOutput, error) {
 	var output sesv2.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2UpdateConfigurationSetEventDestinationFuture struct {
+type UpdateConfigurationSetEventDestinationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2UpdateConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*sesv2.UpdateConfigurationSetEventDestinationOutput, error) {
+func (r *UpdateConfigurationSetEventDestinationFuture) Get(ctx workflow.Context) (*sesv2.UpdateConfigurationSetEventDestinationOutput, error) {
 	var output sesv2.UpdateConfigurationSetEventDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2UpdateCustomVerificationEmailTemplateFuture struct {
+type UpdateCustomVerificationEmailTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2UpdateCustomVerificationEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.UpdateCustomVerificationEmailTemplateOutput, error) {
+func (r *UpdateCustomVerificationEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.UpdateCustomVerificationEmailTemplateOutput, error) {
 	var output sesv2.UpdateCustomVerificationEmailTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2UpdateEmailIdentityPolicyFuture struct {
+type UpdateEmailIdentityPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2UpdateEmailIdentityPolicyFuture) Get(ctx workflow.Context) (*sesv2.UpdateEmailIdentityPolicyOutput, error) {
+func (r *UpdateEmailIdentityPolicyFuture) Get(ctx workflow.Context) (*sesv2.UpdateEmailIdentityPolicyOutput, error) {
 	var output sesv2.UpdateEmailIdentityPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type SESV2UpdateEmailTemplateFuture struct {
+type UpdateEmailTemplateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *SESV2UpdateEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.UpdateEmailTemplateOutput, error) {
+func (r *UpdateEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.UpdateEmailTemplateOutput, error) {
 	var output sesv2.UpdateEmailTemplateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -792,9 +792,9 @@ func (a *stub) CreateConfigurationSet(ctx workflow.Context, input *sesv2.CreateC
 	return &output, err
 }
 
-func (a *stub) CreateConfigurationSetAsync(ctx workflow.Context, input *sesv2.CreateConfigurationSetInput) *SESV2CreateConfigurationSetFuture {
+func (a *stub) CreateConfigurationSetAsync(ctx workflow.Context, input *sesv2.CreateConfigurationSetInput) *CreateConfigurationSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.CreateConfigurationSet", input)
-	return &SESV2CreateConfigurationSetFuture{Future: future}
+	return &CreateConfigurationSetFuture{Future: future}
 }
 
 func (a *stub) CreateConfigurationSetEventDestination(ctx workflow.Context, input *sesv2.CreateConfigurationSetEventDestinationInput) (*sesv2.CreateConfigurationSetEventDestinationOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) CreateConfigurationSetEventDestination(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *stub) CreateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *sesv2.CreateConfigurationSetEventDestinationInput) *SESV2CreateConfigurationSetEventDestinationFuture {
+func (a *stub) CreateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *sesv2.CreateConfigurationSetEventDestinationInput) *CreateConfigurationSetEventDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.CreateConfigurationSetEventDestination", input)
-	return &SESV2CreateConfigurationSetEventDestinationFuture{Future: future}
+	return &CreateConfigurationSetEventDestinationFuture{Future: future}
 }
 
 func (a *stub) CreateCustomVerificationEmailTemplate(ctx workflow.Context, input *sesv2.CreateCustomVerificationEmailTemplateInput) (*sesv2.CreateCustomVerificationEmailTemplateOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) CreateCustomVerificationEmailTemplate(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *stub) CreateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *sesv2.CreateCustomVerificationEmailTemplateInput) *SESV2CreateCustomVerificationEmailTemplateFuture {
+func (a *stub) CreateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *sesv2.CreateCustomVerificationEmailTemplateInput) *CreateCustomVerificationEmailTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.CreateCustomVerificationEmailTemplate", input)
-	return &SESV2CreateCustomVerificationEmailTemplateFuture{Future: future}
+	return &CreateCustomVerificationEmailTemplateFuture{Future: future}
 }
 
 func (a *stub) CreateDedicatedIpPool(ctx workflow.Context, input *sesv2.CreateDedicatedIpPoolInput) (*sesv2.CreateDedicatedIpPoolOutput, error) {
@@ -825,9 +825,9 @@ func (a *stub) CreateDedicatedIpPool(ctx workflow.Context, input *sesv2.CreateDe
 	return &output, err
 }
 
-func (a *stub) CreateDedicatedIpPoolAsync(ctx workflow.Context, input *sesv2.CreateDedicatedIpPoolInput) *SESV2CreateDedicatedIpPoolFuture {
+func (a *stub) CreateDedicatedIpPoolAsync(ctx workflow.Context, input *sesv2.CreateDedicatedIpPoolInput) *CreateDedicatedIpPoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.CreateDedicatedIpPool", input)
-	return &SESV2CreateDedicatedIpPoolFuture{Future: future}
+	return &CreateDedicatedIpPoolFuture{Future: future}
 }
 
 func (a *stub) CreateDeliverabilityTestReport(ctx workflow.Context, input *sesv2.CreateDeliverabilityTestReportInput) (*sesv2.CreateDeliverabilityTestReportOutput, error) {
@@ -836,9 +836,9 @@ func (a *stub) CreateDeliverabilityTestReport(ctx workflow.Context, input *sesv2
 	return &output, err
 }
 
-func (a *stub) CreateDeliverabilityTestReportAsync(ctx workflow.Context, input *sesv2.CreateDeliverabilityTestReportInput) *SESV2CreateDeliverabilityTestReportFuture {
+func (a *stub) CreateDeliverabilityTestReportAsync(ctx workflow.Context, input *sesv2.CreateDeliverabilityTestReportInput) *CreateDeliverabilityTestReportFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.CreateDeliverabilityTestReport", input)
-	return &SESV2CreateDeliverabilityTestReportFuture{Future: future}
+	return &CreateDeliverabilityTestReportFuture{Future: future}
 }
 
 func (a *stub) CreateEmailIdentity(ctx workflow.Context, input *sesv2.CreateEmailIdentityInput) (*sesv2.CreateEmailIdentityOutput, error) {
@@ -847,9 +847,9 @@ func (a *stub) CreateEmailIdentity(ctx workflow.Context, input *sesv2.CreateEmai
 	return &output, err
 }
 
-func (a *stub) CreateEmailIdentityAsync(ctx workflow.Context, input *sesv2.CreateEmailIdentityInput) *SESV2CreateEmailIdentityFuture {
+func (a *stub) CreateEmailIdentityAsync(ctx workflow.Context, input *sesv2.CreateEmailIdentityInput) *CreateEmailIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.CreateEmailIdentity", input)
-	return &SESV2CreateEmailIdentityFuture{Future: future}
+	return &CreateEmailIdentityFuture{Future: future}
 }
 
 func (a *stub) CreateEmailIdentityPolicy(ctx workflow.Context, input *sesv2.CreateEmailIdentityPolicyInput) (*sesv2.CreateEmailIdentityPolicyOutput, error) {
@@ -858,9 +858,9 @@ func (a *stub) CreateEmailIdentityPolicy(ctx workflow.Context, input *sesv2.Crea
 	return &output, err
 }
 
-func (a *stub) CreateEmailIdentityPolicyAsync(ctx workflow.Context, input *sesv2.CreateEmailIdentityPolicyInput) *SESV2CreateEmailIdentityPolicyFuture {
+func (a *stub) CreateEmailIdentityPolicyAsync(ctx workflow.Context, input *sesv2.CreateEmailIdentityPolicyInput) *CreateEmailIdentityPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.CreateEmailIdentityPolicy", input)
-	return &SESV2CreateEmailIdentityPolicyFuture{Future: future}
+	return &CreateEmailIdentityPolicyFuture{Future: future}
 }
 
 func (a *stub) CreateEmailTemplate(ctx workflow.Context, input *sesv2.CreateEmailTemplateInput) (*sesv2.CreateEmailTemplateOutput, error) {
@@ -869,9 +869,9 @@ func (a *stub) CreateEmailTemplate(ctx workflow.Context, input *sesv2.CreateEmai
 	return &output, err
 }
 
-func (a *stub) CreateEmailTemplateAsync(ctx workflow.Context, input *sesv2.CreateEmailTemplateInput) *SESV2CreateEmailTemplateFuture {
+func (a *stub) CreateEmailTemplateAsync(ctx workflow.Context, input *sesv2.CreateEmailTemplateInput) *CreateEmailTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.CreateEmailTemplate", input)
-	return &SESV2CreateEmailTemplateFuture{Future: future}
+	return &CreateEmailTemplateFuture{Future: future}
 }
 
 func (a *stub) CreateImportJob(ctx workflow.Context, input *sesv2.CreateImportJobInput) (*sesv2.CreateImportJobOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) CreateImportJob(ctx workflow.Context, input *sesv2.CreateImportJo
 	return &output, err
 }
 
-func (a *stub) CreateImportJobAsync(ctx workflow.Context, input *sesv2.CreateImportJobInput) *SESV2CreateImportJobFuture {
+func (a *stub) CreateImportJobAsync(ctx workflow.Context, input *sesv2.CreateImportJobInput) *CreateImportJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.CreateImportJob", input)
-	return &SESV2CreateImportJobFuture{Future: future}
+	return &CreateImportJobFuture{Future: future}
 }
 
 func (a *stub) DeleteConfigurationSet(ctx workflow.Context, input *sesv2.DeleteConfigurationSetInput) (*sesv2.DeleteConfigurationSetOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) DeleteConfigurationSet(ctx workflow.Context, input *sesv2.DeleteC
 	return &output, err
 }
 
-func (a *stub) DeleteConfigurationSetAsync(ctx workflow.Context, input *sesv2.DeleteConfigurationSetInput) *SESV2DeleteConfigurationSetFuture {
+func (a *stub) DeleteConfigurationSetAsync(ctx workflow.Context, input *sesv2.DeleteConfigurationSetInput) *DeleteConfigurationSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.DeleteConfigurationSet", input)
-	return &SESV2DeleteConfigurationSetFuture{Future: future}
+	return &DeleteConfigurationSetFuture{Future: future}
 }
 
 func (a *stub) DeleteConfigurationSetEventDestination(ctx workflow.Context, input *sesv2.DeleteConfigurationSetEventDestinationInput) (*sesv2.DeleteConfigurationSetEventDestinationOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) DeleteConfigurationSetEventDestination(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *stub) DeleteConfigurationSetEventDestinationAsync(ctx workflow.Context, input *sesv2.DeleteConfigurationSetEventDestinationInput) *SESV2DeleteConfigurationSetEventDestinationFuture {
+func (a *stub) DeleteConfigurationSetEventDestinationAsync(ctx workflow.Context, input *sesv2.DeleteConfigurationSetEventDestinationInput) *DeleteConfigurationSetEventDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.DeleteConfigurationSetEventDestination", input)
-	return &SESV2DeleteConfigurationSetEventDestinationFuture{Future: future}
+	return &DeleteConfigurationSetEventDestinationFuture{Future: future}
 }
 
 func (a *stub) DeleteCustomVerificationEmailTemplate(ctx workflow.Context, input *sesv2.DeleteCustomVerificationEmailTemplateInput) (*sesv2.DeleteCustomVerificationEmailTemplateOutput, error) {
@@ -913,9 +913,9 @@ func (a *stub) DeleteCustomVerificationEmailTemplate(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *stub) DeleteCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *sesv2.DeleteCustomVerificationEmailTemplateInput) *SESV2DeleteCustomVerificationEmailTemplateFuture {
+func (a *stub) DeleteCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *sesv2.DeleteCustomVerificationEmailTemplateInput) *DeleteCustomVerificationEmailTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.DeleteCustomVerificationEmailTemplate", input)
-	return &SESV2DeleteCustomVerificationEmailTemplateFuture{Future: future}
+	return &DeleteCustomVerificationEmailTemplateFuture{Future: future}
 }
 
 func (a *stub) DeleteDedicatedIpPool(ctx workflow.Context, input *sesv2.DeleteDedicatedIpPoolInput) (*sesv2.DeleteDedicatedIpPoolOutput, error) {
@@ -924,9 +924,9 @@ func (a *stub) DeleteDedicatedIpPool(ctx workflow.Context, input *sesv2.DeleteDe
 	return &output, err
 }
 
-func (a *stub) DeleteDedicatedIpPoolAsync(ctx workflow.Context, input *sesv2.DeleteDedicatedIpPoolInput) *SESV2DeleteDedicatedIpPoolFuture {
+func (a *stub) DeleteDedicatedIpPoolAsync(ctx workflow.Context, input *sesv2.DeleteDedicatedIpPoolInput) *DeleteDedicatedIpPoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.DeleteDedicatedIpPool", input)
-	return &SESV2DeleteDedicatedIpPoolFuture{Future: future}
+	return &DeleteDedicatedIpPoolFuture{Future: future}
 }
 
 func (a *stub) DeleteEmailIdentity(ctx workflow.Context, input *sesv2.DeleteEmailIdentityInput) (*sesv2.DeleteEmailIdentityOutput, error) {
@@ -935,9 +935,9 @@ func (a *stub) DeleteEmailIdentity(ctx workflow.Context, input *sesv2.DeleteEmai
 	return &output, err
 }
 
-func (a *stub) DeleteEmailIdentityAsync(ctx workflow.Context, input *sesv2.DeleteEmailIdentityInput) *SESV2DeleteEmailIdentityFuture {
+func (a *stub) DeleteEmailIdentityAsync(ctx workflow.Context, input *sesv2.DeleteEmailIdentityInput) *DeleteEmailIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.DeleteEmailIdentity", input)
-	return &SESV2DeleteEmailIdentityFuture{Future: future}
+	return &DeleteEmailIdentityFuture{Future: future}
 }
 
 func (a *stub) DeleteEmailIdentityPolicy(ctx workflow.Context, input *sesv2.DeleteEmailIdentityPolicyInput) (*sesv2.DeleteEmailIdentityPolicyOutput, error) {
@@ -946,9 +946,9 @@ func (a *stub) DeleteEmailIdentityPolicy(ctx workflow.Context, input *sesv2.Dele
 	return &output, err
 }
 
-func (a *stub) DeleteEmailIdentityPolicyAsync(ctx workflow.Context, input *sesv2.DeleteEmailIdentityPolicyInput) *SESV2DeleteEmailIdentityPolicyFuture {
+func (a *stub) DeleteEmailIdentityPolicyAsync(ctx workflow.Context, input *sesv2.DeleteEmailIdentityPolicyInput) *DeleteEmailIdentityPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.DeleteEmailIdentityPolicy", input)
-	return &SESV2DeleteEmailIdentityPolicyFuture{Future: future}
+	return &DeleteEmailIdentityPolicyFuture{Future: future}
 }
 
 func (a *stub) DeleteEmailTemplate(ctx workflow.Context, input *sesv2.DeleteEmailTemplateInput) (*sesv2.DeleteEmailTemplateOutput, error) {
@@ -957,9 +957,9 @@ func (a *stub) DeleteEmailTemplate(ctx workflow.Context, input *sesv2.DeleteEmai
 	return &output, err
 }
 
-func (a *stub) DeleteEmailTemplateAsync(ctx workflow.Context, input *sesv2.DeleteEmailTemplateInput) *SESV2DeleteEmailTemplateFuture {
+func (a *stub) DeleteEmailTemplateAsync(ctx workflow.Context, input *sesv2.DeleteEmailTemplateInput) *DeleteEmailTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.DeleteEmailTemplate", input)
-	return &SESV2DeleteEmailTemplateFuture{Future: future}
+	return &DeleteEmailTemplateFuture{Future: future}
 }
 
 func (a *stub) DeleteSuppressedDestination(ctx workflow.Context, input *sesv2.DeleteSuppressedDestinationInput) (*sesv2.DeleteSuppressedDestinationOutput, error) {
@@ -968,9 +968,9 @@ func (a *stub) DeleteSuppressedDestination(ctx workflow.Context, input *sesv2.De
 	return &output, err
 }
 
-func (a *stub) DeleteSuppressedDestinationAsync(ctx workflow.Context, input *sesv2.DeleteSuppressedDestinationInput) *SESV2DeleteSuppressedDestinationFuture {
+func (a *stub) DeleteSuppressedDestinationAsync(ctx workflow.Context, input *sesv2.DeleteSuppressedDestinationInput) *DeleteSuppressedDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.DeleteSuppressedDestination", input)
-	return &SESV2DeleteSuppressedDestinationFuture{Future: future}
+	return &DeleteSuppressedDestinationFuture{Future: future}
 }
 
 func (a *stub) GetAccount(ctx workflow.Context, input *sesv2.GetAccountInput) (*sesv2.GetAccountOutput, error) {
@@ -979,9 +979,9 @@ func (a *stub) GetAccount(ctx workflow.Context, input *sesv2.GetAccountInput) (*
 	return &output, err
 }
 
-func (a *stub) GetAccountAsync(ctx workflow.Context, input *sesv2.GetAccountInput) *SESV2GetAccountFuture {
+func (a *stub) GetAccountAsync(ctx workflow.Context, input *sesv2.GetAccountInput) *GetAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.GetAccount", input)
-	return &SESV2GetAccountFuture{Future: future}
+	return &GetAccountFuture{Future: future}
 }
 
 func (a *stub) GetBlacklistReports(ctx workflow.Context, input *sesv2.GetBlacklistReportsInput) (*sesv2.GetBlacklistReportsOutput, error) {
@@ -990,9 +990,9 @@ func (a *stub) GetBlacklistReports(ctx workflow.Context, input *sesv2.GetBlackli
 	return &output, err
 }
 
-func (a *stub) GetBlacklistReportsAsync(ctx workflow.Context, input *sesv2.GetBlacklistReportsInput) *SESV2GetBlacklistReportsFuture {
+func (a *stub) GetBlacklistReportsAsync(ctx workflow.Context, input *sesv2.GetBlacklistReportsInput) *GetBlacklistReportsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.GetBlacklistReports", input)
-	return &SESV2GetBlacklistReportsFuture{Future: future}
+	return &GetBlacklistReportsFuture{Future: future}
 }
 
 func (a *stub) GetConfigurationSet(ctx workflow.Context, input *sesv2.GetConfigurationSetInput) (*sesv2.GetConfigurationSetOutput, error) {
@@ -1001,9 +1001,9 @@ func (a *stub) GetConfigurationSet(ctx workflow.Context, input *sesv2.GetConfigu
 	return &output, err
 }
 
-func (a *stub) GetConfigurationSetAsync(ctx workflow.Context, input *sesv2.GetConfigurationSetInput) *SESV2GetConfigurationSetFuture {
+func (a *stub) GetConfigurationSetAsync(ctx workflow.Context, input *sesv2.GetConfigurationSetInput) *GetConfigurationSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.GetConfigurationSet", input)
-	return &SESV2GetConfigurationSetFuture{Future: future}
+	return &GetConfigurationSetFuture{Future: future}
 }
 
 func (a *stub) GetConfigurationSetEventDestinations(ctx workflow.Context, input *sesv2.GetConfigurationSetEventDestinationsInput) (*sesv2.GetConfigurationSetEventDestinationsOutput, error) {
@@ -1012,9 +1012,9 @@ func (a *stub) GetConfigurationSetEventDestinations(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) GetConfigurationSetEventDestinationsAsync(ctx workflow.Context, input *sesv2.GetConfigurationSetEventDestinationsInput) *SESV2GetConfigurationSetEventDestinationsFuture {
+func (a *stub) GetConfigurationSetEventDestinationsAsync(ctx workflow.Context, input *sesv2.GetConfigurationSetEventDestinationsInput) *GetConfigurationSetEventDestinationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.GetConfigurationSetEventDestinations", input)
-	return &SESV2GetConfigurationSetEventDestinationsFuture{Future: future}
+	return &GetConfigurationSetEventDestinationsFuture{Future: future}
 }
 
 func (a *stub) GetCustomVerificationEmailTemplate(ctx workflow.Context, input *sesv2.GetCustomVerificationEmailTemplateInput) (*sesv2.GetCustomVerificationEmailTemplateOutput, error) {
@@ -1023,9 +1023,9 @@ func (a *stub) GetCustomVerificationEmailTemplate(ctx workflow.Context, input *s
 	return &output, err
 }
 
-func (a *stub) GetCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *sesv2.GetCustomVerificationEmailTemplateInput) *SESV2GetCustomVerificationEmailTemplateFuture {
+func (a *stub) GetCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *sesv2.GetCustomVerificationEmailTemplateInput) *GetCustomVerificationEmailTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.GetCustomVerificationEmailTemplate", input)
-	return &SESV2GetCustomVerificationEmailTemplateFuture{Future: future}
+	return &GetCustomVerificationEmailTemplateFuture{Future: future}
 }
 
 func (a *stub) GetDedicatedIp(ctx workflow.Context, input *sesv2.GetDedicatedIpInput) (*sesv2.GetDedicatedIpOutput, error) {
@@ -1034,9 +1034,9 @@ func (a *stub) GetDedicatedIp(ctx workflow.Context, input *sesv2.GetDedicatedIpI
 	return &output, err
 }
 
-func (a *stub) GetDedicatedIpAsync(ctx workflow.Context, input *sesv2.GetDedicatedIpInput) *SESV2GetDedicatedIpFuture {
+func (a *stub) GetDedicatedIpAsync(ctx workflow.Context, input *sesv2.GetDedicatedIpInput) *GetDedicatedIpFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.GetDedicatedIp", input)
-	return &SESV2GetDedicatedIpFuture{Future: future}
+	return &GetDedicatedIpFuture{Future: future}
 }
 
 func (a *stub) GetDedicatedIps(ctx workflow.Context, input *sesv2.GetDedicatedIpsInput) (*sesv2.GetDedicatedIpsOutput, error) {
@@ -1045,9 +1045,9 @@ func (a *stub) GetDedicatedIps(ctx workflow.Context, input *sesv2.GetDedicatedIp
 	return &output, err
 }
 
-func (a *stub) GetDedicatedIpsAsync(ctx workflow.Context, input *sesv2.GetDedicatedIpsInput) *SESV2GetDedicatedIpsFuture {
+func (a *stub) GetDedicatedIpsAsync(ctx workflow.Context, input *sesv2.GetDedicatedIpsInput) *GetDedicatedIpsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.GetDedicatedIps", input)
-	return &SESV2GetDedicatedIpsFuture{Future: future}
+	return &GetDedicatedIpsFuture{Future: future}
 }
 
 func (a *stub) GetDeliverabilityDashboardOptions(ctx workflow.Context, input *sesv2.GetDeliverabilityDashboardOptionsInput) (*sesv2.GetDeliverabilityDashboardOptionsOutput, error) {
@@ -1056,9 +1056,9 @@ func (a *stub) GetDeliverabilityDashboardOptions(ctx workflow.Context, input *se
 	return &output, err
 }
 
-func (a *stub) GetDeliverabilityDashboardOptionsAsync(ctx workflow.Context, input *sesv2.GetDeliverabilityDashboardOptionsInput) *SESV2GetDeliverabilityDashboardOptionsFuture {
+func (a *stub) GetDeliverabilityDashboardOptionsAsync(ctx workflow.Context, input *sesv2.GetDeliverabilityDashboardOptionsInput) *GetDeliverabilityDashboardOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.GetDeliverabilityDashboardOptions", input)
-	return &SESV2GetDeliverabilityDashboardOptionsFuture{Future: future}
+	return &GetDeliverabilityDashboardOptionsFuture{Future: future}
 }
 
 func (a *stub) GetDeliverabilityTestReport(ctx workflow.Context, input *sesv2.GetDeliverabilityTestReportInput) (*sesv2.GetDeliverabilityTestReportOutput, error) {
@@ -1067,9 +1067,9 @@ func (a *stub) GetDeliverabilityTestReport(ctx workflow.Context, input *sesv2.Ge
 	return &output, err
 }
 
-func (a *stub) GetDeliverabilityTestReportAsync(ctx workflow.Context, input *sesv2.GetDeliverabilityTestReportInput) *SESV2GetDeliverabilityTestReportFuture {
+func (a *stub) GetDeliverabilityTestReportAsync(ctx workflow.Context, input *sesv2.GetDeliverabilityTestReportInput) *GetDeliverabilityTestReportFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.GetDeliverabilityTestReport", input)
-	return &SESV2GetDeliverabilityTestReportFuture{Future: future}
+	return &GetDeliverabilityTestReportFuture{Future: future}
 }
 
 func (a *stub) GetDomainDeliverabilityCampaign(ctx workflow.Context, input *sesv2.GetDomainDeliverabilityCampaignInput) (*sesv2.GetDomainDeliverabilityCampaignOutput, error) {
@@ -1078,9 +1078,9 @@ func (a *stub) GetDomainDeliverabilityCampaign(ctx workflow.Context, input *sesv
 	return &output, err
 }
 
-func (a *stub) GetDomainDeliverabilityCampaignAsync(ctx workflow.Context, input *sesv2.GetDomainDeliverabilityCampaignInput) *SESV2GetDomainDeliverabilityCampaignFuture {
+func (a *stub) GetDomainDeliverabilityCampaignAsync(ctx workflow.Context, input *sesv2.GetDomainDeliverabilityCampaignInput) *GetDomainDeliverabilityCampaignFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.GetDomainDeliverabilityCampaign", input)
-	return &SESV2GetDomainDeliverabilityCampaignFuture{Future: future}
+	return &GetDomainDeliverabilityCampaignFuture{Future: future}
 }
 
 func (a *stub) GetDomainStatisticsReport(ctx workflow.Context, input *sesv2.GetDomainStatisticsReportInput) (*sesv2.GetDomainStatisticsReportOutput, error) {
@@ -1089,9 +1089,9 @@ func (a *stub) GetDomainStatisticsReport(ctx workflow.Context, input *sesv2.GetD
 	return &output, err
 }
 
-func (a *stub) GetDomainStatisticsReportAsync(ctx workflow.Context, input *sesv2.GetDomainStatisticsReportInput) *SESV2GetDomainStatisticsReportFuture {
+func (a *stub) GetDomainStatisticsReportAsync(ctx workflow.Context, input *sesv2.GetDomainStatisticsReportInput) *GetDomainStatisticsReportFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.GetDomainStatisticsReport", input)
-	return &SESV2GetDomainStatisticsReportFuture{Future: future}
+	return &GetDomainStatisticsReportFuture{Future: future}
 }
 
 func (a *stub) GetEmailIdentity(ctx workflow.Context, input *sesv2.GetEmailIdentityInput) (*sesv2.GetEmailIdentityOutput, error) {
@@ -1100,9 +1100,9 @@ func (a *stub) GetEmailIdentity(ctx workflow.Context, input *sesv2.GetEmailIdent
 	return &output, err
 }
 
-func (a *stub) GetEmailIdentityAsync(ctx workflow.Context, input *sesv2.GetEmailIdentityInput) *SESV2GetEmailIdentityFuture {
+func (a *stub) GetEmailIdentityAsync(ctx workflow.Context, input *sesv2.GetEmailIdentityInput) *GetEmailIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.GetEmailIdentity", input)
-	return &SESV2GetEmailIdentityFuture{Future: future}
+	return &GetEmailIdentityFuture{Future: future}
 }
 
 func (a *stub) GetEmailIdentityPolicies(ctx workflow.Context, input *sesv2.GetEmailIdentityPoliciesInput) (*sesv2.GetEmailIdentityPoliciesOutput, error) {
@@ -1111,9 +1111,9 @@ func (a *stub) GetEmailIdentityPolicies(ctx workflow.Context, input *sesv2.GetEm
 	return &output, err
 }
 
-func (a *stub) GetEmailIdentityPoliciesAsync(ctx workflow.Context, input *sesv2.GetEmailIdentityPoliciesInput) *SESV2GetEmailIdentityPoliciesFuture {
+func (a *stub) GetEmailIdentityPoliciesAsync(ctx workflow.Context, input *sesv2.GetEmailIdentityPoliciesInput) *GetEmailIdentityPoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.GetEmailIdentityPolicies", input)
-	return &SESV2GetEmailIdentityPoliciesFuture{Future: future}
+	return &GetEmailIdentityPoliciesFuture{Future: future}
 }
 
 func (a *stub) GetEmailTemplate(ctx workflow.Context, input *sesv2.GetEmailTemplateInput) (*sesv2.GetEmailTemplateOutput, error) {
@@ -1122,9 +1122,9 @@ func (a *stub) GetEmailTemplate(ctx workflow.Context, input *sesv2.GetEmailTempl
 	return &output, err
 }
 
-func (a *stub) GetEmailTemplateAsync(ctx workflow.Context, input *sesv2.GetEmailTemplateInput) *SESV2GetEmailTemplateFuture {
+func (a *stub) GetEmailTemplateAsync(ctx workflow.Context, input *sesv2.GetEmailTemplateInput) *GetEmailTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.GetEmailTemplate", input)
-	return &SESV2GetEmailTemplateFuture{Future: future}
+	return &GetEmailTemplateFuture{Future: future}
 }
 
 func (a *stub) GetImportJob(ctx workflow.Context, input *sesv2.GetImportJobInput) (*sesv2.GetImportJobOutput, error) {
@@ -1133,9 +1133,9 @@ func (a *stub) GetImportJob(ctx workflow.Context, input *sesv2.GetImportJobInput
 	return &output, err
 }
 
-func (a *stub) GetImportJobAsync(ctx workflow.Context, input *sesv2.GetImportJobInput) *SESV2GetImportJobFuture {
+func (a *stub) GetImportJobAsync(ctx workflow.Context, input *sesv2.GetImportJobInput) *GetImportJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.GetImportJob", input)
-	return &SESV2GetImportJobFuture{Future: future}
+	return &GetImportJobFuture{Future: future}
 }
 
 func (a *stub) GetSuppressedDestination(ctx workflow.Context, input *sesv2.GetSuppressedDestinationInput) (*sesv2.GetSuppressedDestinationOutput, error) {
@@ -1144,9 +1144,9 @@ func (a *stub) GetSuppressedDestination(ctx workflow.Context, input *sesv2.GetSu
 	return &output, err
 }
 
-func (a *stub) GetSuppressedDestinationAsync(ctx workflow.Context, input *sesv2.GetSuppressedDestinationInput) *SESV2GetSuppressedDestinationFuture {
+func (a *stub) GetSuppressedDestinationAsync(ctx workflow.Context, input *sesv2.GetSuppressedDestinationInput) *GetSuppressedDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.GetSuppressedDestination", input)
-	return &SESV2GetSuppressedDestinationFuture{Future: future}
+	return &GetSuppressedDestinationFuture{Future: future}
 }
 
 func (a *stub) ListConfigurationSets(ctx workflow.Context, input *sesv2.ListConfigurationSetsInput) (*sesv2.ListConfigurationSetsOutput, error) {
@@ -1155,9 +1155,9 @@ func (a *stub) ListConfigurationSets(ctx workflow.Context, input *sesv2.ListConf
 	return &output, err
 }
 
-func (a *stub) ListConfigurationSetsAsync(ctx workflow.Context, input *sesv2.ListConfigurationSetsInput) *SESV2ListConfigurationSetsFuture {
+func (a *stub) ListConfigurationSetsAsync(ctx workflow.Context, input *sesv2.ListConfigurationSetsInput) *ListConfigurationSetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.ListConfigurationSets", input)
-	return &SESV2ListConfigurationSetsFuture{Future: future}
+	return &ListConfigurationSetsFuture{Future: future}
 }
 
 func (a *stub) ListCustomVerificationEmailTemplates(ctx workflow.Context, input *sesv2.ListCustomVerificationEmailTemplatesInput) (*sesv2.ListCustomVerificationEmailTemplatesOutput, error) {
@@ -1166,9 +1166,9 @@ func (a *stub) ListCustomVerificationEmailTemplates(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) ListCustomVerificationEmailTemplatesAsync(ctx workflow.Context, input *sesv2.ListCustomVerificationEmailTemplatesInput) *SESV2ListCustomVerificationEmailTemplatesFuture {
+func (a *stub) ListCustomVerificationEmailTemplatesAsync(ctx workflow.Context, input *sesv2.ListCustomVerificationEmailTemplatesInput) *ListCustomVerificationEmailTemplatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.ListCustomVerificationEmailTemplates", input)
-	return &SESV2ListCustomVerificationEmailTemplatesFuture{Future: future}
+	return &ListCustomVerificationEmailTemplatesFuture{Future: future}
 }
 
 func (a *stub) ListDedicatedIpPools(ctx workflow.Context, input *sesv2.ListDedicatedIpPoolsInput) (*sesv2.ListDedicatedIpPoolsOutput, error) {
@@ -1177,9 +1177,9 @@ func (a *stub) ListDedicatedIpPools(ctx workflow.Context, input *sesv2.ListDedic
 	return &output, err
 }
 
-func (a *stub) ListDedicatedIpPoolsAsync(ctx workflow.Context, input *sesv2.ListDedicatedIpPoolsInput) *SESV2ListDedicatedIpPoolsFuture {
+func (a *stub) ListDedicatedIpPoolsAsync(ctx workflow.Context, input *sesv2.ListDedicatedIpPoolsInput) *ListDedicatedIpPoolsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.ListDedicatedIpPools", input)
-	return &SESV2ListDedicatedIpPoolsFuture{Future: future}
+	return &ListDedicatedIpPoolsFuture{Future: future}
 }
 
 func (a *stub) ListDeliverabilityTestReports(ctx workflow.Context, input *sesv2.ListDeliverabilityTestReportsInput) (*sesv2.ListDeliverabilityTestReportsOutput, error) {
@@ -1188,9 +1188,9 @@ func (a *stub) ListDeliverabilityTestReports(ctx workflow.Context, input *sesv2.
 	return &output, err
 }
 
-func (a *stub) ListDeliverabilityTestReportsAsync(ctx workflow.Context, input *sesv2.ListDeliverabilityTestReportsInput) *SESV2ListDeliverabilityTestReportsFuture {
+func (a *stub) ListDeliverabilityTestReportsAsync(ctx workflow.Context, input *sesv2.ListDeliverabilityTestReportsInput) *ListDeliverabilityTestReportsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.ListDeliverabilityTestReports", input)
-	return &SESV2ListDeliverabilityTestReportsFuture{Future: future}
+	return &ListDeliverabilityTestReportsFuture{Future: future}
 }
 
 func (a *stub) ListDomainDeliverabilityCampaigns(ctx workflow.Context, input *sesv2.ListDomainDeliverabilityCampaignsInput) (*sesv2.ListDomainDeliverabilityCampaignsOutput, error) {
@@ -1199,9 +1199,9 @@ func (a *stub) ListDomainDeliverabilityCampaigns(ctx workflow.Context, input *se
 	return &output, err
 }
 
-func (a *stub) ListDomainDeliverabilityCampaignsAsync(ctx workflow.Context, input *sesv2.ListDomainDeliverabilityCampaignsInput) *SESV2ListDomainDeliverabilityCampaignsFuture {
+func (a *stub) ListDomainDeliverabilityCampaignsAsync(ctx workflow.Context, input *sesv2.ListDomainDeliverabilityCampaignsInput) *ListDomainDeliverabilityCampaignsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.ListDomainDeliverabilityCampaigns", input)
-	return &SESV2ListDomainDeliverabilityCampaignsFuture{Future: future}
+	return &ListDomainDeliverabilityCampaignsFuture{Future: future}
 }
 
 func (a *stub) ListEmailIdentities(ctx workflow.Context, input *sesv2.ListEmailIdentitiesInput) (*sesv2.ListEmailIdentitiesOutput, error) {
@@ -1210,9 +1210,9 @@ func (a *stub) ListEmailIdentities(ctx workflow.Context, input *sesv2.ListEmailI
 	return &output, err
 }
 
-func (a *stub) ListEmailIdentitiesAsync(ctx workflow.Context, input *sesv2.ListEmailIdentitiesInput) *SESV2ListEmailIdentitiesFuture {
+func (a *stub) ListEmailIdentitiesAsync(ctx workflow.Context, input *sesv2.ListEmailIdentitiesInput) *ListEmailIdentitiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.ListEmailIdentities", input)
-	return &SESV2ListEmailIdentitiesFuture{Future: future}
+	return &ListEmailIdentitiesFuture{Future: future}
 }
 
 func (a *stub) ListEmailTemplates(ctx workflow.Context, input *sesv2.ListEmailTemplatesInput) (*sesv2.ListEmailTemplatesOutput, error) {
@@ -1221,9 +1221,9 @@ func (a *stub) ListEmailTemplates(ctx workflow.Context, input *sesv2.ListEmailTe
 	return &output, err
 }
 
-func (a *stub) ListEmailTemplatesAsync(ctx workflow.Context, input *sesv2.ListEmailTemplatesInput) *SESV2ListEmailTemplatesFuture {
+func (a *stub) ListEmailTemplatesAsync(ctx workflow.Context, input *sesv2.ListEmailTemplatesInput) *ListEmailTemplatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.ListEmailTemplates", input)
-	return &SESV2ListEmailTemplatesFuture{Future: future}
+	return &ListEmailTemplatesFuture{Future: future}
 }
 
 func (a *stub) ListImportJobs(ctx workflow.Context, input *sesv2.ListImportJobsInput) (*sesv2.ListImportJobsOutput, error) {
@@ -1232,9 +1232,9 @@ func (a *stub) ListImportJobs(ctx workflow.Context, input *sesv2.ListImportJobsI
 	return &output, err
 }
 
-func (a *stub) ListImportJobsAsync(ctx workflow.Context, input *sesv2.ListImportJobsInput) *SESV2ListImportJobsFuture {
+func (a *stub) ListImportJobsAsync(ctx workflow.Context, input *sesv2.ListImportJobsInput) *ListImportJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.ListImportJobs", input)
-	return &SESV2ListImportJobsFuture{Future: future}
+	return &ListImportJobsFuture{Future: future}
 }
 
 func (a *stub) ListSuppressedDestinations(ctx workflow.Context, input *sesv2.ListSuppressedDestinationsInput) (*sesv2.ListSuppressedDestinationsOutput, error) {
@@ -1243,9 +1243,9 @@ func (a *stub) ListSuppressedDestinations(ctx workflow.Context, input *sesv2.Lis
 	return &output, err
 }
 
-func (a *stub) ListSuppressedDestinationsAsync(ctx workflow.Context, input *sesv2.ListSuppressedDestinationsInput) *SESV2ListSuppressedDestinationsFuture {
+func (a *stub) ListSuppressedDestinationsAsync(ctx workflow.Context, input *sesv2.ListSuppressedDestinationsInput) *ListSuppressedDestinationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.ListSuppressedDestinations", input)
-	return &SESV2ListSuppressedDestinationsFuture{Future: future}
+	return &ListSuppressedDestinationsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *sesv2.ListTagsForResourceInput) (*sesv2.ListTagsForResourceOutput, error) {
@@ -1254,9 +1254,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *sesv2.ListTagsFo
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *sesv2.ListTagsForResourceInput) *SESV2ListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *sesv2.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.ListTagsForResource", input)
-	return &SESV2ListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) PutAccountDedicatedIpWarmupAttributes(ctx workflow.Context, input *sesv2.PutAccountDedicatedIpWarmupAttributesInput) (*sesv2.PutAccountDedicatedIpWarmupAttributesOutput, error) {
@@ -1265,9 +1265,9 @@ func (a *stub) PutAccountDedicatedIpWarmupAttributes(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *stub) PutAccountDedicatedIpWarmupAttributesAsync(ctx workflow.Context, input *sesv2.PutAccountDedicatedIpWarmupAttributesInput) *SESV2PutAccountDedicatedIpWarmupAttributesFuture {
+func (a *stub) PutAccountDedicatedIpWarmupAttributesAsync(ctx workflow.Context, input *sesv2.PutAccountDedicatedIpWarmupAttributesInput) *PutAccountDedicatedIpWarmupAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.PutAccountDedicatedIpWarmupAttributes", input)
-	return &SESV2PutAccountDedicatedIpWarmupAttributesFuture{Future: future}
+	return &PutAccountDedicatedIpWarmupAttributesFuture{Future: future}
 }
 
 func (a *stub) PutAccountDetails(ctx workflow.Context, input *sesv2.PutAccountDetailsInput) (*sesv2.PutAccountDetailsOutput, error) {
@@ -1276,9 +1276,9 @@ func (a *stub) PutAccountDetails(ctx workflow.Context, input *sesv2.PutAccountDe
 	return &output, err
 }
 
-func (a *stub) PutAccountDetailsAsync(ctx workflow.Context, input *sesv2.PutAccountDetailsInput) *SESV2PutAccountDetailsFuture {
+func (a *stub) PutAccountDetailsAsync(ctx workflow.Context, input *sesv2.PutAccountDetailsInput) *PutAccountDetailsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.PutAccountDetails", input)
-	return &SESV2PutAccountDetailsFuture{Future: future}
+	return &PutAccountDetailsFuture{Future: future}
 }
 
 func (a *stub) PutAccountSendingAttributes(ctx workflow.Context, input *sesv2.PutAccountSendingAttributesInput) (*sesv2.PutAccountSendingAttributesOutput, error) {
@@ -1287,9 +1287,9 @@ func (a *stub) PutAccountSendingAttributes(ctx workflow.Context, input *sesv2.Pu
 	return &output, err
 }
 
-func (a *stub) PutAccountSendingAttributesAsync(ctx workflow.Context, input *sesv2.PutAccountSendingAttributesInput) *SESV2PutAccountSendingAttributesFuture {
+func (a *stub) PutAccountSendingAttributesAsync(ctx workflow.Context, input *sesv2.PutAccountSendingAttributesInput) *PutAccountSendingAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.PutAccountSendingAttributes", input)
-	return &SESV2PutAccountSendingAttributesFuture{Future: future}
+	return &PutAccountSendingAttributesFuture{Future: future}
 }
 
 func (a *stub) PutAccountSuppressionAttributes(ctx workflow.Context, input *sesv2.PutAccountSuppressionAttributesInput) (*sesv2.PutAccountSuppressionAttributesOutput, error) {
@@ -1298,9 +1298,9 @@ func (a *stub) PutAccountSuppressionAttributes(ctx workflow.Context, input *sesv
 	return &output, err
 }
 
-func (a *stub) PutAccountSuppressionAttributesAsync(ctx workflow.Context, input *sesv2.PutAccountSuppressionAttributesInput) *SESV2PutAccountSuppressionAttributesFuture {
+func (a *stub) PutAccountSuppressionAttributesAsync(ctx workflow.Context, input *sesv2.PutAccountSuppressionAttributesInput) *PutAccountSuppressionAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.PutAccountSuppressionAttributes", input)
-	return &SESV2PutAccountSuppressionAttributesFuture{Future: future}
+	return &PutAccountSuppressionAttributesFuture{Future: future}
 }
 
 func (a *stub) PutConfigurationSetDeliveryOptions(ctx workflow.Context, input *sesv2.PutConfigurationSetDeliveryOptionsInput) (*sesv2.PutConfigurationSetDeliveryOptionsOutput, error) {
@@ -1309,9 +1309,9 @@ func (a *stub) PutConfigurationSetDeliveryOptions(ctx workflow.Context, input *s
 	return &output, err
 }
 
-func (a *stub) PutConfigurationSetDeliveryOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetDeliveryOptionsInput) *SESV2PutConfigurationSetDeliveryOptionsFuture {
+func (a *stub) PutConfigurationSetDeliveryOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetDeliveryOptionsInput) *PutConfigurationSetDeliveryOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.PutConfigurationSetDeliveryOptions", input)
-	return &SESV2PutConfigurationSetDeliveryOptionsFuture{Future: future}
+	return &PutConfigurationSetDeliveryOptionsFuture{Future: future}
 }
 
 func (a *stub) PutConfigurationSetReputationOptions(ctx workflow.Context, input *sesv2.PutConfigurationSetReputationOptionsInput) (*sesv2.PutConfigurationSetReputationOptionsOutput, error) {
@@ -1320,9 +1320,9 @@ func (a *stub) PutConfigurationSetReputationOptions(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) PutConfigurationSetReputationOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetReputationOptionsInput) *SESV2PutConfigurationSetReputationOptionsFuture {
+func (a *stub) PutConfigurationSetReputationOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetReputationOptionsInput) *PutConfigurationSetReputationOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.PutConfigurationSetReputationOptions", input)
-	return &SESV2PutConfigurationSetReputationOptionsFuture{Future: future}
+	return &PutConfigurationSetReputationOptionsFuture{Future: future}
 }
 
 func (a *stub) PutConfigurationSetSendingOptions(ctx workflow.Context, input *sesv2.PutConfigurationSetSendingOptionsInput) (*sesv2.PutConfigurationSetSendingOptionsOutput, error) {
@@ -1331,9 +1331,9 @@ func (a *stub) PutConfigurationSetSendingOptions(ctx workflow.Context, input *se
 	return &output, err
 }
 
-func (a *stub) PutConfigurationSetSendingOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetSendingOptionsInput) *SESV2PutConfigurationSetSendingOptionsFuture {
+func (a *stub) PutConfigurationSetSendingOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetSendingOptionsInput) *PutConfigurationSetSendingOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.PutConfigurationSetSendingOptions", input)
-	return &SESV2PutConfigurationSetSendingOptionsFuture{Future: future}
+	return &PutConfigurationSetSendingOptionsFuture{Future: future}
 }
 
 func (a *stub) PutConfigurationSetSuppressionOptions(ctx workflow.Context, input *sesv2.PutConfigurationSetSuppressionOptionsInput) (*sesv2.PutConfigurationSetSuppressionOptionsOutput, error) {
@@ -1342,9 +1342,9 @@ func (a *stub) PutConfigurationSetSuppressionOptions(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *stub) PutConfigurationSetSuppressionOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetSuppressionOptionsInput) *SESV2PutConfigurationSetSuppressionOptionsFuture {
+func (a *stub) PutConfigurationSetSuppressionOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetSuppressionOptionsInput) *PutConfigurationSetSuppressionOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.PutConfigurationSetSuppressionOptions", input)
-	return &SESV2PutConfigurationSetSuppressionOptionsFuture{Future: future}
+	return &PutConfigurationSetSuppressionOptionsFuture{Future: future}
 }
 
 func (a *stub) PutConfigurationSetTrackingOptions(ctx workflow.Context, input *sesv2.PutConfigurationSetTrackingOptionsInput) (*sesv2.PutConfigurationSetTrackingOptionsOutput, error) {
@@ -1353,9 +1353,9 @@ func (a *stub) PutConfigurationSetTrackingOptions(ctx workflow.Context, input *s
 	return &output, err
 }
 
-func (a *stub) PutConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetTrackingOptionsInput) *SESV2PutConfigurationSetTrackingOptionsFuture {
+func (a *stub) PutConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetTrackingOptionsInput) *PutConfigurationSetTrackingOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.PutConfigurationSetTrackingOptions", input)
-	return &SESV2PutConfigurationSetTrackingOptionsFuture{Future: future}
+	return &PutConfigurationSetTrackingOptionsFuture{Future: future}
 }
 
 func (a *stub) PutDedicatedIpInPool(ctx workflow.Context, input *sesv2.PutDedicatedIpInPoolInput) (*sesv2.PutDedicatedIpInPoolOutput, error) {
@@ -1364,9 +1364,9 @@ func (a *stub) PutDedicatedIpInPool(ctx workflow.Context, input *sesv2.PutDedica
 	return &output, err
 }
 
-func (a *stub) PutDedicatedIpInPoolAsync(ctx workflow.Context, input *sesv2.PutDedicatedIpInPoolInput) *SESV2PutDedicatedIpInPoolFuture {
+func (a *stub) PutDedicatedIpInPoolAsync(ctx workflow.Context, input *sesv2.PutDedicatedIpInPoolInput) *PutDedicatedIpInPoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.PutDedicatedIpInPool", input)
-	return &SESV2PutDedicatedIpInPoolFuture{Future: future}
+	return &PutDedicatedIpInPoolFuture{Future: future}
 }
 
 func (a *stub) PutDedicatedIpWarmupAttributes(ctx workflow.Context, input *sesv2.PutDedicatedIpWarmupAttributesInput) (*sesv2.PutDedicatedIpWarmupAttributesOutput, error) {
@@ -1375,9 +1375,9 @@ func (a *stub) PutDedicatedIpWarmupAttributes(ctx workflow.Context, input *sesv2
 	return &output, err
 }
 
-func (a *stub) PutDedicatedIpWarmupAttributesAsync(ctx workflow.Context, input *sesv2.PutDedicatedIpWarmupAttributesInput) *SESV2PutDedicatedIpWarmupAttributesFuture {
+func (a *stub) PutDedicatedIpWarmupAttributesAsync(ctx workflow.Context, input *sesv2.PutDedicatedIpWarmupAttributesInput) *PutDedicatedIpWarmupAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.PutDedicatedIpWarmupAttributes", input)
-	return &SESV2PutDedicatedIpWarmupAttributesFuture{Future: future}
+	return &PutDedicatedIpWarmupAttributesFuture{Future: future}
 }
 
 func (a *stub) PutDeliverabilityDashboardOption(ctx workflow.Context, input *sesv2.PutDeliverabilityDashboardOptionInput) (*sesv2.PutDeliverabilityDashboardOptionOutput, error) {
@@ -1386,9 +1386,9 @@ func (a *stub) PutDeliverabilityDashboardOption(ctx workflow.Context, input *ses
 	return &output, err
 }
 
-func (a *stub) PutDeliverabilityDashboardOptionAsync(ctx workflow.Context, input *sesv2.PutDeliverabilityDashboardOptionInput) *SESV2PutDeliverabilityDashboardOptionFuture {
+func (a *stub) PutDeliverabilityDashboardOptionAsync(ctx workflow.Context, input *sesv2.PutDeliverabilityDashboardOptionInput) *PutDeliverabilityDashboardOptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.PutDeliverabilityDashboardOption", input)
-	return &SESV2PutDeliverabilityDashboardOptionFuture{Future: future}
+	return &PutDeliverabilityDashboardOptionFuture{Future: future}
 }
 
 func (a *stub) PutEmailIdentityDkimAttributes(ctx workflow.Context, input *sesv2.PutEmailIdentityDkimAttributesInput) (*sesv2.PutEmailIdentityDkimAttributesOutput, error) {
@@ -1397,9 +1397,9 @@ func (a *stub) PutEmailIdentityDkimAttributes(ctx workflow.Context, input *sesv2
 	return &output, err
 }
 
-func (a *stub) PutEmailIdentityDkimAttributesAsync(ctx workflow.Context, input *sesv2.PutEmailIdentityDkimAttributesInput) *SESV2PutEmailIdentityDkimAttributesFuture {
+func (a *stub) PutEmailIdentityDkimAttributesAsync(ctx workflow.Context, input *sesv2.PutEmailIdentityDkimAttributesInput) *PutEmailIdentityDkimAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.PutEmailIdentityDkimAttributes", input)
-	return &SESV2PutEmailIdentityDkimAttributesFuture{Future: future}
+	return &PutEmailIdentityDkimAttributesFuture{Future: future}
 }
 
 func (a *stub) PutEmailIdentityDkimSigningAttributes(ctx workflow.Context, input *sesv2.PutEmailIdentityDkimSigningAttributesInput) (*sesv2.PutEmailIdentityDkimSigningAttributesOutput, error) {
@@ -1408,9 +1408,9 @@ func (a *stub) PutEmailIdentityDkimSigningAttributes(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *stub) PutEmailIdentityDkimSigningAttributesAsync(ctx workflow.Context, input *sesv2.PutEmailIdentityDkimSigningAttributesInput) *SESV2PutEmailIdentityDkimSigningAttributesFuture {
+func (a *stub) PutEmailIdentityDkimSigningAttributesAsync(ctx workflow.Context, input *sesv2.PutEmailIdentityDkimSigningAttributesInput) *PutEmailIdentityDkimSigningAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.PutEmailIdentityDkimSigningAttributes", input)
-	return &SESV2PutEmailIdentityDkimSigningAttributesFuture{Future: future}
+	return &PutEmailIdentityDkimSigningAttributesFuture{Future: future}
 }
 
 func (a *stub) PutEmailIdentityFeedbackAttributes(ctx workflow.Context, input *sesv2.PutEmailIdentityFeedbackAttributesInput) (*sesv2.PutEmailIdentityFeedbackAttributesOutput, error) {
@@ -1419,9 +1419,9 @@ func (a *stub) PutEmailIdentityFeedbackAttributes(ctx workflow.Context, input *s
 	return &output, err
 }
 
-func (a *stub) PutEmailIdentityFeedbackAttributesAsync(ctx workflow.Context, input *sesv2.PutEmailIdentityFeedbackAttributesInput) *SESV2PutEmailIdentityFeedbackAttributesFuture {
+func (a *stub) PutEmailIdentityFeedbackAttributesAsync(ctx workflow.Context, input *sesv2.PutEmailIdentityFeedbackAttributesInput) *PutEmailIdentityFeedbackAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.PutEmailIdentityFeedbackAttributes", input)
-	return &SESV2PutEmailIdentityFeedbackAttributesFuture{Future: future}
+	return &PutEmailIdentityFeedbackAttributesFuture{Future: future}
 }
 
 func (a *stub) PutEmailIdentityMailFromAttributes(ctx workflow.Context, input *sesv2.PutEmailIdentityMailFromAttributesInput) (*sesv2.PutEmailIdentityMailFromAttributesOutput, error) {
@@ -1430,9 +1430,9 @@ func (a *stub) PutEmailIdentityMailFromAttributes(ctx workflow.Context, input *s
 	return &output, err
 }
 
-func (a *stub) PutEmailIdentityMailFromAttributesAsync(ctx workflow.Context, input *sesv2.PutEmailIdentityMailFromAttributesInput) *SESV2PutEmailIdentityMailFromAttributesFuture {
+func (a *stub) PutEmailIdentityMailFromAttributesAsync(ctx workflow.Context, input *sesv2.PutEmailIdentityMailFromAttributesInput) *PutEmailIdentityMailFromAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.PutEmailIdentityMailFromAttributes", input)
-	return &SESV2PutEmailIdentityMailFromAttributesFuture{Future: future}
+	return &PutEmailIdentityMailFromAttributesFuture{Future: future}
 }
 
 func (a *stub) PutSuppressedDestination(ctx workflow.Context, input *sesv2.PutSuppressedDestinationInput) (*sesv2.PutSuppressedDestinationOutput, error) {
@@ -1441,9 +1441,9 @@ func (a *stub) PutSuppressedDestination(ctx workflow.Context, input *sesv2.PutSu
 	return &output, err
 }
 
-func (a *stub) PutSuppressedDestinationAsync(ctx workflow.Context, input *sesv2.PutSuppressedDestinationInput) *SESV2PutSuppressedDestinationFuture {
+func (a *stub) PutSuppressedDestinationAsync(ctx workflow.Context, input *sesv2.PutSuppressedDestinationInput) *PutSuppressedDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.PutSuppressedDestination", input)
-	return &SESV2PutSuppressedDestinationFuture{Future: future}
+	return &PutSuppressedDestinationFuture{Future: future}
 }
 
 func (a *stub) SendBulkEmail(ctx workflow.Context, input *sesv2.SendBulkEmailInput) (*sesv2.SendBulkEmailOutput, error) {
@@ -1452,9 +1452,9 @@ func (a *stub) SendBulkEmail(ctx workflow.Context, input *sesv2.SendBulkEmailInp
 	return &output, err
 }
 
-func (a *stub) SendBulkEmailAsync(ctx workflow.Context, input *sesv2.SendBulkEmailInput) *SESV2SendBulkEmailFuture {
+func (a *stub) SendBulkEmailAsync(ctx workflow.Context, input *sesv2.SendBulkEmailInput) *SendBulkEmailFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.SendBulkEmail", input)
-	return &SESV2SendBulkEmailFuture{Future: future}
+	return &SendBulkEmailFuture{Future: future}
 }
 
 func (a *stub) SendCustomVerificationEmail(ctx workflow.Context, input *sesv2.SendCustomVerificationEmailInput) (*sesv2.SendCustomVerificationEmailOutput, error) {
@@ -1463,9 +1463,9 @@ func (a *stub) SendCustomVerificationEmail(ctx workflow.Context, input *sesv2.Se
 	return &output, err
 }
 
-func (a *stub) SendCustomVerificationEmailAsync(ctx workflow.Context, input *sesv2.SendCustomVerificationEmailInput) *SESV2SendCustomVerificationEmailFuture {
+func (a *stub) SendCustomVerificationEmailAsync(ctx workflow.Context, input *sesv2.SendCustomVerificationEmailInput) *SendCustomVerificationEmailFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.SendCustomVerificationEmail", input)
-	return &SESV2SendCustomVerificationEmailFuture{Future: future}
+	return &SendCustomVerificationEmailFuture{Future: future}
 }
 
 func (a *stub) SendEmail(ctx workflow.Context, input *sesv2.SendEmailInput) (*sesv2.SendEmailOutput, error) {
@@ -1474,9 +1474,9 @@ func (a *stub) SendEmail(ctx workflow.Context, input *sesv2.SendEmailInput) (*se
 	return &output, err
 }
 
-func (a *stub) SendEmailAsync(ctx workflow.Context, input *sesv2.SendEmailInput) *SESV2SendEmailFuture {
+func (a *stub) SendEmailAsync(ctx workflow.Context, input *sesv2.SendEmailInput) *SendEmailFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.SendEmail", input)
-	return &SESV2SendEmailFuture{Future: future}
+	return &SendEmailFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *sesv2.TagResourceInput) (*sesv2.TagResourceOutput, error) {
@@ -1485,9 +1485,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *sesv2.TagResourceInput) 
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *sesv2.TagResourceInput) *SESV2TagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *sesv2.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.TagResource", input)
-	return &SESV2TagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) TestRenderEmailTemplate(ctx workflow.Context, input *sesv2.TestRenderEmailTemplateInput) (*sesv2.TestRenderEmailTemplateOutput, error) {
@@ -1496,9 +1496,9 @@ func (a *stub) TestRenderEmailTemplate(ctx workflow.Context, input *sesv2.TestRe
 	return &output, err
 }
 
-func (a *stub) TestRenderEmailTemplateAsync(ctx workflow.Context, input *sesv2.TestRenderEmailTemplateInput) *SESV2TestRenderEmailTemplateFuture {
+func (a *stub) TestRenderEmailTemplateAsync(ctx workflow.Context, input *sesv2.TestRenderEmailTemplateInput) *TestRenderEmailTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.TestRenderEmailTemplate", input)
-	return &SESV2TestRenderEmailTemplateFuture{Future: future}
+	return &TestRenderEmailTemplateFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *sesv2.UntagResourceInput) (*sesv2.UntagResourceOutput, error) {
@@ -1507,9 +1507,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *sesv2.UntagResourceInp
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *sesv2.UntagResourceInput) *SESV2UntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *sesv2.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.UntagResource", input)
-	return &SESV2UntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateConfigurationSetEventDestination(ctx workflow.Context, input *sesv2.UpdateConfigurationSetEventDestinationInput) (*sesv2.UpdateConfigurationSetEventDestinationOutput, error) {
@@ -1518,9 +1518,9 @@ func (a *stub) UpdateConfigurationSetEventDestination(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *stub) UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *sesv2.UpdateConfigurationSetEventDestinationInput) *SESV2UpdateConfigurationSetEventDestinationFuture {
+func (a *stub) UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *sesv2.UpdateConfigurationSetEventDestinationInput) *UpdateConfigurationSetEventDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.UpdateConfigurationSetEventDestination", input)
-	return &SESV2UpdateConfigurationSetEventDestinationFuture{Future: future}
+	return &UpdateConfigurationSetEventDestinationFuture{Future: future}
 }
 
 func (a *stub) UpdateCustomVerificationEmailTemplate(ctx workflow.Context, input *sesv2.UpdateCustomVerificationEmailTemplateInput) (*sesv2.UpdateCustomVerificationEmailTemplateOutput, error) {
@@ -1529,9 +1529,9 @@ func (a *stub) UpdateCustomVerificationEmailTemplate(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *stub) UpdateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *sesv2.UpdateCustomVerificationEmailTemplateInput) *SESV2UpdateCustomVerificationEmailTemplateFuture {
+func (a *stub) UpdateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *sesv2.UpdateCustomVerificationEmailTemplateInput) *UpdateCustomVerificationEmailTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.UpdateCustomVerificationEmailTemplate", input)
-	return &SESV2UpdateCustomVerificationEmailTemplateFuture{Future: future}
+	return &UpdateCustomVerificationEmailTemplateFuture{Future: future}
 }
 
 func (a *stub) UpdateEmailIdentityPolicy(ctx workflow.Context, input *sesv2.UpdateEmailIdentityPolicyInput) (*sesv2.UpdateEmailIdentityPolicyOutput, error) {
@@ -1540,9 +1540,9 @@ func (a *stub) UpdateEmailIdentityPolicy(ctx workflow.Context, input *sesv2.Upda
 	return &output, err
 }
 
-func (a *stub) UpdateEmailIdentityPolicyAsync(ctx workflow.Context, input *sesv2.UpdateEmailIdentityPolicyInput) *SESV2UpdateEmailIdentityPolicyFuture {
+func (a *stub) UpdateEmailIdentityPolicyAsync(ctx workflow.Context, input *sesv2.UpdateEmailIdentityPolicyInput) *UpdateEmailIdentityPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.UpdateEmailIdentityPolicy", input)
-	return &SESV2UpdateEmailIdentityPolicyFuture{Future: future}
+	return &UpdateEmailIdentityPolicyFuture{Future: future}
 }
 
 func (a *stub) UpdateEmailTemplate(ctx workflow.Context, input *sesv2.UpdateEmailTemplateInput) (*sesv2.UpdateEmailTemplateOutput, error) {
@@ -1551,7 +1551,7 @@ func (a *stub) UpdateEmailTemplate(ctx workflow.Context, input *sesv2.UpdateEmai
 	return &output, err
 }
 
-func (a *stub) UpdateEmailTemplateAsync(ctx workflow.Context, input *sesv2.UpdateEmailTemplateInput) *SESV2UpdateEmailTemplateFuture {
+func (a *stub) UpdateEmailTemplateAsync(ctx workflow.Context, input *sesv2.UpdateEmailTemplateInput) *UpdateEmailTemplateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.sesv2.UpdateEmailTemplate", input)
-	return &SESV2UpdateEmailTemplateFuture{Future: future}
+	return &UpdateEmailTemplateFuture{Future: future}
 }

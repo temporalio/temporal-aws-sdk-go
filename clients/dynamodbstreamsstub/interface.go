@@ -16,16 +16,16 @@ var _ clients.VoidFuture
 
 type Client interface {
 	DescribeStream(ctx workflow.Context, input *dynamodbstreams.DescribeStreamInput) (*dynamodbstreams.DescribeStreamOutput, error)
-	DescribeStreamAsync(ctx workflow.Context, input *dynamodbstreams.DescribeStreamInput) *DynamoDBStreamsDescribeStreamFuture
+	DescribeStreamAsync(ctx workflow.Context, input *dynamodbstreams.DescribeStreamInput) *DescribeStreamFuture
 
 	GetRecords(ctx workflow.Context, input *dynamodbstreams.GetRecordsInput) (*dynamodbstreams.GetRecordsOutput, error)
-	GetRecordsAsync(ctx workflow.Context, input *dynamodbstreams.GetRecordsInput) *DynamoDBStreamsGetRecordsFuture
+	GetRecordsAsync(ctx workflow.Context, input *dynamodbstreams.GetRecordsInput) *GetRecordsFuture
 
 	GetShardIterator(ctx workflow.Context, input *dynamodbstreams.GetShardIteratorInput) (*dynamodbstreams.GetShardIteratorOutput, error)
-	GetShardIteratorAsync(ctx workflow.Context, input *dynamodbstreams.GetShardIteratorInput) *DynamoDBStreamsGetShardIteratorFuture
+	GetShardIteratorAsync(ctx workflow.Context, input *dynamodbstreams.GetShardIteratorInput) *GetShardIteratorFuture
 
 	ListStreams(ctx workflow.Context, input *dynamodbstreams.ListStreamsInput) (*dynamodbstreams.ListStreamsOutput, error)
-	ListStreamsAsync(ctx workflow.Context, input *dynamodbstreams.ListStreamsInput) *DynamoDBStreamsListStreamsFuture
+	ListStreamsAsync(ctx workflow.Context, input *dynamodbstreams.ListStreamsInput) *ListStreamsFuture
 }
 
 func NewClient() Client {

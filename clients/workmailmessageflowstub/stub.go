@@ -16,12 +16,12 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type WorkMailMessageFlowGetRawMessageContentFuture struct {
+type GetRawMessageContentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *WorkMailMessageFlowGetRawMessageContentFuture) Get(ctx workflow.Context) (*workmailmessageflow.GetRawMessageContentOutput, error) {
+func (r *GetRawMessageContentFuture) Get(ctx workflow.Context) (*workmailmessageflow.GetRawMessageContentOutput, error) {
 	var output workmailmessageflow.GetRawMessageContentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -33,7 +33,7 @@ func (a *stub) GetRawMessageContent(ctx workflow.Context, input *workmailmessage
 	return &output, err
 }
 
-func (a *stub) GetRawMessageContentAsync(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) *WorkMailMessageFlowGetRawMessageContentFuture {
+func (a *stub) GetRawMessageContentAsync(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) *GetRawMessageContentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.workmailmessageflow.GetRawMessageContent", input)
-	return &WorkMailMessageFlowGetRawMessageContentFuture{Future: future}
+	return &GetRawMessageContentFuture{Future: future}
 }

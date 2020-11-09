@@ -16,23 +16,23 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type MarketplaceCommerceAnalyticsGenerateDataSetFuture struct {
+type GenerateDataSetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MarketplaceCommerceAnalyticsGenerateDataSetFuture) Get(ctx workflow.Context) (*marketplacecommerceanalytics.GenerateDataSetOutput, error) {
+func (r *GenerateDataSetFuture) Get(ctx workflow.Context) (*marketplacecommerceanalytics.GenerateDataSetOutput, error) {
 	var output marketplacecommerceanalytics.GenerateDataSetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type MarketplaceCommerceAnalyticsStartSupportDataExportFuture struct {
+type StartSupportDataExportFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *MarketplaceCommerceAnalyticsStartSupportDataExportFuture) Get(ctx workflow.Context) (*marketplacecommerceanalytics.StartSupportDataExportOutput, error) {
+func (r *StartSupportDataExportFuture) Get(ctx workflow.Context) (*marketplacecommerceanalytics.StartSupportDataExportOutput, error) {
 	var output marketplacecommerceanalytics.StartSupportDataExportOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -44,9 +44,9 @@ func (a *stub) GenerateDataSet(ctx workflow.Context, input *marketplacecommercea
 	return &output, err
 }
 
-func (a *stub) GenerateDataSetAsync(ctx workflow.Context, input *marketplacecommerceanalytics.GenerateDataSetInput) *MarketplaceCommerceAnalyticsGenerateDataSetFuture {
+func (a *stub) GenerateDataSetAsync(ctx workflow.Context, input *marketplacecommerceanalytics.GenerateDataSetInput) *GenerateDataSetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.marketplacecommerceanalytics.GenerateDataSet", input)
-	return &MarketplaceCommerceAnalyticsGenerateDataSetFuture{Future: future}
+	return &GenerateDataSetFuture{Future: future}
 }
 
 func (a *stub) StartSupportDataExport(ctx workflow.Context, input *marketplacecommerceanalytics.StartSupportDataExportInput) (*marketplacecommerceanalytics.StartSupportDataExportOutput, error) {
@@ -55,7 +55,7 @@ func (a *stub) StartSupportDataExport(ctx workflow.Context, input *marketplaceco
 	return &output, err
 }
 
-func (a *stub) StartSupportDataExportAsync(ctx workflow.Context, input *marketplacecommerceanalytics.StartSupportDataExportInput) *MarketplaceCommerceAnalyticsStartSupportDataExportFuture {
+func (a *stub) StartSupportDataExportAsync(ctx workflow.Context, input *marketplacecommerceanalytics.StartSupportDataExportInput) *StartSupportDataExportFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.marketplacecommerceanalytics.StartSupportDataExport", input)
-	return &MarketplaceCommerceAnalyticsStartSupportDataExportFuture{Future: future}
+	return &StartSupportDataExportFuture{Future: future}
 }

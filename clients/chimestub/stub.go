@@ -16,1310 +16,1310 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type ChimeAssociatePhoneNumberWithUserFuture struct {
+type AssociatePhoneNumberWithUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeAssociatePhoneNumberWithUserFuture) Get(ctx workflow.Context) (*chime.AssociatePhoneNumberWithUserOutput, error) {
+func (r *AssociatePhoneNumberWithUserFuture) Get(ctx workflow.Context) (*chime.AssociatePhoneNumberWithUserOutput, error) {
 	var output chime.AssociatePhoneNumberWithUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeAssociatePhoneNumbersWithVoiceConnectorFuture struct {
+type AssociatePhoneNumbersWithVoiceConnectorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeAssociatePhoneNumbersWithVoiceConnectorFuture) Get(ctx workflow.Context) (*chime.AssociatePhoneNumbersWithVoiceConnectorOutput, error) {
+func (r *AssociatePhoneNumbersWithVoiceConnectorFuture) Get(ctx workflow.Context) (*chime.AssociatePhoneNumbersWithVoiceConnectorOutput, error) {
 	var output chime.AssociatePhoneNumbersWithVoiceConnectorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeAssociatePhoneNumbersWithVoiceConnectorGroupFuture struct {
+type AssociatePhoneNumbersWithVoiceConnectorGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeAssociatePhoneNumbersWithVoiceConnectorGroupFuture) Get(ctx workflow.Context) (*chime.AssociatePhoneNumbersWithVoiceConnectorGroupOutput, error) {
+func (r *AssociatePhoneNumbersWithVoiceConnectorGroupFuture) Get(ctx workflow.Context) (*chime.AssociatePhoneNumbersWithVoiceConnectorGroupOutput, error) {
 	var output chime.AssociatePhoneNumbersWithVoiceConnectorGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeAssociateSigninDelegateGroupsWithAccountFuture struct {
+type AssociateSigninDelegateGroupsWithAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeAssociateSigninDelegateGroupsWithAccountFuture) Get(ctx workflow.Context) (*chime.AssociateSigninDelegateGroupsWithAccountOutput, error) {
+func (r *AssociateSigninDelegateGroupsWithAccountFuture) Get(ctx workflow.Context) (*chime.AssociateSigninDelegateGroupsWithAccountOutput, error) {
 	var output chime.AssociateSigninDelegateGroupsWithAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeBatchCreateAttendeeFuture struct {
+type BatchCreateAttendeeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeBatchCreateAttendeeFuture) Get(ctx workflow.Context) (*chime.BatchCreateAttendeeOutput, error) {
+func (r *BatchCreateAttendeeFuture) Get(ctx workflow.Context) (*chime.BatchCreateAttendeeOutput, error) {
 	var output chime.BatchCreateAttendeeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeBatchCreateRoomMembershipFuture struct {
+type BatchCreateRoomMembershipFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeBatchCreateRoomMembershipFuture) Get(ctx workflow.Context) (*chime.BatchCreateRoomMembershipOutput, error) {
+func (r *BatchCreateRoomMembershipFuture) Get(ctx workflow.Context) (*chime.BatchCreateRoomMembershipOutput, error) {
 	var output chime.BatchCreateRoomMembershipOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeBatchDeletePhoneNumberFuture struct {
+type BatchDeletePhoneNumberFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeBatchDeletePhoneNumberFuture) Get(ctx workflow.Context) (*chime.BatchDeletePhoneNumberOutput, error) {
+func (r *BatchDeletePhoneNumberFuture) Get(ctx workflow.Context) (*chime.BatchDeletePhoneNumberOutput, error) {
 	var output chime.BatchDeletePhoneNumberOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeBatchSuspendUserFuture struct {
+type BatchSuspendUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeBatchSuspendUserFuture) Get(ctx workflow.Context) (*chime.BatchSuspendUserOutput, error) {
+func (r *BatchSuspendUserFuture) Get(ctx workflow.Context) (*chime.BatchSuspendUserOutput, error) {
 	var output chime.BatchSuspendUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeBatchUnsuspendUserFuture struct {
+type BatchUnsuspendUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeBatchUnsuspendUserFuture) Get(ctx workflow.Context) (*chime.BatchUnsuspendUserOutput, error) {
+func (r *BatchUnsuspendUserFuture) Get(ctx workflow.Context) (*chime.BatchUnsuspendUserOutput, error) {
 	var output chime.BatchUnsuspendUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeBatchUpdatePhoneNumberFuture struct {
+type BatchUpdatePhoneNumberFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeBatchUpdatePhoneNumberFuture) Get(ctx workflow.Context) (*chime.BatchUpdatePhoneNumberOutput, error) {
+func (r *BatchUpdatePhoneNumberFuture) Get(ctx workflow.Context) (*chime.BatchUpdatePhoneNumberOutput, error) {
 	var output chime.BatchUpdatePhoneNumberOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeBatchUpdateUserFuture struct {
+type BatchUpdateUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeBatchUpdateUserFuture) Get(ctx workflow.Context) (*chime.BatchUpdateUserOutput, error) {
+func (r *BatchUpdateUserFuture) Get(ctx workflow.Context) (*chime.BatchUpdateUserOutput, error) {
 	var output chime.BatchUpdateUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeCreateAccountFuture struct {
+type CreateAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeCreateAccountFuture) Get(ctx workflow.Context) (*chime.CreateAccountOutput, error) {
+func (r *CreateAccountFuture) Get(ctx workflow.Context) (*chime.CreateAccountOutput, error) {
 	var output chime.CreateAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeCreateAttendeeFuture struct {
+type CreateAttendeeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeCreateAttendeeFuture) Get(ctx workflow.Context) (*chime.CreateAttendeeOutput, error) {
+func (r *CreateAttendeeFuture) Get(ctx workflow.Context) (*chime.CreateAttendeeOutput, error) {
 	var output chime.CreateAttendeeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeCreateBotFuture struct {
+type CreateBotFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeCreateBotFuture) Get(ctx workflow.Context) (*chime.CreateBotOutput, error) {
+func (r *CreateBotFuture) Get(ctx workflow.Context) (*chime.CreateBotOutput, error) {
 	var output chime.CreateBotOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeCreateMeetingFuture struct {
+type CreateMeetingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeCreateMeetingFuture) Get(ctx workflow.Context) (*chime.CreateMeetingOutput, error) {
+func (r *CreateMeetingFuture) Get(ctx workflow.Context) (*chime.CreateMeetingOutput, error) {
 	var output chime.CreateMeetingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeCreateMeetingWithAttendeesFuture struct {
+type CreateMeetingWithAttendeesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeCreateMeetingWithAttendeesFuture) Get(ctx workflow.Context) (*chime.CreateMeetingWithAttendeesOutput, error) {
+func (r *CreateMeetingWithAttendeesFuture) Get(ctx workflow.Context) (*chime.CreateMeetingWithAttendeesOutput, error) {
 	var output chime.CreateMeetingWithAttendeesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeCreatePhoneNumberOrderFuture struct {
+type CreatePhoneNumberOrderFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeCreatePhoneNumberOrderFuture) Get(ctx workflow.Context) (*chime.CreatePhoneNumberOrderOutput, error) {
+func (r *CreatePhoneNumberOrderFuture) Get(ctx workflow.Context) (*chime.CreatePhoneNumberOrderOutput, error) {
 	var output chime.CreatePhoneNumberOrderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeCreateProxySessionFuture struct {
+type CreateProxySessionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeCreateProxySessionFuture) Get(ctx workflow.Context) (*chime.CreateProxySessionOutput, error) {
+func (r *CreateProxySessionFuture) Get(ctx workflow.Context) (*chime.CreateProxySessionOutput, error) {
 	var output chime.CreateProxySessionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeCreateRoomFuture struct {
+type CreateRoomFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeCreateRoomFuture) Get(ctx workflow.Context) (*chime.CreateRoomOutput, error) {
+func (r *CreateRoomFuture) Get(ctx workflow.Context) (*chime.CreateRoomOutput, error) {
 	var output chime.CreateRoomOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeCreateRoomMembershipFuture struct {
+type CreateRoomMembershipFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeCreateRoomMembershipFuture) Get(ctx workflow.Context) (*chime.CreateRoomMembershipOutput, error) {
+func (r *CreateRoomMembershipFuture) Get(ctx workflow.Context) (*chime.CreateRoomMembershipOutput, error) {
 	var output chime.CreateRoomMembershipOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeCreateUserFuture struct {
+type CreateUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeCreateUserFuture) Get(ctx workflow.Context) (*chime.CreateUserOutput, error) {
+func (r *CreateUserFuture) Get(ctx workflow.Context) (*chime.CreateUserOutput, error) {
 	var output chime.CreateUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeCreateVoiceConnectorFuture struct {
+type CreateVoiceConnectorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeCreateVoiceConnectorFuture) Get(ctx workflow.Context) (*chime.CreateVoiceConnectorOutput, error) {
+func (r *CreateVoiceConnectorFuture) Get(ctx workflow.Context) (*chime.CreateVoiceConnectorOutput, error) {
 	var output chime.CreateVoiceConnectorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeCreateVoiceConnectorGroupFuture struct {
+type CreateVoiceConnectorGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeCreateVoiceConnectorGroupFuture) Get(ctx workflow.Context) (*chime.CreateVoiceConnectorGroupOutput, error) {
+func (r *CreateVoiceConnectorGroupFuture) Get(ctx workflow.Context) (*chime.CreateVoiceConnectorGroupOutput, error) {
 	var output chime.CreateVoiceConnectorGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDeleteAccountFuture struct {
+type DeleteAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDeleteAccountFuture) Get(ctx workflow.Context) (*chime.DeleteAccountOutput, error) {
+func (r *DeleteAccountFuture) Get(ctx workflow.Context) (*chime.DeleteAccountOutput, error) {
 	var output chime.DeleteAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDeleteAttendeeFuture struct {
+type DeleteAttendeeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDeleteAttendeeFuture) Get(ctx workflow.Context) (*chime.DeleteAttendeeOutput, error) {
+func (r *DeleteAttendeeFuture) Get(ctx workflow.Context) (*chime.DeleteAttendeeOutput, error) {
 	var output chime.DeleteAttendeeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDeleteEventsConfigurationFuture struct {
+type DeleteEventsConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDeleteEventsConfigurationFuture) Get(ctx workflow.Context) (*chime.DeleteEventsConfigurationOutput, error) {
+func (r *DeleteEventsConfigurationFuture) Get(ctx workflow.Context) (*chime.DeleteEventsConfigurationOutput, error) {
 	var output chime.DeleteEventsConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDeleteMeetingFuture struct {
+type DeleteMeetingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDeleteMeetingFuture) Get(ctx workflow.Context) (*chime.DeleteMeetingOutput, error) {
+func (r *DeleteMeetingFuture) Get(ctx workflow.Context) (*chime.DeleteMeetingOutput, error) {
 	var output chime.DeleteMeetingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDeletePhoneNumberFuture struct {
+type DeletePhoneNumberFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDeletePhoneNumberFuture) Get(ctx workflow.Context) (*chime.DeletePhoneNumberOutput, error) {
+func (r *DeletePhoneNumberFuture) Get(ctx workflow.Context) (*chime.DeletePhoneNumberOutput, error) {
 	var output chime.DeletePhoneNumberOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDeleteProxySessionFuture struct {
+type DeleteProxySessionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDeleteProxySessionFuture) Get(ctx workflow.Context) (*chime.DeleteProxySessionOutput, error) {
+func (r *DeleteProxySessionFuture) Get(ctx workflow.Context) (*chime.DeleteProxySessionOutput, error) {
 	var output chime.DeleteProxySessionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDeleteRoomFuture struct {
+type DeleteRoomFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDeleteRoomFuture) Get(ctx workflow.Context) (*chime.DeleteRoomOutput, error) {
+func (r *DeleteRoomFuture) Get(ctx workflow.Context) (*chime.DeleteRoomOutput, error) {
 	var output chime.DeleteRoomOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDeleteRoomMembershipFuture struct {
+type DeleteRoomMembershipFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDeleteRoomMembershipFuture) Get(ctx workflow.Context) (*chime.DeleteRoomMembershipOutput, error) {
+func (r *DeleteRoomMembershipFuture) Get(ctx workflow.Context) (*chime.DeleteRoomMembershipOutput, error) {
 	var output chime.DeleteRoomMembershipOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDeleteVoiceConnectorFuture struct {
+type DeleteVoiceConnectorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDeleteVoiceConnectorFuture) Get(ctx workflow.Context) (*chime.DeleteVoiceConnectorOutput, error) {
+func (r *DeleteVoiceConnectorFuture) Get(ctx workflow.Context) (*chime.DeleteVoiceConnectorOutput, error) {
 	var output chime.DeleteVoiceConnectorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDeleteVoiceConnectorEmergencyCallingConfigurationFuture struct {
+type DeleteVoiceConnectorEmergencyCallingConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDeleteVoiceConnectorEmergencyCallingConfigurationFuture) Get(ctx workflow.Context) (*chime.DeleteVoiceConnectorEmergencyCallingConfigurationOutput, error) {
+func (r *DeleteVoiceConnectorEmergencyCallingConfigurationFuture) Get(ctx workflow.Context) (*chime.DeleteVoiceConnectorEmergencyCallingConfigurationOutput, error) {
 	var output chime.DeleteVoiceConnectorEmergencyCallingConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDeleteVoiceConnectorGroupFuture struct {
+type DeleteVoiceConnectorGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDeleteVoiceConnectorGroupFuture) Get(ctx workflow.Context) (*chime.DeleteVoiceConnectorGroupOutput, error) {
+func (r *DeleteVoiceConnectorGroupFuture) Get(ctx workflow.Context) (*chime.DeleteVoiceConnectorGroupOutput, error) {
 	var output chime.DeleteVoiceConnectorGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDeleteVoiceConnectorOriginationFuture struct {
+type DeleteVoiceConnectorOriginationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDeleteVoiceConnectorOriginationFuture) Get(ctx workflow.Context) (*chime.DeleteVoiceConnectorOriginationOutput, error) {
+func (r *DeleteVoiceConnectorOriginationFuture) Get(ctx workflow.Context) (*chime.DeleteVoiceConnectorOriginationOutput, error) {
 	var output chime.DeleteVoiceConnectorOriginationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDeleteVoiceConnectorProxyFuture struct {
+type DeleteVoiceConnectorProxyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDeleteVoiceConnectorProxyFuture) Get(ctx workflow.Context) (*chime.DeleteVoiceConnectorProxyOutput, error) {
+func (r *DeleteVoiceConnectorProxyFuture) Get(ctx workflow.Context) (*chime.DeleteVoiceConnectorProxyOutput, error) {
 	var output chime.DeleteVoiceConnectorProxyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDeleteVoiceConnectorStreamingConfigurationFuture struct {
+type DeleteVoiceConnectorStreamingConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDeleteVoiceConnectorStreamingConfigurationFuture) Get(ctx workflow.Context) (*chime.DeleteVoiceConnectorStreamingConfigurationOutput, error) {
+func (r *DeleteVoiceConnectorStreamingConfigurationFuture) Get(ctx workflow.Context) (*chime.DeleteVoiceConnectorStreamingConfigurationOutput, error) {
 	var output chime.DeleteVoiceConnectorStreamingConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDeleteVoiceConnectorTerminationFuture struct {
+type DeleteVoiceConnectorTerminationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDeleteVoiceConnectorTerminationFuture) Get(ctx workflow.Context) (*chime.DeleteVoiceConnectorTerminationOutput, error) {
+func (r *DeleteVoiceConnectorTerminationFuture) Get(ctx workflow.Context) (*chime.DeleteVoiceConnectorTerminationOutput, error) {
 	var output chime.DeleteVoiceConnectorTerminationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDeleteVoiceConnectorTerminationCredentialsFuture struct {
+type DeleteVoiceConnectorTerminationCredentialsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDeleteVoiceConnectorTerminationCredentialsFuture) Get(ctx workflow.Context) (*chime.DeleteVoiceConnectorTerminationCredentialsOutput, error) {
+func (r *DeleteVoiceConnectorTerminationCredentialsFuture) Get(ctx workflow.Context) (*chime.DeleteVoiceConnectorTerminationCredentialsOutput, error) {
 	var output chime.DeleteVoiceConnectorTerminationCredentialsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDisassociatePhoneNumberFromUserFuture struct {
+type DisassociatePhoneNumberFromUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDisassociatePhoneNumberFromUserFuture) Get(ctx workflow.Context) (*chime.DisassociatePhoneNumberFromUserOutput, error) {
+func (r *DisassociatePhoneNumberFromUserFuture) Get(ctx workflow.Context) (*chime.DisassociatePhoneNumberFromUserOutput, error) {
 	var output chime.DisassociatePhoneNumberFromUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDisassociatePhoneNumbersFromVoiceConnectorFuture struct {
+type DisassociatePhoneNumbersFromVoiceConnectorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDisassociatePhoneNumbersFromVoiceConnectorFuture) Get(ctx workflow.Context) (*chime.DisassociatePhoneNumbersFromVoiceConnectorOutput, error) {
+func (r *DisassociatePhoneNumbersFromVoiceConnectorFuture) Get(ctx workflow.Context) (*chime.DisassociatePhoneNumbersFromVoiceConnectorOutput, error) {
 	var output chime.DisassociatePhoneNumbersFromVoiceConnectorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDisassociatePhoneNumbersFromVoiceConnectorGroupFuture struct {
+type DisassociatePhoneNumbersFromVoiceConnectorGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDisassociatePhoneNumbersFromVoiceConnectorGroupFuture) Get(ctx workflow.Context) (*chime.DisassociatePhoneNumbersFromVoiceConnectorGroupOutput, error) {
+func (r *DisassociatePhoneNumbersFromVoiceConnectorGroupFuture) Get(ctx workflow.Context) (*chime.DisassociatePhoneNumbersFromVoiceConnectorGroupOutput, error) {
 	var output chime.DisassociatePhoneNumbersFromVoiceConnectorGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeDisassociateSigninDelegateGroupsFromAccountFuture struct {
+type DisassociateSigninDelegateGroupsFromAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeDisassociateSigninDelegateGroupsFromAccountFuture) Get(ctx workflow.Context) (*chime.DisassociateSigninDelegateGroupsFromAccountOutput, error) {
+func (r *DisassociateSigninDelegateGroupsFromAccountFuture) Get(ctx workflow.Context) (*chime.DisassociateSigninDelegateGroupsFromAccountOutput, error) {
 	var output chime.DisassociateSigninDelegateGroupsFromAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetAccountFuture struct {
+type GetAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetAccountFuture) Get(ctx workflow.Context) (*chime.GetAccountOutput, error) {
+func (r *GetAccountFuture) Get(ctx workflow.Context) (*chime.GetAccountOutput, error) {
 	var output chime.GetAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetAccountSettingsFuture struct {
+type GetAccountSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetAccountSettingsFuture) Get(ctx workflow.Context) (*chime.GetAccountSettingsOutput, error) {
+func (r *GetAccountSettingsFuture) Get(ctx workflow.Context) (*chime.GetAccountSettingsOutput, error) {
 	var output chime.GetAccountSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetAttendeeFuture struct {
+type GetAttendeeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetAttendeeFuture) Get(ctx workflow.Context) (*chime.GetAttendeeOutput, error) {
+func (r *GetAttendeeFuture) Get(ctx workflow.Context) (*chime.GetAttendeeOutput, error) {
 	var output chime.GetAttendeeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetBotFuture struct {
+type GetBotFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetBotFuture) Get(ctx workflow.Context) (*chime.GetBotOutput, error) {
+func (r *GetBotFuture) Get(ctx workflow.Context) (*chime.GetBotOutput, error) {
 	var output chime.GetBotOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetEventsConfigurationFuture struct {
+type GetEventsConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetEventsConfigurationFuture) Get(ctx workflow.Context) (*chime.GetEventsConfigurationOutput, error) {
+func (r *GetEventsConfigurationFuture) Get(ctx workflow.Context) (*chime.GetEventsConfigurationOutput, error) {
 	var output chime.GetEventsConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetGlobalSettingsFuture struct {
+type GetGlobalSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetGlobalSettingsFuture) Get(ctx workflow.Context) (*chime.GetGlobalSettingsOutput, error) {
+func (r *GetGlobalSettingsFuture) Get(ctx workflow.Context) (*chime.GetGlobalSettingsOutput, error) {
 	var output chime.GetGlobalSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetMeetingFuture struct {
+type GetMeetingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetMeetingFuture) Get(ctx workflow.Context) (*chime.GetMeetingOutput, error) {
+func (r *GetMeetingFuture) Get(ctx workflow.Context) (*chime.GetMeetingOutput, error) {
 	var output chime.GetMeetingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetPhoneNumberFuture struct {
+type GetPhoneNumberFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetPhoneNumberFuture) Get(ctx workflow.Context) (*chime.GetPhoneNumberOutput, error) {
+func (r *GetPhoneNumberFuture) Get(ctx workflow.Context) (*chime.GetPhoneNumberOutput, error) {
 	var output chime.GetPhoneNumberOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetPhoneNumberOrderFuture struct {
+type GetPhoneNumberOrderFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetPhoneNumberOrderFuture) Get(ctx workflow.Context) (*chime.GetPhoneNumberOrderOutput, error) {
+func (r *GetPhoneNumberOrderFuture) Get(ctx workflow.Context) (*chime.GetPhoneNumberOrderOutput, error) {
 	var output chime.GetPhoneNumberOrderOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetPhoneNumberSettingsFuture struct {
+type GetPhoneNumberSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetPhoneNumberSettingsFuture) Get(ctx workflow.Context) (*chime.GetPhoneNumberSettingsOutput, error) {
+func (r *GetPhoneNumberSettingsFuture) Get(ctx workflow.Context) (*chime.GetPhoneNumberSettingsOutput, error) {
 	var output chime.GetPhoneNumberSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetProxySessionFuture struct {
+type GetProxySessionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetProxySessionFuture) Get(ctx workflow.Context) (*chime.GetProxySessionOutput, error) {
+func (r *GetProxySessionFuture) Get(ctx workflow.Context) (*chime.GetProxySessionOutput, error) {
 	var output chime.GetProxySessionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetRetentionSettingsFuture struct {
+type GetRetentionSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetRetentionSettingsFuture) Get(ctx workflow.Context) (*chime.GetRetentionSettingsOutput, error) {
+func (r *GetRetentionSettingsFuture) Get(ctx workflow.Context) (*chime.GetRetentionSettingsOutput, error) {
 	var output chime.GetRetentionSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetRoomFuture struct {
+type GetRoomFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetRoomFuture) Get(ctx workflow.Context) (*chime.GetRoomOutput, error) {
+func (r *GetRoomFuture) Get(ctx workflow.Context) (*chime.GetRoomOutput, error) {
 	var output chime.GetRoomOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetUserFuture struct {
+type GetUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetUserFuture) Get(ctx workflow.Context) (*chime.GetUserOutput, error) {
+func (r *GetUserFuture) Get(ctx workflow.Context) (*chime.GetUserOutput, error) {
 	var output chime.GetUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetUserSettingsFuture struct {
+type GetUserSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetUserSettingsFuture) Get(ctx workflow.Context) (*chime.GetUserSettingsOutput, error) {
+func (r *GetUserSettingsFuture) Get(ctx workflow.Context) (*chime.GetUserSettingsOutput, error) {
 	var output chime.GetUserSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetVoiceConnectorFuture struct {
+type GetVoiceConnectorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetVoiceConnectorFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorOutput, error) {
+func (r *GetVoiceConnectorFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorOutput, error) {
 	var output chime.GetVoiceConnectorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetVoiceConnectorEmergencyCallingConfigurationFuture struct {
+type GetVoiceConnectorEmergencyCallingConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetVoiceConnectorEmergencyCallingConfigurationFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorEmergencyCallingConfigurationOutput, error) {
+func (r *GetVoiceConnectorEmergencyCallingConfigurationFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorEmergencyCallingConfigurationOutput, error) {
 	var output chime.GetVoiceConnectorEmergencyCallingConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetVoiceConnectorGroupFuture struct {
+type GetVoiceConnectorGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetVoiceConnectorGroupFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorGroupOutput, error) {
+func (r *GetVoiceConnectorGroupFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorGroupOutput, error) {
 	var output chime.GetVoiceConnectorGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetVoiceConnectorLoggingConfigurationFuture struct {
+type GetVoiceConnectorLoggingConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetVoiceConnectorLoggingConfigurationFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorLoggingConfigurationOutput, error) {
+func (r *GetVoiceConnectorLoggingConfigurationFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorLoggingConfigurationOutput, error) {
 	var output chime.GetVoiceConnectorLoggingConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetVoiceConnectorOriginationFuture struct {
+type GetVoiceConnectorOriginationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetVoiceConnectorOriginationFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorOriginationOutput, error) {
+func (r *GetVoiceConnectorOriginationFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorOriginationOutput, error) {
 	var output chime.GetVoiceConnectorOriginationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetVoiceConnectorProxyFuture struct {
+type GetVoiceConnectorProxyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetVoiceConnectorProxyFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorProxyOutput, error) {
+func (r *GetVoiceConnectorProxyFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorProxyOutput, error) {
 	var output chime.GetVoiceConnectorProxyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetVoiceConnectorStreamingConfigurationFuture struct {
+type GetVoiceConnectorStreamingConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetVoiceConnectorStreamingConfigurationFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorStreamingConfigurationOutput, error) {
+func (r *GetVoiceConnectorStreamingConfigurationFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorStreamingConfigurationOutput, error) {
 	var output chime.GetVoiceConnectorStreamingConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetVoiceConnectorTerminationFuture struct {
+type GetVoiceConnectorTerminationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetVoiceConnectorTerminationFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorTerminationOutput, error) {
+func (r *GetVoiceConnectorTerminationFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorTerminationOutput, error) {
 	var output chime.GetVoiceConnectorTerminationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeGetVoiceConnectorTerminationHealthFuture struct {
+type GetVoiceConnectorTerminationHealthFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeGetVoiceConnectorTerminationHealthFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorTerminationHealthOutput, error) {
+func (r *GetVoiceConnectorTerminationHealthFuture) Get(ctx workflow.Context) (*chime.GetVoiceConnectorTerminationHealthOutput, error) {
 	var output chime.GetVoiceConnectorTerminationHealthOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeInviteUsersFuture struct {
+type InviteUsersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeInviteUsersFuture) Get(ctx workflow.Context) (*chime.InviteUsersOutput, error) {
+func (r *InviteUsersFuture) Get(ctx workflow.Context) (*chime.InviteUsersOutput, error) {
 	var output chime.InviteUsersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeListAccountsFuture struct {
+type ListAccountsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeListAccountsFuture) Get(ctx workflow.Context) (*chime.ListAccountsOutput, error) {
+func (r *ListAccountsFuture) Get(ctx workflow.Context) (*chime.ListAccountsOutput, error) {
 	var output chime.ListAccountsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeListAttendeeTagsFuture struct {
+type ListAttendeeTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeListAttendeeTagsFuture) Get(ctx workflow.Context) (*chime.ListAttendeeTagsOutput, error) {
+func (r *ListAttendeeTagsFuture) Get(ctx workflow.Context) (*chime.ListAttendeeTagsOutput, error) {
 	var output chime.ListAttendeeTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeListAttendeesFuture struct {
+type ListAttendeesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeListAttendeesFuture) Get(ctx workflow.Context) (*chime.ListAttendeesOutput, error) {
+func (r *ListAttendeesFuture) Get(ctx workflow.Context) (*chime.ListAttendeesOutput, error) {
 	var output chime.ListAttendeesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeListBotsFuture struct {
+type ListBotsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeListBotsFuture) Get(ctx workflow.Context) (*chime.ListBotsOutput, error) {
+func (r *ListBotsFuture) Get(ctx workflow.Context) (*chime.ListBotsOutput, error) {
 	var output chime.ListBotsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeListMeetingTagsFuture struct {
+type ListMeetingTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeListMeetingTagsFuture) Get(ctx workflow.Context) (*chime.ListMeetingTagsOutput, error) {
+func (r *ListMeetingTagsFuture) Get(ctx workflow.Context) (*chime.ListMeetingTagsOutput, error) {
 	var output chime.ListMeetingTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeListMeetingsFuture struct {
+type ListMeetingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeListMeetingsFuture) Get(ctx workflow.Context) (*chime.ListMeetingsOutput, error) {
+func (r *ListMeetingsFuture) Get(ctx workflow.Context) (*chime.ListMeetingsOutput, error) {
 	var output chime.ListMeetingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeListPhoneNumberOrdersFuture struct {
+type ListPhoneNumberOrdersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeListPhoneNumberOrdersFuture) Get(ctx workflow.Context) (*chime.ListPhoneNumberOrdersOutput, error) {
+func (r *ListPhoneNumberOrdersFuture) Get(ctx workflow.Context) (*chime.ListPhoneNumberOrdersOutput, error) {
 	var output chime.ListPhoneNumberOrdersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeListPhoneNumbersFuture struct {
+type ListPhoneNumbersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeListPhoneNumbersFuture) Get(ctx workflow.Context) (*chime.ListPhoneNumbersOutput, error) {
+func (r *ListPhoneNumbersFuture) Get(ctx workflow.Context) (*chime.ListPhoneNumbersOutput, error) {
 	var output chime.ListPhoneNumbersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeListProxySessionsFuture struct {
+type ListProxySessionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeListProxySessionsFuture) Get(ctx workflow.Context) (*chime.ListProxySessionsOutput, error) {
+func (r *ListProxySessionsFuture) Get(ctx workflow.Context) (*chime.ListProxySessionsOutput, error) {
 	var output chime.ListProxySessionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeListRoomMembershipsFuture struct {
+type ListRoomMembershipsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeListRoomMembershipsFuture) Get(ctx workflow.Context) (*chime.ListRoomMembershipsOutput, error) {
+func (r *ListRoomMembershipsFuture) Get(ctx workflow.Context) (*chime.ListRoomMembershipsOutput, error) {
 	var output chime.ListRoomMembershipsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeListRoomsFuture struct {
+type ListRoomsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeListRoomsFuture) Get(ctx workflow.Context) (*chime.ListRoomsOutput, error) {
+func (r *ListRoomsFuture) Get(ctx workflow.Context) (*chime.ListRoomsOutput, error) {
 	var output chime.ListRoomsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeListTagsForResourceFuture) Get(ctx workflow.Context) (*chime.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*chime.ListTagsForResourceOutput, error) {
 	var output chime.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeListUsersFuture struct {
+type ListUsersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeListUsersFuture) Get(ctx workflow.Context) (*chime.ListUsersOutput, error) {
+func (r *ListUsersFuture) Get(ctx workflow.Context) (*chime.ListUsersOutput, error) {
 	var output chime.ListUsersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeListVoiceConnectorGroupsFuture struct {
+type ListVoiceConnectorGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeListVoiceConnectorGroupsFuture) Get(ctx workflow.Context) (*chime.ListVoiceConnectorGroupsOutput, error) {
+func (r *ListVoiceConnectorGroupsFuture) Get(ctx workflow.Context) (*chime.ListVoiceConnectorGroupsOutput, error) {
 	var output chime.ListVoiceConnectorGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeListVoiceConnectorTerminationCredentialsFuture struct {
+type ListVoiceConnectorTerminationCredentialsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeListVoiceConnectorTerminationCredentialsFuture) Get(ctx workflow.Context) (*chime.ListVoiceConnectorTerminationCredentialsOutput, error) {
+func (r *ListVoiceConnectorTerminationCredentialsFuture) Get(ctx workflow.Context) (*chime.ListVoiceConnectorTerminationCredentialsOutput, error) {
 	var output chime.ListVoiceConnectorTerminationCredentialsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeListVoiceConnectorsFuture struct {
+type ListVoiceConnectorsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeListVoiceConnectorsFuture) Get(ctx workflow.Context) (*chime.ListVoiceConnectorsOutput, error) {
+func (r *ListVoiceConnectorsFuture) Get(ctx workflow.Context) (*chime.ListVoiceConnectorsOutput, error) {
 	var output chime.ListVoiceConnectorsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeLogoutUserFuture struct {
+type LogoutUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeLogoutUserFuture) Get(ctx workflow.Context) (*chime.LogoutUserOutput, error) {
+func (r *LogoutUserFuture) Get(ctx workflow.Context) (*chime.LogoutUserOutput, error) {
 	var output chime.LogoutUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimePutEventsConfigurationFuture struct {
+type PutEventsConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimePutEventsConfigurationFuture) Get(ctx workflow.Context) (*chime.PutEventsConfigurationOutput, error) {
+func (r *PutEventsConfigurationFuture) Get(ctx workflow.Context) (*chime.PutEventsConfigurationOutput, error) {
 	var output chime.PutEventsConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimePutRetentionSettingsFuture struct {
+type PutRetentionSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimePutRetentionSettingsFuture) Get(ctx workflow.Context) (*chime.PutRetentionSettingsOutput, error) {
+func (r *PutRetentionSettingsFuture) Get(ctx workflow.Context) (*chime.PutRetentionSettingsOutput, error) {
 	var output chime.PutRetentionSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimePutVoiceConnectorEmergencyCallingConfigurationFuture struct {
+type PutVoiceConnectorEmergencyCallingConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimePutVoiceConnectorEmergencyCallingConfigurationFuture) Get(ctx workflow.Context) (*chime.PutVoiceConnectorEmergencyCallingConfigurationOutput, error) {
+func (r *PutVoiceConnectorEmergencyCallingConfigurationFuture) Get(ctx workflow.Context) (*chime.PutVoiceConnectorEmergencyCallingConfigurationOutput, error) {
 	var output chime.PutVoiceConnectorEmergencyCallingConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimePutVoiceConnectorLoggingConfigurationFuture struct {
+type PutVoiceConnectorLoggingConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimePutVoiceConnectorLoggingConfigurationFuture) Get(ctx workflow.Context) (*chime.PutVoiceConnectorLoggingConfigurationOutput, error) {
+func (r *PutVoiceConnectorLoggingConfigurationFuture) Get(ctx workflow.Context) (*chime.PutVoiceConnectorLoggingConfigurationOutput, error) {
 	var output chime.PutVoiceConnectorLoggingConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimePutVoiceConnectorOriginationFuture struct {
+type PutVoiceConnectorOriginationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimePutVoiceConnectorOriginationFuture) Get(ctx workflow.Context) (*chime.PutVoiceConnectorOriginationOutput, error) {
+func (r *PutVoiceConnectorOriginationFuture) Get(ctx workflow.Context) (*chime.PutVoiceConnectorOriginationOutput, error) {
 	var output chime.PutVoiceConnectorOriginationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimePutVoiceConnectorProxyFuture struct {
+type PutVoiceConnectorProxyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimePutVoiceConnectorProxyFuture) Get(ctx workflow.Context) (*chime.PutVoiceConnectorProxyOutput, error) {
+func (r *PutVoiceConnectorProxyFuture) Get(ctx workflow.Context) (*chime.PutVoiceConnectorProxyOutput, error) {
 	var output chime.PutVoiceConnectorProxyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimePutVoiceConnectorStreamingConfigurationFuture struct {
+type PutVoiceConnectorStreamingConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimePutVoiceConnectorStreamingConfigurationFuture) Get(ctx workflow.Context) (*chime.PutVoiceConnectorStreamingConfigurationOutput, error) {
+func (r *PutVoiceConnectorStreamingConfigurationFuture) Get(ctx workflow.Context) (*chime.PutVoiceConnectorStreamingConfigurationOutput, error) {
 	var output chime.PutVoiceConnectorStreamingConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimePutVoiceConnectorTerminationFuture struct {
+type PutVoiceConnectorTerminationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimePutVoiceConnectorTerminationFuture) Get(ctx workflow.Context) (*chime.PutVoiceConnectorTerminationOutput, error) {
+func (r *PutVoiceConnectorTerminationFuture) Get(ctx workflow.Context) (*chime.PutVoiceConnectorTerminationOutput, error) {
 	var output chime.PutVoiceConnectorTerminationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimePutVoiceConnectorTerminationCredentialsFuture struct {
+type PutVoiceConnectorTerminationCredentialsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimePutVoiceConnectorTerminationCredentialsFuture) Get(ctx workflow.Context) (*chime.PutVoiceConnectorTerminationCredentialsOutput, error) {
+func (r *PutVoiceConnectorTerminationCredentialsFuture) Get(ctx workflow.Context) (*chime.PutVoiceConnectorTerminationCredentialsOutput, error) {
 	var output chime.PutVoiceConnectorTerminationCredentialsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeRedactConversationMessageFuture struct {
+type RedactConversationMessageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeRedactConversationMessageFuture) Get(ctx workflow.Context) (*chime.RedactConversationMessageOutput, error) {
+func (r *RedactConversationMessageFuture) Get(ctx workflow.Context) (*chime.RedactConversationMessageOutput, error) {
 	var output chime.RedactConversationMessageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeRedactRoomMessageFuture struct {
+type RedactRoomMessageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeRedactRoomMessageFuture) Get(ctx workflow.Context) (*chime.RedactRoomMessageOutput, error) {
+func (r *RedactRoomMessageFuture) Get(ctx workflow.Context) (*chime.RedactRoomMessageOutput, error) {
 	var output chime.RedactRoomMessageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeRegenerateSecurityTokenFuture struct {
+type RegenerateSecurityTokenFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeRegenerateSecurityTokenFuture) Get(ctx workflow.Context) (*chime.RegenerateSecurityTokenOutput, error) {
+func (r *RegenerateSecurityTokenFuture) Get(ctx workflow.Context) (*chime.RegenerateSecurityTokenOutput, error) {
 	var output chime.RegenerateSecurityTokenOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeResetPersonalPINFuture struct {
+type ResetPersonalPINFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeResetPersonalPINFuture) Get(ctx workflow.Context) (*chime.ResetPersonalPINOutput, error) {
+func (r *ResetPersonalPINFuture) Get(ctx workflow.Context) (*chime.ResetPersonalPINOutput, error) {
 	var output chime.ResetPersonalPINOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeRestorePhoneNumberFuture struct {
+type RestorePhoneNumberFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeRestorePhoneNumberFuture) Get(ctx workflow.Context) (*chime.RestorePhoneNumberOutput, error) {
+func (r *RestorePhoneNumberFuture) Get(ctx workflow.Context) (*chime.RestorePhoneNumberOutput, error) {
 	var output chime.RestorePhoneNumberOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeSearchAvailablePhoneNumbersFuture struct {
+type SearchAvailablePhoneNumbersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeSearchAvailablePhoneNumbersFuture) Get(ctx workflow.Context) (*chime.SearchAvailablePhoneNumbersOutput, error) {
+func (r *SearchAvailablePhoneNumbersFuture) Get(ctx workflow.Context) (*chime.SearchAvailablePhoneNumbersOutput, error) {
 	var output chime.SearchAvailablePhoneNumbersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeTagAttendeeFuture struct {
+type TagAttendeeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeTagAttendeeFuture) Get(ctx workflow.Context) (*chime.TagAttendeeOutput, error) {
+func (r *TagAttendeeFuture) Get(ctx workflow.Context) (*chime.TagAttendeeOutput, error) {
 	var output chime.TagAttendeeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeTagMeetingFuture struct {
+type TagMeetingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeTagMeetingFuture) Get(ctx workflow.Context) (*chime.TagMeetingOutput, error) {
+func (r *TagMeetingFuture) Get(ctx workflow.Context) (*chime.TagMeetingOutput, error) {
 	var output chime.TagMeetingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeTagResourceFuture) Get(ctx workflow.Context) (*chime.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*chime.TagResourceOutput, error) {
 	var output chime.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeUntagAttendeeFuture struct {
+type UntagAttendeeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeUntagAttendeeFuture) Get(ctx workflow.Context) (*chime.UntagAttendeeOutput, error) {
+func (r *UntagAttendeeFuture) Get(ctx workflow.Context) (*chime.UntagAttendeeOutput, error) {
 	var output chime.UntagAttendeeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeUntagMeetingFuture struct {
+type UntagMeetingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeUntagMeetingFuture) Get(ctx workflow.Context) (*chime.UntagMeetingOutput, error) {
+func (r *UntagMeetingFuture) Get(ctx workflow.Context) (*chime.UntagMeetingOutput, error) {
 	var output chime.UntagMeetingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeUntagResourceFuture) Get(ctx workflow.Context) (*chime.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*chime.UntagResourceOutput, error) {
 	var output chime.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeUpdateAccountFuture struct {
+type UpdateAccountFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeUpdateAccountFuture) Get(ctx workflow.Context) (*chime.UpdateAccountOutput, error) {
+func (r *UpdateAccountFuture) Get(ctx workflow.Context) (*chime.UpdateAccountOutput, error) {
 	var output chime.UpdateAccountOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeUpdateAccountSettingsFuture struct {
+type UpdateAccountSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeUpdateAccountSettingsFuture) Get(ctx workflow.Context) (*chime.UpdateAccountSettingsOutput, error) {
+func (r *UpdateAccountSettingsFuture) Get(ctx workflow.Context) (*chime.UpdateAccountSettingsOutput, error) {
 	var output chime.UpdateAccountSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeUpdateBotFuture struct {
+type UpdateBotFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeUpdateBotFuture) Get(ctx workflow.Context) (*chime.UpdateBotOutput, error) {
+func (r *UpdateBotFuture) Get(ctx workflow.Context) (*chime.UpdateBotOutput, error) {
 	var output chime.UpdateBotOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeUpdateGlobalSettingsFuture struct {
+type UpdateGlobalSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeUpdateGlobalSettingsFuture) Get(ctx workflow.Context) (*chime.UpdateGlobalSettingsOutput, error) {
+func (r *UpdateGlobalSettingsFuture) Get(ctx workflow.Context) (*chime.UpdateGlobalSettingsOutput, error) {
 	var output chime.UpdateGlobalSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeUpdatePhoneNumberFuture struct {
+type UpdatePhoneNumberFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeUpdatePhoneNumberFuture) Get(ctx workflow.Context) (*chime.UpdatePhoneNumberOutput, error) {
+func (r *UpdatePhoneNumberFuture) Get(ctx workflow.Context) (*chime.UpdatePhoneNumberOutput, error) {
 	var output chime.UpdatePhoneNumberOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeUpdatePhoneNumberSettingsFuture struct {
+type UpdatePhoneNumberSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeUpdatePhoneNumberSettingsFuture) Get(ctx workflow.Context) (*chime.UpdatePhoneNumberSettingsOutput, error) {
+func (r *UpdatePhoneNumberSettingsFuture) Get(ctx workflow.Context) (*chime.UpdatePhoneNumberSettingsOutput, error) {
 	var output chime.UpdatePhoneNumberSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeUpdateProxySessionFuture struct {
+type UpdateProxySessionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeUpdateProxySessionFuture) Get(ctx workflow.Context) (*chime.UpdateProxySessionOutput, error) {
+func (r *UpdateProxySessionFuture) Get(ctx workflow.Context) (*chime.UpdateProxySessionOutput, error) {
 	var output chime.UpdateProxySessionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeUpdateRoomFuture struct {
+type UpdateRoomFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeUpdateRoomFuture) Get(ctx workflow.Context) (*chime.UpdateRoomOutput, error) {
+func (r *UpdateRoomFuture) Get(ctx workflow.Context) (*chime.UpdateRoomOutput, error) {
 	var output chime.UpdateRoomOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeUpdateRoomMembershipFuture struct {
+type UpdateRoomMembershipFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeUpdateRoomMembershipFuture) Get(ctx workflow.Context) (*chime.UpdateRoomMembershipOutput, error) {
+func (r *UpdateRoomMembershipFuture) Get(ctx workflow.Context) (*chime.UpdateRoomMembershipOutput, error) {
 	var output chime.UpdateRoomMembershipOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeUpdateUserFuture struct {
+type UpdateUserFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeUpdateUserFuture) Get(ctx workflow.Context) (*chime.UpdateUserOutput, error) {
+func (r *UpdateUserFuture) Get(ctx workflow.Context) (*chime.UpdateUserOutput, error) {
 	var output chime.UpdateUserOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeUpdateUserSettingsFuture struct {
+type UpdateUserSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeUpdateUserSettingsFuture) Get(ctx workflow.Context) (*chime.UpdateUserSettingsOutput, error) {
+func (r *UpdateUserSettingsFuture) Get(ctx workflow.Context) (*chime.UpdateUserSettingsOutput, error) {
 	var output chime.UpdateUserSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeUpdateVoiceConnectorFuture struct {
+type UpdateVoiceConnectorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeUpdateVoiceConnectorFuture) Get(ctx workflow.Context) (*chime.UpdateVoiceConnectorOutput, error) {
+func (r *UpdateVoiceConnectorFuture) Get(ctx workflow.Context) (*chime.UpdateVoiceConnectorOutput, error) {
 	var output chime.UpdateVoiceConnectorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ChimeUpdateVoiceConnectorGroupFuture struct {
+type UpdateVoiceConnectorGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ChimeUpdateVoiceConnectorGroupFuture) Get(ctx workflow.Context) (*chime.UpdateVoiceConnectorGroupOutput, error) {
+func (r *UpdateVoiceConnectorGroupFuture) Get(ctx workflow.Context) (*chime.UpdateVoiceConnectorGroupOutput, error) {
 	var output chime.UpdateVoiceConnectorGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -1331,9 +1331,9 @@ func (a *stub) AssociatePhoneNumberWithUser(ctx workflow.Context, input *chime.A
 	return &output, err
 }
 
-func (a *stub) AssociatePhoneNumberWithUserAsync(ctx workflow.Context, input *chime.AssociatePhoneNumberWithUserInput) *ChimeAssociatePhoneNumberWithUserFuture {
+func (a *stub) AssociatePhoneNumberWithUserAsync(ctx workflow.Context, input *chime.AssociatePhoneNumberWithUserInput) *AssociatePhoneNumberWithUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.AssociatePhoneNumberWithUser", input)
-	return &ChimeAssociatePhoneNumberWithUserFuture{Future: future}
+	return &AssociatePhoneNumberWithUserFuture{Future: future}
 }
 
 func (a *stub) AssociatePhoneNumbersWithVoiceConnector(ctx workflow.Context, input *chime.AssociatePhoneNumbersWithVoiceConnectorInput) (*chime.AssociatePhoneNumbersWithVoiceConnectorOutput, error) {
@@ -1342,9 +1342,9 @@ func (a *stub) AssociatePhoneNumbersWithVoiceConnector(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *stub) AssociatePhoneNumbersWithVoiceConnectorAsync(ctx workflow.Context, input *chime.AssociatePhoneNumbersWithVoiceConnectorInput) *ChimeAssociatePhoneNumbersWithVoiceConnectorFuture {
+func (a *stub) AssociatePhoneNumbersWithVoiceConnectorAsync(ctx workflow.Context, input *chime.AssociatePhoneNumbersWithVoiceConnectorInput) *AssociatePhoneNumbersWithVoiceConnectorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.AssociatePhoneNumbersWithVoiceConnector", input)
-	return &ChimeAssociatePhoneNumbersWithVoiceConnectorFuture{Future: future}
+	return &AssociatePhoneNumbersWithVoiceConnectorFuture{Future: future}
 }
 
 func (a *stub) AssociatePhoneNumbersWithVoiceConnectorGroup(ctx workflow.Context, input *chime.AssociatePhoneNumbersWithVoiceConnectorGroupInput) (*chime.AssociatePhoneNumbersWithVoiceConnectorGroupOutput, error) {
@@ -1353,9 +1353,9 @@ func (a *stub) AssociatePhoneNumbersWithVoiceConnectorGroup(ctx workflow.Context
 	return &output, err
 }
 
-func (a *stub) AssociatePhoneNumbersWithVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.AssociatePhoneNumbersWithVoiceConnectorGroupInput) *ChimeAssociatePhoneNumbersWithVoiceConnectorGroupFuture {
+func (a *stub) AssociatePhoneNumbersWithVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.AssociatePhoneNumbersWithVoiceConnectorGroupInput) *AssociatePhoneNumbersWithVoiceConnectorGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.AssociatePhoneNumbersWithVoiceConnectorGroup", input)
-	return &ChimeAssociatePhoneNumbersWithVoiceConnectorGroupFuture{Future: future}
+	return &AssociatePhoneNumbersWithVoiceConnectorGroupFuture{Future: future}
 }
 
 func (a *stub) AssociateSigninDelegateGroupsWithAccount(ctx workflow.Context, input *chime.AssociateSigninDelegateGroupsWithAccountInput) (*chime.AssociateSigninDelegateGroupsWithAccountOutput, error) {
@@ -1364,9 +1364,9 @@ func (a *stub) AssociateSigninDelegateGroupsWithAccount(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *stub) AssociateSigninDelegateGroupsWithAccountAsync(ctx workflow.Context, input *chime.AssociateSigninDelegateGroupsWithAccountInput) *ChimeAssociateSigninDelegateGroupsWithAccountFuture {
+func (a *stub) AssociateSigninDelegateGroupsWithAccountAsync(ctx workflow.Context, input *chime.AssociateSigninDelegateGroupsWithAccountInput) *AssociateSigninDelegateGroupsWithAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.AssociateSigninDelegateGroupsWithAccount", input)
-	return &ChimeAssociateSigninDelegateGroupsWithAccountFuture{Future: future}
+	return &AssociateSigninDelegateGroupsWithAccountFuture{Future: future}
 }
 
 func (a *stub) BatchCreateAttendee(ctx workflow.Context, input *chime.BatchCreateAttendeeInput) (*chime.BatchCreateAttendeeOutput, error) {
@@ -1375,9 +1375,9 @@ func (a *stub) BatchCreateAttendee(ctx workflow.Context, input *chime.BatchCreat
 	return &output, err
 }
 
-func (a *stub) BatchCreateAttendeeAsync(ctx workflow.Context, input *chime.BatchCreateAttendeeInput) *ChimeBatchCreateAttendeeFuture {
+func (a *stub) BatchCreateAttendeeAsync(ctx workflow.Context, input *chime.BatchCreateAttendeeInput) *BatchCreateAttendeeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.BatchCreateAttendee", input)
-	return &ChimeBatchCreateAttendeeFuture{Future: future}
+	return &BatchCreateAttendeeFuture{Future: future}
 }
 
 func (a *stub) BatchCreateRoomMembership(ctx workflow.Context, input *chime.BatchCreateRoomMembershipInput) (*chime.BatchCreateRoomMembershipOutput, error) {
@@ -1386,9 +1386,9 @@ func (a *stub) BatchCreateRoomMembership(ctx workflow.Context, input *chime.Batc
 	return &output, err
 }
 
-func (a *stub) BatchCreateRoomMembershipAsync(ctx workflow.Context, input *chime.BatchCreateRoomMembershipInput) *ChimeBatchCreateRoomMembershipFuture {
+func (a *stub) BatchCreateRoomMembershipAsync(ctx workflow.Context, input *chime.BatchCreateRoomMembershipInput) *BatchCreateRoomMembershipFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.BatchCreateRoomMembership", input)
-	return &ChimeBatchCreateRoomMembershipFuture{Future: future}
+	return &BatchCreateRoomMembershipFuture{Future: future}
 }
 
 func (a *stub) BatchDeletePhoneNumber(ctx workflow.Context, input *chime.BatchDeletePhoneNumberInput) (*chime.BatchDeletePhoneNumberOutput, error) {
@@ -1397,9 +1397,9 @@ func (a *stub) BatchDeletePhoneNumber(ctx workflow.Context, input *chime.BatchDe
 	return &output, err
 }
 
-func (a *stub) BatchDeletePhoneNumberAsync(ctx workflow.Context, input *chime.BatchDeletePhoneNumberInput) *ChimeBatchDeletePhoneNumberFuture {
+func (a *stub) BatchDeletePhoneNumberAsync(ctx workflow.Context, input *chime.BatchDeletePhoneNumberInput) *BatchDeletePhoneNumberFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.BatchDeletePhoneNumber", input)
-	return &ChimeBatchDeletePhoneNumberFuture{Future: future}
+	return &BatchDeletePhoneNumberFuture{Future: future}
 }
 
 func (a *stub) BatchSuspendUser(ctx workflow.Context, input *chime.BatchSuspendUserInput) (*chime.BatchSuspendUserOutput, error) {
@@ -1408,9 +1408,9 @@ func (a *stub) BatchSuspendUser(ctx workflow.Context, input *chime.BatchSuspendU
 	return &output, err
 }
 
-func (a *stub) BatchSuspendUserAsync(ctx workflow.Context, input *chime.BatchSuspendUserInput) *ChimeBatchSuspendUserFuture {
+func (a *stub) BatchSuspendUserAsync(ctx workflow.Context, input *chime.BatchSuspendUserInput) *BatchSuspendUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.BatchSuspendUser", input)
-	return &ChimeBatchSuspendUserFuture{Future: future}
+	return &BatchSuspendUserFuture{Future: future}
 }
 
 func (a *stub) BatchUnsuspendUser(ctx workflow.Context, input *chime.BatchUnsuspendUserInput) (*chime.BatchUnsuspendUserOutput, error) {
@@ -1419,9 +1419,9 @@ func (a *stub) BatchUnsuspendUser(ctx workflow.Context, input *chime.BatchUnsusp
 	return &output, err
 }
 
-func (a *stub) BatchUnsuspendUserAsync(ctx workflow.Context, input *chime.BatchUnsuspendUserInput) *ChimeBatchUnsuspendUserFuture {
+func (a *stub) BatchUnsuspendUserAsync(ctx workflow.Context, input *chime.BatchUnsuspendUserInput) *BatchUnsuspendUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.BatchUnsuspendUser", input)
-	return &ChimeBatchUnsuspendUserFuture{Future: future}
+	return &BatchUnsuspendUserFuture{Future: future}
 }
 
 func (a *stub) BatchUpdatePhoneNumber(ctx workflow.Context, input *chime.BatchUpdatePhoneNumberInput) (*chime.BatchUpdatePhoneNumberOutput, error) {
@@ -1430,9 +1430,9 @@ func (a *stub) BatchUpdatePhoneNumber(ctx workflow.Context, input *chime.BatchUp
 	return &output, err
 }
 
-func (a *stub) BatchUpdatePhoneNumberAsync(ctx workflow.Context, input *chime.BatchUpdatePhoneNumberInput) *ChimeBatchUpdatePhoneNumberFuture {
+func (a *stub) BatchUpdatePhoneNumberAsync(ctx workflow.Context, input *chime.BatchUpdatePhoneNumberInput) *BatchUpdatePhoneNumberFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.BatchUpdatePhoneNumber", input)
-	return &ChimeBatchUpdatePhoneNumberFuture{Future: future}
+	return &BatchUpdatePhoneNumberFuture{Future: future}
 }
 
 func (a *stub) BatchUpdateUser(ctx workflow.Context, input *chime.BatchUpdateUserInput) (*chime.BatchUpdateUserOutput, error) {
@@ -1441,9 +1441,9 @@ func (a *stub) BatchUpdateUser(ctx workflow.Context, input *chime.BatchUpdateUse
 	return &output, err
 }
 
-func (a *stub) BatchUpdateUserAsync(ctx workflow.Context, input *chime.BatchUpdateUserInput) *ChimeBatchUpdateUserFuture {
+func (a *stub) BatchUpdateUserAsync(ctx workflow.Context, input *chime.BatchUpdateUserInput) *BatchUpdateUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.BatchUpdateUser", input)
-	return &ChimeBatchUpdateUserFuture{Future: future}
+	return &BatchUpdateUserFuture{Future: future}
 }
 
 func (a *stub) CreateAccount(ctx workflow.Context, input *chime.CreateAccountInput) (*chime.CreateAccountOutput, error) {
@@ -1452,9 +1452,9 @@ func (a *stub) CreateAccount(ctx workflow.Context, input *chime.CreateAccountInp
 	return &output, err
 }
 
-func (a *stub) CreateAccountAsync(ctx workflow.Context, input *chime.CreateAccountInput) *ChimeCreateAccountFuture {
+func (a *stub) CreateAccountAsync(ctx workflow.Context, input *chime.CreateAccountInput) *CreateAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.CreateAccount", input)
-	return &ChimeCreateAccountFuture{Future: future}
+	return &CreateAccountFuture{Future: future}
 }
 
 func (a *stub) CreateAttendee(ctx workflow.Context, input *chime.CreateAttendeeInput) (*chime.CreateAttendeeOutput, error) {
@@ -1463,9 +1463,9 @@ func (a *stub) CreateAttendee(ctx workflow.Context, input *chime.CreateAttendeeI
 	return &output, err
 }
 
-func (a *stub) CreateAttendeeAsync(ctx workflow.Context, input *chime.CreateAttendeeInput) *ChimeCreateAttendeeFuture {
+func (a *stub) CreateAttendeeAsync(ctx workflow.Context, input *chime.CreateAttendeeInput) *CreateAttendeeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.CreateAttendee", input)
-	return &ChimeCreateAttendeeFuture{Future: future}
+	return &CreateAttendeeFuture{Future: future}
 }
 
 func (a *stub) CreateBot(ctx workflow.Context, input *chime.CreateBotInput) (*chime.CreateBotOutput, error) {
@@ -1474,9 +1474,9 @@ func (a *stub) CreateBot(ctx workflow.Context, input *chime.CreateBotInput) (*ch
 	return &output, err
 }
 
-func (a *stub) CreateBotAsync(ctx workflow.Context, input *chime.CreateBotInput) *ChimeCreateBotFuture {
+func (a *stub) CreateBotAsync(ctx workflow.Context, input *chime.CreateBotInput) *CreateBotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.CreateBot", input)
-	return &ChimeCreateBotFuture{Future: future}
+	return &CreateBotFuture{Future: future}
 }
 
 func (a *stub) CreateMeeting(ctx workflow.Context, input *chime.CreateMeetingInput) (*chime.CreateMeetingOutput, error) {
@@ -1485,9 +1485,9 @@ func (a *stub) CreateMeeting(ctx workflow.Context, input *chime.CreateMeetingInp
 	return &output, err
 }
 
-func (a *stub) CreateMeetingAsync(ctx workflow.Context, input *chime.CreateMeetingInput) *ChimeCreateMeetingFuture {
+func (a *stub) CreateMeetingAsync(ctx workflow.Context, input *chime.CreateMeetingInput) *CreateMeetingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.CreateMeeting", input)
-	return &ChimeCreateMeetingFuture{Future: future}
+	return &CreateMeetingFuture{Future: future}
 }
 
 func (a *stub) CreateMeetingWithAttendees(ctx workflow.Context, input *chime.CreateMeetingWithAttendeesInput) (*chime.CreateMeetingWithAttendeesOutput, error) {
@@ -1496,9 +1496,9 @@ func (a *stub) CreateMeetingWithAttendees(ctx workflow.Context, input *chime.Cre
 	return &output, err
 }
 
-func (a *stub) CreateMeetingWithAttendeesAsync(ctx workflow.Context, input *chime.CreateMeetingWithAttendeesInput) *ChimeCreateMeetingWithAttendeesFuture {
+func (a *stub) CreateMeetingWithAttendeesAsync(ctx workflow.Context, input *chime.CreateMeetingWithAttendeesInput) *CreateMeetingWithAttendeesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.CreateMeetingWithAttendees", input)
-	return &ChimeCreateMeetingWithAttendeesFuture{Future: future}
+	return &CreateMeetingWithAttendeesFuture{Future: future}
 }
 
 func (a *stub) CreatePhoneNumberOrder(ctx workflow.Context, input *chime.CreatePhoneNumberOrderInput) (*chime.CreatePhoneNumberOrderOutput, error) {
@@ -1507,9 +1507,9 @@ func (a *stub) CreatePhoneNumberOrder(ctx workflow.Context, input *chime.CreateP
 	return &output, err
 }
 
-func (a *stub) CreatePhoneNumberOrderAsync(ctx workflow.Context, input *chime.CreatePhoneNumberOrderInput) *ChimeCreatePhoneNumberOrderFuture {
+func (a *stub) CreatePhoneNumberOrderAsync(ctx workflow.Context, input *chime.CreatePhoneNumberOrderInput) *CreatePhoneNumberOrderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.CreatePhoneNumberOrder", input)
-	return &ChimeCreatePhoneNumberOrderFuture{Future: future}
+	return &CreatePhoneNumberOrderFuture{Future: future}
 }
 
 func (a *stub) CreateProxySession(ctx workflow.Context, input *chime.CreateProxySessionInput) (*chime.CreateProxySessionOutput, error) {
@@ -1518,9 +1518,9 @@ func (a *stub) CreateProxySession(ctx workflow.Context, input *chime.CreateProxy
 	return &output, err
 }
 
-func (a *stub) CreateProxySessionAsync(ctx workflow.Context, input *chime.CreateProxySessionInput) *ChimeCreateProxySessionFuture {
+func (a *stub) CreateProxySessionAsync(ctx workflow.Context, input *chime.CreateProxySessionInput) *CreateProxySessionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.CreateProxySession", input)
-	return &ChimeCreateProxySessionFuture{Future: future}
+	return &CreateProxySessionFuture{Future: future}
 }
 
 func (a *stub) CreateRoom(ctx workflow.Context, input *chime.CreateRoomInput) (*chime.CreateRoomOutput, error) {
@@ -1529,9 +1529,9 @@ func (a *stub) CreateRoom(ctx workflow.Context, input *chime.CreateRoomInput) (*
 	return &output, err
 }
 
-func (a *stub) CreateRoomAsync(ctx workflow.Context, input *chime.CreateRoomInput) *ChimeCreateRoomFuture {
+func (a *stub) CreateRoomAsync(ctx workflow.Context, input *chime.CreateRoomInput) *CreateRoomFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.CreateRoom", input)
-	return &ChimeCreateRoomFuture{Future: future}
+	return &CreateRoomFuture{Future: future}
 }
 
 func (a *stub) CreateRoomMembership(ctx workflow.Context, input *chime.CreateRoomMembershipInput) (*chime.CreateRoomMembershipOutput, error) {
@@ -1540,9 +1540,9 @@ func (a *stub) CreateRoomMembership(ctx workflow.Context, input *chime.CreateRoo
 	return &output, err
 }
 
-func (a *stub) CreateRoomMembershipAsync(ctx workflow.Context, input *chime.CreateRoomMembershipInput) *ChimeCreateRoomMembershipFuture {
+func (a *stub) CreateRoomMembershipAsync(ctx workflow.Context, input *chime.CreateRoomMembershipInput) *CreateRoomMembershipFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.CreateRoomMembership", input)
-	return &ChimeCreateRoomMembershipFuture{Future: future}
+	return &CreateRoomMembershipFuture{Future: future}
 }
 
 func (a *stub) CreateUser(ctx workflow.Context, input *chime.CreateUserInput) (*chime.CreateUserOutput, error) {
@@ -1551,9 +1551,9 @@ func (a *stub) CreateUser(ctx workflow.Context, input *chime.CreateUserInput) (*
 	return &output, err
 }
 
-func (a *stub) CreateUserAsync(ctx workflow.Context, input *chime.CreateUserInput) *ChimeCreateUserFuture {
+func (a *stub) CreateUserAsync(ctx workflow.Context, input *chime.CreateUserInput) *CreateUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.CreateUser", input)
-	return &ChimeCreateUserFuture{Future: future}
+	return &CreateUserFuture{Future: future}
 }
 
 func (a *stub) CreateVoiceConnector(ctx workflow.Context, input *chime.CreateVoiceConnectorInput) (*chime.CreateVoiceConnectorOutput, error) {
@@ -1562,9 +1562,9 @@ func (a *stub) CreateVoiceConnector(ctx workflow.Context, input *chime.CreateVoi
 	return &output, err
 }
 
-func (a *stub) CreateVoiceConnectorAsync(ctx workflow.Context, input *chime.CreateVoiceConnectorInput) *ChimeCreateVoiceConnectorFuture {
+func (a *stub) CreateVoiceConnectorAsync(ctx workflow.Context, input *chime.CreateVoiceConnectorInput) *CreateVoiceConnectorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.CreateVoiceConnector", input)
-	return &ChimeCreateVoiceConnectorFuture{Future: future}
+	return &CreateVoiceConnectorFuture{Future: future}
 }
 
 func (a *stub) CreateVoiceConnectorGroup(ctx workflow.Context, input *chime.CreateVoiceConnectorGroupInput) (*chime.CreateVoiceConnectorGroupOutput, error) {
@@ -1573,9 +1573,9 @@ func (a *stub) CreateVoiceConnectorGroup(ctx workflow.Context, input *chime.Crea
 	return &output, err
 }
 
-func (a *stub) CreateVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.CreateVoiceConnectorGroupInput) *ChimeCreateVoiceConnectorGroupFuture {
+func (a *stub) CreateVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.CreateVoiceConnectorGroupInput) *CreateVoiceConnectorGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.CreateVoiceConnectorGroup", input)
-	return &ChimeCreateVoiceConnectorGroupFuture{Future: future}
+	return &CreateVoiceConnectorGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteAccount(ctx workflow.Context, input *chime.DeleteAccountInput) (*chime.DeleteAccountOutput, error) {
@@ -1584,9 +1584,9 @@ func (a *stub) DeleteAccount(ctx workflow.Context, input *chime.DeleteAccountInp
 	return &output, err
 }
 
-func (a *stub) DeleteAccountAsync(ctx workflow.Context, input *chime.DeleteAccountInput) *ChimeDeleteAccountFuture {
+func (a *stub) DeleteAccountAsync(ctx workflow.Context, input *chime.DeleteAccountInput) *DeleteAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DeleteAccount", input)
-	return &ChimeDeleteAccountFuture{Future: future}
+	return &DeleteAccountFuture{Future: future}
 }
 
 func (a *stub) DeleteAttendee(ctx workflow.Context, input *chime.DeleteAttendeeInput) (*chime.DeleteAttendeeOutput, error) {
@@ -1595,9 +1595,9 @@ func (a *stub) DeleteAttendee(ctx workflow.Context, input *chime.DeleteAttendeeI
 	return &output, err
 }
 
-func (a *stub) DeleteAttendeeAsync(ctx workflow.Context, input *chime.DeleteAttendeeInput) *ChimeDeleteAttendeeFuture {
+func (a *stub) DeleteAttendeeAsync(ctx workflow.Context, input *chime.DeleteAttendeeInput) *DeleteAttendeeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DeleteAttendee", input)
-	return &ChimeDeleteAttendeeFuture{Future: future}
+	return &DeleteAttendeeFuture{Future: future}
 }
 
 func (a *stub) DeleteEventsConfiguration(ctx workflow.Context, input *chime.DeleteEventsConfigurationInput) (*chime.DeleteEventsConfigurationOutput, error) {
@@ -1606,9 +1606,9 @@ func (a *stub) DeleteEventsConfiguration(ctx workflow.Context, input *chime.Dele
 	return &output, err
 }
 
-func (a *stub) DeleteEventsConfigurationAsync(ctx workflow.Context, input *chime.DeleteEventsConfigurationInput) *ChimeDeleteEventsConfigurationFuture {
+func (a *stub) DeleteEventsConfigurationAsync(ctx workflow.Context, input *chime.DeleteEventsConfigurationInput) *DeleteEventsConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DeleteEventsConfiguration", input)
-	return &ChimeDeleteEventsConfigurationFuture{Future: future}
+	return &DeleteEventsConfigurationFuture{Future: future}
 }
 
 func (a *stub) DeleteMeeting(ctx workflow.Context, input *chime.DeleteMeetingInput) (*chime.DeleteMeetingOutput, error) {
@@ -1617,9 +1617,9 @@ func (a *stub) DeleteMeeting(ctx workflow.Context, input *chime.DeleteMeetingInp
 	return &output, err
 }
 
-func (a *stub) DeleteMeetingAsync(ctx workflow.Context, input *chime.DeleteMeetingInput) *ChimeDeleteMeetingFuture {
+func (a *stub) DeleteMeetingAsync(ctx workflow.Context, input *chime.DeleteMeetingInput) *DeleteMeetingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DeleteMeeting", input)
-	return &ChimeDeleteMeetingFuture{Future: future}
+	return &DeleteMeetingFuture{Future: future}
 }
 
 func (a *stub) DeletePhoneNumber(ctx workflow.Context, input *chime.DeletePhoneNumberInput) (*chime.DeletePhoneNumberOutput, error) {
@@ -1628,9 +1628,9 @@ func (a *stub) DeletePhoneNumber(ctx workflow.Context, input *chime.DeletePhoneN
 	return &output, err
 }
 
-func (a *stub) DeletePhoneNumberAsync(ctx workflow.Context, input *chime.DeletePhoneNumberInput) *ChimeDeletePhoneNumberFuture {
+func (a *stub) DeletePhoneNumberAsync(ctx workflow.Context, input *chime.DeletePhoneNumberInput) *DeletePhoneNumberFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DeletePhoneNumber", input)
-	return &ChimeDeletePhoneNumberFuture{Future: future}
+	return &DeletePhoneNumberFuture{Future: future}
 }
 
 func (a *stub) DeleteProxySession(ctx workflow.Context, input *chime.DeleteProxySessionInput) (*chime.DeleteProxySessionOutput, error) {
@@ -1639,9 +1639,9 @@ func (a *stub) DeleteProxySession(ctx workflow.Context, input *chime.DeleteProxy
 	return &output, err
 }
 
-func (a *stub) DeleteProxySessionAsync(ctx workflow.Context, input *chime.DeleteProxySessionInput) *ChimeDeleteProxySessionFuture {
+func (a *stub) DeleteProxySessionAsync(ctx workflow.Context, input *chime.DeleteProxySessionInput) *DeleteProxySessionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DeleteProxySession", input)
-	return &ChimeDeleteProxySessionFuture{Future: future}
+	return &DeleteProxySessionFuture{Future: future}
 }
 
 func (a *stub) DeleteRoom(ctx workflow.Context, input *chime.DeleteRoomInput) (*chime.DeleteRoomOutput, error) {
@@ -1650,9 +1650,9 @@ func (a *stub) DeleteRoom(ctx workflow.Context, input *chime.DeleteRoomInput) (*
 	return &output, err
 }
 
-func (a *stub) DeleteRoomAsync(ctx workflow.Context, input *chime.DeleteRoomInput) *ChimeDeleteRoomFuture {
+func (a *stub) DeleteRoomAsync(ctx workflow.Context, input *chime.DeleteRoomInput) *DeleteRoomFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DeleteRoom", input)
-	return &ChimeDeleteRoomFuture{Future: future}
+	return &DeleteRoomFuture{Future: future}
 }
 
 func (a *stub) DeleteRoomMembership(ctx workflow.Context, input *chime.DeleteRoomMembershipInput) (*chime.DeleteRoomMembershipOutput, error) {
@@ -1661,9 +1661,9 @@ func (a *stub) DeleteRoomMembership(ctx workflow.Context, input *chime.DeleteRoo
 	return &output, err
 }
 
-func (a *stub) DeleteRoomMembershipAsync(ctx workflow.Context, input *chime.DeleteRoomMembershipInput) *ChimeDeleteRoomMembershipFuture {
+func (a *stub) DeleteRoomMembershipAsync(ctx workflow.Context, input *chime.DeleteRoomMembershipInput) *DeleteRoomMembershipFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DeleteRoomMembership", input)
-	return &ChimeDeleteRoomMembershipFuture{Future: future}
+	return &DeleteRoomMembershipFuture{Future: future}
 }
 
 func (a *stub) DeleteVoiceConnector(ctx workflow.Context, input *chime.DeleteVoiceConnectorInput) (*chime.DeleteVoiceConnectorOutput, error) {
@@ -1672,9 +1672,9 @@ func (a *stub) DeleteVoiceConnector(ctx workflow.Context, input *chime.DeleteVoi
 	return &output, err
 }
 
-func (a *stub) DeleteVoiceConnectorAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorInput) *ChimeDeleteVoiceConnectorFuture {
+func (a *stub) DeleteVoiceConnectorAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorInput) *DeleteVoiceConnectorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DeleteVoiceConnector", input)
-	return &ChimeDeleteVoiceConnectorFuture{Future: future}
+	return &DeleteVoiceConnectorFuture{Future: future}
 }
 
 func (a *stub) DeleteVoiceConnectorEmergencyCallingConfiguration(ctx workflow.Context, input *chime.DeleteVoiceConnectorEmergencyCallingConfigurationInput) (*chime.DeleteVoiceConnectorEmergencyCallingConfigurationOutput, error) {
@@ -1683,9 +1683,9 @@ func (a *stub) DeleteVoiceConnectorEmergencyCallingConfiguration(ctx workflow.Co
 	return &output, err
 }
 
-func (a *stub) DeleteVoiceConnectorEmergencyCallingConfigurationAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorEmergencyCallingConfigurationInput) *ChimeDeleteVoiceConnectorEmergencyCallingConfigurationFuture {
+func (a *stub) DeleteVoiceConnectorEmergencyCallingConfigurationAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorEmergencyCallingConfigurationInput) *DeleteVoiceConnectorEmergencyCallingConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DeleteVoiceConnectorEmergencyCallingConfiguration", input)
-	return &ChimeDeleteVoiceConnectorEmergencyCallingConfigurationFuture{Future: future}
+	return &DeleteVoiceConnectorEmergencyCallingConfigurationFuture{Future: future}
 }
 
 func (a *stub) DeleteVoiceConnectorGroup(ctx workflow.Context, input *chime.DeleteVoiceConnectorGroupInput) (*chime.DeleteVoiceConnectorGroupOutput, error) {
@@ -1694,9 +1694,9 @@ func (a *stub) DeleteVoiceConnectorGroup(ctx workflow.Context, input *chime.Dele
 	return &output, err
 }
 
-func (a *stub) DeleteVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorGroupInput) *ChimeDeleteVoiceConnectorGroupFuture {
+func (a *stub) DeleteVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorGroupInput) *DeleteVoiceConnectorGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DeleteVoiceConnectorGroup", input)
-	return &ChimeDeleteVoiceConnectorGroupFuture{Future: future}
+	return &DeleteVoiceConnectorGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteVoiceConnectorOrigination(ctx workflow.Context, input *chime.DeleteVoiceConnectorOriginationInput) (*chime.DeleteVoiceConnectorOriginationOutput, error) {
@@ -1705,9 +1705,9 @@ func (a *stub) DeleteVoiceConnectorOrigination(ctx workflow.Context, input *chim
 	return &output, err
 }
 
-func (a *stub) DeleteVoiceConnectorOriginationAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorOriginationInput) *ChimeDeleteVoiceConnectorOriginationFuture {
+func (a *stub) DeleteVoiceConnectorOriginationAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorOriginationInput) *DeleteVoiceConnectorOriginationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DeleteVoiceConnectorOrigination", input)
-	return &ChimeDeleteVoiceConnectorOriginationFuture{Future: future}
+	return &DeleteVoiceConnectorOriginationFuture{Future: future}
 }
 
 func (a *stub) DeleteVoiceConnectorProxy(ctx workflow.Context, input *chime.DeleteVoiceConnectorProxyInput) (*chime.DeleteVoiceConnectorProxyOutput, error) {
@@ -1716,9 +1716,9 @@ func (a *stub) DeleteVoiceConnectorProxy(ctx workflow.Context, input *chime.Dele
 	return &output, err
 }
 
-func (a *stub) DeleteVoiceConnectorProxyAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorProxyInput) *ChimeDeleteVoiceConnectorProxyFuture {
+func (a *stub) DeleteVoiceConnectorProxyAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorProxyInput) *DeleteVoiceConnectorProxyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DeleteVoiceConnectorProxy", input)
-	return &ChimeDeleteVoiceConnectorProxyFuture{Future: future}
+	return &DeleteVoiceConnectorProxyFuture{Future: future}
 }
 
 func (a *stub) DeleteVoiceConnectorStreamingConfiguration(ctx workflow.Context, input *chime.DeleteVoiceConnectorStreamingConfigurationInput) (*chime.DeleteVoiceConnectorStreamingConfigurationOutput, error) {
@@ -1727,9 +1727,9 @@ func (a *stub) DeleteVoiceConnectorStreamingConfiguration(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *stub) DeleteVoiceConnectorStreamingConfigurationAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorStreamingConfigurationInput) *ChimeDeleteVoiceConnectorStreamingConfigurationFuture {
+func (a *stub) DeleteVoiceConnectorStreamingConfigurationAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorStreamingConfigurationInput) *DeleteVoiceConnectorStreamingConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DeleteVoiceConnectorStreamingConfiguration", input)
-	return &ChimeDeleteVoiceConnectorStreamingConfigurationFuture{Future: future}
+	return &DeleteVoiceConnectorStreamingConfigurationFuture{Future: future}
 }
 
 func (a *stub) DeleteVoiceConnectorTermination(ctx workflow.Context, input *chime.DeleteVoiceConnectorTerminationInput) (*chime.DeleteVoiceConnectorTerminationOutput, error) {
@@ -1738,9 +1738,9 @@ func (a *stub) DeleteVoiceConnectorTermination(ctx workflow.Context, input *chim
 	return &output, err
 }
 
-func (a *stub) DeleteVoiceConnectorTerminationAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorTerminationInput) *ChimeDeleteVoiceConnectorTerminationFuture {
+func (a *stub) DeleteVoiceConnectorTerminationAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorTerminationInput) *DeleteVoiceConnectorTerminationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DeleteVoiceConnectorTermination", input)
-	return &ChimeDeleteVoiceConnectorTerminationFuture{Future: future}
+	return &DeleteVoiceConnectorTerminationFuture{Future: future}
 }
 
 func (a *stub) DeleteVoiceConnectorTerminationCredentials(ctx workflow.Context, input *chime.DeleteVoiceConnectorTerminationCredentialsInput) (*chime.DeleteVoiceConnectorTerminationCredentialsOutput, error) {
@@ -1749,9 +1749,9 @@ func (a *stub) DeleteVoiceConnectorTerminationCredentials(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *stub) DeleteVoiceConnectorTerminationCredentialsAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorTerminationCredentialsInput) *ChimeDeleteVoiceConnectorTerminationCredentialsFuture {
+func (a *stub) DeleteVoiceConnectorTerminationCredentialsAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorTerminationCredentialsInput) *DeleteVoiceConnectorTerminationCredentialsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DeleteVoiceConnectorTerminationCredentials", input)
-	return &ChimeDeleteVoiceConnectorTerminationCredentialsFuture{Future: future}
+	return &DeleteVoiceConnectorTerminationCredentialsFuture{Future: future}
 }
 
 func (a *stub) DisassociatePhoneNumberFromUser(ctx workflow.Context, input *chime.DisassociatePhoneNumberFromUserInput) (*chime.DisassociatePhoneNumberFromUserOutput, error) {
@@ -1760,9 +1760,9 @@ func (a *stub) DisassociatePhoneNumberFromUser(ctx workflow.Context, input *chim
 	return &output, err
 }
 
-func (a *stub) DisassociatePhoneNumberFromUserAsync(ctx workflow.Context, input *chime.DisassociatePhoneNumberFromUserInput) *ChimeDisassociatePhoneNumberFromUserFuture {
+func (a *stub) DisassociatePhoneNumberFromUserAsync(ctx workflow.Context, input *chime.DisassociatePhoneNumberFromUserInput) *DisassociatePhoneNumberFromUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DisassociatePhoneNumberFromUser", input)
-	return &ChimeDisassociatePhoneNumberFromUserFuture{Future: future}
+	return &DisassociatePhoneNumberFromUserFuture{Future: future}
 }
 
 func (a *stub) DisassociatePhoneNumbersFromVoiceConnector(ctx workflow.Context, input *chime.DisassociatePhoneNumbersFromVoiceConnectorInput) (*chime.DisassociatePhoneNumbersFromVoiceConnectorOutput, error) {
@@ -1771,9 +1771,9 @@ func (a *stub) DisassociatePhoneNumbersFromVoiceConnector(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *stub) DisassociatePhoneNumbersFromVoiceConnectorAsync(ctx workflow.Context, input *chime.DisassociatePhoneNumbersFromVoiceConnectorInput) *ChimeDisassociatePhoneNumbersFromVoiceConnectorFuture {
+func (a *stub) DisassociatePhoneNumbersFromVoiceConnectorAsync(ctx workflow.Context, input *chime.DisassociatePhoneNumbersFromVoiceConnectorInput) *DisassociatePhoneNumbersFromVoiceConnectorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DisassociatePhoneNumbersFromVoiceConnector", input)
-	return &ChimeDisassociatePhoneNumbersFromVoiceConnectorFuture{Future: future}
+	return &DisassociatePhoneNumbersFromVoiceConnectorFuture{Future: future}
 }
 
 func (a *stub) DisassociatePhoneNumbersFromVoiceConnectorGroup(ctx workflow.Context, input *chime.DisassociatePhoneNumbersFromVoiceConnectorGroupInput) (*chime.DisassociatePhoneNumbersFromVoiceConnectorGroupOutput, error) {
@@ -1782,9 +1782,9 @@ func (a *stub) DisassociatePhoneNumbersFromVoiceConnectorGroup(ctx workflow.Cont
 	return &output, err
 }
 
-func (a *stub) DisassociatePhoneNumbersFromVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.DisassociatePhoneNumbersFromVoiceConnectorGroupInput) *ChimeDisassociatePhoneNumbersFromVoiceConnectorGroupFuture {
+func (a *stub) DisassociatePhoneNumbersFromVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.DisassociatePhoneNumbersFromVoiceConnectorGroupInput) *DisassociatePhoneNumbersFromVoiceConnectorGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DisassociatePhoneNumbersFromVoiceConnectorGroup", input)
-	return &ChimeDisassociatePhoneNumbersFromVoiceConnectorGroupFuture{Future: future}
+	return &DisassociatePhoneNumbersFromVoiceConnectorGroupFuture{Future: future}
 }
 
 func (a *stub) DisassociateSigninDelegateGroupsFromAccount(ctx workflow.Context, input *chime.DisassociateSigninDelegateGroupsFromAccountInput) (*chime.DisassociateSigninDelegateGroupsFromAccountOutput, error) {
@@ -1793,9 +1793,9 @@ func (a *stub) DisassociateSigninDelegateGroupsFromAccount(ctx workflow.Context,
 	return &output, err
 }
 
-func (a *stub) DisassociateSigninDelegateGroupsFromAccountAsync(ctx workflow.Context, input *chime.DisassociateSigninDelegateGroupsFromAccountInput) *ChimeDisassociateSigninDelegateGroupsFromAccountFuture {
+func (a *stub) DisassociateSigninDelegateGroupsFromAccountAsync(ctx workflow.Context, input *chime.DisassociateSigninDelegateGroupsFromAccountInput) *DisassociateSigninDelegateGroupsFromAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.DisassociateSigninDelegateGroupsFromAccount", input)
-	return &ChimeDisassociateSigninDelegateGroupsFromAccountFuture{Future: future}
+	return &DisassociateSigninDelegateGroupsFromAccountFuture{Future: future}
 }
 
 func (a *stub) GetAccount(ctx workflow.Context, input *chime.GetAccountInput) (*chime.GetAccountOutput, error) {
@@ -1804,9 +1804,9 @@ func (a *stub) GetAccount(ctx workflow.Context, input *chime.GetAccountInput) (*
 	return &output, err
 }
 
-func (a *stub) GetAccountAsync(ctx workflow.Context, input *chime.GetAccountInput) *ChimeGetAccountFuture {
+func (a *stub) GetAccountAsync(ctx workflow.Context, input *chime.GetAccountInput) *GetAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetAccount", input)
-	return &ChimeGetAccountFuture{Future: future}
+	return &GetAccountFuture{Future: future}
 }
 
 func (a *stub) GetAccountSettings(ctx workflow.Context, input *chime.GetAccountSettingsInput) (*chime.GetAccountSettingsOutput, error) {
@@ -1815,9 +1815,9 @@ func (a *stub) GetAccountSettings(ctx workflow.Context, input *chime.GetAccountS
 	return &output, err
 }
 
-func (a *stub) GetAccountSettingsAsync(ctx workflow.Context, input *chime.GetAccountSettingsInput) *ChimeGetAccountSettingsFuture {
+func (a *stub) GetAccountSettingsAsync(ctx workflow.Context, input *chime.GetAccountSettingsInput) *GetAccountSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetAccountSettings", input)
-	return &ChimeGetAccountSettingsFuture{Future: future}
+	return &GetAccountSettingsFuture{Future: future}
 }
 
 func (a *stub) GetAttendee(ctx workflow.Context, input *chime.GetAttendeeInput) (*chime.GetAttendeeOutput, error) {
@@ -1826,9 +1826,9 @@ func (a *stub) GetAttendee(ctx workflow.Context, input *chime.GetAttendeeInput) 
 	return &output, err
 }
 
-func (a *stub) GetAttendeeAsync(ctx workflow.Context, input *chime.GetAttendeeInput) *ChimeGetAttendeeFuture {
+func (a *stub) GetAttendeeAsync(ctx workflow.Context, input *chime.GetAttendeeInput) *GetAttendeeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetAttendee", input)
-	return &ChimeGetAttendeeFuture{Future: future}
+	return &GetAttendeeFuture{Future: future}
 }
 
 func (a *stub) GetBot(ctx workflow.Context, input *chime.GetBotInput) (*chime.GetBotOutput, error) {
@@ -1837,9 +1837,9 @@ func (a *stub) GetBot(ctx workflow.Context, input *chime.GetBotInput) (*chime.Ge
 	return &output, err
 }
 
-func (a *stub) GetBotAsync(ctx workflow.Context, input *chime.GetBotInput) *ChimeGetBotFuture {
+func (a *stub) GetBotAsync(ctx workflow.Context, input *chime.GetBotInput) *GetBotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetBot", input)
-	return &ChimeGetBotFuture{Future: future}
+	return &GetBotFuture{Future: future}
 }
 
 func (a *stub) GetEventsConfiguration(ctx workflow.Context, input *chime.GetEventsConfigurationInput) (*chime.GetEventsConfigurationOutput, error) {
@@ -1848,9 +1848,9 @@ func (a *stub) GetEventsConfiguration(ctx workflow.Context, input *chime.GetEven
 	return &output, err
 }
 
-func (a *stub) GetEventsConfigurationAsync(ctx workflow.Context, input *chime.GetEventsConfigurationInput) *ChimeGetEventsConfigurationFuture {
+func (a *stub) GetEventsConfigurationAsync(ctx workflow.Context, input *chime.GetEventsConfigurationInput) *GetEventsConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetEventsConfiguration", input)
-	return &ChimeGetEventsConfigurationFuture{Future: future}
+	return &GetEventsConfigurationFuture{Future: future}
 }
 
 func (a *stub) GetGlobalSettings(ctx workflow.Context, input *chime.GetGlobalSettingsInput) (*chime.GetGlobalSettingsOutput, error) {
@@ -1859,9 +1859,9 @@ func (a *stub) GetGlobalSettings(ctx workflow.Context, input *chime.GetGlobalSet
 	return &output, err
 }
 
-func (a *stub) GetGlobalSettingsAsync(ctx workflow.Context, input *chime.GetGlobalSettingsInput) *ChimeGetGlobalSettingsFuture {
+func (a *stub) GetGlobalSettingsAsync(ctx workflow.Context, input *chime.GetGlobalSettingsInput) *GetGlobalSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetGlobalSettings", input)
-	return &ChimeGetGlobalSettingsFuture{Future: future}
+	return &GetGlobalSettingsFuture{Future: future}
 }
 
 func (a *stub) GetMeeting(ctx workflow.Context, input *chime.GetMeetingInput) (*chime.GetMeetingOutput, error) {
@@ -1870,9 +1870,9 @@ func (a *stub) GetMeeting(ctx workflow.Context, input *chime.GetMeetingInput) (*
 	return &output, err
 }
 
-func (a *stub) GetMeetingAsync(ctx workflow.Context, input *chime.GetMeetingInput) *ChimeGetMeetingFuture {
+func (a *stub) GetMeetingAsync(ctx workflow.Context, input *chime.GetMeetingInput) *GetMeetingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetMeeting", input)
-	return &ChimeGetMeetingFuture{Future: future}
+	return &GetMeetingFuture{Future: future}
 }
 
 func (a *stub) GetPhoneNumber(ctx workflow.Context, input *chime.GetPhoneNumberInput) (*chime.GetPhoneNumberOutput, error) {
@@ -1881,9 +1881,9 @@ func (a *stub) GetPhoneNumber(ctx workflow.Context, input *chime.GetPhoneNumberI
 	return &output, err
 }
 
-func (a *stub) GetPhoneNumberAsync(ctx workflow.Context, input *chime.GetPhoneNumberInput) *ChimeGetPhoneNumberFuture {
+func (a *stub) GetPhoneNumberAsync(ctx workflow.Context, input *chime.GetPhoneNumberInput) *GetPhoneNumberFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetPhoneNumber", input)
-	return &ChimeGetPhoneNumberFuture{Future: future}
+	return &GetPhoneNumberFuture{Future: future}
 }
 
 func (a *stub) GetPhoneNumberOrder(ctx workflow.Context, input *chime.GetPhoneNumberOrderInput) (*chime.GetPhoneNumberOrderOutput, error) {
@@ -1892,9 +1892,9 @@ func (a *stub) GetPhoneNumberOrder(ctx workflow.Context, input *chime.GetPhoneNu
 	return &output, err
 }
 
-func (a *stub) GetPhoneNumberOrderAsync(ctx workflow.Context, input *chime.GetPhoneNumberOrderInput) *ChimeGetPhoneNumberOrderFuture {
+func (a *stub) GetPhoneNumberOrderAsync(ctx workflow.Context, input *chime.GetPhoneNumberOrderInput) *GetPhoneNumberOrderFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetPhoneNumberOrder", input)
-	return &ChimeGetPhoneNumberOrderFuture{Future: future}
+	return &GetPhoneNumberOrderFuture{Future: future}
 }
 
 func (a *stub) GetPhoneNumberSettings(ctx workflow.Context, input *chime.GetPhoneNumberSettingsInput) (*chime.GetPhoneNumberSettingsOutput, error) {
@@ -1903,9 +1903,9 @@ func (a *stub) GetPhoneNumberSettings(ctx workflow.Context, input *chime.GetPhon
 	return &output, err
 }
 
-func (a *stub) GetPhoneNumberSettingsAsync(ctx workflow.Context, input *chime.GetPhoneNumberSettingsInput) *ChimeGetPhoneNumberSettingsFuture {
+func (a *stub) GetPhoneNumberSettingsAsync(ctx workflow.Context, input *chime.GetPhoneNumberSettingsInput) *GetPhoneNumberSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetPhoneNumberSettings", input)
-	return &ChimeGetPhoneNumberSettingsFuture{Future: future}
+	return &GetPhoneNumberSettingsFuture{Future: future}
 }
 
 func (a *stub) GetProxySession(ctx workflow.Context, input *chime.GetProxySessionInput) (*chime.GetProxySessionOutput, error) {
@@ -1914,9 +1914,9 @@ func (a *stub) GetProxySession(ctx workflow.Context, input *chime.GetProxySessio
 	return &output, err
 }
 
-func (a *stub) GetProxySessionAsync(ctx workflow.Context, input *chime.GetProxySessionInput) *ChimeGetProxySessionFuture {
+func (a *stub) GetProxySessionAsync(ctx workflow.Context, input *chime.GetProxySessionInput) *GetProxySessionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetProxySession", input)
-	return &ChimeGetProxySessionFuture{Future: future}
+	return &GetProxySessionFuture{Future: future}
 }
 
 func (a *stub) GetRetentionSettings(ctx workflow.Context, input *chime.GetRetentionSettingsInput) (*chime.GetRetentionSettingsOutput, error) {
@@ -1925,9 +1925,9 @@ func (a *stub) GetRetentionSettings(ctx workflow.Context, input *chime.GetRetent
 	return &output, err
 }
 
-func (a *stub) GetRetentionSettingsAsync(ctx workflow.Context, input *chime.GetRetentionSettingsInput) *ChimeGetRetentionSettingsFuture {
+func (a *stub) GetRetentionSettingsAsync(ctx workflow.Context, input *chime.GetRetentionSettingsInput) *GetRetentionSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetRetentionSettings", input)
-	return &ChimeGetRetentionSettingsFuture{Future: future}
+	return &GetRetentionSettingsFuture{Future: future}
 }
 
 func (a *stub) GetRoom(ctx workflow.Context, input *chime.GetRoomInput) (*chime.GetRoomOutput, error) {
@@ -1936,9 +1936,9 @@ func (a *stub) GetRoom(ctx workflow.Context, input *chime.GetRoomInput) (*chime.
 	return &output, err
 }
 
-func (a *stub) GetRoomAsync(ctx workflow.Context, input *chime.GetRoomInput) *ChimeGetRoomFuture {
+func (a *stub) GetRoomAsync(ctx workflow.Context, input *chime.GetRoomInput) *GetRoomFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetRoom", input)
-	return &ChimeGetRoomFuture{Future: future}
+	return &GetRoomFuture{Future: future}
 }
 
 func (a *stub) GetUser(ctx workflow.Context, input *chime.GetUserInput) (*chime.GetUserOutput, error) {
@@ -1947,9 +1947,9 @@ func (a *stub) GetUser(ctx workflow.Context, input *chime.GetUserInput) (*chime.
 	return &output, err
 }
 
-func (a *stub) GetUserAsync(ctx workflow.Context, input *chime.GetUserInput) *ChimeGetUserFuture {
+func (a *stub) GetUserAsync(ctx workflow.Context, input *chime.GetUserInput) *GetUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetUser", input)
-	return &ChimeGetUserFuture{Future: future}
+	return &GetUserFuture{Future: future}
 }
 
 func (a *stub) GetUserSettings(ctx workflow.Context, input *chime.GetUserSettingsInput) (*chime.GetUserSettingsOutput, error) {
@@ -1958,9 +1958,9 @@ func (a *stub) GetUserSettings(ctx workflow.Context, input *chime.GetUserSetting
 	return &output, err
 }
 
-func (a *stub) GetUserSettingsAsync(ctx workflow.Context, input *chime.GetUserSettingsInput) *ChimeGetUserSettingsFuture {
+func (a *stub) GetUserSettingsAsync(ctx workflow.Context, input *chime.GetUserSettingsInput) *GetUserSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetUserSettings", input)
-	return &ChimeGetUserSettingsFuture{Future: future}
+	return &GetUserSettingsFuture{Future: future}
 }
 
 func (a *stub) GetVoiceConnector(ctx workflow.Context, input *chime.GetVoiceConnectorInput) (*chime.GetVoiceConnectorOutput, error) {
@@ -1969,9 +1969,9 @@ func (a *stub) GetVoiceConnector(ctx workflow.Context, input *chime.GetVoiceConn
 	return &output, err
 }
 
-func (a *stub) GetVoiceConnectorAsync(ctx workflow.Context, input *chime.GetVoiceConnectorInput) *ChimeGetVoiceConnectorFuture {
+func (a *stub) GetVoiceConnectorAsync(ctx workflow.Context, input *chime.GetVoiceConnectorInput) *GetVoiceConnectorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetVoiceConnector", input)
-	return &ChimeGetVoiceConnectorFuture{Future: future}
+	return &GetVoiceConnectorFuture{Future: future}
 }
 
 func (a *stub) GetVoiceConnectorEmergencyCallingConfiguration(ctx workflow.Context, input *chime.GetVoiceConnectorEmergencyCallingConfigurationInput) (*chime.GetVoiceConnectorEmergencyCallingConfigurationOutput, error) {
@@ -1980,9 +1980,9 @@ func (a *stub) GetVoiceConnectorEmergencyCallingConfiguration(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *stub) GetVoiceConnectorEmergencyCallingConfigurationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorEmergencyCallingConfigurationInput) *ChimeGetVoiceConnectorEmergencyCallingConfigurationFuture {
+func (a *stub) GetVoiceConnectorEmergencyCallingConfigurationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorEmergencyCallingConfigurationInput) *GetVoiceConnectorEmergencyCallingConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetVoiceConnectorEmergencyCallingConfiguration", input)
-	return &ChimeGetVoiceConnectorEmergencyCallingConfigurationFuture{Future: future}
+	return &GetVoiceConnectorEmergencyCallingConfigurationFuture{Future: future}
 }
 
 func (a *stub) GetVoiceConnectorGroup(ctx workflow.Context, input *chime.GetVoiceConnectorGroupInput) (*chime.GetVoiceConnectorGroupOutput, error) {
@@ -1991,9 +1991,9 @@ func (a *stub) GetVoiceConnectorGroup(ctx workflow.Context, input *chime.GetVoic
 	return &output, err
 }
 
-func (a *stub) GetVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.GetVoiceConnectorGroupInput) *ChimeGetVoiceConnectorGroupFuture {
+func (a *stub) GetVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.GetVoiceConnectorGroupInput) *GetVoiceConnectorGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetVoiceConnectorGroup", input)
-	return &ChimeGetVoiceConnectorGroupFuture{Future: future}
+	return &GetVoiceConnectorGroupFuture{Future: future}
 }
 
 func (a *stub) GetVoiceConnectorLoggingConfiguration(ctx workflow.Context, input *chime.GetVoiceConnectorLoggingConfigurationInput) (*chime.GetVoiceConnectorLoggingConfigurationOutput, error) {
@@ -2002,9 +2002,9 @@ func (a *stub) GetVoiceConnectorLoggingConfiguration(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *stub) GetVoiceConnectorLoggingConfigurationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorLoggingConfigurationInput) *ChimeGetVoiceConnectorLoggingConfigurationFuture {
+func (a *stub) GetVoiceConnectorLoggingConfigurationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorLoggingConfigurationInput) *GetVoiceConnectorLoggingConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetVoiceConnectorLoggingConfiguration", input)
-	return &ChimeGetVoiceConnectorLoggingConfigurationFuture{Future: future}
+	return &GetVoiceConnectorLoggingConfigurationFuture{Future: future}
 }
 
 func (a *stub) GetVoiceConnectorOrigination(ctx workflow.Context, input *chime.GetVoiceConnectorOriginationInput) (*chime.GetVoiceConnectorOriginationOutput, error) {
@@ -2013,9 +2013,9 @@ func (a *stub) GetVoiceConnectorOrigination(ctx workflow.Context, input *chime.G
 	return &output, err
 }
 
-func (a *stub) GetVoiceConnectorOriginationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorOriginationInput) *ChimeGetVoiceConnectorOriginationFuture {
+func (a *stub) GetVoiceConnectorOriginationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorOriginationInput) *GetVoiceConnectorOriginationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetVoiceConnectorOrigination", input)
-	return &ChimeGetVoiceConnectorOriginationFuture{Future: future}
+	return &GetVoiceConnectorOriginationFuture{Future: future}
 }
 
 func (a *stub) GetVoiceConnectorProxy(ctx workflow.Context, input *chime.GetVoiceConnectorProxyInput) (*chime.GetVoiceConnectorProxyOutput, error) {
@@ -2024,9 +2024,9 @@ func (a *stub) GetVoiceConnectorProxy(ctx workflow.Context, input *chime.GetVoic
 	return &output, err
 }
 
-func (a *stub) GetVoiceConnectorProxyAsync(ctx workflow.Context, input *chime.GetVoiceConnectorProxyInput) *ChimeGetVoiceConnectorProxyFuture {
+func (a *stub) GetVoiceConnectorProxyAsync(ctx workflow.Context, input *chime.GetVoiceConnectorProxyInput) *GetVoiceConnectorProxyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetVoiceConnectorProxy", input)
-	return &ChimeGetVoiceConnectorProxyFuture{Future: future}
+	return &GetVoiceConnectorProxyFuture{Future: future}
 }
 
 func (a *stub) GetVoiceConnectorStreamingConfiguration(ctx workflow.Context, input *chime.GetVoiceConnectorStreamingConfigurationInput) (*chime.GetVoiceConnectorStreamingConfigurationOutput, error) {
@@ -2035,9 +2035,9 @@ func (a *stub) GetVoiceConnectorStreamingConfiguration(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *stub) GetVoiceConnectorStreamingConfigurationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorStreamingConfigurationInput) *ChimeGetVoiceConnectorStreamingConfigurationFuture {
+func (a *stub) GetVoiceConnectorStreamingConfigurationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorStreamingConfigurationInput) *GetVoiceConnectorStreamingConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetVoiceConnectorStreamingConfiguration", input)
-	return &ChimeGetVoiceConnectorStreamingConfigurationFuture{Future: future}
+	return &GetVoiceConnectorStreamingConfigurationFuture{Future: future}
 }
 
 func (a *stub) GetVoiceConnectorTermination(ctx workflow.Context, input *chime.GetVoiceConnectorTerminationInput) (*chime.GetVoiceConnectorTerminationOutput, error) {
@@ -2046,9 +2046,9 @@ func (a *stub) GetVoiceConnectorTermination(ctx workflow.Context, input *chime.G
 	return &output, err
 }
 
-func (a *stub) GetVoiceConnectorTerminationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorTerminationInput) *ChimeGetVoiceConnectorTerminationFuture {
+func (a *stub) GetVoiceConnectorTerminationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorTerminationInput) *GetVoiceConnectorTerminationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetVoiceConnectorTermination", input)
-	return &ChimeGetVoiceConnectorTerminationFuture{Future: future}
+	return &GetVoiceConnectorTerminationFuture{Future: future}
 }
 
 func (a *stub) GetVoiceConnectorTerminationHealth(ctx workflow.Context, input *chime.GetVoiceConnectorTerminationHealthInput) (*chime.GetVoiceConnectorTerminationHealthOutput, error) {
@@ -2057,9 +2057,9 @@ func (a *stub) GetVoiceConnectorTerminationHealth(ctx workflow.Context, input *c
 	return &output, err
 }
 
-func (a *stub) GetVoiceConnectorTerminationHealthAsync(ctx workflow.Context, input *chime.GetVoiceConnectorTerminationHealthInput) *ChimeGetVoiceConnectorTerminationHealthFuture {
+func (a *stub) GetVoiceConnectorTerminationHealthAsync(ctx workflow.Context, input *chime.GetVoiceConnectorTerminationHealthInput) *GetVoiceConnectorTerminationHealthFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.GetVoiceConnectorTerminationHealth", input)
-	return &ChimeGetVoiceConnectorTerminationHealthFuture{Future: future}
+	return &GetVoiceConnectorTerminationHealthFuture{Future: future}
 }
 
 func (a *stub) InviteUsers(ctx workflow.Context, input *chime.InviteUsersInput) (*chime.InviteUsersOutput, error) {
@@ -2068,9 +2068,9 @@ func (a *stub) InviteUsers(ctx workflow.Context, input *chime.InviteUsersInput) 
 	return &output, err
 }
 
-func (a *stub) InviteUsersAsync(ctx workflow.Context, input *chime.InviteUsersInput) *ChimeInviteUsersFuture {
+func (a *stub) InviteUsersAsync(ctx workflow.Context, input *chime.InviteUsersInput) *InviteUsersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.InviteUsers", input)
-	return &ChimeInviteUsersFuture{Future: future}
+	return &InviteUsersFuture{Future: future}
 }
 
 func (a *stub) ListAccounts(ctx workflow.Context, input *chime.ListAccountsInput) (*chime.ListAccountsOutput, error) {
@@ -2079,9 +2079,9 @@ func (a *stub) ListAccounts(ctx workflow.Context, input *chime.ListAccountsInput
 	return &output, err
 }
 
-func (a *stub) ListAccountsAsync(ctx workflow.Context, input *chime.ListAccountsInput) *ChimeListAccountsFuture {
+func (a *stub) ListAccountsAsync(ctx workflow.Context, input *chime.ListAccountsInput) *ListAccountsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.ListAccounts", input)
-	return &ChimeListAccountsFuture{Future: future}
+	return &ListAccountsFuture{Future: future}
 }
 
 func (a *stub) ListAttendeeTags(ctx workflow.Context, input *chime.ListAttendeeTagsInput) (*chime.ListAttendeeTagsOutput, error) {
@@ -2090,9 +2090,9 @@ func (a *stub) ListAttendeeTags(ctx workflow.Context, input *chime.ListAttendeeT
 	return &output, err
 }
 
-func (a *stub) ListAttendeeTagsAsync(ctx workflow.Context, input *chime.ListAttendeeTagsInput) *ChimeListAttendeeTagsFuture {
+func (a *stub) ListAttendeeTagsAsync(ctx workflow.Context, input *chime.ListAttendeeTagsInput) *ListAttendeeTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.ListAttendeeTags", input)
-	return &ChimeListAttendeeTagsFuture{Future: future}
+	return &ListAttendeeTagsFuture{Future: future}
 }
 
 func (a *stub) ListAttendees(ctx workflow.Context, input *chime.ListAttendeesInput) (*chime.ListAttendeesOutput, error) {
@@ -2101,9 +2101,9 @@ func (a *stub) ListAttendees(ctx workflow.Context, input *chime.ListAttendeesInp
 	return &output, err
 }
 
-func (a *stub) ListAttendeesAsync(ctx workflow.Context, input *chime.ListAttendeesInput) *ChimeListAttendeesFuture {
+func (a *stub) ListAttendeesAsync(ctx workflow.Context, input *chime.ListAttendeesInput) *ListAttendeesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.ListAttendees", input)
-	return &ChimeListAttendeesFuture{Future: future}
+	return &ListAttendeesFuture{Future: future}
 }
 
 func (a *stub) ListBots(ctx workflow.Context, input *chime.ListBotsInput) (*chime.ListBotsOutput, error) {
@@ -2112,9 +2112,9 @@ func (a *stub) ListBots(ctx workflow.Context, input *chime.ListBotsInput) (*chim
 	return &output, err
 }
 
-func (a *stub) ListBotsAsync(ctx workflow.Context, input *chime.ListBotsInput) *ChimeListBotsFuture {
+func (a *stub) ListBotsAsync(ctx workflow.Context, input *chime.ListBotsInput) *ListBotsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.ListBots", input)
-	return &ChimeListBotsFuture{Future: future}
+	return &ListBotsFuture{Future: future}
 }
 
 func (a *stub) ListMeetingTags(ctx workflow.Context, input *chime.ListMeetingTagsInput) (*chime.ListMeetingTagsOutput, error) {
@@ -2123,9 +2123,9 @@ func (a *stub) ListMeetingTags(ctx workflow.Context, input *chime.ListMeetingTag
 	return &output, err
 }
 
-func (a *stub) ListMeetingTagsAsync(ctx workflow.Context, input *chime.ListMeetingTagsInput) *ChimeListMeetingTagsFuture {
+func (a *stub) ListMeetingTagsAsync(ctx workflow.Context, input *chime.ListMeetingTagsInput) *ListMeetingTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.ListMeetingTags", input)
-	return &ChimeListMeetingTagsFuture{Future: future}
+	return &ListMeetingTagsFuture{Future: future}
 }
 
 func (a *stub) ListMeetings(ctx workflow.Context, input *chime.ListMeetingsInput) (*chime.ListMeetingsOutput, error) {
@@ -2134,9 +2134,9 @@ func (a *stub) ListMeetings(ctx workflow.Context, input *chime.ListMeetingsInput
 	return &output, err
 }
 
-func (a *stub) ListMeetingsAsync(ctx workflow.Context, input *chime.ListMeetingsInput) *ChimeListMeetingsFuture {
+func (a *stub) ListMeetingsAsync(ctx workflow.Context, input *chime.ListMeetingsInput) *ListMeetingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.ListMeetings", input)
-	return &ChimeListMeetingsFuture{Future: future}
+	return &ListMeetingsFuture{Future: future}
 }
 
 func (a *stub) ListPhoneNumberOrders(ctx workflow.Context, input *chime.ListPhoneNumberOrdersInput) (*chime.ListPhoneNumberOrdersOutput, error) {
@@ -2145,9 +2145,9 @@ func (a *stub) ListPhoneNumberOrders(ctx workflow.Context, input *chime.ListPhon
 	return &output, err
 }
 
-func (a *stub) ListPhoneNumberOrdersAsync(ctx workflow.Context, input *chime.ListPhoneNumberOrdersInput) *ChimeListPhoneNumberOrdersFuture {
+func (a *stub) ListPhoneNumberOrdersAsync(ctx workflow.Context, input *chime.ListPhoneNumberOrdersInput) *ListPhoneNumberOrdersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.ListPhoneNumberOrders", input)
-	return &ChimeListPhoneNumberOrdersFuture{Future: future}
+	return &ListPhoneNumberOrdersFuture{Future: future}
 }
 
 func (a *stub) ListPhoneNumbers(ctx workflow.Context, input *chime.ListPhoneNumbersInput) (*chime.ListPhoneNumbersOutput, error) {
@@ -2156,9 +2156,9 @@ func (a *stub) ListPhoneNumbers(ctx workflow.Context, input *chime.ListPhoneNumb
 	return &output, err
 }
 
-func (a *stub) ListPhoneNumbersAsync(ctx workflow.Context, input *chime.ListPhoneNumbersInput) *ChimeListPhoneNumbersFuture {
+func (a *stub) ListPhoneNumbersAsync(ctx workflow.Context, input *chime.ListPhoneNumbersInput) *ListPhoneNumbersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.ListPhoneNumbers", input)
-	return &ChimeListPhoneNumbersFuture{Future: future}
+	return &ListPhoneNumbersFuture{Future: future}
 }
 
 func (a *stub) ListProxySessions(ctx workflow.Context, input *chime.ListProxySessionsInput) (*chime.ListProxySessionsOutput, error) {
@@ -2167,9 +2167,9 @@ func (a *stub) ListProxySessions(ctx workflow.Context, input *chime.ListProxySes
 	return &output, err
 }
 
-func (a *stub) ListProxySessionsAsync(ctx workflow.Context, input *chime.ListProxySessionsInput) *ChimeListProxySessionsFuture {
+func (a *stub) ListProxySessionsAsync(ctx workflow.Context, input *chime.ListProxySessionsInput) *ListProxySessionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.ListProxySessions", input)
-	return &ChimeListProxySessionsFuture{Future: future}
+	return &ListProxySessionsFuture{Future: future}
 }
 
 func (a *stub) ListRoomMemberships(ctx workflow.Context, input *chime.ListRoomMembershipsInput) (*chime.ListRoomMembershipsOutput, error) {
@@ -2178,9 +2178,9 @@ func (a *stub) ListRoomMemberships(ctx workflow.Context, input *chime.ListRoomMe
 	return &output, err
 }
 
-func (a *stub) ListRoomMembershipsAsync(ctx workflow.Context, input *chime.ListRoomMembershipsInput) *ChimeListRoomMembershipsFuture {
+func (a *stub) ListRoomMembershipsAsync(ctx workflow.Context, input *chime.ListRoomMembershipsInput) *ListRoomMembershipsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.ListRoomMemberships", input)
-	return &ChimeListRoomMembershipsFuture{Future: future}
+	return &ListRoomMembershipsFuture{Future: future}
 }
 
 func (a *stub) ListRooms(ctx workflow.Context, input *chime.ListRoomsInput) (*chime.ListRoomsOutput, error) {
@@ -2189,9 +2189,9 @@ func (a *stub) ListRooms(ctx workflow.Context, input *chime.ListRoomsInput) (*ch
 	return &output, err
 }
 
-func (a *stub) ListRoomsAsync(ctx workflow.Context, input *chime.ListRoomsInput) *ChimeListRoomsFuture {
+func (a *stub) ListRoomsAsync(ctx workflow.Context, input *chime.ListRoomsInput) *ListRoomsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.ListRooms", input)
-	return &ChimeListRoomsFuture{Future: future}
+	return &ListRoomsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *chime.ListTagsForResourceInput) (*chime.ListTagsForResourceOutput, error) {
@@ -2200,9 +2200,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *chime.ListTagsFo
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *chime.ListTagsForResourceInput) *ChimeListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *chime.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.ListTagsForResource", input)
-	return &ChimeListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) ListUsers(ctx workflow.Context, input *chime.ListUsersInput) (*chime.ListUsersOutput, error) {
@@ -2211,9 +2211,9 @@ func (a *stub) ListUsers(ctx workflow.Context, input *chime.ListUsersInput) (*ch
 	return &output, err
 }
 
-func (a *stub) ListUsersAsync(ctx workflow.Context, input *chime.ListUsersInput) *ChimeListUsersFuture {
+func (a *stub) ListUsersAsync(ctx workflow.Context, input *chime.ListUsersInput) *ListUsersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.ListUsers", input)
-	return &ChimeListUsersFuture{Future: future}
+	return &ListUsersFuture{Future: future}
 }
 
 func (a *stub) ListVoiceConnectorGroups(ctx workflow.Context, input *chime.ListVoiceConnectorGroupsInput) (*chime.ListVoiceConnectorGroupsOutput, error) {
@@ -2222,9 +2222,9 @@ func (a *stub) ListVoiceConnectorGroups(ctx workflow.Context, input *chime.ListV
 	return &output, err
 }
 
-func (a *stub) ListVoiceConnectorGroupsAsync(ctx workflow.Context, input *chime.ListVoiceConnectorGroupsInput) *ChimeListVoiceConnectorGroupsFuture {
+func (a *stub) ListVoiceConnectorGroupsAsync(ctx workflow.Context, input *chime.ListVoiceConnectorGroupsInput) *ListVoiceConnectorGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.ListVoiceConnectorGroups", input)
-	return &ChimeListVoiceConnectorGroupsFuture{Future: future}
+	return &ListVoiceConnectorGroupsFuture{Future: future}
 }
 
 func (a *stub) ListVoiceConnectorTerminationCredentials(ctx workflow.Context, input *chime.ListVoiceConnectorTerminationCredentialsInput) (*chime.ListVoiceConnectorTerminationCredentialsOutput, error) {
@@ -2233,9 +2233,9 @@ func (a *stub) ListVoiceConnectorTerminationCredentials(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *stub) ListVoiceConnectorTerminationCredentialsAsync(ctx workflow.Context, input *chime.ListVoiceConnectorTerminationCredentialsInput) *ChimeListVoiceConnectorTerminationCredentialsFuture {
+func (a *stub) ListVoiceConnectorTerminationCredentialsAsync(ctx workflow.Context, input *chime.ListVoiceConnectorTerminationCredentialsInput) *ListVoiceConnectorTerminationCredentialsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.ListVoiceConnectorTerminationCredentials", input)
-	return &ChimeListVoiceConnectorTerminationCredentialsFuture{Future: future}
+	return &ListVoiceConnectorTerminationCredentialsFuture{Future: future}
 }
 
 func (a *stub) ListVoiceConnectors(ctx workflow.Context, input *chime.ListVoiceConnectorsInput) (*chime.ListVoiceConnectorsOutput, error) {
@@ -2244,9 +2244,9 @@ func (a *stub) ListVoiceConnectors(ctx workflow.Context, input *chime.ListVoiceC
 	return &output, err
 }
 
-func (a *stub) ListVoiceConnectorsAsync(ctx workflow.Context, input *chime.ListVoiceConnectorsInput) *ChimeListVoiceConnectorsFuture {
+func (a *stub) ListVoiceConnectorsAsync(ctx workflow.Context, input *chime.ListVoiceConnectorsInput) *ListVoiceConnectorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.ListVoiceConnectors", input)
-	return &ChimeListVoiceConnectorsFuture{Future: future}
+	return &ListVoiceConnectorsFuture{Future: future}
 }
 
 func (a *stub) LogoutUser(ctx workflow.Context, input *chime.LogoutUserInput) (*chime.LogoutUserOutput, error) {
@@ -2255,9 +2255,9 @@ func (a *stub) LogoutUser(ctx workflow.Context, input *chime.LogoutUserInput) (*
 	return &output, err
 }
 
-func (a *stub) LogoutUserAsync(ctx workflow.Context, input *chime.LogoutUserInput) *ChimeLogoutUserFuture {
+func (a *stub) LogoutUserAsync(ctx workflow.Context, input *chime.LogoutUserInput) *LogoutUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.LogoutUser", input)
-	return &ChimeLogoutUserFuture{Future: future}
+	return &LogoutUserFuture{Future: future}
 }
 
 func (a *stub) PutEventsConfiguration(ctx workflow.Context, input *chime.PutEventsConfigurationInput) (*chime.PutEventsConfigurationOutput, error) {
@@ -2266,9 +2266,9 @@ func (a *stub) PutEventsConfiguration(ctx workflow.Context, input *chime.PutEven
 	return &output, err
 }
 
-func (a *stub) PutEventsConfigurationAsync(ctx workflow.Context, input *chime.PutEventsConfigurationInput) *ChimePutEventsConfigurationFuture {
+func (a *stub) PutEventsConfigurationAsync(ctx workflow.Context, input *chime.PutEventsConfigurationInput) *PutEventsConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.PutEventsConfiguration", input)
-	return &ChimePutEventsConfigurationFuture{Future: future}
+	return &PutEventsConfigurationFuture{Future: future}
 }
 
 func (a *stub) PutRetentionSettings(ctx workflow.Context, input *chime.PutRetentionSettingsInput) (*chime.PutRetentionSettingsOutput, error) {
@@ -2277,9 +2277,9 @@ func (a *stub) PutRetentionSettings(ctx workflow.Context, input *chime.PutRetent
 	return &output, err
 }
 
-func (a *stub) PutRetentionSettingsAsync(ctx workflow.Context, input *chime.PutRetentionSettingsInput) *ChimePutRetentionSettingsFuture {
+func (a *stub) PutRetentionSettingsAsync(ctx workflow.Context, input *chime.PutRetentionSettingsInput) *PutRetentionSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.PutRetentionSettings", input)
-	return &ChimePutRetentionSettingsFuture{Future: future}
+	return &PutRetentionSettingsFuture{Future: future}
 }
 
 func (a *stub) PutVoiceConnectorEmergencyCallingConfiguration(ctx workflow.Context, input *chime.PutVoiceConnectorEmergencyCallingConfigurationInput) (*chime.PutVoiceConnectorEmergencyCallingConfigurationOutput, error) {
@@ -2288,9 +2288,9 @@ func (a *stub) PutVoiceConnectorEmergencyCallingConfiguration(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *stub) PutVoiceConnectorEmergencyCallingConfigurationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorEmergencyCallingConfigurationInput) *ChimePutVoiceConnectorEmergencyCallingConfigurationFuture {
+func (a *stub) PutVoiceConnectorEmergencyCallingConfigurationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorEmergencyCallingConfigurationInput) *PutVoiceConnectorEmergencyCallingConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.PutVoiceConnectorEmergencyCallingConfiguration", input)
-	return &ChimePutVoiceConnectorEmergencyCallingConfigurationFuture{Future: future}
+	return &PutVoiceConnectorEmergencyCallingConfigurationFuture{Future: future}
 }
 
 func (a *stub) PutVoiceConnectorLoggingConfiguration(ctx workflow.Context, input *chime.PutVoiceConnectorLoggingConfigurationInput) (*chime.PutVoiceConnectorLoggingConfigurationOutput, error) {
@@ -2299,9 +2299,9 @@ func (a *stub) PutVoiceConnectorLoggingConfiguration(ctx workflow.Context, input
 	return &output, err
 }
 
-func (a *stub) PutVoiceConnectorLoggingConfigurationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorLoggingConfigurationInput) *ChimePutVoiceConnectorLoggingConfigurationFuture {
+func (a *stub) PutVoiceConnectorLoggingConfigurationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorLoggingConfigurationInput) *PutVoiceConnectorLoggingConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.PutVoiceConnectorLoggingConfiguration", input)
-	return &ChimePutVoiceConnectorLoggingConfigurationFuture{Future: future}
+	return &PutVoiceConnectorLoggingConfigurationFuture{Future: future}
 }
 
 func (a *stub) PutVoiceConnectorOrigination(ctx workflow.Context, input *chime.PutVoiceConnectorOriginationInput) (*chime.PutVoiceConnectorOriginationOutput, error) {
@@ -2310,9 +2310,9 @@ func (a *stub) PutVoiceConnectorOrigination(ctx workflow.Context, input *chime.P
 	return &output, err
 }
 
-func (a *stub) PutVoiceConnectorOriginationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorOriginationInput) *ChimePutVoiceConnectorOriginationFuture {
+func (a *stub) PutVoiceConnectorOriginationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorOriginationInput) *PutVoiceConnectorOriginationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.PutVoiceConnectorOrigination", input)
-	return &ChimePutVoiceConnectorOriginationFuture{Future: future}
+	return &PutVoiceConnectorOriginationFuture{Future: future}
 }
 
 func (a *stub) PutVoiceConnectorProxy(ctx workflow.Context, input *chime.PutVoiceConnectorProxyInput) (*chime.PutVoiceConnectorProxyOutput, error) {
@@ -2321,9 +2321,9 @@ func (a *stub) PutVoiceConnectorProxy(ctx workflow.Context, input *chime.PutVoic
 	return &output, err
 }
 
-func (a *stub) PutVoiceConnectorProxyAsync(ctx workflow.Context, input *chime.PutVoiceConnectorProxyInput) *ChimePutVoiceConnectorProxyFuture {
+func (a *stub) PutVoiceConnectorProxyAsync(ctx workflow.Context, input *chime.PutVoiceConnectorProxyInput) *PutVoiceConnectorProxyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.PutVoiceConnectorProxy", input)
-	return &ChimePutVoiceConnectorProxyFuture{Future: future}
+	return &PutVoiceConnectorProxyFuture{Future: future}
 }
 
 func (a *stub) PutVoiceConnectorStreamingConfiguration(ctx workflow.Context, input *chime.PutVoiceConnectorStreamingConfigurationInput) (*chime.PutVoiceConnectorStreamingConfigurationOutput, error) {
@@ -2332,9 +2332,9 @@ func (a *stub) PutVoiceConnectorStreamingConfiguration(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *stub) PutVoiceConnectorStreamingConfigurationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorStreamingConfigurationInput) *ChimePutVoiceConnectorStreamingConfigurationFuture {
+func (a *stub) PutVoiceConnectorStreamingConfigurationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorStreamingConfigurationInput) *PutVoiceConnectorStreamingConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.PutVoiceConnectorStreamingConfiguration", input)
-	return &ChimePutVoiceConnectorStreamingConfigurationFuture{Future: future}
+	return &PutVoiceConnectorStreamingConfigurationFuture{Future: future}
 }
 
 func (a *stub) PutVoiceConnectorTermination(ctx workflow.Context, input *chime.PutVoiceConnectorTerminationInput) (*chime.PutVoiceConnectorTerminationOutput, error) {
@@ -2343,9 +2343,9 @@ func (a *stub) PutVoiceConnectorTermination(ctx workflow.Context, input *chime.P
 	return &output, err
 }
 
-func (a *stub) PutVoiceConnectorTerminationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorTerminationInput) *ChimePutVoiceConnectorTerminationFuture {
+func (a *stub) PutVoiceConnectorTerminationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorTerminationInput) *PutVoiceConnectorTerminationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.PutVoiceConnectorTermination", input)
-	return &ChimePutVoiceConnectorTerminationFuture{Future: future}
+	return &PutVoiceConnectorTerminationFuture{Future: future}
 }
 
 func (a *stub) PutVoiceConnectorTerminationCredentials(ctx workflow.Context, input *chime.PutVoiceConnectorTerminationCredentialsInput) (*chime.PutVoiceConnectorTerminationCredentialsOutput, error) {
@@ -2354,9 +2354,9 @@ func (a *stub) PutVoiceConnectorTerminationCredentials(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *stub) PutVoiceConnectorTerminationCredentialsAsync(ctx workflow.Context, input *chime.PutVoiceConnectorTerminationCredentialsInput) *ChimePutVoiceConnectorTerminationCredentialsFuture {
+func (a *stub) PutVoiceConnectorTerminationCredentialsAsync(ctx workflow.Context, input *chime.PutVoiceConnectorTerminationCredentialsInput) *PutVoiceConnectorTerminationCredentialsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.PutVoiceConnectorTerminationCredentials", input)
-	return &ChimePutVoiceConnectorTerminationCredentialsFuture{Future: future}
+	return &PutVoiceConnectorTerminationCredentialsFuture{Future: future}
 }
 
 func (a *stub) RedactConversationMessage(ctx workflow.Context, input *chime.RedactConversationMessageInput) (*chime.RedactConversationMessageOutput, error) {
@@ -2365,9 +2365,9 @@ func (a *stub) RedactConversationMessage(ctx workflow.Context, input *chime.Reda
 	return &output, err
 }
 
-func (a *stub) RedactConversationMessageAsync(ctx workflow.Context, input *chime.RedactConversationMessageInput) *ChimeRedactConversationMessageFuture {
+func (a *stub) RedactConversationMessageAsync(ctx workflow.Context, input *chime.RedactConversationMessageInput) *RedactConversationMessageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.RedactConversationMessage", input)
-	return &ChimeRedactConversationMessageFuture{Future: future}
+	return &RedactConversationMessageFuture{Future: future}
 }
 
 func (a *stub) RedactRoomMessage(ctx workflow.Context, input *chime.RedactRoomMessageInput) (*chime.RedactRoomMessageOutput, error) {
@@ -2376,9 +2376,9 @@ func (a *stub) RedactRoomMessage(ctx workflow.Context, input *chime.RedactRoomMe
 	return &output, err
 }
 
-func (a *stub) RedactRoomMessageAsync(ctx workflow.Context, input *chime.RedactRoomMessageInput) *ChimeRedactRoomMessageFuture {
+func (a *stub) RedactRoomMessageAsync(ctx workflow.Context, input *chime.RedactRoomMessageInput) *RedactRoomMessageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.RedactRoomMessage", input)
-	return &ChimeRedactRoomMessageFuture{Future: future}
+	return &RedactRoomMessageFuture{Future: future}
 }
 
 func (a *stub) RegenerateSecurityToken(ctx workflow.Context, input *chime.RegenerateSecurityTokenInput) (*chime.RegenerateSecurityTokenOutput, error) {
@@ -2387,9 +2387,9 @@ func (a *stub) RegenerateSecurityToken(ctx workflow.Context, input *chime.Regene
 	return &output, err
 }
 
-func (a *stub) RegenerateSecurityTokenAsync(ctx workflow.Context, input *chime.RegenerateSecurityTokenInput) *ChimeRegenerateSecurityTokenFuture {
+func (a *stub) RegenerateSecurityTokenAsync(ctx workflow.Context, input *chime.RegenerateSecurityTokenInput) *RegenerateSecurityTokenFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.RegenerateSecurityToken", input)
-	return &ChimeRegenerateSecurityTokenFuture{Future: future}
+	return &RegenerateSecurityTokenFuture{Future: future}
 }
 
 func (a *stub) ResetPersonalPIN(ctx workflow.Context, input *chime.ResetPersonalPINInput) (*chime.ResetPersonalPINOutput, error) {
@@ -2398,9 +2398,9 @@ func (a *stub) ResetPersonalPIN(ctx workflow.Context, input *chime.ResetPersonal
 	return &output, err
 }
 
-func (a *stub) ResetPersonalPINAsync(ctx workflow.Context, input *chime.ResetPersonalPINInput) *ChimeResetPersonalPINFuture {
+func (a *stub) ResetPersonalPINAsync(ctx workflow.Context, input *chime.ResetPersonalPINInput) *ResetPersonalPINFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.ResetPersonalPIN", input)
-	return &ChimeResetPersonalPINFuture{Future: future}
+	return &ResetPersonalPINFuture{Future: future}
 }
 
 func (a *stub) RestorePhoneNumber(ctx workflow.Context, input *chime.RestorePhoneNumberInput) (*chime.RestorePhoneNumberOutput, error) {
@@ -2409,9 +2409,9 @@ func (a *stub) RestorePhoneNumber(ctx workflow.Context, input *chime.RestorePhon
 	return &output, err
 }
 
-func (a *stub) RestorePhoneNumberAsync(ctx workflow.Context, input *chime.RestorePhoneNumberInput) *ChimeRestorePhoneNumberFuture {
+func (a *stub) RestorePhoneNumberAsync(ctx workflow.Context, input *chime.RestorePhoneNumberInput) *RestorePhoneNumberFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.RestorePhoneNumber", input)
-	return &ChimeRestorePhoneNumberFuture{Future: future}
+	return &RestorePhoneNumberFuture{Future: future}
 }
 
 func (a *stub) SearchAvailablePhoneNumbers(ctx workflow.Context, input *chime.SearchAvailablePhoneNumbersInput) (*chime.SearchAvailablePhoneNumbersOutput, error) {
@@ -2420,9 +2420,9 @@ func (a *stub) SearchAvailablePhoneNumbers(ctx workflow.Context, input *chime.Se
 	return &output, err
 }
 
-func (a *stub) SearchAvailablePhoneNumbersAsync(ctx workflow.Context, input *chime.SearchAvailablePhoneNumbersInput) *ChimeSearchAvailablePhoneNumbersFuture {
+func (a *stub) SearchAvailablePhoneNumbersAsync(ctx workflow.Context, input *chime.SearchAvailablePhoneNumbersInput) *SearchAvailablePhoneNumbersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.SearchAvailablePhoneNumbers", input)
-	return &ChimeSearchAvailablePhoneNumbersFuture{Future: future}
+	return &SearchAvailablePhoneNumbersFuture{Future: future}
 }
 
 func (a *stub) TagAttendee(ctx workflow.Context, input *chime.TagAttendeeInput) (*chime.TagAttendeeOutput, error) {
@@ -2431,9 +2431,9 @@ func (a *stub) TagAttendee(ctx workflow.Context, input *chime.TagAttendeeInput) 
 	return &output, err
 }
 
-func (a *stub) TagAttendeeAsync(ctx workflow.Context, input *chime.TagAttendeeInput) *ChimeTagAttendeeFuture {
+func (a *stub) TagAttendeeAsync(ctx workflow.Context, input *chime.TagAttendeeInput) *TagAttendeeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.TagAttendee", input)
-	return &ChimeTagAttendeeFuture{Future: future}
+	return &TagAttendeeFuture{Future: future}
 }
 
 func (a *stub) TagMeeting(ctx workflow.Context, input *chime.TagMeetingInput) (*chime.TagMeetingOutput, error) {
@@ -2442,9 +2442,9 @@ func (a *stub) TagMeeting(ctx workflow.Context, input *chime.TagMeetingInput) (*
 	return &output, err
 }
 
-func (a *stub) TagMeetingAsync(ctx workflow.Context, input *chime.TagMeetingInput) *ChimeTagMeetingFuture {
+func (a *stub) TagMeetingAsync(ctx workflow.Context, input *chime.TagMeetingInput) *TagMeetingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.TagMeeting", input)
-	return &ChimeTagMeetingFuture{Future: future}
+	return &TagMeetingFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *chime.TagResourceInput) (*chime.TagResourceOutput, error) {
@@ -2453,9 +2453,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *chime.TagResourceInput) 
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *chime.TagResourceInput) *ChimeTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *chime.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.TagResource", input)
-	return &ChimeTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagAttendee(ctx workflow.Context, input *chime.UntagAttendeeInput) (*chime.UntagAttendeeOutput, error) {
@@ -2464,9 +2464,9 @@ func (a *stub) UntagAttendee(ctx workflow.Context, input *chime.UntagAttendeeInp
 	return &output, err
 }
 
-func (a *stub) UntagAttendeeAsync(ctx workflow.Context, input *chime.UntagAttendeeInput) *ChimeUntagAttendeeFuture {
+func (a *stub) UntagAttendeeAsync(ctx workflow.Context, input *chime.UntagAttendeeInput) *UntagAttendeeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.UntagAttendee", input)
-	return &ChimeUntagAttendeeFuture{Future: future}
+	return &UntagAttendeeFuture{Future: future}
 }
 
 func (a *stub) UntagMeeting(ctx workflow.Context, input *chime.UntagMeetingInput) (*chime.UntagMeetingOutput, error) {
@@ -2475,9 +2475,9 @@ func (a *stub) UntagMeeting(ctx workflow.Context, input *chime.UntagMeetingInput
 	return &output, err
 }
 
-func (a *stub) UntagMeetingAsync(ctx workflow.Context, input *chime.UntagMeetingInput) *ChimeUntagMeetingFuture {
+func (a *stub) UntagMeetingAsync(ctx workflow.Context, input *chime.UntagMeetingInput) *UntagMeetingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.UntagMeeting", input)
-	return &ChimeUntagMeetingFuture{Future: future}
+	return &UntagMeetingFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *chime.UntagResourceInput) (*chime.UntagResourceOutput, error) {
@@ -2486,9 +2486,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *chime.UntagResourceInp
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *chime.UntagResourceInput) *ChimeUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *chime.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.UntagResource", input)
-	return &ChimeUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateAccount(ctx workflow.Context, input *chime.UpdateAccountInput) (*chime.UpdateAccountOutput, error) {
@@ -2497,9 +2497,9 @@ func (a *stub) UpdateAccount(ctx workflow.Context, input *chime.UpdateAccountInp
 	return &output, err
 }
 
-func (a *stub) UpdateAccountAsync(ctx workflow.Context, input *chime.UpdateAccountInput) *ChimeUpdateAccountFuture {
+func (a *stub) UpdateAccountAsync(ctx workflow.Context, input *chime.UpdateAccountInput) *UpdateAccountFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.UpdateAccount", input)
-	return &ChimeUpdateAccountFuture{Future: future}
+	return &UpdateAccountFuture{Future: future}
 }
 
 func (a *stub) UpdateAccountSettings(ctx workflow.Context, input *chime.UpdateAccountSettingsInput) (*chime.UpdateAccountSettingsOutput, error) {
@@ -2508,9 +2508,9 @@ func (a *stub) UpdateAccountSettings(ctx workflow.Context, input *chime.UpdateAc
 	return &output, err
 }
 
-func (a *stub) UpdateAccountSettingsAsync(ctx workflow.Context, input *chime.UpdateAccountSettingsInput) *ChimeUpdateAccountSettingsFuture {
+func (a *stub) UpdateAccountSettingsAsync(ctx workflow.Context, input *chime.UpdateAccountSettingsInput) *UpdateAccountSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.UpdateAccountSettings", input)
-	return &ChimeUpdateAccountSettingsFuture{Future: future}
+	return &UpdateAccountSettingsFuture{Future: future}
 }
 
 func (a *stub) UpdateBot(ctx workflow.Context, input *chime.UpdateBotInput) (*chime.UpdateBotOutput, error) {
@@ -2519,9 +2519,9 @@ func (a *stub) UpdateBot(ctx workflow.Context, input *chime.UpdateBotInput) (*ch
 	return &output, err
 }
 
-func (a *stub) UpdateBotAsync(ctx workflow.Context, input *chime.UpdateBotInput) *ChimeUpdateBotFuture {
+func (a *stub) UpdateBotAsync(ctx workflow.Context, input *chime.UpdateBotInput) *UpdateBotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.UpdateBot", input)
-	return &ChimeUpdateBotFuture{Future: future}
+	return &UpdateBotFuture{Future: future}
 }
 
 func (a *stub) UpdateGlobalSettings(ctx workflow.Context, input *chime.UpdateGlobalSettingsInput) (*chime.UpdateGlobalSettingsOutput, error) {
@@ -2530,9 +2530,9 @@ func (a *stub) UpdateGlobalSettings(ctx workflow.Context, input *chime.UpdateGlo
 	return &output, err
 }
 
-func (a *stub) UpdateGlobalSettingsAsync(ctx workflow.Context, input *chime.UpdateGlobalSettingsInput) *ChimeUpdateGlobalSettingsFuture {
+func (a *stub) UpdateGlobalSettingsAsync(ctx workflow.Context, input *chime.UpdateGlobalSettingsInput) *UpdateGlobalSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.UpdateGlobalSettings", input)
-	return &ChimeUpdateGlobalSettingsFuture{Future: future}
+	return &UpdateGlobalSettingsFuture{Future: future}
 }
 
 func (a *stub) UpdatePhoneNumber(ctx workflow.Context, input *chime.UpdatePhoneNumberInput) (*chime.UpdatePhoneNumberOutput, error) {
@@ -2541,9 +2541,9 @@ func (a *stub) UpdatePhoneNumber(ctx workflow.Context, input *chime.UpdatePhoneN
 	return &output, err
 }
 
-func (a *stub) UpdatePhoneNumberAsync(ctx workflow.Context, input *chime.UpdatePhoneNumberInput) *ChimeUpdatePhoneNumberFuture {
+func (a *stub) UpdatePhoneNumberAsync(ctx workflow.Context, input *chime.UpdatePhoneNumberInput) *UpdatePhoneNumberFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.UpdatePhoneNumber", input)
-	return &ChimeUpdatePhoneNumberFuture{Future: future}
+	return &UpdatePhoneNumberFuture{Future: future}
 }
 
 func (a *stub) UpdatePhoneNumberSettings(ctx workflow.Context, input *chime.UpdatePhoneNumberSettingsInput) (*chime.UpdatePhoneNumberSettingsOutput, error) {
@@ -2552,9 +2552,9 @@ func (a *stub) UpdatePhoneNumberSettings(ctx workflow.Context, input *chime.Upda
 	return &output, err
 }
 
-func (a *stub) UpdatePhoneNumberSettingsAsync(ctx workflow.Context, input *chime.UpdatePhoneNumberSettingsInput) *ChimeUpdatePhoneNumberSettingsFuture {
+func (a *stub) UpdatePhoneNumberSettingsAsync(ctx workflow.Context, input *chime.UpdatePhoneNumberSettingsInput) *UpdatePhoneNumberSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.UpdatePhoneNumberSettings", input)
-	return &ChimeUpdatePhoneNumberSettingsFuture{Future: future}
+	return &UpdatePhoneNumberSettingsFuture{Future: future}
 }
 
 func (a *stub) UpdateProxySession(ctx workflow.Context, input *chime.UpdateProxySessionInput) (*chime.UpdateProxySessionOutput, error) {
@@ -2563,9 +2563,9 @@ func (a *stub) UpdateProxySession(ctx workflow.Context, input *chime.UpdateProxy
 	return &output, err
 }
 
-func (a *stub) UpdateProxySessionAsync(ctx workflow.Context, input *chime.UpdateProxySessionInput) *ChimeUpdateProxySessionFuture {
+func (a *stub) UpdateProxySessionAsync(ctx workflow.Context, input *chime.UpdateProxySessionInput) *UpdateProxySessionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.UpdateProxySession", input)
-	return &ChimeUpdateProxySessionFuture{Future: future}
+	return &UpdateProxySessionFuture{Future: future}
 }
 
 func (a *stub) UpdateRoom(ctx workflow.Context, input *chime.UpdateRoomInput) (*chime.UpdateRoomOutput, error) {
@@ -2574,9 +2574,9 @@ func (a *stub) UpdateRoom(ctx workflow.Context, input *chime.UpdateRoomInput) (*
 	return &output, err
 }
 
-func (a *stub) UpdateRoomAsync(ctx workflow.Context, input *chime.UpdateRoomInput) *ChimeUpdateRoomFuture {
+func (a *stub) UpdateRoomAsync(ctx workflow.Context, input *chime.UpdateRoomInput) *UpdateRoomFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.UpdateRoom", input)
-	return &ChimeUpdateRoomFuture{Future: future}
+	return &UpdateRoomFuture{Future: future}
 }
 
 func (a *stub) UpdateRoomMembership(ctx workflow.Context, input *chime.UpdateRoomMembershipInput) (*chime.UpdateRoomMembershipOutput, error) {
@@ -2585,9 +2585,9 @@ func (a *stub) UpdateRoomMembership(ctx workflow.Context, input *chime.UpdateRoo
 	return &output, err
 }
 
-func (a *stub) UpdateRoomMembershipAsync(ctx workflow.Context, input *chime.UpdateRoomMembershipInput) *ChimeUpdateRoomMembershipFuture {
+func (a *stub) UpdateRoomMembershipAsync(ctx workflow.Context, input *chime.UpdateRoomMembershipInput) *UpdateRoomMembershipFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.UpdateRoomMembership", input)
-	return &ChimeUpdateRoomMembershipFuture{Future: future}
+	return &UpdateRoomMembershipFuture{Future: future}
 }
 
 func (a *stub) UpdateUser(ctx workflow.Context, input *chime.UpdateUserInput) (*chime.UpdateUserOutput, error) {
@@ -2596,9 +2596,9 @@ func (a *stub) UpdateUser(ctx workflow.Context, input *chime.UpdateUserInput) (*
 	return &output, err
 }
 
-func (a *stub) UpdateUserAsync(ctx workflow.Context, input *chime.UpdateUserInput) *ChimeUpdateUserFuture {
+func (a *stub) UpdateUserAsync(ctx workflow.Context, input *chime.UpdateUserInput) *UpdateUserFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.UpdateUser", input)
-	return &ChimeUpdateUserFuture{Future: future}
+	return &UpdateUserFuture{Future: future}
 }
 
 func (a *stub) UpdateUserSettings(ctx workflow.Context, input *chime.UpdateUserSettingsInput) (*chime.UpdateUserSettingsOutput, error) {
@@ -2607,9 +2607,9 @@ func (a *stub) UpdateUserSettings(ctx workflow.Context, input *chime.UpdateUserS
 	return &output, err
 }
 
-func (a *stub) UpdateUserSettingsAsync(ctx workflow.Context, input *chime.UpdateUserSettingsInput) *ChimeUpdateUserSettingsFuture {
+func (a *stub) UpdateUserSettingsAsync(ctx workflow.Context, input *chime.UpdateUserSettingsInput) *UpdateUserSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.UpdateUserSettings", input)
-	return &ChimeUpdateUserSettingsFuture{Future: future}
+	return &UpdateUserSettingsFuture{Future: future}
 }
 
 func (a *stub) UpdateVoiceConnector(ctx workflow.Context, input *chime.UpdateVoiceConnectorInput) (*chime.UpdateVoiceConnectorOutput, error) {
@@ -2618,9 +2618,9 @@ func (a *stub) UpdateVoiceConnector(ctx workflow.Context, input *chime.UpdateVoi
 	return &output, err
 }
 
-func (a *stub) UpdateVoiceConnectorAsync(ctx workflow.Context, input *chime.UpdateVoiceConnectorInput) *ChimeUpdateVoiceConnectorFuture {
+func (a *stub) UpdateVoiceConnectorAsync(ctx workflow.Context, input *chime.UpdateVoiceConnectorInput) *UpdateVoiceConnectorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.UpdateVoiceConnector", input)
-	return &ChimeUpdateVoiceConnectorFuture{Future: future}
+	return &UpdateVoiceConnectorFuture{Future: future}
 }
 
 func (a *stub) UpdateVoiceConnectorGroup(ctx workflow.Context, input *chime.UpdateVoiceConnectorGroupInput) (*chime.UpdateVoiceConnectorGroupOutput, error) {
@@ -2629,7 +2629,7 @@ func (a *stub) UpdateVoiceConnectorGroup(ctx workflow.Context, input *chime.Upda
 	return &output, err
 }
 
-func (a *stub) UpdateVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.UpdateVoiceConnectorGroupInput) *ChimeUpdateVoiceConnectorGroupFuture {
+func (a *stub) UpdateVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.UpdateVoiceConnectorGroupInput) *UpdateVoiceConnectorGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.chime.UpdateVoiceConnectorGroup", input)
-	return &ChimeUpdateVoiceConnectorGroupFuture{Future: future}
+	return &UpdateVoiceConnectorGroupFuture{Future: future}
 }

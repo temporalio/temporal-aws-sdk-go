@@ -16,7 +16,7 @@ var _ clients.VoidFuture
 
 type Client interface {
 	GetRawMessageContent(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) (*workmailmessageflow.GetRawMessageContentOutput, error)
-	GetRawMessageContentAsync(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) *WorkMailMessageFlowGetRawMessageContentFuture
+	GetRawMessageContentAsync(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) *GetRawMessageContentFuture
 }
 
 func NewClient() Client {

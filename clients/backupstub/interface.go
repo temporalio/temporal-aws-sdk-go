@@ -16,148 +16,148 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateBackupPlan(ctx workflow.Context, input *backup.CreateBackupPlanInput) (*backup.CreateBackupPlanOutput, error)
-	CreateBackupPlanAsync(ctx workflow.Context, input *backup.CreateBackupPlanInput) *BackupCreateBackupPlanFuture
+	CreateBackupPlanAsync(ctx workflow.Context, input *backup.CreateBackupPlanInput) *CreateBackupPlanFuture
 
 	CreateBackupSelection(ctx workflow.Context, input *backup.CreateBackupSelectionInput) (*backup.CreateBackupSelectionOutput, error)
-	CreateBackupSelectionAsync(ctx workflow.Context, input *backup.CreateBackupSelectionInput) *BackupCreateBackupSelectionFuture
+	CreateBackupSelectionAsync(ctx workflow.Context, input *backup.CreateBackupSelectionInput) *CreateBackupSelectionFuture
 
 	CreateBackupVault(ctx workflow.Context, input *backup.CreateBackupVaultInput) (*backup.CreateBackupVaultOutput, error)
-	CreateBackupVaultAsync(ctx workflow.Context, input *backup.CreateBackupVaultInput) *BackupCreateBackupVaultFuture
+	CreateBackupVaultAsync(ctx workflow.Context, input *backup.CreateBackupVaultInput) *CreateBackupVaultFuture
 
 	DeleteBackupPlan(ctx workflow.Context, input *backup.DeleteBackupPlanInput) (*backup.DeleteBackupPlanOutput, error)
-	DeleteBackupPlanAsync(ctx workflow.Context, input *backup.DeleteBackupPlanInput) *BackupDeleteBackupPlanFuture
+	DeleteBackupPlanAsync(ctx workflow.Context, input *backup.DeleteBackupPlanInput) *DeleteBackupPlanFuture
 
 	DeleteBackupSelection(ctx workflow.Context, input *backup.DeleteBackupSelectionInput) (*backup.DeleteBackupSelectionOutput, error)
-	DeleteBackupSelectionAsync(ctx workflow.Context, input *backup.DeleteBackupSelectionInput) *BackupDeleteBackupSelectionFuture
+	DeleteBackupSelectionAsync(ctx workflow.Context, input *backup.DeleteBackupSelectionInput) *DeleteBackupSelectionFuture
 
 	DeleteBackupVault(ctx workflow.Context, input *backup.DeleteBackupVaultInput) (*backup.DeleteBackupVaultOutput, error)
-	DeleteBackupVaultAsync(ctx workflow.Context, input *backup.DeleteBackupVaultInput) *BackupDeleteBackupVaultFuture
+	DeleteBackupVaultAsync(ctx workflow.Context, input *backup.DeleteBackupVaultInput) *DeleteBackupVaultFuture
 
 	DeleteBackupVaultAccessPolicy(ctx workflow.Context, input *backup.DeleteBackupVaultAccessPolicyInput) (*backup.DeleteBackupVaultAccessPolicyOutput, error)
-	DeleteBackupVaultAccessPolicyAsync(ctx workflow.Context, input *backup.DeleteBackupVaultAccessPolicyInput) *BackupDeleteBackupVaultAccessPolicyFuture
+	DeleteBackupVaultAccessPolicyAsync(ctx workflow.Context, input *backup.DeleteBackupVaultAccessPolicyInput) *DeleteBackupVaultAccessPolicyFuture
 
 	DeleteBackupVaultNotifications(ctx workflow.Context, input *backup.DeleteBackupVaultNotificationsInput) (*backup.DeleteBackupVaultNotificationsOutput, error)
-	DeleteBackupVaultNotificationsAsync(ctx workflow.Context, input *backup.DeleteBackupVaultNotificationsInput) *BackupDeleteBackupVaultNotificationsFuture
+	DeleteBackupVaultNotificationsAsync(ctx workflow.Context, input *backup.DeleteBackupVaultNotificationsInput) *DeleteBackupVaultNotificationsFuture
 
 	DeleteRecoveryPoint(ctx workflow.Context, input *backup.DeleteRecoveryPointInput) (*backup.DeleteRecoveryPointOutput, error)
-	DeleteRecoveryPointAsync(ctx workflow.Context, input *backup.DeleteRecoveryPointInput) *BackupDeleteRecoveryPointFuture
+	DeleteRecoveryPointAsync(ctx workflow.Context, input *backup.DeleteRecoveryPointInput) *DeleteRecoveryPointFuture
 
 	DescribeBackupJob(ctx workflow.Context, input *backup.DescribeBackupJobInput) (*backup.DescribeBackupJobOutput, error)
-	DescribeBackupJobAsync(ctx workflow.Context, input *backup.DescribeBackupJobInput) *BackupDescribeBackupJobFuture
+	DescribeBackupJobAsync(ctx workflow.Context, input *backup.DescribeBackupJobInput) *DescribeBackupJobFuture
 
 	DescribeBackupVault(ctx workflow.Context, input *backup.DescribeBackupVaultInput) (*backup.DescribeBackupVaultOutput, error)
-	DescribeBackupVaultAsync(ctx workflow.Context, input *backup.DescribeBackupVaultInput) *BackupDescribeBackupVaultFuture
+	DescribeBackupVaultAsync(ctx workflow.Context, input *backup.DescribeBackupVaultInput) *DescribeBackupVaultFuture
 
 	DescribeCopyJob(ctx workflow.Context, input *backup.DescribeCopyJobInput) (*backup.DescribeCopyJobOutput, error)
-	DescribeCopyJobAsync(ctx workflow.Context, input *backup.DescribeCopyJobInput) *BackupDescribeCopyJobFuture
+	DescribeCopyJobAsync(ctx workflow.Context, input *backup.DescribeCopyJobInput) *DescribeCopyJobFuture
 
 	DescribeProtectedResource(ctx workflow.Context, input *backup.DescribeProtectedResourceInput) (*backup.DescribeProtectedResourceOutput, error)
-	DescribeProtectedResourceAsync(ctx workflow.Context, input *backup.DescribeProtectedResourceInput) *BackupDescribeProtectedResourceFuture
+	DescribeProtectedResourceAsync(ctx workflow.Context, input *backup.DescribeProtectedResourceInput) *DescribeProtectedResourceFuture
 
 	DescribeRecoveryPoint(ctx workflow.Context, input *backup.DescribeRecoveryPointInput) (*backup.DescribeRecoveryPointOutput, error)
-	DescribeRecoveryPointAsync(ctx workflow.Context, input *backup.DescribeRecoveryPointInput) *BackupDescribeRecoveryPointFuture
+	DescribeRecoveryPointAsync(ctx workflow.Context, input *backup.DescribeRecoveryPointInput) *DescribeRecoveryPointFuture
 
 	DescribeRegionSettings(ctx workflow.Context, input *backup.DescribeRegionSettingsInput) (*backup.DescribeRegionSettingsOutput, error)
-	DescribeRegionSettingsAsync(ctx workflow.Context, input *backup.DescribeRegionSettingsInput) *BackupDescribeRegionSettingsFuture
+	DescribeRegionSettingsAsync(ctx workflow.Context, input *backup.DescribeRegionSettingsInput) *DescribeRegionSettingsFuture
 
 	DescribeRestoreJob(ctx workflow.Context, input *backup.DescribeRestoreJobInput) (*backup.DescribeRestoreJobOutput, error)
-	DescribeRestoreJobAsync(ctx workflow.Context, input *backup.DescribeRestoreJobInput) *BackupDescribeRestoreJobFuture
+	DescribeRestoreJobAsync(ctx workflow.Context, input *backup.DescribeRestoreJobInput) *DescribeRestoreJobFuture
 
 	ExportBackupPlanTemplate(ctx workflow.Context, input *backup.ExportBackupPlanTemplateInput) (*backup.ExportBackupPlanTemplateOutput, error)
-	ExportBackupPlanTemplateAsync(ctx workflow.Context, input *backup.ExportBackupPlanTemplateInput) *BackupExportBackupPlanTemplateFuture
+	ExportBackupPlanTemplateAsync(ctx workflow.Context, input *backup.ExportBackupPlanTemplateInput) *ExportBackupPlanTemplateFuture
 
 	GetBackupPlan(ctx workflow.Context, input *backup.GetBackupPlanInput) (*backup.GetBackupPlanOutput, error)
-	GetBackupPlanAsync(ctx workflow.Context, input *backup.GetBackupPlanInput) *BackupGetBackupPlanFuture
+	GetBackupPlanAsync(ctx workflow.Context, input *backup.GetBackupPlanInput) *GetBackupPlanFuture
 
 	GetBackupPlanFromJSON(ctx workflow.Context, input *backup.GetBackupPlanFromJSONInput) (*backup.GetBackupPlanFromJSONOutput, error)
-	GetBackupPlanFromJSONAsync(ctx workflow.Context, input *backup.GetBackupPlanFromJSONInput) *BackupGetBackupPlanFromJSONFuture
+	GetBackupPlanFromJSONAsync(ctx workflow.Context, input *backup.GetBackupPlanFromJSONInput) *GetBackupPlanFromJSONFuture
 
 	GetBackupPlanFromTemplate(ctx workflow.Context, input *backup.GetBackupPlanFromTemplateInput) (*backup.GetBackupPlanFromTemplateOutput, error)
-	GetBackupPlanFromTemplateAsync(ctx workflow.Context, input *backup.GetBackupPlanFromTemplateInput) *BackupGetBackupPlanFromTemplateFuture
+	GetBackupPlanFromTemplateAsync(ctx workflow.Context, input *backup.GetBackupPlanFromTemplateInput) *GetBackupPlanFromTemplateFuture
 
 	GetBackupSelection(ctx workflow.Context, input *backup.GetBackupSelectionInput) (*backup.GetBackupSelectionOutput, error)
-	GetBackupSelectionAsync(ctx workflow.Context, input *backup.GetBackupSelectionInput) *BackupGetBackupSelectionFuture
+	GetBackupSelectionAsync(ctx workflow.Context, input *backup.GetBackupSelectionInput) *GetBackupSelectionFuture
 
 	GetBackupVaultAccessPolicy(ctx workflow.Context, input *backup.GetBackupVaultAccessPolicyInput) (*backup.GetBackupVaultAccessPolicyOutput, error)
-	GetBackupVaultAccessPolicyAsync(ctx workflow.Context, input *backup.GetBackupVaultAccessPolicyInput) *BackupGetBackupVaultAccessPolicyFuture
+	GetBackupVaultAccessPolicyAsync(ctx workflow.Context, input *backup.GetBackupVaultAccessPolicyInput) *GetBackupVaultAccessPolicyFuture
 
 	GetBackupVaultNotifications(ctx workflow.Context, input *backup.GetBackupVaultNotificationsInput) (*backup.GetBackupVaultNotificationsOutput, error)
-	GetBackupVaultNotificationsAsync(ctx workflow.Context, input *backup.GetBackupVaultNotificationsInput) *BackupGetBackupVaultNotificationsFuture
+	GetBackupVaultNotificationsAsync(ctx workflow.Context, input *backup.GetBackupVaultNotificationsInput) *GetBackupVaultNotificationsFuture
 
 	GetRecoveryPointRestoreMetadata(ctx workflow.Context, input *backup.GetRecoveryPointRestoreMetadataInput) (*backup.GetRecoveryPointRestoreMetadataOutput, error)
-	GetRecoveryPointRestoreMetadataAsync(ctx workflow.Context, input *backup.GetRecoveryPointRestoreMetadataInput) *BackupGetRecoveryPointRestoreMetadataFuture
+	GetRecoveryPointRestoreMetadataAsync(ctx workflow.Context, input *backup.GetRecoveryPointRestoreMetadataInput) *GetRecoveryPointRestoreMetadataFuture
 
 	GetSupportedResourceTypes(ctx workflow.Context, input *backup.GetSupportedResourceTypesInput) (*backup.GetSupportedResourceTypesOutput, error)
-	GetSupportedResourceTypesAsync(ctx workflow.Context, input *backup.GetSupportedResourceTypesInput) *BackupGetSupportedResourceTypesFuture
+	GetSupportedResourceTypesAsync(ctx workflow.Context, input *backup.GetSupportedResourceTypesInput) *GetSupportedResourceTypesFuture
 
 	ListBackupJobs(ctx workflow.Context, input *backup.ListBackupJobsInput) (*backup.ListBackupJobsOutput, error)
-	ListBackupJobsAsync(ctx workflow.Context, input *backup.ListBackupJobsInput) *BackupListBackupJobsFuture
+	ListBackupJobsAsync(ctx workflow.Context, input *backup.ListBackupJobsInput) *ListBackupJobsFuture
 
 	ListBackupPlanTemplates(ctx workflow.Context, input *backup.ListBackupPlanTemplatesInput) (*backup.ListBackupPlanTemplatesOutput, error)
-	ListBackupPlanTemplatesAsync(ctx workflow.Context, input *backup.ListBackupPlanTemplatesInput) *BackupListBackupPlanTemplatesFuture
+	ListBackupPlanTemplatesAsync(ctx workflow.Context, input *backup.ListBackupPlanTemplatesInput) *ListBackupPlanTemplatesFuture
 
 	ListBackupPlanVersions(ctx workflow.Context, input *backup.ListBackupPlanVersionsInput) (*backup.ListBackupPlanVersionsOutput, error)
-	ListBackupPlanVersionsAsync(ctx workflow.Context, input *backup.ListBackupPlanVersionsInput) *BackupListBackupPlanVersionsFuture
+	ListBackupPlanVersionsAsync(ctx workflow.Context, input *backup.ListBackupPlanVersionsInput) *ListBackupPlanVersionsFuture
 
 	ListBackupPlans(ctx workflow.Context, input *backup.ListBackupPlansInput) (*backup.ListBackupPlansOutput, error)
-	ListBackupPlansAsync(ctx workflow.Context, input *backup.ListBackupPlansInput) *BackupListBackupPlansFuture
+	ListBackupPlansAsync(ctx workflow.Context, input *backup.ListBackupPlansInput) *ListBackupPlansFuture
 
 	ListBackupSelections(ctx workflow.Context, input *backup.ListBackupSelectionsInput) (*backup.ListBackupSelectionsOutput, error)
-	ListBackupSelectionsAsync(ctx workflow.Context, input *backup.ListBackupSelectionsInput) *BackupListBackupSelectionsFuture
+	ListBackupSelectionsAsync(ctx workflow.Context, input *backup.ListBackupSelectionsInput) *ListBackupSelectionsFuture
 
 	ListBackupVaults(ctx workflow.Context, input *backup.ListBackupVaultsInput) (*backup.ListBackupVaultsOutput, error)
-	ListBackupVaultsAsync(ctx workflow.Context, input *backup.ListBackupVaultsInput) *BackupListBackupVaultsFuture
+	ListBackupVaultsAsync(ctx workflow.Context, input *backup.ListBackupVaultsInput) *ListBackupVaultsFuture
 
 	ListCopyJobs(ctx workflow.Context, input *backup.ListCopyJobsInput) (*backup.ListCopyJobsOutput, error)
-	ListCopyJobsAsync(ctx workflow.Context, input *backup.ListCopyJobsInput) *BackupListCopyJobsFuture
+	ListCopyJobsAsync(ctx workflow.Context, input *backup.ListCopyJobsInput) *ListCopyJobsFuture
 
 	ListProtectedResources(ctx workflow.Context, input *backup.ListProtectedResourcesInput) (*backup.ListProtectedResourcesOutput, error)
-	ListProtectedResourcesAsync(ctx workflow.Context, input *backup.ListProtectedResourcesInput) *BackupListProtectedResourcesFuture
+	ListProtectedResourcesAsync(ctx workflow.Context, input *backup.ListProtectedResourcesInput) *ListProtectedResourcesFuture
 
 	ListRecoveryPointsByBackupVault(ctx workflow.Context, input *backup.ListRecoveryPointsByBackupVaultInput) (*backup.ListRecoveryPointsByBackupVaultOutput, error)
-	ListRecoveryPointsByBackupVaultAsync(ctx workflow.Context, input *backup.ListRecoveryPointsByBackupVaultInput) *BackupListRecoveryPointsByBackupVaultFuture
+	ListRecoveryPointsByBackupVaultAsync(ctx workflow.Context, input *backup.ListRecoveryPointsByBackupVaultInput) *ListRecoveryPointsByBackupVaultFuture
 
 	ListRecoveryPointsByResource(ctx workflow.Context, input *backup.ListRecoveryPointsByResourceInput) (*backup.ListRecoveryPointsByResourceOutput, error)
-	ListRecoveryPointsByResourceAsync(ctx workflow.Context, input *backup.ListRecoveryPointsByResourceInput) *BackupListRecoveryPointsByResourceFuture
+	ListRecoveryPointsByResourceAsync(ctx workflow.Context, input *backup.ListRecoveryPointsByResourceInput) *ListRecoveryPointsByResourceFuture
 
 	ListRestoreJobs(ctx workflow.Context, input *backup.ListRestoreJobsInput) (*backup.ListRestoreJobsOutput, error)
-	ListRestoreJobsAsync(ctx workflow.Context, input *backup.ListRestoreJobsInput) *BackupListRestoreJobsFuture
+	ListRestoreJobsAsync(ctx workflow.Context, input *backup.ListRestoreJobsInput) *ListRestoreJobsFuture
 
 	ListTags(ctx workflow.Context, input *backup.ListTagsInput) (*backup.ListTagsOutput, error)
-	ListTagsAsync(ctx workflow.Context, input *backup.ListTagsInput) *BackupListTagsFuture
+	ListTagsAsync(ctx workflow.Context, input *backup.ListTagsInput) *ListTagsFuture
 
 	PutBackupVaultAccessPolicy(ctx workflow.Context, input *backup.PutBackupVaultAccessPolicyInput) (*backup.PutBackupVaultAccessPolicyOutput, error)
-	PutBackupVaultAccessPolicyAsync(ctx workflow.Context, input *backup.PutBackupVaultAccessPolicyInput) *BackupPutBackupVaultAccessPolicyFuture
+	PutBackupVaultAccessPolicyAsync(ctx workflow.Context, input *backup.PutBackupVaultAccessPolicyInput) *PutBackupVaultAccessPolicyFuture
 
 	PutBackupVaultNotifications(ctx workflow.Context, input *backup.PutBackupVaultNotificationsInput) (*backup.PutBackupVaultNotificationsOutput, error)
-	PutBackupVaultNotificationsAsync(ctx workflow.Context, input *backup.PutBackupVaultNotificationsInput) *BackupPutBackupVaultNotificationsFuture
+	PutBackupVaultNotificationsAsync(ctx workflow.Context, input *backup.PutBackupVaultNotificationsInput) *PutBackupVaultNotificationsFuture
 
 	StartBackupJob(ctx workflow.Context, input *backup.StartBackupJobInput) (*backup.StartBackupJobOutput, error)
-	StartBackupJobAsync(ctx workflow.Context, input *backup.StartBackupJobInput) *BackupStartBackupJobFuture
+	StartBackupJobAsync(ctx workflow.Context, input *backup.StartBackupJobInput) *StartBackupJobFuture
 
 	StartCopyJob(ctx workflow.Context, input *backup.StartCopyJobInput) (*backup.StartCopyJobOutput, error)
-	StartCopyJobAsync(ctx workflow.Context, input *backup.StartCopyJobInput) *BackupStartCopyJobFuture
+	StartCopyJobAsync(ctx workflow.Context, input *backup.StartCopyJobInput) *StartCopyJobFuture
 
 	StartRestoreJob(ctx workflow.Context, input *backup.StartRestoreJobInput) (*backup.StartRestoreJobOutput, error)
-	StartRestoreJobAsync(ctx workflow.Context, input *backup.StartRestoreJobInput) *BackupStartRestoreJobFuture
+	StartRestoreJobAsync(ctx workflow.Context, input *backup.StartRestoreJobInput) *StartRestoreJobFuture
 
 	StopBackupJob(ctx workflow.Context, input *backup.StopBackupJobInput) (*backup.StopBackupJobOutput, error)
-	StopBackupJobAsync(ctx workflow.Context, input *backup.StopBackupJobInput) *BackupStopBackupJobFuture
+	StopBackupJobAsync(ctx workflow.Context, input *backup.StopBackupJobInput) *StopBackupJobFuture
 
 	TagResource(ctx workflow.Context, input *backup.TagResourceInput) (*backup.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *backup.TagResourceInput) *BackupTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *backup.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *backup.UntagResourceInput) (*backup.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *backup.UntagResourceInput) *BackupUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *backup.UntagResourceInput) *UntagResourceFuture
 
 	UpdateBackupPlan(ctx workflow.Context, input *backup.UpdateBackupPlanInput) (*backup.UpdateBackupPlanOutput, error)
-	UpdateBackupPlanAsync(ctx workflow.Context, input *backup.UpdateBackupPlanInput) *BackupUpdateBackupPlanFuture
+	UpdateBackupPlanAsync(ctx workflow.Context, input *backup.UpdateBackupPlanInput) *UpdateBackupPlanFuture
 
 	UpdateRecoveryPointLifecycle(ctx workflow.Context, input *backup.UpdateRecoveryPointLifecycleInput) (*backup.UpdateRecoveryPointLifecycleOutput, error)
-	UpdateRecoveryPointLifecycleAsync(ctx workflow.Context, input *backup.UpdateRecoveryPointLifecycleInput) *BackupUpdateRecoveryPointLifecycleFuture
+	UpdateRecoveryPointLifecycleAsync(ctx workflow.Context, input *backup.UpdateRecoveryPointLifecycleInput) *UpdateRecoveryPointLifecycleFuture
 
 	UpdateRegionSettings(ctx workflow.Context, input *backup.UpdateRegionSettingsInput) (*backup.UpdateRegionSettingsOutput, error)
-	UpdateRegionSettingsAsync(ctx workflow.Context, input *backup.UpdateRegionSettingsInput) *BackupUpdateRegionSettingsFuture
+	UpdateRegionSettingsAsync(ctx workflow.Context, input *backup.UpdateRegionSettingsInput) *UpdateRegionSettingsFuture
 }
 
 func NewClient() Client {

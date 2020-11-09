@@ -16,34 +16,34 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type PricingDescribeServicesFuture struct {
+type DescribeServicesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PricingDescribeServicesFuture) Get(ctx workflow.Context) (*pricing.DescribeServicesOutput, error) {
+func (r *DescribeServicesFuture) Get(ctx workflow.Context) (*pricing.DescribeServicesOutput, error) {
 	var output pricing.DescribeServicesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PricingGetAttributeValuesFuture struct {
+type GetAttributeValuesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PricingGetAttributeValuesFuture) Get(ctx workflow.Context) (*pricing.GetAttributeValuesOutput, error) {
+func (r *GetAttributeValuesFuture) Get(ctx workflow.Context) (*pricing.GetAttributeValuesOutput, error) {
 	var output pricing.GetAttributeValuesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PricingGetProductsFuture struct {
+type GetProductsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PricingGetProductsFuture) Get(ctx workflow.Context) (*pricing.GetProductsOutput, error) {
+func (r *GetProductsFuture) Get(ctx workflow.Context) (*pricing.GetProductsOutput, error) {
 	var output pricing.GetProductsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -55,9 +55,9 @@ func (a *stub) DescribeServices(ctx workflow.Context, input *pricing.DescribeSer
 	return &output, err
 }
 
-func (a *stub) DescribeServicesAsync(ctx workflow.Context, input *pricing.DescribeServicesInput) *PricingDescribeServicesFuture {
+func (a *stub) DescribeServicesAsync(ctx workflow.Context, input *pricing.DescribeServicesInput) *DescribeServicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pricing.DescribeServices", input)
-	return &PricingDescribeServicesFuture{Future: future}
+	return &DescribeServicesFuture{Future: future}
 }
 
 func (a *stub) GetAttributeValues(ctx workflow.Context, input *pricing.GetAttributeValuesInput) (*pricing.GetAttributeValuesOutput, error) {
@@ -66,9 +66,9 @@ func (a *stub) GetAttributeValues(ctx workflow.Context, input *pricing.GetAttrib
 	return &output, err
 }
 
-func (a *stub) GetAttributeValuesAsync(ctx workflow.Context, input *pricing.GetAttributeValuesInput) *PricingGetAttributeValuesFuture {
+func (a *stub) GetAttributeValuesAsync(ctx workflow.Context, input *pricing.GetAttributeValuesInput) *GetAttributeValuesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pricing.GetAttributeValues", input)
-	return &PricingGetAttributeValuesFuture{Future: future}
+	return &GetAttributeValuesFuture{Future: future}
 }
 
 func (a *stub) GetProducts(ctx workflow.Context, input *pricing.GetProductsInput) (*pricing.GetProductsOutput, error) {
@@ -77,7 +77,7 @@ func (a *stub) GetProducts(ctx workflow.Context, input *pricing.GetProductsInput
 	return &output, err
 }
 
-func (a *stub) GetProductsAsync(ctx workflow.Context, input *pricing.GetProductsInput) *PricingGetProductsFuture {
+func (a *stub) GetProductsAsync(ctx workflow.Context, input *pricing.GetProductsInput) *GetProductsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.pricing.GetProducts", input)
-	return &PricingGetProductsFuture{Future: future}
+	return &GetProductsFuture{Future: future}
 }

@@ -16,848 +16,848 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type DeviceFarmCreateDevicePoolFuture struct {
+type CreateDevicePoolFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmCreateDevicePoolFuture) Get(ctx workflow.Context) (*devicefarm.CreateDevicePoolOutput, error) {
+func (r *CreateDevicePoolFuture) Get(ctx workflow.Context) (*devicefarm.CreateDevicePoolOutput, error) {
 	var output devicefarm.CreateDevicePoolOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmCreateInstanceProfileFuture struct {
+type CreateInstanceProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmCreateInstanceProfileFuture) Get(ctx workflow.Context) (*devicefarm.CreateInstanceProfileOutput, error) {
+func (r *CreateInstanceProfileFuture) Get(ctx workflow.Context) (*devicefarm.CreateInstanceProfileOutput, error) {
 	var output devicefarm.CreateInstanceProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmCreateNetworkProfileFuture struct {
+type CreateNetworkProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmCreateNetworkProfileFuture) Get(ctx workflow.Context) (*devicefarm.CreateNetworkProfileOutput, error) {
+func (r *CreateNetworkProfileFuture) Get(ctx workflow.Context) (*devicefarm.CreateNetworkProfileOutput, error) {
 	var output devicefarm.CreateNetworkProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmCreateProjectFuture struct {
+type CreateProjectFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmCreateProjectFuture) Get(ctx workflow.Context) (*devicefarm.CreateProjectOutput, error) {
+func (r *CreateProjectFuture) Get(ctx workflow.Context) (*devicefarm.CreateProjectOutput, error) {
 	var output devicefarm.CreateProjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmCreateRemoteAccessSessionFuture struct {
+type CreateRemoteAccessSessionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmCreateRemoteAccessSessionFuture) Get(ctx workflow.Context) (*devicefarm.CreateRemoteAccessSessionOutput, error) {
+func (r *CreateRemoteAccessSessionFuture) Get(ctx workflow.Context) (*devicefarm.CreateRemoteAccessSessionOutput, error) {
 	var output devicefarm.CreateRemoteAccessSessionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmCreateTestGridProjectFuture struct {
+type CreateTestGridProjectFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmCreateTestGridProjectFuture) Get(ctx workflow.Context) (*devicefarm.CreateTestGridProjectOutput, error) {
+func (r *CreateTestGridProjectFuture) Get(ctx workflow.Context) (*devicefarm.CreateTestGridProjectOutput, error) {
 	var output devicefarm.CreateTestGridProjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmCreateTestGridUrlFuture struct {
+type CreateTestGridUrlFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmCreateTestGridUrlFuture) Get(ctx workflow.Context) (*devicefarm.CreateTestGridUrlOutput, error) {
+func (r *CreateTestGridUrlFuture) Get(ctx workflow.Context) (*devicefarm.CreateTestGridUrlOutput, error) {
 	var output devicefarm.CreateTestGridUrlOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmCreateUploadFuture struct {
+type CreateUploadFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmCreateUploadFuture) Get(ctx workflow.Context) (*devicefarm.CreateUploadOutput, error) {
+func (r *CreateUploadFuture) Get(ctx workflow.Context) (*devicefarm.CreateUploadOutput, error) {
 	var output devicefarm.CreateUploadOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmCreateVPCEConfigurationFuture struct {
+type CreateVPCEConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmCreateVPCEConfigurationFuture) Get(ctx workflow.Context) (*devicefarm.CreateVPCEConfigurationOutput, error) {
+func (r *CreateVPCEConfigurationFuture) Get(ctx workflow.Context) (*devicefarm.CreateVPCEConfigurationOutput, error) {
 	var output devicefarm.CreateVPCEConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmDeleteDevicePoolFuture struct {
+type DeleteDevicePoolFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmDeleteDevicePoolFuture) Get(ctx workflow.Context) (*devicefarm.DeleteDevicePoolOutput, error) {
+func (r *DeleteDevicePoolFuture) Get(ctx workflow.Context) (*devicefarm.DeleteDevicePoolOutput, error) {
 	var output devicefarm.DeleteDevicePoolOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmDeleteInstanceProfileFuture struct {
+type DeleteInstanceProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmDeleteInstanceProfileFuture) Get(ctx workflow.Context) (*devicefarm.DeleteInstanceProfileOutput, error) {
+func (r *DeleteInstanceProfileFuture) Get(ctx workflow.Context) (*devicefarm.DeleteInstanceProfileOutput, error) {
 	var output devicefarm.DeleteInstanceProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmDeleteNetworkProfileFuture struct {
+type DeleteNetworkProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmDeleteNetworkProfileFuture) Get(ctx workflow.Context) (*devicefarm.DeleteNetworkProfileOutput, error) {
+func (r *DeleteNetworkProfileFuture) Get(ctx workflow.Context) (*devicefarm.DeleteNetworkProfileOutput, error) {
 	var output devicefarm.DeleteNetworkProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmDeleteProjectFuture struct {
+type DeleteProjectFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmDeleteProjectFuture) Get(ctx workflow.Context) (*devicefarm.DeleteProjectOutput, error) {
+func (r *DeleteProjectFuture) Get(ctx workflow.Context) (*devicefarm.DeleteProjectOutput, error) {
 	var output devicefarm.DeleteProjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmDeleteRemoteAccessSessionFuture struct {
+type DeleteRemoteAccessSessionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmDeleteRemoteAccessSessionFuture) Get(ctx workflow.Context) (*devicefarm.DeleteRemoteAccessSessionOutput, error) {
+func (r *DeleteRemoteAccessSessionFuture) Get(ctx workflow.Context) (*devicefarm.DeleteRemoteAccessSessionOutput, error) {
 	var output devicefarm.DeleteRemoteAccessSessionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmDeleteRunFuture struct {
+type DeleteRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmDeleteRunFuture) Get(ctx workflow.Context) (*devicefarm.DeleteRunOutput, error) {
+func (r *DeleteRunFuture) Get(ctx workflow.Context) (*devicefarm.DeleteRunOutput, error) {
 	var output devicefarm.DeleteRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmDeleteTestGridProjectFuture struct {
+type DeleteTestGridProjectFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmDeleteTestGridProjectFuture) Get(ctx workflow.Context) (*devicefarm.DeleteTestGridProjectOutput, error) {
+func (r *DeleteTestGridProjectFuture) Get(ctx workflow.Context) (*devicefarm.DeleteTestGridProjectOutput, error) {
 	var output devicefarm.DeleteTestGridProjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmDeleteUploadFuture struct {
+type DeleteUploadFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmDeleteUploadFuture) Get(ctx workflow.Context) (*devicefarm.DeleteUploadOutput, error) {
+func (r *DeleteUploadFuture) Get(ctx workflow.Context) (*devicefarm.DeleteUploadOutput, error) {
 	var output devicefarm.DeleteUploadOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmDeleteVPCEConfigurationFuture struct {
+type DeleteVPCEConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmDeleteVPCEConfigurationFuture) Get(ctx workflow.Context) (*devicefarm.DeleteVPCEConfigurationOutput, error) {
+func (r *DeleteVPCEConfigurationFuture) Get(ctx workflow.Context) (*devicefarm.DeleteVPCEConfigurationOutput, error) {
 	var output devicefarm.DeleteVPCEConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetAccountSettingsFuture struct {
+type GetAccountSettingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetAccountSettingsFuture) Get(ctx workflow.Context) (*devicefarm.GetAccountSettingsOutput, error) {
+func (r *GetAccountSettingsFuture) Get(ctx workflow.Context) (*devicefarm.GetAccountSettingsOutput, error) {
 	var output devicefarm.GetAccountSettingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetDeviceFuture struct {
+type GetDeviceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetDeviceFuture) Get(ctx workflow.Context) (*devicefarm.GetDeviceOutput, error) {
+func (r *GetDeviceFuture) Get(ctx workflow.Context) (*devicefarm.GetDeviceOutput, error) {
 	var output devicefarm.GetDeviceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetDeviceInstanceFuture struct {
+type GetDeviceInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetDeviceInstanceFuture) Get(ctx workflow.Context) (*devicefarm.GetDeviceInstanceOutput, error) {
+func (r *GetDeviceInstanceFuture) Get(ctx workflow.Context) (*devicefarm.GetDeviceInstanceOutput, error) {
 	var output devicefarm.GetDeviceInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetDevicePoolFuture struct {
+type GetDevicePoolFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetDevicePoolFuture) Get(ctx workflow.Context) (*devicefarm.GetDevicePoolOutput, error) {
+func (r *GetDevicePoolFuture) Get(ctx workflow.Context) (*devicefarm.GetDevicePoolOutput, error) {
 	var output devicefarm.GetDevicePoolOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetDevicePoolCompatibilityFuture struct {
+type GetDevicePoolCompatibilityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetDevicePoolCompatibilityFuture) Get(ctx workflow.Context) (*devicefarm.GetDevicePoolCompatibilityOutput, error) {
+func (r *GetDevicePoolCompatibilityFuture) Get(ctx workflow.Context) (*devicefarm.GetDevicePoolCompatibilityOutput, error) {
 	var output devicefarm.GetDevicePoolCompatibilityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetInstanceProfileFuture struct {
+type GetInstanceProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetInstanceProfileFuture) Get(ctx workflow.Context) (*devicefarm.GetInstanceProfileOutput, error) {
+func (r *GetInstanceProfileFuture) Get(ctx workflow.Context) (*devicefarm.GetInstanceProfileOutput, error) {
 	var output devicefarm.GetInstanceProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetJobFuture struct {
+type GetJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetJobFuture) Get(ctx workflow.Context) (*devicefarm.GetJobOutput, error) {
+func (r *GetJobFuture) Get(ctx workflow.Context) (*devicefarm.GetJobOutput, error) {
 	var output devicefarm.GetJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetNetworkProfileFuture struct {
+type GetNetworkProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetNetworkProfileFuture) Get(ctx workflow.Context) (*devicefarm.GetNetworkProfileOutput, error) {
+func (r *GetNetworkProfileFuture) Get(ctx workflow.Context) (*devicefarm.GetNetworkProfileOutput, error) {
 	var output devicefarm.GetNetworkProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetOfferingStatusFuture struct {
+type GetOfferingStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetOfferingStatusFuture) Get(ctx workflow.Context) (*devicefarm.GetOfferingStatusOutput, error) {
+func (r *GetOfferingStatusFuture) Get(ctx workflow.Context) (*devicefarm.GetOfferingStatusOutput, error) {
 	var output devicefarm.GetOfferingStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetProjectFuture struct {
+type GetProjectFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetProjectFuture) Get(ctx workflow.Context) (*devicefarm.GetProjectOutput, error) {
+func (r *GetProjectFuture) Get(ctx workflow.Context) (*devicefarm.GetProjectOutput, error) {
 	var output devicefarm.GetProjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetRemoteAccessSessionFuture struct {
+type GetRemoteAccessSessionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetRemoteAccessSessionFuture) Get(ctx workflow.Context) (*devicefarm.GetRemoteAccessSessionOutput, error) {
+func (r *GetRemoteAccessSessionFuture) Get(ctx workflow.Context) (*devicefarm.GetRemoteAccessSessionOutput, error) {
 	var output devicefarm.GetRemoteAccessSessionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetRunFuture struct {
+type GetRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetRunFuture) Get(ctx workflow.Context) (*devicefarm.GetRunOutput, error) {
+func (r *GetRunFuture) Get(ctx workflow.Context) (*devicefarm.GetRunOutput, error) {
 	var output devicefarm.GetRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetSuiteFuture struct {
+type GetSuiteFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetSuiteFuture) Get(ctx workflow.Context) (*devicefarm.GetSuiteOutput, error) {
+func (r *GetSuiteFuture) Get(ctx workflow.Context) (*devicefarm.GetSuiteOutput, error) {
 	var output devicefarm.GetSuiteOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetTestFuture struct {
+type GetTestFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetTestFuture) Get(ctx workflow.Context) (*devicefarm.GetTestOutput, error) {
+func (r *GetTestFuture) Get(ctx workflow.Context) (*devicefarm.GetTestOutput, error) {
 	var output devicefarm.GetTestOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetTestGridProjectFuture struct {
+type GetTestGridProjectFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetTestGridProjectFuture) Get(ctx workflow.Context) (*devicefarm.GetTestGridProjectOutput, error) {
+func (r *GetTestGridProjectFuture) Get(ctx workflow.Context) (*devicefarm.GetTestGridProjectOutput, error) {
 	var output devicefarm.GetTestGridProjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetTestGridSessionFuture struct {
+type GetTestGridSessionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetTestGridSessionFuture) Get(ctx workflow.Context) (*devicefarm.GetTestGridSessionOutput, error) {
+func (r *GetTestGridSessionFuture) Get(ctx workflow.Context) (*devicefarm.GetTestGridSessionOutput, error) {
 	var output devicefarm.GetTestGridSessionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetUploadFuture struct {
+type GetUploadFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetUploadFuture) Get(ctx workflow.Context) (*devicefarm.GetUploadOutput, error) {
+func (r *GetUploadFuture) Get(ctx workflow.Context) (*devicefarm.GetUploadOutput, error) {
 	var output devicefarm.GetUploadOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmGetVPCEConfigurationFuture struct {
+type GetVPCEConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmGetVPCEConfigurationFuture) Get(ctx workflow.Context) (*devicefarm.GetVPCEConfigurationOutput, error) {
+func (r *GetVPCEConfigurationFuture) Get(ctx workflow.Context) (*devicefarm.GetVPCEConfigurationOutput, error) {
 	var output devicefarm.GetVPCEConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmInstallToRemoteAccessSessionFuture struct {
+type InstallToRemoteAccessSessionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmInstallToRemoteAccessSessionFuture) Get(ctx workflow.Context) (*devicefarm.InstallToRemoteAccessSessionOutput, error) {
+func (r *InstallToRemoteAccessSessionFuture) Get(ctx workflow.Context) (*devicefarm.InstallToRemoteAccessSessionOutput, error) {
 	var output devicefarm.InstallToRemoteAccessSessionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListArtifactsFuture struct {
+type ListArtifactsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListArtifactsFuture) Get(ctx workflow.Context) (*devicefarm.ListArtifactsOutput, error) {
+func (r *ListArtifactsFuture) Get(ctx workflow.Context) (*devicefarm.ListArtifactsOutput, error) {
 	var output devicefarm.ListArtifactsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListDeviceInstancesFuture struct {
+type ListDeviceInstancesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListDeviceInstancesFuture) Get(ctx workflow.Context) (*devicefarm.ListDeviceInstancesOutput, error) {
+func (r *ListDeviceInstancesFuture) Get(ctx workflow.Context) (*devicefarm.ListDeviceInstancesOutput, error) {
 	var output devicefarm.ListDeviceInstancesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListDevicePoolsFuture struct {
+type ListDevicePoolsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListDevicePoolsFuture) Get(ctx workflow.Context) (*devicefarm.ListDevicePoolsOutput, error) {
+func (r *ListDevicePoolsFuture) Get(ctx workflow.Context) (*devicefarm.ListDevicePoolsOutput, error) {
 	var output devicefarm.ListDevicePoolsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListDevicesFuture struct {
+type ListDevicesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListDevicesFuture) Get(ctx workflow.Context) (*devicefarm.ListDevicesOutput, error) {
+func (r *ListDevicesFuture) Get(ctx workflow.Context) (*devicefarm.ListDevicesOutput, error) {
 	var output devicefarm.ListDevicesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListInstanceProfilesFuture struct {
+type ListInstanceProfilesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListInstanceProfilesFuture) Get(ctx workflow.Context) (*devicefarm.ListInstanceProfilesOutput, error) {
+func (r *ListInstanceProfilesFuture) Get(ctx workflow.Context) (*devicefarm.ListInstanceProfilesOutput, error) {
 	var output devicefarm.ListInstanceProfilesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListJobsFuture struct {
+type ListJobsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListJobsFuture) Get(ctx workflow.Context) (*devicefarm.ListJobsOutput, error) {
+func (r *ListJobsFuture) Get(ctx workflow.Context) (*devicefarm.ListJobsOutput, error) {
 	var output devicefarm.ListJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListNetworkProfilesFuture struct {
+type ListNetworkProfilesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListNetworkProfilesFuture) Get(ctx workflow.Context) (*devicefarm.ListNetworkProfilesOutput, error) {
+func (r *ListNetworkProfilesFuture) Get(ctx workflow.Context) (*devicefarm.ListNetworkProfilesOutput, error) {
 	var output devicefarm.ListNetworkProfilesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListOfferingPromotionsFuture struct {
+type ListOfferingPromotionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListOfferingPromotionsFuture) Get(ctx workflow.Context) (*devicefarm.ListOfferingPromotionsOutput, error) {
+func (r *ListOfferingPromotionsFuture) Get(ctx workflow.Context) (*devicefarm.ListOfferingPromotionsOutput, error) {
 	var output devicefarm.ListOfferingPromotionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListOfferingTransactionsFuture struct {
+type ListOfferingTransactionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListOfferingTransactionsFuture) Get(ctx workflow.Context) (*devicefarm.ListOfferingTransactionsOutput, error) {
+func (r *ListOfferingTransactionsFuture) Get(ctx workflow.Context) (*devicefarm.ListOfferingTransactionsOutput, error) {
 	var output devicefarm.ListOfferingTransactionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListOfferingsFuture struct {
+type ListOfferingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListOfferingsFuture) Get(ctx workflow.Context) (*devicefarm.ListOfferingsOutput, error) {
+func (r *ListOfferingsFuture) Get(ctx workflow.Context) (*devicefarm.ListOfferingsOutput, error) {
 	var output devicefarm.ListOfferingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListProjectsFuture struct {
+type ListProjectsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListProjectsFuture) Get(ctx workflow.Context) (*devicefarm.ListProjectsOutput, error) {
+func (r *ListProjectsFuture) Get(ctx workflow.Context) (*devicefarm.ListProjectsOutput, error) {
 	var output devicefarm.ListProjectsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListRemoteAccessSessionsFuture struct {
+type ListRemoteAccessSessionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListRemoteAccessSessionsFuture) Get(ctx workflow.Context) (*devicefarm.ListRemoteAccessSessionsOutput, error) {
+func (r *ListRemoteAccessSessionsFuture) Get(ctx workflow.Context) (*devicefarm.ListRemoteAccessSessionsOutput, error) {
 	var output devicefarm.ListRemoteAccessSessionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListRunsFuture struct {
+type ListRunsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListRunsFuture) Get(ctx workflow.Context) (*devicefarm.ListRunsOutput, error) {
+func (r *ListRunsFuture) Get(ctx workflow.Context) (*devicefarm.ListRunsOutput, error) {
 	var output devicefarm.ListRunsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListSamplesFuture struct {
+type ListSamplesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListSamplesFuture) Get(ctx workflow.Context) (*devicefarm.ListSamplesOutput, error) {
+func (r *ListSamplesFuture) Get(ctx workflow.Context) (*devicefarm.ListSamplesOutput, error) {
 	var output devicefarm.ListSamplesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListSuitesFuture struct {
+type ListSuitesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListSuitesFuture) Get(ctx workflow.Context) (*devicefarm.ListSuitesOutput, error) {
+func (r *ListSuitesFuture) Get(ctx workflow.Context) (*devicefarm.ListSuitesOutput, error) {
 	var output devicefarm.ListSuitesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListTagsForResourceFuture) Get(ctx workflow.Context) (*devicefarm.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*devicefarm.ListTagsForResourceOutput, error) {
 	var output devicefarm.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListTestGridProjectsFuture struct {
+type ListTestGridProjectsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListTestGridProjectsFuture) Get(ctx workflow.Context) (*devicefarm.ListTestGridProjectsOutput, error) {
+func (r *ListTestGridProjectsFuture) Get(ctx workflow.Context) (*devicefarm.ListTestGridProjectsOutput, error) {
 	var output devicefarm.ListTestGridProjectsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListTestGridSessionActionsFuture struct {
+type ListTestGridSessionActionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListTestGridSessionActionsFuture) Get(ctx workflow.Context) (*devicefarm.ListTestGridSessionActionsOutput, error) {
+func (r *ListTestGridSessionActionsFuture) Get(ctx workflow.Context) (*devicefarm.ListTestGridSessionActionsOutput, error) {
 	var output devicefarm.ListTestGridSessionActionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListTestGridSessionArtifactsFuture struct {
+type ListTestGridSessionArtifactsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListTestGridSessionArtifactsFuture) Get(ctx workflow.Context) (*devicefarm.ListTestGridSessionArtifactsOutput, error) {
+func (r *ListTestGridSessionArtifactsFuture) Get(ctx workflow.Context) (*devicefarm.ListTestGridSessionArtifactsOutput, error) {
 	var output devicefarm.ListTestGridSessionArtifactsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListTestGridSessionsFuture struct {
+type ListTestGridSessionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListTestGridSessionsFuture) Get(ctx workflow.Context) (*devicefarm.ListTestGridSessionsOutput, error) {
+func (r *ListTestGridSessionsFuture) Get(ctx workflow.Context) (*devicefarm.ListTestGridSessionsOutput, error) {
 	var output devicefarm.ListTestGridSessionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListTestsFuture struct {
+type ListTestsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListTestsFuture) Get(ctx workflow.Context) (*devicefarm.ListTestsOutput, error) {
+func (r *ListTestsFuture) Get(ctx workflow.Context) (*devicefarm.ListTestsOutput, error) {
 	var output devicefarm.ListTestsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListUniqueProblemsFuture struct {
+type ListUniqueProblemsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListUniqueProblemsFuture) Get(ctx workflow.Context) (*devicefarm.ListUniqueProblemsOutput, error) {
+func (r *ListUniqueProblemsFuture) Get(ctx workflow.Context) (*devicefarm.ListUniqueProblemsOutput, error) {
 	var output devicefarm.ListUniqueProblemsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListUploadsFuture struct {
+type ListUploadsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListUploadsFuture) Get(ctx workflow.Context) (*devicefarm.ListUploadsOutput, error) {
+func (r *ListUploadsFuture) Get(ctx workflow.Context) (*devicefarm.ListUploadsOutput, error) {
 	var output devicefarm.ListUploadsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmListVPCEConfigurationsFuture struct {
+type ListVPCEConfigurationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmListVPCEConfigurationsFuture) Get(ctx workflow.Context) (*devicefarm.ListVPCEConfigurationsOutput, error) {
+func (r *ListVPCEConfigurationsFuture) Get(ctx workflow.Context) (*devicefarm.ListVPCEConfigurationsOutput, error) {
 	var output devicefarm.ListVPCEConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmPurchaseOfferingFuture struct {
+type PurchaseOfferingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmPurchaseOfferingFuture) Get(ctx workflow.Context) (*devicefarm.PurchaseOfferingOutput, error) {
+func (r *PurchaseOfferingFuture) Get(ctx workflow.Context) (*devicefarm.PurchaseOfferingOutput, error) {
 	var output devicefarm.PurchaseOfferingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmRenewOfferingFuture struct {
+type RenewOfferingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmRenewOfferingFuture) Get(ctx workflow.Context) (*devicefarm.RenewOfferingOutput, error) {
+func (r *RenewOfferingFuture) Get(ctx workflow.Context) (*devicefarm.RenewOfferingOutput, error) {
 	var output devicefarm.RenewOfferingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmScheduleRunFuture struct {
+type ScheduleRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmScheduleRunFuture) Get(ctx workflow.Context) (*devicefarm.ScheduleRunOutput, error) {
+func (r *ScheduleRunFuture) Get(ctx workflow.Context) (*devicefarm.ScheduleRunOutput, error) {
 	var output devicefarm.ScheduleRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmStopJobFuture struct {
+type StopJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmStopJobFuture) Get(ctx workflow.Context) (*devicefarm.StopJobOutput, error) {
+func (r *StopJobFuture) Get(ctx workflow.Context) (*devicefarm.StopJobOutput, error) {
 	var output devicefarm.StopJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmStopRemoteAccessSessionFuture struct {
+type StopRemoteAccessSessionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmStopRemoteAccessSessionFuture) Get(ctx workflow.Context) (*devicefarm.StopRemoteAccessSessionOutput, error) {
+func (r *StopRemoteAccessSessionFuture) Get(ctx workflow.Context) (*devicefarm.StopRemoteAccessSessionOutput, error) {
 	var output devicefarm.StopRemoteAccessSessionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmStopRunFuture struct {
+type StopRunFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmStopRunFuture) Get(ctx workflow.Context) (*devicefarm.StopRunOutput, error) {
+func (r *StopRunFuture) Get(ctx workflow.Context) (*devicefarm.StopRunOutput, error) {
 	var output devicefarm.StopRunOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmTagResourceFuture) Get(ctx workflow.Context) (*devicefarm.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*devicefarm.TagResourceOutput, error) {
 	var output devicefarm.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmUntagResourceFuture) Get(ctx workflow.Context) (*devicefarm.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*devicefarm.UntagResourceOutput, error) {
 	var output devicefarm.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmUpdateDeviceInstanceFuture struct {
+type UpdateDeviceInstanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmUpdateDeviceInstanceFuture) Get(ctx workflow.Context) (*devicefarm.UpdateDeviceInstanceOutput, error) {
+func (r *UpdateDeviceInstanceFuture) Get(ctx workflow.Context) (*devicefarm.UpdateDeviceInstanceOutput, error) {
 	var output devicefarm.UpdateDeviceInstanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmUpdateDevicePoolFuture struct {
+type UpdateDevicePoolFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmUpdateDevicePoolFuture) Get(ctx workflow.Context) (*devicefarm.UpdateDevicePoolOutput, error) {
+func (r *UpdateDevicePoolFuture) Get(ctx workflow.Context) (*devicefarm.UpdateDevicePoolOutput, error) {
 	var output devicefarm.UpdateDevicePoolOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmUpdateInstanceProfileFuture struct {
+type UpdateInstanceProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmUpdateInstanceProfileFuture) Get(ctx workflow.Context) (*devicefarm.UpdateInstanceProfileOutput, error) {
+func (r *UpdateInstanceProfileFuture) Get(ctx workflow.Context) (*devicefarm.UpdateInstanceProfileOutput, error) {
 	var output devicefarm.UpdateInstanceProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmUpdateNetworkProfileFuture struct {
+type UpdateNetworkProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmUpdateNetworkProfileFuture) Get(ctx workflow.Context) (*devicefarm.UpdateNetworkProfileOutput, error) {
+func (r *UpdateNetworkProfileFuture) Get(ctx workflow.Context) (*devicefarm.UpdateNetworkProfileOutput, error) {
 	var output devicefarm.UpdateNetworkProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmUpdateProjectFuture struct {
+type UpdateProjectFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmUpdateProjectFuture) Get(ctx workflow.Context) (*devicefarm.UpdateProjectOutput, error) {
+func (r *UpdateProjectFuture) Get(ctx workflow.Context) (*devicefarm.UpdateProjectOutput, error) {
 	var output devicefarm.UpdateProjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmUpdateTestGridProjectFuture struct {
+type UpdateTestGridProjectFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmUpdateTestGridProjectFuture) Get(ctx workflow.Context) (*devicefarm.UpdateTestGridProjectOutput, error) {
+func (r *UpdateTestGridProjectFuture) Get(ctx workflow.Context) (*devicefarm.UpdateTestGridProjectOutput, error) {
 	var output devicefarm.UpdateTestGridProjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmUpdateUploadFuture struct {
+type UpdateUploadFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmUpdateUploadFuture) Get(ctx workflow.Context) (*devicefarm.UpdateUploadOutput, error) {
+func (r *UpdateUploadFuture) Get(ctx workflow.Context) (*devicefarm.UpdateUploadOutput, error) {
 	var output devicefarm.UpdateUploadOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type DeviceFarmUpdateVPCEConfigurationFuture struct {
+type UpdateVPCEConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *DeviceFarmUpdateVPCEConfigurationFuture) Get(ctx workflow.Context) (*devicefarm.UpdateVPCEConfigurationOutput, error) {
+func (r *UpdateVPCEConfigurationFuture) Get(ctx workflow.Context) (*devicefarm.UpdateVPCEConfigurationOutput, error) {
 	var output devicefarm.UpdateVPCEConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -869,9 +869,9 @@ func (a *stub) CreateDevicePool(ctx workflow.Context, input *devicefarm.CreateDe
 	return &output, err
 }
 
-func (a *stub) CreateDevicePoolAsync(ctx workflow.Context, input *devicefarm.CreateDevicePoolInput) *DeviceFarmCreateDevicePoolFuture {
+func (a *stub) CreateDevicePoolAsync(ctx workflow.Context, input *devicefarm.CreateDevicePoolInput) *CreateDevicePoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.CreateDevicePool", input)
-	return &DeviceFarmCreateDevicePoolFuture{Future: future}
+	return &CreateDevicePoolFuture{Future: future}
 }
 
 func (a *stub) CreateInstanceProfile(ctx workflow.Context, input *devicefarm.CreateInstanceProfileInput) (*devicefarm.CreateInstanceProfileOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) CreateInstanceProfile(ctx workflow.Context, input *devicefarm.Cre
 	return &output, err
 }
 
-func (a *stub) CreateInstanceProfileAsync(ctx workflow.Context, input *devicefarm.CreateInstanceProfileInput) *DeviceFarmCreateInstanceProfileFuture {
+func (a *stub) CreateInstanceProfileAsync(ctx workflow.Context, input *devicefarm.CreateInstanceProfileInput) *CreateInstanceProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.CreateInstanceProfile", input)
-	return &DeviceFarmCreateInstanceProfileFuture{Future: future}
+	return &CreateInstanceProfileFuture{Future: future}
 }
 
 func (a *stub) CreateNetworkProfile(ctx workflow.Context, input *devicefarm.CreateNetworkProfileInput) (*devicefarm.CreateNetworkProfileOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) CreateNetworkProfile(ctx workflow.Context, input *devicefarm.Crea
 	return &output, err
 }
 
-func (a *stub) CreateNetworkProfileAsync(ctx workflow.Context, input *devicefarm.CreateNetworkProfileInput) *DeviceFarmCreateNetworkProfileFuture {
+func (a *stub) CreateNetworkProfileAsync(ctx workflow.Context, input *devicefarm.CreateNetworkProfileInput) *CreateNetworkProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.CreateNetworkProfile", input)
-	return &DeviceFarmCreateNetworkProfileFuture{Future: future}
+	return &CreateNetworkProfileFuture{Future: future}
 }
 
 func (a *stub) CreateProject(ctx workflow.Context, input *devicefarm.CreateProjectInput) (*devicefarm.CreateProjectOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) CreateProject(ctx workflow.Context, input *devicefarm.CreateProje
 	return &output, err
 }
 
-func (a *stub) CreateProjectAsync(ctx workflow.Context, input *devicefarm.CreateProjectInput) *DeviceFarmCreateProjectFuture {
+func (a *stub) CreateProjectAsync(ctx workflow.Context, input *devicefarm.CreateProjectInput) *CreateProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.CreateProject", input)
-	return &DeviceFarmCreateProjectFuture{Future: future}
+	return &CreateProjectFuture{Future: future}
 }
 
 func (a *stub) CreateRemoteAccessSession(ctx workflow.Context, input *devicefarm.CreateRemoteAccessSessionInput) (*devicefarm.CreateRemoteAccessSessionOutput, error) {
@@ -913,9 +913,9 @@ func (a *stub) CreateRemoteAccessSession(ctx workflow.Context, input *devicefarm
 	return &output, err
 }
 
-func (a *stub) CreateRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.CreateRemoteAccessSessionInput) *DeviceFarmCreateRemoteAccessSessionFuture {
+func (a *stub) CreateRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.CreateRemoteAccessSessionInput) *CreateRemoteAccessSessionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.CreateRemoteAccessSession", input)
-	return &DeviceFarmCreateRemoteAccessSessionFuture{Future: future}
+	return &CreateRemoteAccessSessionFuture{Future: future}
 }
 
 func (a *stub) CreateTestGridProject(ctx workflow.Context, input *devicefarm.CreateTestGridProjectInput) (*devicefarm.CreateTestGridProjectOutput, error) {
@@ -924,9 +924,9 @@ func (a *stub) CreateTestGridProject(ctx workflow.Context, input *devicefarm.Cre
 	return &output, err
 }
 
-func (a *stub) CreateTestGridProjectAsync(ctx workflow.Context, input *devicefarm.CreateTestGridProjectInput) *DeviceFarmCreateTestGridProjectFuture {
+func (a *stub) CreateTestGridProjectAsync(ctx workflow.Context, input *devicefarm.CreateTestGridProjectInput) *CreateTestGridProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.CreateTestGridProject", input)
-	return &DeviceFarmCreateTestGridProjectFuture{Future: future}
+	return &CreateTestGridProjectFuture{Future: future}
 }
 
 func (a *stub) CreateTestGridUrl(ctx workflow.Context, input *devicefarm.CreateTestGridUrlInput) (*devicefarm.CreateTestGridUrlOutput, error) {
@@ -935,9 +935,9 @@ func (a *stub) CreateTestGridUrl(ctx workflow.Context, input *devicefarm.CreateT
 	return &output, err
 }
 
-func (a *stub) CreateTestGridUrlAsync(ctx workflow.Context, input *devicefarm.CreateTestGridUrlInput) *DeviceFarmCreateTestGridUrlFuture {
+func (a *stub) CreateTestGridUrlAsync(ctx workflow.Context, input *devicefarm.CreateTestGridUrlInput) *CreateTestGridUrlFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.CreateTestGridUrl", input)
-	return &DeviceFarmCreateTestGridUrlFuture{Future: future}
+	return &CreateTestGridUrlFuture{Future: future}
 }
 
 func (a *stub) CreateUpload(ctx workflow.Context, input *devicefarm.CreateUploadInput) (*devicefarm.CreateUploadOutput, error) {
@@ -946,9 +946,9 @@ func (a *stub) CreateUpload(ctx workflow.Context, input *devicefarm.CreateUpload
 	return &output, err
 }
 
-func (a *stub) CreateUploadAsync(ctx workflow.Context, input *devicefarm.CreateUploadInput) *DeviceFarmCreateUploadFuture {
+func (a *stub) CreateUploadAsync(ctx workflow.Context, input *devicefarm.CreateUploadInput) *CreateUploadFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.CreateUpload", input)
-	return &DeviceFarmCreateUploadFuture{Future: future}
+	return &CreateUploadFuture{Future: future}
 }
 
 func (a *stub) CreateVPCEConfiguration(ctx workflow.Context, input *devicefarm.CreateVPCEConfigurationInput) (*devicefarm.CreateVPCEConfigurationOutput, error) {
@@ -957,9 +957,9 @@ func (a *stub) CreateVPCEConfiguration(ctx workflow.Context, input *devicefarm.C
 	return &output, err
 }
 
-func (a *stub) CreateVPCEConfigurationAsync(ctx workflow.Context, input *devicefarm.CreateVPCEConfigurationInput) *DeviceFarmCreateVPCEConfigurationFuture {
+func (a *stub) CreateVPCEConfigurationAsync(ctx workflow.Context, input *devicefarm.CreateVPCEConfigurationInput) *CreateVPCEConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.CreateVPCEConfiguration", input)
-	return &DeviceFarmCreateVPCEConfigurationFuture{Future: future}
+	return &CreateVPCEConfigurationFuture{Future: future}
 }
 
 func (a *stub) DeleteDevicePool(ctx workflow.Context, input *devicefarm.DeleteDevicePoolInput) (*devicefarm.DeleteDevicePoolOutput, error) {
@@ -968,9 +968,9 @@ func (a *stub) DeleteDevicePool(ctx workflow.Context, input *devicefarm.DeleteDe
 	return &output, err
 }
 
-func (a *stub) DeleteDevicePoolAsync(ctx workflow.Context, input *devicefarm.DeleteDevicePoolInput) *DeviceFarmDeleteDevicePoolFuture {
+func (a *stub) DeleteDevicePoolAsync(ctx workflow.Context, input *devicefarm.DeleteDevicePoolInput) *DeleteDevicePoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.DeleteDevicePool", input)
-	return &DeviceFarmDeleteDevicePoolFuture{Future: future}
+	return &DeleteDevicePoolFuture{Future: future}
 }
 
 func (a *stub) DeleteInstanceProfile(ctx workflow.Context, input *devicefarm.DeleteInstanceProfileInput) (*devicefarm.DeleteInstanceProfileOutput, error) {
@@ -979,9 +979,9 @@ func (a *stub) DeleteInstanceProfile(ctx workflow.Context, input *devicefarm.Del
 	return &output, err
 }
 
-func (a *stub) DeleteInstanceProfileAsync(ctx workflow.Context, input *devicefarm.DeleteInstanceProfileInput) *DeviceFarmDeleteInstanceProfileFuture {
+func (a *stub) DeleteInstanceProfileAsync(ctx workflow.Context, input *devicefarm.DeleteInstanceProfileInput) *DeleteInstanceProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.DeleteInstanceProfile", input)
-	return &DeviceFarmDeleteInstanceProfileFuture{Future: future}
+	return &DeleteInstanceProfileFuture{Future: future}
 }
 
 func (a *stub) DeleteNetworkProfile(ctx workflow.Context, input *devicefarm.DeleteNetworkProfileInput) (*devicefarm.DeleteNetworkProfileOutput, error) {
@@ -990,9 +990,9 @@ func (a *stub) DeleteNetworkProfile(ctx workflow.Context, input *devicefarm.Dele
 	return &output, err
 }
 
-func (a *stub) DeleteNetworkProfileAsync(ctx workflow.Context, input *devicefarm.DeleteNetworkProfileInput) *DeviceFarmDeleteNetworkProfileFuture {
+func (a *stub) DeleteNetworkProfileAsync(ctx workflow.Context, input *devicefarm.DeleteNetworkProfileInput) *DeleteNetworkProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.DeleteNetworkProfile", input)
-	return &DeviceFarmDeleteNetworkProfileFuture{Future: future}
+	return &DeleteNetworkProfileFuture{Future: future}
 }
 
 func (a *stub) DeleteProject(ctx workflow.Context, input *devicefarm.DeleteProjectInput) (*devicefarm.DeleteProjectOutput, error) {
@@ -1001,9 +1001,9 @@ func (a *stub) DeleteProject(ctx workflow.Context, input *devicefarm.DeleteProje
 	return &output, err
 }
 
-func (a *stub) DeleteProjectAsync(ctx workflow.Context, input *devicefarm.DeleteProjectInput) *DeviceFarmDeleteProjectFuture {
+func (a *stub) DeleteProjectAsync(ctx workflow.Context, input *devicefarm.DeleteProjectInput) *DeleteProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.DeleteProject", input)
-	return &DeviceFarmDeleteProjectFuture{Future: future}
+	return &DeleteProjectFuture{Future: future}
 }
 
 func (a *stub) DeleteRemoteAccessSession(ctx workflow.Context, input *devicefarm.DeleteRemoteAccessSessionInput) (*devicefarm.DeleteRemoteAccessSessionOutput, error) {
@@ -1012,9 +1012,9 @@ func (a *stub) DeleteRemoteAccessSession(ctx workflow.Context, input *devicefarm
 	return &output, err
 }
 
-func (a *stub) DeleteRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.DeleteRemoteAccessSessionInput) *DeviceFarmDeleteRemoteAccessSessionFuture {
+func (a *stub) DeleteRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.DeleteRemoteAccessSessionInput) *DeleteRemoteAccessSessionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.DeleteRemoteAccessSession", input)
-	return &DeviceFarmDeleteRemoteAccessSessionFuture{Future: future}
+	return &DeleteRemoteAccessSessionFuture{Future: future}
 }
 
 func (a *stub) DeleteRun(ctx workflow.Context, input *devicefarm.DeleteRunInput) (*devicefarm.DeleteRunOutput, error) {
@@ -1023,9 +1023,9 @@ func (a *stub) DeleteRun(ctx workflow.Context, input *devicefarm.DeleteRunInput)
 	return &output, err
 }
 
-func (a *stub) DeleteRunAsync(ctx workflow.Context, input *devicefarm.DeleteRunInput) *DeviceFarmDeleteRunFuture {
+func (a *stub) DeleteRunAsync(ctx workflow.Context, input *devicefarm.DeleteRunInput) *DeleteRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.DeleteRun", input)
-	return &DeviceFarmDeleteRunFuture{Future: future}
+	return &DeleteRunFuture{Future: future}
 }
 
 func (a *stub) DeleteTestGridProject(ctx workflow.Context, input *devicefarm.DeleteTestGridProjectInput) (*devicefarm.DeleteTestGridProjectOutput, error) {
@@ -1034,9 +1034,9 @@ func (a *stub) DeleteTestGridProject(ctx workflow.Context, input *devicefarm.Del
 	return &output, err
 }
 
-func (a *stub) DeleteTestGridProjectAsync(ctx workflow.Context, input *devicefarm.DeleteTestGridProjectInput) *DeviceFarmDeleteTestGridProjectFuture {
+func (a *stub) DeleteTestGridProjectAsync(ctx workflow.Context, input *devicefarm.DeleteTestGridProjectInput) *DeleteTestGridProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.DeleteTestGridProject", input)
-	return &DeviceFarmDeleteTestGridProjectFuture{Future: future}
+	return &DeleteTestGridProjectFuture{Future: future}
 }
 
 func (a *stub) DeleteUpload(ctx workflow.Context, input *devicefarm.DeleteUploadInput) (*devicefarm.DeleteUploadOutput, error) {
@@ -1045,9 +1045,9 @@ func (a *stub) DeleteUpload(ctx workflow.Context, input *devicefarm.DeleteUpload
 	return &output, err
 }
 
-func (a *stub) DeleteUploadAsync(ctx workflow.Context, input *devicefarm.DeleteUploadInput) *DeviceFarmDeleteUploadFuture {
+func (a *stub) DeleteUploadAsync(ctx workflow.Context, input *devicefarm.DeleteUploadInput) *DeleteUploadFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.DeleteUpload", input)
-	return &DeviceFarmDeleteUploadFuture{Future: future}
+	return &DeleteUploadFuture{Future: future}
 }
 
 func (a *stub) DeleteVPCEConfiguration(ctx workflow.Context, input *devicefarm.DeleteVPCEConfigurationInput) (*devicefarm.DeleteVPCEConfigurationOutput, error) {
@@ -1056,9 +1056,9 @@ func (a *stub) DeleteVPCEConfiguration(ctx workflow.Context, input *devicefarm.D
 	return &output, err
 }
 
-func (a *stub) DeleteVPCEConfigurationAsync(ctx workflow.Context, input *devicefarm.DeleteVPCEConfigurationInput) *DeviceFarmDeleteVPCEConfigurationFuture {
+func (a *stub) DeleteVPCEConfigurationAsync(ctx workflow.Context, input *devicefarm.DeleteVPCEConfigurationInput) *DeleteVPCEConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.DeleteVPCEConfiguration", input)
-	return &DeviceFarmDeleteVPCEConfigurationFuture{Future: future}
+	return &DeleteVPCEConfigurationFuture{Future: future}
 }
 
 func (a *stub) GetAccountSettings(ctx workflow.Context, input *devicefarm.GetAccountSettingsInput) (*devicefarm.GetAccountSettingsOutput, error) {
@@ -1067,9 +1067,9 @@ func (a *stub) GetAccountSettings(ctx workflow.Context, input *devicefarm.GetAcc
 	return &output, err
 }
 
-func (a *stub) GetAccountSettingsAsync(ctx workflow.Context, input *devicefarm.GetAccountSettingsInput) *DeviceFarmGetAccountSettingsFuture {
+func (a *stub) GetAccountSettingsAsync(ctx workflow.Context, input *devicefarm.GetAccountSettingsInput) *GetAccountSettingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetAccountSettings", input)
-	return &DeviceFarmGetAccountSettingsFuture{Future: future}
+	return &GetAccountSettingsFuture{Future: future}
 }
 
 func (a *stub) GetDevice(ctx workflow.Context, input *devicefarm.GetDeviceInput) (*devicefarm.GetDeviceOutput, error) {
@@ -1078,9 +1078,9 @@ func (a *stub) GetDevice(ctx workflow.Context, input *devicefarm.GetDeviceInput)
 	return &output, err
 }
 
-func (a *stub) GetDeviceAsync(ctx workflow.Context, input *devicefarm.GetDeviceInput) *DeviceFarmGetDeviceFuture {
+func (a *stub) GetDeviceAsync(ctx workflow.Context, input *devicefarm.GetDeviceInput) *GetDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetDevice", input)
-	return &DeviceFarmGetDeviceFuture{Future: future}
+	return &GetDeviceFuture{Future: future}
 }
 
 func (a *stub) GetDeviceInstance(ctx workflow.Context, input *devicefarm.GetDeviceInstanceInput) (*devicefarm.GetDeviceInstanceOutput, error) {
@@ -1089,9 +1089,9 @@ func (a *stub) GetDeviceInstance(ctx workflow.Context, input *devicefarm.GetDevi
 	return &output, err
 }
 
-func (a *stub) GetDeviceInstanceAsync(ctx workflow.Context, input *devicefarm.GetDeviceInstanceInput) *DeviceFarmGetDeviceInstanceFuture {
+func (a *stub) GetDeviceInstanceAsync(ctx workflow.Context, input *devicefarm.GetDeviceInstanceInput) *GetDeviceInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetDeviceInstance", input)
-	return &DeviceFarmGetDeviceInstanceFuture{Future: future}
+	return &GetDeviceInstanceFuture{Future: future}
 }
 
 func (a *stub) GetDevicePool(ctx workflow.Context, input *devicefarm.GetDevicePoolInput) (*devicefarm.GetDevicePoolOutput, error) {
@@ -1100,9 +1100,9 @@ func (a *stub) GetDevicePool(ctx workflow.Context, input *devicefarm.GetDevicePo
 	return &output, err
 }
 
-func (a *stub) GetDevicePoolAsync(ctx workflow.Context, input *devicefarm.GetDevicePoolInput) *DeviceFarmGetDevicePoolFuture {
+func (a *stub) GetDevicePoolAsync(ctx workflow.Context, input *devicefarm.GetDevicePoolInput) *GetDevicePoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetDevicePool", input)
-	return &DeviceFarmGetDevicePoolFuture{Future: future}
+	return &GetDevicePoolFuture{Future: future}
 }
 
 func (a *stub) GetDevicePoolCompatibility(ctx workflow.Context, input *devicefarm.GetDevicePoolCompatibilityInput) (*devicefarm.GetDevicePoolCompatibilityOutput, error) {
@@ -1111,9 +1111,9 @@ func (a *stub) GetDevicePoolCompatibility(ctx workflow.Context, input *devicefar
 	return &output, err
 }
 
-func (a *stub) GetDevicePoolCompatibilityAsync(ctx workflow.Context, input *devicefarm.GetDevicePoolCompatibilityInput) *DeviceFarmGetDevicePoolCompatibilityFuture {
+func (a *stub) GetDevicePoolCompatibilityAsync(ctx workflow.Context, input *devicefarm.GetDevicePoolCompatibilityInput) *GetDevicePoolCompatibilityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetDevicePoolCompatibility", input)
-	return &DeviceFarmGetDevicePoolCompatibilityFuture{Future: future}
+	return &GetDevicePoolCompatibilityFuture{Future: future}
 }
 
 func (a *stub) GetInstanceProfile(ctx workflow.Context, input *devicefarm.GetInstanceProfileInput) (*devicefarm.GetInstanceProfileOutput, error) {
@@ -1122,9 +1122,9 @@ func (a *stub) GetInstanceProfile(ctx workflow.Context, input *devicefarm.GetIns
 	return &output, err
 }
 
-func (a *stub) GetInstanceProfileAsync(ctx workflow.Context, input *devicefarm.GetInstanceProfileInput) *DeviceFarmGetInstanceProfileFuture {
+func (a *stub) GetInstanceProfileAsync(ctx workflow.Context, input *devicefarm.GetInstanceProfileInput) *GetInstanceProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetInstanceProfile", input)
-	return &DeviceFarmGetInstanceProfileFuture{Future: future}
+	return &GetInstanceProfileFuture{Future: future}
 }
 
 func (a *stub) GetJob(ctx workflow.Context, input *devicefarm.GetJobInput) (*devicefarm.GetJobOutput, error) {
@@ -1133,9 +1133,9 @@ func (a *stub) GetJob(ctx workflow.Context, input *devicefarm.GetJobInput) (*dev
 	return &output, err
 }
 
-func (a *stub) GetJobAsync(ctx workflow.Context, input *devicefarm.GetJobInput) *DeviceFarmGetJobFuture {
+func (a *stub) GetJobAsync(ctx workflow.Context, input *devicefarm.GetJobInput) *GetJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetJob", input)
-	return &DeviceFarmGetJobFuture{Future: future}
+	return &GetJobFuture{Future: future}
 }
 
 func (a *stub) GetNetworkProfile(ctx workflow.Context, input *devicefarm.GetNetworkProfileInput) (*devicefarm.GetNetworkProfileOutput, error) {
@@ -1144,9 +1144,9 @@ func (a *stub) GetNetworkProfile(ctx workflow.Context, input *devicefarm.GetNetw
 	return &output, err
 }
 
-func (a *stub) GetNetworkProfileAsync(ctx workflow.Context, input *devicefarm.GetNetworkProfileInput) *DeviceFarmGetNetworkProfileFuture {
+func (a *stub) GetNetworkProfileAsync(ctx workflow.Context, input *devicefarm.GetNetworkProfileInput) *GetNetworkProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetNetworkProfile", input)
-	return &DeviceFarmGetNetworkProfileFuture{Future: future}
+	return &GetNetworkProfileFuture{Future: future}
 }
 
 func (a *stub) GetOfferingStatus(ctx workflow.Context, input *devicefarm.GetOfferingStatusInput) (*devicefarm.GetOfferingStatusOutput, error) {
@@ -1155,9 +1155,9 @@ func (a *stub) GetOfferingStatus(ctx workflow.Context, input *devicefarm.GetOffe
 	return &output, err
 }
 
-func (a *stub) GetOfferingStatusAsync(ctx workflow.Context, input *devicefarm.GetOfferingStatusInput) *DeviceFarmGetOfferingStatusFuture {
+func (a *stub) GetOfferingStatusAsync(ctx workflow.Context, input *devicefarm.GetOfferingStatusInput) *GetOfferingStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetOfferingStatus", input)
-	return &DeviceFarmGetOfferingStatusFuture{Future: future}
+	return &GetOfferingStatusFuture{Future: future}
 }
 
 func (a *stub) GetProject(ctx workflow.Context, input *devicefarm.GetProjectInput) (*devicefarm.GetProjectOutput, error) {
@@ -1166,9 +1166,9 @@ func (a *stub) GetProject(ctx workflow.Context, input *devicefarm.GetProjectInpu
 	return &output, err
 }
 
-func (a *stub) GetProjectAsync(ctx workflow.Context, input *devicefarm.GetProjectInput) *DeviceFarmGetProjectFuture {
+func (a *stub) GetProjectAsync(ctx workflow.Context, input *devicefarm.GetProjectInput) *GetProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetProject", input)
-	return &DeviceFarmGetProjectFuture{Future: future}
+	return &GetProjectFuture{Future: future}
 }
 
 func (a *stub) GetRemoteAccessSession(ctx workflow.Context, input *devicefarm.GetRemoteAccessSessionInput) (*devicefarm.GetRemoteAccessSessionOutput, error) {
@@ -1177,9 +1177,9 @@ func (a *stub) GetRemoteAccessSession(ctx workflow.Context, input *devicefarm.Ge
 	return &output, err
 }
 
-func (a *stub) GetRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.GetRemoteAccessSessionInput) *DeviceFarmGetRemoteAccessSessionFuture {
+func (a *stub) GetRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.GetRemoteAccessSessionInput) *GetRemoteAccessSessionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetRemoteAccessSession", input)
-	return &DeviceFarmGetRemoteAccessSessionFuture{Future: future}
+	return &GetRemoteAccessSessionFuture{Future: future}
 }
 
 func (a *stub) GetRun(ctx workflow.Context, input *devicefarm.GetRunInput) (*devicefarm.GetRunOutput, error) {
@@ -1188,9 +1188,9 @@ func (a *stub) GetRun(ctx workflow.Context, input *devicefarm.GetRunInput) (*dev
 	return &output, err
 }
 
-func (a *stub) GetRunAsync(ctx workflow.Context, input *devicefarm.GetRunInput) *DeviceFarmGetRunFuture {
+func (a *stub) GetRunAsync(ctx workflow.Context, input *devicefarm.GetRunInput) *GetRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetRun", input)
-	return &DeviceFarmGetRunFuture{Future: future}
+	return &GetRunFuture{Future: future}
 }
 
 func (a *stub) GetSuite(ctx workflow.Context, input *devicefarm.GetSuiteInput) (*devicefarm.GetSuiteOutput, error) {
@@ -1199,9 +1199,9 @@ func (a *stub) GetSuite(ctx workflow.Context, input *devicefarm.GetSuiteInput) (
 	return &output, err
 }
 
-func (a *stub) GetSuiteAsync(ctx workflow.Context, input *devicefarm.GetSuiteInput) *DeviceFarmGetSuiteFuture {
+func (a *stub) GetSuiteAsync(ctx workflow.Context, input *devicefarm.GetSuiteInput) *GetSuiteFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetSuite", input)
-	return &DeviceFarmGetSuiteFuture{Future: future}
+	return &GetSuiteFuture{Future: future}
 }
 
 func (a *stub) GetTest(ctx workflow.Context, input *devicefarm.GetTestInput) (*devicefarm.GetTestOutput, error) {
@@ -1210,9 +1210,9 @@ func (a *stub) GetTest(ctx workflow.Context, input *devicefarm.GetTestInput) (*d
 	return &output, err
 }
 
-func (a *stub) GetTestAsync(ctx workflow.Context, input *devicefarm.GetTestInput) *DeviceFarmGetTestFuture {
+func (a *stub) GetTestAsync(ctx workflow.Context, input *devicefarm.GetTestInput) *GetTestFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetTest", input)
-	return &DeviceFarmGetTestFuture{Future: future}
+	return &GetTestFuture{Future: future}
 }
 
 func (a *stub) GetTestGridProject(ctx workflow.Context, input *devicefarm.GetTestGridProjectInput) (*devicefarm.GetTestGridProjectOutput, error) {
@@ -1221,9 +1221,9 @@ func (a *stub) GetTestGridProject(ctx workflow.Context, input *devicefarm.GetTes
 	return &output, err
 }
 
-func (a *stub) GetTestGridProjectAsync(ctx workflow.Context, input *devicefarm.GetTestGridProjectInput) *DeviceFarmGetTestGridProjectFuture {
+func (a *stub) GetTestGridProjectAsync(ctx workflow.Context, input *devicefarm.GetTestGridProjectInput) *GetTestGridProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetTestGridProject", input)
-	return &DeviceFarmGetTestGridProjectFuture{Future: future}
+	return &GetTestGridProjectFuture{Future: future}
 }
 
 func (a *stub) GetTestGridSession(ctx workflow.Context, input *devicefarm.GetTestGridSessionInput) (*devicefarm.GetTestGridSessionOutput, error) {
@@ -1232,9 +1232,9 @@ func (a *stub) GetTestGridSession(ctx workflow.Context, input *devicefarm.GetTes
 	return &output, err
 }
 
-func (a *stub) GetTestGridSessionAsync(ctx workflow.Context, input *devicefarm.GetTestGridSessionInput) *DeviceFarmGetTestGridSessionFuture {
+func (a *stub) GetTestGridSessionAsync(ctx workflow.Context, input *devicefarm.GetTestGridSessionInput) *GetTestGridSessionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetTestGridSession", input)
-	return &DeviceFarmGetTestGridSessionFuture{Future: future}
+	return &GetTestGridSessionFuture{Future: future}
 }
 
 func (a *stub) GetUpload(ctx workflow.Context, input *devicefarm.GetUploadInput) (*devicefarm.GetUploadOutput, error) {
@@ -1243,9 +1243,9 @@ func (a *stub) GetUpload(ctx workflow.Context, input *devicefarm.GetUploadInput)
 	return &output, err
 }
 
-func (a *stub) GetUploadAsync(ctx workflow.Context, input *devicefarm.GetUploadInput) *DeviceFarmGetUploadFuture {
+func (a *stub) GetUploadAsync(ctx workflow.Context, input *devicefarm.GetUploadInput) *GetUploadFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetUpload", input)
-	return &DeviceFarmGetUploadFuture{Future: future}
+	return &GetUploadFuture{Future: future}
 }
 
 func (a *stub) GetVPCEConfiguration(ctx workflow.Context, input *devicefarm.GetVPCEConfigurationInput) (*devicefarm.GetVPCEConfigurationOutput, error) {
@@ -1254,9 +1254,9 @@ func (a *stub) GetVPCEConfiguration(ctx workflow.Context, input *devicefarm.GetV
 	return &output, err
 }
 
-func (a *stub) GetVPCEConfigurationAsync(ctx workflow.Context, input *devicefarm.GetVPCEConfigurationInput) *DeviceFarmGetVPCEConfigurationFuture {
+func (a *stub) GetVPCEConfigurationAsync(ctx workflow.Context, input *devicefarm.GetVPCEConfigurationInput) *GetVPCEConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.GetVPCEConfiguration", input)
-	return &DeviceFarmGetVPCEConfigurationFuture{Future: future}
+	return &GetVPCEConfigurationFuture{Future: future}
 }
 
 func (a *stub) InstallToRemoteAccessSession(ctx workflow.Context, input *devicefarm.InstallToRemoteAccessSessionInput) (*devicefarm.InstallToRemoteAccessSessionOutput, error) {
@@ -1265,9 +1265,9 @@ func (a *stub) InstallToRemoteAccessSession(ctx workflow.Context, input *devicef
 	return &output, err
 }
 
-func (a *stub) InstallToRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.InstallToRemoteAccessSessionInput) *DeviceFarmInstallToRemoteAccessSessionFuture {
+func (a *stub) InstallToRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.InstallToRemoteAccessSessionInput) *InstallToRemoteAccessSessionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.InstallToRemoteAccessSession", input)
-	return &DeviceFarmInstallToRemoteAccessSessionFuture{Future: future}
+	return &InstallToRemoteAccessSessionFuture{Future: future}
 }
 
 func (a *stub) ListArtifacts(ctx workflow.Context, input *devicefarm.ListArtifactsInput) (*devicefarm.ListArtifactsOutput, error) {
@@ -1276,9 +1276,9 @@ func (a *stub) ListArtifacts(ctx workflow.Context, input *devicefarm.ListArtifac
 	return &output, err
 }
 
-func (a *stub) ListArtifactsAsync(ctx workflow.Context, input *devicefarm.ListArtifactsInput) *DeviceFarmListArtifactsFuture {
+func (a *stub) ListArtifactsAsync(ctx workflow.Context, input *devicefarm.ListArtifactsInput) *ListArtifactsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListArtifacts", input)
-	return &DeviceFarmListArtifactsFuture{Future: future}
+	return &ListArtifactsFuture{Future: future}
 }
 
 func (a *stub) ListDeviceInstances(ctx workflow.Context, input *devicefarm.ListDeviceInstancesInput) (*devicefarm.ListDeviceInstancesOutput, error) {
@@ -1287,9 +1287,9 @@ func (a *stub) ListDeviceInstances(ctx workflow.Context, input *devicefarm.ListD
 	return &output, err
 }
 
-func (a *stub) ListDeviceInstancesAsync(ctx workflow.Context, input *devicefarm.ListDeviceInstancesInput) *DeviceFarmListDeviceInstancesFuture {
+func (a *stub) ListDeviceInstancesAsync(ctx workflow.Context, input *devicefarm.ListDeviceInstancesInput) *ListDeviceInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListDeviceInstances", input)
-	return &DeviceFarmListDeviceInstancesFuture{Future: future}
+	return &ListDeviceInstancesFuture{Future: future}
 }
 
 func (a *stub) ListDevicePools(ctx workflow.Context, input *devicefarm.ListDevicePoolsInput) (*devicefarm.ListDevicePoolsOutput, error) {
@@ -1298,9 +1298,9 @@ func (a *stub) ListDevicePools(ctx workflow.Context, input *devicefarm.ListDevic
 	return &output, err
 }
 
-func (a *stub) ListDevicePoolsAsync(ctx workflow.Context, input *devicefarm.ListDevicePoolsInput) *DeviceFarmListDevicePoolsFuture {
+func (a *stub) ListDevicePoolsAsync(ctx workflow.Context, input *devicefarm.ListDevicePoolsInput) *ListDevicePoolsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListDevicePools", input)
-	return &DeviceFarmListDevicePoolsFuture{Future: future}
+	return &ListDevicePoolsFuture{Future: future}
 }
 
 func (a *stub) ListDevices(ctx workflow.Context, input *devicefarm.ListDevicesInput) (*devicefarm.ListDevicesOutput, error) {
@@ -1309,9 +1309,9 @@ func (a *stub) ListDevices(ctx workflow.Context, input *devicefarm.ListDevicesIn
 	return &output, err
 }
 
-func (a *stub) ListDevicesAsync(ctx workflow.Context, input *devicefarm.ListDevicesInput) *DeviceFarmListDevicesFuture {
+func (a *stub) ListDevicesAsync(ctx workflow.Context, input *devicefarm.ListDevicesInput) *ListDevicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListDevices", input)
-	return &DeviceFarmListDevicesFuture{Future: future}
+	return &ListDevicesFuture{Future: future}
 }
 
 func (a *stub) ListInstanceProfiles(ctx workflow.Context, input *devicefarm.ListInstanceProfilesInput) (*devicefarm.ListInstanceProfilesOutput, error) {
@@ -1320,9 +1320,9 @@ func (a *stub) ListInstanceProfiles(ctx workflow.Context, input *devicefarm.List
 	return &output, err
 }
 
-func (a *stub) ListInstanceProfilesAsync(ctx workflow.Context, input *devicefarm.ListInstanceProfilesInput) *DeviceFarmListInstanceProfilesFuture {
+func (a *stub) ListInstanceProfilesAsync(ctx workflow.Context, input *devicefarm.ListInstanceProfilesInput) *ListInstanceProfilesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListInstanceProfiles", input)
-	return &DeviceFarmListInstanceProfilesFuture{Future: future}
+	return &ListInstanceProfilesFuture{Future: future}
 }
 
 func (a *stub) ListJobs(ctx workflow.Context, input *devicefarm.ListJobsInput) (*devicefarm.ListJobsOutput, error) {
@@ -1331,9 +1331,9 @@ func (a *stub) ListJobs(ctx workflow.Context, input *devicefarm.ListJobsInput) (
 	return &output, err
 }
 
-func (a *stub) ListJobsAsync(ctx workflow.Context, input *devicefarm.ListJobsInput) *DeviceFarmListJobsFuture {
+func (a *stub) ListJobsAsync(ctx workflow.Context, input *devicefarm.ListJobsInput) *ListJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListJobs", input)
-	return &DeviceFarmListJobsFuture{Future: future}
+	return &ListJobsFuture{Future: future}
 }
 
 func (a *stub) ListNetworkProfiles(ctx workflow.Context, input *devicefarm.ListNetworkProfilesInput) (*devicefarm.ListNetworkProfilesOutput, error) {
@@ -1342,9 +1342,9 @@ func (a *stub) ListNetworkProfiles(ctx workflow.Context, input *devicefarm.ListN
 	return &output, err
 }
 
-func (a *stub) ListNetworkProfilesAsync(ctx workflow.Context, input *devicefarm.ListNetworkProfilesInput) *DeviceFarmListNetworkProfilesFuture {
+func (a *stub) ListNetworkProfilesAsync(ctx workflow.Context, input *devicefarm.ListNetworkProfilesInput) *ListNetworkProfilesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListNetworkProfiles", input)
-	return &DeviceFarmListNetworkProfilesFuture{Future: future}
+	return &ListNetworkProfilesFuture{Future: future}
 }
 
 func (a *stub) ListOfferingPromotions(ctx workflow.Context, input *devicefarm.ListOfferingPromotionsInput) (*devicefarm.ListOfferingPromotionsOutput, error) {
@@ -1353,9 +1353,9 @@ func (a *stub) ListOfferingPromotions(ctx workflow.Context, input *devicefarm.Li
 	return &output, err
 }
 
-func (a *stub) ListOfferingPromotionsAsync(ctx workflow.Context, input *devicefarm.ListOfferingPromotionsInput) *DeviceFarmListOfferingPromotionsFuture {
+func (a *stub) ListOfferingPromotionsAsync(ctx workflow.Context, input *devicefarm.ListOfferingPromotionsInput) *ListOfferingPromotionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListOfferingPromotions", input)
-	return &DeviceFarmListOfferingPromotionsFuture{Future: future}
+	return &ListOfferingPromotionsFuture{Future: future}
 }
 
 func (a *stub) ListOfferingTransactions(ctx workflow.Context, input *devicefarm.ListOfferingTransactionsInput) (*devicefarm.ListOfferingTransactionsOutput, error) {
@@ -1364,9 +1364,9 @@ func (a *stub) ListOfferingTransactions(ctx workflow.Context, input *devicefarm.
 	return &output, err
 }
 
-func (a *stub) ListOfferingTransactionsAsync(ctx workflow.Context, input *devicefarm.ListOfferingTransactionsInput) *DeviceFarmListOfferingTransactionsFuture {
+func (a *stub) ListOfferingTransactionsAsync(ctx workflow.Context, input *devicefarm.ListOfferingTransactionsInput) *ListOfferingTransactionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListOfferingTransactions", input)
-	return &DeviceFarmListOfferingTransactionsFuture{Future: future}
+	return &ListOfferingTransactionsFuture{Future: future}
 }
 
 func (a *stub) ListOfferings(ctx workflow.Context, input *devicefarm.ListOfferingsInput) (*devicefarm.ListOfferingsOutput, error) {
@@ -1375,9 +1375,9 @@ func (a *stub) ListOfferings(ctx workflow.Context, input *devicefarm.ListOfferin
 	return &output, err
 }
 
-func (a *stub) ListOfferingsAsync(ctx workflow.Context, input *devicefarm.ListOfferingsInput) *DeviceFarmListOfferingsFuture {
+func (a *stub) ListOfferingsAsync(ctx workflow.Context, input *devicefarm.ListOfferingsInput) *ListOfferingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListOfferings", input)
-	return &DeviceFarmListOfferingsFuture{Future: future}
+	return &ListOfferingsFuture{Future: future}
 }
 
 func (a *stub) ListProjects(ctx workflow.Context, input *devicefarm.ListProjectsInput) (*devicefarm.ListProjectsOutput, error) {
@@ -1386,9 +1386,9 @@ func (a *stub) ListProjects(ctx workflow.Context, input *devicefarm.ListProjects
 	return &output, err
 }
 
-func (a *stub) ListProjectsAsync(ctx workflow.Context, input *devicefarm.ListProjectsInput) *DeviceFarmListProjectsFuture {
+func (a *stub) ListProjectsAsync(ctx workflow.Context, input *devicefarm.ListProjectsInput) *ListProjectsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListProjects", input)
-	return &DeviceFarmListProjectsFuture{Future: future}
+	return &ListProjectsFuture{Future: future}
 }
 
 func (a *stub) ListRemoteAccessSessions(ctx workflow.Context, input *devicefarm.ListRemoteAccessSessionsInput) (*devicefarm.ListRemoteAccessSessionsOutput, error) {
@@ -1397,9 +1397,9 @@ func (a *stub) ListRemoteAccessSessions(ctx workflow.Context, input *devicefarm.
 	return &output, err
 }
 
-func (a *stub) ListRemoteAccessSessionsAsync(ctx workflow.Context, input *devicefarm.ListRemoteAccessSessionsInput) *DeviceFarmListRemoteAccessSessionsFuture {
+func (a *stub) ListRemoteAccessSessionsAsync(ctx workflow.Context, input *devicefarm.ListRemoteAccessSessionsInput) *ListRemoteAccessSessionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListRemoteAccessSessions", input)
-	return &DeviceFarmListRemoteAccessSessionsFuture{Future: future}
+	return &ListRemoteAccessSessionsFuture{Future: future}
 }
 
 func (a *stub) ListRuns(ctx workflow.Context, input *devicefarm.ListRunsInput) (*devicefarm.ListRunsOutput, error) {
@@ -1408,9 +1408,9 @@ func (a *stub) ListRuns(ctx workflow.Context, input *devicefarm.ListRunsInput) (
 	return &output, err
 }
 
-func (a *stub) ListRunsAsync(ctx workflow.Context, input *devicefarm.ListRunsInput) *DeviceFarmListRunsFuture {
+func (a *stub) ListRunsAsync(ctx workflow.Context, input *devicefarm.ListRunsInput) *ListRunsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListRuns", input)
-	return &DeviceFarmListRunsFuture{Future: future}
+	return &ListRunsFuture{Future: future}
 }
 
 func (a *stub) ListSamples(ctx workflow.Context, input *devicefarm.ListSamplesInput) (*devicefarm.ListSamplesOutput, error) {
@@ -1419,9 +1419,9 @@ func (a *stub) ListSamples(ctx workflow.Context, input *devicefarm.ListSamplesIn
 	return &output, err
 }
 
-func (a *stub) ListSamplesAsync(ctx workflow.Context, input *devicefarm.ListSamplesInput) *DeviceFarmListSamplesFuture {
+func (a *stub) ListSamplesAsync(ctx workflow.Context, input *devicefarm.ListSamplesInput) *ListSamplesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListSamples", input)
-	return &DeviceFarmListSamplesFuture{Future: future}
+	return &ListSamplesFuture{Future: future}
 }
 
 func (a *stub) ListSuites(ctx workflow.Context, input *devicefarm.ListSuitesInput) (*devicefarm.ListSuitesOutput, error) {
@@ -1430,9 +1430,9 @@ func (a *stub) ListSuites(ctx workflow.Context, input *devicefarm.ListSuitesInpu
 	return &output, err
 }
 
-func (a *stub) ListSuitesAsync(ctx workflow.Context, input *devicefarm.ListSuitesInput) *DeviceFarmListSuitesFuture {
+func (a *stub) ListSuitesAsync(ctx workflow.Context, input *devicefarm.ListSuitesInput) *ListSuitesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListSuites", input)
-	return &DeviceFarmListSuitesFuture{Future: future}
+	return &ListSuitesFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *devicefarm.ListTagsForResourceInput) (*devicefarm.ListTagsForResourceOutput, error) {
@@ -1441,9 +1441,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *devicefarm.ListT
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *devicefarm.ListTagsForResourceInput) *DeviceFarmListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *devicefarm.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListTagsForResource", input)
-	return &DeviceFarmListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) ListTestGridProjects(ctx workflow.Context, input *devicefarm.ListTestGridProjectsInput) (*devicefarm.ListTestGridProjectsOutput, error) {
@@ -1452,9 +1452,9 @@ func (a *stub) ListTestGridProjects(ctx workflow.Context, input *devicefarm.List
 	return &output, err
 }
 
-func (a *stub) ListTestGridProjectsAsync(ctx workflow.Context, input *devicefarm.ListTestGridProjectsInput) *DeviceFarmListTestGridProjectsFuture {
+func (a *stub) ListTestGridProjectsAsync(ctx workflow.Context, input *devicefarm.ListTestGridProjectsInput) *ListTestGridProjectsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListTestGridProjects", input)
-	return &DeviceFarmListTestGridProjectsFuture{Future: future}
+	return &ListTestGridProjectsFuture{Future: future}
 }
 
 func (a *stub) ListTestGridSessionActions(ctx workflow.Context, input *devicefarm.ListTestGridSessionActionsInput) (*devicefarm.ListTestGridSessionActionsOutput, error) {
@@ -1463,9 +1463,9 @@ func (a *stub) ListTestGridSessionActions(ctx workflow.Context, input *devicefar
 	return &output, err
 }
 
-func (a *stub) ListTestGridSessionActionsAsync(ctx workflow.Context, input *devicefarm.ListTestGridSessionActionsInput) *DeviceFarmListTestGridSessionActionsFuture {
+func (a *stub) ListTestGridSessionActionsAsync(ctx workflow.Context, input *devicefarm.ListTestGridSessionActionsInput) *ListTestGridSessionActionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListTestGridSessionActions", input)
-	return &DeviceFarmListTestGridSessionActionsFuture{Future: future}
+	return &ListTestGridSessionActionsFuture{Future: future}
 }
 
 func (a *stub) ListTestGridSessionArtifacts(ctx workflow.Context, input *devicefarm.ListTestGridSessionArtifactsInput) (*devicefarm.ListTestGridSessionArtifactsOutput, error) {
@@ -1474,9 +1474,9 @@ func (a *stub) ListTestGridSessionArtifacts(ctx workflow.Context, input *devicef
 	return &output, err
 }
 
-func (a *stub) ListTestGridSessionArtifactsAsync(ctx workflow.Context, input *devicefarm.ListTestGridSessionArtifactsInput) *DeviceFarmListTestGridSessionArtifactsFuture {
+func (a *stub) ListTestGridSessionArtifactsAsync(ctx workflow.Context, input *devicefarm.ListTestGridSessionArtifactsInput) *ListTestGridSessionArtifactsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListTestGridSessionArtifacts", input)
-	return &DeviceFarmListTestGridSessionArtifactsFuture{Future: future}
+	return &ListTestGridSessionArtifactsFuture{Future: future}
 }
 
 func (a *stub) ListTestGridSessions(ctx workflow.Context, input *devicefarm.ListTestGridSessionsInput) (*devicefarm.ListTestGridSessionsOutput, error) {
@@ -1485,9 +1485,9 @@ func (a *stub) ListTestGridSessions(ctx workflow.Context, input *devicefarm.List
 	return &output, err
 }
 
-func (a *stub) ListTestGridSessionsAsync(ctx workflow.Context, input *devicefarm.ListTestGridSessionsInput) *DeviceFarmListTestGridSessionsFuture {
+func (a *stub) ListTestGridSessionsAsync(ctx workflow.Context, input *devicefarm.ListTestGridSessionsInput) *ListTestGridSessionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListTestGridSessions", input)
-	return &DeviceFarmListTestGridSessionsFuture{Future: future}
+	return &ListTestGridSessionsFuture{Future: future}
 }
 
 func (a *stub) ListTests(ctx workflow.Context, input *devicefarm.ListTestsInput) (*devicefarm.ListTestsOutput, error) {
@@ -1496,9 +1496,9 @@ func (a *stub) ListTests(ctx workflow.Context, input *devicefarm.ListTestsInput)
 	return &output, err
 }
 
-func (a *stub) ListTestsAsync(ctx workflow.Context, input *devicefarm.ListTestsInput) *DeviceFarmListTestsFuture {
+func (a *stub) ListTestsAsync(ctx workflow.Context, input *devicefarm.ListTestsInput) *ListTestsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListTests", input)
-	return &DeviceFarmListTestsFuture{Future: future}
+	return &ListTestsFuture{Future: future}
 }
 
 func (a *stub) ListUniqueProblems(ctx workflow.Context, input *devicefarm.ListUniqueProblemsInput) (*devicefarm.ListUniqueProblemsOutput, error) {
@@ -1507,9 +1507,9 @@ func (a *stub) ListUniqueProblems(ctx workflow.Context, input *devicefarm.ListUn
 	return &output, err
 }
 
-func (a *stub) ListUniqueProblemsAsync(ctx workflow.Context, input *devicefarm.ListUniqueProblemsInput) *DeviceFarmListUniqueProblemsFuture {
+func (a *stub) ListUniqueProblemsAsync(ctx workflow.Context, input *devicefarm.ListUniqueProblemsInput) *ListUniqueProblemsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListUniqueProblems", input)
-	return &DeviceFarmListUniqueProblemsFuture{Future: future}
+	return &ListUniqueProblemsFuture{Future: future}
 }
 
 func (a *stub) ListUploads(ctx workflow.Context, input *devicefarm.ListUploadsInput) (*devicefarm.ListUploadsOutput, error) {
@@ -1518,9 +1518,9 @@ func (a *stub) ListUploads(ctx workflow.Context, input *devicefarm.ListUploadsIn
 	return &output, err
 }
 
-func (a *stub) ListUploadsAsync(ctx workflow.Context, input *devicefarm.ListUploadsInput) *DeviceFarmListUploadsFuture {
+func (a *stub) ListUploadsAsync(ctx workflow.Context, input *devicefarm.ListUploadsInput) *ListUploadsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListUploads", input)
-	return &DeviceFarmListUploadsFuture{Future: future}
+	return &ListUploadsFuture{Future: future}
 }
 
 func (a *stub) ListVPCEConfigurations(ctx workflow.Context, input *devicefarm.ListVPCEConfigurationsInput) (*devicefarm.ListVPCEConfigurationsOutput, error) {
@@ -1529,9 +1529,9 @@ func (a *stub) ListVPCEConfigurations(ctx workflow.Context, input *devicefarm.Li
 	return &output, err
 }
 
-func (a *stub) ListVPCEConfigurationsAsync(ctx workflow.Context, input *devicefarm.ListVPCEConfigurationsInput) *DeviceFarmListVPCEConfigurationsFuture {
+func (a *stub) ListVPCEConfigurationsAsync(ctx workflow.Context, input *devicefarm.ListVPCEConfigurationsInput) *ListVPCEConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ListVPCEConfigurations", input)
-	return &DeviceFarmListVPCEConfigurationsFuture{Future: future}
+	return &ListVPCEConfigurationsFuture{Future: future}
 }
 
 func (a *stub) PurchaseOffering(ctx workflow.Context, input *devicefarm.PurchaseOfferingInput) (*devicefarm.PurchaseOfferingOutput, error) {
@@ -1540,9 +1540,9 @@ func (a *stub) PurchaseOffering(ctx workflow.Context, input *devicefarm.Purchase
 	return &output, err
 }
 
-func (a *stub) PurchaseOfferingAsync(ctx workflow.Context, input *devicefarm.PurchaseOfferingInput) *DeviceFarmPurchaseOfferingFuture {
+func (a *stub) PurchaseOfferingAsync(ctx workflow.Context, input *devicefarm.PurchaseOfferingInput) *PurchaseOfferingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.PurchaseOffering", input)
-	return &DeviceFarmPurchaseOfferingFuture{Future: future}
+	return &PurchaseOfferingFuture{Future: future}
 }
 
 func (a *stub) RenewOffering(ctx workflow.Context, input *devicefarm.RenewOfferingInput) (*devicefarm.RenewOfferingOutput, error) {
@@ -1551,9 +1551,9 @@ func (a *stub) RenewOffering(ctx workflow.Context, input *devicefarm.RenewOfferi
 	return &output, err
 }
 
-func (a *stub) RenewOfferingAsync(ctx workflow.Context, input *devicefarm.RenewOfferingInput) *DeviceFarmRenewOfferingFuture {
+func (a *stub) RenewOfferingAsync(ctx workflow.Context, input *devicefarm.RenewOfferingInput) *RenewOfferingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.RenewOffering", input)
-	return &DeviceFarmRenewOfferingFuture{Future: future}
+	return &RenewOfferingFuture{Future: future}
 }
 
 func (a *stub) ScheduleRun(ctx workflow.Context, input *devicefarm.ScheduleRunInput) (*devicefarm.ScheduleRunOutput, error) {
@@ -1562,9 +1562,9 @@ func (a *stub) ScheduleRun(ctx workflow.Context, input *devicefarm.ScheduleRunIn
 	return &output, err
 }
 
-func (a *stub) ScheduleRunAsync(ctx workflow.Context, input *devicefarm.ScheduleRunInput) *DeviceFarmScheduleRunFuture {
+func (a *stub) ScheduleRunAsync(ctx workflow.Context, input *devicefarm.ScheduleRunInput) *ScheduleRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.ScheduleRun", input)
-	return &DeviceFarmScheduleRunFuture{Future: future}
+	return &ScheduleRunFuture{Future: future}
 }
 
 func (a *stub) StopJob(ctx workflow.Context, input *devicefarm.StopJobInput) (*devicefarm.StopJobOutput, error) {
@@ -1573,9 +1573,9 @@ func (a *stub) StopJob(ctx workflow.Context, input *devicefarm.StopJobInput) (*d
 	return &output, err
 }
 
-func (a *stub) StopJobAsync(ctx workflow.Context, input *devicefarm.StopJobInput) *DeviceFarmStopJobFuture {
+func (a *stub) StopJobAsync(ctx workflow.Context, input *devicefarm.StopJobInput) *StopJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.StopJob", input)
-	return &DeviceFarmStopJobFuture{Future: future}
+	return &StopJobFuture{Future: future}
 }
 
 func (a *stub) StopRemoteAccessSession(ctx workflow.Context, input *devicefarm.StopRemoteAccessSessionInput) (*devicefarm.StopRemoteAccessSessionOutput, error) {
@@ -1584,9 +1584,9 @@ func (a *stub) StopRemoteAccessSession(ctx workflow.Context, input *devicefarm.S
 	return &output, err
 }
 
-func (a *stub) StopRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.StopRemoteAccessSessionInput) *DeviceFarmStopRemoteAccessSessionFuture {
+func (a *stub) StopRemoteAccessSessionAsync(ctx workflow.Context, input *devicefarm.StopRemoteAccessSessionInput) *StopRemoteAccessSessionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.StopRemoteAccessSession", input)
-	return &DeviceFarmStopRemoteAccessSessionFuture{Future: future}
+	return &StopRemoteAccessSessionFuture{Future: future}
 }
 
 func (a *stub) StopRun(ctx workflow.Context, input *devicefarm.StopRunInput) (*devicefarm.StopRunOutput, error) {
@@ -1595,9 +1595,9 @@ func (a *stub) StopRun(ctx workflow.Context, input *devicefarm.StopRunInput) (*d
 	return &output, err
 }
 
-func (a *stub) StopRunAsync(ctx workflow.Context, input *devicefarm.StopRunInput) *DeviceFarmStopRunFuture {
+func (a *stub) StopRunAsync(ctx workflow.Context, input *devicefarm.StopRunInput) *StopRunFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.StopRun", input)
-	return &DeviceFarmStopRunFuture{Future: future}
+	return &StopRunFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *devicefarm.TagResourceInput) (*devicefarm.TagResourceOutput, error) {
@@ -1606,9 +1606,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *devicefarm.TagResourceIn
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *devicefarm.TagResourceInput) *DeviceFarmTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *devicefarm.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.TagResource", input)
-	return &DeviceFarmTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *devicefarm.UntagResourceInput) (*devicefarm.UntagResourceOutput, error) {
@@ -1617,9 +1617,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *devicefarm.UntagResour
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *devicefarm.UntagResourceInput) *DeviceFarmUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *devicefarm.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.UntagResource", input)
-	return &DeviceFarmUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateDeviceInstance(ctx workflow.Context, input *devicefarm.UpdateDeviceInstanceInput) (*devicefarm.UpdateDeviceInstanceOutput, error) {
@@ -1628,9 +1628,9 @@ func (a *stub) UpdateDeviceInstance(ctx workflow.Context, input *devicefarm.Upda
 	return &output, err
 }
 
-func (a *stub) UpdateDeviceInstanceAsync(ctx workflow.Context, input *devicefarm.UpdateDeviceInstanceInput) *DeviceFarmUpdateDeviceInstanceFuture {
+func (a *stub) UpdateDeviceInstanceAsync(ctx workflow.Context, input *devicefarm.UpdateDeviceInstanceInput) *UpdateDeviceInstanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.UpdateDeviceInstance", input)
-	return &DeviceFarmUpdateDeviceInstanceFuture{Future: future}
+	return &UpdateDeviceInstanceFuture{Future: future}
 }
 
 func (a *stub) UpdateDevicePool(ctx workflow.Context, input *devicefarm.UpdateDevicePoolInput) (*devicefarm.UpdateDevicePoolOutput, error) {
@@ -1639,9 +1639,9 @@ func (a *stub) UpdateDevicePool(ctx workflow.Context, input *devicefarm.UpdateDe
 	return &output, err
 }
 
-func (a *stub) UpdateDevicePoolAsync(ctx workflow.Context, input *devicefarm.UpdateDevicePoolInput) *DeviceFarmUpdateDevicePoolFuture {
+func (a *stub) UpdateDevicePoolAsync(ctx workflow.Context, input *devicefarm.UpdateDevicePoolInput) *UpdateDevicePoolFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.UpdateDevicePool", input)
-	return &DeviceFarmUpdateDevicePoolFuture{Future: future}
+	return &UpdateDevicePoolFuture{Future: future}
 }
 
 func (a *stub) UpdateInstanceProfile(ctx workflow.Context, input *devicefarm.UpdateInstanceProfileInput) (*devicefarm.UpdateInstanceProfileOutput, error) {
@@ -1650,9 +1650,9 @@ func (a *stub) UpdateInstanceProfile(ctx workflow.Context, input *devicefarm.Upd
 	return &output, err
 }
 
-func (a *stub) UpdateInstanceProfileAsync(ctx workflow.Context, input *devicefarm.UpdateInstanceProfileInput) *DeviceFarmUpdateInstanceProfileFuture {
+func (a *stub) UpdateInstanceProfileAsync(ctx workflow.Context, input *devicefarm.UpdateInstanceProfileInput) *UpdateInstanceProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.UpdateInstanceProfile", input)
-	return &DeviceFarmUpdateInstanceProfileFuture{Future: future}
+	return &UpdateInstanceProfileFuture{Future: future}
 }
 
 func (a *stub) UpdateNetworkProfile(ctx workflow.Context, input *devicefarm.UpdateNetworkProfileInput) (*devicefarm.UpdateNetworkProfileOutput, error) {
@@ -1661,9 +1661,9 @@ func (a *stub) UpdateNetworkProfile(ctx workflow.Context, input *devicefarm.Upda
 	return &output, err
 }
 
-func (a *stub) UpdateNetworkProfileAsync(ctx workflow.Context, input *devicefarm.UpdateNetworkProfileInput) *DeviceFarmUpdateNetworkProfileFuture {
+func (a *stub) UpdateNetworkProfileAsync(ctx workflow.Context, input *devicefarm.UpdateNetworkProfileInput) *UpdateNetworkProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.UpdateNetworkProfile", input)
-	return &DeviceFarmUpdateNetworkProfileFuture{Future: future}
+	return &UpdateNetworkProfileFuture{Future: future}
 }
 
 func (a *stub) UpdateProject(ctx workflow.Context, input *devicefarm.UpdateProjectInput) (*devicefarm.UpdateProjectOutput, error) {
@@ -1672,9 +1672,9 @@ func (a *stub) UpdateProject(ctx workflow.Context, input *devicefarm.UpdateProje
 	return &output, err
 }
 
-func (a *stub) UpdateProjectAsync(ctx workflow.Context, input *devicefarm.UpdateProjectInput) *DeviceFarmUpdateProjectFuture {
+func (a *stub) UpdateProjectAsync(ctx workflow.Context, input *devicefarm.UpdateProjectInput) *UpdateProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.UpdateProject", input)
-	return &DeviceFarmUpdateProjectFuture{Future: future}
+	return &UpdateProjectFuture{Future: future}
 }
 
 func (a *stub) UpdateTestGridProject(ctx workflow.Context, input *devicefarm.UpdateTestGridProjectInput) (*devicefarm.UpdateTestGridProjectOutput, error) {
@@ -1683,9 +1683,9 @@ func (a *stub) UpdateTestGridProject(ctx workflow.Context, input *devicefarm.Upd
 	return &output, err
 }
 
-func (a *stub) UpdateTestGridProjectAsync(ctx workflow.Context, input *devicefarm.UpdateTestGridProjectInput) *DeviceFarmUpdateTestGridProjectFuture {
+func (a *stub) UpdateTestGridProjectAsync(ctx workflow.Context, input *devicefarm.UpdateTestGridProjectInput) *UpdateTestGridProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.UpdateTestGridProject", input)
-	return &DeviceFarmUpdateTestGridProjectFuture{Future: future}
+	return &UpdateTestGridProjectFuture{Future: future}
 }
 
 func (a *stub) UpdateUpload(ctx workflow.Context, input *devicefarm.UpdateUploadInput) (*devicefarm.UpdateUploadOutput, error) {
@@ -1694,9 +1694,9 @@ func (a *stub) UpdateUpload(ctx workflow.Context, input *devicefarm.UpdateUpload
 	return &output, err
 }
 
-func (a *stub) UpdateUploadAsync(ctx workflow.Context, input *devicefarm.UpdateUploadInput) *DeviceFarmUpdateUploadFuture {
+func (a *stub) UpdateUploadAsync(ctx workflow.Context, input *devicefarm.UpdateUploadInput) *UpdateUploadFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.UpdateUpload", input)
-	return &DeviceFarmUpdateUploadFuture{Future: future}
+	return &UpdateUploadFuture{Future: future}
 }
 
 func (a *stub) UpdateVPCEConfiguration(ctx workflow.Context, input *devicefarm.UpdateVPCEConfigurationInput) (*devicefarm.UpdateVPCEConfigurationOutput, error) {
@@ -1705,7 +1705,7 @@ func (a *stub) UpdateVPCEConfiguration(ctx workflow.Context, input *devicefarm.U
 	return &output, err
 }
 
-func (a *stub) UpdateVPCEConfigurationAsync(ctx workflow.Context, input *devicefarm.UpdateVPCEConfigurationInput) *DeviceFarmUpdateVPCEConfigurationFuture {
+func (a *stub) UpdateVPCEConfigurationAsync(ctx workflow.Context, input *devicefarm.UpdateVPCEConfigurationInput) *UpdateVPCEConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.devicefarm.UpdateVPCEConfiguration", input)
-	return &DeviceFarmUpdateVPCEConfigurationFuture{Future: future}
+	return &UpdateVPCEConfigurationFuture{Future: future}
 }

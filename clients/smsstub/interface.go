@@ -16,109 +16,109 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateApp(ctx workflow.Context, input *sms.CreateAppInput) (*sms.CreateAppOutput, error)
-	CreateAppAsync(ctx workflow.Context, input *sms.CreateAppInput) *SMSCreateAppFuture
+	CreateAppAsync(ctx workflow.Context, input *sms.CreateAppInput) *CreateAppFuture
 
 	CreateReplicationJob(ctx workflow.Context, input *sms.CreateReplicationJobInput) (*sms.CreateReplicationJobOutput, error)
-	CreateReplicationJobAsync(ctx workflow.Context, input *sms.CreateReplicationJobInput) *SMSCreateReplicationJobFuture
+	CreateReplicationJobAsync(ctx workflow.Context, input *sms.CreateReplicationJobInput) *CreateReplicationJobFuture
 
 	DeleteApp(ctx workflow.Context, input *sms.DeleteAppInput) (*sms.DeleteAppOutput, error)
-	DeleteAppAsync(ctx workflow.Context, input *sms.DeleteAppInput) *SMSDeleteAppFuture
+	DeleteAppAsync(ctx workflow.Context, input *sms.DeleteAppInput) *DeleteAppFuture
 
 	DeleteAppLaunchConfiguration(ctx workflow.Context, input *sms.DeleteAppLaunchConfigurationInput) (*sms.DeleteAppLaunchConfigurationOutput, error)
-	DeleteAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppLaunchConfigurationInput) *SMSDeleteAppLaunchConfigurationFuture
+	DeleteAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppLaunchConfigurationInput) *DeleteAppLaunchConfigurationFuture
 
 	DeleteAppReplicationConfiguration(ctx workflow.Context, input *sms.DeleteAppReplicationConfigurationInput) (*sms.DeleteAppReplicationConfigurationOutput, error)
-	DeleteAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppReplicationConfigurationInput) *SMSDeleteAppReplicationConfigurationFuture
+	DeleteAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppReplicationConfigurationInput) *DeleteAppReplicationConfigurationFuture
 
 	DeleteAppValidationConfiguration(ctx workflow.Context, input *sms.DeleteAppValidationConfigurationInput) (*sms.DeleteAppValidationConfigurationOutput, error)
-	DeleteAppValidationConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppValidationConfigurationInput) *SMSDeleteAppValidationConfigurationFuture
+	DeleteAppValidationConfigurationAsync(ctx workflow.Context, input *sms.DeleteAppValidationConfigurationInput) *DeleteAppValidationConfigurationFuture
 
 	DeleteReplicationJob(ctx workflow.Context, input *sms.DeleteReplicationJobInput) (*sms.DeleteReplicationJobOutput, error)
-	DeleteReplicationJobAsync(ctx workflow.Context, input *sms.DeleteReplicationJobInput) *SMSDeleteReplicationJobFuture
+	DeleteReplicationJobAsync(ctx workflow.Context, input *sms.DeleteReplicationJobInput) *DeleteReplicationJobFuture
 
 	DeleteServerCatalog(ctx workflow.Context, input *sms.DeleteServerCatalogInput) (*sms.DeleteServerCatalogOutput, error)
-	DeleteServerCatalogAsync(ctx workflow.Context, input *sms.DeleteServerCatalogInput) *SMSDeleteServerCatalogFuture
+	DeleteServerCatalogAsync(ctx workflow.Context, input *sms.DeleteServerCatalogInput) *DeleteServerCatalogFuture
 
 	DisassociateConnector(ctx workflow.Context, input *sms.DisassociateConnectorInput) (*sms.DisassociateConnectorOutput, error)
-	DisassociateConnectorAsync(ctx workflow.Context, input *sms.DisassociateConnectorInput) *SMSDisassociateConnectorFuture
+	DisassociateConnectorAsync(ctx workflow.Context, input *sms.DisassociateConnectorInput) *DisassociateConnectorFuture
 
 	GenerateChangeSet(ctx workflow.Context, input *sms.GenerateChangeSetInput) (*sms.GenerateChangeSetOutput, error)
-	GenerateChangeSetAsync(ctx workflow.Context, input *sms.GenerateChangeSetInput) *SMSGenerateChangeSetFuture
+	GenerateChangeSetAsync(ctx workflow.Context, input *sms.GenerateChangeSetInput) *GenerateChangeSetFuture
 
 	GenerateTemplate(ctx workflow.Context, input *sms.GenerateTemplateInput) (*sms.GenerateTemplateOutput, error)
-	GenerateTemplateAsync(ctx workflow.Context, input *sms.GenerateTemplateInput) *SMSGenerateTemplateFuture
+	GenerateTemplateAsync(ctx workflow.Context, input *sms.GenerateTemplateInput) *GenerateTemplateFuture
 
 	GetApp(ctx workflow.Context, input *sms.GetAppInput) (*sms.GetAppOutput, error)
-	GetAppAsync(ctx workflow.Context, input *sms.GetAppInput) *SMSGetAppFuture
+	GetAppAsync(ctx workflow.Context, input *sms.GetAppInput) *GetAppFuture
 
 	GetAppLaunchConfiguration(ctx workflow.Context, input *sms.GetAppLaunchConfigurationInput) (*sms.GetAppLaunchConfigurationOutput, error)
-	GetAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.GetAppLaunchConfigurationInput) *SMSGetAppLaunchConfigurationFuture
+	GetAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.GetAppLaunchConfigurationInput) *GetAppLaunchConfigurationFuture
 
 	GetAppReplicationConfiguration(ctx workflow.Context, input *sms.GetAppReplicationConfigurationInput) (*sms.GetAppReplicationConfigurationOutput, error)
-	GetAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.GetAppReplicationConfigurationInput) *SMSGetAppReplicationConfigurationFuture
+	GetAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.GetAppReplicationConfigurationInput) *GetAppReplicationConfigurationFuture
 
 	GetAppValidationConfiguration(ctx workflow.Context, input *sms.GetAppValidationConfigurationInput) (*sms.GetAppValidationConfigurationOutput, error)
-	GetAppValidationConfigurationAsync(ctx workflow.Context, input *sms.GetAppValidationConfigurationInput) *SMSGetAppValidationConfigurationFuture
+	GetAppValidationConfigurationAsync(ctx workflow.Context, input *sms.GetAppValidationConfigurationInput) *GetAppValidationConfigurationFuture
 
 	GetAppValidationOutput(ctx workflow.Context, input *sms.GetAppValidationOutputInput) (*sms.GetAppValidationOutputOutput, error)
-	GetAppValidationOutputAsync(ctx workflow.Context, input *sms.GetAppValidationOutputInput) *SMSGetAppValidationOutputFuture
+	GetAppValidationOutputAsync(ctx workflow.Context, input *sms.GetAppValidationOutputInput) *GetAppValidationOutputFuture
 
 	GetConnectors(ctx workflow.Context, input *sms.GetConnectorsInput) (*sms.GetConnectorsOutput, error)
-	GetConnectorsAsync(ctx workflow.Context, input *sms.GetConnectorsInput) *SMSGetConnectorsFuture
+	GetConnectorsAsync(ctx workflow.Context, input *sms.GetConnectorsInput) *GetConnectorsFuture
 
 	GetReplicationJobs(ctx workflow.Context, input *sms.GetReplicationJobsInput) (*sms.GetReplicationJobsOutput, error)
-	GetReplicationJobsAsync(ctx workflow.Context, input *sms.GetReplicationJobsInput) *SMSGetReplicationJobsFuture
+	GetReplicationJobsAsync(ctx workflow.Context, input *sms.GetReplicationJobsInput) *GetReplicationJobsFuture
 
 	GetReplicationRuns(ctx workflow.Context, input *sms.GetReplicationRunsInput) (*sms.GetReplicationRunsOutput, error)
-	GetReplicationRunsAsync(ctx workflow.Context, input *sms.GetReplicationRunsInput) *SMSGetReplicationRunsFuture
+	GetReplicationRunsAsync(ctx workflow.Context, input *sms.GetReplicationRunsInput) *GetReplicationRunsFuture
 
 	GetServers(ctx workflow.Context, input *sms.GetServersInput) (*sms.GetServersOutput, error)
-	GetServersAsync(ctx workflow.Context, input *sms.GetServersInput) *SMSGetServersFuture
+	GetServersAsync(ctx workflow.Context, input *sms.GetServersInput) *GetServersFuture
 
 	ImportAppCatalog(ctx workflow.Context, input *sms.ImportAppCatalogInput) (*sms.ImportAppCatalogOutput, error)
-	ImportAppCatalogAsync(ctx workflow.Context, input *sms.ImportAppCatalogInput) *SMSImportAppCatalogFuture
+	ImportAppCatalogAsync(ctx workflow.Context, input *sms.ImportAppCatalogInput) *ImportAppCatalogFuture
 
 	ImportServerCatalog(ctx workflow.Context, input *sms.ImportServerCatalogInput) (*sms.ImportServerCatalogOutput, error)
-	ImportServerCatalogAsync(ctx workflow.Context, input *sms.ImportServerCatalogInput) *SMSImportServerCatalogFuture
+	ImportServerCatalogAsync(ctx workflow.Context, input *sms.ImportServerCatalogInput) *ImportServerCatalogFuture
 
 	LaunchApp(ctx workflow.Context, input *sms.LaunchAppInput) (*sms.LaunchAppOutput, error)
-	LaunchAppAsync(ctx workflow.Context, input *sms.LaunchAppInput) *SMSLaunchAppFuture
+	LaunchAppAsync(ctx workflow.Context, input *sms.LaunchAppInput) *LaunchAppFuture
 
 	ListApps(ctx workflow.Context, input *sms.ListAppsInput) (*sms.ListAppsOutput, error)
-	ListAppsAsync(ctx workflow.Context, input *sms.ListAppsInput) *SMSListAppsFuture
+	ListAppsAsync(ctx workflow.Context, input *sms.ListAppsInput) *ListAppsFuture
 
 	NotifyAppValidationOutput(ctx workflow.Context, input *sms.NotifyAppValidationOutputInput) (*sms.NotifyAppValidationOutputOutput, error)
-	NotifyAppValidationOutputAsync(ctx workflow.Context, input *sms.NotifyAppValidationOutputInput) *SMSNotifyAppValidationOutputFuture
+	NotifyAppValidationOutputAsync(ctx workflow.Context, input *sms.NotifyAppValidationOutputInput) *NotifyAppValidationOutputFuture
 
 	PutAppLaunchConfiguration(ctx workflow.Context, input *sms.PutAppLaunchConfigurationInput) (*sms.PutAppLaunchConfigurationOutput, error)
-	PutAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.PutAppLaunchConfigurationInput) *SMSPutAppLaunchConfigurationFuture
+	PutAppLaunchConfigurationAsync(ctx workflow.Context, input *sms.PutAppLaunchConfigurationInput) *PutAppLaunchConfigurationFuture
 
 	PutAppReplicationConfiguration(ctx workflow.Context, input *sms.PutAppReplicationConfigurationInput) (*sms.PutAppReplicationConfigurationOutput, error)
-	PutAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.PutAppReplicationConfigurationInput) *SMSPutAppReplicationConfigurationFuture
+	PutAppReplicationConfigurationAsync(ctx workflow.Context, input *sms.PutAppReplicationConfigurationInput) *PutAppReplicationConfigurationFuture
 
 	PutAppValidationConfiguration(ctx workflow.Context, input *sms.PutAppValidationConfigurationInput) (*sms.PutAppValidationConfigurationOutput, error)
-	PutAppValidationConfigurationAsync(ctx workflow.Context, input *sms.PutAppValidationConfigurationInput) *SMSPutAppValidationConfigurationFuture
+	PutAppValidationConfigurationAsync(ctx workflow.Context, input *sms.PutAppValidationConfigurationInput) *PutAppValidationConfigurationFuture
 
 	StartAppReplication(ctx workflow.Context, input *sms.StartAppReplicationInput) (*sms.StartAppReplicationOutput, error)
-	StartAppReplicationAsync(ctx workflow.Context, input *sms.StartAppReplicationInput) *SMSStartAppReplicationFuture
+	StartAppReplicationAsync(ctx workflow.Context, input *sms.StartAppReplicationInput) *StartAppReplicationFuture
 
 	StartOnDemandAppReplication(ctx workflow.Context, input *sms.StartOnDemandAppReplicationInput) (*sms.StartOnDemandAppReplicationOutput, error)
-	StartOnDemandAppReplicationAsync(ctx workflow.Context, input *sms.StartOnDemandAppReplicationInput) *SMSStartOnDemandAppReplicationFuture
+	StartOnDemandAppReplicationAsync(ctx workflow.Context, input *sms.StartOnDemandAppReplicationInput) *StartOnDemandAppReplicationFuture
 
 	StartOnDemandReplicationRun(ctx workflow.Context, input *sms.StartOnDemandReplicationRunInput) (*sms.StartOnDemandReplicationRunOutput, error)
-	StartOnDemandReplicationRunAsync(ctx workflow.Context, input *sms.StartOnDemandReplicationRunInput) *SMSStartOnDemandReplicationRunFuture
+	StartOnDemandReplicationRunAsync(ctx workflow.Context, input *sms.StartOnDemandReplicationRunInput) *StartOnDemandReplicationRunFuture
 
 	StopAppReplication(ctx workflow.Context, input *sms.StopAppReplicationInput) (*sms.StopAppReplicationOutput, error)
-	StopAppReplicationAsync(ctx workflow.Context, input *sms.StopAppReplicationInput) *SMSStopAppReplicationFuture
+	StopAppReplicationAsync(ctx workflow.Context, input *sms.StopAppReplicationInput) *StopAppReplicationFuture
 
 	TerminateApp(ctx workflow.Context, input *sms.TerminateAppInput) (*sms.TerminateAppOutput, error)
-	TerminateAppAsync(ctx workflow.Context, input *sms.TerminateAppInput) *SMSTerminateAppFuture
+	TerminateAppAsync(ctx workflow.Context, input *sms.TerminateAppInput) *TerminateAppFuture
 
 	UpdateApp(ctx workflow.Context, input *sms.UpdateAppInput) (*sms.UpdateAppOutput, error)
-	UpdateAppAsync(ctx workflow.Context, input *sms.UpdateAppInput) *SMSUpdateAppFuture
+	UpdateAppAsync(ctx workflow.Context, input *sms.UpdateAppInput) *UpdateAppFuture
 
 	UpdateReplicationJob(ctx workflow.Context, input *sms.UpdateReplicationJobInput) (*sms.UpdateReplicationJobOutput, error)
-	UpdateReplicationJobAsync(ctx workflow.Context, input *sms.UpdateReplicationJobInput) *SMSUpdateReplicationJobFuture
+	UpdateReplicationJobAsync(ctx workflow.Context, input *sms.UpdateReplicationJobInput) *UpdateReplicationJobFuture
 }
 
 func NewClient() Client {

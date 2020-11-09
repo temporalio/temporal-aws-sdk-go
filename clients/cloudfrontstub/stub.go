@@ -16,749 +16,749 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type CloudFrontCreateCachePolicyFuture struct {
+type CreateCachePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontCreateCachePolicyFuture) Get(ctx workflow.Context) (*cloudfront.CreateCachePolicyOutput, error) {
+func (r *CreateCachePolicyFuture) Get(ctx workflow.Context) (*cloudfront.CreateCachePolicyOutput, error) {
 	var output cloudfront.CreateCachePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontCreateCloudFrontOriginAccessIdentityFuture struct {
+type CreateCloudFrontOriginAccessIdentityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontCreateCloudFrontOriginAccessIdentityFuture) Get(ctx workflow.Context) (*cloudfront.CreateCloudFrontOriginAccessIdentityOutput, error) {
+func (r *CreateCloudFrontOriginAccessIdentityFuture) Get(ctx workflow.Context) (*cloudfront.CreateCloudFrontOriginAccessIdentityOutput, error) {
 	var output cloudfront.CreateCloudFrontOriginAccessIdentityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontCreateDistributionFuture struct {
+type CreateDistributionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontCreateDistributionFuture) Get(ctx workflow.Context) (*cloudfront.CreateDistributionOutput, error) {
+func (r *CreateDistributionFuture) Get(ctx workflow.Context) (*cloudfront.CreateDistributionOutput, error) {
 	var output cloudfront.CreateDistributionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontCreateDistributionWithTagsFuture struct {
+type CreateDistributionWithTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontCreateDistributionWithTagsFuture) Get(ctx workflow.Context) (*cloudfront.CreateDistributionWithTagsOutput, error) {
+func (r *CreateDistributionWithTagsFuture) Get(ctx workflow.Context) (*cloudfront.CreateDistributionWithTagsOutput, error) {
 	var output cloudfront.CreateDistributionWithTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontCreateFieldLevelEncryptionConfigFuture struct {
+type CreateFieldLevelEncryptionConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontCreateFieldLevelEncryptionConfigFuture) Get(ctx workflow.Context) (*cloudfront.CreateFieldLevelEncryptionConfigOutput, error) {
+func (r *CreateFieldLevelEncryptionConfigFuture) Get(ctx workflow.Context) (*cloudfront.CreateFieldLevelEncryptionConfigOutput, error) {
 	var output cloudfront.CreateFieldLevelEncryptionConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontCreateFieldLevelEncryptionProfileFuture struct {
+type CreateFieldLevelEncryptionProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontCreateFieldLevelEncryptionProfileFuture) Get(ctx workflow.Context) (*cloudfront.CreateFieldLevelEncryptionProfileOutput, error) {
+func (r *CreateFieldLevelEncryptionProfileFuture) Get(ctx workflow.Context) (*cloudfront.CreateFieldLevelEncryptionProfileOutput, error) {
 	var output cloudfront.CreateFieldLevelEncryptionProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontCreateInvalidationFuture struct {
+type CreateInvalidationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontCreateInvalidationFuture) Get(ctx workflow.Context) (*cloudfront.CreateInvalidationOutput, error) {
+func (r *CreateInvalidationFuture) Get(ctx workflow.Context) (*cloudfront.CreateInvalidationOutput, error) {
 	var output cloudfront.CreateInvalidationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontCreateMonitoringSubscriptionFuture struct {
+type CreateMonitoringSubscriptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontCreateMonitoringSubscriptionFuture) Get(ctx workflow.Context) (*cloudfront.CreateMonitoringSubscriptionOutput, error) {
+func (r *CreateMonitoringSubscriptionFuture) Get(ctx workflow.Context) (*cloudfront.CreateMonitoringSubscriptionOutput, error) {
 	var output cloudfront.CreateMonitoringSubscriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontCreateOriginRequestPolicyFuture struct {
+type CreateOriginRequestPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontCreateOriginRequestPolicyFuture) Get(ctx workflow.Context) (*cloudfront.CreateOriginRequestPolicyOutput, error) {
+func (r *CreateOriginRequestPolicyFuture) Get(ctx workflow.Context) (*cloudfront.CreateOriginRequestPolicyOutput, error) {
 	var output cloudfront.CreateOriginRequestPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontCreatePublicKeyFuture struct {
+type CreatePublicKeyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontCreatePublicKeyFuture) Get(ctx workflow.Context) (*cloudfront.CreatePublicKeyOutput, error) {
+func (r *CreatePublicKeyFuture) Get(ctx workflow.Context) (*cloudfront.CreatePublicKeyOutput, error) {
 	var output cloudfront.CreatePublicKeyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontCreateRealtimeLogConfigFuture struct {
+type CreateRealtimeLogConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontCreateRealtimeLogConfigFuture) Get(ctx workflow.Context) (*cloudfront.CreateRealtimeLogConfigOutput, error) {
+func (r *CreateRealtimeLogConfigFuture) Get(ctx workflow.Context) (*cloudfront.CreateRealtimeLogConfigOutput, error) {
 	var output cloudfront.CreateRealtimeLogConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontCreateStreamingDistributionFuture struct {
+type CreateStreamingDistributionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontCreateStreamingDistributionFuture) Get(ctx workflow.Context) (*cloudfront.CreateStreamingDistributionOutput, error) {
+func (r *CreateStreamingDistributionFuture) Get(ctx workflow.Context) (*cloudfront.CreateStreamingDistributionOutput, error) {
 	var output cloudfront.CreateStreamingDistributionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontCreateStreamingDistributionWithTagsFuture struct {
+type CreateStreamingDistributionWithTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontCreateStreamingDistributionWithTagsFuture) Get(ctx workflow.Context) (*cloudfront.CreateStreamingDistributionWithTagsOutput, error) {
+func (r *CreateStreamingDistributionWithTagsFuture) Get(ctx workflow.Context) (*cloudfront.CreateStreamingDistributionWithTagsOutput, error) {
 	var output cloudfront.CreateStreamingDistributionWithTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontDeleteCachePolicyFuture struct {
+type DeleteCachePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontDeleteCachePolicyFuture) Get(ctx workflow.Context) (*cloudfront.DeleteCachePolicyOutput, error) {
+func (r *DeleteCachePolicyFuture) Get(ctx workflow.Context) (*cloudfront.DeleteCachePolicyOutput, error) {
 	var output cloudfront.DeleteCachePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontDeleteCloudFrontOriginAccessIdentityFuture struct {
+type DeleteCloudFrontOriginAccessIdentityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontDeleteCloudFrontOriginAccessIdentityFuture) Get(ctx workflow.Context) (*cloudfront.DeleteCloudFrontOriginAccessIdentityOutput, error) {
+func (r *DeleteCloudFrontOriginAccessIdentityFuture) Get(ctx workflow.Context) (*cloudfront.DeleteCloudFrontOriginAccessIdentityOutput, error) {
 	var output cloudfront.DeleteCloudFrontOriginAccessIdentityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontDeleteDistributionFuture struct {
+type DeleteDistributionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontDeleteDistributionFuture) Get(ctx workflow.Context) (*cloudfront.DeleteDistributionOutput, error) {
+func (r *DeleteDistributionFuture) Get(ctx workflow.Context) (*cloudfront.DeleteDistributionOutput, error) {
 	var output cloudfront.DeleteDistributionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontDeleteFieldLevelEncryptionConfigFuture struct {
+type DeleteFieldLevelEncryptionConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontDeleteFieldLevelEncryptionConfigFuture) Get(ctx workflow.Context) (*cloudfront.DeleteFieldLevelEncryptionConfigOutput, error) {
+func (r *DeleteFieldLevelEncryptionConfigFuture) Get(ctx workflow.Context) (*cloudfront.DeleteFieldLevelEncryptionConfigOutput, error) {
 	var output cloudfront.DeleteFieldLevelEncryptionConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontDeleteFieldLevelEncryptionProfileFuture struct {
+type DeleteFieldLevelEncryptionProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontDeleteFieldLevelEncryptionProfileFuture) Get(ctx workflow.Context) (*cloudfront.DeleteFieldLevelEncryptionProfileOutput, error) {
+func (r *DeleteFieldLevelEncryptionProfileFuture) Get(ctx workflow.Context) (*cloudfront.DeleteFieldLevelEncryptionProfileOutput, error) {
 	var output cloudfront.DeleteFieldLevelEncryptionProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontDeleteMonitoringSubscriptionFuture struct {
+type DeleteMonitoringSubscriptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontDeleteMonitoringSubscriptionFuture) Get(ctx workflow.Context) (*cloudfront.DeleteMonitoringSubscriptionOutput, error) {
+func (r *DeleteMonitoringSubscriptionFuture) Get(ctx workflow.Context) (*cloudfront.DeleteMonitoringSubscriptionOutput, error) {
 	var output cloudfront.DeleteMonitoringSubscriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontDeleteOriginRequestPolicyFuture struct {
+type DeleteOriginRequestPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontDeleteOriginRequestPolicyFuture) Get(ctx workflow.Context) (*cloudfront.DeleteOriginRequestPolicyOutput, error) {
+func (r *DeleteOriginRequestPolicyFuture) Get(ctx workflow.Context) (*cloudfront.DeleteOriginRequestPolicyOutput, error) {
 	var output cloudfront.DeleteOriginRequestPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontDeletePublicKeyFuture struct {
+type DeletePublicKeyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontDeletePublicKeyFuture) Get(ctx workflow.Context) (*cloudfront.DeletePublicKeyOutput, error) {
+func (r *DeletePublicKeyFuture) Get(ctx workflow.Context) (*cloudfront.DeletePublicKeyOutput, error) {
 	var output cloudfront.DeletePublicKeyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontDeleteRealtimeLogConfigFuture struct {
+type DeleteRealtimeLogConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontDeleteRealtimeLogConfigFuture) Get(ctx workflow.Context) (*cloudfront.DeleteRealtimeLogConfigOutput, error) {
+func (r *DeleteRealtimeLogConfigFuture) Get(ctx workflow.Context) (*cloudfront.DeleteRealtimeLogConfigOutput, error) {
 	var output cloudfront.DeleteRealtimeLogConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontDeleteStreamingDistributionFuture struct {
+type DeleteStreamingDistributionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontDeleteStreamingDistributionFuture) Get(ctx workflow.Context) (*cloudfront.DeleteStreamingDistributionOutput, error) {
+func (r *DeleteStreamingDistributionFuture) Get(ctx workflow.Context) (*cloudfront.DeleteStreamingDistributionOutput, error) {
 	var output cloudfront.DeleteStreamingDistributionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetCachePolicyFuture struct {
+type GetCachePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetCachePolicyFuture) Get(ctx workflow.Context) (*cloudfront.GetCachePolicyOutput, error) {
+func (r *GetCachePolicyFuture) Get(ctx workflow.Context) (*cloudfront.GetCachePolicyOutput, error) {
 	var output cloudfront.GetCachePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetCachePolicyConfigFuture struct {
+type GetCachePolicyConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetCachePolicyConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetCachePolicyConfigOutput, error) {
+func (r *GetCachePolicyConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetCachePolicyConfigOutput, error) {
 	var output cloudfront.GetCachePolicyConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetCloudFrontOriginAccessIdentityFuture struct {
+type GetCloudFrontOriginAccessIdentityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetCloudFrontOriginAccessIdentityFuture) Get(ctx workflow.Context) (*cloudfront.GetCloudFrontOriginAccessIdentityOutput, error) {
+func (r *GetCloudFrontOriginAccessIdentityFuture) Get(ctx workflow.Context) (*cloudfront.GetCloudFrontOriginAccessIdentityOutput, error) {
 	var output cloudfront.GetCloudFrontOriginAccessIdentityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetCloudFrontOriginAccessIdentityConfigFuture struct {
+type GetCloudFrontOriginAccessIdentityConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetCloudFrontOriginAccessIdentityConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetCloudFrontOriginAccessIdentityConfigOutput, error) {
+func (r *GetCloudFrontOriginAccessIdentityConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetCloudFrontOriginAccessIdentityConfigOutput, error) {
 	var output cloudfront.GetCloudFrontOriginAccessIdentityConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetDistributionFuture struct {
+type GetDistributionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetDistributionFuture) Get(ctx workflow.Context) (*cloudfront.GetDistributionOutput, error) {
+func (r *GetDistributionFuture) Get(ctx workflow.Context) (*cloudfront.GetDistributionOutput, error) {
 	var output cloudfront.GetDistributionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetDistributionConfigFuture struct {
+type GetDistributionConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetDistributionConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetDistributionConfigOutput, error) {
+func (r *GetDistributionConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetDistributionConfigOutput, error) {
 	var output cloudfront.GetDistributionConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetFieldLevelEncryptionFuture struct {
+type GetFieldLevelEncryptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetFieldLevelEncryptionFuture) Get(ctx workflow.Context) (*cloudfront.GetFieldLevelEncryptionOutput, error) {
+func (r *GetFieldLevelEncryptionFuture) Get(ctx workflow.Context) (*cloudfront.GetFieldLevelEncryptionOutput, error) {
 	var output cloudfront.GetFieldLevelEncryptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetFieldLevelEncryptionConfigFuture struct {
+type GetFieldLevelEncryptionConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetFieldLevelEncryptionConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetFieldLevelEncryptionConfigOutput, error) {
+func (r *GetFieldLevelEncryptionConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetFieldLevelEncryptionConfigOutput, error) {
 	var output cloudfront.GetFieldLevelEncryptionConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetFieldLevelEncryptionProfileFuture struct {
+type GetFieldLevelEncryptionProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetFieldLevelEncryptionProfileFuture) Get(ctx workflow.Context) (*cloudfront.GetFieldLevelEncryptionProfileOutput, error) {
+func (r *GetFieldLevelEncryptionProfileFuture) Get(ctx workflow.Context) (*cloudfront.GetFieldLevelEncryptionProfileOutput, error) {
 	var output cloudfront.GetFieldLevelEncryptionProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetFieldLevelEncryptionProfileConfigFuture struct {
+type GetFieldLevelEncryptionProfileConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetFieldLevelEncryptionProfileConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetFieldLevelEncryptionProfileConfigOutput, error) {
+func (r *GetFieldLevelEncryptionProfileConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetFieldLevelEncryptionProfileConfigOutput, error) {
 	var output cloudfront.GetFieldLevelEncryptionProfileConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetInvalidationFuture struct {
+type GetInvalidationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetInvalidationFuture) Get(ctx workflow.Context) (*cloudfront.GetInvalidationOutput, error) {
+func (r *GetInvalidationFuture) Get(ctx workflow.Context) (*cloudfront.GetInvalidationOutput, error) {
 	var output cloudfront.GetInvalidationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetMonitoringSubscriptionFuture struct {
+type GetMonitoringSubscriptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetMonitoringSubscriptionFuture) Get(ctx workflow.Context) (*cloudfront.GetMonitoringSubscriptionOutput, error) {
+func (r *GetMonitoringSubscriptionFuture) Get(ctx workflow.Context) (*cloudfront.GetMonitoringSubscriptionOutput, error) {
 	var output cloudfront.GetMonitoringSubscriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetOriginRequestPolicyFuture struct {
+type GetOriginRequestPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetOriginRequestPolicyFuture) Get(ctx workflow.Context) (*cloudfront.GetOriginRequestPolicyOutput, error) {
+func (r *GetOriginRequestPolicyFuture) Get(ctx workflow.Context) (*cloudfront.GetOriginRequestPolicyOutput, error) {
 	var output cloudfront.GetOriginRequestPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetOriginRequestPolicyConfigFuture struct {
+type GetOriginRequestPolicyConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetOriginRequestPolicyConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetOriginRequestPolicyConfigOutput, error) {
+func (r *GetOriginRequestPolicyConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetOriginRequestPolicyConfigOutput, error) {
 	var output cloudfront.GetOriginRequestPolicyConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetPublicKeyFuture struct {
+type GetPublicKeyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetPublicKeyFuture) Get(ctx workflow.Context) (*cloudfront.GetPublicKeyOutput, error) {
+func (r *GetPublicKeyFuture) Get(ctx workflow.Context) (*cloudfront.GetPublicKeyOutput, error) {
 	var output cloudfront.GetPublicKeyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetPublicKeyConfigFuture struct {
+type GetPublicKeyConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetPublicKeyConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetPublicKeyConfigOutput, error) {
+func (r *GetPublicKeyConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetPublicKeyConfigOutput, error) {
 	var output cloudfront.GetPublicKeyConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetRealtimeLogConfigFuture struct {
+type GetRealtimeLogConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetRealtimeLogConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetRealtimeLogConfigOutput, error) {
+func (r *GetRealtimeLogConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetRealtimeLogConfigOutput, error) {
 	var output cloudfront.GetRealtimeLogConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetStreamingDistributionFuture struct {
+type GetStreamingDistributionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetStreamingDistributionFuture) Get(ctx workflow.Context) (*cloudfront.GetStreamingDistributionOutput, error) {
+func (r *GetStreamingDistributionFuture) Get(ctx workflow.Context) (*cloudfront.GetStreamingDistributionOutput, error) {
 	var output cloudfront.GetStreamingDistributionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontGetStreamingDistributionConfigFuture struct {
+type GetStreamingDistributionConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontGetStreamingDistributionConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetStreamingDistributionConfigOutput, error) {
+func (r *GetStreamingDistributionConfigFuture) Get(ctx workflow.Context) (*cloudfront.GetStreamingDistributionConfigOutput, error) {
 	var output cloudfront.GetStreamingDistributionConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontListCachePoliciesFuture struct {
+type ListCachePoliciesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontListCachePoliciesFuture) Get(ctx workflow.Context) (*cloudfront.ListCachePoliciesOutput, error) {
+func (r *ListCachePoliciesFuture) Get(ctx workflow.Context) (*cloudfront.ListCachePoliciesOutput, error) {
 	var output cloudfront.ListCachePoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontListCloudFrontOriginAccessIdentitiesFuture struct {
+type ListCloudFrontOriginAccessIdentitiesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontListCloudFrontOriginAccessIdentitiesFuture) Get(ctx workflow.Context) (*cloudfront.ListCloudFrontOriginAccessIdentitiesOutput, error) {
+func (r *ListCloudFrontOriginAccessIdentitiesFuture) Get(ctx workflow.Context) (*cloudfront.ListCloudFrontOriginAccessIdentitiesOutput, error) {
 	var output cloudfront.ListCloudFrontOriginAccessIdentitiesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontListDistributionsFuture struct {
+type ListDistributionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontListDistributionsFuture) Get(ctx workflow.Context) (*cloudfront.ListDistributionsOutput, error) {
+func (r *ListDistributionsFuture) Get(ctx workflow.Context) (*cloudfront.ListDistributionsOutput, error) {
 	var output cloudfront.ListDistributionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontListDistributionsByCachePolicyIdFuture struct {
+type ListDistributionsByCachePolicyIdFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontListDistributionsByCachePolicyIdFuture) Get(ctx workflow.Context) (*cloudfront.ListDistributionsByCachePolicyIdOutput, error) {
+func (r *ListDistributionsByCachePolicyIdFuture) Get(ctx workflow.Context) (*cloudfront.ListDistributionsByCachePolicyIdOutput, error) {
 	var output cloudfront.ListDistributionsByCachePolicyIdOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontListDistributionsByOriginRequestPolicyIdFuture struct {
+type ListDistributionsByOriginRequestPolicyIdFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontListDistributionsByOriginRequestPolicyIdFuture) Get(ctx workflow.Context) (*cloudfront.ListDistributionsByOriginRequestPolicyIdOutput, error) {
+func (r *ListDistributionsByOriginRequestPolicyIdFuture) Get(ctx workflow.Context) (*cloudfront.ListDistributionsByOriginRequestPolicyIdOutput, error) {
 	var output cloudfront.ListDistributionsByOriginRequestPolicyIdOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontListDistributionsByRealtimeLogConfigFuture struct {
+type ListDistributionsByRealtimeLogConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontListDistributionsByRealtimeLogConfigFuture) Get(ctx workflow.Context) (*cloudfront.ListDistributionsByRealtimeLogConfigOutput, error) {
+func (r *ListDistributionsByRealtimeLogConfigFuture) Get(ctx workflow.Context) (*cloudfront.ListDistributionsByRealtimeLogConfigOutput, error) {
 	var output cloudfront.ListDistributionsByRealtimeLogConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontListDistributionsByWebACLIdFuture struct {
+type ListDistributionsByWebACLIdFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontListDistributionsByWebACLIdFuture) Get(ctx workflow.Context) (*cloudfront.ListDistributionsByWebACLIdOutput, error) {
+func (r *ListDistributionsByWebACLIdFuture) Get(ctx workflow.Context) (*cloudfront.ListDistributionsByWebACLIdOutput, error) {
 	var output cloudfront.ListDistributionsByWebACLIdOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontListFieldLevelEncryptionConfigsFuture struct {
+type ListFieldLevelEncryptionConfigsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontListFieldLevelEncryptionConfigsFuture) Get(ctx workflow.Context) (*cloudfront.ListFieldLevelEncryptionConfigsOutput, error) {
+func (r *ListFieldLevelEncryptionConfigsFuture) Get(ctx workflow.Context) (*cloudfront.ListFieldLevelEncryptionConfigsOutput, error) {
 	var output cloudfront.ListFieldLevelEncryptionConfigsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontListFieldLevelEncryptionProfilesFuture struct {
+type ListFieldLevelEncryptionProfilesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontListFieldLevelEncryptionProfilesFuture) Get(ctx workflow.Context) (*cloudfront.ListFieldLevelEncryptionProfilesOutput, error) {
+func (r *ListFieldLevelEncryptionProfilesFuture) Get(ctx workflow.Context) (*cloudfront.ListFieldLevelEncryptionProfilesOutput, error) {
 	var output cloudfront.ListFieldLevelEncryptionProfilesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontListInvalidationsFuture struct {
+type ListInvalidationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontListInvalidationsFuture) Get(ctx workflow.Context) (*cloudfront.ListInvalidationsOutput, error) {
+func (r *ListInvalidationsFuture) Get(ctx workflow.Context) (*cloudfront.ListInvalidationsOutput, error) {
 	var output cloudfront.ListInvalidationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontListOriginRequestPoliciesFuture struct {
+type ListOriginRequestPoliciesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontListOriginRequestPoliciesFuture) Get(ctx workflow.Context) (*cloudfront.ListOriginRequestPoliciesOutput, error) {
+func (r *ListOriginRequestPoliciesFuture) Get(ctx workflow.Context) (*cloudfront.ListOriginRequestPoliciesOutput, error) {
 	var output cloudfront.ListOriginRequestPoliciesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontListPublicKeysFuture struct {
+type ListPublicKeysFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontListPublicKeysFuture) Get(ctx workflow.Context) (*cloudfront.ListPublicKeysOutput, error) {
+func (r *ListPublicKeysFuture) Get(ctx workflow.Context) (*cloudfront.ListPublicKeysOutput, error) {
 	var output cloudfront.ListPublicKeysOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontListRealtimeLogConfigsFuture struct {
+type ListRealtimeLogConfigsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontListRealtimeLogConfigsFuture) Get(ctx workflow.Context) (*cloudfront.ListRealtimeLogConfigsOutput, error) {
+func (r *ListRealtimeLogConfigsFuture) Get(ctx workflow.Context) (*cloudfront.ListRealtimeLogConfigsOutput, error) {
 	var output cloudfront.ListRealtimeLogConfigsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontListStreamingDistributionsFuture struct {
+type ListStreamingDistributionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontListStreamingDistributionsFuture) Get(ctx workflow.Context) (*cloudfront.ListStreamingDistributionsOutput, error) {
+func (r *ListStreamingDistributionsFuture) Get(ctx workflow.Context) (*cloudfront.ListStreamingDistributionsOutput, error) {
 	var output cloudfront.ListStreamingDistributionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontListTagsForResourceFuture) Get(ctx workflow.Context) (*cloudfront.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*cloudfront.ListTagsForResourceOutput, error) {
 	var output cloudfront.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontTagResourceFuture) Get(ctx workflow.Context) (*cloudfront.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*cloudfront.TagResourceOutput, error) {
 	var output cloudfront.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontUntagResourceFuture) Get(ctx workflow.Context) (*cloudfront.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*cloudfront.UntagResourceOutput, error) {
 	var output cloudfront.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontUpdateCachePolicyFuture struct {
+type UpdateCachePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontUpdateCachePolicyFuture) Get(ctx workflow.Context) (*cloudfront.UpdateCachePolicyOutput, error) {
+func (r *UpdateCachePolicyFuture) Get(ctx workflow.Context) (*cloudfront.UpdateCachePolicyOutput, error) {
 	var output cloudfront.UpdateCachePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontUpdateCloudFrontOriginAccessIdentityFuture struct {
+type UpdateCloudFrontOriginAccessIdentityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontUpdateCloudFrontOriginAccessIdentityFuture) Get(ctx workflow.Context) (*cloudfront.UpdateCloudFrontOriginAccessIdentityOutput, error) {
+func (r *UpdateCloudFrontOriginAccessIdentityFuture) Get(ctx workflow.Context) (*cloudfront.UpdateCloudFrontOriginAccessIdentityOutput, error) {
 	var output cloudfront.UpdateCloudFrontOriginAccessIdentityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontUpdateDistributionFuture struct {
+type UpdateDistributionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontUpdateDistributionFuture) Get(ctx workflow.Context) (*cloudfront.UpdateDistributionOutput, error) {
+func (r *UpdateDistributionFuture) Get(ctx workflow.Context) (*cloudfront.UpdateDistributionOutput, error) {
 	var output cloudfront.UpdateDistributionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontUpdateFieldLevelEncryptionConfigFuture struct {
+type UpdateFieldLevelEncryptionConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontUpdateFieldLevelEncryptionConfigFuture) Get(ctx workflow.Context) (*cloudfront.UpdateFieldLevelEncryptionConfigOutput, error) {
+func (r *UpdateFieldLevelEncryptionConfigFuture) Get(ctx workflow.Context) (*cloudfront.UpdateFieldLevelEncryptionConfigOutput, error) {
 	var output cloudfront.UpdateFieldLevelEncryptionConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontUpdateFieldLevelEncryptionProfileFuture struct {
+type UpdateFieldLevelEncryptionProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontUpdateFieldLevelEncryptionProfileFuture) Get(ctx workflow.Context) (*cloudfront.UpdateFieldLevelEncryptionProfileOutput, error) {
+func (r *UpdateFieldLevelEncryptionProfileFuture) Get(ctx workflow.Context) (*cloudfront.UpdateFieldLevelEncryptionProfileOutput, error) {
 	var output cloudfront.UpdateFieldLevelEncryptionProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontUpdateOriginRequestPolicyFuture struct {
+type UpdateOriginRequestPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontUpdateOriginRequestPolicyFuture) Get(ctx workflow.Context) (*cloudfront.UpdateOriginRequestPolicyOutput, error) {
+func (r *UpdateOriginRequestPolicyFuture) Get(ctx workflow.Context) (*cloudfront.UpdateOriginRequestPolicyOutput, error) {
 	var output cloudfront.UpdateOriginRequestPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontUpdatePublicKeyFuture struct {
+type UpdatePublicKeyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontUpdatePublicKeyFuture) Get(ctx workflow.Context) (*cloudfront.UpdatePublicKeyOutput, error) {
+func (r *UpdatePublicKeyFuture) Get(ctx workflow.Context) (*cloudfront.UpdatePublicKeyOutput, error) {
 	var output cloudfront.UpdatePublicKeyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontUpdateRealtimeLogConfigFuture struct {
+type UpdateRealtimeLogConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontUpdateRealtimeLogConfigFuture) Get(ctx workflow.Context) (*cloudfront.UpdateRealtimeLogConfigOutput, error) {
+func (r *UpdateRealtimeLogConfigFuture) Get(ctx workflow.Context) (*cloudfront.UpdateRealtimeLogConfigOutput, error) {
 	var output cloudfront.UpdateRealtimeLogConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CloudFrontUpdateStreamingDistributionFuture struct {
+type UpdateStreamingDistributionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CloudFrontUpdateStreamingDistributionFuture) Get(ctx workflow.Context) (*cloudfront.UpdateStreamingDistributionOutput, error) {
+func (r *UpdateStreamingDistributionFuture) Get(ctx workflow.Context) (*cloudfront.UpdateStreamingDistributionOutput, error) {
 	var output cloudfront.UpdateStreamingDistributionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -770,9 +770,9 @@ func (a *stub) CreateCachePolicy(ctx workflow.Context, input *cloudfront.CreateC
 	return &output, err
 }
 
-func (a *stub) CreateCachePolicyAsync(ctx workflow.Context, input *cloudfront.CreateCachePolicyInput) *CloudFrontCreateCachePolicyFuture {
+func (a *stub) CreateCachePolicyAsync(ctx workflow.Context, input *cloudfront.CreateCachePolicyInput) *CreateCachePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.CreateCachePolicy", input)
-	return &CloudFrontCreateCachePolicyFuture{Future: future}
+	return &CreateCachePolicyFuture{Future: future}
 }
 
 func (a *stub) CreateCloudFrontOriginAccessIdentity(ctx workflow.Context, input *cloudfront.CreateCloudFrontOriginAccessIdentityInput) (*cloudfront.CreateCloudFrontOriginAccessIdentityOutput, error) {
@@ -781,9 +781,9 @@ func (a *stub) CreateCloudFrontOriginAccessIdentity(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) CreateCloudFrontOriginAccessIdentityAsync(ctx workflow.Context, input *cloudfront.CreateCloudFrontOriginAccessIdentityInput) *CloudFrontCreateCloudFrontOriginAccessIdentityFuture {
+func (a *stub) CreateCloudFrontOriginAccessIdentityAsync(ctx workflow.Context, input *cloudfront.CreateCloudFrontOriginAccessIdentityInput) *CreateCloudFrontOriginAccessIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.CreateCloudFrontOriginAccessIdentity", input)
-	return &CloudFrontCreateCloudFrontOriginAccessIdentityFuture{Future: future}
+	return &CreateCloudFrontOriginAccessIdentityFuture{Future: future}
 }
 
 func (a *stub) CreateDistribution(ctx workflow.Context, input *cloudfront.CreateDistributionInput) (*cloudfront.CreateDistributionOutput, error) {
@@ -792,9 +792,9 @@ func (a *stub) CreateDistribution(ctx workflow.Context, input *cloudfront.Create
 	return &output, err
 }
 
-func (a *stub) CreateDistributionAsync(ctx workflow.Context, input *cloudfront.CreateDistributionInput) *CloudFrontCreateDistributionFuture {
+func (a *stub) CreateDistributionAsync(ctx workflow.Context, input *cloudfront.CreateDistributionInput) *CreateDistributionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.CreateDistribution", input)
-	return &CloudFrontCreateDistributionFuture{Future: future}
+	return &CreateDistributionFuture{Future: future}
 }
 
 func (a *stub) CreateDistributionWithTags(ctx workflow.Context, input *cloudfront.CreateDistributionWithTagsInput) (*cloudfront.CreateDistributionWithTagsOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) CreateDistributionWithTags(ctx workflow.Context, input *cloudfron
 	return &output, err
 }
 
-func (a *stub) CreateDistributionWithTagsAsync(ctx workflow.Context, input *cloudfront.CreateDistributionWithTagsInput) *CloudFrontCreateDistributionWithTagsFuture {
+func (a *stub) CreateDistributionWithTagsAsync(ctx workflow.Context, input *cloudfront.CreateDistributionWithTagsInput) *CreateDistributionWithTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.CreateDistributionWithTags", input)
-	return &CloudFrontCreateDistributionWithTagsFuture{Future: future}
+	return &CreateDistributionWithTagsFuture{Future: future}
 }
 
 func (a *stub) CreateFieldLevelEncryptionConfig(ctx workflow.Context, input *cloudfront.CreateFieldLevelEncryptionConfigInput) (*cloudfront.CreateFieldLevelEncryptionConfigOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) CreateFieldLevelEncryptionConfig(ctx workflow.Context, input *clo
 	return &output, err
 }
 
-func (a *stub) CreateFieldLevelEncryptionConfigAsync(ctx workflow.Context, input *cloudfront.CreateFieldLevelEncryptionConfigInput) *CloudFrontCreateFieldLevelEncryptionConfigFuture {
+func (a *stub) CreateFieldLevelEncryptionConfigAsync(ctx workflow.Context, input *cloudfront.CreateFieldLevelEncryptionConfigInput) *CreateFieldLevelEncryptionConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.CreateFieldLevelEncryptionConfig", input)
-	return &CloudFrontCreateFieldLevelEncryptionConfigFuture{Future: future}
+	return &CreateFieldLevelEncryptionConfigFuture{Future: future}
 }
 
 func (a *stub) CreateFieldLevelEncryptionProfile(ctx workflow.Context, input *cloudfront.CreateFieldLevelEncryptionProfileInput) (*cloudfront.CreateFieldLevelEncryptionProfileOutput, error) {
@@ -825,9 +825,9 @@ func (a *stub) CreateFieldLevelEncryptionProfile(ctx workflow.Context, input *cl
 	return &output, err
 }
 
-func (a *stub) CreateFieldLevelEncryptionProfileAsync(ctx workflow.Context, input *cloudfront.CreateFieldLevelEncryptionProfileInput) *CloudFrontCreateFieldLevelEncryptionProfileFuture {
+func (a *stub) CreateFieldLevelEncryptionProfileAsync(ctx workflow.Context, input *cloudfront.CreateFieldLevelEncryptionProfileInput) *CreateFieldLevelEncryptionProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.CreateFieldLevelEncryptionProfile", input)
-	return &CloudFrontCreateFieldLevelEncryptionProfileFuture{Future: future}
+	return &CreateFieldLevelEncryptionProfileFuture{Future: future}
 }
 
 func (a *stub) CreateInvalidation(ctx workflow.Context, input *cloudfront.CreateInvalidationInput) (*cloudfront.CreateInvalidationOutput, error) {
@@ -836,9 +836,9 @@ func (a *stub) CreateInvalidation(ctx workflow.Context, input *cloudfront.Create
 	return &output, err
 }
 
-func (a *stub) CreateInvalidationAsync(ctx workflow.Context, input *cloudfront.CreateInvalidationInput) *CloudFrontCreateInvalidationFuture {
+func (a *stub) CreateInvalidationAsync(ctx workflow.Context, input *cloudfront.CreateInvalidationInput) *CreateInvalidationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.CreateInvalidation", input)
-	return &CloudFrontCreateInvalidationFuture{Future: future}
+	return &CreateInvalidationFuture{Future: future}
 }
 
 func (a *stub) CreateMonitoringSubscription(ctx workflow.Context, input *cloudfront.CreateMonitoringSubscriptionInput) (*cloudfront.CreateMonitoringSubscriptionOutput, error) {
@@ -847,9 +847,9 @@ func (a *stub) CreateMonitoringSubscription(ctx workflow.Context, input *cloudfr
 	return &output, err
 }
 
-func (a *stub) CreateMonitoringSubscriptionAsync(ctx workflow.Context, input *cloudfront.CreateMonitoringSubscriptionInput) *CloudFrontCreateMonitoringSubscriptionFuture {
+func (a *stub) CreateMonitoringSubscriptionAsync(ctx workflow.Context, input *cloudfront.CreateMonitoringSubscriptionInput) *CreateMonitoringSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.CreateMonitoringSubscription", input)
-	return &CloudFrontCreateMonitoringSubscriptionFuture{Future: future}
+	return &CreateMonitoringSubscriptionFuture{Future: future}
 }
 
 func (a *stub) CreateOriginRequestPolicy(ctx workflow.Context, input *cloudfront.CreateOriginRequestPolicyInput) (*cloudfront.CreateOriginRequestPolicyOutput, error) {
@@ -858,9 +858,9 @@ func (a *stub) CreateOriginRequestPolicy(ctx workflow.Context, input *cloudfront
 	return &output, err
 }
 
-func (a *stub) CreateOriginRequestPolicyAsync(ctx workflow.Context, input *cloudfront.CreateOriginRequestPolicyInput) *CloudFrontCreateOriginRequestPolicyFuture {
+func (a *stub) CreateOriginRequestPolicyAsync(ctx workflow.Context, input *cloudfront.CreateOriginRequestPolicyInput) *CreateOriginRequestPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.CreateOriginRequestPolicy", input)
-	return &CloudFrontCreateOriginRequestPolicyFuture{Future: future}
+	return &CreateOriginRequestPolicyFuture{Future: future}
 }
 
 func (a *stub) CreatePublicKey(ctx workflow.Context, input *cloudfront.CreatePublicKeyInput) (*cloudfront.CreatePublicKeyOutput, error) {
@@ -869,9 +869,9 @@ func (a *stub) CreatePublicKey(ctx workflow.Context, input *cloudfront.CreatePub
 	return &output, err
 }
 
-func (a *stub) CreatePublicKeyAsync(ctx workflow.Context, input *cloudfront.CreatePublicKeyInput) *CloudFrontCreatePublicKeyFuture {
+func (a *stub) CreatePublicKeyAsync(ctx workflow.Context, input *cloudfront.CreatePublicKeyInput) *CreatePublicKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.CreatePublicKey", input)
-	return &CloudFrontCreatePublicKeyFuture{Future: future}
+	return &CreatePublicKeyFuture{Future: future}
 }
 
 func (a *stub) CreateRealtimeLogConfig(ctx workflow.Context, input *cloudfront.CreateRealtimeLogConfigInput) (*cloudfront.CreateRealtimeLogConfigOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) CreateRealtimeLogConfig(ctx workflow.Context, input *cloudfront.C
 	return &output, err
 }
 
-func (a *stub) CreateRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.CreateRealtimeLogConfigInput) *CloudFrontCreateRealtimeLogConfigFuture {
+func (a *stub) CreateRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.CreateRealtimeLogConfigInput) *CreateRealtimeLogConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.CreateRealtimeLogConfig", input)
-	return &CloudFrontCreateRealtimeLogConfigFuture{Future: future}
+	return &CreateRealtimeLogConfigFuture{Future: future}
 }
 
 func (a *stub) CreateStreamingDistribution(ctx workflow.Context, input *cloudfront.CreateStreamingDistributionInput) (*cloudfront.CreateStreamingDistributionOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) CreateStreamingDistribution(ctx workflow.Context, input *cloudfro
 	return &output, err
 }
 
-func (a *stub) CreateStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.CreateStreamingDistributionInput) *CloudFrontCreateStreamingDistributionFuture {
+func (a *stub) CreateStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.CreateStreamingDistributionInput) *CreateStreamingDistributionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.CreateStreamingDistribution", input)
-	return &CloudFrontCreateStreamingDistributionFuture{Future: future}
+	return &CreateStreamingDistributionFuture{Future: future}
 }
 
 func (a *stub) CreateStreamingDistributionWithTags(ctx workflow.Context, input *cloudfront.CreateStreamingDistributionWithTagsInput) (*cloudfront.CreateStreamingDistributionWithTagsOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) CreateStreamingDistributionWithTags(ctx workflow.Context, input *
 	return &output, err
 }
 
-func (a *stub) CreateStreamingDistributionWithTagsAsync(ctx workflow.Context, input *cloudfront.CreateStreamingDistributionWithTagsInput) *CloudFrontCreateStreamingDistributionWithTagsFuture {
+func (a *stub) CreateStreamingDistributionWithTagsAsync(ctx workflow.Context, input *cloudfront.CreateStreamingDistributionWithTagsInput) *CreateStreamingDistributionWithTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.CreateStreamingDistributionWithTags", input)
-	return &CloudFrontCreateStreamingDistributionWithTagsFuture{Future: future}
+	return &CreateStreamingDistributionWithTagsFuture{Future: future}
 }
 
 func (a *stub) DeleteCachePolicy(ctx workflow.Context, input *cloudfront.DeleteCachePolicyInput) (*cloudfront.DeleteCachePolicyOutput, error) {
@@ -913,9 +913,9 @@ func (a *stub) DeleteCachePolicy(ctx workflow.Context, input *cloudfront.DeleteC
 	return &output, err
 }
 
-func (a *stub) DeleteCachePolicyAsync(ctx workflow.Context, input *cloudfront.DeleteCachePolicyInput) *CloudFrontDeleteCachePolicyFuture {
+func (a *stub) DeleteCachePolicyAsync(ctx workflow.Context, input *cloudfront.DeleteCachePolicyInput) *DeleteCachePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.DeleteCachePolicy", input)
-	return &CloudFrontDeleteCachePolicyFuture{Future: future}
+	return &DeleteCachePolicyFuture{Future: future}
 }
 
 func (a *stub) DeleteCloudFrontOriginAccessIdentity(ctx workflow.Context, input *cloudfront.DeleteCloudFrontOriginAccessIdentityInput) (*cloudfront.DeleteCloudFrontOriginAccessIdentityOutput, error) {
@@ -924,9 +924,9 @@ func (a *stub) DeleteCloudFrontOriginAccessIdentity(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) DeleteCloudFrontOriginAccessIdentityAsync(ctx workflow.Context, input *cloudfront.DeleteCloudFrontOriginAccessIdentityInput) *CloudFrontDeleteCloudFrontOriginAccessIdentityFuture {
+func (a *stub) DeleteCloudFrontOriginAccessIdentityAsync(ctx workflow.Context, input *cloudfront.DeleteCloudFrontOriginAccessIdentityInput) *DeleteCloudFrontOriginAccessIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.DeleteCloudFrontOriginAccessIdentity", input)
-	return &CloudFrontDeleteCloudFrontOriginAccessIdentityFuture{Future: future}
+	return &DeleteCloudFrontOriginAccessIdentityFuture{Future: future}
 }
 
 func (a *stub) DeleteDistribution(ctx workflow.Context, input *cloudfront.DeleteDistributionInput) (*cloudfront.DeleteDistributionOutput, error) {
@@ -935,9 +935,9 @@ func (a *stub) DeleteDistribution(ctx workflow.Context, input *cloudfront.Delete
 	return &output, err
 }
 
-func (a *stub) DeleteDistributionAsync(ctx workflow.Context, input *cloudfront.DeleteDistributionInput) *CloudFrontDeleteDistributionFuture {
+func (a *stub) DeleteDistributionAsync(ctx workflow.Context, input *cloudfront.DeleteDistributionInput) *DeleteDistributionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.DeleteDistribution", input)
-	return &CloudFrontDeleteDistributionFuture{Future: future}
+	return &DeleteDistributionFuture{Future: future}
 }
 
 func (a *stub) DeleteFieldLevelEncryptionConfig(ctx workflow.Context, input *cloudfront.DeleteFieldLevelEncryptionConfigInput) (*cloudfront.DeleteFieldLevelEncryptionConfigOutput, error) {
@@ -946,9 +946,9 @@ func (a *stub) DeleteFieldLevelEncryptionConfig(ctx workflow.Context, input *clo
 	return &output, err
 }
 
-func (a *stub) DeleteFieldLevelEncryptionConfigAsync(ctx workflow.Context, input *cloudfront.DeleteFieldLevelEncryptionConfigInput) *CloudFrontDeleteFieldLevelEncryptionConfigFuture {
+func (a *stub) DeleteFieldLevelEncryptionConfigAsync(ctx workflow.Context, input *cloudfront.DeleteFieldLevelEncryptionConfigInput) *DeleteFieldLevelEncryptionConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.DeleteFieldLevelEncryptionConfig", input)
-	return &CloudFrontDeleteFieldLevelEncryptionConfigFuture{Future: future}
+	return &DeleteFieldLevelEncryptionConfigFuture{Future: future}
 }
 
 func (a *stub) DeleteFieldLevelEncryptionProfile(ctx workflow.Context, input *cloudfront.DeleteFieldLevelEncryptionProfileInput) (*cloudfront.DeleteFieldLevelEncryptionProfileOutput, error) {
@@ -957,9 +957,9 @@ func (a *stub) DeleteFieldLevelEncryptionProfile(ctx workflow.Context, input *cl
 	return &output, err
 }
 
-func (a *stub) DeleteFieldLevelEncryptionProfileAsync(ctx workflow.Context, input *cloudfront.DeleteFieldLevelEncryptionProfileInput) *CloudFrontDeleteFieldLevelEncryptionProfileFuture {
+func (a *stub) DeleteFieldLevelEncryptionProfileAsync(ctx workflow.Context, input *cloudfront.DeleteFieldLevelEncryptionProfileInput) *DeleteFieldLevelEncryptionProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.DeleteFieldLevelEncryptionProfile", input)
-	return &CloudFrontDeleteFieldLevelEncryptionProfileFuture{Future: future}
+	return &DeleteFieldLevelEncryptionProfileFuture{Future: future}
 }
 
 func (a *stub) DeleteMonitoringSubscription(ctx workflow.Context, input *cloudfront.DeleteMonitoringSubscriptionInput) (*cloudfront.DeleteMonitoringSubscriptionOutput, error) {
@@ -968,9 +968,9 @@ func (a *stub) DeleteMonitoringSubscription(ctx workflow.Context, input *cloudfr
 	return &output, err
 }
 
-func (a *stub) DeleteMonitoringSubscriptionAsync(ctx workflow.Context, input *cloudfront.DeleteMonitoringSubscriptionInput) *CloudFrontDeleteMonitoringSubscriptionFuture {
+func (a *stub) DeleteMonitoringSubscriptionAsync(ctx workflow.Context, input *cloudfront.DeleteMonitoringSubscriptionInput) *DeleteMonitoringSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.DeleteMonitoringSubscription", input)
-	return &CloudFrontDeleteMonitoringSubscriptionFuture{Future: future}
+	return &DeleteMonitoringSubscriptionFuture{Future: future}
 }
 
 func (a *stub) DeleteOriginRequestPolicy(ctx workflow.Context, input *cloudfront.DeleteOriginRequestPolicyInput) (*cloudfront.DeleteOriginRequestPolicyOutput, error) {
@@ -979,9 +979,9 @@ func (a *stub) DeleteOriginRequestPolicy(ctx workflow.Context, input *cloudfront
 	return &output, err
 }
 
-func (a *stub) DeleteOriginRequestPolicyAsync(ctx workflow.Context, input *cloudfront.DeleteOriginRequestPolicyInput) *CloudFrontDeleteOriginRequestPolicyFuture {
+func (a *stub) DeleteOriginRequestPolicyAsync(ctx workflow.Context, input *cloudfront.DeleteOriginRequestPolicyInput) *DeleteOriginRequestPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.DeleteOriginRequestPolicy", input)
-	return &CloudFrontDeleteOriginRequestPolicyFuture{Future: future}
+	return &DeleteOriginRequestPolicyFuture{Future: future}
 }
 
 func (a *stub) DeletePublicKey(ctx workflow.Context, input *cloudfront.DeletePublicKeyInput) (*cloudfront.DeletePublicKeyOutput, error) {
@@ -990,9 +990,9 @@ func (a *stub) DeletePublicKey(ctx workflow.Context, input *cloudfront.DeletePub
 	return &output, err
 }
 
-func (a *stub) DeletePublicKeyAsync(ctx workflow.Context, input *cloudfront.DeletePublicKeyInput) *CloudFrontDeletePublicKeyFuture {
+func (a *stub) DeletePublicKeyAsync(ctx workflow.Context, input *cloudfront.DeletePublicKeyInput) *DeletePublicKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.DeletePublicKey", input)
-	return &CloudFrontDeletePublicKeyFuture{Future: future}
+	return &DeletePublicKeyFuture{Future: future}
 }
 
 func (a *stub) DeleteRealtimeLogConfig(ctx workflow.Context, input *cloudfront.DeleteRealtimeLogConfigInput) (*cloudfront.DeleteRealtimeLogConfigOutput, error) {
@@ -1001,9 +1001,9 @@ func (a *stub) DeleteRealtimeLogConfig(ctx workflow.Context, input *cloudfront.D
 	return &output, err
 }
 
-func (a *stub) DeleteRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.DeleteRealtimeLogConfigInput) *CloudFrontDeleteRealtimeLogConfigFuture {
+func (a *stub) DeleteRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.DeleteRealtimeLogConfigInput) *DeleteRealtimeLogConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.DeleteRealtimeLogConfig", input)
-	return &CloudFrontDeleteRealtimeLogConfigFuture{Future: future}
+	return &DeleteRealtimeLogConfigFuture{Future: future}
 }
 
 func (a *stub) DeleteStreamingDistribution(ctx workflow.Context, input *cloudfront.DeleteStreamingDistributionInput) (*cloudfront.DeleteStreamingDistributionOutput, error) {
@@ -1012,9 +1012,9 @@ func (a *stub) DeleteStreamingDistribution(ctx workflow.Context, input *cloudfro
 	return &output, err
 }
 
-func (a *stub) DeleteStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.DeleteStreamingDistributionInput) *CloudFrontDeleteStreamingDistributionFuture {
+func (a *stub) DeleteStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.DeleteStreamingDistributionInput) *DeleteStreamingDistributionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.DeleteStreamingDistribution", input)
-	return &CloudFrontDeleteStreamingDistributionFuture{Future: future}
+	return &DeleteStreamingDistributionFuture{Future: future}
 }
 
 func (a *stub) GetCachePolicy(ctx workflow.Context, input *cloudfront.GetCachePolicyInput) (*cloudfront.GetCachePolicyOutput, error) {
@@ -1023,9 +1023,9 @@ func (a *stub) GetCachePolicy(ctx workflow.Context, input *cloudfront.GetCachePo
 	return &output, err
 }
 
-func (a *stub) GetCachePolicyAsync(ctx workflow.Context, input *cloudfront.GetCachePolicyInput) *CloudFrontGetCachePolicyFuture {
+func (a *stub) GetCachePolicyAsync(ctx workflow.Context, input *cloudfront.GetCachePolicyInput) *GetCachePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetCachePolicy", input)
-	return &CloudFrontGetCachePolicyFuture{Future: future}
+	return &GetCachePolicyFuture{Future: future}
 }
 
 func (a *stub) GetCachePolicyConfig(ctx workflow.Context, input *cloudfront.GetCachePolicyConfigInput) (*cloudfront.GetCachePolicyConfigOutput, error) {
@@ -1034,9 +1034,9 @@ func (a *stub) GetCachePolicyConfig(ctx workflow.Context, input *cloudfront.GetC
 	return &output, err
 }
 
-func (a *stub) GetCachePolicyConfigAsync(ctx workflow.Context, input *cloudfront.GetCachePolicyConfigInput) *CloudFrontGetCachePolicyConfigFuture {
+func (a *stub) GetCachePolicyConfigAsync(ctx workflow.Context, input *cloudfront.GetCachePolicyConfigInput) *GetCachePolicyConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetCachePolicyConfig", input)
-	return &CloudFrontGetCachePolicyConfigFuture{Future: future}
+	return &GetCachePolicyConfigFuture{Future: future}
 }
 
 func (a *stub) GetCloudFrontOriginAccessIdentity(ctx workflow.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityInput) (*cloudfront.GetCloudFrontOriginAccessIdentityOutput, error) {
@@ -1045,9 +1045,9 @@ func (a *stub) GetCloudFrontOriginAccessIdentity(ctx workflow.Context, input *cl
 	return &output, err
 }
 
-func (a *stub) GetCloudFrontOriginAccessIdentityAsync(ctx workflow.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityInput) *CloudFrontGetCloudFrontOriginAccessIdentityFuture {
+func (a *stub) GetCloudFrontOriginAccessIdentityAsync(ctx workflow.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityInput) *GetCloudFrontOriginAccessIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetCloudFrontOriginAccessIdentity", input)
-	return &CloudFrontGetCloudFrontOriginAccessIdentityFuture{Future: future}
+	return &GetCloudFrontOriginAccessIdentityFuture{Future: future}
 }
 
 func (a *stub) GetCloudFrontOriginAccessIdentityConfig(ctx workflow.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityConfigInput) (*cloudfront.GetCloudFrontOriginAccessIdentityConfigOutput, error) {
@@ -1056,9 +1056,9 @@ func (a *stub) GetCloudFrontOriginAccessIdentityConfig(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *stub) GetCloudFrontOriginAccessIdentityConfigAsync(ctx workflow.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityConfigInput) *CloudFrontGetCloudFrontOriginAccessIdentityConfigFuture {
+func (a *stub) GetCloudFrontOriginAccessIdentityConfigAsync(ctx workflow.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityConfigInput) *GetCloudFrontOriginAccessIdentityConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetCloudFrontOriginAccessIdentityConfig", input)
-	return &CloudFrontGetCloudFrontOriginAccessIdentityConfigFuture{Future: future}
+	return &GetCloudFrontOriginAccessIdentityConfigFuture{Future: future}
 }
 
 func (a *stub) GetDistribution(ctx workflow.Context, input *cloudfront.GetDistributionInput) (*cloudfront.GetDistributionOutput, error) {
@@ -1067,9 +1067,9 @@ func (a *stub) GetDistribution(ctx workflow.Context, input *cloudfront.GetDistri
 	return &output, err
 }
 
-func (a *stub) GetDistributionAsync(ctx workflow.Context, input *cloudfront.GetDistributionInput) *CloudFrontGetDistributionFuture {
+func (a *stub) GetDistributionAsync(ctx workflow.Context, input *cloudfront.GetDistributionInput) *GetDistributionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetDistribution", input)
-	return &CloudFrontGetDistributionFuture{Future: future}
+	return &GetDistributionFuture{Future: future}
 }
 
 func (a *stub) GetDistributionConfig(ctx workflow.Context, input *cloudfront.GetDistributionConfigInput) (*cloudfront.GetDistributionConfigOutput, error) {
@@ -1078,9 +1078,9 @@ func (a *stub) GetDistributionConfig(ctx workflow.Context, input *cloudfront.Get
 	return &output, err
 }
 
-func (a *stub) GetDistributionConfigAsync(ctx workflow.Context, input *cloudfront.GetDistributionConfigInput) *CloudFrontGetDistributionConfigFuture {
+func (a *stub) GetDistributionConfigAsync(ctx workflow.Context, input *cloudfront.GetDistributionConfigInput) *GetDistributionConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetDistributionConfig", input)
-	return &CloudFrontGetDistributionConfigFuture{Future: future}
+	return &GetDistributionConfigFuture{Future: future}
 }
 
 func (a *stub) GetFieldLevelEncryption(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionInput) (*cloudfront.GetFieldLevelEncryptionOutput, error) {
@@ -1089,9 +1089,9 @@ func (a *stub) GetFieldLevelEncryption(ctx workflow.Context, input *cloudfront.G
 	return &output, err
 }
 
-func (a *stub) GetFieldLevelEncryptionAsync(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionInput) *CloudFrontGetFieldLevelEncryptionFuture {
+func (a *stub) GetFieldLevelEncryptionAsync(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionInput) *GetFieldLevelEncryptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetFieldLevelEncryption", input)
-	return &CloudFrontGetFieldLevelEncryptionFuture{Future: future}
+	return &GetFieldLevelEncryptionFuture{Future: future}
 }
 
 func (a *stub) GetFieldLevelEncryptionConfig(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionConfigInput) (*cloudfront.GetFieldLevelEncryptionConfigOutput, error) {
@@ -1100,9 +1100,9 @@ func (a *stub) GetFieldLevelEncryptionConfig(ctx workflow.Context, input *cloudf
 	return &output, err
 }
 
-func (a *stub) GetFieldLevelEncryptionConfigAsync(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionConfigInput) *CloudFrontGetFieldLevelEncryptionConfigFuture {
+func (a *stub) GetFieldLevelEncryptionConfigAsync(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionConfigInput) *GetFieldLevelEncryptionConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetFieldLevelEncryptionConfig", input)
-	return &CloudFrontGetFieldLevelEncryptionConfigFuture{Future: future}
+	return &GetFieldLevelEncryptionConfigFuture{Future: future}
 }
 
 func (a *stub) GetFieldLevelEncryptionProfile(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionProfileInput) (*cloudfront.GetFieldLevelEncryptionProfileOutput, error) {
@@ -1111,9 +1111,9 @@ func (a *stub) GetFieldLevelEncryptionProfile(ctx workflow.Context, input *cloud
 	return &output, err
 }
 
-func (a *stub) GetFieldLevelEncryptionProfileAsync(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionProfileInput) *CloudFrontGetFieldLevelEncryptionProfileFuture {
+func (a *stub) GetFieldLevelEncryptionProfileAsync(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionProfileInput) *GetFieldLevelEncryptionProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetFieldLevelEncryptionProfile", input)
-	return &CloudFrontGetFieldLevelEncryptionProfileFuture{Future: future}
+	return &GetFieldLevelEncryptionProfileFuture{Future: future}
 }
 
 func (a *stub) GetFieldLevelEncryptionProfileConfig(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionProfileConfigInput) (*cloudfront.GetFieldLevelEncryptionProfileConfigOutput, error) {
@@ -1122,9 +1122,9 @@ func (a *stub) GetFieldLevelEncryptionProfileConfig(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) GetFieldLevelEncryptionProfileConfigAsync(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionProfileConfigInput) *CloudFrontGetFieldLevelEncryptionProfileConfigFuture {
+func (a *stub) GetFieldLevelEncryptionProfileConfigAsync(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionProfileConfigInput) *GetFieldLevelEncryptionProfileConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetFieldLevelEncryptionProfileConfig", input)
-	return &CloudFrontGetFieldLevelEncryptionProfileConfigFuture{Future: future}
+	return &GetFieldLevelEncryptionProfileConfigFuture{Future: future}
 }
 
 func (a *stub) GetInvalidation(ctx workflow.Context, input *cloudfront.GetInvalidationInput) (*cloudfront.GetInvalidationOutput, error) {
@@ -1133,9 +1133,9 @@ func (a *stub) GetInvalidation(ctx workflow.Context, input *cloudfront.GetInvali
 	return &output, err
 }
 
-func (a *stub) GetInvalidationAsync(ctx workflow.Context, input *cloudfront.GetInvalidationInput) *CloudFrontGetInvalidationFuture {
+func (a *stub) GetInvalidationAsync(ctx workflow.Context, input *cloudfront.GetInvalidationInput) *GetInvalidationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetInvalidation", input)
-	return &CloudFrontGetInvalidationFuture{Future: future}
+	return &GetInvalidationFuture{Future: future}
 }
 
 func (a *stub) GetMonitoringSubscription(ctx workflow.Context, input *cloudfront.GetMonitoringSubscriptionInput) (*cloudfront.GetMonitoringSubscriptionOutput, error) {
@@ -1144,9 +1144,9 @@ func (a *stub) GetMonitoringSubscription(ctx workflow.Context, input *cloudfront
 	return &output, err
 }
 
-func (a *stub) GetMonitoringSubscriptionAsync(ctx workflow.Context, input *cloudfront.GetMonitoringSubscriptionInput) *CloudFrontGetMonitoringSubscriptionFuture {
+func (a *stub) GetMonitoringSubscriptionAsync(ctx workflow.Context, input *cloudfront.GetMonitoringSubscriptionInput) *GetMonitoringSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetMonitoringSubscription", input)
-	return &CloudFrontGetMonitoringSubscriptionFuture{Future: future}
+	return &GetMonitoringSubscriptionFuture{Future: future}
 }
 
 func (a *stub) GetOriginRequestPolicy(ctx workflow.Context, input *cloudfront.GetOriginRequestPolicyInput) (*cloudfront.GetOriginRequestPolicyOutput, error) {
@@ -1155,9 +1155,9 @@ func (a *stub) GetOriginRequestPolicy(ctx workflow.Context, input *cloudfront.Ge
 	return &output, err
 }
 
-func (a *stub) GetOriginRequestPolicyAsync(ctx workflow.Context, input *cloudfront.GetOriginRequestPolicyInput) *CloudFrontGetOriginRequestPolicyFuture {
+func (a *stub) GetOriginRequestPolicyAsync(ctx workflow.Context, input *cloudfront.GetOriginRequestPolicyInput) *GetOriginRequestPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetOriginRequestPolicy", input)
-	return &CloudFrontGetOriginRequestPolicyFuture{Future: future}
+	return &GetOriginRequestPolicyFuture{Future: future}
 }
 
 func (a *stub) GetOriginRequestPolicyConfig(ctx workflow.Context, input *cloudfront.GetOriginRequestPolicyConfigInput) (*cloudfront.GetOriginRequestPolicyConfigOutput, error) {
@@ -1166,9 +1166,9 @@ func (a *stub) GetOriginRequestPolicyConfig(ctx workflow.Context, input *cloudfr
 	return &output, err
 }
 
-func (a *stub) GetOriginRequestPolicyConfigAsync(ctx workflow.Context, input *cloudfront.GetOriginRequestPolicyConfigInput) *CloudFrontGetOriginRequestPolicyConfigFuture {
+func (a *stub) GetOriginRequestPolicyConfigAsync(ctx workflow.Context, input *cloudfront.GetOriginRequestPolicyConfigInput) *GetOriginRequestPolicyConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetOriginRequestPolicyConfig", input)
-	return &CloudFrontGetOriginRequestPolicyConfigFuture{Future: future}
+	return &GetOriginRequestPolicyConfigFuture{Future: future}
 }
 
 func (a *stub) GetPublicKey(ctx workflow.Context, input *cloudfront.GetPublicKeyInput) (*cloudfront.GetPublicKeyOutput, error) {
@@ -1177,9 +1177,9 @@ func (a *stub) GetPublicKey(ctx workflow.Context, input *cloudfront.GetPublicKey
 	return &output, err
 }
 
-func (a *stub) GetPublicKeyAsync(ctx workflow.Context, input *cloudfront.GetPublicKeyInput) *CloudFrontGetPublicKeyFuture {
+func (a *stub) GetPublicKeyAsync(ctx workflow.Context, input *cloudfront.GetPublicKeyInput) *GetPublicKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetPublicKey", input)
-	return &CloudFrontGetPublicKeyFuture{Future: future}
+	return &GetPublicKeyFuture{Future: future}
 }
 
 func (a *stub) GetPublicKeyConfig(ctx workflow.Context, input *cloudfront.GetPublicKeyConfigInput) (*cloudfront.GetPublicKeyConfigOutput, error) {
@@ -1188,9 +1188,9 @@ func (a *stub) GetPublicKeyConfig(ctx workflow.Context, input *cloudfront.GetPub
 	return &output, err
 }
 
-func (a *stub) GetPublicKeyConfigAsync(ctx workflow.Context, input *cloudfront.GetPublicKeyConfigInput) *CloudFrontGetPublicKeyConfigFuture {
+func (a *stub) GetPublicKeyConfigAsync(ctx workflow.Context, input *cloudfront.GetPublicKeyConfigInput) *GetPublicKeyConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetPublicKeyConfig", input)
-	return &CloudFrontGetPublicKeyConfigFuture{Future: future}
+	return &GetPublicKeyConfigFuture{Future: future}
 }
 
 func (a *stub) GetRealtimeLogConfig(ctx workflow.Context, input *cloudfront.GetRealtimeLogConfigInput) (*cloudfront.GetRealtimeLogConfigOutput, error) {
@@ -1199,9 +1199,9 @@ func (a *stub) GetRealtimeLogConfig(ctx workflow.Context, input *cloudfront.GetR
 	return &output, err
 }
 
-func (a *stub) GetRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.GetRealtimeLogConfigInput) *CloudFrontGetRealtimeLogConfigFuture {
+func (a *stub) GetRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.GetRealtimeLogConfigInput) *GetRealtimeLogConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetRealtimeLogConfig", input)
-	return &CloudFrontGetRealtimeLogConfigFuture{Future: future}
+	return &GetRealtimeLogConfigFuture{Future: future}
 }
 
 func (a *stub) GetStreamingDistribution(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) (*cloudfront.GetStreamingDistributionOutput, error) {
@@ -1210,9 +1210,9 @@ func (a *stub) GetStreamingDistribution(ctx workflow.Context, input *cloudfront.
 	return &output, err
 }
 
-func (a *stub) GetStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) *CloudFrontGetStreamingDistributionFuture {
+func (a *stub) GetStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) *GetStreamingDistributionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetStreamingDistribution", input)
-	return &CloudFrontGetStreamingDistributionFuture{Future: future}
+	return &GetStreamingDistributionFuture{Future: future}
 }
 
 func (a *stub) GetStreamingDistributionConfig(ctx workflow.Context, input *cloudfront.GetStreamingDistributionConfigInput) (*cloudfront.GetStreamingDistributionConfigOutput, error) {
@@ -1221,9 +1221,9 @@ func (a *stub) GetStreamingDistributionConfig(ctx workflow.Context, input *cloud
 	return &output, err
 }
 
-func (a *stub) GetStreamingDistributionConfigAsync(ctx workflow.Context, input *cloudfront.GetStreamingDistributionConfigInput) *CloudFrontGetStreamingDistributionConfigFuture {
+func (a *stub) GetStreamingDistributionConfigAsync(ctx workflow.Context, input *cloudfront.GetStreamingDistributionConfigInput) *GetStreamingDistributionConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.GetStreamingDistributionConfig", input)
-	return &CloudFrontGetStreamingDistributionConfigFuture{Future: future}
+	return &GetStreamingDistributionConfigFuture{Future: future}
 }
 
 func (a *stub) ListCachePolicies(ctx workflow.Context, input *cloudfront.ListCachePoliciesInput) (*cloudfront.ListCachePoliciesOutput, error) {
@@ -1232,9 +1232,9 @@ func (a *stub) ListCachePolicies(ctx workflow.Context, input *cloudfront.ListCac
 	return &output, err
 }
 
-func (a *stub) ListCachePoliciesAsync(ctx workflow.Context, input *cloudfront.ListCachePoliciesInput) *CloudFrontListCachePoliciesFuture {
+func (a *stub) ListCachePoliciesAsync(ctx workflow.Context, input *cloudfront.ListCachePoliciesInput) *ListCachePoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.ListCachePolicies", input)
-	return &CloudFrontListCachePoliciesFuture{Future: future}
+	return &ListCachePoliciesFuture{Future: future}
 }
 
 func (a *stub) ListCloudFrontOriginAccessIdentities(ctx workflow.Context, input *cloudfront.ListCloudFrontOriginAccessIdentitiesInput) (*cloudfront.ListCloudFrontOriginAccessIdentitiesOutput, error) {
@@ -1243,9 +1243,9 @@ func (a *stub) ListCloudFrontOriginAccessIdentities(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) ListCloudFrontOriginAccessIdentitiesAsync(ctx workflow.Context, input *cloudfront.ListCloudFrontOriginAccessIdentitiesInput) *CloudFrontListCloudFrontOriginAccessIdentitiesFuture {
+func (a *stub) ListCloudFrontOriginAccessIdentitiesAsync(ctx workflow.Context, input *cloudfront.ListCloudFrontOriginAccessIdentitiesInput) *ListCloudFrontOriginAccessIdentitiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.ListCloudFrontOriginAccessIdentities", input)
-	return &CloudFrontListCloudFrontOriginAccessIdentitiesFuture{Future: future}
+	return &ListCloudFrontOriginAccessIdentitiesFuture{Future: future}
 }
 
 func (a *stub) ListDistributions(ctx workflow.Context, input *cloudfront.ListDistributionsInput) (*cloudfront.ListDistributionsOutput, error) {
@@ -1254,9 +1254,9 @@ func (a *stub) ListDistributions(ctx workflow.Context, input *cloudfront.ListDis
 	return &output, err
 }
 
-func (a *stub) ListDistributionsAsync(ctx workflow.Context, input *cloudfront.ListDistributionsInput) *CloudFrontListDistributionsFuture {
+func (a *stub) ListDistributionsAsync(ctx workflow.Context, input *cloudfront.ListDistributionsInput) *ListDistributionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.ListDistributions", input)
-	return &CloudFrontListDistributionsFuture{Future: future}
+	return &ListDistributionsFuture{Future: future}
 }
 
 func (a *stub) ListDistributionsByCachePolicyId(ctx workflow.Context, input *cloudfront.ListDistributionsByCachePolicyIdInput) (*cloudfront.ListDistributionsByCachePolicyIdOutput, error) {
@@ -1265,9 +1265,9 @@ func (a *stub) ListDistributionsByCachePolicyId(ctx workflow.Context, input *clo
 	return &output, err
 }
 
-func (a *stub) ListDistributionsByCachePolicyIdAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByCachePolicyIdInput) *CloudFrontListDistributionsByCachePolicyIdFuture {
+func (a *stub) ListDistributionsByCachePolicyIdAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByCachePolicyIdInput) *ListDistributionsByCachePolicyIdFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.ListDistributionsByCachePolicyId", input)
-	return &CloudFrontListDistributionsByCachePolicyIdFuture{Future: future}
+	return &ListDistributionsByCachePolicyIdFuture{Future: future}
 }
 
 func (a *stub) ListDistributionsByOriginRequestPolicyId(ctx workflow.Context, input *cloudfront.ListDistributionsByOriginRequestPolicyIdInput) (*cloudfront.ListDistributionsByOriginRequestPolicyIdOutput, error) {
@@ -1276,9 +1276,9 @@ func (a *stub) ListDistributionsByOriginRequestPolicyId(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *stub) ListDistributionsByOriginRequestPolicyIdAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByOriginRequestPolicyIdInput) *CloudFrontListDistributionsByOriginRequestPolicyIdFuture {
+func (a *stub) ListDistributionsByOriginRequestPolicyIdAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByOriginRequestPolicyIdInput) *ListDistributionsByOriginRequestPolicyIdFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.ListDistributionsByOriginRequestPolicyId", input)
-	return &CloudFrontListDistributionsByOriginRequestPolicyIdFuture{Future: future}
+	return &ListDistributionsByOriginRequestPolicyIdFuture{Future: future}
 }
 
 func (a *stub) ListDistributionsByRealtimeLogConfig(ctx workflow.Context, input *cloudfront.ListDistributionsByRealtimeLogConfigInput) (*cloudfront.ListDistributionsByRealtimeLogConfigOutput, error) {
@@ -1287,9 +1287,9 @@ func (a *stub) ListDistributionsByRealtimeLogConfig(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) ListDistributionsByRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByRealtimeLogConfigInput) *CloudFrontListDistributionsByRealtimeLogConfigFuture {
+func (a *stub) ListDistributionsByRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByRealtimeLogConfigInput) *ListDistributionsByRealtimeLogConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.ListDistributionsByRealtimeLogConfig", input)
-	return &CloudFrontListDistributionsByRealtimeLogConfigFuture{Future: future}
+	return &ListDistributionsByRealtimeLogConfigFuture{Future: future}
 }
 
 func (a *stub) ListDistributionsByWebACLId(ctx workflow.Context, input *cloudfront.ListDistributionsByWebACLIdInput) (*cloudfront.ListDistributionsByWebACLIdOutput, error) {
@@ -1298,9 +1298,9 @@ func (a *stub) ListDistributionsByWebACLId(ctx workflow.Context, input *cloudfro
 	return &output, err
 }
 
-func (a *stub) ListDistributionsByWebACLIdAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByWebACLIdInput) *CloudFrontListDistributionsByWebACLIdFuture {
+func (a *stub) ListDistributionsByWebACLIdAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByWebACLIdInput) *ListDistributionsByWebACLIdFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.ListDistributionsByWebACLId", input)
-	return &CloudFrontListDistributionsByWebACLIdFuture{Future: future}
+	return &ListDistributionsByWebACLIdFuture{Future: future}
 }
 
 func (a *stub) ListFieldLevelEncryptionConfigs(ctx workflow.Context, input *cloudfront.ListFieldLevelEncryptionConfigsInput) (*cloudfront.ListFieldLevelEncryptionConfigsOutput, error) {
@@ -1309,9 +1309,9 @@ func (a *stub) ListFieldLevelEncryptionConfigs(ctx workflow.Context, input *clou
 	return &output, err
 }
 
-func (a *stub) ListFieldLevelEncryptionConfigsAsync(ctx workflow.Context, input *cloudfront.ListFieldLevelEncryptionConfigsInput) *CloudFrontListFieldLevelEncryptionConfigsFuture {
+func (a *stub) ListFieldLevelEncryptionConfigsAsync(ctx workflow.Context, input *cloudfront.ListFieldLevelEncryptionConfigsInput) *ListFieldLevelEncryptionConfigsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.ListFieldLevelEncryptionConfigs", input)
-	return &CloudFrontListFieldLevelEncryptionConfigsFuture{Future: future}
+	return &ListFieldLevelEncryptionConfigsFuture{Future: future}
 }
 
 func (a *stub) ListFieldLevelEncryptionProfiles(ctx workflow.Context, input *cloudfront.ListFieldLevelEncryptionProfilesInput) (*cloudfront.ListFieldLevelEncryptionProfilesOutput, error) {
@@ -1320,9 +1320,9 @@ func (a *stub) ListFieldLevelEncryptionProfiles(ctx workflow.Context, input *clo
 	return &output, err
 }
 
-func (a *stub) ListFieldLevelEncryptionProfilesAsync(ctx workflow.Context, input *cloudfront.ListFieldLevelEncryptionProfilesInput) *CloudFrontListFieldLevelEncryptionProfilesFuture {
+func (a *stub) ListFieldLevelEncryptionProfilesAsync(ctx workflow.Context, input *cloudfront.ListFieldLevelEncryptionProfilesInput) *ListFieldLevelEncryptionProfilesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.ListFieldLevelEncryptionProfiles", input)
-	return &CloudFrontListFieldLevelEncryptionProfilesFuture{Future: future}
+	return &ListFieldLevelEncryptionProfilesFuture{Future: future}
 }
 
 func (a *stub) ListInvalidations(ctx workflow.Context, input *cloudfront.ListInvalidationsInput) (*cloudfront.ListInvalidationsOutput, error) {
@@ -1331,9 +1331,9 @@ func (a *stub) ListInvalidations(ctx workflow.Context, input *cloudfront.ListInv
 	return &output, err
 }
 
-func (a *stub) ListInvalidationsAsync(ctx workflow.Context, input *cloudfront.ListInvalidationsInput) *CloudFrontListInvalidationsFuture {
+func (a *stub) ListInvalidationsAsync(ctx workflow.Context, input *cloudfront.ListInvalidationsInput) *ListInvalidationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.ListInvalidations", input)
-	return &CloudFrontListInvalidationsFuture{Future: future}
+	return &ListInvalidationsFuture{Future: future}
 }
 
 func (a *stub) ListOriginRequestPolicies(ctx workflow.Context, input *cloudfront.ListOriginRequestPoliciesInput) (*cloudfront.ListOriginRequestPoliciesOutput, error) {
@@ -1342,9 +1342,9 @@ func (a *stub) ListOriginRequestPolicies(ctx workflow.Context, input *cloudfront
 	return &output, err
 }
 
-func (a *stub) ListOriginRequestPoliciesAsync(ctx workflow.Context, input *cloudfront.ListOriginRequestPoliciesInput) *CloudFrontListOriginRequestPoliciesFuture {
+func (a *stub) ListOriginRequestPoliciesAsync(ctx workflow.Context, input *cloudfront.ListOriginRequestPoliciesInput) *ListOriginRequestPoliciesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.ListOriginRequestPolicies", input)
-	return &CloudFrontListOriginRequestPoliciesFuture{Future: future}
+	return &ListOriginRequestPoliciesFuture{Future: future}
 }
 
 func (a *stub) ListPublicKeys(ctx workflow.Context, input *cloudfront.ListPublicKeysInput) (*cloudfront.ListPublicKeysOutput, error) {
@@ -1353,9 +1353,9 @@ func (a *stub) ListPublicKeys(ctx workflow.Context, input *cloudfront.ListPublic
 	return &output, err
 }
 
-func (a *stub) ListPublicKeysAsync(ctx workflow.Context, input *cloudfront.ListPublicKeysInput) *CloudFrontListPublicKeysFuture {
+func (a *stub) ListPublicKeysAsync(ctx workflow.Context, input *cloudfront.ListPublicKeysInput) *ListPublicKeysFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.ListPublicKeys", input)
-	return &CloudFrontListPublicKeysFuture{Future: future}
+	return &ListPublicKeysFuture{Future: future}
 }
 
 func (a *stub) ListRealtimeLogConfigs(ctx workflow.Context, input *cloudfront.ListRealtimeLogConfigsInput) (*cloudfront.ListRealtimeLogConfigsOutput, error) {
@@ -1364,9 +1364,9 @@ func (a *stub) ListRealtimeLogConfigs(ctx workflow.Context, input *cloudfront.Li
 	return &output, err
 }
 
-func (a *stub) ListRealtimeLogConfigsAsync(ctx workflow.Context, input *cloudfront.ListRealtimeLogConfigsInput) *CloudFrontListRealtimeLogConfigsFuture {
+func (a *stub) ListRealtimeLogConfigsAsync(ctx workflow.Context, input *cloudfront.ListRealtimeLogConfigsInput) *ListRealtimeLogConfigsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.ListRealtimeLogConfigs", input)
-	return &CloudFrontListRealtimeLogConfigsFuture{Future: future}
+	return &ListRealtimeLogConfigsFuture{Future: future}
 }
 
 func (a *stub) ListStreamingDistributions(ctx workflow.Context, input *cloudfront.ListStreamingDistributionsInput) (*cloudfront.ListStreamingDistributionsOutput, error) {
@@ -1375,9 +1375,9 @@ func (a *stub) ListStreamingDistributions(ctx workflow.Context, input *cloudfron
 	return &output, err
 }
 
-func (a *stub) ListStreamingDistributionsAsync(ctx workflow.Context, input *cloudfront.ListStreamingDistributionsInput) *CloudFrontListStreamingDistributionsFuture {
+func (a *stub) ListStreamingDistributionsAsync(ctx workflow.Context, input *cloudfront.ListStreamingDistributionsInput) *ListStreamingDistributionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.ListStreamingDistributions", input)
-	return &CloudFrontListStreamingDistributionsFuture{Future: future}
+	return &ListStreamingDistributionsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *cloudfront.ListTagsForResourceInput) (*cloudfront.ListTagsForResourceOutput, error) {
@@ -1386,9 +1386,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *cloudfront.ListT
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *cloudfront.ListTagsForResourceInput) *CloudFrontListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *cloudfront.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.ListTagsForResource", input)
-	return &CloudFrontListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *cloudfront.TagResourceInput) (*cloudfront.TagResourceOutput, error) {
@@ -1397,9 +1397,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *cloudfront.TagResourceIn
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *cloudfront.TagResourceInput) *CloudFrontTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *cloudfront.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.TagResource", input)
-	return &CloudFrontTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *cloudfront.UntagResourceInput) (*cloudfront.UntagResourceOutput, error) {
@@ -1408,9 +1408,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *cloudfront.UntagResour
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *cloudfront.UntagResourceInput) *CloudFrontUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *cloudfront.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.UntagResource", input)
-	return &CloudFrontUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateCachePolicy(ctx workflow.Context, input *cloudfront.UpdateCachePolicyInput) (*cloudfront.UpdateCachePolicyOutput, error) {
@@ -1419,9 +1419,9 @@ func (a *stub) UpdateCachePolicy(ctx workflow.Context, input *cloudfront.UpdateC
 	return &output, err
 }
 
-func (a *stub) UpdateCachePolicyAsync(ctx workflow.Context, input *cloudfront.UpdateCachePolicyInput) *CloudFrontUpdateCachePolicyFuture {
+func (a *stub) UpdateCachePolicyAsync(ctx workflow.Context, input *cloudfront.UpdateCachePolicyInput) *UpdateCachePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.UpdateCachePolicy", input)
-	return &CloudFrontUpdateCachePolicyFuture{Future: future}
+	return &UpdateCachePolicyFuture{Future: future}
 }
 
 func (a *stub) UpdateCloudFrontOriginAccessIdentity(ctx workflow.Context, input *cloudfront.UpdateCloudFrontOriginAccessIdentityInput) (*cloudfront.UpdateCloudFrontOriginAccessIdentityOutput, error) {
@@ -1430,9 +1430,9 @@ func (a *stub) UpdateCloudFrontOriginAccessIdentity(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) UpdateCloudFrontOriginAccessIdentityAsync(ctx workflow.Context, input *cloudfront.UpdateCloudFrontOriginAccessIdentityInput) *CloudFrontUpdateCloudFrontOriginAccessIdentityFuture {
+func (a *stub) UpdateCloudFrontOriginAccessIdentityAsync(ctx workflow.Context, input *cloudfront.UpdateCloudFrontOriginAccessIdentityInput) *UpdateCloudFrontOriginAccessIdentityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.UpdateCloudFrontOriginAccessIdentity", input)
-	return &CloudFrontUpdateCloudFrontOriginAccessIdentityFuture{Future: future}
+	return &UpdateCloudFrontOriginAccessIdentityFuture{Future: future}
 }
 
 func (a *stub) UpdateDistribution(ctx workflow.Context, input *cloudfront.UpdateDistributionInput) (*cloudfront.UpdateDistributionOutput, error) {
@@ -1441,9 +1441,9 @@ func (a *stub) UpdateDistribution(ctx workflow.Context, input *cloudfront.Update
 	return &output, err
 }
 
-func (a *stub) UpdateDistributionAsync(ctx workflow.Context, input *cloudfront.UpdateDistributionInput) *CloudFrontUpdateDistributionFuture {
+func (a *stub) UpdateDistributionAsync(ctx workflow.Context, input *cloudfront.UpdateDistributionInput) *UpdateDistributionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.UpdateDistribution", input)
-	return &CloudFrontUpdateDistributionFuture{Future: future}
+	return &UpdateDistributionFuture{Future: future}
 }
 
 func (a *stub) UpdateFieldLevelEncryptionConfig(ctx workflow.Context, input *cloudfront.UpdateFieldLevelEncryptionConfigInput) (*cloudfront.UpdateFieldLevelEncryptionConfigOutput, error) {
@@ -1452,9 +1452,9 @@ func (a *stub) UpdateFieldLevelEncryptionConfig(ctx workflow.Context, input *clo
 	return &output, err
 }
 
-func (a *stub) UpdateFieldLevelEncryptionConfigAsync(ctx workflow.Context, input *cloudfront.UpdateFieldLevelEncryptionConfigInput) *CloudFrontUpdateFieldLevelEncryptionConfigFuture {
+func (a *stub) UpdateFieldLevelEncryptionConfigAsync(ctx workflow.Context, input *cloudfront.UpdateFieldLevelEncryptionConfigInput) *UpdateFieldLevelEncryptionConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.UpdateFieldLevelEncryptionConfig", input)
-	return &CloudFrontUpdateFieldLevelEncryptionConfigFuture{Future: future}
+	return &UpdateFieldLevelEncryptionConfigFuture{Future: future}
 }
 
 func (a *stub) UpdateFieldLevelEncryptionProfile(ctx workflow.Context, input *cloudfront.UpdateFieldLevelEncryptionProfileInput) (*cloudfront.UpdateFieldLevelEncryptionProfileOutput, error) {
@@ -1463,9 +1463,9 @@ func (a *stub) UpdateFieldLevelEncryptionProfile(ctx workflow.Context, input *cl
 	return &output, err
 }
 
-func (a *stub) UpdateFieldLevelEncryptionProfileAsync(ctx workflow.Context, input *cloudfront.UpdateFieldLevelEncryptionProfileInput) *CloudFrontUpdateFieldLevelEncryptionProfileFuture {
+func (a *stub) UpdateFieldLevelEncryptionProfileAsync(ctx workflow.Context, input *cloudfront.UpdateFieldLevelEncryptionProfileInput) *UpdateFieldLevelEncryptionProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.UpdateFieldLevelEncryptionProfile", input)
-	return &CloudFrontUpdateFieldLevelEncryptionProfileFuture{Future: future}
+	return &UpdateFieldLevelEncryptionProfileFuture{Future: future}
 }
 
 func (a *stub) UpdateOriginRequestPolicy(ctx workflow.Context, input *cloudfront.UpdateOriginRequestPolicyInput) (*cloudfront.UpdateOriginRequestPolicyOutput, error) {
@@ -1474,9 +1474,9 @@ func (a *stub) UpdateOriginRequestPolicy(ctx workflow.Context, input *cloudfront
 	return &output, err
 }
 
-func (a *stub) UpdateOriginRequestPolicyAsync(ctx workflow.Context, input *cloudfront.UpdateOriginRequestPolicyInput) *CloudFrontUpdateOriginRequestPolicyFuture {
+func (a *stub) UpdateOriginRequestPolicyAsync(ctx workflow.Context, input *cloudfront.UpdateOriginRequestPolicyInput) *UpdateOriginRequestPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.UpdateOriginRequestPolicy", input)
-	return &CloudFrontUpdateOriginRequestPolicyFuture{Future: future}
+	return &UpdateOriginRequestPolicyFuture{Future: future}
 }
 
 func (a *stub) UpdatePublicKey(ctx workflow.Context, input *cloudfront.UpdatePublicKeyInput) (*cloudfront.UpdatePublicKeyOutput, error) {
@@ -1485,9 +1485,9 @@ func (a *stub) UpdatePublicKey(ctx workflow.Context, input *cloudfront.UpdatePub
 	return &output, err
 }
 
-func (a *stub) UpdatePublicKeyAsync(ctx workflow.Context, input *cloudfront.UpdatePublicKeyInput) *CloudFrontUpdatePublicKeyFuture {
+func (a *stub) UpdatePublicKeyAsync(ctx workflow.Context, input *cloudfront.UpdatePublicKeyInput) *UpdatePublicKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.UpdatePublicKey", input)
-	return &CloudFrontUpdatePublicKeyFuture{Future: future}
+	return &UpdatePublicKeyFuture{Future: future}
 }
 
 func (a *stub) UpdateRealtimeLogConfig(ctx workflow.Context, input *cloudfront.UpdateRealtimeLogConfigInput) (*cloudfront.UpdateRealtimeLogConfigOutput, error) {
@@ -1496,9 +1496,9 @@ func (a *stub) UpdateRealtimeLogConfig(ctx workflow.Context, input *cloudfront.U
 	return &output, err
 }
 
-func (a *stub) UpdateRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.UpdateRealtimeLogConfigInput) *CloudFrontUpdateRealtimeLogConfigFuture {
+func (a *stub) UpdateRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.UpdateRealtimeLogConfigInput) *UpdateRealtimeLogConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.UpdateRealtimeLogConfig", input)
-	return &CloudFrontUpdateRealtimeLogConfigFuture{Future: future}
+	return &UpdateRealtimeLogConfigFuture{Future: future}
 }
 
 func (a *stub) UpdateStreamingDistribution(ctx workflow.Context, input *cloudfront.UpdateStreamingDistributionInput) (*cloudfront.UpdateStreamingDistributionOutput, error) {
@@ -1507,9 +1507,9 @@ func (a *stub) UpdateStreamingDistribution(ctx workflow.Context, input *cloudfro
 	return &output, err
 }
 
-func (a *stub) UpdateStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.UpdateStreamingDistributionInput) *CloudFrontUpdateStreamingDistributionFuture {
+func (a *stub) UpdateStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.UpdateStreamingDistributionInput) *UpdateStreamingDistributionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.cloudfront.UpdateStreamingDistribution", input)
-	return &CloudFrontUpdateStreamingDistributionFuture{Future: future}
+	return &UpdateStreamingDistributionFuture{Future: future}
 }
 
 func (a *stub) WaitUntilDistributionDeployed(ctx workflow.Context, input *cloudfront.GetDistributionInput) error {

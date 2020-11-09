@@ -16,408 +16,408 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type ElasticsearchServiceAcceptInboundCrossClusterSearchConnectionFuture struct {
+type AcceptInboundCrossClusterSearchConnectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceAcceptInboundCrossClusterSearchConnectionFuture) Get(ctx workflow.Context) (*elasticsearchservice.AcceptInboundCrossClusterSearchConnectionOutput, error) {
+func (r *AcceptInboundCrossClusterSearchConnectionFuture) Get(ctx workflow.Context) (*elasticsearchservice.AcceptInboundCrossClusterSearchConnectionOutput, error) {
 	var output elasticsearchservice.AcceptInboundCrossClusterSearchConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceAddTagsFuture struct {
+type AddTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceAddTagsFuture) Get(ctx workflow.Context) (*elasticsearchservice.AddTagsOutput, error) {
+func (r *AddTagsFuture) Get(ctx workflow.Context) (*elasticsearchservice.AddTagsOutput, error) {
 	var output elasticsearchservice.AddTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceAssociatePackageFuture struct {
+type AssociatePackageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceAssociatePackageFuture) Get(ctx workflow.Context) (*elasticsearchservice.AssociatePackageOutput, error) {
+func (r *AssociatePackageFuture) Get(ctx workflow.Context) (*elasticsearchservice.AssociatePackageOutput, error) {
 	var output elasticsearchservice.AssociatePackageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceCancelElasticsearchServiceSoftwareUpdateFuture struct {
+type CancelElasticsearchServiceSoftwareUpdateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceCancelElasticsearchServiceSoftwareUpdateFuture) Get(ctx workflow.Context) (*elasticsearchservice.CancelElasticsearchServiceSoftwareUpdateOutput, error) {
+func (r *CancelElasticsearchServiceSoftwareUpdateFuture) Get(ctx workflow.Context) (*elasticsearchservice.CancelElasticsearchServiceSoftwareUpdateOutput, error) {
 	var output elasticsearchservice.CancelElasticsearchServiceSoftwareUpdateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceCreateElasticsearchDomainFuture struct {
+type CreateElasticsearchDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceCreateElasticsearchDomainFuture) Get(ctx workflow.Context) (*elasticsearchservice.CreateElasticsearchDomainOutput, error) {
+func (r *CreateElasticsearchDomainFuture) Get(ctx workflow.Context) (*elasticsearchservice.CreateElasticsearchDomainOutput, error) {
 	var output elasticsearchservice.CreateElasticsearchDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceCreateOutboundCrossClusterSearchConnectionFuture struct {
+type CreateOutboundCrossClusterSearchConnectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceCreateOutboundCrossClusterSearchConnectionFuture) Get(ctx workflow.Context) (*elasticsearchservice.CreateOutboundCrossClusterSearchConnectionOutput, error) {
+func (r *CreateOutboundCrossClusterSearchConnectionFuture) Get(ctx workflow.Context) (*elasticsearchservice.CreateOutboundCrossClusterSearchConnectionOutput, error) {
 	var output elasticsearchservice.CreateOutboundCrossClusterSearchConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceCreatePackageFuture struct {
+type CreatePackageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceCreatePackageFuture) Get(ctx workflow.Context) (*elasticsearchservice.CreatePackageOutput, error) {
+func (r *CreatePackageFuture) Get(ctx workflow.Context) (*elasticsearchservice.CreatePackageOutput, error) {
 	var output elasticsearchservice.CreatePackageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceDeleteElasticsearchDomainFuture struct {
+type DeleteElasticsearchDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceDeleteElasticsearchDomainFuture) Get(ctx workflow.Context) (*elasticsearchservice.DeleteElasticsearchDomainOutput, error) {
+func (r *DeleteElasticsearchDomainFuture) Get(ctx workflow.Context) (*elasticsearchservice.DeleteElasticsearchDomainOutput, error) {
 	var output elasticsearchservice.DeleteElasticsearchDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceDeleteElasticsearchServiceRoleFuture struct {
+type DeleteElasticsearchServiceRoleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceDeleteElasticsearchServiceRoleFuture) Get(ctx workflow.Context) (*elasticsearchservice.DeleteElasticsearchServiceRoleOutput, error) {
+func (r *DeleteElasticsearchServiceRoleFuture) Get(ctx workflow.Context) (*elasticsearchservice.DeleteElasticsearchServiceRoleOutput, error) {
 	var output elasticsearchservice.DeleteElasticsearchServiceRoleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceDeleteInboundCrossClusterSearchConnectionFuture struct {
+type DeleteInboundCrossClusterSearchConnectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceDeleteInboundCrossClusterSearchConnectionFuture) Get(ctx workflow.Context) (*elasticsearchservice.DeleteInboundCrossClusterSearchConnectionOutput, error) {
+func (r *DeleteInboundCrossClusterSearchConnectionFuture) Get(ctx workflow.Context) (*elasticsearchservice.DeleteInboundCrossClusterSearchConnectionOutput, error) {
 	var output elasticsearchservice.DeleteInboundCrossClusterSearchConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceDeleteOutboundCrossClusterSearchConnectionFuture struct {
+type DeleteOutboundCrossClusterSearchConnectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceDeleteOutboundCrossClusterSearchConnectionFuture) Get(ctx workflow.Context) (*elasticsearchservice.DeleteOutboundCrossClusterSearchConnectionOutput, error) {
+func (r *DeleteOutboundCrossClusterSearchConnectionFuture) Get(ctx workflow.Context) (*elasticsearchservice.DeleteOutboundCrossClusterSearchConnectionOutput, error) {
 	var output elasticsearchservice.DeleteOutboundCrossClusterSearchConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceDeletePackageFuture struct {
+type DeletePackageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceDeletePackageFuture) Get(ctx workflow.Context) (*elasticsearchservice.DeletePackageOutput, error) {
+func (r *DeletePackageFuture) Get(ctx workflow.Context) (*elasticsearchservice.DeletePackageOutput, error) {
 	var output elasticsearchservice.DeletePackageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceDescribeElasticsearchDomainFuture struct {
+type DescribeElasticsearchDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceDescribeElasticsearchDomainFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribeElasticsearchDomainOutput, error) {
+func (r *DescribeElasticsearchDomainFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribeElasticsearchDomainOutput, error) {
 	var output elasticsearchservice.DescribeElasticsearchDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceDescribeElasticsearchDomainConfigFuture struct {
+type DescribeElasticsearchDomainConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceDescribeElasticsearchDomainConfigFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribeElasticsearchDomainConfigOutput, error) {
+func (r *DescribeElasticsearchDomainConfigFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribeElasticsearchDomainConfigOutput, error) {
 	var output elasticsearchservice.DescribeElasticsearchDomainConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceDescribeElasticsearchDomainsFuture struct {
+type DescribeElasticsearchDomainsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceDescribeElasticsearchDomainsFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribeElasticsearchDomainsOutput, error) {
+func (r *DescribeElasticsearchDomainsFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribeElasticsearchDomainsOutput, error) {
 	var output elasticsearchservice.DescribeElasticsearchDomainsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceDescribeElasticsearchInstanceTypeLimitsFuture struct {
+type DescribeElasticsearchInstanceTypeLimitsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceDescribeElasticsearchInstanceTypeLimitsFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribeElasticsearchInstanceTypeLimitsOutput, error) {
+func (r *DescribeElasticsearchInstanceTypeLimitsFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribeElasticsearchInstanceTypeLimitsOutput, error) {
 	var output elasticsearchservice.DescribeElasticsearchInstanceTypeLimitsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceDescribeInboundCrossClusterSearchConnectionsFuture struct {
+type DescribeInboundCrossClusterSearchConnectionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceDescribeInboundCrossClusterSearchConnectionsFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribeInboundCrossClusterSearchConnectionsOutput, error) {
+func (r *DescribeInboundCrossClusterSearchConnectionsFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribeInboundCrossClusterSearchConnectionsOutput, error) {
 	var output elasticsearchservice.DescribeInboundCrossClusterSearchConnectionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceDescribeOutboundCrossClusterSearchConnectionsFuture struct {
+type DescribeOutboundCrossClusterSearchConnectionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceDescribeOutboundCrossClusterSearchConnectionsFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribeOutboundCrossClusterSearchConnectionsOutput, error) {
+func (r *DescribeOutboundCrossClusterSearchConnectionsFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribeOutboundCrossClusterSearchConnectionsOutput, error) {
 	var output elasticsearchservice.DescribeOutboundCrossClusterSearchConnectionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceDescribePackagesFuture struct {
+type DescribePackagesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceDescribePackagesFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribePackagesOutput, error) {
+func (r *DescribePackagesFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribePackagesOutput, error) {
 	var output elasticsearchservice.DescribePackagesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceDescribeReservedElasticsearchInstanceOfferingsFuture struct {
+type DescribeReservedElasticsearchInstanceOfferingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceDescribeReservedElasticsearchInstanceOfferingsFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribeReservedElasticsearchInstanceOfferingsOutput, error) {
+func (r *DescribeReservedElasticsearchInstanceOfferingsFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribeReservedElasticsearchInstanceOfferingsOutput, error) {
 	var output elasticsearchservice.DescribeReservedElasticsearchInstanceOfferingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceDescribeReservedElasticsearchInstancesFuture struct {
+type DescribeReservedElasticsearchInstancesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceDescribeReservedElasticsearchInstancesFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribeReservedElasticsearchInstancesOutput, error) {
+func (r *DescribeReservedElasticsearchInstancesFuture) Get(ctx workflow.Context) (*elasticsearchservice.DescribeReservedElasticsearchInstancesOutput, error) {
 	var output elasticsearchservice.DescribeReservedElasticsearchInstancesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceDissociatePackageFuture struct {
+type DissociatePackageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceDissociatePackageFuture) Get(ctx workflow.Context) (*elasticsearchservice.DissociatePackageOutput, error) {
+func (r *DissociatePackageFuture) Get(ctx workflow.Context) (*elasticsearchservice.DissociatePackageOutput, error) {
 	var output elasticsearchservice.DissociatePackageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceGetCompatibleElasticsearchVersionsFuture struct {
+type GetCompatibleElasticsearchVersionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceGetCompatibleElasticsearchVersionsFuture) Get(ctx workflow.Context) (*elasticsearchservice.GetCompatibleElasticsearchVersionsOutput, error) {
+func (r *GetCompatibleElasticsearchVersionsFuture) Get(ctx workflow.Context) (*elasticsearchservice.GetCompatibleElasticsearchVersionsOutput, error) {
 	var output elasticsearchservice.GetCompatibleElasticsearchVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceGetUpgradeHistoryFuture struct {
+type GetUpgradeHistoryFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceGetUpgradeHistoryFuture) Get(ctx workflow.Context) (*elasticsearchservice.GetUpgradeHistoryOutput, error) {
+func (r *GetUpgradeHistoryFuture) Get(ctx workflow.Context) (*elasticsearchservice.GetUpgradeHistoryOutput, error) {
 	var output elasticsearchservice.GetUpgradeHistoryOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceGetUpgradeStatusFuture struct {
+type GetUpgradeStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceGetUpgradeStatusFuture) Get(ctx workflow.Context) (*elasticsearchservice.GetUpgradeStatusOutput, error) {
+func (r *GetUpgradeStatusFuture) Get(ctx workflow.Context) (*elasticsearchservice.GetUpgradeStatusOutput, error) {
 	var output elasticsearchservice.GetUpgradeStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceListDomainNamesFuture struct {
+type ListDomainNamesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceListDomainNamesFuture) Get(ctx workflow.Context) (*elasticsearchservice.ListDomainNamesOutput, error) {
+func (r *ListDomainNamesFuture) Get(ctx workflow.Context) (*elasticsearchservice.ListDomainNamesOutput, error) {
 	var output elasticsearchservice.ListDomainNamesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceListDomainsForPackageFuture struct {
+type ListDomainsForPackageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceListDomainsForPackageFuture) Get(ctx workflow.Context) (*elasticsearchservice.ListDomainsForPackageOutput, error) {
+func (r *ListDomainsForPackageFuture) Get(ctx workflow.Context) (*elasticsearchservice.ListDomainsForPackageOutput, error) {
 	var output elasticsearchservice.ListDomainsForPackageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceListElasticsearchInstanceTypesFuture struct {
+type ListElasticsearchInstanceTypesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceListElasticsearchInstanceTypesFuture) Get(ctx workflow.Context) (*elasticsearchservice.ListElasticsearchInstanceTypesOutput, error) {
+func (r *ListElasticsearchInstanceTypesFuture) Get(ctx workflow.Context) (*elasticsearchservice.ListElasticsearchInstanceTypesOutput, error) {
 	var output elasticsearchservice.ListElasticsearchInstanceTypesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceListElasticsearchVersionsFuture struct {
+type ListElasticsearchVersionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceListElasticsearchVersionsFuture) Get(ctx workflow.Context) (*elasticsearchservice.ListElasticsearchVersionsOutput, error) {
+func (r *ListElasticsearchVersionsFuture) Get(ctx workflow.Context) (*elasticsearchservice.ListElasticsearchVersionsOutput, error) {
 	var output elasticsearchservice.ListElasticsearchVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceListPackagesForDomainFuture struct {
+type ListPackagesForDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceListPackagesForDomainFuture) Get(ctx workflow.Context) (*elasticsearchservice.ListPackagesForDomainOutput, error) {
+func (r *ListPackagesForDomainFuture) Get(ctx workflow.Context) (*elasticsearchservice.ListPackagesForDomainOutput, error) {
 	var output elasticsearchservice.ListPackagesForDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceListTagsFuture struct {
+type ListTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceListTagsFuture) Get(ctx workflow.Context) (*elasticsearchservice.ListTagsOutput, error) {
+func (r *ListTagsFuture) Get(ctx workflow.Context) (*elasticsearchservice.ListTagsOutput, error) {
 	var output elasticsearchservice.ListTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServicePurchaseReservedElasticsearchInstanceOfferingFuture struct {
+type PurchaseReservedElasticsearchInstanceOfferingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServicePurchaseReservedElasticsearchInstanceOfferingFuture) Get(ctx workflow.Context) (*elasticsearchservice.PurchaseReservedElasticsearchInstanceOfferingOutput, error) {
+func (r *PurchaseReservedElasticsearchInstanceOfferingFuture) Get(ctx workflow.Context) (*elasticsearchservice.PurchaseReservedElasticsearchInstanceOfferingOutput, error) {
 	var output elasticsearchservice.PurchaseReservedElasticsearchInstanceOfferingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceRejectInboundCrossClusterSearchConnectionFuture struct {
+type RejectInboundCrossClusterSearchConnectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceRejectInboundCrossClusterSearchConnectionFuture) Get(ctx workflow.Context) (*elasticsearchservice.RejectInboundCrossClusterSearchConnectionOutput, error) {
+func (r *RejectInboundCrossClusterSearchConnectionFuture) Get(ctx workflow.Context) (*elasticsearchservice.RejectInboundCrossClusterSearchConnectionOutput, error) {
 	var output elasticsearchservice.RejectInboundCrossClusterSearchConnectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceRemoveTagsFuture struct {
+type RemoveTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceRemoveTagsFuture) Get(ctx workflow.Context) (*elasticsearchservice.RemoveTagsOutput, error) {
+func (r *RemoveTagsFuture) Get(ctx workflow.Context) (*elasticsearchservice.RemoveTagsOutput, error) {
 	var output elasticsearchservice.RemoveTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceStartElasticsearchServiceSoftwareUpdateFuture struct {
+type StartElasticsearchServiceSoftwareUpdateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceStartElasticsearchServiceSoftwareUpdateFuture) Get(ctx workflow.Context) (*elasticsearchservice.StartElasticsearchServiceSoftwareUpdateOutput, error) {
+func (r *StartElasticsearchServiceSoftwareUpdateFuture) Get(ctx workflow.Context) (*elasticsearchservice.StartElasticsearchServiceSoftwareUpdateOutput, error) {
 	var output elasticsearchservice.StartElasticsearchServiceSoftwareUpdateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceUpdateElasticsearchDomainConfigFuture struct {
+type UpdateElasticsearchDomainConfigFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceUpdateElasticsearchDomainConfigFuture) Get(ctx workflow.Context) (*elasticsearchservice.UpdateElasticsearchDomainConfigOutput, error) {
+func (r *UpdateElasticsearchDomainConfigFuture) Get(ctx workflow.Context) (*elasticsearchservice.UpdateElasticsearchDomainConfigOutput, error) {
 	var output elasticsearchservice.UpdateElasticsearchDomainConfigOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ElasticsearchServiceUpgradeElasticsearchDomainFuture struct {
+type UpgradeElasticsearchDomainFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ElasticsearchServiceUpgradeElasticsearchDomainFuture) Get(ctx workflow.Context) (*elasticsearchservice.UpgradeElasticsearchDomainOutput, error) {
+func (r *UpgradeElasticsearchDomainFuture) Get(ctx workflow.Context) (*elasticsearchservice.UpgradeElasticsearchDomainOutput, error) {
 	var output elasticsearchservice.UpgradeElasticsearchDomainOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -429,9 +429,9 @@ func (a *stub) AcceptInboundCrossClusterSearchConnection(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *stub) AcceptInboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.AcceptInboundCrossClusterSearchConnectionInput) *ElasticsearchServiceAcceptInboundCrossClusterSearchConnectionFuture {
+func (a *stub) AcceptInboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.AcceptInboundCrossClusterSearchConnectionInput) *AcceptInboundCrossClusterSearchConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.AcceptInboundCrossClusterSearchConnection", input)
-	return &ElasticsearchServiceAcceptInboundCrossClusterSearchConnectionFuture{Future: future}
+	return &AcceptInboundCrossClusterSearchConnectionFuture{Future: future}
 }
 
 func (a *stub) AddTags(ctx workflow.Context, input *elasticsearchservice.AddTagsInput) (*elasticsearchservice.AddTagsOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) AddTags(ctx workflow.Context, input *elasticsearchservice.AddTags
 	return &output, err
 }
 
-func (a *stub) AddTagsAsync(ctx workflow.Context, input *elasticsearchservice.AddTagsInput) *ElasticsearchServiceAddTagsFuture {
+func (a *stub) AddTagsAsync(ctx workflow.Context, input *elasticsearchservice.AddTagsInput) *AddTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.AddTags", input)
-	return &ElasticsearchServiceAddTagsFuture{Future: future}
+	return &AddTagsFuture{Future: future}
 }
 
 func (a *stub) AssociatePackage(ctx workflow.Context, input *elasticsearchservice.AssociatePackageInput) (*elasticsearchservice.AssociatePackageOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) AssociatePackage(ctx workflow.Context, input *elasticsearchservic
 	return &output, err
 }
 
-func (a *stub) AssociatePackageAsync(ctx workflow.Context, input *elasticsearchservice.AssociatePackageInput) *ElasticsearchServiceAssociatePackageFuture {
+func (a *stub) AssociatePackageAsync(ctx workflow.Context, input *elasticsearchservice.AssociatePackageInput) *AssociatePackageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.AssociatePackage", input)
-	return &ElasticsearchServiceAssociatePackageFuture{Future: future}
+	return &AssociatePackageFuture{Future: future}
 }
 
 func (a *stub) CancelElasticsearchServiceSoftwareUpdate(ctx workflow.Context, input *elasticsearchservice.CancelElasticsearchServiceSoftwareUpdateInput) (*elasticsearchservice.CancelElasticsearchServiceSoftwareUpdateOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) CancelElasticsearchServiceSoftwareUpdate(ctx workflow.Context, in
 	return &output, err
 }
 
-func (a *stub) CancelElasticsearchServiceSoftwareUpdateAsync(ctx workflow.Context, input *elasticsearchservice.CancelElasticsearchServiceSoftwareUpdateInput) *ElasticsearchServiceCancelElasticsearchServiceSoftwareUpdateFuture {
+func (a *stub) CancelElasticsearchServiceSoftwareUpdateAsync(ctx workflow.Context, input *elasticsearchservice.CancelElasticsearchServiceSoftwareUpdateInput) *CancelElasticsearchServiceSoftwareUpdateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.CancelElasticsearchServiceSoftwareUpdate", input)
-	return &ElasticsearchServiceCancelElasticsearchServiceSoftwareUpdateFuture{Future: future}
+	return &CancelElasticsearchServiceSoftwareUpdateFuture{Future: future}
 }
 
 func (a *stub) CreateElasticsearchDomain(ctx workflow.Context, input *elasticsearchservice.CreateElasticsearchDomainInput) (*elasticsearchservice.CreateElasticsearchDomainOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) CreateElasticsearchDomain(ctx workflow.Context, input *elasticsea
 	return &output, err
 }
 
-func (a *stub) CreateElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.CreateElasticsearchDomainInput) *ElasticsearchServiceCreateElasticsearchDomainFuture {
+func (a *stub) CreateElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.CreateElasticsearchDomainInput) *CreateElasticsearchDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.CreateElasticsearchDomain", input)
-	return &ElasticsearchServiceCreateElasticsearchDomainFuture{Future: future}
+	return &CreateElasticsearchDomainFuture{Future: future}
 }
 
 func (a *stub) CreateOutboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.CreateOutboundCrossClusterSearchConnectionInput) (*elasticsearchservice.CreateOutboundCrossClusterSearchConnectionOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) CreateOutboundCrossClusterSearchConnection(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *stub) CreateOutboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.CreateOutboundCrossClusterSearchConnectionInput) *ElasticsearchServiceCreateOutboundCrossClusterSearchConnectionFuture {
+func (a *stub) CreateOutboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.CreateOutboundCrossClusterSearchConnectionInput) *CreateOutboundCrossClusterSearchConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.CreateOutboundCrossClusterSearchConnection", input)
-	return &ElasticsearchServiceCreateOutboundCrossClusterSearchConnectionFuture{Future: future}
+	return &CreateOutboundCrossClusterSearchConnectionFuture{Future: future}
 }
 
 func (a *stub) CreatePackage(ctx workflow.Context, input *elasticsearchservice.CreatePackageInput) (*elasticsearchservice.CreatePackageOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) CreatePackage(ctx workflow.Context, input *elasticsearchservice.C
 	return &output, err
 }
 
-func (a *stub) CreatePackageAsync(ctx workflow.Context, input *elasticsearchservice.CreatePackageInput) *ElasticsearchServiceCreatePackageFuture {
+func (a *stub) CreatePackageAsync(ctx workflow.Context, input *elasticsearchservice.CreatePackageInput) *CreatePackageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.CreatePackage", input)
-	return &ElasticsearchServiceCreatePackageFuture{Future: future}
+	return &CreatePackageFuture{Future: future}
 }
 
 func (a *stub) DeleteElasticsearchDomain(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchDomainInput) (*elasticsearchservice.DeleteElasticsearchDomainOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) DeleteElasticsearchDomain(ctx workflow.Context, input *elasticsea
 	return &output, err
 }
 
-func (a *stub) DeleteElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchDomainInput) *ElasticsearchServiceDeleteElasticsearchDomainFuture {
+func (a *stub) DeleteElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchDomainInput) *DeleteElasticsearchDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DeleteElasticsearchDomain", input)
-	return &ElasticsearchServiceDeleteElasticsearchDomainFuture{Future: future}
+	return &DeleteElasticsearchDomainFuture{Future: future}
 }
 
 func (a *stub) DeleteElasticsearchServiceRole(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchServiceRoleInput) (*elasticsearchservice.DeleteElasticsearchServiceRoleOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) DeleteElasticsearchServiceRole(ctx workflow.Context, input *elast
 	return &output, err
 }
 
-func (a *stub) DeleteElasticsearchServiceRoleAsync(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchServiceRoleInput) *ElasticsearchServiceDeleteElasticsearchServiceRoleFuture {
+func (a *stub) DeleteElasticsearchServiceRoleAsync(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchServiceRoleInput) *DeleteElasticsearchServiceRoleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DeleteElasticsearchServiceRole", input)
-	return &ElasticsearchServiceDeleteElasticsearchServiceRoleFuture{Future: future}
+	return &DeleteElasticsearchServiceRoleFuture{Future: future}
 }
 
 func (a *stub) DeleteInboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.DeleteInboundCrossClusterSearchConnectionInput) (*elasticsearchservice.DeleteInboundCrossClusterSearchConnectionOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) DeleteInboundCrossClusterSearchConnection(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *stub) DeleteInboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.DeleteInboundCrossClusterSearchConnectionInput) *ElasticsearchServiceDeleteInboundCrossClusterSearchConnectionFuture {
+func (a *stub) DeleteInboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.DeleteInboundCrossClusterSearchConnectionInput) *DeleteInboundCrossClusterSearchConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DeleteInboundCrossClusterSearchConnection", input)
-	return &ElasticsearchServiceDeleteInboundCrossClusterSearchConnectionFuture{Future: future}
+	return &DeleteInboundCrossClusterSearchConnectionFuture{Future: future}
 }
 
 func (a *stub) DeleteOutboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.DeleteOutboundCrossClusterSearchConnectionInput) (*elasticsearchservice.DeleteOutboundCrossClusterSearchConnectionOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) DeleteOutboundCrossClusterSearchConnection(ctx workflow.Context, 
 	return &output, err
 }
 
-func (a *stub) DeleteOutboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.DeleteOutboundCrossClusterSearchConnectionInput) *ElasticsearchServiceDeleteOutboundCrossClusterSearchConnectionFuture {
+func (a *stub) DeleteOutboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.DeleteOutboundCrossClusterSearchConnectionInput) *DeleteOutboundCrossClusterSearchConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DeleteOutboundCrossClusterSearchConnection", input)
-	return &ElasticsearchServiceDeleteOutboundCrossClusterSearchConnectionFuture{Future: future}
+	return &DeleteOutboundCrossClusterSearchConnectionFuture{Future: future}
 }
 
 func (a *stub) DeletePackage(ctx workflow.Context, input *elasticsearchservice.DeletePackageInput) (*elasticsearchservice.DeletePackageOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) DeletePackage(ctx workflow.Context, input *elasticsearchservice.D
 	return &output, err
 }
 
-func (a *stub) DeletePackageAsync(ctx workflow.Context, input *elasticsearchservice.DeletePackageInput) *ElasticsearchServiceDeletePackageFuture {
+func (a *stub) DeletePackageAsync(ctx workflow.Context, input *elasticsearchservice.DeletePackageInput) *DeletePackageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DeletePackage", input)
-	return &ElasticsearchServiceDeletePackageFuture{Future: future}
+	return &DeletePackageFuture{Future: future}
 }
 
 func (a *stub) DescribeElasticsearchDomain(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainInput) (*elasticsearchservice.DescribeElasticsearchDomainOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) DescribeElasticsearchDomain(ctx workflow.Context, input *elastics
 	return &output, err
 }
 
-func (a *stub) DescribeElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainInput) *ElasticsearchServiceDescribeElasticsearchDomainFuture {
+func (a *stub) DescribeElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainInput) *DescribeElasticsearchDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeElasticsearchDomain", input)
-	return &ElasticsearchServiceDescribeElasticsearchDomainFuture{Future: future}
+	return &DescribeElasticsearchDomainFuture{Future: future}
 }
 
 func (a *stub) DescribeElasticsearchDomainConfig(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainConfigInput) (*elasticsearchservice.DescribeElasticsearchDomainConfigOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) DescribeElasticsearchDomainConfig(ctx workflow.Context, input *el
 	return &output, err
 }
 
-func (a *stub) DescribeElasticsearchDomainConfigAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainConfigInput) *ElasticsearchServiceDescribeElasticsearchDomainConfigFuture {
+func (a *stub) DescribeElasticsearchDomainConfigAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainConfigInput) *DescribeElasticsearchDomainConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeElasticsearchDomainConfig", input)
-	return &ElasticsearchServiceDescribeElasticsearchDomainConfigFuture{Future: future}
+	return &DescribeElasticsearchDomainConfigFuture{Future: future}
 }
 
 func (a *stub) DescribeElasticsearchDomains(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainsInput) (*elasticsearchservice.DescribeElasticsearchDomainsOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) DescribeElasticsearchDomains(ctx workflow.Context, input *elastic
 	return &output, err
 }
 
-func (a *stub) DescribeElasticsearchDomainsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainsInput) *ElasticsearchServiceDescribeElasticsearchDomainsFuture {
+func (a *stub) DescribeElasticsearchDomainsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainsInput) *DescribeElasticsearchDomainsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeElasticsearchDomains", input)
-	return &ElasticsearchServiceDescribeElasticsearchDomainsFuture{Future: future}
+	return &DescribeElasticsearchDomainsFuture{Future: future}
 }
 
 func (a *stub) DescribeElasticsearchInstanceTypeLimits(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchInstanceTypeLimitsInput) (*elasticsearchservice.DescribeElasticsearchInstanceTypeLimitsOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) DescribeElasticsearchInstanceTypeLimits(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *stub) DescribeElasticsearchInstanceTypeLimitsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchInstanceTypeLimitsInput) *ElasticsearchServiceDescribeElasticsearchInstanceTypeLimitsFuture {
+func (a *stub) DescribeElasticsearchInstanceTypeLimitsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchInstanceTypeLimitsInput) *DescribeElasticsearchInstanceTypeLimitsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeElasticsearchInstanceTypeLimits", input)
-	return &ElasticsearchServiceDescribeElasticsearchInstanceTypeLimitsFuture{Future: future}
+	return &DescribeElasticsearchInstanceTypeLimitsFuture{Future: future}
 }
 
 func (a *stub) DescribeInboundCrossClusterSearchConnections(ctx workflow.Context, input *elasticsearchservice.DescribeInboundCrossClusterSearchConnectionsInput) (*elasticsearchservice.DescribeInboundCrossClusterSearchConnectionsOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) DescribeInboundCrossClusterSearchConnections(ctx workflow.Context
 	return &output, err
 }
 
-func (a *stub) DescribeInboundCrossClusterSearchConnectionsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeInboundCrossClusterSearchConnectionsInput) *ElasticsearchServiceDescribeInboundCrossClusterSearchConnectionsFuture {
+func (a *stub) DescribeInboundCrossClusterSearchConnectionsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeInboundCrossClusterSearchConnectionsInput) *DescribeInboundCrossClusterSearchConnectionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeInboundCrossClusterSearchConnections", input)
-	return &ElasticsearchServiceDescribeInboundCrossClusterSearchConnectionsFuture{Future: future}
+	return &DescribeInboundCrossClusterSearchConnectionsFuture{Future: future}
 }
 
 func (a *stub) DescribeOutboundCrossClusterSearchConnections(ctx workflow.Context, input *elasticsearchservice.DescribeOutboundCrossClusterSearchConnectionsInput) (*elasticsearchservice.DescribeOutboundCrossClusterSearchConnectionsOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) DescribeOutboundCrossClusterSearchConnections(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *stub) DescribeOutboundCrossClusterSearchConnectionsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeOutboundCrossClusterSearchConnectionsInput) *ElasticsearchServiceDescribeOutboundCrossClusterSearchConnectionsFuture {
+func (a *stub) DescribeOutboundCrossClusterSearchConnectionsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeOutboundCrossClusterSearchConnectionsInput) *DescribeOutboundCrossClusterSearchConnectionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeOutboundCrossClusterSearchConnections", input)
-	return &ElasticsearchServiceDescribeOutboundCrossClusterSearchConnectionsFuture{Future: future}
+	return &DescribeOutboundCrossClusterSearchConnectionsFuture{Future: future}
 }
 
 func (a *stub) DescribePackages(ctx workflow.Context, input *elasticsearchservice.DescribePackagesInput) (*elasticsearchservice.DescribePackagesOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) DescribePackages(ctx workflow.Context, input *elasticsearchservic
 	return &output, err
 }
 
-func (a *stub) DescribePackagesAsync(ctx workflow.Context, input *elasticsearchservice.DescribePackagesInput) *ElasticsearchServiceDescribePackagesFuture {
+func (a *stub) DescribePackagesAsync(ctx workflow.Context, input *elasticsearchservice.DescribePackagesInput) *DescribePackagesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribePackages", input)
-	return &ElasticsearchServiceDescribePackagesFuture{Future: future}
+	return &DescribePackagesFuture{Future: future}
 }
 
 func (a *stub) DescribeReservedElasticsearchInstanceOfferings(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstanceOfferingsInput) (*elasticsearchservice.DescribeReservedElasticsearchInstanceOfferingsOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) DescribeReservedElasticsearchInstanceOfferings(ctx workflow.Conte
 	return &output, err
 }
 
-func (a *stub) DescribeReservedElasticsearchInstanceOfferingsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstanceOfferingsInput) *ElasticsearchServiceDescribeReservedElasticsearchInstanceOfferingsFuture {
+func (a *stub) DescribeReservedElasticsearchInstanceOfferingsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstanceOfferingsInput) *DescribeReservedElasticsearchInstanceOfferingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeReservedElasticsearchInstanceOfferings", input)
-	return &ElasticsearchServiceDescribeReservedElasticsearchInstanceOfferingsFuture{Future: future}
+	return &DescribeReservedElasticsearchInstanceOfferingsFuture{Future: future}
 }
 
 func (a *stub) DescribeReservedElasticsearchInstances(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstancesInput) (*elasticsearchservice.DescribeReservedElasticsearchInstancesOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) DescribeReservedElasticsearchInstances(ctx workflow.Context, inpu
 	return &output, err
 }
 
-func (a *stub) DescribeReservedElasticsearchInstancesAsync(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstancesInput) *ElasticsearchServiceDescribeReservedElasticsearchInstancesFuture {
+func (a *stub) DescribeReservedElasticsearchInstancesAsync(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstancesInput) *DescribeReservedElasticsearchInstancesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeReservedElasticsearchInstances", input)
-	return &ElasticsearchServiceDescribeReservedElasticsearchInstancesFuture{Future: future}
+	return &DescribeReservedElasticsearchInstancesFuture{Future: future}
 }
 
 func (a *stub) DissociatePackage(ctx workflow.Context, input *elasticsearchservice.DissociatePackageInput) (*elasticsearchservice.DissociatePackageOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) DissociatePackage(ctx workflow.Context, input *elasticsearchservi
 	return &output, err
 }
 
-func (a *stub) DissociatePackageAsync(ctx workflow.Context, input *elasticsearchservice.DissociatePackageInput) *ElasticsearchServiceDissociatePackageFuture {
+func (a *stub) DissociatePackageAsync(ctx workflow.Context, input *elasticsearchservice.DissociatePackageInput) *DissociatePackageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DissociatePackage", input)
-	return &ElasticsearchServiceDissociatePackageFuture{Future: future}
+	return &DissociatePackageFuture{Future: future}
 }
 
 func (a *stub) GetCompatibleElasticsearchVersions(ctx workflow.Context, input *elasticsearchservice.GetCompatibleElasticsearchVersionsInput) (*elasticsearchservice.GetCompatibleElasticsearchVersionsOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) GetCompatibleElasticsearchVersions(ctx workflow.Context, input *e
 	return &output, err
 }
 
-func (a *stub) GetCompatibleElasticsearchVersionsAsync(ctx workflow.Context, input *elasticsearchservice.GetCompatibleElasticsearchVersionsInput) *ElasticsearchServiceGetCompatibleElasticsearchVersionsFuture {
+func (a *stub) GetCompatibleElasticsearchVersionsAsync(ctx workflow.Context, input *elasticsearchservice.GetCompatibleElasticsearchVersionsInput) *GetCompatibleElasticsearchVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.GetCompatibleElasticsearchVersions", input)
-	return &ElasticsearchServiceGetCompatibleElasticsearchVersionsFuture{Future: future}
+	return &GetCompatibleElasticsearchVersionsFuture{Future: future}
 }
 
 func (a *stub) GetUpgradeHistory(ctx workflow.Context, input *elasticsearchservice.GetUpgradeHistoryInput) (*elasticsearchservice.GetUpgradeHistoryOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) GetUpgradeHistory(ctx workflow.Context, input *elasticsearchservi
 	return &output, err
 }
 
-func (a *stub) GetUpgradeHistoryAsync(ctx workflow.Context, input *elasticsearchservice.GetUpgradeHistoryInput) *ElasticsearchServiceGetUpgradeHistoryFuture {
+func (a *stub) GetUpgradeHistoryAsync(ctx workflow.Context, input *elasticsearchservice.GetUpgradeHistoryInput) *GetUpgradeHistoryFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.GetUpgradeHistory", input)
-	return &ElasticsearchServiceGetUpgradeHistoryFuture{Future: future}
+	return &GetUpgradeHistoryFuture{Future: future}
 }
 
 func (a *stub) GetUpgradeStatus(ctx workflow.Context, input *elasticsearchservice.GetUpgradeStatusInput) (*elasticsearchservice.GetUpgradeStatusOutput, error) {
@@ -693,9 +693,9 @@ func (a *stub) GetUpgradeStatus(ctx workflow.Context, input *elasticsearchservic
 	return &output, err
 }
 
-func (a *stub) GetUpgradeStatusAsync(ctx workflow.Context, input *elasticsearchservice.GetUpgradeStatusInput) *ElasticsearchServiceGetUpgradeStatusFuture {
+func (a *stub) GetUpgradeStatusAsync(ctx workflow.Context, input *elasticsearchservice.GetUpgradeStatusInput) *GetUpgradeStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.GetUpgradeStatus", input)
-	return &ElasticsearchServiceGetUpgradeStatusFuture{Future: future}
+	return &GetUpgradeStatusFuture{Future: future}
 }
 
 func (a *stub) ListDomainNames(ctx workflow.Context, input *elasticsearchservice.ListDomainNamesInput) (*elasticsearchservice.ListDomainNamesOutput, error) {
@@ -704,9 +704,9 @@ func (a *stub) ListDomainNames(ctx workflow.Context, input *elasticsearchservice
 	return &output, err
 }
 
-func (a *stub) ListDomainNamesAsync(ctx workflow.Context, input *elasticsearchservice.ListDomainNamesInput) *ElasticsearchServiceListDomainNamesFuture {
+func (a *stub) ListDomainNamesAsync(ctx workflow.Context, input *elasticsearchservice.ListDomainNamesInput) *ListDomainNamesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListDomainNames", input)
-	return &ElasticsearchServiceListDomainNamesFuture{Future: future}
+	return &ListDomainNamesFuture{Future: future}
 }
 
 func (a *stub) ListDomainsForPackage(ctx workflow.Context, input *elasticsearchservice.ListDomainsForPackageInput) (*elasticsearchservice.ListDomainsForPackageOutput, error) {
@@ -715,9 +715,9 @@ func (a *stub) ListDomainsForPackage(ctx workflow.Context, input *elasticsearchs
 	return &output, err
 }
 
-func (a *stub) ListDomainsForPackageAsync(ctx workflow.Context, input *elasticsearchservice.ListDomainsForPackageInput) *ElasticsearchServiceListDomainsForPackageFuture {
+func (a *stub) ListDomainsForPackageAsync(ctx workflow.Context, input *elasticsearchservice.ListDomainsForPackageInput) *ListDomainsForPackageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListDomainsForPackage", input)
-	return &ElasticsearchServiceListDomainsForPackageFuture{Future: future}
+	return &ListDomainsForPackageFuture{Future: future}
 }
 
 func (a *stub) ListElasticsearchInstanceTypes(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchInstanceTypesInput) (*elasticsearchservice.ListElasticsearchInstanceTypesOutput, error) {
@@ -726,9 +726,9 @@ func (a *stub) ListElasticsearchInstanceTypes(ctx workflow.Context, input *elast
 	return &output, err
 }
 
-func (a *stub) ListElasticsearchInstanceTypesAsync(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchInstanceTypesInput) *ElasticsearchServiceListElasticsearchInstanceTypesFuture {
+func (a *stub) ListElasticsearchInstanceTypesAsync(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchInstanceTypesInput) *ListElasticsearchInstanceTypesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListElasticsearchInstanceTypes", input)
-	return &ElasticsearchServiceListElasticsearchInstanceTypesFuture{Future: future}
+	return &ListElasticsearchInstanceTypesFuture{Future: future}
 }
 
 func (a *stub) ListElasticsearchVersions(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchVersionsInput) (*elasticsearchservice.ListElasticsearchVersionsOutput, error) {
@@ -737,9 +737,9 @@ func (a *stub) ListElasticsearchVersions(ctx workflow.Context, input *elasticsea
 	return &output, err
 }
 
-func (a *stub) ListElasticsearchVersionsAsync(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchVersionsInput) *ElasticsearchServiceListElasticsearchVersionsFuture {
+func (a *stub) ListElasticsearchVersionsAsync(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchVersionsInput) *ListElasticsearchVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListElasticsearchVersions", input)
-	return &ElasticsearchServiceListElasticsearchVersionsFuture{Future: future}
+	return &ListElasticsearchVersionsFuture{Future: future}
 }
 
 func (a *stub) ListPackagesForDomain(ctx workflow.Context, input *elasticsearchservice.ListPackagesForDomainInput) (*elasticsearchservice.ListPackagesForDomainOutput, error) {
@@ -748,9 +748,9 @@ func (a *stub) ListPackagesForDomain(ctx workflow.Context, input *elasticsearchs
 	return &output, err
 }
 
-func (a *stub) ListPackagesForDomainAsync(ctx workflow.Context, input *elasticsearchservice.ListPackagesForDomainInput) *ElasticsearchServiceListPackagesForDomainFuture {
+func (a *stub) ListPackagesForDomainAsync(ctx workflow.Context, input *elasticsearchservice.ListPackagesForDomainInput) *ListPackagesForDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListPackagesForDomain", input)
-	return &ElasticsearchServiceListPackagesForDomainFuture{Future: future}
+	return &ListPackagesForDomainFuture{Future: future}
 }
 
 func (a *stub) ListTags(ctx workflow.Context, input *elasticsearchservice.ListTagsInput) (*elasticsearchservice.ListTagsOutput, error) {
@@ -759,9 +759,9 @@ func (a *stub) ListTags(ctx workflow.Context, input *elasticsearchservice.ListTa
 	return &output, err
 }
 
-func (a *stub) ListTagsAsync(ctx workflow.Context, input *elasticsearchservice.ListTagsInput) *ElasticsearchServiceListTagsFuture {
+func (a *stub) ListTagsAsync(ctx workflow.Context, input *elasticsearchservice.ListTagsInput) *ListTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListTags", input)
-	return &ElasticsearchServiceListTagsFuture{Future: future}
+	return &ListTagsFuture{Future: future}
 }
 
 func (a *stub) PurchaseReservedElasticsearchInstanceOffering(ctx workflow.Context, input *elasticsearchservice.PurchaseReservedElasticsearchInstanceOfferingInput) (*elasticsearchservice.PurchaseReservedElasticsearchInstanceOfferingOutput, error) {
@@ -770,9 +770,9 @@ func (a *stub) PurchaseReservedElasticsearchInstanceOffering(ctx workflow.Contex
 	return &output, err
 }
 
-func (a *stub) PurchaseReservedElasticsearchInstanceOfferingAsync(ctx workflow.Context, input *elasticsearchservice.PurchaseReservedElasticsearchInstanceOfferingInput) *ElasticsearchServicePurchaseReservedElasticsearchInstanceOfferingFuture {
+func (a *stub) PurchaseReservedElasticsearchInstanceOfferingAsync(ctx workflow.Context, input *elasticsearchservice.PurchaseReservedElasticsearchInstanceOfferingInput) *PurchaseReservedElasticsearchInstanceOfferingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.PurchaseReservedElasticsearchInstanceOffering", input)
-	return &ElasticsearchServicePurchaseReservedElasticsearchInstanceOfferingFuture{Future: future}
+	return &PurchaseReservedElasticsearchInstanceOfferingFuture{Future: future}
 }
 
 func (a *stub) RejectInboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.RejectInboundCrossClusterSearchConnectionInput) (*elasticsearchservice.RejectInboundCrossClusterSearchConnectionOutput, error) {
@@ -781,9 +781,9 @@ func (a *stub) RejectInboundCrossClusterSearchConnection(ctx workflow.Context, i
 	return &output, err
 }
 
-func (a *stub) RejectInboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.RejectInboundCrossClusterSearchConnectionInput) *ElasticsearchServiceRejectInboundCrossClusterSearchConnectionFuture {
+func (a *stub) RejectInboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.RejectInboundCrossClusterSearchConnectionInput) *RejectInboundCrossClusterSearchConnectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.RejectInboundCrossClusterSearchConnection", input)
-	return &ElasticsearchServiceRejectInboundCrossClusterSearchConnectionFuture{Future: future}
+	return &RejectInboundCrossClusterSearchConnectionFuture{Future: future}
 }
 
 func (a *stub) RemoveTags(ctx workflow.Context, input *elasticsearchservice.RemoveTagsInput) (*elasticsearchservice.RemoveTagsOutput, error) {
@@ -792,9 +792,9 @@ func (a *stub) RemoveTags(ctx workflow.Context, input *elasticsearchservice.Remo
 	return &output, err
 }
 
-func (a *stub) RemoveTagsAsync(ctx workflow.Context, input *elasticsearchservice.RemoveTagsInput) *ElasticsearchServiceRemoveTagsFuture {
+func (a *stub) RemoveTagsAsync(ctx workflow.Context, input *elasticsearchservice.RemoveTagsInput) *RemoveTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.RemoveTags", input)
-	return &ElasticsearchServiceRemoveTagsFuture{Future: future}
+	return &RemoveTagsFuture{Future: future}
 }
 
 func (a *stub) StartElasticsearchServiceSoftwareUpdate(ctx workflow.Context, input *elasticsearchservice.StartElasticsearchServiceSoftwareUpdateInput) (*elasticsearchservice.StartElasticsearchServiceSoftwareUpdateOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) StartElasticsearchServiceSoftwareUpdate(ctx workflow.Context, inp
 	return &output, err
 }
 
-func (a *stub) StartElasticsearchServiceSoftwareUpdateAsync(ctx workflow.Context, input *elasticsearchservice.StartElasticsearchServiceSoftwareUpdateInput) *ElasticsearchServiceStartElasticsearchServiceSoftwareUpdateFuture {
+func (a *stub) StartElasticsearchServiceSoftwareUpdateAsync(ctx workflow.Context, input *elasticsearchservice.StartElasticsearchServiceSoftwareUpdateInput) *StartElasticsearchServiceSoftwareUpdateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.StartElasticsearchServiceSoftwareUpdate", input)
-	return &ElasticsearchServiceStartElasticsearchServiceSoftwareUpdateFuture{Future: future}
+	return &StartElasticsearchServiceSoftwareUpdateFuture{Future: future}
 }
 
 func (a *stub) UpdateElasticsearchDomainConfig(ctx workflow.Context, input *elasticsearchservice.UpdateElasticsearchDomainConfigInput) (*elasticsearchservice.UpdateElasticsearchDomainConfigOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) UpdateElasticsearchDomainConfig(ctx workflow.Context, input *elas
 	return &output, err
 }
 
-func (a *stub) UpdateElasticsearchDomainConfigAsync(ctx workflow.Context, input *elasticsearchservice.UpdateElasticsearchDomainConfigInput) *ElasticsearchServiceUpdateElasticsearchDomainConfigFuture {
+func (a *stub) UpdateElasticsearchDomainConfigAsync(ctx workflow.Context, input *elasticsearchservice.UpdateElasticsearchDomainConfigInput) *UpdateElasticsearchDomainConfigFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.UpdateElasticsearchDomainConfig", input)
-	return &ElasticsearchServiceUpdateElasticsearchDomainConfigFuture{Future: future}
+	return &UpdateElasticsearchDomainConfigFuture{Future: future}
 }
 
 func (a *stub) UpgradeElasticsearchDomain(ctx workflow.Context, input *elasticsearchservice.UpgradeElasticsearchDomainInput) (*elasticsearchservice.UpgradeElasticsearchDomainOutput, error) {
@@ -825,7 +825,7 @@ func (a *stub) UpgradeElasticsearchDomain(ctx workflow.Context, input *elasticse
 	return &output, err
 }
 
-func (a *stub) UpgradeElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.UpgradeElasticsearchDomainInput) *ElasticsearchServiceUpgradeElasticsearchDomainFuture {
+func (a *stub) UpgradeElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.UpgradeElasticsearchDomainInput) *UpgradeElasticsearchDomainFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.UpgradeElasticsearchDomain", input)
-	return &ElasticsearchServiceUpgradeElasticsearchDomainFuture{Future: future}
+	return &UpgradeElasticsearchDomainFuture{Future: future}
 }

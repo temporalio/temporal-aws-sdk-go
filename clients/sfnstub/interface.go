@@ -16,70 +16,70 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateActivity(ctx workflow.Context, input *sfn.CreateActivityInput) (*sfn.CreateActivityOutput, error)
-	CreateActivityAsync(ctx workflow.Context, input *sfn.CreateActivityInput) *SFNCreateActivityFuture
+	CreateActivityAsync(ctx workflow.Context, input *sfn.CreateActivityInput) *CreateActivityFuture
 
 	CreateStateMachine(ctx workflow.Context, input *sfn.CreateStateMachineInput) (*sfn.CreateStateMachineOutput, error)
-	CreateStateMachineAsync(ctx workflow.Context, input *sfn.CreateStateMachineInput) *SFNCreateStateMachineFuture
+	CreateStateMachineAsync(ctx workflow.Context, input *sfn.CreateStateMachineInput) *CreateStateMachineFuture
 
 	DeleteActivity(ctx workflow.Context, input *sfn.DeleteActivityInput) (*sfn.DeleteActivityOutput, error)
-	DeleteActivityAsync(ctx workflow.Context, input *sfn.DeleteActivityInput) *SFNDeleteActivityFuture
+	DeleteActivityAsync(ctx workflow.Context, input *sfn.DeleteActivityInput) *DeleteActivityFuture
 
 	DeleteStateMachine(ctx workflow.Context, input *sfn.DeleteStateMachineInput) (*sfn.DeleteStateMachineOutput, error)
-	DeleteStateMachineAsync(ctx workflow.Context, input *sfn.DeleteStateMachineInput) *SFNDeleteStateMachineFuture
+	DeleteStateMachineAsync(ctx workflow.Context, input *sfn.DeleteStateMachineInput) *DeleteStateMachineFuture
 
 	DescribeActivity(ctx workflow.Context, input *sfn.DescribeActivityInput) (*sfn.DescribeActivityOutput, error)
-	DescribeActivityAsync(ctx workflow.Context, input *sfn.DescribeActivityInput) *SFNDescribeActivityFuture
+	DescribeActivityAsync(ctx workflow.Context, input *sfn.DescribeActivityInput) *DescribeActivityFuture
 
 	DescribeExecution(ctx workflow.Context, input *sfn.DescribeExecutionInput) (*sfn.DescribeExecutionOutput, error)
-	DescribeExecutionAsync(ctx workflow.Context, input *sfn.DescribeExecutionInput) *SFNDescribeExecutionFuture
+	DescribeExecutionAsync(ctx workflow.Context, input *sfn.DescribeExecutionInput) *DescribeExecutionFuture
 
 	DescribeStateMachine(ctx workflow.Context, input *sfn.DescribeStateMachineInput) (*sfn.DescribeStateMachineOutput, error)
-	DescribeStateMachineAsync(ctx workflow.Context, input *sfn.DescribeStateMachineInput) *SFNDescribeStateMachineFuture
+	DescribeStateMachineAsync(ctx workflow.Context, input *sfn.DescribeStateMachineInput) *DescribeStateMachineFuture
 
 	DescribeStateMachineForExecution(ctx workflow.Context, input *sfn.DescribeStateMachineForExecutionInput) (*sfn.DescribeStateMachineForExecutionOutput, error)
-	DescribeStateMachineForExecutionAsync(ctx workflow.Context, input *sfn.DescribeStateMachineForExecutionInput) *SFNDescribeStateMachineForExecutionFuture
+	DescribeStateMachineForExecutionAsync(ctx workflow.Context, input *sfn.DescribeStateMachineForExecutionInput) *DescribeStateMachineForExecutionFuture
 
 	GetActivityTask(ctx workflow.Context, input *sfn.GetActivityTaskInput) (*sfn.GetActivityTaskOutput, error)
-	GetActivityTaskAsync(ctx workflow.Context, input *sfn.GetActivityTaskInput) *SFNGetActivityTaskFuture
+	GetActivityTaskAsync(ctx workflow.Context, input *sfn.GetActivityTaskInput) *GetActivityTaskFuture
 
 	GetExecutionHistory(ctx workflow.Context, input *sfn.GetExecutionHistoryInput) (*sfn.GetExecutionHistoryOutput, error)
-	GetExecutionHistoryAsync(ctx workflow.Context, input *sfn.GetExecutionHistoryInput) *SFNGetExecutionHistoryFuture
+	GetExecutionHistoryAsync(ctx workflow.Context, input *sfn.GetExecutionHistoryInput) *GetExecutionHistoryFuture
 
 	ListActivities(ctx workflow.Context, input *sfn.ListActivitiesInput) (*sfn.ListActivitiesOutput, error)
-	ListActivitiesAsync(ctx workflow.Context, input *sfn.ListActivitiesInput) *SFNListActivitiesFuture
+	ListActivitiesAsync(ctx workflow.Context, input *sfn.ListActivitiesInput) *ListActivitiesFuture
 
 	ListExecutions(ctx workflow.Context, input *sfn.ListExecutionsInput) (*sfn.ListExecutionsOutput, error)
-	ListExecutionsAsync(ctx workflow.Context, input *sfn.ListExecutionsInput) *SFNListExecutionsFuture
+	ListExecutionsAsync(ctx workflow.Context, input *sfn.ListExecutionsInput) *ListExecutionsFuture
 
 	ListStateMachines(ctx workflow.Context, input *sfn.ListStateMachinesInput) (*sfn.ListStateMachinesOutput, error)
-	ListStateMachinesAsync(ctx workflow.Context, input *sfn.ListStateMachinesInput) *SFNListStateMachinesFuture
+	ListStateMachinesAsync(ctx workflow.Context, input *sfn.ListStateMachinesInput) *ListStateMachinesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *sfn.ListTagsForResourceInput) (*sfn.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *sfn.ListTagsForResourceInput) *SFNListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *sfn.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	SendTaskFailure(ctx workflow.Context, input *sfn.SendTaskFailureInput) (*sfn.SendTaskFailureOutput, error)
-	SendTaskFailureAsync(ctx workflow.Context, input *sfn.SendTaskFailureInput) *SFNSendTaskFailureFuture
+	SendTaskFailureAsync(ctx workflow.Context, input *sfn.SendTaskFailureInput) *SendTaskFailureFuture
 
 	SendTaskHeartbeat(ctx workflow.Context, input *sfn.SendTaskHeartbeatInput) (*sfn.SendTaskHeartbeatOutput, error)
-	SendTaskHeartbeatAsync(ctx workflow.Context, input *sfn.SendTaskHeartbeatInput) *SFNSendTaskHeartbeatFuture
+	SendTaskHeartbeatAsync(ctx workflow.Context, input *sfn.SendTaskHeartbeatInput) *SendTaskHeartbeatFuture
 
 	SendTaskSuccess(ctx workflow.Context, input *sfn.SendTaskSuccessInput) (*sfn.SendTaskSuccessOutput, error)
-	SendTaskSuccessAsync(ctx workflow.Context, input *sfn.SendTaskSuccessInput) *SFNSendTaskSuccessFuture
+	SendTaskSuccessAsync(ctx workflow.Context, input *sfn.SendTaskSuccessInput) *SendTaskSuccessFuture
 
 	StartExecution(ctx workflow.Context, input *sfn.StartExecutionInput) (*sfn.StartExecutionOutput, error)
-	StartExecutionAsync(ctx workflow.Context, input *sfn.StartExecutionInput) *SFNStartExecutionFuture
+	StartExecutionAsync(ctx workflow.Context, input *sfn.StartExecutionInput) *StartExecutionFuture
 
 	StopExecution(ctx workflow.Context, input *sfn.StopExecutionInput) (*sfn.StopExecutionOutput, error)
-	StopExecutionAsync(ctx workflow.Context, input *sfn.StopExecutionInput) *SFNStopExecutionFuture
+	StopExecutionAsync(ctx workflow.Context, input *sfn.StopExecutionInput) *StopExecutionFuture
 
 	TagResource(ctx workflow.Context, input *sfn.TagResourceInput) (*sfn.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *sfn.TagResourceInput) *SFNTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *sfn.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *sfn.UntagResourceInput) (*sfn.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *sfn.UntagResourceInput) *SFNUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *sfn.UntagResourceInput) *UntagResourceFuture
 
 	UpdateStateMachine(ctx workflow.Context, input *sfn.UpdateStateMachineInput) (*sfn.UpdateStateMachineOutput, error)
-	UpdateStateMachineAsync(ctx workflow.Context, input *sfn.UpdateStateMachineInput) *SFNUpdateStateMachineFuture
+	UpdateStateMachineAsync(ctx workflow.Context, input *sfn.UpdateStateMachineInput) *UpdateStateMachineFuture
 }
 
 func NewClient() Client {

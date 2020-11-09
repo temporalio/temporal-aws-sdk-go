@@ -16,133 +16,133 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type FirehoseCreateDeliveryStreamFuture struct {
+type CreateDeliveryStreamFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FirehoseCreateDeliveryStreamFuture) Get(ctx workflow.Context) (*firehose.CreateDeliveryStreamOutput, error) {
+func (r *CreateDeliveryStreamFuture) Get(ctx workflow.Context) (*firehose.CreateDeliveryStreamOutput, error) {
 	var output firehose.CreateDeliveryStreamOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FirehoseDeleteDeliveryStreamFuture struct {
+type DeleteDeliveryStreamFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FirehoseDeleteDeliveryStreamFuture) Get(ctx workflow.Context) (*firehose.DeleteDeliveryStreamOutput, error) {
+func (r *DeleteDeliveryStreamFuture) Get(ctx workflow.Context) (*firehose.DeleteDeliveryStreamOutput, error) {
 	var output firehose.DeleteDeliveryStreamOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FirehoseDescribeDeliveryStreamFuture struct {
+type DescribeDeliveryStreamFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FirehoseDescribeDeliveryStreamFuture) Get(ctx workflow.Context) (*firehose.DescribeDeliveryStreamOutput, error) {
+func (r *DescribeDeliveryStreamFuture) Get(ctx workflow.Context) (*firehose.DescribeDeliveryStreamOutput, error) {
 	var output firehose.DescribeDeliveryStreamOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FirehoseListDeliveryStreamsFuture struct {
+type ListDeliveryStreamsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FirehoseListDeliveryStreamsFuture) Get(ctx workflow.Context) (*firehose.ListDeliveryStreamsOutput, error) {
+func (r *ListDeliveryStreamsFuture) Get(ctx workflow.Context) (*firehose.ListDeliveryStreamsOutput, error) {
 	var output firehose.ListDeliveryStreamsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FirehoseListTagsForDeliveryStreamFuture struct {
+type ListTagsForDeliveryStreamFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FirehoseListTagsForDeliveryStreamFuture) Get(ctx workflow.Context) (*firehose.ListTagsForDeliveryStreamOutput, error) {
+func (r *ListTagsForDeliveryStreamFuture) Get(ctx workflow.Context) (*firehose.ListTagsForDeliveryStreamOutput, error) {
 	var output firehose.ListTagsForDeliveryStreamOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FirehosePutRecordFuture struct {
+type PutRecordFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FirehosePutRecordFuture) Get(ctx workflow.Context) (*firehose.PutRecordOutput, error) {
+func (r *PutRecordFuture) Get(ctx workflow.Context) (*firehose.PutRecordOutput, error) {
 	var output firehose.PutRecordOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FirehosePutRecordBatchFuture struct {
+type PutRecordBatchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FirehosePutRecordBatchFuture) Get(ctx workflow.Context) (*firehose.PutRecordBatchOutput, error) {
+func (r *PutRecordBatchFuture) Get(ctx workflow.Context) (*firehose.PutRecordBatchOutput, error) {
 	var output firehose.PutRecordBatchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FirehoseStartDeliveryStreamEncryptionFuture struct {
+type StartDeliveryStreamEncryptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FirehoseStartDeliveryStreamEncryptionFuture) Get(ctx workflow.Context) (*firehose.StartDeliveryStreamEncryptionOutput, error) {
+func (r *StartDeliveryStreamEncryptionFuture) Get(ctx workflow.Context) (*firehose.StartDeliveryStreamEncryptionOutput, error) {
 	var output firehose.StartDeliveryStreamEncryptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FirehoseStopDeliveryStreamEncryptionFuture struct {
+type StopDeliveryStreamEncryptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FirehoseStopDeliveryStreamEncryptionFuture) Get(ctx workflow.Context) (*firehose.StopDeliveryStreamEncryptionOutput, error) {
+func (r *StopDeliveryStreamEncryptionFuture) Get(ctx workflow.Context) (*firehose.StopDeliveryStreamEncryptionOutput, error) {
 	var output firehose.StopDeliveryStreamEncryptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FirehoseTagDeliveryStreamFuture struct {
+type TagDeliveryStreamFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FirehoseTagDeliveryStreamFuture) Get(ctx workflow.Context) (*firehose.TagDeliveryStreamOutput, error) {
+func (r *TagDeliveryStreamFuture) Get(ctx workflow.Context) (*firehose.TagDeliveryStreamOutput, error) {
 	var output firehose.TagDeliveryStreamOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FirehoseUntagDeliveryStreamFuture struct {
+type UntagDeliveryStreamFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FirehoseUntagDeliveryStreamFuture) Get(ctx workflow.Context) (*firehose.UntagDeliveryStreamOutput, error) {
+func (r *UntagDeliveryStreamFuture) Get(ctx workflow.Context) (*firehose.UntagDeliveryStreamOutput, error) {
 	var output firehose.UntagDeliveryStreamOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type FirehoseUpdateDestinationFuture struct {
+type UpdateDestinationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *FirehoseUpdateDestinationFuture) Get(ctx workflow.Context) (*firehose.UpdateDestinationOutput, error) {
+func (r *UpdateDestinationFuture) Get(ctx workflow.Context) (*firehose.UpdateDestinationOutput, error) {
 	var output firehose.UpdateDestinationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -154,9 +154,9 @@ func (a *stub) CreateDeliveryStream(ctx workflow.Context, input *firehose.Create
 	return &output, err
 }
 
-func (a *stub) CreateDeliveryStreamAsync(ctx workflow.Context, input *firehose.CreateDeliveryStreamInput) *FirehoseCreateDeliveryStreamFuture {
+func (a *stub) CreateDeliveryStreamAsync(ctx workflow.Context, input *firehose.CreateDeliveryStreamInput) *CreateDeliveryStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.firehose.CreateDeliveryStream", input)
-	return &FirehoseCreateDeliveryStreamFuture{Future: future}
+	return &CreateDeliveryStreamFuture{Future: future}
 }
 
 func (a *stub) DeleteDeliveryStream(ctx workflow.Context, input *firehose.DeleteDeliveryStreamInput) (*firehose.DeleteDeliveryStreamOutput, error) {
@@ -165,9 +165,9 @@ func (a *stub) DeleteDeliveryStream(ctx workflow.Context, input *firehose.Delete
 	return &output, err
 }
 
-func (a *stub) DeleteDeliveryStreamAsync(ctx workflow.Context, input *firehose.DeleteDeliveryStreamInput) *FirehoseDeleteDeliveryStreamFuture {
+func (a *stub) DeleteDeliveryStreamAsync(ctx workflow.Context, input *firehose.DeleteDeliveryStreamInput) *DeleteDeliveryStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.firehose.DeleteDeliveryStream", input)
-	return &FirehoseDeleteDeliveryStreamFuture{Future: future}
+	return &DeleteDeliveryStreamFuture{Future: future}
 }
 
 func (a *stub) DescribeDeliveryStream(ctx workflow.Context, input *firehose.DescribeDeliveryStreamInput) (*firehose.DescribeDeliveryStreamOutput, error) {
@@ -176,9 +176,9 @@ func (a *stub) DescribeDeliveryStream(ctx workflow.Context, input *firehose.Desc
 	return &output, err
 }
 
-func (a *stub) DescribeDeliveryStreamAsync(ctx workflow.Context, input *firehose.DescribeDeliveryStreamInput) *FirehoseDescribeDeliveryStreamFuture {
+func (a *stub) DescribeDeliveryStreamAsync(ctx workflow.Context, input *firehose.DescribeDeliveryStreamInput) *DescribeDeliveryStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.firehose.DescribeDeliveryStream", input)
-	return &FirehoseDescribeDeliveryStreamFuture{Future: future}
+	return &DescribeDeliveryStreamFuture{Future: future}
 }
 
 func (a *stub) ListDeliveryStreams(ctx workflow.Context, input *firehose.ListDeliveryStreamsInput) (*firehose.ListDeliveryStreamsOutput, error) {
@@ -187,9 +187,9 @@ func (a *stub) ListDeliveryStreams(ctx workflow.Context, input *firehose.ListDel
 	return &output, err
 }
 
-func (a *stub) ListDeliveryStreamsAsync(ctx workflow.Context, input *firehose.ListDeliveryStreamsInput) *FirehoseListDeliveryStreamsFuture {
+func (a *stub) ListDeliveryStreamsAsync(ctx workflow.Context, input *firehose.ListDeliveryStreamsInput) *ListDeliveryStreamsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.firehose.ListDeliveryStreams", input)
-	return &FirehoseListDeliveryStreamsFuture{Future: future}
+	return &ListDeliveryStreamsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForDeliveryStream(ctx workflow.Context, input *firehose.ListTagsForDeliveryStreamInput) (*firehose.ListTagsForDeliveryStreamOutput, error) {
@@ -198,9 +198,9 @@ func (a *stub) ListTagsForDeliveryStream(ctx workflow.Context, input *firehose.L
 	return &output, err
 }
 
-func (a *stub) ListTagsForDeliveryStreamAsync(ctx workflow.Context, input *firehose.ListTagsForDeliveryStreamInput) *FirehoseListTagsForDeliveryStreamFuture {
+func (a *stub) ListTagsForDeliveryStreamAsync(ctx workflow.Context, input *firehose.ListTagsForDeliveryStreamInput) *ListTagsForDeliveryStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.firehose.ListTagsForDeliveryStream", input)
-	return &FirehoseListTagsForDeliveryStreamFuture{Future: future}
+	return &ListTagsForDeliveryStreamFuture{Future: future}
 }
 
 func (a *stub) PutRecord(ctx workflow.Context, input *firehose.PutRecordInput) (*firehose.PutRecordOutput, error) {
@@ -209,9 +209,9 @@ func (a *stub) PutRecord(ctx workflow.Context, input *firehose.PutRecordInput) (
 	return &output, err
 }
 
-func (a *stub) PutRecordAsync(ctx workflow.Context, input *firehose.PutRecordInput) *FirehosePutRecordFuture {
+func (a *stub) PutRecordAsync(ctx workflow.Context, input *firehose.PutRecordInput) *PutRecordFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.firehose.PutRecord", input)
-	return &FirehosePutRecordFuture{Future: future}
+	return &PutRecordFuture{Future: future}
 }
 
 func (a *stub) PutRecordBatch(ctx workflow.Context, input *firehose.PutRecordBatchInput) (*firehose.PutRecordBatchOutput, error) {
@@ -220,9 +220,9 @@ func (a *stub) PutRecordBatch(ctx workflow.Context, input *firehose.PutRecordBat
 	return &output, err
 }
 
-func (a *stub) PutRecordBatchAsync(ctx workflow.Context, input *firehose.PutRecordBatchInput) *FirehosePutRecordBatchFuture {
+func (a *stub) PutRecordBatchAsync(ctx workflow.Context, input *firehose.PutRecordBatchInput) *PutRecordBatchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.firehose.PutRecordBatch", input)
-	return &FirehosePutRecordBatchFuture{Future: future}
+	return &PutRecordBatchFuture{Future: future}
 }
 
 func (a *stub) StartDeliveryStreamEncryption(ctx workflow.Context, input *firehose.StartDeliveryStreamEncryptionInput) (*firehose.StartDeliveryStreamEncryptionOutput, error) {
@@ -231,9 +231,9 @@ func (a *stub) StartDeliveryStreamEncryption(ctx workflow.Context, input *fireho
 	return &output, err
 }
 
-func (a *stub) StartDeliveryStreamEncryptionAsync(ctx workflow.Context, input *firehose.StartDeliveryStreamEncryptionInput) *FirehoseStartDeliveryStreamEncryptionFuture {
+func (a *stub) StartDeliveryStreamEncryptionAsync(ctx workflow.Context, input *firehose.StartDeliveryStreamEncryptionInput) *StartDeliveryStreamEncryptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.firehose.StartDeliveryStreamEncryption", input)
-	return &FirehoseStartDeliveryStreamEncryptionFuture{Future: future}
+	return &StartDeliveryStreamEncryptionFuture{Future: future}
 }
 
 func (a *stub) StopDeliveryStreamEncryption(ctx workflow.Context, input *firehose.StopDeliveryStreamEncryptionInput) (*firehose.StopDeliveryStreamEncryptionOutput, error) {
@@ -242,9 +242,9 @@ func (a *stub) StopDeliveryStreamEncryption(ctx workflow.Context, input *firehos
 	return &output, err
 }
 
-func (a *stub) StopDeliveryStreamEncryptionAsync(ctx workflow.Context, input *firehose.StopDeliveryStreamEncryptionInput) *FirehoseStopDeliveryStreamEncryptionFuture {
+func (a *stub) StopDeliveryStreamEncryptionAsync(ctx workflow.Context, input *firehose.StopDeliveryStreamEncryptionInput) *StopDeliveryStreamEncryptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.firehose.StopDeliveryStreamEncryption", input)
-	return &FirehoseStopDeliveryStreamEncryptionFuture{Future: future}
+	return &StopDeliveryStreamEncryptionFuture{Future: future}
 }
 
 func (a *stub) TagDeliveryStream(ctx workflow.Context, input *firehose.TagDeliveryStreamInput) (*firehose.TagDeliveryStreamOutput, error) {
@@ -253,9 +253,9 @@ func (a *stub) TagDeliveryStream(ctx workflow.Context, input *firehose.TagDelive
 	return &output, err
 }
 
-func (a *stub) TagDeliveryStreamAsync(ctx workflow.Context, input *firehose.TagDeliveryStreamInput) *FirehoseTagDeliveryStreamFuture {
+func (a *stub) TagDeliveryStreamAsync(ctx workflow.Context, input *firehose.TagDeliveryStreamInput) *TagDeliveryStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.firehose.TagDeliveryStream", input)
-	return &FirehoseTagDeliveryStreamFuture{Future: future}
+	return &TagDeliveryStreamFuture{Future: future}
 }
 
 func (a *stub) UntagDeliveryStream(ctx workflow.Context, input *firehose.UntagDeliveryStreamInput) (*firehose.UntagDeliveryStreamOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) UntagDeliveryStream(ctx workflow.Context, input *firehose.UntagDe
 	return &output, err
 }
 
-func (a *stub) UntagDeliveryStreamAsync(ctx workflow.Context, input *firehose.UntagDeliveryStreamInput) *FirehoseUntagDeliveryStreamFuture {
+func (a *stub) UntagDeliveryStreamAsync(ctx workflow.Context, input *firehose.UntagDeliveryStreamInput) *UntagDeliveryStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.firehose.UntagDeliveryStream", input)
-	return &FirehoseUntagDeliveryStreamFuture{Future: future}
+	return &UntagDeliveryStreamFuture{Future: future}
 }
 
 func (a *stub) UpdateDestination(ctx workflow.Context, input *firehose.UpdateDestinationInput) (*firehose.UpdateDestinationOutput, error) {
@@ -275,7 +275,7 @@ func (a *stub) UpdateDestination(ctx workflow.Context, input *firehose.UpdateDes
 	return &output, err
 }
 
-func (a *stub) UpdateDestinationAsync(ctx workflow.Context, input *firehose.UpdateDestinationInput) *FirehoseUpdateDestinationFuture {
+func (a *stub) UpdateDestinationAsync(ctx workflow.Context, input *firehose.UpdateDestinationInput) *UpdateDestinationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.firehose.UpdateDestination", input)
-	return &FirehoseUpdateDestinationFuture{Future: future}
+	return &UpdateDestinationFuture{Future: future}
 }

@@ -16,34 +16,34 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type PersonalizeEventsPutEventsFuture struct {
+type PutEventsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PersonalizeEventsPutEventsFuture) Get(ctx workflow.Context) (*personalizeevents.PutEventsOutput, error) {
+func (r *PutEventsFuture) Get(ctx workflow.Context) (*personalizeevents.PutEventsOutput, error) {
 	var output personalizeevents.PutEventsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeEventsPutItemsFuture struct {
+type PutItemsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PersonalizeEventsPutItemsFuture) Get(ctx workflow.Context) (*personalizeevents.PutItemsOutput, error) {
+func (r *PutItemsFuture) Get(ctx workflow.Context) (*personalizeevents.PutItemsOutput, error) {
 	var output personalizeevents.PutItemsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeEventsPutUsersFuture struct {
+type PutUsersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PersonalizeEventsPutUsersFuture) Get(ctx workflow.Context) (*personalizeevents.PutUsersOutput, error) {
+func (r *PutUsersFuture) Get(ctx workflow.Context) (*personalizeevents.PutUsersOutput, error) {
 	var output personalizeevents.PutUsersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -55,9 +55,9 @@ func (a *stub) PutEvents(ctx workflow.Context, input *personalizeevents.PutEvent
 	return &output, err
 }
 
-func (a *stub) PutEventsAsync(ctx workflow.Context, input *personalizeevents.PutEventsInput) *PersonalizeEventsPutEventsFuture {
+func (a *stub) PutEventsAsync(ctx workflow.Context, input *personalizeevents.PutEventsInput) *PutEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalizeevents.PutEvents", input)
-	return &PersonalizeEventsPutEventsFuture{Future: future}
+	return &PutEventsFuture{Future: future}
 }
 
 func (a *stub) PutItems(ctx workflow.Context, input *personalizeevents.PutItemsInput) (*personalizeevents.PutItemsOutput, error) {
@@ -66,9 +66,9 @@ func (a *stub) PutItems(ctx workflow.Context, input *personalizeevents.PutItemsI
 	return &output, err
 }
 
-func (a *stub) PutItemsAsync(ctx workflow.Context, input *personalizeevents.PutItemsInput) *PersonalizeEventsPutItemsFuture {
+func (a *stub) PutItemsAsync(ctx workflow.Context, input *personalizeevents.PutItemsInput) *PutItemsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalizeevents.PutItems", input)
-	return &PersonalizeEventsPutItemsFuture{Future: future}
+	return &PutItemsFuture{Future: future}
 }
 
 func (a *stub) PutUsers(ctx workflow.Context, input *personalizeevents.PutUsersInput) (*personalizeevents.PutUsersOutput, error) {
@@ -77,7 +77,7 @@ func (a *stub) PutUsers(ctx workflow.Context, input *personalizeevents.PutUsersI
 	return &output, err
 }
 
-func (a *stub) PutUsersAsync(ctx workflow.Context, input *personalizeevents.PutUsersInput) *PersonalizeEventsPutUsersFuture {
+func (a *stub) PutUsersAsync(ctx workflow.Context, input *personalizeevents.PutUsersInput) *PutUsersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalizeevents.PutUsers", input)
-	return &PersonalizeEventsPutUsersFuture{Future: future}
+	return &PutUsersFuture{Future: future}
 }

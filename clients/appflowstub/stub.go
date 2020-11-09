@@ -16,199 +16,199 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type AppflowCreateConnectorProfileFuture struct {
+type CreateConnectorProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowCreateConnectorProfileFuture) Get(ctx workflow.Context) (*appflow.CreateConnectorProfileOutput, error) {
+func (r *CreateConnectorProfileFuture) Get(ctx workflow.Context) (*appflow.CreateConnectorProfileOutput, error) {
 	var output appflow.CreateConnectorProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppflowCreateFlowFuture struct {
+type CreateFlowFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowCreateFlowFuture) Get(ctx workflow.Context) (*appflow.CreateFlowOutput, error) {
+func (r *CreateFlowFuture) Get(ctx workflow.Context) (*appflow.CreateFlowOutput, error) {
 	var output appflow.CreateFlowOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppflowDeleteConnectorProfileFuture struct {
+type DeleteConnectorProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowDeleteConnectorProfileFuture) Get(ctx workflow.Context) (*appflow.DeleteConnectorProfileOutput, error) {
+func (r *DeleteConnectorProfileFuture) Get(ctx workflow.Context) (*appflow.DeleteConnectorProfileOutput, error) {
 	var output appflow.DeleteConnectorProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppflowDeleteFlowFuture struct {
+type DeleteFlowFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowDeleteFlowFuture) Get(ctx workflow.Context) (*appflow.DeleteFlowOutput, error) {
+func (r *DeleteFlowFuture) Get(ctx workflow.Context) (*appflow.DeleteFlowOutput, error) {
 	var output appflow.DeleteFlowOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppflowDescribeConnectorEntityFuture struct {
+type DescribeConnectorEntityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowDescribeConnectorEntityFuture) Get(ctx workflow.Context) (*appflow.DescribeConnectorEntityOutput, error) {
+func (r *DescribeConnectorEntityFuture) Get(ctx workflow.Context) (*appflow.DescribeConnectorEntityOutput, error) {
 	var output appflow.DescribeConnectorEntityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppflowDescribeConnectorProfilesFuture struct {
+type DescribeConnectorProfilesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowDescribeConnectorProfilesFuture) Get(ctx workflow.Context) (*appflow.DescribeConnectorProfilesOutput, error) {
+func (r *DescribeConnectorProfilesFuture) Get(ctx workflow.Context) (*appflow.DescribeConnectorProfilesOutput, error) {
 	var output appflow.DescribeConnectorProfilesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppflowDescribeConnectorsFuture struct {
+type DescribeConnectorsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowDescribeConnectorsFuture) Get(ctx workflow.Context) (*appflow.DescribeConnectorsOutput, error) {
+func (r *DescribeConnectorsFuture) Get(ctx workflow.Context) (*appflow.DescribeConnectorsOutput, error) {
 	var output appflow.DescribeConnectorsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppflowDescribeFlowFuture struct {
+type DescribeFlowFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowDescribeFlowFuture) Get(ctx workflow.Context) (*appflow.DescribeFlowOutput, error) {
+func (r *DescribeFlowFuture) Get(ctx workflow.Context) (*appflow.DescribeFlowOutput, error) {
 	var output appflow.DescribeFlowOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppflowDescribeFlowExecutionRecordsFuture struct {
+type DescribeFlowExecutionRecordsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowDescribeFlowExecutionRecordsFuture) Get(ctx workflow.Context) (*appflow.DescribeFlowExecutionRecordsOutput, error) {
+func (r *DescribeFlowExecutionRecordsFuture) Get(ctx workflow.Context) (*appflow.DescribeFlowExecutionRecordsOutput, error) {
 	var output appflow.DescribeFlowExecutionRecordsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppflowListConnectorEntitiesFuture struct {
+type ListConnectorEntitiesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowListConnectorEntitiesFuture) Get(ctx workflow.Context) (*appflow.ListConnectorEntitiesOutput, error) {
+func (r *ListConnectorEntitiesFuture) Get(ctx workflow.Context) (*appflow.ListConnectorEntitiesOutput, error) {
 	var output appflow.ListConnectorEntitiesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppflowListFlowsFuture struct {
+type ListFlowsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowListFlowsFuture) Get(ctx workflow.Context) (*appflow.ListFlowsOutput, error) {
+func (r *ListFlowsFuture) Get(ctx workflow.Context) (*appflow.ListFlowsOutput, error) {
 	var output appflow.ListFlowsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppflowListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowListTagsForResourceFuture) Get(ctx workflow.Context) (*appflow.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*appflow.ListTagsForResourceOutput, error) {
 	var output appflow.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppflowStartFlowFuture struct {
+type StartFlowFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowStartFlowFuture) Get(ctx workflow.Context) (*appflow.StartFlowOutput, error) {
+func (r *StartFlowFuture) Get(ctx workflow.Context) (*appflow.StartFlowOutput, error) {
 	var output appflow.StartFlowOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppflowStopFlowFuture struct {
+type StopFlowFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowStopFlowFuture) Get(ctx workflow.Context) (*appflow.StopFlowOutput, error) {
+func (r *StopFlowFuture) Get(ctx workflow.Context) (*appflow.StopFlowOutput, error) {
 	var output appflow.StopFlowOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppflowTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowTagResourceFuture) Get(ctx workflow.Context) (*appflow.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*appflow.TagResourceOutput, error) {
 	var output appflow.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppflowUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowUntagResourceFuture) Get(ctx workflow.Context) (*appflow.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*appflow.UntagResourceOutput, error) {
 	var output appflow.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppflowUpdateConnectorProfileFuture struct {
+type UpdateConnectorProfileFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowUpdateConnectorProfileFuture) Get(ctx workflow.Context) (*appflow.UpdateConnectorProfileOutput, error) {
+func (r *UpdateConnectorProfileFuture) Get(ctx workflow.Context) (*appflow.UpdateConnectorProfileOutput, error) {
 	var output appflow.UpdateConnectorProfileOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type AppflowUpdateFlowFuture struct {
+type UpdateFlowFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *AppflowUpdateFlowFuture) Get(ctx workflow.Context) (*appflow.UpdateFlowOutput, error) {
+func (r *UpdateFlowFuture) Get(ctx workflow.Context) (*appflow.UpdateFlowOutput, error) {
 	var output appflow.UpdateFlowOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -220,9 +220,9 @@ func (a *stub) CreateConnectorProfile(ctx workflow.Context, input *appflow.Creat
 	return &output, err
 }
 
-func (a *stub) CreateConnectorProfileAsync(ctx workflow.Context, input *appflow.CreateConnectorProfileInput) *AppflowCreateConnectorProfileFuture {
+func (a *stub) CreateConnectorProfileAsync(ctx workflow.Context, input *appflow.CreateConnectorProfileInput) *CreateConnectorProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.CreateConnectorProfile", input)
-	return &AppflowCreateConnectorProfileFuture{Future: future}
+	return &CreateConnectorProfileFuture{Future: future}
 }
 
 func (a *stub) CreateFlow(ctx workflow.Context, input *appflow.CreateFlowInput) (*appflow.CreateFlowOutput, error) {
@@ -231,9 +231,9 @@ func (a *stub) CreateFlow(ctx workflow.Context, input *appflow.CreateFlowInput) 
 	return &output, err
 }
 
-func (a *stub) CreateFlowAsync(ctx workflow.Context, input *appflow.CreateFlowInput) *AppflowCreateFlowFuture {
+func (a *stub) CreateFlowAsync(ctx workflow.Context, input *appflow.CreateFlowInput) *CreateFlowFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.CreateFlow", input)
-	return &AppflowCreateFlowFuture{Future: future}
+	return &CreateFlowFuture{Future: future}
 }
 
 func (a *stub) DeleteConnectorProfile(ctx workflow.Context, input *appflow.DeleteConnectorProfileInput) (*appflow.DeleteConnectorProfileOutput, error) {
@@ -242,9 +242,9 @@ func (a *stub) DeleteConnectorProfile(ctx workflow.Context, input *appflow.Delet
 	return &output, err
 }
 
-func (a *stub) DeleteConnectorProfileAsync(ctx workflow.Context, input *appflow.DeleteConnectorProfileInput) *AppflowDeleteConnectorProfileFuture {
+func (a *stub) DeleteConnectorProfileAsync(ctx workflow.Context, input *appflow.DeleteConnectorProfileInput) *DeleteConnectorProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.DeleteConnectorProfile", input)
-	return &AppflowDeleteConnectorProfileFuture{Future: future}
+	return &DeleteConnectorProfileFuture{Future: future}
 }
 
 func (a *stub) DeleteFlow(ctx workflow.Context, input *appflow.DeleteFlowInput) (*appflow.DeleteFlowOutput, error) {
@@ -253,9 +253,9 @@ func (a *stub) DeleteFlow(ctx workflow.Context, input *appflow.DeleteFlowInput) 
 	return &output, err
 }
 
-func (a *stub) DeleteFlowAsync(ctx workflow.Context, input *appflow.DeleteFlowInput) *AppflowDeleteFlowFuture {
+func (a *stub) DeleteFlowAsync(ctx workflow.Context, input *appflow.DeleteFlowInput) *DeleteFlowFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.DeleteFlow", input)
-	return &AppflowDeleteFlowFuture{Future: future}
+	return &DeleteFlowFuture{Future: future}
 }
 
 func (a *stub) DescribeConnectorEntity(ctx workflow.Context, input *appflow.DescribeConnectorEntityInput) (*appflow.DescribeConnectorEntityOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) DescribeConnectorEntity(ctx workflow.Context, input *appflow.Desc
 	return &output, err
 }
 
-func (a *stub) DescribeConnectorEntityAsync(ctx workflow.Context, input *appflow.DescribeConnectorEntityInput) *AppflowDescribeConnectorEntityFuture {
+func (a *stub) DescribeConnectorEntityAsync(ctx workflow.Context, input *appflow.DescribeConnectorEntityInput) *DescribeConnectorEntityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.DescribeConnectorEntity", input)
-	return &AppflowDescribeConnectorEntityFuture{Future: future}
+	return &DescribeConnectorEntityFuture{Future: future}
 }
 
 func (a *stub) DescribeConnectorProfiles(ctx workflow.Context, input *appflow.DescribeConnectorProfilesInput) (*appflow.DescribeConnectorProfilesOutput, error) {
@@ -275,9 +275,9 @@ func (a *stub) DescribeConnectorProfiles(ctx workflow.Context, input *appflow.De
 	return &output, err
 }
 
-func (a *stub) DescribeConnectorProfilesAsync(ctx workflow.Context, input *appflow.DescribeConnectorProfilesInput) *AppflowDescribeConnectorProfilesFuture {
+func (a *stub) DescribeConnectorProfilesAsync(ctx workflow.Context, input *appflow.DescribeConnectorProfilesInput) *DescribeConnectorProfilesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.DescribeConnectorProfiles", input)
-	return &AppflowDescribeConnectorProfilesFuture{Future: future}
+	return &DescribeConnectorProfilesFuture{Future: future}
 }
 
 func (a *stub) DescribeConnectors(ctx workflow.Context, input *appflow.DescribeConnectorsInput) (*appflow.DescribeConnectorsOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) DescribeConnectors(ctx workflow.Context, input *appflow.DescribeC
 	return &output, err
 }
 
-func (a *stub) DescribeConnectorsAsync(ctx workflow.Context, input *appflow.DescribeConnectorsInput) *AppflowDescribeConnectorsFuture {
+func (a *stub) DescribeConnectorsAsync(ctx workflow.Context, input *appflow.DescribeConnectorsInput) *DescribeConnectorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.DescribeConnectors", input)
-	return &AppflowDescribeConnectorsFuture{Future: future}
+	return &DescribeConnectorsFuture{Future: future}
 }
 
 func (a *stub) DescribeFlow(ctx workflow.Context, input *appflow.DescribeFlowInput) (*appflow.DescribeFlowOutput, error) {
@@ -297,9 +297,9 @@ func (a *stub) DescribeFlow(ctx workflow.Context, input *appflow.DescribeFlowInp
 	return &output, err
 }
 
-func (a *stub) DescribeFlowAsync(ctx workflow.Context, input *appflow.DescribeFlowInput) *AppflowDescribeFlowFuture {
+func (a *stub) DescribeFlowAsync(ctx workflow.Context, input *appflow.DescribeFlowInput) *DescribeFlowFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.DescribeFlow", input)
-	return &AppflowDescribeFlowFuture{Future: future}
+	return &DescribeFlowFuture{Future: future}
 }
 
 func (a *stub) DescribeFlowExecutionRecords(ctx workflow.Context, input *appflow.DescribeFlowExecutionRecordsInput) (*appflow.DescribeFlowExecutionRecordsOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) DescribeFlowExecutionRecords(ctx workflow.Context, input *appflow
 	return &output, err
 }
 
-func (a *stub) DescribeFlowExecutionRecordsAsync(ctx workflow.Context, input *appflow.DescribeFlowExecutionRecordsInput) *AppflowDescribeFlowExecutionRecordsFuture {
+func (a *stub) DescribeFlowExecutionRecordsAsync(ctx workflow.Context, input *appflow.DescribeFlowExecutionRecordsInput) *DescribeFlowExecutionRecordsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.DescribeFlowExecutionRecords", input)
-	return &AppflowDescribeFlowExecutionRecordsFuture{Future: future}
+	return &DescribeFlowExecutionRecordsFuture{Future: future}
 }
 
 func (a *stub) ListConnectorEntities(ctx workflow.Context, input *appflow.ListConnectorEntitiesInput) (*appflow.ListConnectorEntitiesOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) ListConnectorEntities(ctx workflow.Context, input *appflow.ListCo
 	return &output, err
 }
 
-func (a *stub) ListConnectorEntitiesAsync(ctx workflow.Context, input *appflow.ListConnectorEntitiesInput) *AppflowListConnectorEntitiesFuture {
+func (a *stub) ListConnectorEntitiesAsync(ctx workflow.Context, input *appflow.ListConnectorEntitiesInput) *ListConnectorEntitiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.ListConnectorEntities", input)
-	return &AppflowListConnectorEntitiesFuture{Future: future}
+	return &ListConnectorEntitiesFuture{Future: future}
 }
 
 func (a *stub) ListFlows(ctx workflow.Context, input *appflow.ListFlowsInput) (*appflow.ListFlowsOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) ListFlows(ctx workflow.Context, input *appflow.ListFlowsInput) (*
 	return &output, err
 }
 
-func (a *stub) ListFlowsAsync(ctx workflow.Context, input *appflow.ListFlowsInput) *AppflowListFlowsFuture {
+func (a *stub) ListFlowsAsync(ctx workflow.Context, input *appflow.ListFlowsInput) *ListFlowsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.ListFlows", input)
-	return &AppflowListFlowsFuture{Future: future}
+	return &ListFlowsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *appflow.ListTagsForResourceInput) (*appflow.ListTagsForResourceOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *appflow.ListTags
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *appflow.ListTagsForResourceInput) *AppflowListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *appflow.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.ListTagsForResource", input)
-	return &AppflowListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) StartFlow(ctx workflow.Context, input *appflow.StartFlowInput) (*appflow.StartFlowOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) StartFlow(ctx workflow.Context, input *appflow.StartFlowInput) (*
 	return &output, err
 }
 
-func (a *stub) StartFlowAsync(ctx workflow.Context, input *appflow.StartFlowInput) *AppflowStartFlowFuture {
+func (a *stub) StartFlowAsync(ctx workflow.Context, input *appflow.StartFlowInput) *StartFlowFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.StartFlow", input)
-	return &AppflowStartFlowFuture{Future: future}
+	return &StartFlowFuture{Future: future}
 }
 
 func (a *stub) StopFlow(ctx workflow.Context, input *appflow.StopFlowInput) (*appflow.StopFlowOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) StopFlow(ctx workflow.Context, input *appflow.StopFlowInput) (*ap
 	return &output, err
 }
 
-func (a *stub) StopFlowAsync(ctx workflow.Context, input *appflow.StopFlowInput) *AppflowStopFlowFuture {
+func (a *stub) StopFlowAsync(ctx workflow.Context, input *appflow.StopFlowInput) *StopFlowFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.StopFlow", input)
-	return &AppflowStopFlowFuture{Future: future}
+	return &StopFlowFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *appflow.TagResourceInput) (*appflow.TagResourceOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *appflow.TagResourceInput
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *appflow.TagResourceInput) *AppflowTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *appflow.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.TagResource", input)
-	return &AppflowTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *appflow.UntagResourceInput) (*appflow.UntagResourceOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *appflow.UntagResourceI
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *appflow.UntagResourceInput) *AppflowUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *appflow.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.UntagResource", input)
-	return &AppflowUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateConnectorProfile(ctx workflow.Context, input *appflow.UpdateConnectorProfileInput) (*appflow.UpdateConnectorProfileOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) UpdateConnectorProfile(ctx workflow.Context, input *appflow.Updat
 	return &output, err
 }
 
-func (a *stub) UpdateConnectorProfileAsync(ctx workflow.Context, input *appflow.UpdateConnectorProfileInput) *AppflowUpdateConnectorProfileFuture {
+func (a *stub) UpdateConnectorProfileAsync(ctx workflow.Context, input *appflow.UpdateConnectorProfileInput) *UpdateConnectorProfileFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.UpdateConnectorProfile", input)
-	return &AppflowUpdateConnectorProfileFuture{Future: future}
+	return &UpdateConnectorProfileFuture{Future: future}
 }
 
 func (a *stub) UpdateFlow(ctx workflow.Context, input *appflow.UpdateFlowInput) (*appflow.UpdateFlowOutput, error) {
@@ -407,7 +407,7 @@ func (a *stub) UpdateFlow(ctx workflow.Context, input *appflow.UpdateFlowInput) 
 	return &output, err
 }
 
-func (a *stub) UpdateFlowAsync(ctx workflow.Context, input *appflow.UpdateFlowInput) *AppflowUpdateFlowFuture {
+func (a *stub) UpdateFlowAsync(ctx workflow.Context, input *appflow.UpdateFlowInput) *UpdateFlowFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.appflow.UpdateFlow", input)
-	return &AppflowUpdateFlowFuture{Future: future}
+	return &UpdateFlowFuture{Future: future}
 }

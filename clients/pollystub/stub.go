@@ -16,100 +16,100 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type PollyDeleteLexiconFuture struct {
+type DeleteLexiconFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PollyDeleteLexiconFuture) Get(ctx workflow.Context) (*polly.DeleteLexiconOutput, error) {
+func (r *DeleteLexiconFuture) Get(ctx workflow.Context) (*polly.DeleteLexiconOutput, error) {
 	var output polly.DeleteLexiconOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PollyDescribeVoicesFuture struct {
+type DescribeVoicesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PollyDescribeVoicesFuture) Get(ctx workflow.Context) (*polly.DescribeVoicesOutput, error) {
+func (r *DescribeVoicesFuture) Get(ctx workflow.Context) (*polly.DescribeVoicesOutput, error) {
 	var output polly.DescribeVoicesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PollyGetLexiconFuture struct {
+type GetLexiconFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PollyGetLexiconFuture) Get(ctx workflow.Context) (*polly.GetLexiconOutput, error) {
+func (r *GetLexiconFuture) Get(ctx workflow.Context) (*polly.GetLexiconOutput, error) {
 	var output polly.GetLexiconOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PollyGetSpeechSynthesisTaskFuture struct {
+type GetSpeechSynthesisTaskFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PollyGetSpeechSynthesisTaskFuture) Get(ctx workflow.Context) (*polly.GetSpeechSynthesisTaskOutput, error) {
+func (r *GetSpeechSynthesisTaskFuture) Get(ctx workflow.Context) (*polly.GetSpeechSynthesisTaskOutput, error) {
 	var output polly.GetSpeechSynthesisTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PollyListLexiconsFuture struct {
+type ListLexiconsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PollyListLexiconsFuture) Get(ctx workflow.Context) (*polly.ListLexiconsOutput, error) {
+func (r *ListLexiconsFuture) Get(ctx workflow.Context) (*polly.ListLexiconsOutput, error) {
 	var output polly.ListLexiconsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PollyListSpeechSynthesisTasksFuture struct {
+type ListSpeechSynthesisTasksFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PollyListSpeechSynthesisTasksFuture) Get(ctx workflow.Context) (*polly.ListSpeechSynthesisTasksOutput, error) {
+func (r *ListSpeechSynthesisTasksFuture) Get(ctx workflow.Context) (*polly.ListSpeechSynthesisTasksOutput, error) {
 	var output polly.ListSpeechSynthesisTasksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PollyPutLexiconFuture struct {
+type PutLexiconFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PollyPutLexiconFuture) Get(ctx workflow.Context) (*polly.PutLexiconOutput, error) {
+func (r *PutLexiconFuture) Get(ctx workflow.Context) (*polly.PutLexiconOutput, error) {
 	var output polly.PutLexiconOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PollyStartSpeechSynthesisTaskFuture struct {
+type StartSpeechSynthesisTaskFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PollyStartSpeechSynthesisTaskFuture) Get(ctx workflow.Context) (*polly.StartSpeechSynthesisTaskOutput, error) {
+func (r *StartSpeechSynthesisTaskFuture) Get(ctx workflow.Context) (*polly.StartSpeechSynthesisTaskOutput, error) {
 	var output polly.StartSpeechSynthesisTaskOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PollySynthesizeSpeechFuture struct {
+type SynthesizeSpeechFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PollySynthesizeSpeechFuture) Get(ctx workflow.Context) (*polly.SynthesizeSpeechOutput, error) {
+func (r *SynthesizeSpeechFuture) Get(ctx workflow.Context) (*polly.SynthesizeSpeechOutput, error) {
 	var output polly.SynthesizeSpeechOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -121,9 +121,9 @@ func (a *stub) DeleteLexicon(ctx workflow.Context, input *polly.DeleteLexiconInp
 	return &output, err
 }
 
-func (a *stub) DeleteLexiconAsync(ctx workflow.Context, input *polly.DeleteLexiconInput) *PollyDeleteLexiconFuture {
+func (a *stub) DeleteLexiconAsync(ctx workflow.Context, input *polly.DeleteLexiconInput) *DeleteLexiconFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.polly.DeleteLexicon", input)
-	return &PollyDeleteLexiconFuture{Future: future}
+	return &DeleteLexiconFuture{Future: future}
 }
 
 func (a *stub) DescribeVoices(ctx workflow.Context, input *polly.DescribeVoicesInput) (*polly.DescribeVoicesOutput, error) {
@@ -132,9 +132,9 @@ func (a *stub) DescribeVoices(ctx workflow.Context, input *polly.DescribeVoicesI
 	return &output, err
 }
 
-func (a *stub) DescribeVoicesAsync(ctx workflow.Context, input *polly.DescribeVoicesInput) *PollyDescribeVoicesFuture {
+func (a *stub) DescribeVoicesAsync(ctx workflow.Context, input *polly.DescribeVoicesInput) *DescribeVoicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.polly.DescribeVoices", input)
-	return &PollyDescribeVoicesFuture{Future: future}
+	return &DescribeVoicesFuture{Future: future}
 }
 
 func (a *stub) GetLexicon(ctx workflow.Context, input *polly.GetLexiconInput) (*polly.GetLexiconOutput, error) {
@@ -143,9 +143,9 @@ func (a *stub) GetLexicon(ctx workflow.Context, input *polly.GetLexiconInput) (*
 	return &output, err
 }
 
-func (a *stub) GetLexiconAsync(ctx workflow.Context, input *polly.GetLexiconInput) *PollyGetLexiconFuture {
+func (a *stub) GetLexiconAsync(ctx workflow.Context, input *polly.GetLexiconInput) *GetLexiconFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.polly.GetLexicon", input)
-	return &PollyGetLexiconFuture{Future: future}
+	return &GetLexiconFuture{Future: future}
 }
 
 func (a *stub) GetSpeechSynthesisTask(ctx workflow.Context, input *polly.GetSpeechSynthesisTaskInput) (*polly.GetSpeechSynthesisTaskOutput, error) {
@@ -154,9 +154,9 @@ func (a *stub) GetSpeechSynthesisTask(ctx workflow.Context, input *polly.GetSpee
 	return &output, err
 }
 
-func (a *stub) GetSpeechSynthesisTaskAsync(ctx workflow.Context, input *polly.GetSpeechSynthesisTaskInput) *PollyGetSpeechSynthesisTaskFuture {
+func (a *stub) GetSpeechSynthesisTaskAsync(ctx workflow.Context, input *polly.GetSpeechSynthesisTaskInput) *GetSpeechSynthesisTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.polly.GetSpeechSynthesisTask", input)
-	return &PollyGetSpeechSynthesisTaskFuture{Future: future}
+	return &GetSpeechSynthesisTaskFuture{Future: future}
 }
 
 func (a *stub) ListLexicons(ctx workflow.Context, input *polly.ListLexiconsInput) (*polly.ListLexiconsOutput, error) {
@@ -165,9 +165,9 @@ func (a *stub) ListLexicons(ctx workflow.Context, input *polly.ListLexiconsInput
 	return &output, err
 }
 
-func (a *stub) ListLexiconsAsync(ctx workflow.Context, input *polly.ListLexiconsInput) *PollyListLexiconsFuture {
+func (a *stub) ListLexiconsAsync(ctx workflow.Context, input *polly.ListLexiconsInput) *ListLexiconsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.polly.ListLexicons", input)
-	return &PollyListLexiconsFuture{Future: future}
+	return &ListLexiconsFuture{Future: future}
 }
 
 func (a *stub) ListSpeechSynthesisTasks(ctx workflow.Context, input *polly.ListSpeechSynthesisTasksInput) (*polly.ListSpeechSynthesisTasksOutput, error) {
@@ -176,9 +176,9 @@ func (a *stub) ListSpeechSynthesisTasks(ctx workflow.Context, input *polly.ListS
 	return &output, err
 }
 
-func (a *stub) ListSpeechSynthesisTasksAsync(ctx workflow.Context, input *polly.ListSpeechSynthesisTasksInput) *PollyListSpeechSynthesisTasksFuture {
+func (a *stub) ListSpeechSynthesisTasksAsync(ctx workflow.Context, input *polly.ListSpeechSynthesisTasksInput) *ListSpeechSynthesisTasksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.polly.ListSpeechSynthesisTasks", input)
-	return &PollyListSpeechSynthesisTasksFuture{Future: future}
+	return &ListSpeechSynthesisTasksFuture{Future: future}
 }
 
 func (a *stub) PutLexicon(ctx workflow.Context, input *polly.PutLexiconInput) (*polly.PutLexiconOutput, error) {
@@ -187,9 +187,9 @@ func (a *stub) PutLexicon(ctx workflow.Context, input *polly.PutLexiconInput) (*
 	return &output, err
 }
 
-func (a *stub) PutLexiconAsync(ctx workflow.Context, input *polly.PutLexiconInput) *PollyPutLexiconFuture {
+func (a *stub) PutLexiconAsync(ctx workflow.Context, input *polly.PutLexiconInput) *PutLexiconFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.polly.PutLexicon", input)
-	return &PollyPutLexiconFuture{Future: future}
+	return &PutLexiconFuture{Future: future}
 }
 
 func (a *stub) StartSpeechSynthesisTask(ctx workflow.Context, input *polly.StartSpeechSynthesisTaskInput) (*polly.StartSpeechSynthesisTaskOutput, error) {
@@ -198,9 +198,9 @@ func (a *stub) StartSpeechSynthesisTask(ctx workflow.Context, input *polly.Start
 	return &output, err
 }
 
-func (a *stub) StartSpeechSynthesisTaskAsync(ctx workflow.Context, input *polly.StartSpeechSynthesisTaskInput) *PollyStartSpeechSynthesisTaskFuture {
+func (a *stub) StartSpeechSynthesisTaskAsync(ctx workflow.Context, input *polly.StartSpeechSynthesisTaskInput) *StartSpeechSynthesisTaskFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.polly.StartSpeechSynthesisTask", input)
-	return &PollyStartSpeechSynthesisTaskFuture{Future: future}
+	return &StartSpeechSynthesisTaskFuture{Future: future}
 }
 
 func (a *stub) SynthesizeSpeech(ctx workflow.Context, input *polly.SynthesizeSpeechInput) (*polly.SynthesizeSpeechOutput, error) {
@@ -209,7 +209,7 @@ func (a *stub) SynthesizeSpeech(ctx workflow.Context, input *polly.SynthesizeSpe
 	return &output, err
 }
 
-func (a *stub) SynthesizeSpeechAsync(ctx workflow.Context, input *polly.SynthesizeSpeechInput) *PollySynthesizeSpeechFuture {
+func (a *stub) SynthesizeSpeechAsync(ctx workflow.Context, input *polly.SynthesizeSpeechInput) *SynthesizeSpeechFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.polly.SynthesizeSpeech", input)
-	return &PollySynthesizeSpeechFuture{Future: future}
+	return &SynthesizeSpeechFuture{Future: future}
 }

@@ -16,1013 +16,1013 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type RedshiftAcceptReservedNodeExchangeFuture struct {
+type AcceptReservedNodeExchangeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftAcceptReservedNodeExchangeFuture) Get(ctx workflow.Context) (*redshift.AcceptReservedNodeExchangeOutput, error) {
+func (r *AcceptReservedNodeExchangeFuture) Get(ctx workflow.Context) (*redshift.AcceptReservedNodeExchangeOutput, error) {
 	var output redshift.AcceptReservedNodeExchangeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftAuthorizeClusterSecurityGroupIngressFuture struct {
+type AuthorizeClusterSecurityGroupIngressFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftAuthorizeClusterSecurityGroupIngressFuture) Get(ctx workflow.Context) (*redshift.AuthorizeClusterSecurityGroupIngressOutput, error) {
+func (r *AuthorizeClusterSecurityGroupIngressFuture) Get(ctx workflow.Context) (*redshift.AuthorizeClusterSecurityGroupIngressOutput, error) {
 	var output redshift.AuthorizeClusterSecurityGroupIngressOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftAuthorizeSnapshotAccessFuture struct {
+type AuthorizeSnapshotAccessFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftAuthorizeSnapshotAccessFuture) Get(ctx workflow.Context) (*redshift.AuthorizeSnapshotAccessOutput, error) {
+func (r *AuthorizeSnapshotAccessFuture) Get(ctx workflow.Context) (*redshift.AuthorizeSnapshotAccessOutput, error) {
 	var output redshift.AuthorizeSnapshotAccessOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftBatchDeleteClusterSnapshotsFuture struct {
+type BatchDeleteClusterSnapshotsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftBatchDeleteClusterSnapshotsFuture) Get(ctx workflow.Context) (*redshift.BatchDeleteClusterSnapshotsOutput, error) {
+func (r *BatchDeleteClusterSnapshotsFuture) Get(ctx workflow.Context) (*redshift.BatchDeleteClusterSnapshotsOutput, error) {
 	var output redshift.BatchDeleteClusterSnapshotsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftBatchModifyClusterSnapshotsFuture struct {
+type BatchModifyClusterSnapshotsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftBatchModifyClusterSnapshotsFuture) Get(ctx workflow.Context) (*redshift.BatchModifyClusterSnapshotsOutput, error) {
+func (r *BatchModifyClusterSnapshotsFuture) Get(ctx workflow.Context) (*redshift.BatchModifyClusterSnapshotsOutput, error) {
 	var output redshift.BatchModifyClusterSnapshotsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftCancelResizeFuture struct {
+type CancelResizeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftCancelResizeFuture) Get(ctx workflow.Context) (*redshift.CancelResizeOutput, error) {
+func (r *CancelResizeFuture) Get(ctx workflow.Context) (*redshift.CancelResizeOutput, error) {
 	var output redshift.CancelResizeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftCopyClusterSnapshotFuture struct {
+type CopyClusterSnapshotFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftCopyClusterSnapshotFuture) Get(ctx workflow.Context) (*redshift.CopyClusterSnapshotOutput, error) {
+func (r *CopyClusterSnapshotFuture) Get(ctx workflow.Context) (*redshift.CopyClusterSnapshotOutput, error) {
 	var output redshift.CopyClusterSnapshotOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftCreateClusterFuture struct {
+type CreateClusterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftCreateClusterFuture) Get(ctx workflow.Context) (*redshift.CreateClusterOutput, error) {
+func (r *CreateClusterFuture) Get(ctx workflow.Context) (*redshift.CreateClusterOutput, error) {
 	var output redshift.CreateClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftCreateClusterParameterGroupFuture struct {
+type CreateClusterParameterGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftCreateClusterParameterGroupFuture) Get(ctx workflow.Context) (*redshift.CreateClusterParameterGroupOutput, error) {
+func (r *CreateClusterParameterGroupFuture) Get(ctx workflow.Context) (*redshift.CreateClusterParameterGroupOutput, error) {
 	var output redshift.CreateClusterParameterGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftCreateClusterSecurityGroupFuture struct {
+type CreateClusterSecurityGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftCreateClusterSecurityGroupFuture) Get(ctx workflow.Context) (*redshift.CreateClusterSecurityGroupOutput, error) {
+func (r *CreateClusterSecurityGroupFuture) Get(ctx workflow.Context) (*redshift.CreateClusterSecurityGroupOutput, error) {
 	var output redshift.CreateClusterSecurityGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftCreateClusterSnapshotFuture struct {
+type CreateClusterSnapshotFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftCreateClusterSnapshotFuture) Get(ctx workflow.Context) (*redshift.CreateClusterSnapshotOutput, error) {
+func (r *CreateClusterSnapshotFuture) Get(ctx workflow.Context) (*redshift.CreateClusterSnapshotOutput, error) {
 	var output redshift.CreateClusterSnapshotOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftCreateClusterSubnetGroupFuture struct {
+type CreateClusterSubnetGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftCreateClusterSubnetGroupFuture) Get(ctx workflow.Context) (*redshift.CreateClusterSubnetGroupOutput, error) {
+func (r *CreateClusterSubnetGroupFuture) Get(ctx workflow.Context) (*redshift.CreateClusterSubnetGroupOutput, error) {
 	var output redshift.CreateClusterSubnetGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftCreateEventSubscriptionFuture struct {
+type CreateEventSubscriptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftCreateEventSubscriptionFuture) Get(ctx workflow.Context) (*redshift.CreateEventSubscriptionOutput, error) {
+func (r *CreateEventSubscriptionFuture) Get(ctx workflow.Context) (*redshift.CreateEventSubscriptionOutput, error) {
 	var output redshift.CreateEventSubscriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftCreateHsmClientCertificateFuture struct {
+type CreateHsmClientCertificateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftCreateHsmClientCertificateFuture) Get(ctx workflow.Context) (*redshift.CreateHsmClientCertificateOutput, error) {
+func (r *CreateHsmClientCertificateFuture) Get(ctx workflow.Context) (*redshift.CreateHsmClientCertificateOutput, error) {
 	var output redshift.CreateHsmClientCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftCreateHsmConfigurationFuture struct {
+type CreateHsmConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftCreateHsmConfigurationFuture) Get(ctx workflow.Context) (*redshift.CreateHsmConfigurationOutput, error) {
+func (r *CreateHsmConfigurationFuture) Get(ctx workflow.Context) (*redshift.CreateHsmConfigurationOutput, error) {
 	var output redshift.CreateHsmConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftCreateScheduledActionFuture struct {
+type CreateScheduledActionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftCreateScheduledActionFuture) Get(ctx workflow.Context) (*redshift.CreateScheduledActionOutput, error) {
+func (r *CreateScheduledActionFuture) Get(ctx workflow.Context) (*redshift.CreateScheduledActionOutput, error) {
 	var output redshift.CreateScheduledActionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftCreateSnapshotCopyGrantFuture struct {
+type CreateSnapshotCopyGrantFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftCreateSnapshotCopyGrantFuture) Get(ctx workflow.Context) (*redshift.CreateSnapshotCopyGrantOutput, error) {
+func (r *CreateSnapshotCopyGrantFuture) Get(ctx workflow.Context) (*redshift.CreateSnapshotCopyGrantOutput, error) {
 	var output redshift.CreateSnapshotCopyGrantOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftCreateSnapshotScheduleFuture struct {
+type CreateSnapshotScheduleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftCreateSnapshotScheduleFuture) Get(ctx workflow.Context) (*redshift.CreateSnapshotScheduleOutput, error) {
+func (r *CreateSnapshotScheduleFuture) Get(ctx workflow.Context) (*redshift.CreateSnapshotScheduleOutput, error) {
 	var output redshift.CreateSnapshotScheduleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftCreateTagsFuture struct {
+type CreateTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftCreateTagsFuture) Get(ctx workflow.Context) (*redshift.CreateTagsOutput, error) {
+func (r *CreateTagsFuture) Get(ctx workflow.Context) (*redshift.CreateTagsOutput, error) {
 	var output redshift.CreateTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftCreateUsageLimitFuture struct {
+type CreateUsageLimitFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftCreateUsageLimitFuture) Get(ctx workflow.Context) (*redshift.CreateUsageLimitOutput, error) {
+func (r *CreateUsageLimitFuture) Get(ctx workflow.Context) (*redshift.CreateUsageLimitOutput, error) {
 	var output redshift.CreateUsageLimitOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDeleteClusterFuture struct {
+type DeleteClusterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDeleteClusterFuture) Get(ctx workflow.Context) (*redshift.DeleteClusterOutput, error) {
+func (r *DeleteClusterFuture) Get(ctx workflow.Context) (*redshift.DeleteClusterOutput, error) {
 	var output redshift.DeleteClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDeleteClusterParameterGroupFuture struct {
+type DeleteClusterParameterGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDeleteClusterParameterGroupFuture) Get(ctx workflow.Context) (*redshift.DeleteClusterParameterGroupOutput, error) {
+func (r *DeleteClusterParameterGroupFuture) Get(ctx workflow.Context) (*redshift.DeleteClusterParameterGroupOutput, error) {
 	var output redshift.DeleteClusterParameterGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDeleteClusterSecurityGroupFuture struct {
+type DeleteClusterSecurityGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDeleteClusterSecurityGroupFuture) Get(ctx workflow.Context) (*redshift.DeleteClusterSecurityGroupOutput, error) {
+func (r *DeleteClusterSecurityGroupFuture) Get(ctx workflow.Context) (*redshift.DeleteClusterSecurityGroupOutput, error) {
 	var output redshift.DeleteClusterSecurityGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDeleteClusterSnapshotFuture struct {
+type DeleteClusterSnapshotFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDeleteClusterSnapshotFuture) Get(ctx workflow.Context) (*redshift.DeleteClusterSnapshotOutput, error) {
+func (r *DeleteClusterSnapshotFuture) Get(ctx workflow.Context) (*redshift.DeleteClusterSnapshotOutput, error) {
 	var output redshift.DeleteClusterSnapshotOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDeleteClusterSubnetGroupFuture struct {
+type DeleteClusterSubnetGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDeleteClusterSubnetGroupFuture) Get(ctx workflow.Context) (*redshift.DeleteClusterSubnetGroupOutput, error) {
+func (r *DeleteClusterSubnetGroupFuture) Get(ctx workflow.Context) (*redshift.DeleteClusterSubnetGroupOutput, error) {
 	var output redshift.DeleteClusterSubnetGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDeleteEventSubscriptionFuture struct {
+type DeleteEventSubscriptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDeleteEventSubscriptionFuture) Get(ctx workflow.Context) (*redshift.DeleteEventSubscriptionOutput, error) {
+func (r *DeleteEventSubscriptionFuture) Get(ctx workflow.Context) (*redshift.DeleteEventSubscriptionOutput, error) {
 	var output redshift.DeleteEventSubscriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDeleteHsmClientCertificateFuture struct {
+type DeleteHsmClientCertificateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDeleteHsmClientCertificateFuture) Get(ctx workflow.Context) (*redshift.DeleteHsmClientCertificateOutput, error) {
+func (r *DeleteHsmClientCertificateFuture) Get(ctx workflow.Context) (*redshift.DeleteHsmClientCertificateOutput, error) {
 	var output redshift.DeleteHsmClientCertificateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDeleteHsmConfigurationFuture struct {
+type DeleteHsmConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDeleteHsmConfigurationFuture) Get(ctx workflow.Context) (*redshift.DeleteHsmConfigurationOutput, error) {
+func (r *DeleteHsmConfigurationFuture) Get(ctx workflow.Context) (*redshift.DeleteHsmConfigurationOutput, error) {
 	var output redshift.DeleteHsmConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDeleteScheduledActionFuture struct {
+type DeleteScheduledActionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDeleteScheduledActionFuture) Get(ctx workflow.Context) (*redshift.DeleteScheduledActionOutput, error) {
+func (r *DeleteScheduledActionFuture) Get(ctx workflow.Context) (*redshift.DeleteScheduledActionOutput, error) {
 	var output redshift.DeleteScheduledActionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDeleteSnapshotCopyGrantFuture struct {
+type DeleteSnapshotCopyGrantFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDeleteSnapshotCopyGrantFuture) Get(ctx workflow.Context) (*redshift.DeleteSnapshotCopyGrantOutput, error) {
+func (r *DeleteSnapshotCopyGrantFuture) Get(ctx workflow.Context) (*redshift.DeleteSnapshotCopyGrantOutput, error) {
 	var output redshift.DeleteSnapshotCopyGrantOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDeleteSnapshotScheduleFuture struct {
+type DeleteSnapshotScheduleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDeleteSnapshotScheduleFuture) Get(ctx workflow.Context) (*redshift.DeleteSnapshotScheduleOutput, error) {
+func (r *DeleteSnapshotScheduleFuture) Get(ctx workflow.Context) (*redshift.DeleteSnapshotScheduleOutput, error) {
 	var output redshift.DeleteSnapshotScheduleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDeleteTagsFuture struct {
+type DeleteTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDeleteTagsFuture) Get(ctx workflow.Context) (*redshift.DeleteTagsOutput, error) {
+func (r *DeleteTagsFuture) Get(ctx workflow.Context) (*redshift.DeleteTagsOutput, error) {
 	var output redshift.DeleteTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDeleteUsageLimitFuture struct {
+type DeleteUsageLimitFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDeleteUsageLimitFuture) Get(ctx workflow.Context) (*redshift.DeleteUsageLimitOutput, error) {
+func (r *DeleteUsageLimitFuture) Get(ctx workflow.Context) (*redshift.DeleteUsageLimitOutput, error) {
 	var output redshift.DeleteUsageLimitOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeAccountAttributesFuture struct {
+type DescribeAccountAttributesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeAccountAttributesFuture) Get(ctx workflow.Context) (*redshift.DescribeAccountAttributesOutput, error) {
+func (r *DescribeAccountAttributesFuture) Get(ctx workflow.Context) (*redshift.DescribeAccountAttributesOutput, error) {
 	var output redshift.DescribeAccountAttributesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeClusterDbRevisionsFuture struct {
+type DescribeClusterDbRevisionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeClusterDbRevisionsFuture) Get(ctx workflow.Context) (*redshift.DescribeClusterDbRevisionsOutput, error) {
+func (r *DescribeClusterDbRevisionsFuture) Get(ctx workflow.Context) (*redshift.DescribeClusterDbRevisionsOutput, error) {
 	var output redshift.DescribeClusterDbRevisionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeClusterParameterGroupsFuture struct {
+type DescribeClusterParameterGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeClusterParameterGroupsFuture) Get(ctx workflow.Context) (*redshift.DescribeClusterParameterGroupsOutput, error) {
+func (r *DescribeClusterParameterGroupsFuture) Get(ctx workflow.Context) (*redshift.DescribeClusterParameterGroupsOutput, error) {
 	var output redshift.DescribeClusterParameterGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeClusterParametersFuture struct {
+type DescribeClusterParametersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeClusterParametersFuture) Get(ctx workflow.Context) (*redshift.DescribeClusterParametersOutput, error) {
+func (r *DescribeClusterParametersFuture) Get(ctx workflow.Context) (*redshift.DescribeClusterParametersOutput, error) {
 	var output redshift.DescribeClusterParametersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeClusterSecurityGroupsFuture struct {
+type DescribeClusterSecurityGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeClusterSecurityGroupsFuture) Get(ctx workflow.Context) (*redshift.DescribeClusterSecurityGroupsOutput, error) {
+func (r *DescribeClusterSecurityGroupsFuture) Get(ctx workflow.Context) (*redshift.DescribeClusterSecurityGroupsOutput, error) {
 	var output redshift.DescribeClusterSecurityGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeClusterSnapshotsFuture struct {
+type DescribeClusterSnapshotsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeClusterSnapshotsFuture) Get(ctx workflow.Context) (*redshift.DescribeClusterSnapshotsOutput, error) {
+func (r *DescribeClusterSnapshotsFuture) Get(ctx workflow.Context) (*redshift.DescribeClusterSnapshotsOutput, error) {
 	var output redshift.DescribeClusterSnapshotsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeClusterSubnetGroupsFuture struct {
+type DescribeClusterSubnetGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeClusterSubnetGroupsFuture) Get(ctx workflow.Context) (*redshift.DescribeClusterSubnetGroupsOutput, error) {
+func (r *DescribeClusterSubnetGroupsFuture) Get(ctx workflow.Context) (*redshift.DescribeClusterSubnetGroupsOutput, error) {
 	var output redshift.DescribeClusterSubnetGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeClusterTracksFuture struct {
+type DescribeClusterTracksFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeClusterTracksFuture) Get(ctx workflow.Context) (*redshift.DescribeClusterTracksOutput, error) {
+func (r *DescribeClusterTracksFuture) Get(ctx workflow.Context) (*redshift.DescribeClusterTracksOutput, error) {
 	var output redshift.DescribeClusterTracksOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeClusterVersionsFuture struct {
+type DescribeClusterVersionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeClusterVersionsFuture) Get(ctx workflow.Context) (*redshift.DescribeClusterVersionsOutput, error) {
+func (r *DescribeClusterVersionsFuture) Get(ctx workflow.Context) (*redshift.DescribeClusterVersionsOutput, error) {
 	var output redshift.DescribeClusterVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeClustersFuture struct {
+type DescribeClustersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeClustersFuture) Get(ctx workflow.Context) (*redshift.DescribeClustersOutput, error) {
+func (r *DescribeClustersFuture) Get(ctx workflow.Context) (*redshift.DescribeClustersOutput, error) {
 	var output redshift.DescribeClustersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeDefaultClusterParametersFuture struct {
+type DescribeDefaultClusterParametersFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeDefaultClusterParametersFuture) Get(ctx workflow.Context) (*redshift.DescribeDefaultClusterParametersOutput, error) {
+func (r *DescribeDefaultClusterParametersFuture) Get(ctx workflow.Context) (*redshift.DescribeDefaultClusterParametersOutput, error) {
 	var output redshift.DescribeDefaultClusterParametersOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeEventCategoriesFuture struct {
+type DescribeEventCategoriesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeEventCategoriesFuture) Get(ctx workflow.Context) (*redshift.DescribeEventCategoriesOutput, error) {
+func (r *DescribeEventCategoriesFuture) Get(ctx workflow.Context) (*redshift.DescribeEventCategoriesOutput, error) {
 	var output redshift.DescribeEventCategoriesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeEventSubscriptionsFuture struct {
+type DescribeEventSubscriptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeEventSubscriptionsFuture) Get(ctx workflow.Context) (*redshift.DescribeEventSubscriptionsOutput, error) {
+func (r *DescribeEventSubscriptionsFuture) Get(ctx workflow.Context) (*redshift.DescribeEventSubscriptionsOutput, error) {
 	var output redshift.DescribeEventSubscriptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeEventsFuture struct {
+type DescribeEventsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeEventsFuture) Get(ctx workflow.Context) (*redshift.DescribeEventsOutput, error) {
+func (r *DescribeEventsFuture) Get(ctx workflow.Context) (*redshift.DescribeEventsOutput, error) {
 	var output redshift.DescribeEventsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeHsmClientCertificatesFuture struct {
+type DescribeHsmClientCertificatesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeHsmClientCertificatesFuture) Get(ctx workflow.Context) (*redshift.DescribeHsmClientCertificatesOutput, error) {
+func (r *DescribeHsmClientCertificatesFuture) Get(ctx workflow.Context) (*redshift.DescribeHsmClientCertificatesOutput, error) {
 	var output redshift.DescribeHsmClientCertificatesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeHsmConfigurationsFuture struct {
+type DescribeHsmConfigurationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeHsmConfigurationsFuture) Get(ctx workflow.Context) (*redshift.DescribeHsmConfigurationsOutput, error) {
+func (r *DescribeHsmConfigurationsFuture) Get(ctx workflow.Context) (*redshift.DescribeHsmConfigurationsOutput, error) {
 	var output redshift.DescribeHsmConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeLoggingStatusFuture struct {
+type DescribeLoggingStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeLoggingStatusFuture) Get(ctx workflow.Context) (*redshift.LoggingStatus, error) {
+func (r *DescribeLoggingStatusFuture) Get(ctx workflow.Context) (*redshift.LoggingStatus, error) {
 	var output redshift.LoggingStatus
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeNodeConfigurationOptionsFuture struct {
+type DescribeNodeConfigurationOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeNodeConfigurationOptionsFuture) Get(ctx workflow.Context) (*redshift.DescribeNodeConfigurationOptionsOutput, error) {
+func (r *DescribeNodeConfigurationOptionsFuture) Get(ctx workflow.Context) (*redshift.DescribeNodeConfigurationOptionsOutput, error) {
 	var output redshift.DescribeNodeConfigurationOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeOrderableClusterOptionsFuture struct {
+type DescribeOrderableClusterOptionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeOrderableClusterOptionsFuture) Get(ctx workflow.Context) (*redshift.DescribeOrderableClusterOptionsOutput, error) {
+func (r *DescribeOrderableClusterOptionsFuture) Get(ctx workflow.Context) (*redshift.DescribeOrderableClusterOptionsOutput, error) {
 	var output redshift.DescribeOrderableClusterOptionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeReservedNodeOfferingsFuture struct {
+type DescribeReservedNodeOfferingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeReservedNodeOfferingsFuture) Get(ctx workflow.Context) (*redshift.DescribeReservedNodeOfferingsOutput, error) {
+func (r *DescribeReservedNodeOfferingsFuture) Get(ctx workflow.Context) (*redshift.DescribeReservedNodeOfferingsOutput, error) {
 	var output redshift.DescribeReservedNodeOfferingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeReservedNodesFuture struct {
+type DescribeReservedNodesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeReservedNodesFuture) Get(ctx workflow.Context) (*redshift.DescribeReservedNodesOutput, error) {
+func (r *DescribeReservedNodesFuture) Get(ctx workflow.Context) (*redshift.DescribeReservedNodesOutput, error) {
 	var output redshift.DescribeReservedNodesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeResizeFuture struct {
+type DescribeResizeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeResizeFuture) Get(ctx workflow.Context) (*redshift.DescribeResizeOutput, error) {
+func (r *DescribeResizeFuture) Get(ctx workflow.Context) (*redshift.DescribeResizeOutput, error) {
 	var output redshift.DescribeResizeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeScheduledActionsFuture struct {
+type DescribeScheduledActionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeScheduledActionsFuture) Get(ctx workflow.Context) (*redshift.DescribeScheduledActionsOutput, error) {
+func (r *DescribeScheduledActionsFuture) Get(ctx workflow.Context) (*redshift.DescribeScheduledActionsOutput, error) {
 	var output redshift.DescribeScheduledActionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeSnapshotCopyGrantsFuture struct {
+type DescribeSnapshotCopyGrantsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeSnapshotCopyGrantsFuture) Get(ctx workflow.Context) (*redshift.DescribeSnapshotCopyGrantsOutput, error) {
+func (r *DescribeSnapshotCopyGrantsFuture) Get(ctx workflow.Context) (*redshift.DescribeSnapshotCopyGrantsOutput, error) {
 	var output redshift.DescribeSnapshotCopyGrantsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeSnapshotSchedulesFuture struct {
+type DescribeSnapshotSchedulesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeSnapshotSchedulesFuture) Get(ctx workflow.Context) (*redshift.DescribeSnapshotSchedulesOutput, error) {
+func (r *DescribeSnapshotSchedulesFuture) Get(ctx workflow.Context) (*redshift.DescribeSnapshotSchedulesOutput, error) {
 	var output redshift.DescribeSnapshotSchedulesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeStorageFuture struct {
+type DescribeStorageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeStorageFuture) Get(ctx workflow.Context) (*redshift.DescribeStorageOutput, error) {
+func (r *DescribeStorageFuture) Get(ctx workflow.Context) (*redshift.DescribeStorageOutput, error) {
 	var output redshift.DescribeStorageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeTableRestoreStatusFuture struct {
+type DescribeTableRestoreStatusFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeTableRestoreStatusFuture) Get(ctx workflow.Context) (*redshift.DescribeTableRestoreStatusOutput, error) {
+func (r *DescribeTableRestoreStatusFuture) Get(ctx workflow.Context) (*redshift.DescribeTableRestoreStatusOutput, error) {
 	var output redshift.DescribeTableRestoreStatusOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeTagsFuture struct {
+type DescribeTagsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeTagsFuture) Get(ctx workflow.Context) (*redshift.DescribeTagsOutput, error) {
+func (r *DescribeTagsFuture) Get(ctx workflow.Context) (*redshift.DescribeTagsOutput, error) {
 	var output redshift.DescribeTagsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDescribeUsageLimitsFuture struct {
+type DescribeUsageLimitsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDescribeUsageLimitsFuture) Get(ctx workflow.Context) (*redshift.DescribeUsageLimitsOutput, error) {
+func (r *DescribeUsageLimitsFuture) Get(ctx workflow.Context) (*redshift.DescribeUsageLimitsOutput, error) {
 	var output redshift.DescribeUsageLimitsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDisableLoggingFuture struct {
+type DisableLoggingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDisableLoggingFuture) Get(ctx workflow.Context) (*redshift.LoggingStatus, error) {
+func (r *DisableLoggingFuture) Get(ctx workflow.Context) (*redshift.LoggingStatus, error) {
 	var output redshift.LoggingStatus
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftDisableSnapshotCopyFuture struct {
+type DisableSnapshotCopyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftDisableSnapshotCopyFuture) Get(ctx workflow.Context) (*redshift.DisableSnapshotCopyOutput, error) {
+func (r *DisableSnapshotCopyFuture) Get(ctx workflow.Context) (*redshift.DisableSnapshotCopyOutput, error) {
 	var output redshift.DisableSnapshotCopyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftEnableLoggingFuture struct {
+type EnableLoggingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftEnableLoggingFuture) Get(ctx workflow.Context) (*redshift.LoggingStatus, error) {
+func (r *EnableLoggingFuture) Get(ctx workflow.Context) (*redshift.LoggingStatus, error) {
 	var output redshift.LoggingStatus
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftEnableSnapshotCopyFuture struct {
+type EnableSnapshotCopyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftEnableSnapshotCopyFuture) Get(ctx workflow.Context) (*redshift.EnableSnapshotCopyOutput, error) {
+func (r *EnableSnapshotCopyFuture) Get(ctx workflow.Context) (*redshift.EnableSnapshotCopyOutput, error) {
 	var output redshift.EnableSnapshotCopyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftGetClusterCredentialsFuture struct {
+type GetClusterCredentialsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftGetClusterCredentialsFuture) Get(ctx workflow.Context) (*redshift.GetClusterCredentialsOutput, error) {
+func (r *GetClusterCredentialsFuture) Get(ctx workflow.Context) (*redshift.GetClusterCredentialsOutput, error) {
 	var output redshift.GetClusterCredentialsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftGetReservedNodeExchangeOfferingsFuture struct {
+type GetReservedNodeExchangeOfferingsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftGetReservedNodeExchangeOfferingsFuture) Get(ctx workflow.Context) (*redshift.GetReservedNodeExchangeOfferingsOutput, error) {
+func (r *GetReservedNodeExchangeOfferingsFuture) Get(ctx workflow.Context) (*redshift.GetReservedNodeExchangeOfferingsOutput, error) {
 	var output redshift.GetReservedNodeExchangeOfferingsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftModifyClusterFuture struct {
+type ModifyClusterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftModifyClusterFuture) Get(ctx workflow.Context) (*redshift.ModifyClusterOutput, error) {
+func (r *ModifyClusterFuture) Get(ctx workflow.Context) (*redshift.ModifyClusterOutput, error) {
 	var output redshift.ModifyClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftModifyClusterDbRevisionFuture struct {
+type ModifyClusterDbRevisionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftModifyClusterDbRevisionFuture) Get(ctx workflow.Context) (*redshift.ModifyClusterDbRevisionOutput, error) {
+func (r *ModifyClusterDbRevisionFuture) Get(ctx workflow.Context) (*redshift.ModifyClusterDbRevisionOutput, error) {
 	var output redshift.ModifyClusterDbRevisionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftModifyClusterIamRolesFuture struct {
+type ModifyClusterIamRolesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftModifyClusterIamRolesFuture) Get(ctx workflow.Context) (*redshift.ModifyClusterIamRolesOutput, error) {
+func (r *ModifyClusterIamRolesFuture) Get(ctx workflow.Context) (*redshift.ModifyClusterIamRolesOutput, error) {
 	var output redshift.ModifyClusterIamRolesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftModifyClusterMaintenanceFuture struct {
+type ModifyClusterMaintenanceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftModifyClusterMaintenanceFuture) Get(ctx workflow.Context) (*redshift.ModifyClusterMaintenanceOutput, error) {
+func (r *ModifyClusterMaintenanceFuture) Get(ctx workflow.Context) (*redshift.ModifyClusterMaintenanceOutput, error) {
 	var output redshift.ModifyClusterMaintenanceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftModifyClusterParameterGroupFuture struct {
+type ModifyClusterParameterGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftModifyClusterParameterGroupFuture) Get(ctx workflow.Context) (*redshift.ClusterParameterGroupNameMessage, error) {
+func (r *ModifyClusterParameterGroupFuture) Get(ctx workflow.Context) (*redshift.ClusterParameterGroupNameMessage, error) {
 	var output redshift.ClusterParameterGroupNameMessage
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftModifyClusterSnapshotFuture struct {
+type ModifyClusterSnapshotFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftModifyClusterSnapshotFuture) Get(ctx workflow.Context) (*redshift.ModifyClusterSnapshotOutput, error) {
+func (r *ModifyClusterSnapshotFuture) Get(ctx workflow.Context) (*redshift.ModifyClusterSnapshotOutput, error) {
 	var output redshift.ModifyClusterSnapshotOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftModifyClusterSnapshotScheduleFuture struct {
+type ModifyClusterSnapshotScheduleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftModifyClusterSnapshotScheduleFuture) Get(ctx workflow.Context) (*redshift.ModifyClusterSnapshotScheduleOutput, error) {
+func (r *ModifyClusterSnapshotScheduleFuture) Get(ctx workflow.Context) (*redshift.ModifyClusterSnapshotScheduleOutput, error) {
 	var output redshift.ModifyClusterSnapshotScheduleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftModifyClusterSubnetGroupFuture struct {
+type ModifyClusterSubnetGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftModifyClusterSubnetGroupFuture) Get(ctx workflow.Context) (*redshift.ModifyClusterSubnetGroupOutput, error) {
+func (r *ModifyClusterSubnetGroupFuture) Get(ctx workflow.Context) (*redshift.ModifyClusterSubnetGroupOutput, error) {
 	var output redshift.ModifyClusterSubnetGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftModifyEventSubscriptionFuture struct {
+type ModifyEventSubscriptionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftModifyEventSubscriptionFuture) Get(ctx workflow.Context) (*redshift.ModifyEventSubscriptionOutput, error) {
+func (r *ModifyEventSubscriptionFuture) Get(ctx workflow.Context) (*redshift.ModifyEventSubscriptionOutput, error) {
 	var output redshift.ModifyEventSubscriptionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftModifyScheduledActionFuture struct {
+type ModifyScheduledActionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftModifyScheduledActionFuture) Get(ctx workflow.Context) (*redshift.ModifyScheduledActionOutput, error) {
+func (r *ModifyScheduledActionFuture) Get(ctx workflow.Context) (*redshift.ModifyScheduledActionOutput, error) {
 	var output redshift.ModifyScheduledActionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftModifySnapshotCopyRetentionPeriodFuture struct {
+type ModifySnapshotCopyRetentionPeriodFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftModifySnapshotCopyRetentionPeriodFuture) Get(ctx workflow.Context) (*redshift.ModifySnapshotCopyRetentionPeriodOutput, error) {
+func (r *ModifySnapshotCopyRetentionPeriodFuture) Get(ctx workflow.Context) (*redshift.ModifySnapshotCopyRetentionPeriodOutput, error) {
 	var output redshift.ModifySnapshotCopyRetentionPeriodOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftModifySnapshotScheduleFuture struct {
+type ModifySnapshotScheduleFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftModifySnapshotScheduleFuture) Get(ctx workflow.Context) (*redshift.ModifySnapshotScheduleOutput, error) {
+func (r *ModifySnapshotScheduleFuture) Get(ctx workflow.Context) (*redshift.ModifySnapshotScheduleOutput, error) {
 	var output redshift.ModifySnapshotScheduleOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftModifyUsageLimitFuture struct {
+type ModifyUsageLimitFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftModifyUsageLimitFuture) Get(ctx workflow.Context) (*redshift.ModifyUsageLimitOutput, error) {
+func (r *ModifyUsageLimitFuture) Get(ctx workflow.Context) (*redshift.ModifyUsageLimitOutput, error) {
 	var output redshift.ModifyUsageLimitOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftPauseClusterFuture struct {
+type PauseClusterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftPauseClusterFuture) Get(ctx workflow.Context) (*redshift.PauseClusterOutput, error) {
+func (r *PauseClusterFuture) Get(ctx workflow.Context) (*redshift.PauseClusterOutput, error) {
 	var output redshift.PauseClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftPurchaseReservedNodeOfferingFuture struct {
+type PurchaseReservedNodeOfferingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftPurchaseReservedNodeOfferingFuture) Get(ctx workflow.Context) (*redshift.PurchaseReservedNodeOfferingOutput, error) {
+func (r *PurchaseReservedNodeOfferingFuture) Get(ctx workflow.Context) (*redshift.PurchaseReservedNodeOfferingOutput, error) {
 	var output redshift.PurchaseReservedNodeOfferingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftRebootClusterFuture struct {
+type RebootClusterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftRebootClusterFuture) Get(ctx workflow.Context) (*redshift.RebootClusterOutput, error) {
+func (r *RebootClusterFuture) Get(ctx workflow.Context) (*redshift.RebootClusterOutput, error) {
 	var output redshift.RebootClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftResetClusterParameterGroupFuture struct {
+type ResetClusterParameterGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftResetClusterParameterGroupFuture) Get(ctx workflow.Context) (*redshift.ClusterParameterGroupNameMessage, error) {
+func (r *ResetClusterParameterGroupFuture) Get(ctx workflow.Context) (*redshift.ClusterParameterGroupNameMessage, error) {
 	var output redshift.ClusterParameterGroupNameMessage
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftResizeClusterFuture struct {
+type ResizeClusterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftResizeClusterFuture) Get(ctx workflow.Context) (*redshift.ResizeClusterOutput, error) {
+func (r *ResizeClusterFuture) Get(ctx workflow.Context) (*redshift.ResizeClusterOutput, error) {
 	var output redshift.ResizeClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftRestoreFromClusterSnapshotFuture struct {
+type RestoreFromClusterSnapshotFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftRestoreFromClusterSnapshotFuture) Get(ctx workflow.Context) (*redshift.RestoreFromClusterSnapshotOutput, error) {
+func (r *RestoreFromClusterSnapshotFuture) Get(ctx workflow.Context) (*redshift.RestoreFromClusterSnapshotOutput, error) {
 	var output redshift.RestoreFromClusterSnapshotOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftRestoreTableFromClusterSnapshotFuture struct {
+type RestoreTableFromClusterSnapshotFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftRestoreTableFromClusterSnapshotFuture) Get(ctx workflow.Context) (*redshift.RestoreTableFromClusterSnapshotOutput, error) {
+func (r *RestoreTableFromClusterSnapshotFuture) Get(ctx workflow.Context) (*redshift.RestoreTableFromClusterSnapshotOutput, error) {
 	var output redshift.RestoreTableFromClusterSnapshotOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftResumeClusterFuture struct {
+type ResumeClusterFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftResumeClusterFuture) Get(ctx workflow.Context) (*redshift.ResumeClusterOutput, error) {
+func (r *ResumeClusterFuture) Get(ctx workflow.Context) (*redshift.ResumeClusterOutput, error) {
 	var output redshift.ResumeClusterOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftRevokeClusterSecurityGroupIngressFuture struct {
+type RevokeClusterSecurityGroupIngressFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftRevokeClusterSecurityGroupIngressFuture) Get(ctx workflow.Context) (*redshift.RevokeClusterSecurityGroupIngressOutput, error) {
+func (r *RevokeClusterSecurityGroupIngressFuture) Get(ctx workflow.Context) (*redshift.RevokeClusterSecurityGroupIngressOutput, error) {
 	var output redshift.RevokeClusterSecurityGroupIngressOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftRevokeSnapshotAccessFuture struct {
+type RevokeSnapshotAccessFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftRevokeSnapshotAccessFuture) Get(ctx workflow.Context) (*redshift.RevokeSnapshotAccessOutput, error) {
+func (r *RevokeSnapshotAccessFuture) Get(ctx workflow.Context) (*redshift.RevokeSnapshotAccessOutput, error) {
 	var output redshift.RevokeSnapshotAccessOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RedshiftRotateEncryptionKeyFuture struct {
+type RotateEncryptionKeyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RedshiftRotateEncryptionKeyFuture) Get(ctx workflow.Context) (*redshift.RotateEncryptionKeyOutput, error) {
+func (r *RotateEncryptionKeyFuture) Get(ctx workflow.Context) (*redshift.RotateEncryptionKeyOutput, error) {
 	var output redshift.RotateEncryptionKeyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -1034,9 +1034,9 @@ func (a *stub) AcceptReservedNodeExchange(ctx workflow.Context, input *redshift.
 	return &output, err
 }
 
-func (a *stub) AcceptReservedNodeExchangeAsync(ctx workflow.Context, input *redshift.AcceptReservedNodeExchangeInput) *RedshiftAcceptReservedNodeExchangeFuture {
+func (a *stub) AcceptReservedNodeExchangeAsync(ctx workflow.Context, input *redshift.AcceptReservedNodeExchangeInput) *AcceptReservedNodeExchangeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.AcceptReservedNodeExchange", input)
-	return &RedshiftAcceptReservedNodeExchangeFuture{Future: future}
+	return &AcceptReservedNodeExchangeFuture{Future: future}
 }
 
 func (a *stub) AuthorizeClusterSecurityGroupIngress(ctx workflow.Context, input *redshift.AuthorizeClusterSecurityGroupIngressInput) (*redshift.AuthorizeClusterSecurityGroupIngressOutput, error) {
@@ -1045,9 +1045,9 @@ func (a *stub) AuthorizeClusterSecurityGroupIngress(ctx workflow.Context, input 
 	return &output, err
 }
 
-func (a *stub) AuthorizeClusterSecurityGroupIngressAsync(ctx workflow.Context, input *redshift.AuthorizeClusterSecurityGroupIngressInput) *RedshiftAuthorizeClusterSecurityGroupIngressFuture {
+func (a *stub) AuthorizeClusterSecurityGroupIngressAsync(ctx workflow.Context, input *redshift.AuthorizeClusterSecurityGroupIngressInput) *AuthorizeClusterSecurityGroupIngressFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.AuthorizeClusterSecurityGroupIngress", input)
-	return &RedshiftAuthorizeClusterSecurityGroupIngressFuture{Future: future}
+	return &AuthorizeClusterSecurityGroupIngressFuture{Future: future}
 }
 
 func (a *stub) AuthorizeSnapshotAccess(ctx workflow.Context, input *redshift.AuthorizeSnapshotAccessInput) (*redshift.AuthorizeSnapshotAccessOutput, error) {
@@ -1056,9 +1056,9 @@ func (a *stub) AuthorizeSnapshotAccess(ctx workflow.Context, input *redshift.Aut
 	return &output, err
 }
 
-func (a *stub) AuthorizeSnapshotAccessAsync(ctx workflow.Context, input *redshift.AuthorizeSnapshotAccessInput) *RedshiftAuthorizeSnapshotAccessFuture {
+func (a *stub) AuthorizeSnapshotAccessAsync(ctx workflow.Context, input *redshift.AuthorizeSnapshotAccessInput) *AuthorizeSnapshotAccessFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.AuthorizeSnapshotAccess", input)
-	return &RedshiftAuthorizeSnapshotAccessFuture{Future: future}
+	return &AuthorizeSnapshotAccessFuture{Future: future}
 }
 
 func (a *stub) BatchDeleteClusterSnapshots(ctx workflow.Context, input *redshift.BatchDeleteClusterSnapshotsInput) (*redshift.BatchDeleteClusterSnapshotsOutput, error) {
@@ -1067,9 +1067,9 @@ func (a *stub) BatchDeleteClusterSnapshots(ctx workflow.Context, input *redshift
 	return &output, err
 }
 
-func (a *stub) BatchDeleteClusterSnapshotsAsync(ctx workflow.Context, input *redshift.BatchDeleteClusterSnapshotsInput) *RedshiftBatchDeleteClusterSnapshotsFuture {
+func (a *stub) BatchDeleteClusterSnapshotsAsync(ctx workflow.Context, input *redshift.BatchDeleteClusterSnapshotsInput) *BatchDeleteClusterSnapshotsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.BatchDeleteClusterSnapshots", input)
-	return &RedshiftBatchDeleteClusterSnapshotsFuture{Future: future}
+	return &BatchDeleteClusterSnapshotsFuture{Future: future}
 }
 
 func (a *stub) BatchModifyClusterSnapshots(ctx workflow.Context, input *redshift.BatchModifyClusterSnapshotsInput) (*redshift.BatchModifyClusterSnapshotsOutput, error) {
@@ -1078,9 +1078,9 @@ func (a *stub) BatchModifyClusterSnapshots(ctx workflow.Context, input *redshift
 	return &output, err
 }
 
-func (a *stub) BatchModifyClusterSnapshotsAsync(ctx workflow.Context, input *redshift.BatchModifyClusterSnapshotsInput) *RedshiftBatchModifyClusterSnapshotsFuture {
+func (a *stub) BatchModifyClusterSnapshotsAsync(ctx workflow.Context, input *redshift.BatchModifyClusterSnapshotsInput) *BatchModifyClusterSnapshotsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.BatchModifyClusterSnapshots", input)
-	return &RedshiftBatchModifyClusterSnapshotsFuture{Future: future}
+	return &BatchModifyClusterSnapshotsFuture{Future: future}
 }
 
 func (a *stub) CancelResize(ctx workflow.Context, input *redshift.CancelResizeInput) (*redshift.CancelResizeOutput, error) {
@@ -1089,9 +1089,9 @@ func (a *stub) CancelResize(ctx workflow.Context, input *redshift.CancelResizeIn
 	return &output, err
 }
 
-func (a *stub) CancelResizeAsync(ctx workflow.Context, input *redshift.CancelResizeInput) *RedshiftCancelResizeFuture {
+func (a *stub) CancelResizeAsync(ctx workflow.Context, input *redshift.CancelResizeInput) *CancelResizeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.CancelResize", input)
-	return &RedshiftCancelResizeFuture{Future: future}
+	return &CancelResizeFuture{Future: future}
 }
 
 func (a *stub) CopyClusterSnapshot(ctx workflow.Context, input *redshift.CopyClusterSnapshotInput) (*redshift.CopyClusterSnapshotOutput, error) {
@@ -1100,9 +1100,9 @@ func (a *stub) CopyClusterSnapshot(ctx workflow.Context, input *redshift.CopyClu
 	return &output, err
 }
 
-func (a *stub) CopyClusterSnapshotAsync(ctx workflow.Context, input *redshift.CopyClusterSnapshotInput) *RedshiftCopyClusterSnapshotFuture {
+func (a *stub) CopyClusterSnapshotAsync(ctx workflow.Context, input *redshift.CopyClusterSnapshotInput) *CopyClusterSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.CopyClusterSnapshot", input)
-	return &RedshiftCopyClusterSnapshotFuture{Future: future}
+	return &CopyClusterSnapshotFuture{Future: future}
 }
 
 func (a *stub) CreateCluster(ctx workflow.Context, input *redshift.CreateClusterInput) (*redshift.CreateClusterOutput, error) {
@@ -1111,9 +1111,9 @@ func (a *stub) CreateCluster(ctx workflow.Context, input *redshift.CreateCluster
 	return &output, err
 }
 
-func (a *stub) CreateClusterAsync(ctx workflow.Context, input *redshift.CreateClusterInput) *RedshiftCreateClusterFuture {
+func (a *stub) CreateClusterAsync(ctx workflow.Context, input *redshift.CreateClusterInput) *CreateClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.CreateCluster", input)
-	return &RedshiftCreateClusterFuture{Future: future}
+	return &CreateClusterFuture{Future: future}
 }
 
 func (a *stub) CreateClusterParameterGroup(ctx workflow.Context, input *redshift.CreateClusterParameterGroupInput) (*redshift.CreateClusterParameterGroupOutput, error) {
@@ -1122,9 +1122,9 @@ func (a *stub) CreateClusterParameterGroup(ctx workflow.Context, input *redshift
 	return &output, err
 }
 
-func (a *stub) CreateClusterParameterGroupAsync(ctx workflow.Context, input *redshift.CreateClusterParameterGroupInput) *RedshiftCreateClusterParameterGroupFuture {
+func (a *stub) CreateClusterParameterGroupAsync(ctx workflow.Context, input *redshift.CreateClusterParameterGroupInput) *CreateClusterParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.CreateClusterParameterGroup", input)
-	return &RedshiftCreateClusterParameterGroupFuture{Future: future}
+	return &CreateClusterParameterGroupFuture{Future: future}
 }
 
 func (a *stub) CreateClusterSecurityGroup(ctx workflow.Context, input *redshift.CreateClusterSecurityGroupInput) (*redshift.CreateClusterSecurityGroupOutput, error) {
@@ -1133,9 +1133,9 @@ func (a *stub) CreateClusterSecurityGroup(ctx workflow.Context, input *redshift.
 	return &output, err
 }
 
-func (a *stub) CreateClusterSecurityGroupAsync(ctx workflow.Context, input *redshift.CreateClusterSecurityGroupInput) *RedshiftCreateClusterSecurityGroupFuture {
+func (a *stub) CreateClusterSecurityGroupAsync(ctx workflow.Context, input *redshift.CreateClusterSecurityGroupInput) *CreateClusterSecurityGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.CreateClusterSecurityGroup", input)
-	return &RedshiftCreateClusterSecurityGroupFuture{Future: future}
+	return &CreateClusterSecurityGroupFuture{Future: future}
 }
 
 func (a *stub) CreateClusterSnapshot(ctx workflow.Context, input *redshift.CreateClusterSnapshotInput) (*redshift.CreateClusterSnapshotOutput, error) {
@@ -1144,9 +1144,9 @@ func (a *stub) CreateClusterSnapshot(ctx workflow.Context, input *redshift.Creat
 	return &output, err
 }
 
-func (a *stub) CreateClusterSnapshotAsync(ctx workflow.Context, input *redshift.CreateClusterSnapshotInput) *RedshiftCreateClusterSnapshotFuture {
+func (a *stub) CreateClusterSnapshotAsync(ctx workflow.Context, input *redshift.CreateClusterSnapshotInput) *CreateClusterSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.CreateClusterSnapshot", input)
-	return &RedshiftCreateClusterSnapshotFuture{Future: future}
+	return &CreateClusterSnapshotFuture{Future: future}
 }
 
 func (a *stub) CreateClusterSubnetGroup(ctx workflow.Context, input *redshift.CreateClusterSubnetGroupInput) (*redshift.CreateClusterSubnetGroupOutput, error) {
@@ -1155,9 +1155,9 @@ func (a *stub) CreateClusterSubnetGroup(ctx workflow.Context, input *redshift.Cr
 	return &output, err
 }
 
-func (a *stub) CreateClusterSubnetGroupAsync(ctx workflow.Context, input *redshift.CreateClusterSubnetGroupInput) *RedshiftCreateClusterSubnetGroupFuture {
+func (a *stub) CreateClusterSubnetGroupAsync(ctx workflow.Context, input *redshift.CreateClusterSubnetGroupInput) *CreateClusterSubnetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.CreateClusterSubnetGroup", input)
-	return &RedshiftCreateClusterSubnetGroupFuture{Future: future}
+	return &CreateClusterSubnetGroupFuture{Future: future}
 }
 
 func (a *stub) CreateEventSubscription(ctx workflow.Context, input *redshift.CreateEventSubscriptionInput) (*redshift.CreateEventSubscriptionOutput, error) {
@@ -1166,9 +1166,9 @@ func (a *stub) CreateEventSubscription(ctx workflow.Context, input *redshift.Cre
 	return &output, err
 }
 
-func (a *stub) CreateEventSubscriptionAsync(ctx workflow.Context, input *redshift.CreateEventSubscriptionInput) *RedshiftCreateEventSubscriptionFuture {
+func (a *stub) CreateEventSubscriptionAsync(ctx workflow.Context, input *redshift.CreateEventSubscriptionInput) *CreateEventSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.CreateEventSubscription", input)
-	return &RedshiftCreateEventSubscriptionFuture{Future: future}
+	return &CreateEventSubscriptionFuture{Future: future}
 }
 
 func (a *stub) CreateHsmClientCertificate(ctx workflow.Context, input *redshift.CreateHsmClientCertificateInput) (*redshift.CreateHsmClientCertificateOutput, error) {
@@ -1177,9 +1177,9 @@ func (a *stub) CreateHsmClientCertificate(ctx workflow.Context, input *redshift.
 	return &output, err
 }
 
-func (a *stub) CreateHsmClientCertificateAsync(ctx workflow.Context, input *redshift.CreateHsmClientCertificateInput) *RedshiftCreateHsmClientCertificateFuture {
+func (a *stub) CreateHsmClientCertificateAsync(ctx workflow.Context, input *redshift.CreateHsmClientCertificateInput) *CreateHsmClientCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.CreateHsmClientCertificate", input)
-	return &RedshiftCreateHsmClientCertificateFuture{Future: future}
+	return &CreateHsmClientCertificateFuture{Future: future}
 }
 
 func (a *stub) CreateHsmConfiguration(ctx workflow.Context, input *redshift.CreateHsmConfigurationInput) (*redshift.CreateHsmConfigurationOutput, error) {
@@ -1188,9 +1188,9 @@ func (a *stub) CreateHsmConfiguration(ctx workflow.Context, input *redshift.Crea
 	return &output, err
 }
 
-func (a *stub) CreateHsmConfigurationAsync(ctx workflow.Context, input *redshift.CreateHsmConfigurationInput) *RedshiftCreateHsmConfigurationFuture {
+func (a *stub) CreateHsmConfigurationAsync(ctx workflow.Context, input *redshift.CreateHsmConfigurationInput) *CreateHsmConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.CreateHsmConfiguration", input)
-	return &RedshiftCreateHsmConfigurationFuture{Future: future}
+	return &CreateHsmConfigurationFuture{Future: future}
 }
 
 func (a *stub) CreateScheduledAction(ctx workflow.Context, input *redshift.CreateScheduledActionInput) (*redshift.CreateScheduledActionOutput, error) {
@@ -1199,9 +1199,9 @@ func (a *stub) CreateScheduledAction(ctx workflow.Context, input *redshift.Creat
 	return &output, err
 }
 
-func (a *stub) CreateScheduledActionAsync(ctx workflow.Context, input *redshift.CreateScheduledActionInput) *RedshiftCreateScheduledActionFuture {
+func (a *stub) CreateScheduledActionAsync(ctx workflow.Context, input *redshift.CreateScheduledActionInput) *CreateScheduledActionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.CreateScheduledAction", input)
-	return &RedshiftCreateScheduledActionFuture{Future: future}
+	return &CreateScheduledActionFuture{Future: future}
 }
 
 func (a *stub) CreateSnapshotCopyGrant(ctx workflow.Context, input *redshift.CreateSnapshotCopyGrantInput) (*redshift.CreateSnapshotCopyGrantOutput, error) {
@@ -1210,9 +1210,9 @@ func (a *stub) CreateSnapshotCopyGrant(ctx workflow.Context, input *redshift.Cre
 	return &output, err
 }
 
-func (a *stub) CreateSnapshotCopyGrantAsync(ctx workflow.Context, input *redshift.CreateSnapshotCopyGrantInput) *RedshiftCreateSnapshotCopyGrantFuture {
+func (a *stub) CreateSnapshotCopyGrantAsync(ctx workflow.Context, input *redshift.CreateSnapshotCopyGrantInput) *CreateSnapshotCopyGrantFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.CreateSnapshotCopyGrant", input)
-	return &RedshiftCreateSnapshotCopyGrantFuture{Future: future}
+	return &CreateSnapshotCopyGrantFuture{Future: future}
 }
 
 func (a *stub) CreateSnapshotSchedule(ctx workflow.Context, input *redshift.CreateSnapshotScheduleInput) (*redshift.CreateSnapshotScheduleOutput, error) {
@@ -1221,9 +1221,9 @@ func (a *stub) CreateSnapshotSchedule(ctx workflow.Context, input *redshift.Crea
 	return &output, err
 }
 
-func (a *stub) CreateSnapshotScheduleAsync(ctx workflow.Context, input *redshift.CreateSnapshotScheduleInput) *RedshiftCreateSnapshotScheduleFuture {
+func (a *stub) CreateSnapshotScheduleAsync(ctx workflow.Context, input *redshift.CreateSnapshotScheduleInput) *CreateSnapshotScheduleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.CreateSnapshotSchedule", input)
-	return &RedshiftCreateSnapshotScheduleFuture{Future: future}
+	return &CreateSnapshotScheduleFuture{Future: future}
 }
 
 func (a *stub) CreateTags(ctx workflow.Context, input *redshift.CreateTagsInput) (*redshift.CreateTagsOutput, error) {
@@ -1232,9 +1232,9 @@ func (a *stub) CreateTags(ctx workflow.Context, input *redshift.CreateTagsInput)
 	return &output, err
 }
 
-func (a *stub) CreateTagsAsync(ctx workflow.Context, input *redshift.CreateTagsInput) *RedshiftCreateTagsFuture {
+func (a *stub) CreateTagsAsync(ctx workflow.Context, input *redshift.CreateTagsInput) *CreateTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.CreateTags", input)
-	return &RedshiftCreateTagsFuture{Future: future}
+	return &CreateTagsFuture{Future: future}
 }
 
 func (a *stub) CreateUsageLimit(ctx workflow.Context, input *redshift.CreateUsageLimitInput) (*redshift.CreateUsageLimitOutput, error) {
@@ -1243,9 +1243,9 @@ func (a *stub) CreateUsageLimit(ctx workflow.Context, input *redshift.CreateUsag
 	return &output, err
 }
 
-func (a *stub) CreateUsageLimitAsync(ctx workflow.Context, input *redshift.CreateUsageLimitInput) *RedshiftCreateUsageLimitFuture {
+func (a *stub) CreateUsageLimitAsync(ctx workflow.Context, input *redshift.CreateUsageLimitInput) *CreateUsageLimitFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.CreateUsageLimit", input)
-	return &RedshiftCreateUsageLimitFuture{Future: future}
+	return &CreateUsageLimitFuture{Future: future}
 }
 
 func (a *stub) DeleteCluster(ctx workflow.Context, input *redshift.DeleteClusterInput) (*redshift.DeleteClusterOutput, error) {
@@ -1254,9 +1254,9 @@ func (a *stub) DeleteCluster(ctx workflow.Context, input *redshift.DeleteCluster
 	return &output, err
 }
 
-func (a *stub) DeleteClusterAsync(ctx workflow.Context, input *redshift.DeleteClusterInput) *RedshiftDeleteClusterFuture {
+func (a *stub) DeleteClusterAsync(ctx workflow.Context, input *redshift.DeleteClusterInput) *DeleteClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DeleteCluster", input)
-	return &RedshiftDeleteClusterFuture{Future: future}
+	return &DeleteClusterFuture{Future: future}
 }
 
 func (a *stub) DeleteClusterParameterGroup(ctx workflow.Context, input *redshift.DeleteClusterParameterGroupInput) (*redshift.DeleteClusterParameterGroupOutput, error) {
@@ -1265,9 +1265,9 @@ func (a *stub) DeleteClusterParameterGroup(ctx workflow.Context, input *redshift
 	return &output, err
 }
 
-func (a *stub) DeleteClusterParameterGroupAsync(ctx workflow.Context, input *redshift.DeleteClusterParameterGroupInput) *RedshiftDeleteClusterParameterGroupFuture {
+func (a *stub) DeleteClusterParameterGroupAsync(ctx workflow.Context, input *redshift.DeleteClusterParameterGroupInput) *DeleteClusterParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DeleteClusterParameterGroup", input)
-	return &RedshiftDeleteClusterParameterGroupFuture{Future: future}
+	return &DeleteClusterParameterGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteClusterSecurityGroup(ctx workflow.Context, input *redshift.DeleteClusterSecurityGroupInput) (*redshift.DeleteClusterSecurityGroupOutput, error) {
@@ -1276,9 +1276,9 @@ func (a *stub) DeleteClusterSecurityGroup(ctx workflow.Context, input *redshift.
 	return &output, err
 }
 
-func (a *stub) DeleteClusterSecurityGroupAsync(ctx workflow.Context, input *redshift.DeleteClusterSecurityGroupInput) *RedshiftDeleteClusterSecurityGroupFuture {
+func (a *stub) DeleteClusterSecurityGroupAsync(ctx workflow.Context, input *redshift.DeleteClusterSecurityGroupInput) *DeleteClusterSecurityGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DeleteClusterSecurityGroup", input)
-	return &RedshiftDeleteClusterSecurityGroupFuture{Future: future}
+	return &DeleteClusterSecurityGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteClusterSnapshot(ctx workflow.Context, input *redshift.DeleteClusterSnapshotInput) (*redshift.DeleteClusterSnapshotOutput, error) {
@@ -1287,9 +1287,9 @@ func (a *stub) DeleteClusterSnapshot(ctx workflow.Context, input *redshift.Delet
 	return &output, err
 }
 
-func (a *stub) DeleteClusterSnapshotAsync(ctx workflow.Context, input *redshift.DeleteClusterSnapshotInput) *RedshiftDeleteClusterSnapshotFuture {
+func (a *stub) DeleteClusterSnapshotAsync(ctx workflow.Context, input *redshift.DeleteClusterSnapshotInput) *DeleteClusterSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DeleteClusterSnapshot", input)
-	return &RedshiftDeleteClusterSnapshotFuture{Future: future}
+	return &DeleteClusterSnapshotFuture{Future: future}
 }
 
 func (a *stub) DeleteClusterSubnetGroup(ctx workflow.Context, input *redshift.DeleteClusterSubnetGroupInput) (*redshift.DeleteClusterSubnetGroupOutput, error) {
@@ -1298,9 +1298,9 @@ func (a *stub) DeleteClusterSubnetGroup(ctx workflow.Context, input *redshift.De
 	return &output, err
 }
 
-func (a *stub) DeleteClusterSubnetGroupAsync(ctx workflow.Context, input *redshift.DeleteClusterSubnetGroupInput) *RedshiftDeleteClusterSubnetGroupFuture {
+func (a *stub) DeleteClusterSubnetGroupAsync(ctx workflow.Context, input *redshift.DeleteClusterSubnetGroupInput) *DeleteClusterSubnetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DeleteClusterSubnetGroup", input)
-	return &RedshiftDeleteClusterSubnetGroupFuture{Future: future}
+	return &DeleteClusterSubnetGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteEventSubscription(ctx workflow.Context, input *redshift.DeleteEventSubscriptionInput) (*redshift.DeleteEventSubscriptionOutput, error) {
@@ -1309,9 +1309,9 @@ func (a *stub) DeleteEventSubscription(ctx workflow.Context, input *redshift.Del
 	return &output, err
 }
 
-func (a *stub) DeleteEventSubscriptionAsync(ctx workflow.Context, input *redshift.DeleteEventSubscriptionInput) *RedshiftDeleteEventSubscriptionFuture {
+func (a *stub) DeleteEventSubscriptionAsync(ctx workflow.Context, input *redshift.DeleteEventSubscriptionInput) *DeleteEventSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DeleteEventSubscription", input)
-	return &RedshiftDeleteEventSubscriptionFuture{Future: future}
+	return &DeleteEventSubscriptionFuture{Future: future}
 }
 
 func (a *stub) DeleteHsmClientCertificate(ctx workflow.Context, input *redshift.DeleteHsmClientCertificateInput) (*redshift.DeleteHsmClientCertificateOutput, error) {
@@ -1320,9 +1320,9 @@ func (a *stub) DeleteHsmClientCertificate(ctx workflow.Context, input *redshift.
 	return &output, err
 }
 
-func (a *stub) DeleteHsmClientCertificateAsync(ctx workflow.Context, input *redshift.DeleteHsmClientCertificateInput) *RedshiftDeleteHsmClientCertificateFuture {
+func (a *stub) DeleteHsmClientCertificateAsync(ctx workflow.Context, input *redshift.DeleteHsmClientCertificateInput) *DeleteHsmClientCertificateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DeleteHsmClientCertificate", input)
-	return &RedshiftDeleteHsmClientCertificateFuture{Future: future}
+	return &DeleteHsmClientCertificateFuture{Future: future}
 }
 
 func (a *stub) DeleteHsmConfiguration(ctx workflow.Context, input *redshift.DeleteHsmConfigurationInput) (*redshift.DeleteHsmConfigurationOutput, error) {
@@ -1331,9 +1331,9 @@ func (a *stub) DeleteHsmConfiguration(ctx workflow.Context, input *redshift.Dele
 	return &output, err
 }
 
-func (a *stub) DeleteHsmConfigurationAsync(ctx workflow.Context, input *redshift.DeleteHsmConfigurationInput) *RedshiftDeleteHsmConfigurationFuture {
+func (a *stub) DeleteHsmConfigurationAsync(ctx workflow.Context, input *redshift.DeleteHsmConfigurationInput) *DeleteHsmConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DeleteHsmConfiguration", input)
-	return &RedshiftDeleteHsmConfigurationFuture{Future: future}
+	return &DeleteHsmConfigurationFuture{Future: future}
 }
 
 func (a *stub) DeleteScheduledAction(ctx workflow.Context, input *redshift.DeleteScheduledActionInput) (*redshift.DeleteScheduledActionOutput, error) {
@@ -1342,9 +1342,9 @@ func (a *stub) DeleteScheduledAction(ctx workflow.Context, input *redshift.Delet
 	return &output, err
 }
 
-func (a *stub) DeleteScheduledActionAsync(ctx workflow.Context, input *redshift.DeleteScheduledActionInput) *RedshiftDeleteScheduledActionFuture {
+func (a *stub) DeleteScheduledActionAsync(ctx workflow.Context, input *redshift.DeleteScheduledActionInput) *DeleteScheduledActionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DeleteScheduledAction", input)
-	return &RedshiftDeleteScheduledActionFuture{Future: future}
+	return &DeleteScheduledActionFuture{Future: future}
 }
 
 func (a *stub) DeleteSnapshotCopyGrant(ctx workflow.Context, input *redshift.DeleteSnapshotCopyGrantInput) (*redshift.DeleteSnapshotCopyGrantOutput, error) {
@@ -1353,9 +1353,9 @@ func (a *stub) DeleteSnapshotCopyGrant(ctx workflow.Context, input *redshift.Del
 	return &output, err
 }
 
-func (a *stub) DeleteSnapshotCopyGrantAsync(ctx workflow.Context, input *redshift.DeleteSnapshotCopyGrantInput) *RedshiftDeleteSnapshotCopyGrantFuture {
+func (a *stub) DeleteSnapshotCopyGrantAsync(ctx workflow.Context, input *redshift.DeleteSnapshotCopyGrantInput) *DeleteSnapshotCopyGrantFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DeleteSnapshotCopyGrant", input)
-	return &RedshiftDeleteSnapshotCopyGrantFuture{Future: future}
+	return &DeleteSnapshotCopyGrantFuture{Future: future}
 }
 
 func (a *stub) DeleteSnapshotSchedule(ctx workflow.Context, input *redshift.DeleteSnapshotScheduleInput) (*redshift.DeleteSnapshotScheduleOutput, error) {
@@ -1364,9 +1364,9 @@ func (a *stub) DeleteSnapshotSchedule(ctx workflow.Context, input *redshift.Dele
 	return &output, err
 }
 
-func (a *stub) DeleteSnapshotScheduleAsync(ctx workflow.Context, input *redshift.DeleteSnapshotScheduleInput) *RedshiftDeleteSnapshotScheduleFuture {
+func (a *stub) DeleteSnapshotScheduleAsync(ctx workflow.Context, input *redshift.DeleteSnapshotScheduleInput) *DeleteSnapshotScheduleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DeleteSnapshotSchedule", input)
-	return &RedshiftDeleteSnapshotScheduleFuture{Future: future}
+	return &DeleteSnapshotScheduleFuture{Future: future}
 }
 
 func (a *stub) DeleteTags(ctx workflow.Context, input *redshift.DeleteTagsInput) (*redshift.DeleteTagsOutput, error) {
@@ -1375,9 +1375,9 @@ func (a *stub) DeleteTags(ctx workflow.Context, input *redshift.DeleteTagsInput)
 	return &output, err
 }
 
-func (a *stub) DeleteTagsAsync(ctx workflow.Context, input *redshift.DeleteTagsInput) *RedshiftDeleteTagsFuture {
+func (a *stub) DeleteTagsAsync(ctx workflow.Context, input *redshift.DeleteTagsInput) *DeleteTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DeleteTags", input)
-	return &RedshiftDeleteTagsFuture{Future: future}
+	return &DeleteTagsFuture{Future: future}
 }
 
 func (a *stub) DeleteUsageLimit(ctx workflow.Context, input *redshift.DeleteUsageLimitInput) (*redshift.DeleteUsageLimitOutput, error) {
@@ -1386,9 +1386,9 @@ func (a *stub) DeleteUsageLimit(ctx workflow.Context, input *redshift.DeleteUsag
 	return &output, err
 }
 
-func (a *stub) DeleteUsageLimitAsync(ctx workflow.Context, input *redshift.DeleteUsageLimitInput) *RedshiftDeleteUsageLimitFuture {
+func (a *stub) DeleteUsageLimitAsync(ctx workflow.Context, input *redshift.DeleteUsageLimitInput) *DeleteUsageLimitFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DeleteUsageLimit", input)
-	return &RedshiftDeleteUsageLimitFuture{Future: future}
+	return &DeleteUsageLimitFuture{Future: future}
 }
 
 func (a *stub) DescribeAccountAttributes(ctx workflow.Context, input *redshift.DescribeAccountAttributesInput) (*redshift.DescribeAccountAttributesOutput, error) {
@@ -1397,9 +1397,9 @@ func (a *stub) DescribeAccountAttributes(ctx workflow.Context, input *redshift.D
 	return &output, err
 }
 
-func (a *stub) DescribeAccountAttributesAsync(ctx workflow.Context, input *redshift.DescribeAccountAttributesInput) *RedshiftDescribeAccountAttributesFuture {
+func (a *stub) DescribeAccountAttributesAsync(ctx workflow.Context, input *redshift.DescribeAccountAttributesInput) *DescribeAccountAttributesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeAccountAttributes", input)
-	return &RedshiftDescribeAccountAttributesFuture{Future: future}
+	return &DescribeAccountAttributesFuture{Future: future}
 }
 
 func (a *stub) DescribeClusterDbRevisions(ctx workflow.Context, input *redshift.DescribeClusterDbRevisionsInput) (*redshift.DescribeClusterDbRevisionsOutput, error) {
@@ -1408,9 +1408,9 @@ func (a *stub) DescribeClusterDbRevisions(ctx workflow.Context, input *redshift.
 	return &output, err
 }
 
-func (a *stub) DescribeClusterDbRevisionsAsync(ctx workflow.Context, input *redshift.DescribeClusterDbRevisionsInput) *RedshiftDescribeClusterDbRevisionsFuture {
+func (a *stub) DescribeClusterDbRevisionsAsync(ctx workflow.Context, input *redshift.DescribeClusterDbRevisionsInput) *DescribeClusterDbRevisionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeClusterDbRevisions", input)
-	return &RedshiftDescribeClusterDbRevisionsFuture{Future: future}
+	return &DescribeClusterDbRevisionsFuture{Future: future}
 }
 
 func (a *stub) DescribeClusterParameterGroups(ctx workflow.Context, input *redshift.DescribeClusterParameterGroupsInput) (*redshift.DescribeClusterParameterGroupsOutput, error) {
@@ -1419,9 +1419,9 @@ func (a *stub) DescribeClusterParameterGroups(ctx workflow.Context, input *redsh
 	return &output, err
 }
 
-func (a *stub) DescribeClusterParameterGroupsAsync(ctx workflow.Context, input *redshift.DescribeClusterParameterGroupsInput) *RedshiftDescribeClusterParameterGroupsFuture {
+func (a *stub) DescribeClusterParameterGroupsAsync(ctx workflow.Context, input *redshift.DescribeClusterParameterGroupsInput) *DescribeClusterParameterGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeClusterParameterGroups", input)
-	return &RedshiftDescribeClusterParameterGroupsFuture{Future: future}
+	return &DescribeClusterParameterGroupsFuture{Future: future}
 }
 
 func (a *stub) DescribeClusterParameters(ctx workflow.Context, input *redshift.DescribeClusterParametersInput) (*redshift.DescribeClusterParametersOutput, error) {
@@ -1430,9 +1430,9 @@ func (a *stub) DescribeClusterParameters(ctx workflow.Context, input *redshift.D
 	return &output, err
 }
 
-func (a *stub) DescribeClusterParametersAsync(ctx workflow.Context, input *redshift.DescribeClusterParametersInput) *RedshiftDescribeClusterParametersFuture {
+func (a *stub) DescribeClusterParametersAsync(ctx workflow.Context, input *redshift.DescribeClusterParametersInput) *DescribeClusterParametersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeClusterParameters", input)
-	return &RedshiftDescribeClusterParametersFuture{Future: future}
+	return &DescribeClusterParametersFuture{Future: future}
 }
 
 func (a *stub) DescribeClusterSecurityGroups(ctx workflow.Context, input *redshift.DescribeClusterSecurityGroupsInput) (*redshift.DescribeClusterSecurityGroupsOutput, error) {
@@ -1441,9 +1441,9 @@ func (a *stub) DescribeClusterSecurityGroups(ctx workflow.Context, input *redshi
 	return &output, err
 }
 
-func (a *stub) DescribeClusterSecurityGroupsAsync(ctx workflow.Context, input *redshift.DescribeClusterSecurityGroupsInput) *RedshiftDescribeClusterSecurityGroupsFuture {
+func (a *stub) DescribeClusterSecurityGroupsAsync(ctx workflow.Context, input *redshift.DescribeClusterSecurityGroupsInput) *DescribeClusterSecurityGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeClusterSecurityGroups", input)
-	return &RedshiftDescribeClusterSecurityGroupsFuture{Future: future}
+	return &DescribeClusterSecurityGroupsFuture{Future: future}
 }
 
 func (a *stub) DescribeClusterSnapshots(ctx workflow.Context, input *redshift.DescribeClusterSnapshotsInput) (*redshift.DescribeClusterSnapshotsOutput, error) {
@@ -1452,9 +1452,9 @@ func (a *stub) DescribeClusterSnapshots(ctx workflow.Context, input *redshift.De
 	return &output, err
 }
 
-func (a *stub) DescribeClusterSnapshotsAsync(ctx workflow.Context, input *redshift.DescribeClusterSnapshotsInput) *RedshiftDescribeClusterSnapshotsFuture {
+func (a *stub) DescribeClusterSnapshotsAsync(ctx workflow.Context, input *redshift.DescribeClusterSnapshotsInput) *DescribeClusterSnapshotsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeClusterSnapshots", input)
-	return &RedshiftDescribeClusterSnapshotsFuture{Future: future}
+	return &DescribeClusterSnapshotsFuture{Future: future}
 }
 
 func (a *stub) DescribeClusterSubnetGroups(ctx workflow.Context, input *redshift.DescribeClusterSubnetGroupsInput) (*redshift.DescribeClusterSubnetGroupsOutput, error) {
@@ -1463,9 +1463,9 @@ func (a *stub) DescribeClusterSubnetGroups(ctx workflow.Context, input *redshift
 	return &output, err
 }
 
-func (a *stub) DescribeClusterSubnetGroupsAsync(ctx workflow.Context, input *redshift.DescribeClusterSubnetGroupsInput) *RedshiftDescribeClusterSubnetGroupsFuture {
+func (a *stub) DescribeClusterSubnetGroupsAsync(ctx workflow.Context, input *redshift.DescribeClusterSubnetGroupsInput) *DescribeClusterSubnetGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeClusterSubnetGroups", input)
-	return &RedshiftDescribeClusterSubnetGroupsFuture{Future: future}
+	return &DescribeClusterSubnetGroupsFuture{Future: future}
 }
 
 func (a *stub) DescribeClusterTracks(ctx workflow.Context, input *redshift.DescribeClusterTracksInput) (*redshift.DescribeClusterTracksOutput, error) {
@@ -1474,9 +1474,9 @@ func (a *stub) DescribeClusterTracks(ctx workflow.Context, input *redshift.Descr
 	return &output, err
 }
 
-func (a *stub) DescribeClusterTracksAsync(ctx workflow.Context, input *redshift.DescribeClusterTracksInput) *RedshiftDescribeClusterTracksFuture {
+func (a *stub) DescribeClusterTracksAsync(ctx workflow.Context, input *redshift.DescribeClusterTracksInput) *DescribeClusterTracksFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeClusterTracks", input)
-	return &RedshiftDescribeClusterTracksFuture{Future: future}
+	return &DescribeClusterTracksFuture{Future: future}
 }
 
 func (a *stub) DescribeClusterVersions(ctx workflow.Context, input *redshift.DescribeClusterVersionsInput) (*redshift.DescribeClusterVersionsOutput, error) {
@@ -1485,9 +1485,9 @@ func (a *stub) DescribeClusterVersions(ctx workflow.Context, input *redshift.Des
 	return &output, err
 }
 
-func (a *stub) DescribeClusterVersionsAsync(ctx workflow.Context, input *redshift.DescribeClusterVersionsInput) *RedshiftDescribeClusterVersionsFuture {
+func (a *stub) DescribeClusterVersionsAsync(ctx workflow.Context, input *redshift.DescribeClusterVersionsInput) *DescribeClusterVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeClusterVersions", input)
-	return &RedshiftDescribeClusterVersionsFuture{Future: future}
+	return &DescribeClusterVersionsFuture{Future: future}
 }
 
 func (a *stub) DescribeClusters(ctx workflow.Context, input *redshift.DescribeClustersInput) (*redshift.DescribeClustersOutput, error) {
@@ -1496,9 +1496,9 @@ func (a *stub) DescribeClusters(ctx workflow.Context, input *redshift.DescribeCl
 	return &output, err
 }
 
-func (a *stub) DescribeClustersAsync(ctx workflow.Context, input *redshift.DescribeClustersInput) *RedshiftDescribeClustersFuture {
+func (a *stub) DescribeClustersAsync(ctx workflow.Context, input *redshift.DescribeClustersInput) *DescribeClustersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeClusters", input)
-	return &RedshiftDescribeClustersFuture{Future: future}
+	return &DescribeClustersFuture{Future: future}
 }
 
 func (a *stub) DescribeDefaultClusterParameters(ctx workflow.Context, input *redshift.DescribeDefaultClusterParametersInput) (*redshift.DescribeDefaultClusterParametersOutput, error) {
@@ -1507,9 +1507,9 @@ func (a *stub) DescribeDefaultClusterParameters(ctx workflow.Context, input *red
 	return &output, err
 }
 
-func (a *stub) DescribeDefaultClusterParametersAsync(ctx workflow.Context, input *redshift.DescribeDefaultClusterParametersInput) *RedshiftDescribeDefaultClusterParametersFuture {
+func (a *stub) DescribeDefaultClusterParametersAsync(ctx workflow.Context, input *redshift.DescribeDefaultClusterParametersInput) *DescribeDefaultClusterParametersFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeDefaultClusterParameters", input)
-	return &RedshiftDescribeDefaultClusterParametersFuture{Future: future}
+	return &DescribeDefaultClusterParametersFuture{Future: future}
 }
 
 func (a *stub) DescribeEventCategories(ctx workflow.Context, input *redshift.DescribeEventCategoriesInput) (*redshift.DescribeEventCategoriesOutput, error) {
@@ -1518,9 +1518,9 @@ func (a *stub) DescribeEventCategories(ctx workflow.Context, input *redshift.Des
 	return &output, err
 }
 
-func (a *stub) DescribeEventCategoriesAsync(ctx workflow.Context, input *redshift.DescribeEventCategoriesInput) *RedshiftDescribeEventCategoriesFuture {
+func (a *stub) DescribeEventCategoriesAsync(ctx workflow.Context, input *redshift.DescribeEventCategoriesInput) *DescribeEventCategoriesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeEventCategories", input)
-	return &RedshiftDescribeEventCategoriesFuture{Future: future}
+	return &DescribeEventCategoriesFuture{Future: future}
 }
 
 func (a *stub) DescribeEventSubscriptions(ctx workflow.Context, input *redshift.DescribeEventSubscriptionsInput) (*redshift.DescribeEventSubscriptionsOutput, error) {
@@ -1529,9 +1529,9 @@ func (a *stub) DescribeEventSubscriptions(ctx workflow.Context, input *redshift.
 	return &output, err
 }
 
-func (a *stub) DescribeEventSubscriptionsAsync(ctx workflow.Context, input *redshift.DescribeEventSubscriptionsInput) *RedshiftDescribeEventSubscriptionsFuture {
+func (a *stub) DescribeEventSubscriptionsAsync(ctx workflow.Context, input *redshift.DescribeEventSubscriptionsInput) *DescribeEventSubscriptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeEventSubscriptions", input)
-	return &RedshiftDescribeEventSubscriptionsFuture{Future: future}
+	return &DescribeEventSubscriptionsFuture{Future: future}
 }
 
 func (a *stub) DescribeEvents(ctx workflow.Context, input *redshift.DescribeEventsInput) (*redshift.DescribeEventsOutput, error) {
@@ -1540,9 +1540,9 @@ func (a *stub) DescribeEvents(ctx workflow.Context, input *redshift.DescribeEven
 	return &output, err
 }
 
-func (a *stub) DescribeEventsAsync(ctx workflow.Context, input *redshift.DescribeEventsInput) *RedshiftDescribeEventsFuture {
+func (a *stub) DescribeEventsAsync(ctx workflow.Context, input *redshift.DescribeEventsInput) *DescribeEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeEvents", input)
-	return &RedshiftDescribeEventsFuture{Future: future}
+	return &DescribeEventsFuture{Future: future}
 }
 
 func (a *stub) DescribeHsmClientCertificates(ctx workflow.Context, input *redshift.DescribeHsmClientCertificatesInput) (*redshift.DescribeHsmClientCertificatesOutput, error) {
@@ -1551,9 +1551,9 @@ func (a *stub) DescribeHsmClientCertificates(ctx workflow.Context, input *redshi
 	return &output, err
 }
 
-func (a *stub) DescribeHsmClientCertificatesAsync(ctx workflow.Context, input *redshift.DescribeHsmClientCertificatesInput) *RedshiftDescribeHsmClientCertificatesFuture {
+func (a *stub) DescribeHsmClientCertificatesAsync(ctx workflow.Context, input *redshift.DescribeHsmClientCertificatesInput) *DescribeHsmClientCertificatesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeHsmClientCertificates", input)
-	return &RedshiftDescribeHsmClientCertificatesFuture{Future: future}
+	return &DescribeHsmClientCertificatesFuture{Future: future}
 }
 
 func (a *stub) DescribeHsmConfigurations(ctx workflow.Context, input *redshift.DescribeHsmConfigurationsInput) (*redshift.DescribeHsmConfigurationsOutput, error) {
@@ -1562,9 +1562,9 @@ func (a *stub) DescribeHsmConfigurations(ctx workflow.Context, input *redshift.D
 	return &output, err
 }
 
-func (a *stub) DescribeHsmConfigurationsAsync(ctx workflow.Context, input *redshift.DescribeHsmConfigurationsInput) *RedshiftDescribeHsmConfigurationsFuture {
+func (a *stub) DescribeHsmConfigurationsAsync(ctx workflow.Context, input *redshift.DescribeHsmConfigurationsInput) *DescribeHsmConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeHsmConfigurations", input)
-	return &RedshiftDescribeHsmConfigurationsFuture{Future: future}
+	return &DescribeHsmConfigurationsFuture{Future: future}
 }
 
 func (a *stub) DescribeLoggingStatus(ctx workflow.Context, input *redshift.DescribeLoggingStatusInput) (*redshift.LoggingStatus, error) {
@@ -1573,9 +1573,9 @@ func (a *stub) DescribeLoggingStatus(ctx workflow.Context, input *redshift.Descr
 	return &output, err
 }
 
-func (a *stub) DescribeLoggingStatusAsync(ctx workflow.Context, input *redshift.DescribeLoggingStatusInput) *RedshiftDescribeLoggingStatusFuture {
+func (a *stub) DescribeLoggingStatusAsync(ctx workflow.Context, input *redshift.DescribeLoggingStatusInput) *DescribeLoggingStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeLoggingStatus", input)
-	return &RedshiftDescribeLoggingStatusFuture{Future: future}
+	return &DescribeLoggingStatusFuture{Future: future}
 }
 
 func (a *stub) DescribeNodeConfigurationOptions(ctx workflow.Context, input *redshift.DescribeNodeConfigurationOptionsInput) (*redshift.DescribeNodeConfigurationOptionsOutput, error) {
@@ -1584,9 +1584,9 @@ func (a *stub) DescribeNodeConfigurationOptions(ctx workflow.Context, input *red
 	return &output, err
 }
 
-func (a *stub) DescribeNodeConfigurationOptionsAsync(ctx workflow.Context, input *redshift.DescribeNodeConfigurationOptionsInput) *RedshiftDescribeNodeConfigurationOptionsFuture {
+func (a *stub) DescribeNodeConfigurationOptionsAsync(ctx workflow.Context, input *redshift.DescribeNodeConfigurationOptionsInput) *DescribeNodeConfigurationOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeNodeConfigurationOptions", input)
-	return &RedshiftDescribeNodeConfigurationOptionsFuture{Future: future}
+	return &DescribeNodeConfigurationOptionsFuture{Future: future}
 }
 
 func (a *stub) DescribeOrderableClusterOptions(ctx workflow.Context, input *redshift.DescribeOrderableClusterOptionsInput) (*redshift.DescribeOrderableClusterOptionsOutput, error) {
@@ -1595,9 +1595,9 @@ func (a *stub) DescribeOrderableClusterOptions(ctx workflow.Context, input *reds
 	return &output, err
 }
 
-func (a *stub) DescribeOrderableClusterOptionsAsync(ctx workflow.Context, input *redshift.DescribeOrderableClusterOptionsInput) *RedshiftDescribeOrderableClusterOptionsFuture {
+func (a *stub) DescribeOrderableClusterOptionsAsync(ctx workflow.Context, input *redshift.DescribeOrderableClusterOptionsInput) *DescribeOrderableClusterOptionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeOrderableClusterOptions", input)
-	return &RedshiftDescribeOrderableClusterOptionsFuture{Future: future}
+	return &DescribeOrderableClusterOptionsFuture{Future: future}
 }
 
 func (a *stub) DescribeReservedNodeOfferings(ctx workflow.Context, input *redshift.DescribeReservedNodeOfferingsInput) (*redshift.DescribeReservedNodeOfferingsOutput, error) {
@@ -1606,9 +1606,9 @@ func (a *stub) DescribeReservedNodeOfferings(ctx workflow.Context, input *redshi
 	return &output, err
 }
 
-func (a *stub) DescribeReservedNodeOfferingsAsync(ctx workflow.Context, input *redshift.DescribeReservedNodeOfferingsInput) *RedshiftDescribeReservedNodeOfferingsFuture {
+func (a *stub) DescribeReservedNodeOfferingsAsync(ctx workflow.Context, input *redshift.DescribeReservedNodeOfferingsInput) *DescribeReservedNodeOfferingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeReservedNodeOfferings", input)
-	return &RedshiftDescribeReservedNodeOfferingsFuture{Future: future}
+	return &DescribeReservedNodeOfferingsFuture{Future: future}
 }
 
 func (a *stub) DescribeReservedNodes(ctx workflow.Context, input *redshift.DescribeReservedNodesInput) (*redshift.DescribeReservedNodesOutput, error) {
@@ -1617,9 +1617,9 @@ func (a *stub) DescribeReservedNodes(ctx workflow.Context, input *redshift.Descr
 	return &output, err
 }
 
-func (a *stub) DescribeReservedNodesAsync(ctx workflow.Context, input *redshift.DescribeReservedNodesInput) *RedshiftDescribeReservedNodesFuture {
+func (a *stub) DescribeReservedNodesAsync(ctx workflow.Context, input *redshift.DescribeReservedNodesInput) *DescribeReservedNodesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeReservedNodes", input)
-	return &RedshiftDescribeReservedNodesFuture{Future: future}
+	return &DescribeReservedNodesFuture{Future: future}
 }
 
 func (a *stub) DescribeResize(ctx workflow.Context, input *redshift.DescribeResizeInput) (*redshift.DescribeResizeOutput, error) {
@@ -1628,9 +1628,9 @@ func (a *stub) DescribeResize(ctx workflow.Context, input *redshift.DescribeResi
 	return &output, err
 }
 
-func (a *stub) DescribeResizeAsync(ctx workflow.Context, input *redshift.DescribeResizeInput) *RedshiftDescribeResizeFuture {
+func (a *stub) DescribeResizeAsync(ctx workflow.Context, input *redshift.DescribeResizeInput) *DescribeResizeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeResize", input)
-	return &RedshiftDescribeResizeFuture{Future: future}
+	return &DescribeResizeFuture{Future: future}
 }
 
 func (a *stub) DescribeScheduledActions(ctx workflow.Context, input *redshift.DescribeScheduledActionsInput) (*redshift.DescribeScheduledActionsOutput, error) {
@@ -1639,9 +1639,9 @@ func (a *stub) DescribeScheduledActions(ctx workflow.Context, input *redshift.De
 	return &output, err
 }
 
-func (a *stub) DescribeScheduledActionsAsync(ctx workflow.Context, input *redshift.DescribeScheduledActionsInput) *RedshiftDescribeScheduledActionsFuture {
+func (a *stub) DescribeScheduledActionsAsync(ctx workflow.Context, input *redshift.DescribeScheduledActionsInput) *DescribeScheduledActionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeScheduledActions", input)
-	return &RedshiftDescribeScheduledActionsFuture{Future: future}
+	return &DescribeScheduledActionsFuture{Future: future}
 }
 
 func (a *stub) DescribeSnapshotCopyGrants(ctx workflow.Context, input *redshift.DescribeSnapshotCopyGrantsInput) (*redshift.DescribeSnapshotCopyGrantsOutput, error) {
@@ -1650,9 +1650,9 @@ func (a *stub) DescribeSnapshotCopyGrants(ctx workflow.Context, input *redshift.
 	return &output, err
 }
 
-func (a *stub) DescribeSnapshotCopyGrantsAsync(ctx workflow.Context, input *redshift.DescribeSnapshotCopyGrantsInput) *RedshiftDescribeSnapshotCopyGrantsFuture {
+func (a *stub) DescribeSnapshotCopyGrantsAsync(ctx workflow.Context, input *redshift.DescribeSnapshotCopyGrantsInput) *DescribeSnapshotCopyGrantsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeSnapshotCopyGrants", input)
-	return &RedshiftDescribeSnapshotCopyGrantsFuture{Future: future}
+	return &DescribeSnapshotCopyGrantsFuture{Future: future}
 }
 
 func (a *stub) DescribeSnapshotSchedules(ctx workflow.Context, input *redshift.DescribeSnapshotSchedulesInput) (*redshift.DescribeSnapshotSchedulesOutput, error) {
@@ -1661,9 +1661,9 @@ func (a *stub) DescribeSnapshotSchedules(ctx workflow.Context, input *redshift.D
 	return &output, err
 }
 
-func (a *stub) DescribeSnapshotSchedulesAsync(ctx workflow.Context, input *redshift.DescribeSnapshotSchedulesInput) *RedshiftDescribeSnapshotSchedulesFuture {
+func (a *stub) DescribeSnapshotSchedulesAsync(ctx workflow.Context, input *redshift.DescribeSnapshotSchedulesInput) *DescribeSnapshotSchedulesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeSnapshotSchedules", input)
-	return &RedshiftDescribeSnapshotSchedulesFuture{Future: future}
+	return &DescribeSnapshotSchedulesFuture{Future: future}
 }
 
 func (a *stub) DescribeStorage(ctx workflow.Context, input *redshift.DescribeStorageInput) (*redshift.DescribeStorageOutput, error) {
@@ -1672,9 +1672,9 @@ func (a *stub) DescribeStorage(ctx workflow.Context, input *redshift.DescribeSto
 	return &output, err
 }
 
-func (a *stub) DescribeStorageAsync(ctx workflow.Context, input *redshift.DescribeStorageInput) *RedshiftDescribeStorageFuture {
+func (a *stub) DescribeStorageAsync(ctx workflow.Context, input *redshift.DescribeStorageInput) *DescribeStorageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeStorage", input)
-	return &RedshiftDescribeStorageFuture{Future: future}
+	return &DescribeStorageFuture{Future: future}
 }
 
 func (a *stub) DescribeTableRestoreStatus(ctx workflow.Context, input *redshift.DescribeTableRestoreStatusInput) (*redshift.DescribeTableRestoreStatusOutput, error) {
@@ -1683,9 +1683,9 @@ func (a *stub) DescribeTableRestoreStatus(ctx workflow.Context, input *redshift.
 	return &output, err
 }
 
-func (a *stub) DescribeTableRestoreStatusAsync(ctx workflow.Context, input *redshift.DescribeTableRestoreStatusInput) *RedshiftDescribeTableRestoreStatusFuture {
+func (a *stub) DescribeTableRestoreStatusAsync(ctx workflow.Context, input *redshift.DescribeTableRestoreStatusInput) *DescribeTableRestoreStatusFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeTableRestoreStatus", input)
-	return &RedshiftDescribeTableRestoreStatusFuture{Future: future}
+	return &DescribeTableRestoreStatusFuture{Future: future}
 }
 
 func (a *stub) DescribeTags(ctx workflow.Context, input *redshift.DescribeTagsInput) (*redshift.DescribeTagsOutput, error) {
@@ -1694,9 +1694,9 @@ func (a *stub) DescribeTags(ctx workflow.Context, input *redshift.DescribeTagsIn
 	return &output, err
 }
 
-func (a *stub) DescribeTagsAsync(ctx workflow.Context, input *redshift.DescribeTagsInput) *RedshiftDescribeTagsFuture {
+func (a *stub) DescribeTagsAsync(ctx workflow.Context, input *redshift.DescribeTagsInput) *DescribeTagsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeTags", input)
-	return &RedshiftDescribeTagsFuture{Future: future}
+	return &DescribeTagsFuture{Future: future}
 }
 
 func (a *stub) DescribeUsageLimits(ctx workflow.Context, input *redshift.DescribeUsageLimitsInput) (*redshift.DescribeUsageLimitsOutput, error) {
@@ -1705,9 +1705,9 @@ func (a *stub) DescribeUsageLimits(ctx workflow.Context, input *redshift.Describ
 	return &output, err
 }
 
-func (a *stub) DescribeUsageLimitsAsync(ctx workflow.Context, input *redshift.DescribeUsageLimitsInput) *RedshiftDescribeUsageLimitsFuture {
+func (a *stub) DescribeUsageLimitsAsync(ctx workflow.Context, input *redshift.DescribeUsageLimitsInput) *DescribeUsageLimitsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DescribeUsageLimits", input)
-	return &RedshiftDescribeUsageLimitsFuture{Future: future}
+	return &DescribeUsageLimitsFuture{Future: future}
 }
 
 func (a *stub) DisableLogging(ctx workflow.Context, input *redshift.DisableLoggingInput) (*redshift.LoggingStatus, error) {
@@ -1716,9 +1716,9 @@ func (a *stub) DisableLogging(ctx workflow.Context, input *redshift.DisableLoggi
 	return &output, err
 }
 
-func (a *stub) DisableLoggingAsync(ctx workflow.Context, input *redshift.DisableLoggingInput) *RedshiftDisableLoggingFuture {
+func (a *stub) DisableLoggingAsync(ctx workflow.Context, input *redshift.DisableLoggingInput) *DisableLoggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DisableLogging", input)
-	return &RedshiftDisableLoggingFuture{Future: future}
+	return &DisableLoggingFuture{Future: future}
 }
 
 func (a *stub) DisableSnapshotCopy(ctx workflow.Context, input *redshift.DisableSnapshotCopyInput) (*redshift.DisableSnapshotCopyOutput, error) {
@@ -1727,9 +1727,9 @@ func (a *stub) DisableSnapshotCopy(ctx workflow.Context, input *redshift.Disable
 	return &output, err
 }
 
-func (a *stub) DisableSnapshotCopyAsync(ctx workflow.Context, input *redshift.DisableSnapshotCopyInput) *RedshiftDisableSnapshotCopyFuture {
+func (a *stub) DisableSnapshotCopyAsync(ctx workflow.Context, input *redshift.DisableSnapshotCopyInput) *DisableSnapshotCopyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.DisableSnapshotCopy", input)
-	return &RedshiftDisableSnapshotCopyFuture{Future: future}
+	return &DisableSnapshotCopyFuture{Future: future}
 }
 
 func (a *stub) EnableLogging(ctx workflow.Context, input *redshift.EnableLoggingInput) (*redshift.LoggingStatus, error) {
@@ -1738,9 +1738,9 @@ func (a *stub) EnableLogging(ctx workflow.Context, input *redshift.EnableLogging
 	return &output, err
 }
 
-func (a *stub) EnableLoggingAsync(ctx workflow.Context, input *redshift.EnableLoggingInput) *RedshiftEnableLoggingFuture {
+func (a *stub) EnableLoggingAsync(ctx workflow.Context, input *redshift.EnableLoggingInput) *EnableLoggingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.EnableLogging", input)
-	return &RedshiftEnableLoggingFuture{Future: future}
+	return &EnableLoggingFuture{Future: future}
 }
 
 func (a *stub) EnableSnapshotCopy(ctx workflow.Context, input *redshift.EnableSnapshotCopyInput) (*redshift.EnableSnapshotCopyOutput, error) {
@@ -1749,9 +1749,9 @@ func (a *stub) EnableSnapshotCopy(ctx workflow.Context, input *redshift.EnableSn
 	return &output, err
 }
 
-func (a *stub) EnableSnapshotCopyAsync(ctx workflow.Context, input *redshift.EnableSnapshotCopyInput) *RedshiftEnableSnapshotCopyFuture {
+func (a *stub) EnableSnapshotCopyAsync(ctx workflow.Context, input *redshift.EnableSnapshotCopyInput) *EnableSnapshotCopyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.EnableSnapshotCopy", input)
-	return &RedshiftEnableSnapshotCopyFuture{Future: future}
+	return &EnableSnapshotCopyFuture{Future: future}
 }
 
 func (a *stub) GetClusterCredentials(ctx workflow.Context, input *redshift.GetClusterCredentialsInput) (*redshift.GetClusterCredentialsOutput, error) {
@@ -1760,9 +1760,9 @@ func (a *stub) GetClusterCredentials(ctx workflow.Context, input *redshift.GetCl
 	return &output, err
 }
 
-func (a *stub) GetClusterCredentialsAsync(ctx workflow.Context, input *redshift.GetClusterCredentialsInput) *RedshiftGetClusterCredentialsFuture {
+func (a *stub) GetClusterCredentialsAsync(ctx workflow.Context, input *redshift.GetClusterCredentialsInput) *GetClusterCredentialsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.GetClusterCredentials", input)
-	return &RedshiftGetClusterCredentialsFuture{Future: future}
+	return &GetClusterCredentialsFuture{Future: future}
 }
 
 func (a *stub) GetReservedNodeExchangeOfferings(ctx workflow.Context, input *redshift.GetReservedNodeExchangeOfferingsInput) (*redshift.GetReservedNodeExchangeOfferingsOutput, error) {
@@ -1771,9 +1771,9 @@ func (a *stub) GetReservedNodeExchangeOfferings(ctx workflow.Context, input *red
 	return &output, err
 }
 
-func (a *stub) GetReservedNodeExchangeOfferingsAsync(ctx workflow.Context, input *redshift.GetReservedNodeExchangeOfferingsInput) *RedshiftGetReservedNodeExchangeOfferingsFuture {
+func (a *stub) GetReservedNodeExchangeOfferingsAsync(ctx workflow.Context, input *redshift.GetReservedNodeExchangeOfferingsInput) *GetReservedNodeExchangeOfferingsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.GetReservedNodeExchangeOfferings", input)
-	return &RedshiftGetReservedNodeExchangeOfferingsFuture{Future: future}
+	return &GetReservedNodeExchangeOfferingsFuture{Future: future}
 }
 
 func (a *stub) ModifyCluster(ctx workflow.Context, input *redshift.ModifyClusterInput) (*redshift.ModifyClusterOutput, error) {
@@ -1782,9 +1782,9 @@ func (a *stub) ModifyCluster(ctx workflow.Context, input *redshift.ModifyCluster
 	return &output, err
 }
 
-func (a *stub) ModifyClusterAsync(ctx workflow.Context, input *redshift.ModifyClusterInput) *RedshiftModifyClusterFuture {
+func (a *stub) ModifyClusterAsync(ctx workflow.Context, input *redshift.ModifyClusterInput) *ModifyClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.ModifyCluster", input)
-	return &RedshiftModifyClusterFuture{Future: future}
+	return &ModifyClusterFuture{Future: future}
 }
 
 func (a *stub) ModifyClusterDbRevision(ctx workflow.Context, input *redshift.ModifyClusterDbRevisionInput) (*redshift.ModifyClusterDbRevisionOutput, error) {
@@ -1793,9 +1793,9 @@ func (a *stub) ModifyClusterDbRevision(ctx workflow.Context, input *redshift.Mod
 	return &output, err
 }
 
-func (a *stub) ModifyClusterDbRevisionAsync(ctx workflow.Context, input *redshift.ModifyClusterDbRevisionInput) *RedshiftModifyClusterDbRevisionFuture {
+func (a *stub) ModifyClusterDbRevisionAsync(ctx workflow.Context, input *redshift.ModifyClusterDbRevisionInput) *ModifyClusterDbRevisionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.ModifyClusterDbRevision", input)
-	return &RedshiftModifyClusterDbRevisionFuture{Future: future}
+	return &ModifyClusterDbRevisionFuture{Future: future}
 }
 
 func (a *stub) ModifyClusterIamRoles(ctx workflow.Context, input *redshift.ModifyClusterIamRolesInput) (*redshift.ModifyClusterIamRolesOutput, error) {
@@ -1804,9 +1804,9 @@ func (a *stub) ModifyClusterIamRoles(ctx workflow.Context, input *redshift.Modif
 	return &output, err
 }
 
-func (a *stub) ModifyClusterIamRolesAsync(ctx workflow.Context, input *redshift.ModifyClusterIamRolesInput) *RedshiftModifyClusterIamRolesFuture {
+func (a *stub) ModifyClusterIamRolesAsync(ctx workflow.Context, input *redshift.ModifyClusterIamRolesInput) *ModifyClusterIamRolesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.ModifyClusterIamRoles", input)
-	return &RedshiftModifyClusterIamRolesFuture{Future: future}
+	return &ModifyClusterIamRolesFuture{Future: future}
 }
 
 func (a *stub) ModifyClusterMaintenance(ctx workflow.Context, input *redshift.ModifyClusterMaintenanceInput) (*redshift.ModifyClusterMaintenanceOutput, error) {
@@ -1815,9 +1815,9 @@ func (a *stub) ModifyClusterMaintenance(ctx workflow.Context, input *redshift.Mo
 	return &output, err
 }
 
-func (a *stub) ModifyClusterMaintenanceAsync(ctx workflow.Context, input *redshift.ModifyClusterMaintenanceInput) *RedshiftModifyClusterMaintenanceFuture {
+func (a *stub) ModifyClusterMaintenanceAsync(ctx workflow.Context, input *redshift.ModifyClusterMaintenanceInput) *ModifyClusterMaintenanceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.ModifyClusterMaintenance", input)
-	return &RedshiftModifyClusterMaintenanceFuture{Future: future}
+	return &ModifyClusterMaintenanceFuture{Future: future}
 }
 
 func (a *stub) ModifyClusterParameterGroup(ctx workflow.Context, input *redshift.ModifyClusterParameterGroupInput) (*redshift.ClusterParameterGroupNameMessage, error) {
@@ -1826,9 +1826,9 @@ func (a *stub) ModifyClusterParameterGroup(ctx workflow.Context, input *redshift
 	return &output, err
 }
 
-func (a *stub) ModifyClusterParameterGroupAsync(ctx workflow.Context, input *redshift.ModifyClusterParameterGroupInput) *RedshiftModifyClusterParameterGroupFuture {
+func (a *stub) ModifyClusterParameterGroupAsync(ctx workflow.Context, input *redshift.ModifyClusterParameterGroupInput) *ModifyClusterParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.ModifyClusterParameterGroup", input)
-	return &RedshiftModifyClusterParameterGroupFuture{Future: future}
+	return &ModifyClusterParameterGroupFuture{Future: future}
 }
 
 func (a *stub) ModifyClusterSnapshot(ctx workflow.Context, input *redshift.ModifyClusterSnapshotInput) (*redshift.ModifyClusterSnapshotOutput, error) {
@@ -1837,9 +1837,9 @@ func (a *stub) ModifyClusterSnapshot(ctx workflow.Context, input *redshift.Modif
 	return &output, err
 }
 
-func (a *stub) ModifyClusterSnapshotAsync(ctx workflow.Context, input *redshift.ModifyClusterSnapshotInput) *RedshiftModifyClusterSnapshotFuture {
+func (a *stub) ModifyClusterSnapshotAsync(ctx workflow.Context, input *redshift.ModifyClusterSnapshotInput) *ModifyClusterSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.ModifyClusterSnapshot", input)
-	return &RedshiftModifyClusterSnapshotFuture{Future: future}
+	return &ModifyClusterSnapshotFuture{Future: future}
 }
 
 func (a *stub) ModifyClusterSnapshotSchedule(ctx workflow.Context, input *redshift.ModifyClusterSnapshotScheduleInput) (*redshift.ModifyClusterSnapshotScheduleOutput, error) {
@@ -1848,9 +1848,9 @@ func (a *stub) ModifyClusterSnapshotSchedule(ctx workflow.Context, input *redshi
 	return &output, err
 }
 
-func (a *stub) ModifyClusterSnapshotScheduleAsync(ctx workflow.Context, input *redshift.ModifyClusterSnapshotScheduleInput) *RedshiftModifyClusterSnapshotScheduleFuture {
+func (a *stub) ModifyClusterSnapshotScheduleAsync(ctx workflow.Context, input *redshift.ModifyClusterSnapshotScheduleInput) *ModifyClusterSnapshotScheduleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.ModifyClusterSnapshotSchedule", input)
-	return &RedshiftModifyClusterSnapshotScheduleFuture{Future: future}
+	return &ModifyClusterSnapshotScheduleFuture{Future: future}
 }
 
 func (a *stub) ModifyClusterSubnetGroup(ctx workflow.Context, input *redshift.ModifyClusterSubnetGroupInput) (*redshift.ModifyClusterSubnetGroupOutput, error) {
@@ -1859,9 +1859,9 @@ func (a *stub) ModifyClusterSubnetGroup(ctx workflow.Context, input *redshift.Mo
 	return &output, err
 }
 
-func (a *stub) ModifyClusterSubnetGroupAsync(ctx workflow.Context, input *redshift.ModifyClusterSubnetGroupInput) *RedshiftModifyClusterSubnetGroupFuture {
+func (a *stub) ModifyClusterSubnetGroupAsync(ctx workflow.Context, input *redshift.ModifyClusterSubnetGroupInput) *ModifyClusterSubnetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.ModifyClusterSubnetGroup", input)
-	return &RedshiftModifyClusterSubnetGroupFuture{Future: future}
+	return &ModifyClusterSubnetGroupFuture{Future: future}
 }
 
 func (a *stub) ModifyEventSubscription(ctx workflow.Context, input *redshift.ModifyEventSubscriptionInput) (*redshift.ModifyEventSubscriptionOutput, error) {
@@ -1870,9 +1870,9 @@ func (a *stub) ModifyEventSubscription(ctx workflow.Context, input *redshift.Mod
 	return &output, err
 }
 
-func (a *stub) ModifyEventSubscriptionAsync(ctx workflow.Context, input *redshift.ModifyEventSubscriptionInput) *RedshiftModifyEventSubscriptionFuture {
+func (a *stub) ModifyEventSubscriptionAsync(ctx workflow.Context, input *redshift.ModifyEventSubscriptionInput) *ModifyEventSubscriptionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.ModifyEventSubscription", input)
-	return &RedshiftModifyEventSubscriptionFuture{Future: future}
+	return &ModifyEventSubscriptionFuture{Future: future}
 }
 
 func (a *stub) ModifyScheduledAction(ctx workflow.Context, input *redshift.ModifyScheduledActionInput) (*redshift.ModifyScheduledActionOutput, error) {
@@ -1881,9 +1881,9 @@ func (a *stub) ModifyScheduledAction(ctx workflow.Context, input *redshift.Modif
 	return &output, err
 }
 
-func (a *stub) ModifyScheduledActionAsync(ctx workflow.Context, input *redshift.ModifyScheduledActionInput) *RedshiftModifyScheduledActionFuture {
+func (a *stub) ModifyScheduledActionAsync(ctx workflow.Context, input *redshift.ModifyScheduledActionInput) *ModifyScheduledActionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.ModifyScheduledAction", input)
-	return &RedshiftModifyScheduledActionFuture{Future: future}
+	return &ModifyScheduledActionFuture{Future: future}
 }
 
 func (a *stub) ModifySnapshotCopyRetentionPeriod(ctx workflow.Context, input *redshift.ModifySnapshotCopyRetentionPeriodInput) (*redshift.ModifySnapshotCopyRetentionPeriodOutput, error) {
@@ -1892,9 +1892,9 @@ func (a *stub) ModifySnapshotCopyRetentionPeriod(ctx workflow.Context, input *re
 	return &output, err
 }
 
-func (a *stub) ModifySnapshotCopyRetentionPeriodAsync(ctx workflow.Context, input *redshift.ModifySnapshotCopyRetentionPeriodInput) *RedshiftModifySnapshotCopyRetentionPeriodFuture {
+func (a *stub) ModifySnapshotCopyRetentionPeriodAsync(ctx workflow.Context, input *redshift.ModifySnapshotCopyRetentionPeriodInput) *ModifySnapshotCopyRetentionPeriodFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.ModifySnapshotCopyRetentionPeriod", input)
-	return &RedshiftModifySnapshotCopyRetentionPeriodFuture{Future: future}
+	return &ModifySnapshotCopyRetentionPeriodFuture{Future: future}
 }
 
 func (a *stub) ModifySnapshotSchedule(ctx workflow.Context, input *redshift.ModifySnapshotScheduleInput) (*redshift.ModifySnapshotScheduleOutput, error) {
@@ -1903,9 +1903,9 @@ func (a *stub) ModifySnapshotSchedule(ctx workflow.Context, input *redshift.Modi
 	return &output, err
 }
 
-func (a *stub) ModifySnapshotScheduleAsync(ctx workflow.Context, input *redshift.ModifySnapshotScheduleInput) *RedshiftModifySnapshotScheduleFuture {
+func (a *stub) ModifySnapshotScheduleAsync(ctx workflow.Context, input *redshift.ModifySnapshotScheduleInput) *ModifySnapshotScheduleFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.ModifySnapshotSchedule", input)
-	return &RedshiftModifySnapshotScheduleFuture{Future: future}
+	return &ModifySnapshotScheduleFuture{Future: future}
 }
 
 func (a *stub) ModifyUsageLimit(ctx workflow.Context, input *redshift.ModifyUsageLimitInput) (*redshift.ModifyUsageLimitOutput, error) {
@@ -1914,9 +1914,9 @@ func (a *stub) ModifyUsageLimit(ctx workflow.Context, input *redshift.ModifyUsag
 	return &output, err
 }
 
-func (a *stub) ModifyUsageLimitAsync(ctx workflow.Context, input *redshift.ModifyUsageLimitInput) *RedshiftModifyUsageLimitFuture {
+func (a *stub) ModifyUsageLimitAsync(ctx workflow.Context, input *redshift.ModifyUsageLimitInput) *ModifyUsageLimitFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.ModifyUsageLimit", input)
-	return &RedshiftModifyUsageLimitFuture{Future: future}
+	return &ModifyUsageLimitFuture{Future: future}
 }
 
 func (a *stub) PauseCluster(ctx workflow.Context, input *redshift.PauseClusterInput) (*redshift.PauseClusterOutput, error) {
@@ -1925,9 +1925,9 @@ func (a *stub) PauseCluster(ctx workflow.Context, input *redshift.PauseClusterIn
 	return &output, err
 }
 
-func (a *stub) PauseClusterAsync(ctx workflow.Context, input *redshift.PauseClusterInput) *RedshiftPauseClusterFuture {
+func (a *stub) PauseClusterAsync(ctx workflow.Context, input *redshift.PauseClusterInput) *PauseClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.PauseCluster", input)
-	return &RedshiftPauseClusterFuture{Future: future}
+	return &PauseClusterFuture{Future: future}
 }
 
 func (a *stub) PurchaseReservedNodeOffering(ctx workflow.Context, input *redshift.PurchaseReservedNodeOfferingInput) (*redshift.PurchaseReservedNodeOfferingOutput, error) {
@@ -1936,9 +1936,9 @@ func (a *stub) PurchaseReservedNodeOffering(ctx workflow.Context, input *redshif
 	return &output, err
 }
 
-func (a *stub) PurchaseReservedNodeOfferingAsync(ctx workflow.Context, input *redshift.PurchaseReservedNodeOfferingInput) *RedshiftPurchaseReservedNodeOfferingFuture {
+func (a *stub) PurchaseReservedNodeOfferingAsync(ctx workflow.Context, input *redshift.PurchaseReservedNodeOfferingInput) *PurchaseReservedNodeOfferingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.PurchaseReservedNodeOffering", input)
-	return &RedshiftPurchaseReservedNodeOfferingFuture{Future: future}
+	return &PurchaseReservedNodeOfferingFuture{Future: future}
 }
 
 func (a *stub) RebootCluster(ctx workflow.Context, input *redshift.RebootClusterInput) (*redshift.RebootClusterOutput, error) {
@@ -1947,9 +1947,9 @@ func (a *stub) RebootCluster(ctx workflow.Context, input *redshift.RebootCluster
 	return &output, err
 }
 
-func (a *stub) RebootClusterAsync(ctx workflow.Context, input *redshift.RebootClusterInput) *RedshiftRebootClusterFuture {
+func (a *stub) RebootClusterAsync(ctx workflow.Context, input *redshift.RebootClusterInput) *RebootClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.RebootCluster", input)
-	return &RedshiftRebootClusterFuture{Future: future}
+	return &RebootClusterFuture{Future: future}
 }
 
 func (a *stub) ResetClusterParameterGroup(ctx workflow.Context, input *redshift.ResetClusterParameterGroupInput) (*redshift.ClusterParameterGroupNameMessage, error) {
@@ -1958,9 +1958,9 @@ func (a *stub) ResetClusterParameterGroup(ctx workflow.Context, input *redshift.
 	return &output, err
 }
 
-func (a *stub) ResetClusterParameterGroupAsync(ctx workflow.Context, input *redshift.ResetClusterParameterGroupInput) *RedshiftResetClusterParameterGroupFuture {
+func (a *stub) ResetClusterParameterGroupAsync(ctx workflow.Context, input *redshift.ResetClusterParameterGroupInput) *ResetClusterParameterGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.ResetClusterParameterGroup", input)
-	return &RedshiftResetClusterParameterGroupFuture{Future: future}
+	return &ResetClusterParameterGroupFuture{Future: future}
 }
 
 func (a *stub) ResizeCluster(ctx workflow.Context, input *redshift.ResizeClusterInput) (*redshift.ResizeClusterOutput, error) {
@@ -1969,9 +1969,9 @@ func (a *stub) ResizeCluster(ctx workflow.Context, input *redshift.ResizeCluster
 	return &output, err
 }
 
-func (a *stub) ResizeClusterAsync(ctx workflow.Context, input *redshift.ResizeClusterInput) *RedshiftResizeClusterFuture {
+func (a *stub) ResizeClusterAsync(ctx workflow.Context, input *redshift.ResizeClusterInput) *ResizeClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.ResizeCluster", input)
-	return &RedshiftResizeClusterFuture{Future: future}
+	return &ResizeClusterFuture{Future: future}
 }
 
 func (a *stub) RestoreFromClusterSnapshot(ctx workflow.Context, input *redshift.RestoreFromClusterSnapshotInput) (*redshift.RestoreFromClusterSnapshotOutput, error) {
@@ -1980,9 +1980,9 @@ func (a *stub) RestoreFromClusterSnapshot(ctx workflow.Context, input *redshift.
 	return &output, err
 }
 
-func (a *stub) RestoreFromClusterSnapshotAsync(ctx workflow.Context, input *redshift.RestoreFromClusterSnapshotInput) *RedshiftRestoreFromClusterSnapshotFuture {
+func (a *stub) RestoreFromClusterSnapshotAsync(ctx workflow.Context, input *redshift.RestoreFromClusterSnapshotInput) *RestoreFromClusterSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.RestoreFromClusterSnapshot", input)
-	return &RedshiftRestoreFromClusterSnapshotFuture{Future: future}
+	return &RestoreFromClusterSnapshotFuture{Future: future}
 }
 
 func (a *stub) RestoreTableFromClusterSnapshot(ctx workflow.Context, input *redshift.RestoreTableFromClusterSnapshotInput) (*redshift.RestoreTableFromClusterSnapshotOutput, error) {
@@ -1991,9 +1991,9 @@ func (a *stub) RestoreTableFromClusterSnapshot(ctx workflow.Context, input *reds
 	return &output, err
 }
 
-func (a *stub) RestoreTableFromClusterSnapshotAsync(ctx workflow.Context, input *redshift.RestoreTableFromClusterSnapshotInput) *RedshiftRestoreTableFromClusterSnapshotFuture {
+func (a *stub) RestoreTableFromClusterSnapshotAsync(ctx workflow.Context, input *redshift.RestoreTableFromClusterSnapshotInput) *RestoreTableFromClusterSnapshotFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.RestoreTableFromClusterSnapshot", input)
-	return &RedshiftRestoreTableFromClusterSnapshotFuture{Future: future}
+	return &RestoreTableFromClusterSnapshotFuture{Future: future}
 }
 
 func (a *stub) ResumeCluster(ctx workflow.Context, input *redshift.ResumeClusterInput) (*redshift.ResumeClusterOutput, error) {
@@ -2002,9 +2002,9 @@ func (a *stub) ResumeCluster(ctx workflow.Context, input *redshift.ResumeCluster
 	return &output, err
 }
 
-func (a *stub) ResumeClusterAsync(ctx workflow.Context, input *redshift.ResumeClusterInput) *RedshiftResumeClusterFuture {
+func (a *stub) ResumeClusterAsync(ctx workflow.Context, input *redshift.ResumeClusterInput) *ResumeClusterFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.ResumeCluster", input)
-	return &RedshiftResumeClusterFuture{Future: future}
+	return &ResumeClusterFuture{Future: future}
 }
 
 func (a *stub) RevokeClusterSecurityGroupIngress(ctx workflow.Context, input *redshift.RevokeClusterSecurityGroupIngressInput) (*redshift.RevokeClusterSecurityGroupIngressOutput, error) {
@@ -2013,9 +2013,9 @@ func (a *stub) RevokeClusterSecurityGroupIngress(ctx workflow.Context, input *re
 	return &output, err
 }
 
-func (a *stub) RevokeClusterSecurityGroupIngressAsync(ctx workflow.Context, input *redshift.RevokeClusterSecurityGroupIngressInput) *RedshiftRevokeClusterSecurityGroupIngressFuture {
+func (a *stub) RevokeClusterSecurityGroupIngressAsync(ctx workflow.Context, input *redshift.RevokeClusterSecurityGroupIngressInput) *RevokeClusterSecurityGroupIngressFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.RevokeClusterSecurityGroupIngress", input)
-	return &RedshiftRevokeClusterSecurityGroupIngressFuture{Future: future}
+	return &RevokeClusterSecurityGroupIngressFuture{Future: future}
 }
 
 func (a *stub) RevokeSnapshotAccess(ctx workflow.Context, input *redshift.RevokeSnapshotAccessInput) (*redshift.RevokeSnapshotAccessOutput, error) {
@@ -2024,9 +2024,9 @@ func (a *stub) RevokeSnapshotAccess(ctx workflow.Context, input *redshift.Revoke
 	return &output, err
 }
 
-func (a *stub) RevokeSnapshotAccessAsync(ctx workflow.Context, input *redshift.RevokeSnapshotAccessInput) *RedshiftRevokeSnapshotAccessFuture {
+func (a *stub) RevokeSnapshotAccessAsync(ctx workflow.Context, input *redshift.RevokeSnapshotAccessInput) *RevokeSnapshotAccessFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.RevokeSnapshotAccess", input)
-	return &RedshiftRevokeSnapshotAccessFuture{Future: future}
+	return &RevokeSnapshotAccessFuture{Future: future}
 }
 
 func (a *stub) RotateEncryptionKey(ctx workflow.Context, input *redshift.RotateEncryptionKeyInput) (*redshift.RotateEncryptionKeyOutput, error) {
@@ -2035,9 +2035,9 @@ func (a *stub) RotateEncryptionKey(ctx workflow.Context, input *redshift.RotateE
 	return &output, err
 }
 
-func (a *stub) RotateEncryptionKeyAsync(ctx workflow.Context, input *redshift.RotateEncryptionKeyInput) *RedshiftRotateEncryptionKeyFuture {
+func (a *stub) RotateEncryptionKeyAsync(ctx workflow.Context, input *redshift.RotateEncryptionKeyInput) *RotateEncryptionKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.redshift.RotateEncryptionKey", input)
-	return &RedshiftRotateEncryptionKeyFuture{Future: future}
+	return &RotateEncryptionKeyFuture{Future: future}
 }
 
 func (a *stub) WaitUntilClusterAvailable(ctx workflow.Context, input *redshift.DescribeClustersInput) error {

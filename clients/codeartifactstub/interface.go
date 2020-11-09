@@ -16,97 +16,97 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AssociateExternalConnection(ctx workflow.Context, input *codeartifact.AssociateExternalConnectionInput) (*codeartifact.AssociateExternalConnectionOutput, error)
-	AssociateExternalConnectionAsync(ctx workflow.Context, input *codeartifact.AssociateExternalConnectionInput) *CodeArtifactAssociateExternalConnectionFuture
+	AssociateExternalConnectionAsync(ctx workflow.Context, input *codeartifact.AssociateExternalConnectionInput) *AssociateExternalConnectionFuture
 
 	CopyPackageVersions(ctx workflow.Context, input *codeartifact.CopyPackageVersionsInput) (*codeartifact.CopyPackageVersionsOutput, error)
-	CopyPackageVersionsAsync(ctx workflow.Context, input *codeartifact.CopyPackageVersionsInput) *CodeArtifactCopyPackageVersionsFuture
+	CopyPackageVersionsAsync(ctx workflow.Context, input *codeartifact.CopyPackageVersionsInput) *CopyPackageVersionsFuture
 
 	CreateDomain(ctx workflow.Context, input *codeartifact.CreateDomainInput) (*codeartifact.CreateDomainOutput, error)
-	CreateDomainAsync(ctx workflow.Context, input *codeartifact.CreateDomainInput) *CodeArtifactCreateDomainFuture
+	CreateDomainAsync(ctx workflow.Context, input *codeartifact.CreateDomainInput) *CreateDomainFuture
 
 	CreateRepository(ctx workflow.Context, input *codeartifact.CreateRepositoryInput) (*codeartifact.CreateRepositoryOutput, error)
-	CreateRepositoryAsync(ctx workflow.Context, input *codeartifact.CreateRepositoryInput) *CodeArtifactCreateRepositoryFuture
+	CreateRepositoryAsync(ctx workflow.Context, input *codeartifact.CreateRepositoryInput) *CreateRepositoryFuture
 
 	DeleteDomain(ctx workflow.Context, input *codeartifact.DeleteDomainInput) (*codeartifact.DeleteDomainOutput, error)
-	DeleteDomainAsync(ctx workflow.Context, input *codeartifact.DeleteDomainInput) *CodeArtifactDeleteDomainFuture
+	DeleteDomainAsync(ctx workflow.Context, input *codeartifact.DeleteDomainInput) *DeleteDomainFuture
 
 	DeleteDomainPermissionsPolicy(ctx workflow.Context, input *codeartifact.DeleteDomainPermissionsPolicyInput) (*codeartifact.DeleteDomainPermissionsPolicyOutput, error)
-	DeleteDomainPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.DeleteDomainPermissionsPolicyInput) *CodeArtifactDeleteDomainPermissionsPolicyFuture
+	DeleteDomainPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.DeleteDomainPermissionsPolicyInput) *DeleteDomainPermissionsPolicyFuture
 
 	DeletePackageVersions(ctx workflow.Context, input *codeartifact.DeletePackageVersionsInput) (*codeartifact.DeletePackageVersionsOutput, error)
-	DeletePackageVersionsAsync(ctx workflow.Context, input *codeartifact.DeletePackageVersionsInput) *CodeArtifactDeletePackageVersionsFuture
+	DeletePackageVersionsAsync(ctx workflow.Context, input *codeartifact.DeletePackageVersionsInput) *DeletePackageVersionsFuture
 
 	DeleteRepository(ctx workflow.Context, input *codeartifact.DeleteRepositoryInput) (*codeartifact.DeleteRepositoryOutput, error)
-	DeleteRepositoryAsync(ctx workflow.Context, input *codeartifact.DeleteRepositoryInput) *CodeArtifactDeleteRepositoryFuture
+	DeleteRepositoryAsync(ctx workflow.Context, input *codeartifact.DeleteRepositoryInput) *DeleteRepositoryFuture
 
 	DeleteRepositoryPermissionsPolicy(ctx workflow.Context, input *codeartifact.DeleteRepositoryPermissionsPolicyInput) (*codeartifact.DeleteRepositoryPermissionsPolicyOutput, error)
-	DeleteRepositoryPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.DeleteRepositoryPermissionsPolicyInput) *CodeArtifactDeleteRepositoryPermissionsPolicyFuture
+	DeleteRepositoryPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.DeleteRepositoryPermissionsPolicyInput) *DeleteRepositoryPermissionsPolicyFuture
 
 	DescribeDomain(ctx workflow.Context, input *codeartifact.DescribeDomainInput) (*codeartifact.DescribeDomainOutput, error)
-	DescribeDomainAsync(ctx workflow.Context, input *codeartifact.DescribeDomainInput) *CodeArtifactDescribeDomainFuture
+	DescribeDomainAsync(ctx workflow.Context, input *codeartifact.DescribeDomainInput) *DescribeDomainFuture
 
 	DescribePackageVersion(ctx workflow.Context, input *codeartifact.DescribePackageVersionInput) (*codeartifact.DescribePackageVersionOutput, error)
-	DescribePackageVersionAsync(ctx workflow.Context, input *codeartifact.DescribePackageVersionInput) *CodeArtifactDescribePackageVersionFuture
+	DescribePackageVersionAsync(ctx workflow.Context, input *codeartifact.DescribePackageVersionInput) *DescribePackageVersionFuture
 
 	DescribeRepository(ctx workflow.Context, input *codeartifact.DescribeRepositoryInput) (*codeartifact.DescribeRepositoryOutput, error)
-	DescribeRepositoryAsync(ctx workflow.Context, input *codeartifact.DescribeRepositoryInput) *CodeArtifactDescribeRepositoryFuture
+	DescribeRepositoryAsync(ctx workflow.Context, input *codeartifact.DescribeRepositoryInput) *DescribeRepositoryFuture
 
 	DisassociateExternalConnection(ctx workflow.Context, input *codeartifact.DisassociateExternalConnectionInput) (*codeartifact.DisassociateExternalConnectionOutput, error)
-	DisassociateExternalConnectionAsync(ctx workflow.Context, input *codeartifact.DisassociateExternalConnectionInput) *CodeArtifactDisassociateExternalConnectionFuture
+	DisassociateExternalConnectionAsync(ctx workflow.Context, input *codeartifact.DisassociateExternalConnectionInput) *DisassociateExternalConnectionFuture
 
 	DisposePackageVersions(ctx workflow.Context, input *codeartifact.DisposePackageVersionsInput) (*codeartifact.DisposePackageVersionsOutput, error)
-	DisposePackageVersionsAsync(ctx workflow.Context, input *codeartifact.DisposePackageVersionsInput) *CodeArtifactDisposePackageVersionsFuture
+	DisposePackageVersionsAsync(ctx workflow.Context, input *codeartifact.DisposePackageVersionsInput) *DisposePackageVersionsFuture
 
 	GetAuthorizationToken(ctx workflow.Context, input *codeartifact.GetAuthorizationTokenInput) (*codeartifact.GetAuthorizationTokenOutput, error)
-	GetAuthorizationTokenAsync(ctx workflow.Context, input *codeartifact.GetAuthorizationTokenInput) *CodeArtifactGetAuthorizationTokenFuture
+	GetAuthorizationTokenAsync(ctx workflow.Context, input *codeartifact.GetAuthorizationTokenInput) *GetAuthorizationTokenFuture
 
 	GetDomainPermissionsPolicy(ctx workflow.Context, input *codeartifact.GetDomainPermissionsPolicyInput) (*codeartifact.GetDomainPermissionsPolicyOutput, error)
-	GetDomainPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.GetDomainPermissionsPolicyInput) *CodeArtifactGetDomainPermissionsPolicyFuture
+	GetDomainPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.GetDomainPermissionsPolicyInput) *GetDomainPermissionsPolicyFuture
 
 	GetPackageVersionAsset(ctx workflow.Context, input *codeartifact.GetPackageVersionAssetInput) (*codeartifact.GetPackageVersionAssetOutput, error)
-	GetPackageVersionAssetAsync(ctx workflow.Context, input *codeartifact.GetPackageVersionAssetInput) *CodeArtifactGetPackageVersionAssetFuture
+	GetPackageVersionAssetAsync(ctx workflow.Context, input *codeartifact.GetPackageVersionAssetInput) *GetPackageVersionAssetFuture
 
 	GetPackageVersionReadme(ctx workflow.Context, input *codeartifact.GetPackageVersionReadmeInput) (*codeartifact.GetPackageVersionReadmeOutput, error)
-	GetPackageVersionReadmeAsync(ctx workflow.Context, input *codeartifact.GetPackageVersionReadmeInput) *CodeArtifactGetPackageVersionReadmeFuture
+	GetPackageVersionReadmeAsync(ctx workflow.Context, input *codeartifact.GetPackageVersionReadmeInput) *GetPackageVersionReadmeFuture
 
 	GetRepositoryEndpoint(ctx workflow.Context, input *codeartifact.GetRepositoryEndpointInput) (*codeartifact.GetRepositoryEndpointOutput, error)
-	GetRepositoryEndpointAsync(ctx workflow.Context, input *codeartifact.GetRepositoryEndpointInput) *CodeArtifactGetRepositoryEndpointFuture
+	GetRepositoryEndpointAsync(ctx workflow.Context, input *codeartifact.GetRepositoryEndpointInput) *GetRepositoryEndpointFuture
 
 	GetRepositoryPermissionsPolicy(ctx workflow.Context, input *codeartifact.GetRepositoryPermissionsPolicyInput) (*codeartifact.GetRepositoryPermissionsPolicyOutput, error)
-	GetRepositoryPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.GetRepositoryPermissionsPolicyInput) *CodeArtifactGetRepositoryPermissionsPolicyFuture
+	GetRepositoryPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.GetRepositoryPermissionsPolicyInput) *GetRepositoryPermissionsPolicyFuture
 
 	ListDomains(ctx workflow.Context, input *codeartifact.ListDomainsInput) (*codeartifact.ListDomainsOutput, error)
-	ListDomainsAsync(ctx workflow.Context, input *codeartifact.ListDomainsInput) *CodeArtifactListDomainsFuture
+	ListDomainsAsync(ctx workflow.Context, input *codeartifact.ListDomainsInput) *ListDomainsFuture
 
 	ListPackageVersionAssets(ctx workflow.Context, input *codeartifact.ListPackageVersionAssetsInput) (*codeartifact.ListPackageVersionAssetsOutput, error)
-	ListPackageVersionAssetsAsync(ctx workflow.Context, input *codeartifact.ListPackageVersionAssetsInput) *CodeArtifactListPackageVersionAssetsFuture
+	ListPackageVersionAssetsAsync(ctx workflow.Context, input *codeartifact.ListPackageVersionAssetsInput) *ListPackageVersionAssetsFuture
 
 	ListPackageVersionDependencies(ctx workflow.Context, input *codeartifact.ListPackageVersionDependenciesInput) (*codeartifact.ListPackageVersionDependenciesOutput, error)
-	ListPackageVersionDependenciesAsync(ctx workflow.Context, input *codeartifact.ListPackageVersionDependenciesInput) *CodeArtifactListPackageVersionDependenciesFuture
+	ListPackageVersionDependenciesAsync(ctx workflow.Context, input *codeartifact.ListPackageVersionDependenciesInput) *ListPackageVersionDependenciesFuture
 
 	ListPackageVersions(ctx workflow.Context, input *codeartifact.ListPackageVersionsInput) (*codeartifact.ListPackageVersionsOutput, error)
-	ListPackageVersionsAsync(ctx workflow.Context, input *codeartifact.ListPackageVersionsInput) *CodeArtifactListPackageVersionsFuture
+	ListPackageVersionsAsync(ctx workflow.Context, input *codeartifact.ListPackageVersionsInput) *ListPackageVersionsFuture
 
 	ListPackages(ctx workflow.Context, input *codeartifact.ListPackagesInput) (*codeartifact.ListPackagesOutput, error)
-	ListPackagesAsync(ctx workflow.Context, input *codeartifact.ListPackagesInput) *CodeArtifactListPackagesFuture
+	ListPackagesAsync(ctx workflow.Context, input *codeartifact.ListPackagesInput) *ListPackagesFuture
 
 	ListRepositories(ctx workflow.Context, input *codeartifact.ListRepositoriesInput) (*codeartifact.ListRepositoriesOutput, error)
-	ListRepositoriesAsync(ctx workflow.Context, input *codeartifact.ListRepositoriesInput) *CodeArtifactListRepositoriesFuture
+	ListRepositoriesAsync(ctx workflow.Context, input *codeartifact.ListRepositoriesInput) *ListRepositoriesFuture
 
 	ListRepositoriesInDomain(ctx workflow.Context, input *codeartifact.ListRepositoriesInDomainInput) (*codeartifact.ListRepositoriesInDomainOutput, error)
-	ListRepositoriesInDomainAsync(ctx workflow.Context, input *codeartifact.ListRepositoriesInDomainInput) *CodeArtifactListRepositoriesInDomainFuture
+	ListRepositoriesInDomainAsync(ctx workflow.Context, input *codeartifact.ListRepositoriesInDomainInput) *ListRepositoriesInDomainFuture
 
 	PutDomainPermissionsPolicy(ctx workflow.Context, input *codeartifact.PutDomainPermissionsPolicyInput) (*codeartifact.PutDomainPermissionsPolicyOutput, error)
-	PutDomainPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.PutDomainPermissionsPolicyInput) *CodeArtifactPutDomainPermissionsPolicyFuture
+	PutDomainPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.PutDomainPermissionsPolicyInput) *PutDomainPermissionsPolicyFuture
 
 	PutRepositoryPermissionsPolicy(ctx workflow.Context, input *codeartifact.PutRepositoryPermissionsPolicyInput) (*codeartifact.PutRepositoryPermissionsPolicyOutput, error)
-	PutRepositoryPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.PutRepositoryPermissionsPolicyInput) *CodeArtifactPutRepositoryPermissionsPolicyFuture
+	PutRepositoryPermissionsPolicyAsync(ctx workflow.Context, input *codeartifact.PutRepositoryPermissionsPolicyInput) *PutRepositoryPermissionsPolicyFuture
 
 	UpdatePackageVersionsStatus(ctx workflow.Context, input *codeartifact.UpdatePackageVersionsStatusInput) (*codeartifact.UpdatePackageVersionsStatusOutput, error)
-	UpdatePackageVersionsStatusAsync(ctx workflow.Context, input *codeartifact.UpdatePackageVersionsStatusInput) *CodeArtifactUpdatePackageVersionsStatusFuture
+	UpdatePackageVersionsStatusAsync(ctx workflow.Context, input *codeartifact.UpdatePackageVersionsStatusInput) *UpdatePackageVersionsStatusFuture
 
 	UpdateRepository(ctx workflow.Context, input *codeartifact.UpdateRepositoryInput) (*codeartifact.UpdateRepositoryOutput, error)
-	UpdateRepositoryAsync(ctx workflow.Context, input *codeartifact.UpdateRepositoryInput) *CodeArtifactUpdateRepositoryFuture
+	UpdateRepositoryAsync(ctx workflow.Context, input *codeartifact.UpdateRepositoryInput) *UpdateRepositoryFuture
 }
 
 func NewClient() Client {

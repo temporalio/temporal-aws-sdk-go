@@ -16,474 +16,474 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type CodeBuildBatchDeleteBuildsFuture struct {
+type BatchDeleteBuildsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildBatchDeleteBuildsFuture) Get(ctx workflow.Context) (*codebuild.BatchDeleteBuildsOutput, error) {
+func (r *BatchDeleteBuildsFuture) Get(ctx workflow.Context) (*codebuild.BatchDeleteBuildsOutput, error) {
 	var output codebuild.BatchDeleteBuildsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildBatchGetBuildBatchesFuture struct {
+type BatchGetBuildBatchesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildBatchGetBuildBatchesFuture) Get(ctx workflow.Context) (*codebuild.BatchGetBuildBatchesOutput, error) {
+func (r *BatchGetBuildBatchesFuture) Get(ctx workflow.Context) (*codebuild.BatchGetBuildBatchesOutput, error) {
 	var output codebuild.BatchGetBuildBatchesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildBatchGetBuildsFuture struct {
+type BatchGetBuildsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildBatchGetBuildsFuture) Get(ctx workflow.Context) (*codebuild.BatchGetBuildsOutput, error) {
+func (r *BatchGetBuildsFuture) Get(ctx workflow.Context) (*codebuild.BatchGetBuildsOutput, error) {
 	var output codebuild.BatchGetBuildsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildBatchGetProjectsFuture struct {
+type BatchGetProjectsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildBatchGetProjectsFuture) Get(ctx workflow.Context) (*codebuild.BatchGetProjectsOutput, error) {
+func (r *BatchGetProjectsFuture) Get(ctx workflow.Context) (*codebuild.BatchGetProjectsOutput, error) {
 	var output codebuild.BatchGetProjectsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildBatchGetReportGroupsFuture struct {
+type BatchGetReportGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildBatchGetReportGroupsFuture) Get(ctx workflow.Context) (*codebuild.BatchGetReportGroupsOutput, error) {
+func (r *BatchGetReportGroupsFuture) Get(ctx workflow.Context) (*codebuild.BatchGetReportGroupsOutput, error) {
 	var output codebuild.BatchGetReportGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildBatchGetReportsFuture struct {
+type BatchGetReportsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildBatchGetReportsFuture) Get(ctx workflow.Context) (*codebuild.BatchGetReportsOutput, error) {
+func (r *BatchGetReportsFuture) Get(ctx workflow.Context) (*codebuild.BatchGetReportsOutput, error) {
 	var output codebuild.BatchGetReportsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildCreateProjectFuture struct {
+type CreateProjectFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildCreateProjectFuture) Get(ctx workflow.Context) (*codebuild.CreateProjectOutput, error) {
+func (r *CreateProjectFuture) Get(ctx workflow.Context) (*codebuild.CreateProjectOutput, error) {
 	var output codebuild.CreateProjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildCreateReportGroupFuture struct {
+type CreateReportGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildCreateReportGroupFuture) Get(ctx workflow.Context) (*codebuild.CreateReportGroupOutput, error) {
+func (r *CreateReportGroupFuture) Get(ctx workflow.Context) (*codebuild.CreateReportGroupOutput, error) {
 	var output codebuild.CreateReportGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildCreateWebhookFuture struct {
+type CreateWebhookFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildCreateWebhookFuture) Get(ctx workflow.Context) (*codebuild.CreateWebhookOutput, error) {
+func (r *CreateWebhookFuture) Get(ctx workflow.Context) (*codebuild.CreateWebhookOutput, error) {
 	var output codebuild.CreateWebhookOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildDeleteBuildBatchFuture struct {
+type DeleteBuildBatchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildDeleteBuildBatchFuture) Get(ctx workflow.Context) (*codebuild.DeleteBuildBatchOutput, error) {
+func (r *DeleteBuildBatchFuture) Get(ctx workflow.Context) (*codebuild.DeleteBuildBatchOutput, error) {
 	var output codebuild.DeleteBuildBatchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildDeleteProjectFuture struct {
+type DeleteProjectFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildDeleteProjectFuture) Get(ctx workflow.Context) (*codebuild.DeleteProjectOutput, error) {
+func (r *DeleteProjectFuture) Get(ctx workflow.Context) (*codebuild.DeleteProjectOutput, error) {
 	var output codebuild.DeleteProjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildDeleteReportFuture struct {
+type DeleteReportFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildDeleteReportFuture) Get(ctx workflow.Context) (*codebuild.DeleteReportOutput, error) {
+func (r *DeleteReportFuture) Get(ctx workflow.Context) (*codebuild.DeleteReportOutput, error) {
 	var output codebuild.DeleteReportOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildDeleteReportGroupFuture struct {
+type DeleteReportGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildDeleteReportGroupFuture) Get(ctx workflow.Context) (*codebuild.DeleteReportGroupOutput, error) {
+func (r *DeleteReportGroupFuture) Get(ctx workflow.Context) (*codebuild.DeleteReportGroupOutput, error) {
 	var output codebuild.DeleteReportGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildDeleteResourcePolicyFuture struct {
+type DeleteResourcePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildDeleteResourcePolicyFuture) Get(ctx workflow.Context) (*codebuild.DeleteResourcePolicyOutput, error) {
+func (r *DeleteResourcePolicyFuture) Get(ctx workflow.Context) (*codebuild.DeleteResourcePolicyOutput, error) {
 	var output codebuild.DeleteResourcePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildDeleteSourceCredentialsFuture struct {
+type DeleteSourceCredentialsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildDeleteSourceCredentialsFuture) Get(ctx workflow.Context) (*codebuild.DeleteSourceCredentialsOutput, error) {
+func (r *DeleteSourceCredentialsFuture) Get(ctx workflow.Context) (*codebuild.DeleteSourceCredentialsOutput, error) {
 	var output codebuild.DeleteSourceCredentialsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildDeleteWebhookFuture struct {
+type DeleteWebhookFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildDeleteWebhookFuture) Get(ctx workflow.Context) (*codebuild.DeleteWebhookOutput, error) {
+func (r *DeleteWebhookFuture) Get(ctx workflow.Context) (*codebuild.DeleteWebhookOutput, error) {
 	var output codebuild.DeleteWebhookOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildDescribeCodeCoveragesFuture struct {
+type DescribeCodeCoveragesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildDescribeCodeCoveragesFuture) Get(ctx workflow.Context) (*codebuild.DescribeCodeCoveragesOutput, error) {
+func (r *DescribeCodeCoveragesFuture) Get(ctx workflow.Context) (*codebuild.DescribeCodeCoveragesOutput, error) {
 	var output codebuild.DescribeCodeCoveragesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildDescribeTestCasesFuture struct {
+type DescribeTestCasesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildDescribeTestCasesFuture) Get(ctx workflow.Context) (*codebuild.DescribeTestCasesOutput, error) {
+func (r *DescribeTestCasesFuture) Get(ctx workflow.Context) (*codebuild.DescribeTestCasesOutput, error) {
 	var output codebuild.DescribeTestCasesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildGetResourcePolicyFuture struct {
+type GetResourcePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildGetResourcePolicyFuture) Get(ctx workflow.Context) (*codebuild.GetResourcePolicyOutput, error) {
+func (r *GetResourcePolicyFuture) Get(ctx workflow.Context) (*codebuild.GetResourcePolicyOutput, error) {
 	var output codebuild.GetResourcePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildImportSourceCredentialsFuture struct {
+type ImportSourceCredentialsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildImportSourceCredentialsFuture) Get(ctx workflow.Context) (*codebuild.ImportSourceCredentialsOutput, error) {
+func (r *ImportSourceCredentialsFuture) Get(ctx workflow.Context) (*codebuild.ImportSourceCredentialsOutput, error) {
 	var output codebuild.ImportSourceCredentialsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildInvalidateProjectCacheFuture struct {
+type InvalidateProjectCacheFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildInvalidateProjectCacheFuture) Get(ctx workflow.Context) (*codebuild.InvalidateProjectCacheOutput, error) {
+func (r *InvalidateProjectCacheFuture) Get(ctx workflow.Context) (*codebuild.InvalidateProjectCacheOutput, error) {
 	var output codebuild.InvalidateProjectCacheOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildListBuildBatchesFuture struct {
+type ListBuildBatchesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildListBuildBatchesFuture) Get(ctx workflow.Context) (*codebuild.ListBuildBatchesOutput, error) {
+func (r *ListBuildBatchesFuture) Get(ctx workflow.Context) (*codebuild.ListBuildBatchesOutput, error) {
 	var output codebuild.ListBuildBatchesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildListBuildBatchesForProjectFuture struct {
+type ListBuildBatchesForProjectFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildListBuildBatchesForProjectFuture) Get(ctx workflow.Context) (*codebuild.ListBuildBatchesForProjectOutput, error) {
+func (r *ListBuildBatchesForProjectFuture) Get(ctx workflow.Context) (*codebuild.ListBuildBatchesForProjectOutput, error) {
 	var output codebuild.ListBuildBatchesForProjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildListBuildsFuture struct {
+type ListBuildsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildListBuildsFuture) Get(ctx workflow.Context) (*codebuild.ListBuildsOutput, error) {
+func (r *ListBuildsFuture) Get(ctx workflow.Context) (*codebuild.ListBuildsOutput, error) {
 	var output codebuild.ListBuildsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildListBuildsForProjectFuture struct {
+type ListBuildsForProjectFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildListBuildsForProjectFuture) Get(ctx workflow.Context) (*codebuild.ListBuildsForProjectOutput, error) {
+func (r *ListBuildsForProjectFuture) Get(ctx workflow.Context) (*codebuild.ListBuildsForProjectOutput, error) {
 	var output codebuild.ListBuildsForProjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildListCuratedEnvironmentImagesFuture struct {
+type ListCuratedEnvironmentImagesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildListCuratedEnvironmentImagesFuture) Get(ctx workflow.Context) (*codebuild.ListCuratedEnvironmentImagesOutput, error) {
+func (r *ListCuratedEnvironmentImagesFuture) Get(ctx workflow.Context) (*codebuild.ListCuratedEnvironmentImagesOutput, error) {
 	var output codebuild.ListCuratedEnvironmentImagesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildListProjectsFuture struct {
+type ListProjectsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildListProjectsFuture) Get(ctx workflow.Context) (*codebuild.ListProjectsOutput, error) {
+func (r *ListProjectsFuture) Get(ctx workflow.Context) (*codebuild.ListProjectsOutput, error) {
 	var output codebuild.ListProjectsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildListReportGroupsFuture struct {
+type ListReportGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildListReportGroupsFuture) Get(ctx workflow.Context) (*codebuild.ListReportGroupsOutput, error) {
+func (r *ListReportGroupsFuture) Get(ctx workflow.Context) (*codebuild.ListReportGroupsOutput, error) {
 	var output codebuild.ListReportGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildListReportsFuture struct {
+type ListReportsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildListReportsFuture) Get(ctx workflow.Context) (*codebuild.ListReportsOutput, error) {
+func (r *ListReportsFuture) Get(ctx workflow.Context) (*codebuild.ListReportsOutput, error) {
 	var output codebuild.ListReportsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildListReportsForReportGroupFuture struct {
+type ListReportsForReportGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildListReportsForReportGroupFuture) Get(ctx workflow.Context) (*codebuild.ListReportsForReportGroupOutput, error) {
+func (r *ListReportsForReportGroupFuture) Get(ctx workflow.Context) (*codebuild.ListReportsForReportGroupOutput, error) {
 	var output codebuild.ListReportsForReportGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildListSharedProjectsFuture struct {
+type ListSharedProjectsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildListSharedProjectsFuture) Get(ctx workflow.Context) (*codebuild.ListSharedProjectsOutput, error) {
+func (r *ListSharedProjectsFuture) Get(ctx workflow.Context) (*codebuild.ListSharedProjectsOutput, error) {
 	var output codebuild.ListSharedProjectsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildListSharedReportGroupsFuture struct {
+type ListSharedReportGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildListSharedReportGroupsFuture) Get(ctx workflow.Context) (*codebuild.ListSharedReportGroupsOutput, error) {
+func (r *ListSharedReportGroupsFuture) Get(ctx workflow.Context) (*codebuild.ListSharedReportGroupsOutput, error) {
 	var output codebuild.ListSharedReportGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildListSourceCredentialsFuture struct {
+type ListSourceCredentialsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildListSourceCredentialsFuture) Get(ctx workflow.Context) (*codebuild.ListSourceCredentialsOutput, error) {
+func (r *ListSourceCredentialsFuture) Get(ctx workflow.Context) (*codebuild.ListSourceCredentialsOutput, error) {
 	var output codebuild.ListSourceCredentialsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildPutResourcePolicyFuture struct {
+type PutResourcePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildPutResourcePolicyFuture) Get(ctx workflow.Context) (*codebuild.PutResourcePolicyOutput, error) {
+func (r *PutResourcePolicyFuture) Get(ctx workflow.Context) (*codebuild.PutResourcePolicyOutput, error) {
 	var output codebuild.PutResourcePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildRetryBuildFuture struct {
+type RetryBuildFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildRetryBuildFuture) Get(ctx workflow.Context) (*codebuild.RetryBuildOutput, error) {
+func (r *RetryBuildFuture) Get(ctx workflow.Context) (*codebuild.RetryBuildOutput, error) {
 	var output codebuild.RetryBuildOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildRetryBuildBatchFuture struct {
+type RetryBuildBatchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildRetryBuildBatchFuture) Get(ctx workflow.Context) (*codebuild.RetryBuildBatchOutput, error) {
+func (r *RetryBuildBatchFuture) Get(ctx workflow.Context) (*codebuild.RetryBuildBatchOutput, error) {
 	var output codebuild.RetryBuildBatchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildStartBuildFuture struct {
+type StartBuildFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildStartBuildFuture) Get(ctx workflow.Context) (*codebuild.StartBuildOutput, error) {
+func (r *StartBuildFuture) Get(ctx workflow.Context) (*codebuild.StartBuildOutput, error) {
 	var output codebuild.StartBuildOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildStartBuildBatchFuture struct {
+type StartBuildBatchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildStartBuildBatchFuture) Get(ctx workflow.Context) (*codebuild.StartBuildBatchOutput, error) {
+func (r *StartBuildBatchFuture) Get(ctx workflow.Context) (*codebuild.StartBuildBatchOutput, error) {
 	var output codebuild.StartBuildBatchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildStopBuildFuture struct {
+type StopBuildFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildStopBuildFuture) Get(ctx workflow.Context) (*codebuild.StopBuildOutput, error) {
+func (r *StopBuildFuture) Get(ctx workflow.Context) (*codebuild.StopBuildOutput, error) {
 	var output codebuild.StopBuildOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildStopBuildBatchFuture struct {
+type StopBuildBatchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildStopBuildBatchFuture) Get(ctx workflow.Context) (*codebuild.StopBuildBatchOutput, error) {
+func (r *StopBuildBatchFuture) Get(ctx workflow.Context) (*codebuild.StopBuildBatchOutput, error) {
 	var output codebuild.StopBuildBatchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildUpdateProjectFuture struct {
+type UpdateProjectFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildUpdateProjectFuture) Get(ctx workflow.Context) (*codebuild.UpdateProjectOutput, error) {
+func (r *UpdateProjectFuture) Get(ctx workflow.Context) (*codebuild.UpdateProjectOutput, error) {
 	var output codebuild.UpdateProjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildUpdateReportGroupFuture struct {
+type UpdateReportGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildUpdateReportGroupFuture) Get(ctx workflow.Context) (*codebuild.UpdateReportGroupOutput, error) {
+func (r *UpdateReportGroupFuture) Get(ctx workflow.Context) (*codebuild.UpdateReportGroupOutput, error) {
 	var output codebuild.UpdateReportGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type CodeBuildUpdateWebhookFuture struct {
+type UpdateWebhookFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *CodeBuildUpdateWebhookFuture) Get(ctx workflow.Context) (*codebuild.UpdateWebhookOutput, error) {
+func (r *UpdateWebhookFuture) Get(ctx workflow.Context) (*codebuild.UpdateWebhookOutput, error) {
 	var output codebuild.UpdateWebhookOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -495,9 +495,9 @@ func (a *stub) BatchDeleteBuilds(ctx workflow.Context, input *codebuild.BatchDel
 	return &output, err
 }
 
-func (a *stub) BatchDeleteBuildsAsync(ctx workflow.Context, input *codebuild.BatchDeleteBuildsInput) *CodeBuildBatchDeleteBuildsFuture {
+func (a *stub) BatchDeleteBuildsAsync(ctx workflow.Context, input *codebuild.BatchDeleteBuildsInput) *BatchDeleteBuildsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.BatchDeleteBuilds", input)
-	return &CodeBuildBatchDeleteBuildsFuture{Future: future}
+	return &BatchDeleteBuildsFuture{Future: future}
 }
 
 func (a *stub) BatchGetBuildBatches(ctx workflow.Context, input *codebuild.BatchGetBuildBatchesInput) (*codebuild.BatchGetBuildBatchesOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) BatchGetBuildBatches(ctx workflow.Context, input *codebuild.Batch
 	return &output, err
 }
 
-func (a *stub) BatchGetBuildBatchesAsync(ctx workflow.Context, input *codebuild.BatchGetBuildBatchesInput) *CodeBuildBatchGetBuildBatchesFuture {
+func (a *stub) BatchGetBuildBatchesAsync(ctx workflow.Context, input *codebuild.BatchGetBuildBatchesInput) *BatchGetBuildBatchesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.BatchGetBuildBatches", input)
-	return &CodeBuildBatchGetBuildBatchesFuture{Future: future}
+	return &BatchGetBuildBatchesFuture{Future: future}
 }
 
 func (a *stub) BatchGetBuilds(ctx workflow.Context, input *codebuild.BatchGetBuildsInput) (*codebuild.BatchGetBuildsOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) BatchGetBuilds(ctx workflow.Context, input *codebuild.BatchGetBui
 	return &output, err
 }
 
-func (a *stub) BatchGetBuildsAsync(ctx workflow.Context, input *codebuild.BatchGetBuildsInput) *CodeBuildBatchGetBuildsFuture {
+func (a *stub) BatchGetBuildsAsync(ctx workflow.Context, input *codebuild.BatchGetBuildsInput) *BatchGetBuildsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.BatchGetBuilds", input)
-	return &CodeBuildBatchGetBuildsFuture{Future: future}
+	return &BatchGetBuildsFuture{Future: future}
 }
 
 func (a *stub) BatchGetProjects(ctx workflow.Context, input *codebuild.BatchGetProjectsInput) (*codebuild.BatchGetProjectsOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) BatchGetProjects(ctx workflow.Context, input *codebuild.BatchGetP
 	return &output, err
 }
 
-func (a *stub) BatchGetProjectsAsync(ctx workflow.Context, input *codebuild.BatchGetProjectsInput) *CodeBuildBatchGetProjectsFuture {
+func (a *stub) BatchGetProjectsAsync(ctx workflow.Context, input *codebuild.BatchGetProjectsInput) *BatchGetProjectsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.BatchGetProjects", input)
-	return &CodeBuildBatchGetProjectsFuture{Future: future}
+	return &BatchGetProjectsFuture{Future: future}
 }
 
 func (a *stub) BatchGetReportGroups(ctx workflow.Context, input *codebuild.BatchGetReportGroupsInput) (*codebuild.BatchGetReportGroupsOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) BatchGetReportGroups(ctx workflow.Context, input *codebuild.Batch
 	return &output, err
 }
 
-func (a *stub) BatchGetReportGroupsAsync(ctx workflow.Context, input *codebuild.BatchGetReportGroupsInput) *CodeBuildBatchGetReportGroupsFuture {
+func (a *stub) BatchGetReportGroupsAsync(ctx workflow.Context, input *codebuild.BatchGetReportGroupsInput) *BatchGetReportGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.BatchGetReportGroups", input)
-	return &CodeBuildBatchGetReportGroupsFuture{Future: future}
+	return &BatchGetReportGroupsFuture{Future: future}
 }
 
 func (a *stub) BatchGetReports(ctx workflow.Context, input *codebuild.BatchGetReportsInput) (*codebuild.BatchGetReportsOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) BatchGetReports(ctx workflow.Context, input *codebuild.BatchGetRe
 	return &output, err
 }
 
-func (a *stub) BatchGetReportsAsync(ctx workflow.Context, input *codebuild.BatchGetReportsInput) *CodeBuildBatchGetReportsFuture {
+func (a *stub) BatchGetReportsAsync(ctx workflow.Context, input *codebuild.BatchGetReportsInput) *BatchGetReportsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.BatchGetReports", input)
-	return &CodeBuildBatchGetReportsFuture{Future: future}
+	return &BatchGetReportsFuture{Future: future}
 }
 
 func (a *stub) CreateProject(ctx workflow.Context, input *codebuild.CreateProjectInput) (*codebuild.CreateProjectOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) CreateProject(ctx workflow.Context, input *codebuild.CreateProjec
 	return &output, err
 }
 
-func (a *stub) CreateProjectAsync(ctx workflow.Context, input *codebuild.CreateProjectInput) *CodeBuildCreateProjectFuture {
+func (a *stub) CreateProjectAsync(ctx workflow.Context, input *codebuild.CreateProjectInput) *CreateProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.CreateProject", input)
-	return &CodeBuildCreateProjectFuture{Future: future}
+	return &CreateProjectFuture{Future: future}
 }
 
 func (a *stub) CreateReportGroup(ctx workflow.Context, input *codebuild.CreateReportGroupInput) (*codebuild.CreateReportGroupOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) CreateReportGroup(ctx workflow.Context, input *codebuild.CreateRe
 	return &output, err
 }
 
-func (a *stub) CreateReportGroupAsync(ctx workflow.Context, input *codebuild.CreateReportGroupInput) *CodeBuildCreateReportGroupFuture {
+func (a *stub) CreateReportGroupAsync(ctx workflow.Context, input *codebuild.CreateReportGroupInput) *CreateReportGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.CreateReportGroup", input)
-	return &CodeBuildCreateReportGroupFuture{Future: future}
+	return &CreateReportGroupFuture{Future: future}
 }
 
 func (a *stub) CreateWebhook(ctx workflow.Context, input *codebuild.CreateWebhookInput) (*codebuild.CreateWebhookOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) CreateWebhook(ctx workflow.Context, input *codebuild.CreateWebhoo
 	return &output, err
 }
 
-func (a *stub) CreateWebhookAsync(ctx workflow.Context, input *codebuild.CreateWebhookInput) *CodeBuildCreateWebhookFuture {
+func (a *stub) CreateWebhookAsync(ctx workflow.Context, input *codebuild.CreateWebhookInput) *CreateWebhookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.CreateWebhook", input)
-	return &CodeBuildCreateWebhookFuture{Future: future}
+	return &CreateWebhookFuture{Future: future}
 }
 
 func (a *stub) DeleteBuildBatch(ctx workflow.Context, input *codebuild.DeleteBuildBatchInput) (*codebuild.DeleteBuildBatchOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) DeleteBuildBatch(ctx workflow.Context, input *codebuild.DeleteBui
 	return &output, err
 }
 
-func (a *stub) DeleteBuildBatchAsync(ctx workflow.Context, input *codebuild.DeleteBuildBatchInput) *CodeBuildDeleteBuildBatchFuture {
+func (a *stub) DeleteBuildBatchAsync(ctx workflow.Context, input *codebuild.DeleteBuildBatchInput) *DeleteBuildBatchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DeleteBuildBatch", input)
-	return &CodeBuildDeleteBuildBatchFuture{Future: future}
+	return &DeleteBuildBatchFuture{Future: future}
 }
 
 func (a *stub) DeleteProject(ctx workflow.Context, input *codebuild.DeleteProjectInput) (*codebuild.DeleteProjectOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) DeleteProject(ctx workflow.Context, input *codebuild.DeleteProjec
 	return &output, err
 }
 
-func (a *stub) DeleteProjectAsync(ctx workflow.Context, input *codebuild.DeleteProjectInput) *CodeBuildDeleteProjectFuture {
+func (a *stub) DeleteProjectAsync(ctx workflow.Context, input *codebuild.DeleteProjectInput) *DeleteProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DeleteProject", input)
-	return &CodeBuildDeleteProjectFuture{Future: future}
+	return &DeleteProjectFuture{Future: future}
 }
 
 func (a *stub) DeleteReport(ctx workflow.Context, input *codebuild.DeleteReportInput) (*codebuild.DeleteReportOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) DeleteReport(ctx workflow.Context, input *codebuild.DeleteReportI
 	return &output, err
 }
 
-func (a *stub) DeleteReportAsync(ctx workflow.Context, input *codebuild.DeleteReportInput) *CodeBuildDeleteReportFuture {
+func (a *stub) DeleteReportAsync(ctx workflow.Context, input *codebuild.DeleteReportInput) *DeleteReportFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DeleteReport", input)
-	return &CodeBuildDeleteReportFuture{Future: future}
+	return &DeleteReportFuture{Future: future}
 }
 
 func (a *stub) DeleteReportGroup(ctx workflow.Context, input *codebuild.DeleteReportGroupInput) (*codebuild.DeleteReportGroupOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) DeleteReportGroup(ctx workflow.Context, input *codebuild.DeleteRe
 	return &output, err
 }
 
-func (a *stub) DeleteReportGroupAsync(ctx workflow.Context, input *codebuild.DeleteReportGroupInput) *CodeBuildDeleteReportGroupFuture {
+func (a *stub) DeleteReportGroupAsync(ctx workflow.Context, input *codebuild.DeleteReportGroupInput) *DeleteReportGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DeleteReportGroup", input)
-	return &CodeBuildDeleteReportGroupFuture{Future: future}
+	return &DeleteReportGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteResourcePolicy(ctx workflow.Context, input *codebuild.DeleteResourcePolicyInput) (*codebuild.DeleteResourcePolicyOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) DeleteResourcePolicy(ctx workflow.Context, input *codebuild.Delet
 	return &output, err
 }
 
-func (a *stub) DeleteResourcePolicyAsync(ctx workflow.Context, input *codebuild.DeleteResourcePolicyInput) *CodeBuildDeleteResourcePolicyFuture {
+func (a *stub) DeleteResourcePolicyAsync(ctx workflow.Context, input *codebuild.DeleteResourcePolicyInput) *DeleteResourcePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DeleteResourcePolicy", input)
-	return &CodeBuildDeleteResourcePolicyFuture{Future: future}
+	return &DeleteResourcePolicyFuture{Future: future}
 }
 
 func (a *stub) DeleteSourceCredentials(ctx workflow.Context, input *codebuild.DeleteSourceCredentialsInput) (*codebuild.DeleteSourceCredentialsOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) DeleteSourceCredentials(ctx workflow.Context, input *codebuild.De
 	return &output, err
 }
 
-func (a *stub) DeleteSourceCredentialsAsync(ctx workflow.Context, input *codebuild.DeleteSourceCredentialsInput) *CodeBuildDeleteSourceCredentialsFuture {
+func (a *stub) DeleteSourceCredentialsAsync(ctx workflow.Context, input *codebuild.DeleteSourceCredentialsInput) *DeleteSourceCredentialsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DeleteSourceCredentials", input)
-	return &CodeBuildDeleteSourceCredentialsFuture{Future: future}
+	return &DeleteSourceCredentialsFuture{Future: future}
 }
 
 func (a *stub) DeleteWebhook(ctx workflow.Context, input *codebuild.DeleteWebhookInput) (*codebuild.DeleteWebhookOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) DeleteWebhook(ctx workflow.Context, input *codebuild.DeleteWebhoo
 	return &output, err
 }
 
-func (a *stub) DeleteWebhookAsync(ctx workflow.Context, input *codebuild.DeleteWebhookInput) *CodeBuildDeleteWebhookFuture {
+func (a *stub) DeleteWebhookAsync(ctx workflow.Context, input *codebuild.DeleteWebhookInput) *DeleteWebhookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DeleteWebhook", input)
-	return &CodeBuildDeleteWebhookFuture{Future: future}
+	return &DeleteWebhookFuture{Future: future}
 }
 
 func (a *stub) DescribeCodeCoverages(ctx workflow.Context, input *codebuild.DescribeCodeCoveragesInput) (*codebuild.DescribeCodeCoveragesOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) DescribeCodeCoverages(ctx workflow.Context, input *codebuild.Desc
 	return &output, err
 }
 
-func (a *stub) DescribeCodeCoveragesAsync(ctx workflow.Context, input *codebuild.DescribeCodeCoveragesInput) *CodeBuildDescribeCodeCoveragesFuture {
+func (a *stub) DescribeCodeCoveragesAsync(ctx workflow.Context, input *codebuild.DescribeCodeCoveragesInput) *DescribeCodeCoveragesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DescribeCodeCoverages", input)
-	return &CodeBuildDescribeCodeCoveragesFuture{Future: future}
+	return &DescribeCodeCoveragesFuture{Future: future}
 }
 
 func (a *stub) DescribeTestCases(ctx workflow.Context, input *codebuild.DescribeTestCasesInput) (*codebuild.DescribeTestCasesOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) DescribeTestCases(ctx workflow.Context, input *codebuild.Describe
 	return &output, err
 }
 
-func (a *stub) DescribeTestCasesAsync(ctx workflow.Context, input *codebuild.DescribeTestCasesInput) *CodeBuildDescribeTestCasesFuture {
+func (a *stub) DescribeTestCasesAsync(ctx workflow.Context, input *codebuild.DescribeTestCasesInput) *DescribeTestCasesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.DescribeTestCases", input)
-	return &CodeBuildDescribeTestCasesFuture{Future: future}
+	return &DescribeTestCasesFuture{Future: future}
 }
 
 func (a *stub) GetResourcePolicy(ctx workflow.Context, input *codebuild.GetResourcePolicyInput) (*codebuild.GetResourcePolicyOutput, error) {
@@ -693,9 +693,9 @@ func (a *stub) GetResourcePolicy(ctx workflow.Context, input *codebuild.GetResou
 	return &output, err
 }
 
-func (a *stub) GetResourcePolicyAsync(ctx workflow.Context, input *codebuild.GetResourcePolicyInput) *CodeBuildGetResourcePolicyFuture {
+func (a *stub) GetResourcePolicyAsync(ctx workflow.Context, input *codebuild.GetResourcePolicyInput) *GetResourcePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.GetResourcePolicy", input)
-	return &CodeBuildGetResourcePolicyFuture{Future: future}
+	return &GetResourcePolicyFuture{Future: future}
 }
 
 func (a *stub) ImportSourceCredentials(ctx workflow.Context, input *codebuild.ImportSourceCredentialsInput) (*codebuild.ImportSourceCredentialsOutput, error) {
@@ -704,9 +704,9 @@ func (a *stub) ImportSourceCredentials(ctx workflow.Context, input *codebuild.Im
 	return &output, err
 }
 
-func (a *stub) ImportSourceCredentialsAsync(ctx workflow.Context, input *codebuild.ImportSourceCredentialsInput) *CodeBuildImportSourceCredentialsFuture {
+func (a *stub) ImportSourceCredentialsAsync(ctx workflow.Context, input *codebuild.ImportSourceCredentialsInput) *ImportSourceCredentialsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ImportSourceCredentials", input)
-	return &CodeBuildImportSourceCredentialsFuture{Future: future}
+	return &ImportSourceCredentialsFuture{Future: future}
 }
 
 func (a *stub) InvalidateProjectCache(ctx workflow.Context, input *codebuild.InvalidateProjectCacheInput) (*codebuild.InvalidateProjectCacheOutput, error) {
@@ -715,9 +715,9 @@ func (a *stub) InvalidateProjectCache(ctx workflow.Context, input *codebuild.Inv
 	return &output, err
 }
 
-func (a *stub) InvalidateProjectCacheAsync(ctx workflow.Context, input *codebuild.InvalidateProjectCacheInput) *CodeBuildInvalidateProjectCacheFuture {
+func (a *stub) InvalidateProjectCacheAsync(ctx workflow.Context, input *codebuild.InvalidateProjectCacheInput) *InvalidateProjectCacheFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.InvalidateProjectCache", input)
-	return &CodeBuildInvalidateProjectCacheFuture{Future: future}
+	return &InvalidateProjectCacheFuture{Future: future}
 }
 
 func (a *stub) ListBuildBatches(ctx workflow.Context, input *codebuild.ListBuildBatchesInput) (*codebuild.ListBuildBatchesOutput, error) {
@@ -726,9 +726,9 @@ func (a *stub) ListBuildBatches(ctx workflow.Context, input *codebuild.ListBuild
 	return &output, err
 }
 
-func (a *stub) ListBuildBatchesAsync(ctx workflow.Context, input *codebuild.ListBuildBatchesInput) *CodeBuildListBuildBatchesFuture {
+func (a *stub) ListBuildBatchesAsync(ctx workflow.Context, input *codebuild.ListBuildBatchesInput) *ListBuildBatchesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListBuildBatches", input)
-	return &CodeBuildListBuildBatchesFuture{Future: future}
+	return &ListBuildBatchesFuture{Future: future}
 }
 
 func (a *stub) ListBuildBatchesForProject(ctx workflow.Context, input *codebuild.ListBuildBatchesForProjectInput) (*codebuild.ListBuildBatchesForProjectOutput, error) {
@@ -737,9 +737,9 @@ func (a *stub) ListBuildBatchesForProject(ctx workflow.Context, input *codebuild
 	return &output, err
 }
 
-func (a *stub) ListBuildBatchesForProjectAsync(ctx workflow.Context, input *codebuild.ListBuildBatchesForProjectInput) *CodeBuildListBuildBatchesForProjectFuture {
+func (a *stub) ListBuildBatchesForProjectAsync(ctx workflow.Context, input *codebuild.ListBuildBatchesForProjectInput) *ListBuildBatchesForProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListBuildBatchesForProject", input)
-	return &CodeBuildListBuildBatchesForProjectFuture{Future: future}
+	return &ListBuildBatchesForProjectFuture{Future: future}
 }
 
 func (a *stub) ListBuilds(ctx workflow.Context, input *codebuild.ListBuildsInput) (*codebuild.ListBuildsOutput, error) {
@@ -748,9 +748,9 @@ func (a *stub) ListBuilds(ctx workflow.Context, input *codebuild.ListBuildsInput
 	return &output, err
 }
 
-func (a *stub) ListBuildsAsync(ctx workflow.Context, input *codebuild.ListBuildsInput) *CodeBuildListBuildsFuture {
+func (a *stub) ListBuildsAsync(ctx workflow.Context, input *codebuild.ListBuildsInput) *ListBuildsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListBuilds", input)
-	return &CodeBuildListBuildsFuture{Future: future}
+	return &ListBuildsFuture{Future: future}
 }
 
 func (a *stub) ListBuildsForProject(ctx workflow.Context, input *codebuild.ListBuildsForProjectInput) (*codebuild.ListBuildsForProjectOutput, error) {
@@ -759,9 +759,9 @@ func (a *stub) ListBuildsForProject(ctx workflow.Context, input *codebuild.ListB
 	return &output, err
 }
 
-func (a *stub) ListBuildsForProjectAsync(ctx workflow.Context, input *codebuild.ListBuildsForProjectInput) *CodeBuildListBuildsForProjectFuture {
+func (a *stub) ListBuildsForProjectAsync(ctx workflow.Context, input *codebuild.ListBuildsForProjectInput) *ListBuildsForProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListBuildsForProject", input)
-	return &CodeBuildListBuildsForProjectFuture{Future: future}
+	return &ListBuildsForProjectFuture{Future: future}
 }
 
 func (a *stub) ListCuratedEnvironmentImages(ctx workflow.Context, input *codebuild.ListCuratedEnvironmentImagesInput) (*codebuild.ListCuratedEnvironmentImagesOutput, error) {
@@ -770,9 +770,9 @@ func (a *stub) ListCuratedEnvironmentImages(ctx workflow.Context, input *codebui
 	return &output, err
 }
 
-func (a *stub) ListCuratedEnvironmentImagesAsync(ctx workflow.Context, input *codebuild.ListCuratedEnvironmentImagesInput) *CodeBuildListCuratedEnvironmentImagesFuture {
+func (a *stub) ListCuratedEnvironmentImagesAsync(ctx workflow.Context, input *codebuild.ListCuratedEnvironmentImagesInput) *ListCuratedEnvironmentImagesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListCuratedEnvironmentImages", input)
-	return &CodeBuildListCuratedEnvironmentImagesFuture{Future: future}
+	return &ListCuratedEnvironmentImagesFuture{Future: future}
 }
 
 func (a *stub) ListProjects(ctx workflow.Context, input *codebuild.ListProjectsInput) (*codebuild.ListProjectsOutput, error) {
@@ -781,9 +781,9 @@ func (a *stub) ListProjects(ctx workflow.Context, input *codebuild.ListProjectsI
 	return &output, err
 }
 
-func (a *stub) ListProjectsAsync(ctx workflow.Context, input *codebuild.ListProjectsInput) *CodeBuildListProjectsFuture {
+func (a *stub) ListProjectsAsync(ctx workflow.Context, input *codebuild.ListProjectsInput) *ListProjectsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListProjects", input)
-	return &CodeBuildListProjectsFuture{Future: future}
+	return &ListProjectsFuture{Future: future}
 }
 
 func (a *stub) ListReportGroups(ctx workflow.Context, input *codebuild.ListReportGroupsInput) (*codebuild.ListReportGroupsOutput, error) {
@@ -792,9 +792,9 @@ func (a *stub) ListReportGroups(ctx workflow.Context, input *codebuild.ListRepor
 	return &output, err
 }
 
-func (a *stub) ListReportGroupsAsync(ctx workflow.Context, input *codebuild.ListReportGroupsInput) *CodeBuildListReportGroupsFuture {
+func (a *stub) ListReportGroupsAsync(ctx workflow.Context, input *codebuild.ListReportGroupsInput) *ListReportGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListReportGroups", input)
-	return &CodeBuildListReportGroupsFuture{Future: future}
+	return &ListReportGroupsFuture{Future: future}
 }
 
 func (a *stub) ListReports(ctx workflow.Context, input *codebuild.ListReportsInput) (*codebuild.ListReportsOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) ListReports(ctx workflow.Context, input *codebuild.ListReportsInp
 	return &output, err
 }
 
-func (a *stub) ListReportsAsync(ctx workflow.Context, input *codebuild.ListReportsInput) *CodeBuildListReportsFuture {
+func (a *stub) ListReportsAsync(ctx workflow.Context, input *codebuild.ListReportsInput) *ListReportsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListReports", input)
-	return &CodeBuildListReportsFuture{Future: future}
+	return &ListReportsFuture{Future: future}
 }
 
 func (a *stub) ListReportsForReportGroup(ctx workflow.Context, input *codebuild.ListReportsForReportGroupInput) (*codebuild.ListReportsForReportGroupOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) ListReportsForReportGroup(ctx workflow.Context, input *codebuild.
 	return &output, err
 }
 
-func (a *stub) ListReportsForReportGroupAsync(ctx workflow.Context, input *codebuild.ListReportsForReportGroupInput) *CodeBuildListReportsForReportGroupFuture {
+func (a *stub) ListReportsForReportGroupAsync(ctx workflow.Context, input *codebuild.ListReportsForReportGroupInput) *ListReportsForReportGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListReportsForReportGroup", input)
-	return &CodeBuildListReportsForReportGroupFuture{Future: future}
+	return &ListReportsForReportGroupFuture{Future: future}
 }
 
 func (a *stub) ListSharedProjects(ctx workflow.Context, input *codebuild.ListSharedProjectsInput) (*codebuild.ListSharedProjectsOutput, error) {
@@ -825,9 +825,9 @@ func (a *stub) ListSharedProjects(ctx workflow.Context, input *codebuild.ListSha
 	return &output, err
 }
 
-func (a *stub) ListSharedProjectsAsync(ctx workflow.Context, input *codebuild.ListSharedProjectsInput) *CodeBuildListSharedProjectsFuture {
+func (a *stub) ListSharedProjectsAsync(ctx workflow.Context, input *codebuild.ListSharedProjectsInput) *ListSharedProjectsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListSharedProjects", input)
-	return &CodeBuildListSharedProjectsFuture{Future: future}
+	return &ListSharedProjectsFuture{Future: future}
 }
 
 func (a *stub) ListSharedReportGroups(ctx workflow.Context, input *codebuild.ListSharedReportGroupsInput) (*codebuild.ListSharedReportGroupsOutput, error) {
@@ -836,9 +836,9 @@ func (a *stub) ListSharedReportGroups(ctx workflow.Context, input *codebuild.Lis
 	return &output, err
 }
 
-func (a *stub) ListSharedReportGroupsAsync(ctx workflow.Context, input *codebuild.ListSharedReportGroupsInput) *CodeBuildListSharedReportGroupsFuture {
+func (a *stub) ListSharedReportGroupsAsync(ctx workflow.Context, input *codebuild.ListSharedReportGroupsInput) *ListSharedReportGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListSharedReportGroups", input)
-	return &CodeBuildListSharedReportGroupsFuture{Future: future}
+	return &ListSharedReportGroupsFuture{Future: future}
 }
 
 func (a *stub) ListSourceCredentials(ctx workflow.Context, input *codebuild.ListSourceCredentialsInput) (*codebuild.ListSourceCredentialsOutput, error) {
@@ -847,9 +847,9 @@ func (a *stub) ListSourceCredentials(ctx workflow.Context, input *codebuild.List
 	return &output, err
 }
 
-func (a *stub) ListSourceCredentialsAsync(ctx workflow.Context, input *codebuild.ListSourceCredentialsInput) *CodeBuildListSourceCredentialsFuture {
+func (a *stub) ListSourceCredentialsAsync(ctx workflow.Context, input *codebuild.ListSourceCredentialsInput) *ListSourceCredentialsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.ListSourceCredentials", input)
-	return &CodeBuildListSourceCredentialsFuture{Future: future}
+	return &ListSourceCredentialsFuture{Future: future}
 }
 
 func (a *stub) PutResourcePolicy(ctx workflow.Context, input *codebuild.PutResourcePolicyInput) (*codebuild.PutResourcePolicyOutput, error) {
@@ -858,9 +858,9 @@ func (a *stub) PutResourcePolicy(ctx workflow.Context, input *codebuild.PutResou
 	return &output, err
 }
 
-func (a *stub) PutResourcePolicyAsync(ctx workflow.Context, input *codebuild.PutResourcePolicyInput) *CodeBuildPutResourcePolicyFuture {
+func (a *stub) PutResourcePolicyAsync(ctx workflow.Context, input *codebuild.PutResourcePolicyInput) *PutResourcePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.PutResourcePolicy", input)
-	return &CodeBuildPutResourcePolicyFuture{Future: future}
+	return &PutResourcePolicyFuture{Future: future}
 }
 
 func (a *stub) RetryBuild(ctx workflow.Context, input *codebuild.RetryBuildInput) (*codebuild.RetryBuildOutput, error) {
@@ -869,9 +869,9 @@ func (a *stub) RetryBuild(ctx workflow.Context, input *codebuild.RetryBuildInput
 	return &output, err
 }
 
-func (a *stub) RetryBuildAsync(ctx workflow.Context, input *codebuild.RetryBuildInput) *CodeBuildRetryBuildFuture {
+func (a *stub) RetryBuildAsync(ctx workflow.Context, input *codebuild.RetryBuildInput) *RetryBuildFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.RetryBuild", input)
-	return &CodeBuildRetryBuildFuture{Future: future}
+	return &RetryBuildFuture{Future: future}
 }
 
 func (a *stub) RetryBuildBatch(ctx workflow.Context, input *codebuild.RetryBuildBatchInput) (*codebuild.RetryBuildBatchOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) RetryBuildBatch(ctx workflow.Context, input *codebuild.RetryBuild
 	return &output, err
 }
 
-func (a *stub) RetryBuildBatchAsync(ctx workflow.Context, input *codebuild.RetryBuildBatchInput) *CodeBuildRetryBuildBatchFuture {
+func (a *stub) RetryBuildBatchAsync(ctx workflow.Context, input *codebuild.RetryBuildBatchInput) *RetryBuildBatchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.RetryBuildBatch", input)
-	return &CodeBuildRetryBuildBatchFuture{Future: future}
+	return &RetryBuildBatchFuture{Future: future}
 }
 
 func (a *stub) StartBuild(ctx workflow.Context, input *codebuild.StartBuildInput) (*codebuild.StartBuildOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) StartBuild(ctx workflow.Context, input *codebuild.StartBuildInput
 	return &output, err
 }
 
-func (a *stub) StartBuildAsync(ctx workflow.Context, input *codebuild.StartBuildInput) *CodeBuildStartBuildFuture {
+func (a *stub) StartBuildAsync(ctx workflow.Context, input *codebuild.StartBuildInput) *StartBuildFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.StartBuild", input)
-	return &CodeBuildStartBuildFuture{Future: future}
+	return &StartBuildFuture{Future: future}
 }
 
 func (a *stub) StartBuildBatch(ctx workflow.Context, input *codebuild.StartBuildBatchInput) (*codebuild.StartBuildBatchOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) StartBuildBatch(ctx workflow.Context, input *codebuild.StartBuild
 	return &output, err
 }
 
-func (a *stub) StartBuildBatchAsync(ctx workflow.Context, input *codebuild.StartBuildBatchInput) *CodeBuildStartBuildBatchFuture {
+func (a *stub) StartBuildBatchAsync(ctx workflow.Context, input *codebuild.StartBuildBatchInput) *StartBuildBatchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.StartBuildBatch", input)
-	return &CodeBuildStartBuildBatchFuture{Future: future}
+	return &StartBuildBatchFuture{Future: future}
 }
 
 func (a *stub) StopBuild(ctx workflow.Context, input *codebuild.StopBuildInput) (*codebuild.StopBuildOutput, error) {
@@ -913,9 +913,9 @@ func (a *stub) StopBuild(ctx workflow.Context, input *codebuild.StopBuildInput) 
 	return &output, err
 }
 
-func (a *stub) StopBuildAsync(ctx workflow.Context, input *codebuild.StopBuildInput) *CodeBuildStopBuildFuture {
+func (a *stub) StopBuildAsync(ctx workflow.Context, input *codebuild.StopBuildInput) *StopBuildFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.StopBuild", input)
-	return &CodeBuildStopBuildFuture{Future: future}
+	return &StopBuildFuture{Future: future}
 }
 
 func (a *stub) StopBuildBatch(ctx workflow.Context, input *codebuild.StopBuildBatchInput) (*codebuild.StopBuildBatchOutput, error) {
@@ -924,9 +924,9 @@ func (a *stub) StopBuildBatch(ctx workflow.Context, input *codebuild.StopBuildBa
 	return &output, err
 }
 
-func (a *stub) StopBuildBatchAsync(ctx workflow.Context, input *codebuild.StopBuildBatchInput) *CodeBuildStopBuildBatchFuture {
+func (a *stub) StopBuildBatchAsync(ctx workflow.Context, input *codebuild.StopBuildBatchInput) *StopBuildBatchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.StopBuildBatch", input)
-	return &CodeBuildStopBuildBatchFuture{Future: future}
+	return &StopBuildBatchFuture{Future: future}
 }
 
 func (a *stub) UpdateProject(ctx workflow.Context, input *codebuild.UpdateProjectInput) (*codebuild.UpdateProjectOutput, error) {
@@ -935,9 +935,9 @@ func (a *stub) UpdateProject(ctx workflow.Context, input *codebuild.UpdateProjec
 	return &output, err
 }
 
-func (a *stub) UpdateProjectAsync(ctx workflow.Context, input *codebuild.UpdateProjectInput) *CodeBuildUpdateProjectFuture {
+func (a *stub) UpdateProjectAsync(ctx workflow.Context, input *codebuild.UpdateProjectInput) *UpdateProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.UpdateProject", input)
-	return &CodeBuildUpdateProjectFuture{Future: future}
+	return &UpdateProjectFuture{Future: future}
 }
 
 func (a *stub) UpdateReportGroup(ctx workflow.Context, input *codebuild.UpdateReportGroupInput) (*codebuild.UpdateReportGroupOutput, error) {
@@ -946,9 +946,9 @@ func (a *stub) UpdateReportGroup(ctx workflow.Context, input *codebuild.UpdateRe
 	return &output, err
 }
 
-func (a *stub) UpdateReportGroupAsync(ctx workflow.Context, input *codebuild.UpdateReportGroupInput) *CodeBuildUpdateReportGroupFuture {
+func (a *stub) UpdateReportGroupAsync(ctx workflow.Context, input *codebuild.UpdateReportGroupInput) *UpdateReportGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.UpdateReportGroup", input)
-	return &CodeBuildUpdateReportGroupFuture{Future: future}
+	return &UpdateReportGroupFuture{Future: future}
 }
 
 func (a *stub) UpdateWebhook(ctx workflow.Context, input *codebuild.UpdateWebhookInput) (*codebuild.UpdateWebhookOutput, error) {
@@ -957,7 +957,7 @@ func (a *stub) UpdateWebhook(ctx workflow.Context, input *codebuild.UpdateWebhoo
 	return &output, err
 }
 
-func (a *stub) UpdateWebhookAsync(ctx workflow.Context, input *codebuild.UpdateWebhookInput) *CodeBuildUpdateWebhookFuture {
+func (a *stub) UpdateWebhookAsync(ctx workflow.Context, input *codebuild.UpdateWebhookInput) *UpdateWebhookFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.codebuild.UpdateWebhook", input)
-	return &CodeBuildUpdateWebhookFuture{Future: future}
+	return &UpdateWebhookFuture{Future: future}
 }

@@ -16,243 +16,243 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type IVSBatchGetChannelFuture struct {
+type BatchGetChannelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSBatchGetChannelFuture) Get(ctx workflow.Context) (*ivs.BatchGetChannelOutput, error) {
+func (r *BatchGetChannelFuture) Get(ctx workflow.Context) (*ivs.BatchGetChannelOutput, error) {
 	var output ivs.BatchGetChannelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSBatchGetStreamKeyFuture struct {
+type BatchGetStreamKeyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSBatchGetStreamKeyFuture) Get(ctx workflow.Context) (*ivs.BatchGetStreamKeyOutput, error) {
+func (r *BatchGetStreamKeyFuture) Get(ctx workflow.Context) (*ivs.BatchGetStreamKeyOutput, error) {
 	var output ivs.BatchGetStreamKeyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSCreateChannelFuture struct {
+type CreateChannelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSCreateChannelFuture) Get(ctx workflow.Context) (*ivs.CreateChannelOutput, error) {
+func (r *CreateChannelFuture) Get(ctx workflow.Context) (*ivs.CreateChannelOutput, error) {
 	var output ivs.CreateChannelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSCreateStreamKeyFuture struct {
+type CreateStreamKeyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSCreateStreamKeyFuture) Get(ctx workflow.Context) (*ivs.CreateStreamKeyOutput, error) {
+func (r *CreateStreamKeyFuture) Get(ctx workflow.Context) (*ivs.CreateStreamKeyOutput, error) {
 	var output ivs.CreateStreamKeyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSDeleteChannelFuture struct {
+type DeleteChannelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSDeleteChannelFuture) Get(ctx workflow.Context) (*ivs.DeleteChannelOutput, error) {
+func (r *DeleteChannelFuture) Get(ctx workflow.Context) (*ivs.DeleteChannelOutput, error) {
 	var output ivs.DeleteChannelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSDeletePlaybackKeyPairFuture struct {
+type DeletePlaybackKeyPairFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSDeletePlaybackKeyPairFuture) Get(ctx workflow.Context) (*ivs.DeletePlaybackKeyPairOutput, error) {
+func (r *DeletePlaybackKeyPairFuture) Get(ctx workflow.Context) (*ivs.DeletePlaybackKeyPairOutput, error) {
 	var output ivs.DeletePlaybackKeyPairOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSDeleteStreamKeyFuture struct {
+type DeleteStreamKeyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSDeleteStreamKeyFuture) Get(ctx workflow.Context) (*ivs.DeleteStreamKeyOutput, error) {
+func (r *DeleteStreamKeyFuture) Get(ctx workflow.Context) (*ivs.DeleteStreamKeyOutput, error) {
 	var output ivs.DeleteStreamKeyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSGetChannelFuture struct {
+type GetChannelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSGetChannelFuture) Get(ctx workflow.Context) (*ivs.GetChannelOutput, error) {
+func (r *GetChannelFuture) Get(ctx workflow.Context) (*ivs.GetChannelOutput, error) {
 	var output ivs.GetChannelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSGetPlaybackKeyPairFuture struct {
+type GetPlaybackKeyPairFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSGetPlaybackKeyPairFuture) Get(ctx workflow.Context) (*ivs.GetPlaybackKeyPairOutput, error) {
+func (r *GetPlaybackKeyPairFuture) Get(ctx workflow.Context) (*ivs.GetPlaybackKeyPairOutput, error) {
 	var output ivs.GetPlaybackKeyPairOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSGetStreamFuture struct {
+type GetStreamFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSGetStreamFuture) Get(ctx workflow.Context) (*ivs.GetStreamOutput, error) {
+func (r *GetStreamFuture) Get(ctx workflow.Context) (*ivs.GetStreamOutput, error) {
 	var output ivs.GetStreamOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSGetStreamKeyFuture struct {
+type GetStreamKeyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSGetStreamKeyFuture) Get(ctx workflow.Context) (*ivs.GetStreamKeyOutput, error) {
+func (r *GetStreamKeyFuture) Get(ctx workflow.Context) (*ivs.GetStreamKeyOutput, error) {
 	var output ivs.GetStreamKeyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSImportPlaybackKeyPairFuture struct {
+type ImportPlaybackKeyPairFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSImportPlaybackKeyPairFuture) Get(ctx workflow.Context) (*ivs.ImportPlaybackKeyPairOutput, error) {
+func (r *ImportPlaybackKeyPairFuture) Get(ctx workflow.Context) (*ivs.ImportPlaybackKeyPairOutput, error) {
 	var output ivs.ImportPlaybackKeyPairOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSListChannelsFuture struct {
+type ListChannelsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSListChannelsFuture) Get(ctx workflow.Context) (*ivs.ListChannelsOutput, error) {
+func (r *ListChannelsFuture) Get(ctx workflow.Context) (*ivs.ListChannelsOutput, error) {
 	var output ivs.ListChannelsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSListPlaybackKeyPairsFuture struct {
+type ListPlaybackKeyPairsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSListPlaybackKeyPairsFuture) Get(ctx workflow.Context) (*ivs.ListPlaybackKeyPairsOutput, error) {
+func (r *ListPlaybackKeyPairsFuture) Get(ctx workflow.Context) (*ivs.ListPlaybackKeyPairsOutput, error) {
 	var output ivs.ListPlaybackKeyPairsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSListStreamKeysFuture struct {
+type ListStreamKeysFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSListStreamKeysFuture) Get(ctx workflow.Context) (*ivs.ListStreamKeysOutput, error) {
+func (r *ListStreamKeysFuture) Get(ctx workflow.Context) (*ivs.ListStreamKeysOutput, error) {
 	var output ivs.ListStreamKeysOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSListStreamsFuture struct {
+type ListStreamsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSListStreamsFuture) Get(ctx workflow.Context) (*ivs.ListStreamsOutput, error) {
+func (r *ListStreamsFuture) Get(ctx workflow.Context) (*ivs.ListStreamsOutput, error) {
 	var output ivs.ListStreamsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSListTagsForResourceFuture) Get(ctx workflow.Context) (*ivs.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*ivs.ListTagsForResourceOutput, error) {
 	var output ivs.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSPutMetadataFuture struct {
+type PutMetadataFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSPutMetadataFuture) Get(ctx workflow.Context) (*ivs.PutMetadataOutput, error) {
+func (r *PutMetadataFuture) Get(ctx workflow.Context) (*ivs.PutMetadataOutput, error) {
 	var output ivs.PutMetadataOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSStopStreamFuture struct {
+type StopStreamFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSStopStreamFuture) Get(ctx workflow.Context) (*ivs.StopStreamOutput, error) {
+func (r *StopStreamFuture) Get(ctx workflow.Context) (*ivs.StopStreamOutput, error) {
 	var output ivs.StopStreamOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSTagResourceFuture) Get(ctx workflow.Context) (*ivs.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*ivs.TagResourceOutput, error) {
 	var output ivs.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSUntagResourceFuture) Get(ctx workflow.Context) (*ivs.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*ivs.UntagResourceOutput, error) {
 	var output ivs.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IVSUpdateChannelFuture struct {
+type UpdateChannelFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IVSUpdateChannelFuture) Get(ctx workflow.Context) (*ivs.UpdateChannelOutput, error) {
+func (r *UpdateChannelFuture) Get(ctx workflow.Context) (*ivs.UpdateChannelOutput, error) {
 	var output ivs.UpdateChannelOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -264,9 +264,9 @@ func (a *stub) BatchGetChannel(ctx workflow.Context, input *ivs.BatchGetChannelI
 	return &output, err
 }
 
-func (a *stub) BatchGetChannelAsync(ctx workflow.Context, input *ivs.BatchGetChannelInput) *IVSBatchGetChannelFuture {
+func (a *stub) BatchGetChannelAsync(ctx workflow.Context, input *ivs.BatchGetChannelInput) *BatchGetChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.BatchGetChannel", input)
-	return &IVSBatchGetChannelFuture{Future: future}
+	return &BatchGetChannelFuture{Future: future}
 }
 
 func (a *stub) BatchGetStreamKey(ctx workflow.Context, input *ivs.BatchGetStreamKeyInput) (*ivs.BatchGetStreamKeyOutput, error) {
@@ -275,9 +275,9 @@ func (a *stub) BatchGetStreamKey(ctx workflow.Context, input *ivs.BatchGetStream
 	return &output, err
 }
 
-func (a *stub) BatchGetStreamKeyAsync(ctx workflow.Context, input *ivs.BatchGetStreamKeyInput) *IVSBatchGetStreamKeyFuture {
+func (a *stub) BatchGetStreamKeyAsync(ctx workflow.Context, input *ivs.BatchGetStreamKeyInput) *BatchGetStreamKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.BatchGetStreamKey", input)
-	return &IVSBatchGetStreamKeyFuture{Future: future}
+	return &BatchGetStreamKeyFuture{Future: future}
 }
 
 func (a *stub) CreateChannel(ctx workflow.Context, input *ivs.CreateChannelInput) (*ivs.CreateChannelOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) CreateChannel(ctx workflow.Context, input *ivs.CreateChannelInput
 	return &output, err
 }
 
-func (a *stub) CreateChannelAsync(ctx workflow.Context, input *ivs.CreateChannelInput) *IVSCreateChannelFuture {
+func (a *stub) CreateChannelAsync(ctx workflow.Context, input *ivs.CreateChannelInput) *CreateChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.CreateChannel", input)
-	return &IVSCreateChannelFuture{Future: future}
+	return &CreateChannelFuture{Future: future}
 }
 
 func (a *stub) CreateStreamKey(ctx workflow.Context, input *ivs.CreateStreamKeyInput) (*ivs.CreateStreamKeyOutput, error) {
@@ -297,9 +297,9 @@ func (a *stub) CreateStreamKey(ctx workflow.Context, input *ivs.CreateStreamKeyI
 	return &output, err
 }
 
-func (a *stub) CreateStreamKeyAsync(ctx workflow.Context, input *ivs.CreateStreamKeyInput) *IVSCreateStreamKeyFuture {
+func (a *stub) CreateStreamKeyAsync(ctx workflow.Context, input *ivs.CreateStreamKeyInput) *CreateStreamKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.CreateStreamKey", input)
-	return &IVSCreateStreamKeyFuture{Future: future}
+	return &CreateStreamKeyFuture{Future: future}
 }
 
 func (a *stub) DeleteChannel(ctx workflow.Context, input *ivs.DeleteChannelInput) (*ivs.DeleteChannelOutput, error) {
@@ -308,9 +308,9 @@ func (a *stub) DeleteChannel(ctx workflow.Context, input *ivs.DeleteChannelInput
 	return &output, err
 }
 
-func (a *stub) DeleteChannelAsync(ctx workflow.Context, input *ivs.DeleteChannelInput) *IVSDeleteChannelFuture {
+func (a *stub) DeleteChannelAsync(ctx workflow.Context, input *ivs.DeleteChannelInput) *DeleteChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.DeleteChannel", input)
-	return &IVSDeleteChannelFuture{Future: future}
+	return &DeleteChannelFuture{Future: future}
 }
 
 func (a *stub) DeletePlaybackKeyPair(ctx workflow.Context, input *ivs.DeletePlaybackKeyPairInput) (*ivs.DeletePlaybackKeyPairOutput, error) {
@@ -319,9 +319,9 @@ func (a *stub) DeletePlaybackKeyPair(ctx workflow.Context, input *ivs.DeletePlay
 	return &output, err
 }
 
-func (a *stub) DeletePlaybackKeyPairAsync(ctx workflow.Context, input *ivs.DeletePlaybackKeyPairInput) *IVSDeletePlaybackKeyPairFuture {
+func (a *stub) DeletePlaybackKeyPairAsync(ctx workflow.Context, input *ivs.DeletePlaybackKeyPairInput) *DeletePlaybackKeyPairFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.DeletePlaybackKeyPair", input)
-	return &IVSDeletePlaybackKeyPairFuture{Future: future}
+	return &DeletePlaybackKeyPairFuture{Future: future}
 }
 
 func (a *stub) DeleteStreamKey(ctx workflow.Context, input *ivs.DeleteStreamKeyInput) (*ivs.DeleteStreamKeyOutput, error) {
@@ -330,9 +330,9 @@ func (a *stub) DeleteStreamKey(ctx workflow.Context, input *ivs.DeleteStreamKeyI
 	return &output, err
 }
 
-func (a *stub) DeleteStreamKeyAsync(ctx workflow.Context, input *ivs.DeleteStreamKeyInput) *IVSDeleteStreamKeyFuture {
+func (a *stub) DeleteStreamKeyAsync(ctx workflow.Context, input *ivs.DeleteStreamKeyInput) *DeleteStreamKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.DeleteStreamKey", input)
-	return &IVSDeleteStreamKeyFuture{Future: future}
+	return &DeleteStreamKeyFuture{Future: future}
 }
 
 func (a *stub) GetChannel(ctx workflow.Context, input *ivs.GetChannelInput) (*ivs.GetChannelOutput, error) {
@@ -341,9 +341,9 @@ func (a *stub) GetChannel(ctx workflow.Context, input *ivs.GetChannelInput) (*iv
 	return &output, err
 }
 
-func (a *stub) GetChannelAsync(ctx workflow.Context, input *ivs.GetChannelInput) *IVSGetChannelFuture {
+func (a *stub) GetChannelAsync(ctx workflow.Context, input *ivs.GetChannelInput) *GetChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.GetChannel", input)
-	return &IVSGetChannelFuture{Future: future}
+	return &GetChannelFuture{Future: future}
 }
 
 func (a *stub) GetPlaybackKeyPair(ctx workflow.Context, input *ivs.GetPlaybackKeyPairInput) (*ivs.GetPlaybackKeyPairOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) GetPlaybackKeyPair(ctx workflow.Context, input *ivs.GetPlaybackKe
 	return &output, err
 }
 
-func (a *stub) GetPlaybackKeyPairAsync(ctx workflow.Context, input *ivs.GetPlaybackKeyPairInput) *IVSGetPlaybackKeyPairFuture {
+func (a *stub) GetPlaybackKeyPairAsync(ctx workflow.Context, input *ivs.GetPlaybackKeyPairInput) *GetPlaybackKeyPairFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.GetPlaybackKeyPair", input)
-	return &IVSGetPlaybackKeyPairFuture{Future: future}
+	return &GetPlaybackKeyPairFuture{Future: future}
 }
 
 func (a *stub) GetStream(ctx workflow.Context, input *ivs.GetStreamInput) (*ivs.GetStreamOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) GetStream(ctx workflow.Context, input *ivs.GetStreamInput) (*ivs.
 	return &output, err
 }
 
-func (a *stub) GetStreamAsync(ctx workflow.Context, input *ivs.GetStreamInput) *IVSGetStreamFuture {
+func (a *stub) GetStreamAsync(ctx workflow.Context, input *ivs.GetStreamInput) *GetStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.GetStream", input)
-	return &IVSGetStreamFuture{Future: future}
+	return &GetStreamFuture{Future: future}
 }
 
 func (a *stub) GetStreamKey(ctx workflow.Context, input *ivs.GetStreamKeyInput) (*ivs.GetStreamKeyOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) GetStreamKey(ctx workflow.Context, input *ivs.GetStreamKeyInput) 
 	return &output, err
 }
 
-func (a *stub) GetStreamKeyAsync(ctx workflow.Context, input *ivs.GetStreamKeyInput) *IVSGetStreamKeyFuture {
+func (a *stub) GetStreamKeyAsync(ctx workflow.Context, input *ivs.GetStreamKeyInput) *GetStreamKeyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.GetStreamKey", input)
-	return &IVSGetStreamKeyFuture{Future: future}
+	return &GetStreamKeyFuture{Future: future}
 }
 
 func (a *stub) ImportPlaybackKeyPair(ctx workflow.Context, input *ivs.ImportPlaybackKeyPairInput) (*ivs.ImportPlaybackKeyPairOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) ImportPlaybackKeyPair(ctx workflow.Context, input *ivs.ImportPlay
 	return &output, err
 }
 
-func (a *stub) ImportPlaybackKeyPairAsync(ctx workflow.Context, input *ivs.ImportPlaybackKeyPairInput) *IVSImportPlaybackKeyPairFuture {
+func (a *stub) ImportPlaybackKeyPairAsync(ctx workflow.Context, input *ivs.ImportPlaybackKeyPairInput) *ImportPlaybackKeyPairFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.ImportPlaybackKeyPair", input)
-	return &IVSImportPlaybackKeyPairFuture{Future: future}
+	return &ImportPlaybackKeyPairFuture{Future: future}
 }
 
 func (a *stub) ListChannels(ctx workflow.Context, input *ivs.ListChannelsInput) (*ivs.ListChannelsOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) ListChannels(ctx workflow.Context, input *ivs.ListChannelsInput) 
 	return &output, err
 }
 
-func (a *stub) ListChannelsAsync(ctx workflow.Context, input *ivs.ListChannelsInput) *IVSListChannelsFuture {
+func (a *stub) ListChannelsAsync(ctx workflow.Context, input *ivs.ListChannelsInput) *ListChannelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.ListChannels", input)
-	return &IVSListChannelsFuture{Future: future}
+	return &ListChannelsFuture{Future: future}
 }
 
 func (a *stub) ListPlaybackKeyPairs(ctx workflow.Context, input *ivs.ListPlaybackKeyPairsInput) (*ivs.ListPlaybackKeyPairsOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) ListPlaybackKeyPairs(ctx workflow.Context, input *ivs.ListPlaybac
 	return &output, err
 }
 
-func (a *stub) ListPlaybackKeyPairsAsync(ctx workflow.Context, input *ivs.ListPlaybackKeyPairsInput) *IVSListPlaybackKeyPairsFuture {
+func (a *stub) ListPlaybackKeyPairsAsync(ctx workflow.Context, input *ivs.ListPlaybackKeyPairsInput) *ListPlaybackKeyPairsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.ListPlaybackKeyPairs", input)
-	return &IVSListPlaybackKeyPairsFuture{Future: future}
+	return &ListPlaybackKeyPairsFuture{Future: future}
 }
 
 func (a *stub) ListStreamKeys(ctx workflow.Context, input *ivs.ListStreamKeysInput) (*ivs.ListStreamKeysOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) ListStreamKeys(ctx workflow.Context, input *ivs.ListStreamKeysInp
 	return &output, err
 }
 
-func (a *stub) ListStreamKeysAsync(ctx workflow.Context, input *ivs.ListStreamKeysInput) *IVSListStreamKeysFuture {
+func (a *stub) ListStreamKeysAsync(ctx workflow.Context, input *ivs.ListStreamKeysInput) *ListStreamKeysFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.ListStreamKeys", input)
-	return &IVSListStreamKeysFuture{Future: future}
+	return &ListStreamKeysFuture{Future: future}
 }
 
 func (a *stub) ListStreams(ctx workflow.Context, input *ivs.ListStreamsInput) (*ivs.ListStreamsOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) ListStreams(ctx workflow.Context, input *ivs.ListStreamsInput) (*
 	return &output, err
 }
 
-func (a *stub) ListStreamsAsync(ctx workflow.Context, input *ivs.ListStreamsInput) *IVSListStreamsFuture {
+func (a *stub) ListStreamsAsync(ctx workflow.Context, input *ivs.ListStreamsInput) *ListStreamsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.ListStreams", input)
-	return &IVSListStreamsFuture{Future: future}
+	return &ListStreamsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *ivs.ListTagsForResourceInput) (*ivs.ListTagsForResourceOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *ivs.ListTagsForR
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *ivs.ListTagsForResourceInput) *IVSListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *ivs.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.ListTagsForResource", input)
-	return &IVSListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) PutMetadata(ctx workflow.Context, input *ivs.PutMetadataInput) (*ivs.PutMetadataOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) PutMetadata(ctx workflow.Context, input *ivs.PutMetadataInput) (*
 	return &output, err
 }
 
-func (a *stub) PutMetadataAsync(ctx workflow.Context, input *ivs.PutMetadataInput) *IVSPutMetadataFuture {
+func (a *stub) PutMetadataAsync(ctx workflow.Context, input *ivs.PutMetadataInput) *PutMetadataFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.PutMetadata", input)
-	return &IVSPutMetadataFuture{Future: future}
+	return &PutMetadataFuture{Future: future}
 }
 
 func (a *stub) StopStream(ctx workflow.Context, input *ivs.StopStreamInput) (*ivs.StopStreamOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) StopStream(ctx workflow.Context, input *ivs.StopStreamInput) (*iv
 	return &output, err
 }
 
-func (a *stub) StopStreamAsync(ctx workflow.Context, input *ivs.StopStreamInput) *IVSStopStreamFuture {
+func (a *stub) StopStreamAsync(ctx workflow.Context, input *ivs.StopStreamInput) *StopStreamFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.StopStream", input)
-	return &IVSStopStreamFuture{Future: future}
+	return &StopStreamFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *ivs.TagResourceInput) (*ivs.TagResourceOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *ivs.TagResourceInput) (*
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *ivs.TagResourceInput) *IVSTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *ivs.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.TagResource", input)
-	return &IVSTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *ivs.UntagResourceInput) (*ivs.UntagResourceOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *ivs.UntagResourceInput
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *ivs.UntagResourceInput) *IVSUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *ivs.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.UntagResource", input)
-	return &IVSUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateChannel(ctx workflow.Context, input *ivs.UpdateChannelInput) (*ivs.UpdateChannelOutput, error) {
@@ -495,7 +495,7 @@ func (a *stub) UpdateChannel(ctx workflow.Context, input *ivs.UpdateChannelInput
 	return &output, err
 }
 
-func (a *stub) UpdateChannelAsync(ctx workflow.Context, input *ivs.UpdateChannelInput) *IVSUpdateChannelFuture {
+func (a *stub) UpdateChannelAsync(ctx workflow.Context, input *ivs.UpdateChannelInput) *UpdateChannelFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.ivs.UpdateChannel", input)
-	return &IVSUpdateChannelFuture{Future: future}
+	return &UpdateChannelFuture{Future: future}
 }

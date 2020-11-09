@@ -16,61 +16,61 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateSignalingChannel(ctx workflow.Context, input *kinesisvideo.CreateSignalingChannelInput) (*kinesisvideo.CreateSignalingChannelOutput, error)
-	CreateSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.CreateSignalingChannelInput) *KinesisVideoCreateSignalingChannelFuture
+	CreateSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.CreateSignalingChannelInput) *CreateSignalingChannelFuture
 
 	CreateStream(ctx workflow.Context, input *kinesisvideo.CreateStreamInput) (*kinesisvideo.CreateStreamOutput, error)
-	CreateStreamAsync(ctx workflow.Context, input *kinesisvideo.CreateStreamInput) *KinesisVideoCreateStreamFuture
+	CreateStreamAsync(ctx workflow.Context, input *kinesisvideo.CreateStreamInput) *CreateStreamFuture
 
 	DeleteSignalingChannel(ctx workflow.Context, input *kinesisvideo.DeleteSignalingChannelInput) (*kinesisvideo.DeleteSignalingChannelOutput, error)
-	DeleteSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.DeleteSignalingChannelInput) *KinesisVideoDeleteSignalingChannelFuture
+	DeleteSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.DeleteSignalingChannelInput) *DeleteSignalingChannelFuture
 
 	DeleteStream(ctx workflow.Context, input *kinesisvideo.DeleteStreamInput) (*kinesisvideo.DeleteStreamOutput, error)
-	DeleteStreamAsync(ctx workflow.Context, input *kinesisvideo.DeleteStreamInput) *KinesisVideoDeleteStreamFuture
+	DeleteStreamAsync(ctx workflow.Context, input *kinesisvideo.DeleteStreamInput) *DeleteStreamFuture
 
 	DescribeSignalingChannel(ctx workflow.Context, input *kinesisvideo.DescribeSignalingChannelInput) (*kinesisvideo.DescribeSignalingChannelOutput, error)
-	DescribeSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.DescribeSignalingChannelInput) *KinesisVideoDescribeSignalingChannelFuture
+	DescribeSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.DescribeSignalingChannelInput) *DescribeSignalingChannelFuture
 
 	DescribeStream(ctx workflow.Context, input *kinesisvideo.DescribeStreamInput) (*kinesisvideo.DescribeStreamOutput, error)
-	DescribeStreamAsync(ctx workflow.Context, input *kinesisvideo.DescribeStreamInput) *KinesisVideoDescribeStreamFuture
+	DescribeStreamAsync(ctx workflow.Context, input *kinesisvideo.DescribeStreamInput) *DescribeStreamFuture
 
 	GetDataEndpoint(ctx workflow.Context, input *kinesisvideo.GetDataEndpointInput) (*kinesisvideo.GetDataEndpointOutput, error)
-	GetDataEndpointAsync(ctx workflow.Context, input *kinesisvideo.GetDataEndpointInput) *KinesisVideoGetDataEndpointFuture
+	GetDataEndpointAsync(ctx workflow.Context, input *kinesisvideo.GetDataEndpointInput) *GetDataEndpointFuture
 
 	GetSignalingChannelEndpoint(ctx workflow.Context, input *kinesisvideo.GetSignalingChannelEndpointInput) (*kinesisvideo.GetSignalingChannelEndpointOutput, error)
-	GetSignalingChannelEndpointAsync(ctx workflow.Context, input *kinesisvideo.GetSignalingChannelEndpointInput) *KinesisVideoGetSignalingChannelEndpointFuture
+	GetSignalingChannelEndpointAsync(ctx workflow.Context, input *kinesisvideo.GetSignalingChannelEndpointInput) *GetSignalingChannelEndpointFuture
 
 	ListSignalingChannels(ctx workflow.Context, input *kinesisvideo.ListSignalingChannelsInput) (*kinesisvideo.ListSignalingChannelsOutput, error)
-	ListSignalingChannelsAsync(ctx workflow.Context, input *kinesisvideo.ListSignalingChannelsInput) *KinesisVideoListSignalingChannelsFuture
+	ListSignalingChannelsAsync(ctx workflow.Context, input *kinesisvideo.ListSignalingChannelsInput) *ListSignalingChannelsFuture
 
 	ListStreams(ctx workflow.Context, input *kinesisvideo.ListStreamsInput) (*kinesisvideo.ListStreamsOutput, error)
-	ListStreamsAsync(ctx workflow.Context, input *kinesisvideo.ListStreamsInput) *KinesisVideoListStreamsFuture
+	ListStreamsAsync(ctx workflow.Context, input *kinesisvideo.ListStreamsInput) *ListStreamsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *kinesisvideo.ListTagsForResourceInput) (*kinesisvideo.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *kinesisvideo.ListTagsForResourceInput) *KinesisVideoListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *kinesisvideo.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	ListTagsForStream(ctx workflow.Context, input *kinesisvideo.ListTagsForStreamInput) (*kinesisvideo.ListTagsForStreamOutput, error)
-	ListTagsForStreamAsync(ctx workflow.Context, input *kinesisvideo.ListTagsForStreamInput) *KinesisVideoListTagsForStreamFuture
+	ListTagsForStreamAsync(ctx workflow.Context, input *kinesisvideo.ListTagsForStreamInput) *ListTagsForStreamFuture
 
 	TagResource(ctx workflow.Context, input *kinesisvideo.TagResourceInput) (*kinesisvideo.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *kinesisvideo.TagResourceInput) *KinesisVideoTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *kinesisvideo.TagResourceInput) *TagResourceFuture
 
 	TagStream(ctx workflow.Context, input *kinesisvideo.TagStreamInput) (*kinesisvideo.TagStreamOutput, error)
-	TagStreamAsync(ctx workflow.Context, input *kinesisvideo.TagStreamInput) *KinesisVideoTagStreamFuture
+	TagStreamAsync(ctx workflow.Context, input *kinesisvideo.TagStreamInput) *TagStreamFuture
 
 	UntagResource(ctx workflow.Context, input *kinesisvideo.UntagResourceInput) (*kinesisvideo.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *kinesisvideo.UntagResourceInput) *KinesisVideoUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *kinesisvideo.UntagResourceInput) *UntagResourceFuture
 
 	UntagStream(ctx workflow.Context, input *kinesisvideo.UntagStreamInput) (*kinesisvideo.UntagStreamOutput, error)
-	UntagStreamAsync(ctx workflow.Context, input *kinesisvideo.UntagStreamInput) *KinesisVideoUntagStreamFuture
+	UntagStreamAsync(ctx workflow.Context, input *kinesisvideo.UntagStreamInput) *UntagStreamFuture
 
 	UpdateDataRetention(ctx workflow.Context, input *kinesisvideo.UpdateDataRetentionInput) (*kinesisvideo.UpdateDataRetentionOutput, error)
-	UpdateDataRetentionAsync(ctx workflow.Context, input *kinesisvideo.UpdateDataRetentionInput) *KinesisVideoUpdateDataRetentionFuture
+	UpdateDataRetentionAsync(ctx workflow.Context, input *kinesisvideo.UpdateDataRetentionInput) *UpdateDataRetentionFuture
 
 	UpdateSignalingChannel(ctx workflow.Context, input *kinesisvideo.UpdateSignalingChannelInput) (*kinesisvideo.UpdateSignalingChannelOutput, error)
-	UpdateSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.UpdateSignalingChannelInput) *KinesisVideoUpdateSignalingChannelFuture
+	UpdateSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.UpdateSignalingChannelInput) *UpdateSignalingChannelFuture
 
 	UpdateStream(ctx workflow.Context, input *kinesisvideo.UpdateStreamInput) (*kinesisvideo.UpdateStreamOutput, error)
-	UpdateStreamAsync(ctx workflow.Context, input *kinesisvideo.UpdateStreamInput) *KinesisVideoUpdateStreamFuture
+	UpdateStreamAsync(ctx workflow.Context, input *kinesisvideo.UpdateStreamInput) *UpdateStreamFuture
 }
 
 func NewClient() Client {

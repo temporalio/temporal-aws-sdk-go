@@ -16,16 +16,16 @@ var _ clients.VoidFuture
 
 type Client interface {
 	GetRoleCredentials(ctx workflow.Context, input *sso.GetRoleCredentialsInput) (*sso.GetRoleCredentialsOutput, error)
-	GetRoleCredentialsAsync(ctx workflow.Context, input *sso.GetRoleCredentialsInput) *SSOGetRoleCredentialsFuture
+	GetRoleCredentialsAsync(ctx workflow.Context, input *sso.GetRoleCredentialsInput) *GetRoleCredentialsFuture
 
 	ListAccountRoles(ctx workflow.Context, input *sso.ListAccountRolesInput) (*sso.ListAccountRolesOutput, error)
-	ListAccountRolesAsync(ctx workflow.Context, input *sso.ListAccountRolesInput) *SSOListAccountRolesFuture
+	ListAccountRolesAsync(ctx workflow.Context, input *sso.ListAccountRolesInput) *ListAccountRolesFuture
 
 	ListAccounts(ctx workflow.Context, input *sso.ListAccountsInput) (*sso.ListAccountsOutput, error)
-	ListAccountsAsync(ctx workflow.Context, input *sso.ListAccountsInput) *SSOListAccountsFuture
+	ListAccountsAsync(ctx workflow.Context, input *sso.ListAccountsInput) *ListAccountsFuture
 
 	Logout(ctx workflow.Context, input *sso.LogoutInput) (*sso.LogoutOutput, error)
-	LogoutAsync(ctx workflow.Context, input *sso.LogoutInput) *SSOLogoutFuture
+	LogoutAsync(ctx workflow.Context, input *sso.LogoutInput) *LogoutFuture
 }
 
 func NewClient() Client {

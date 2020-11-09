@@ -16,144 +16,144 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type IoT1ClickDevicesServiceClaimDevicesByClaimCodeFuture struct {
+type ClaimDevicesByClaimCodeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoT1ClickDevicesServiceClaimDevicesByClaimCodeFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.ClaimDevicesByClaimCodeOutput, error) {
+func (r *ClaimDevicesByClaimCodeFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.ClaimDevicesByClaimCodeOutput, error) {
 	var output iot1clickdevicesservice.ClaimDevicesByClaimCodeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoT1ClickDevicesServiceDescribeDeviceFuture struct {
+type DescribeDeviceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoT1ClickDevicesServiceDescribeDeviceFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.DescribeDeviceOutput, error) {
+func (r *DescribeDeviceFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.DescribeDeviceOutput, error) {
 	var output iot1clickdevicesservice.DescribeDeviceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoT1ClickDevicesServiceFinalizeDeviceClaimFuture struct {
+type FinalizeDeviceClaimFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoT1ClickDevicesServiceFinalizeDeviceClaimFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.FinalizeDeviceClaimOutput, error) {
+func (r *FinalizeDeviceClaimFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.FinalizeDeviceClaimOutput, error) {
 	var output iot1clickdevicesservice.FinalizeDeviceClaimOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoT1ClickDevicesServiceGetDeviceMethodsFuture struct {
+type GetDeviceMethodsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoT1ClickDevicesServiceGetDeviceMethodsFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.GetDeviceMethodsOutput, error) {
+func (r *GetDeviceMethodsFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.GetDeviceMethodsOutput, error) {
 	var output iot1clickdevicesservice.GetDeviceMethodsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoT1ClickDevicesServiceInitiateDeviceClaimFuture struct {
+type InitiateDeviceClaimFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoT1ClickDevicesServiceInitiateDeviceClaimFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.InitiateDeviceClaimOutput, error) {
+func (r *InitiateDeviceClaimFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.InitiateDeviceClaimOutput, error) {
 	var output iot1clickdevicesservice.InitiateDeviceClaimOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoT1ClickDevicesServiceInvokeDeviceMethodFuture struct {
+type InvokeDeviceMethodFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoT1ClickDevicesServiceInvokeDeviceMethodFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.InvokeDeviceMethodOutput, error) {
+func (r *InvokeDeviceMethodFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.InvokeDeviceMethodOutput, error) {
 	var output iot1clickdevicesservice.InvokeDeviceMethodOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoT1ClickDevicesServiceListDeviceEventsFuture struct {
+type ListDeviceEventsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoT1ClickDevicesServiceListDeviceEventsFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.ListDeviceEventsOutput, error) {
+func (r *ListDeviceEventsFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.ListDeviceEventsOutput, error) {
 	var output iot1clickdevicesservice.ListDeviceEventsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoT1ClickDevicesServiceListDevicesFuture struct {
+type ListDevicesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoT1ClickDevicesServiceListDevicesFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.ListDevicesOutput, error) {
+func (r *ListDevicesFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.ListDevicesOutput, error) {
 	var output iot1clickdevicesservice.ListDevicesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoT1ClickDevicesServiceListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoT1ClickDevicesServiceListTagsForResourceFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.ListTagsForResourceOutput, error) {
 	var output iot1clickdevicesservice.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoT1ClickDevicesServiceTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoT1ClickDevicesServiceTagResourceFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.TagResourceOutput, error) {
 	var output iot1clickdevicesservice.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoT1ClickDevicesServiceUnclaimDeviceFuture struct {
+type UnclaimDeviceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoT1ClickDevicesServiceUnclaimDeviceFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.UnclaimDeviceOutput, error) {
+func (r *UnclaimDeviceFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.UnclaimDeviceOutput, error) {
 	var output iot1clickdevicesservice.UnclaimDeviceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoT1ClickDevicesServiceUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoT1ClickDevicesServiceUntagResourceFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.UntagResourceOutput, error) {
 	var output iot1clickdevicesservice.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type IoT1ClickDevicesServiceUpdateDeviceStateFuture struct {
+type UpdateDeviceStateFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *IoT1ClickDevicesServiceUpdateDeviceStateFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.UpdateDeviceStateOutput, error) {
+func (r *UpdateDeviceStateFuture) Get(ctx workflow.Context) (*iot1clickdevicesservice.UpdateDeviceStateOutput, error) {
 	var output iot1clickdevicesservice.UpdateDeviceStateOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -165,9 +165,9 @@ func (a *stub) ClaimDevicesByClaimCode(ctx workflow.Context, input *iot1clickdev
 	return &output, err
 }
 
-func (a *stub) ClaimDevicesByClaimCodeAsync(ctx workflow.Context, input *iot1clickdevicesservice.ClaimDevicesByClaimCodeInput) *IoT1ClickDevicesServiceClaimDevicesByClaimCodeFuture {
+func (a *stub) ClaimDevicesByClaimCodeAsync(ctx workflow.Context, input *iot1clickdevicesservice.ClaimDevicesByClaimCodeInput) *ClaimDevicesByClaimCodeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickdevicesservice.ClaimDevicesByClaimCode", input)
-	return &IoT1ClickDevicesServiceClaimDevicesByClaimCodeFuture{Future: future}
+	return &ClaimDevicesByClaimCodeFuture{Future: future}
 }
 
 func (a *stub) DescribeDevice(ctx workflow.Context, input *iot1clickdevicesservice.DescribeDeviceInput) (*iot1clickdevicesservice.DescribeDeviceOutput, error) {
@@ -176,9 +176,9 @@ func (a *stub) DescribeDevice(ctx workflow.Context, input *iot1clickdevicesservi
 	return &output, err
 }
 
-func (a *stub) DescribeDeviceAsync(ctx workflow.Context, input *iot1clickdevicesservice.DescribeDeviceInput) *IoT1ClickDevicesServiceDescribeDeviceFuture {
+func (a *stub) DescribeDeviceAsync(ctx workflow.Context, input *iot1clickdevicesservice.DescribeDeviceInput) *DescribeDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickdevicesservice.DescribeDevice", input)
-	return &IoT1ClickDevicesServiceDescribeDeviceFuture{Future: future}
+	return &DescribeDeviceFuture{Future: future}
 }
 
 func (a *stub) FinalizeDeviceClaim(ctx workflow.Context, input *iot1clickdevicesservice.FinalizeDeviceClaimInput) (*iot1clickdevicesservice.FinalizeDeviceClaimOutput, error) {
@@ -187,9 +187,9 @@ func (a *stub) FinalizeDeviceClaim(ctx workflow.Context, input *iot1clickdevices
 	return &output, err
 }
 
-func (a *stub) FinalizeDeviceClaimAsync(ctx workflow.Context, input *iot1clickdevicesservice.FinalizeDeviceClaimInput) *IoT1ClickDevicesServiceFinalizeDeviceClaimFuture {
+func (a *stub) FinalizeDeviceClaimAsync(ctx workflow.Context, input *iot1clickdevicesservice.FinalizeDeviceClaimInput) *FinalizeDeviceClaimFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickdevicesservice.FinalizeDeviceClaim", input)
-	return &IoT1ClickDevicesServiceFinalizeDeviceClaimFuture{Future: future}
+	return &FinalizeDeviceClaimFuture{Future: future}
 }
 
 func (a *stub) GetDeviceMethods(ctx workflow.Context, input *iot1clickdevicesservice.GetDeviceMethodsInput) (*iot1clickdevicesservice.GetDeviceMethodsOutput, error) {
@@ -198,9 +198,9 @@ func (a *stub) GetDeviceMethods(ctx workflow.Context, input *iot1clickdevicesser
 	return &output, err
 }
 
-func (a *stub) GetDeviceMethodsAsync(ctx workflow.Context, input *iot1clickdevicesservice.GetDeviceMethodsInput) *IoT1ClickDevicesServiceGetDeviceMethodsFuture {
+func (a *stub) GetDeviceMethodsAsync(ctx workflow.Context, input *iot1clickdevicesservice.GetDeviceMethodsInput) *GetDeviceMethodsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickdevicesservice.GetDeviceMethods", input)
-	return &IoT1ClickDevicesServiceGetDeviceMethodsFuture{Future: future}
+	return &GetDeviceMethodsFuture{Future: future}
 }
 
 func (a *stub) InitiateDeviceClaim(ctx workflow.Context, input *iot1clickdevicesservice.InitiateDeviceClaimInput) (*iot1clickdevicesservice.InitiateDeviceClaimOutput, error) {
@@ -209,9 +209,9 @@ func (a *stub) InitiateDeviceClaim(ctx workflow.Context, input *iot1clickdevices
 	return &output, err
 }
 
-func (a *stub) InitiateDeviceClaimAsync(ctx workflow.Context, input *iot1clickdevicesservice.InitiateDeviceClaimInput) *IoT1ClickDevicesServiceInitiateDeviceClaimFuture {
+func (a *stub) InitiateDeviceClaimAsync(ctx workflow.Context, input *iot1clickdevicesservice.InitiateDeviceClaimInput) *InitiateDeviceClaimFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickdevicesservice.InitiateDeviceClaim", input)
-	return &IoT1ClickDevicesServiceInitiateDeviceClaimFuture{Future: future}
+	return &InitiateDeviceClaimFuture{Future: future}
 }
 
 func (a *stub) InvokeDeviceMethod(ctx workflow.Context, input *iot1clickdevicesservice.InvokeDeviceMethodInput) (*iot1clickdevicesservice.InvokeDeviceMethodOutput, error) {
@@ -220,9 +220,9 @@ func (a *stub) InvokeDeviceMethod(ctx workflow.Context, input *iot1clickdevicess
 	return &output, err
 }
 
-func (a *stub) InvokeDeviceMethodAsync(ctx workflow.Context, input *iot1clickdevicesservice.InvokeDeviceMethodInput) *IoT1ClickDevicesServiceInvokeDeviceMethodFuture {
+func (a *stub) InvokeDeviceMethodAsync(ctx workflow.Context, input *iot1clickdevicesservice.InvokeDeviceMethodInput) *InvokeDeviceMethodFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickdevicesservice.InvokeDeviceMethod", input)
-	return &IoT1ClickDevicesServiceInvokeDeviceMethodFuture{Future: future}
+	return &InvokeDeviceMethodFuture{Future: future}
 }
 
 func (a *stub) ListDeviceEvents(ctx workflow.Context, input *iot1clickdevicesservice.ListDeviceEventsInput) (*iot1clickdevicesservice.ListDeviceEventsOutput, error) {
@@ -231,9 +231,9 @@ func (a *stub) ListDeviceEvents(ctx workflow.Context, input *iot1clickdevicesser
 	return &output, err
 }
 
-func (a *stub) ListDeviceEventsAsync(ctx workflow.Context, input *iot1clickdevicesservice.ListDeviceEventsInput) *IoT1ClickDevicesServiceListDeviceEventsFuture {
+func (a *stub) ListDeviceEventsAsync(ctx workflow.Context, input *iot1clickdevicesservice.ListDeviceEventsInput) *ListDeviceEventsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickdevicesservice.ListDeviceEvents", input)
-	return &IoT1ClickDevicesServiceListDeviceEventsFuture{Future: future}
+	return &ListDeviceEventsFuture{Future: future}
 }
 
 func (a *stub) ListDevices(ctx workflow.Context, input *iot1clickdevicesservice.ListDevicesInput) (*iot1clickdevicesservice.ListDevicesOutput, error) {
@@ -242,9 +242,9 @@ func (a *stub) ListDevices(ctx workflow.Context, input *iot1clickdevicesservice.
 	return &output, err
 }
 
-func (a *stub) ListDevicesAsync(ctx workflow.Context, input *iot1clickdevicesservice.ListDevicesInput) *IoT1ClickDevicesServiceListDevicesFuture {
+func (a *stub) ListDevicesAsync(ctx workflow.Context, input *iot1clickdevicesservice.ListDevicesInput) *ListDevicesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickdevicesservice.ListDevices", input)
-	return &IoT1ClickDevicesServiceListDevicesFuture{Future: future}
+	return &ListDevicesFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *iot1clickdevicesservice.ListTagsForResourceInput) (*iot1clickdevicesservice.ListTagsForResourceOutput, error) {
@@ -253,9 +253,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *iot1clickdevices
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *iot1clickdevicesservice.ListTagsForResourceInput) *IoT1ClickDevicesServiceListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *iot1clickdevicesservice.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickdevicesservice.ListTagsForResource", input)
-	return &IoT1ClickDevicesServiceListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *iot1clickdevicesservice.TagResourceInput) (*iot1clickdevicesservice.TagResourceOutput, error) {
@@ -264,9 +264,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *iot1clickdevicesservice.
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *iot1clickdevicesservice.TagResourceInput) *IoT1ClickDevicesServiceTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *iot1clickdevicesservice.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickdevicesservice.TagResource", input)
-	return &IoT1ClickDevicesServiceTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UnclaimDevice(ctx workflow.Context, input *iot1clickdevicesservice.UnclaimDeviceInput) (*iot1clickdevicesservice.UnclaimDeviceOutput, error) {
@@ -275,9 +275,9 @@ func (a *stub) UnclaimDevice(ctx workflow.Context, input *iot1clickdevicesservic
 	return &output, err
 }
 
-func (a *stub) UnclaimDeviceAsync(ctx workflow.Context, input *iot1clickdevicesservice.UnclaimDeviceInput) *IoT1ClickDevicesServiceUnclaimDeviceFuture {
+func (a *stub) UnclaimDeviceAsync(ctx workflow.Context, input *iot1clickdevicesservice.UnclaimDeviceInput) *UnclaimDeviceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickdevicesservice.UnclaimDevice", input)
-	return &IoT1ClickDevicesServiceUnclaimDeviceFuture{Future: future}
+	return &UnclaimDeviceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *iot1clickdevicesservice.UntagResourceInput) (*iot1clickdevicesservice.UntagResourceOutput, error) {
@@ -286,9 +286,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *iot1clickdevicesservic
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *iot1clickdevicesservice.UntagResourceInput) *IoT1ClickDevicesServiceUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *iot1clickdevicesservice.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickdevicesservice.UntagResource", input)
-	return &IoT1ClickDevicesServiceUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateDeviceState(ctx workflow.Context, input *iot1clickdevicesservice.UpdateDeviceStateInput) (*iot1clickdevicesservice.UpdateDeviceStateOutput, error) {
@@ -297,7 +297,7 @@ func (a *stub) UpdateDeviceState(ctx workflow.Context, input *iot1clickdevicesse
 	return &output, err
 }
 
-func (a *stub) UpdateDeviceStateAsync(ctx workflow.Context, input *iot1clickdevicesservice.UpdateDeviceStateInput) *IoT1ClickDevicesServiceUpdateDeviceStateFuture {
+func (a *stub) UpdateDeviceStateAsync(ctx workflow.Context, input *iot1clickdevicesservice.UpdateDeviceStateInput) *UpdateDeviceStateFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.iot1clickdevicesservice.UpdateDeviceState", input)
-	return &IoT1ClickDevicesServiceUpdateDeviceStateFuture{Future: future}
+	return &UpdateDeviceStateFuture{Future: future}
 }

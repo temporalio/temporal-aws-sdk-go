@@ -16,25 +16,25 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateOutpost(ctx workflow.Context, input *outposts.CreateOutpostInput) (*outposts.CreateOutpostOutput, error)
-	CreateOutpostAsync(ctx workflow.Context, input *outposts.CreateOutpostInput) *OutpostsCreateOutpostFuture
+	CreateOutpostAsync(ctx workflow.Context, input *outposts.CreateOutpostInput) *CreateOutpostFuture
 
 	DeleteOutpost(ctx workflow.Context, input *outposts.DeleteOutpostInput) (*outposts.DeleteOutpostOutput, error)
-	DeleteOutpostAsync(ctx workflow.Context, input *outposts.DeleteOutpostInput) *OutpostsDeleteOutpostFuture
+	DeleteOutpostAsync(ctx workflow.Context, input *outposts.DeleteOutpostInput) *DeleteOutpostFuture
 
 	DeleteSite(ctx workflow.Context, input *outposts.DeleteSiteInput) (*outposts.DeleteSiteOutput, error)
-	DeleteSiteAsync(ctx workflow.Context, input *outposts.DeleteSiteInput) *OutpostsDeleteSiteFuture
+	DeleteSiteAsync(ctx workflow.Context, input *outposts.DeleteSiteInput) *DeleteSiteFuture
 
 	GetOutpost(ctx workflow.Context, input *outposts.GetOutpostInput) (*outposts.GetOutpostOutput, error)
-	GetOutpostAsync(ctx workflow.Context, input *outposts.GetOutpostInput) *OutpostsGetOutpostFuture
+	GetOutpostAsync(ctx workflow.Context, input *outposts.GetOutpostInput) *GetOutpostFuture
 
 	GetOutpostInstanceTypes(ctx workflow.Context, input *outposts.GetOutpostInstanceTypesInput) (*outposts.GetOutpostInstanceTypesOutput, error)
-	GetOutpostInstanceTypesAsync(ctx workflow.Context, input *outposts.GetOutpostInstanceTypesInput) *OutpostsGetOutpostInstanceTypesFuture
+	GetOutpostInstanceTypesAsync(ctx workflow.Context, input *outposts.GetOutpostInstanceTypesInput) *GetOutpostInstanceTypesFuture
 
 	ListOutposts(ctx workflow.Context, input *outposts.ListOutpostsInput) (*outposts.ListOutpostsOutput, error)
-	ListOutpostsAsync(ctx workflow.Context, input *outposts.ListOutpostsInput) *OutpostsListOutpostsFuture
+	ListOutpostsAsync(ctx workflow.Context, input *outposts.ListOutpostsInput) *ListOutpostsFuture
 
 	ListSites(ctx workflow.Context, input *outposts.ListSitesInput) (*outposts.ListSitesOutput, error)
-	ListSitesAsync(ctx workflow.Context, input *outposts.ListSitesInput) *OutpostsListSitesFuture
+	ListSitesAsync(ctx workflow.Context, input *outposts.ListSitesInput) *ListSitesFuture
 }
 
 func NewClient() Client {

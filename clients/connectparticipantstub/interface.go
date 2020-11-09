@@ -16,19 +16,19 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateParticipantConnection(ctx workflow.Context, input *connectparticipant.CreateParticipantConnectionInput) (*connectparticipant.CreateParticipantConnectionOutput, error)
-	CreateParticipantConnectionAsync(ctx workflow.Context, input *connectparticipant.CreateParticipantConnectionInput) *ConnectParticipantCreateParticipantConnectionFuture
+	CreateParticipantConnectionAsync(ctx workflow.Context, input *connectparticipant.CreateParticipantConnectionInput) *CreateParticipantConnectionFuture
 
 	DisconnectParticipant(ctx workflow.Context, input *connectparticipant.DisconnectParticipantInput) (*connectparticipant.DisconnectParticipantOutput, error)
-	DisconnectParticipantAsync(ctx workflow.Context, input *connectparticipant.DisconnectParticipantInput) *ConnectParticipantDisconnectParticipantFuture
+	DisconnectParticipantAsync(ctx workflow.Context, input *connectparticipant.DisconnectParticipantInput) *DisconnectParticipantFuture
 
 	GetTranscript(ctx workflow.Context, input *connectparticipant.GetTranscriptInput) (*connectparticipant.GetTranscriptOutput, error)
-	GetTranscriptAsync(ctx workflow.Context, input *connectparticipant.GetTranscriptInput) *ConnectParticipantGetTranscriptFuture
+	GetTranscriptAsync(ctx workflow.Context, input *connectparticipant.GetTranscriptInput) *GetTranscriptFuture
 
 	SendEvent(ctx workflow.Context, input *connectparticipant.SendEventInput) (*connectparticipant.SendEventOutput, error)
-	SendEventAsync(ctx workflow.Context, input *connectparticipant.SendEventInput) *ConnectParticipantSendEventFuture
+	SendEventAsync(ctx workflow.Context, input *connectparticipant.SendEventInput) *SendEventFuture
 
 	SendMessage(ctx workflow.Context, input *connectparticipant.SendMessageInput) (*connectparticipant.SendMessageOutput, error)
-	SendMessageAsync(ctx workflow.Context, input *connectparticipant.SendMessageInput) *ConnectParticipantSendMessageFuture
+	SendMessageAsync(ctx workflow.Context, input *connectparticipant.SendMessageInput) *SendMessageFuture
 }
 
 func NewClient() Client {

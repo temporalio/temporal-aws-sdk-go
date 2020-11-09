@@ -16,320 +16,320 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type ForecastServiceCreateDatasetFuture struct {
+type CreateDatasetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceCreateDatasetFuture) Get(ctx workflow.Context) (*forecastservice.CreateDatasetOutput, error) {
+func (r *CreateDatasetFuture) Get(ctx workflow.Context) (*forecastservice.CreateDatasetOutput, error) {
 	var output forecastservice.CreateDatasetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceCreateDatasetGroupFuture struct {
+type CreateDatasetGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceCreateDatasetGroupFuture) Get(ctx workflow.Context) (*forecastservice.CreateDatasetGroupOutput, error) {
+func (r *CreateDatasetGroupFuture) Get(ctx workflow.Context) (*forecastservice.CreateDatasetGroupOutput, error) {
 	var output forecastservice.CreateDatasetGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceCreateDatasetImportJobFuture struct {
+type CreateDatasetImportJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceCreateDatasetImportJobFuture) Get(ctx workflow.Context) (*forecastservice.CreateDatasetImportJobOutput, error) {
+func (r *CreateDatasetImportJobFuture) Get(ctx workflow.Context) (*forecastservice.CreateDatasetImportJobOutput, error) {
 	var output forecastservice.CreateDatasetImportJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceCreateForecastFuture struct {
+type CreateForecastFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceCreateForecastFuture) Get(ctx workflow.Context) (*forecastservice.CreateForecastOutput, error) {
+func (r *CreateForecastFuture) Get(ctx workflow.Context) (*forecastservice.CreateForecastOutput, error) {
 	var output forecastservice.CreateForecastOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceCreateForecastExportJobFuture struct {
+type CreateForecastExportJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceCreateForecastExportJobFuture) Get(ctx workflow.Context) (*forecastservice.CreateForecastExportJobOutput, error) {
+func (r *CreateForecastExportJobFuture) Get(ctx workflow.Context) (*forecastservice.CreateForecastExportJobOutput, error) {
 	var output forecastservice.CreateForecastExportJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceCreatePredictorFuture struct {
+type CreatePredictorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceCreatePredictorFuture) Get(ctx workflow.Context) (*forecastservice.CreatePredictorOutput, error) {
+func (r *CreatePredictorFuture) Get(ctx workflow.Context) (*forecastservice.CreatePredictorOutput, error) {
 	var output forecastservice.CreatePredictorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceDeleteDatasetFuture struct {
+type DeleteDatasetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceDeleteDatasetFuture) Get(ctx workflow.Context) (*forecastservice.DeleteDatasetOutput, error) {
+func (r *DeleteDatasetFuture) Get(ctx workflow.Context) (*forecastservice.DeleteDatasetOutput, error) {
 	var output forecastservice.DeleteDatasetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceDeleteDatasetGroupFuture struct {
+type DeleteDatasetGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceDeleteDatasetGroupFuture) Get(ctx workflow.Context) (*forecastservice.DeleteDatasetGroupOutput, error) {
+func (r *DeleteDatasetGroupFuture) Get(ctx workflow.Context) (*forecastservice.DeleteDatasetGroupOutput, error) {
 	var output forecastservice.DeleteDatasetGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceDeleteDatasetImportJobFuture struct {
+type DeleteDatasetImportJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceDeleteDatasetImportJobFuture) Get(ctx workflow.Context) (*forecastservice.DeleteDatasetImportJobOutput, error) {
+func (r *DeleteDatasetImportJobFuture) Get(ctx workflow.Context) (*forecastservice.DeleteDatasetImportJobOutput, error) {
 	var output forecastservice.DeleteDatasetImportJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceDeleteForecastFuture struct {
+type DeleteForecastFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceDeleteForecastFuture) Get(ctx workflow.Context) (*forecastservice.DeleteForecastOutput, error) {
+func (r *DeleteForecastFuture) Get(ctx workflow.Context) (*forecastservice.DeleteForecastOutput, error) {
 	var output forecastservice.DeleteForecastOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceDeleteForecastExportJobFuture struct {
+type DeleteForecastExportJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceDeleteForecastExportJobFuture) Get(ctx workflow.Context) (*forecastservice.DeleteForecastExportJobOutput, error) {
+func (r *DeleteForecastExportJobFuture) Get(ctx workflow.Context) (*forecastservice.DeleteForecastExportJobOutput, error) {
 	var output forecastservice.DeleteForecastExportJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceDeletePredictorFuture struct {
+type DeletePredictorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceDeletePredictorFuture) Get(ctx workflow.Context) (*forecastservice.DeletePredictorOutput, error) {
+func (r *DeletePredictorFuture) Get(ctx workflow.Context) (*forecastservice.DeletePredictorOutput, error) {
 	var output forecastservice.DeletePredictorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceDescribeDatasetFuture struct {
+type DescribeDatasetFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceDescribeDatasetFuture) Get(ctx workflow.Context) (*forecastservice.DescribeDatasetOutput, error) {
+func (r *DescribeDatasetFuture) Get(ctx workflow.Context) (*forecastservice.DescribeDatasetOutput, error) {
 	var output forecastservice.DescribeDatasetOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceDescribeDatasetGroupFuture struct {
+type DescribeDatasetGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceDescribeDatasetGroupFuture) Get(ctx workflow.Context) (*forecastservice.DescribeDatasetGroupOutput, error) {
+func (r *DescribeDatasetGroupFuture) Get(ctx workflow.Context) (*forecastservice.DescribeDatasetGroupOutput, error) {
 	var output forecastservice.DescribeDatasetGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceDescribeDatasetImportJobFuture struct {
+type DescribeDatasetImportJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceDescribeDatasetImportJobFuture) Get(ctx workflow.Context) (*forecastservice.DescribeDatasetImportJobOutput, error) {
+func (r *DescribeDatasetImportJobFuture) Get(ctx workflow.Context) (*forecastservice.DescribeDatasetImportJobOutput, error) {
 	var output forecastservice.DescribeDatasetImportJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceDescribeForecastFuture struct {
+type DescribeForecastFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceDescribeForecastFuture) Get(ctx workflow.Context) (*forecastservice.DescribeForecastOutput, error) {
+func (r *DescribeForecastFuture) Get(ctx workflow.Context) (*forecastservice.DescribeForecastOutput, error) {
 	var output forecastservice.DescribeForecastOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceDescribeForecastExportJobFuture struct {
+type DescribeForecastExportJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceDescribeForecastExportJobFuture) Get(ctx workflow.Context) (*forecastservice.DescribeForecastExportJobOutput, error) {
+func (r *DescribeForecastExportJobFuture) Get(ctx workflow.Context) (*forecastservice.DescribeForecastExportJobOutput, error) {
 	var output forecastservice.DescribeForecastExportJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceDescribePredictorFuture struct {
+type DescribePredictorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceDescribePredictorFuture) Get(ctx workflow.Context) (*forecastservice.DescribePredictorOutput, error) {
+func (r *DescribePredictorFuture) Get(ctx workflow.Context) (*forecastservice.DescribePredictorOutput, error) {
 	var output forecastservice.DescribePredictorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceGetAccuracyMetricsFuture struct {
+type GetAccuracyMetricsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceGetAccuracyMetricsFuture) Get(ctx workflow.Context) (*forecastservice.GetAccuracyMetricsOutput, error) {
+func (r *GetAccuracyMetricsFuture) Get(ctx workflow.Context) (*forecastservice.GetAccuracyMetricsOutput, error) {
 	var output forecastservice.GetAccuracyMetricsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceListDatasetGroupsFuture struct {
+type ListDatasetGroupsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceListDatasetGroupsFuture) Get(ctx workflow.Context) (*forecastservice.ListDatasetGroupsOutput, error) {
+func (r *ListDatasetGroupsFuture) Get(ctx workflow.Context) (*forecastservice.ListDatasetGroupsOutput, error) {
 	var output forecastservice.ListDatasetGroupsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceListDatasetImportJobsFuture struct {
+type ListDatasetImportJobsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceListDatasetImportJobsFuture) Get(ctx workflow.Context) (*forecastservice.ListDatasetImportJobsOutput, error) {
+func (r *ListDatasetImportJobsFuture) Get(ctx workflow.Context) (*forecastservice.ListDatasetImportJobsOutput, error) {
 	var output forecastservice.ListDatasetImportJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceListDatasetsFuture struct {
+type ListDatasetsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceListDatasetsFuture) Get(ctx workflow.Context) (*forecastservice.ListDatasetsOutput, error) {
+func (r *ListDatasetsFuture) Get(ctx workflow.Context) (*forecastservice.ListDatasetsOutput, error) {
 	var output forecastservice.ListDatasetsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceListForecastExportJobsFuture struct {
+type ListForecastExportJobsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceListForecastExportJobsFuture) Get(ctx workflow.Context) (*forecastservice.ListForecastExportJobsOutput, error) {
+func (r *ListForecastExportJobsFuture) Get(ctx workflow.Context) (*forecastservice.ListForecastExportJobsOutput, error) {
 	var output forecastservice.ListForecastExportJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceListForecastsFuture struct {
+type ListForecastsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceListForecastsFuture) Get(ctx workflow.Context) (*forecastservice.ListForecastsOutput, error) {
+func (r *ListForecastsFuture) Get(ctx workflow.Context) (*forecastservice.ListForecastsOutput, error) {
 	var output forecastservice.ListForecastsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceListPredictorsFuture struct {
+type ListPredictorsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceListPredictorsFuture) Get(ctx workflow.Context) (*forecastservice.ListPredictorsOutput, error) {
+func (r *ListPredictorsFuture) Get(ctx workflow.Context) (*forecastservice.ListPredictorsOutput, error) {
 	var output forecastservice.ListPredictorsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceListTagsForResourceFuture) Get(ctx workflow.Context) (*forecastservice.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*forecastservice.ListTagsForResourceOutput, error) {
 	var output forecastservice.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceTagResourceFuture) Get(ctx workflow.Context) (*forecastservice.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*forecastservice.TagResourceOutput, error) {
 	var output forecastservice.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceUntagResourceFuture) Get(ctx workflow.Context) (*forecastservice.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*forecastservice.UntagResourceOutput, error) {
 	var output forecastservice.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ForecastServiceUpdateDatasetGroupFuture struct {
+type UpdateDatasetGroupFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ForecastServiceUpdateDatasetGroupFuture) Get(ctx workflow.Context) (*forecastservice.UpdateDatasetGroupOutput, error) {
+func (r *UpdateDatasetGroupFuture) Get(ctx workflow.Context) (*forecastservice.UpdateDatasetGroupOutput, error) {
 	var output forecastservice.UpdateDatasetGroupOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -341,9 +341,9 @@ func (a *stub) CreateDataset(ctx workflow.Context, input *forecastservice.Create
 	return &output, err
 }
 
-func (a *stub) CreateDatasetAsync(ctx workflow.Context, input *forecastservice.CreateDatasetInput) *ForecastServiceCreateDatasetFuture {
+func (a *stub) CreateDatasetAsync(ctx workflow.Context, input *forecastservice.CreateDatasetInput) *CreateDatasetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.CreateDataset", input)
-	return &ForecastServiceCreateDatasetFuture{Future: future}
+	return &CreateDatasetFuture{Future: future}
 }
 
 func (a *stub) CreateDatasetGroup(ctx workflow.Context, input *forecastservice.CreateDatasetGroupInput) (*forecastservice.CreateDatasetGroupOutput, error) {
@@ -352,9 +352,9 @@ func (a *stub) CreateDatasetGroup(ctx workflow.Context, input *forecastservice.C
 	return &output, err
 }
 
-func (a *stub) CreateDatasetGroupAsync(ctx workflow.Context, input *forecastservice.CreateDatasetGroupInput) *ForecastServiceCreateDatasetGroupFuture {
+func (a *stub) CreateDatasetGroupAsync(ctx workflow.Context, input *forecastservice.CreateDatasetGroupInput) *CreateDatasetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.CreateDatasetGroup", input)
-	return &ForecastServiceCreateDatasetGroupFuture{Future: future}
+	return &CreateDatasetGroupFuture{Future: future}
 }
 
 func (a *stub) CreateDatasetImportJob(ctx workflow.Context, input *forecastservice.CreateDatasetImportJobInput) (*forecastservice.CreateDatasetImportJobOutput, error) {
@@ -363,9 +363,9 @@ func (a *stub) CreateDatasetImportJob(ctx workflow.Context, input *forecastservi
 	return &output, err
 }
 
-func (a *stub) CreateDatasetImportJobAsync(ctx workflow.Context, input *forecastservice.CreateDatasetImportJobInput) *ForecastServiceCreateDatasetImportJobFuture {
+func (a *stub) CreateDatasetImportJobAsync(ctx workflow.Context, input *forecastservice.CreateDatasetImportJobInput) *CreateDatasetImportJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.CreateDatasetImportJob", input)
-	return &ForecastServiceCreateDatasetImportJobFuture{Future: future}
+	return &CreateDatasetImportJobFuture{Future: future}
 }
 
 func (a *stub) CreateForecast(ctx workflow.Context, input *forecastservice.CreateForecastInput) (*forecastservice.CreateForecastOutput, error) {
@@ -374,9 +374,9 @@ func (a *stub) CreateForecast(ctx workflow.Context, input *forecastservice.Creat
 	return &output, err
 }
 
-func (a *stub) CreateForecastAsync(ctx workflow.Context, input *forecastservice.CreateForecastInput) *ForecastServiceCreateForecastFuture {
+func (a *stub) CreateForecastAsync(ctx workflow.Context, input *forecastservice.CreateForecastInput) *CreateForecastFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.CreateForecast", input)
-	return &ForecastServiceCreateForecastFuture{Future: future}
+	return &CreateForecastFuture{Future: future}
 }
 
 func (a *stub) CreateForecastExportJob(ctx workflow.Context, input *forecastservice.CreateForecastExportJobInput) (*forecastservice.CreateForecastExportJobOutput, error) {
@@ -385,9 +385,9 @@ func (a *stub) CreateForecastExportJob(ctx workflow.Context, input *forecastserv
 	return &output, err
 }
 
-func (a *stub) CreateForecastExportJobAsync(ctx workflow.Context, input *forecastservice.CreateForecastExportJobInput) *ForecastServiceCreateForecastExportJobFuture {
+func (a *stub) CreateForecastExportJobAsync(ctx workflow.Context, input *forecastservice.CreateForecastExportJobInput) *CreateForecastExportJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.CreateForecastExportJob", input)
-	return &ForecastServiceCreateForecastExportJobFuture{Future: future}
+	return &CreateForecastExportJobFuture{Future: future}
 }
 
 func (a *stub) CreatePredictor(ctx workflow.Context, input *forecastservice.CreatePredictorInput) (*forecastservice.CreatePredictorOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) CreatePredictor(ctx workflow.Context, input *forecastservice.Crea
 	return &output, err
 }
 
-func (a *stub) CreatePredictorAsync(ctx workflow.Context, input *forecastservice.CreatePredictorInput) *ForecastServiceCreatePredictorFuture {
+func (a *stub) CreatePredictorAsync(ctx workflow.Context, input *forecastservice.CreatePredictorInput) *CreatePredictorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.CreatePredictor", input)
-	return &ForecastServiceCreatePredictorFuture{Future: future}
+	return &CreatePredictorFuture{Future: future}
 }
 
 func (a *stub) DeleteDataset(ctx workflow.Context, input *forecastservice.DeleteDatasetInput) (*forecastservice.DeleteDatasetOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) DeleteDataset(ctx workflow.Context, input *forecastservice.Delete
 	return &output, err
 }
 
-func (a *stub) DeleteDatasetAsync(ctx workflow.Context, input *forecastservice.DeleteDatasetInput) *ForecastServiceDeleteDatasetFuture {
+func (a *stub) DeleteDatasetAsync(ctx workflow.Context, input *forecastservice.DeleteDatasetInput) *DeleteDatasetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.DeleteDataset", input)
-	return &ForecastServiceDeleteDatasetFuture{Future: future}
+	return &DeleteDatasetFuture{Future: future}
 }
 
 func (a *stub) DeleteDatasetGroup(ctx workflow.Context, input *forecastservice.DeleteDatasetGroupInput) (*forecastservice.DeleteDatasetGroupOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) DeleteDatasetGroup(ctx workflow.Context, input *forecastservice.D
 	return &output, err
 }
 
-func (a *stub) DeleteDatasetGroupAsync(ctx workflow.Context, input *forecastservice.DeleteDatasetGroupInput) *ForecastServiceDeleteDatasetGroupFuture {
+func (a *stub) DeleteDatasetGroupAsync(ctx workflow.Context, input *forecastservice.DeleteDatasetGroupInput) *DeleteDatasetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.DeleteDatasetGroup", input)
-	return &ForecastServiceDeleteDatasetGroupFuture{Future: future}
+	return &DeleteDatasetGroupFuture{Future: future}
 }
 
 func (a *stub) DeleteDatasetImportJob(ctx workflow.Context, input *forecastservice.DeleteDatasetImportJobInput) (*forecastservice.DeleteDatasetImportJobOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) DeleteDatasetImportJob(ctx workflow.Context, input *forecastservi
 	return &output, err
 }
 
-func (a *stub) DeleteDatasetImportJobAsync(ctx workflow.Context, input *forecastservice.DeleteDatasetImportJobInput) *ForecastServiceDeleteDatasetImportJobFuture {
+func (a *stub) DeleteDatasetImportJobAsync(ctx workflow.Context, input *forecastservice.DeleteDatasetImportJobInput) *DeleteDatasetImportJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.DeleteDatasetImportJob", input)
-	return &ForecastServiceDeleteDatasetImportJobFuture{Future: future}
+	return &DeleteDatasetImportJobFuture{Future: future}
 }
 
 func (a *stub) DeleteForecast(ctx workflow.Context, input *forecastservice.DeleteForecastInput) (*forecastservice.DeleteForecastOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) DeleteForecast(ctx workflow.Context, input *forecastservice.Delet
 	return &output, err
 }
 
-func (a *stub) DeleteForecastAsync(ctx workflow.Context, input *forecastservice.DeleteForecastInput) *ForecastServiceDeleteForecastFuture {
+func (a *stub) DeleteForecastAsync(ctx workflow.Context, input *forecastservice.DeleteForecastInput) *DeleteForecastFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.DeleteForecast", input)
-	return &ForecastServiceDeleteForecastFuture{Future: future}
+	return &DeleteForecastFuture{Future: future}
 }
 
 func (a *stub) DeleteForecastExportJob(ctx workflow.Context, input *forecastservice.DeleteForecastExportJobInput) (*forecastservice.DeleteForecastExportJobOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) DeleteForecastExportJob(ctx workflow.Context, input *forecastserv
 	return &output, err
 }
 
-func (a *stub) DeleteForecastExportJobAsync(ctx workflow.Context, input *forecastservice.DeleteForecastExportJobInput) *ForecastServiceDeleteForecastExportJobFuture {
+func (a *stub) DeleteForecastExportJobAsync(ctx workflow.Context, input *forecastservice.DeleteForecastExportJobInput) *DeleteForecastExportJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.DeleteForecastExportJob", input)
-	return &ForecastServiceDeleteForecastExportJobFuture{Future: future}
+	return &DeleteForecastExportJobFuture{Future: future}
 }
 
 func (a *stub) DeletePredictor(ctx workflow.Context, input *forecastservice.DeletePredictorInput) (*forecastservice.DeletePredictorOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) DeletePredictor(ctx workflow.Context, input *forecastservice.Dele
 	return &output, err
 }
 
-func (a *stub) DeletePredictorAsync(ctx workflow.Context, input *forecastservice.DeletePredictorInput) *ForecastServiceDeletePredictorFuture {
+func (a *stub) DeletePredictorAsync(ctx workflow.Context, input *forecastservice.DeletePredictorInput) *DeletePredictorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.DeletePredictor", input)
-	return &ForecastServiceDeletePredictorFuture{Future: future}
+	return &DeletePredictorFuture{Future: future}
 }
 
 func (a *stub) DescribeDataset(ctx workflow.Context, input *forecastservice.DescribeDatasetInput) (*forecastservice.DescribeDatasetOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) DescribeDataset(ctx workflow.Context, input *forecastservice.Desc
 	return &output, err
 }
 
-func (a *stub) DescribeDatasetAsync(ctx workflow.Context, input *forecastservice.DescribeDatasetInput) *ForecastServiceDescribeDatasetFuture {
+func (a *stub) DescribeDatasetAsync(ctx workflow.Context, input *forecastservice.DescribeDatasetInput) *DescribeDatasetFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.DescribeDataset", input)
-	return &ForecastServiceDescribeDatasetFuture{Future: future}
+	return &DescribeDatasetFuture{Future: future}
 }
 
 func (a *stub) DescribeDatasetGroup(ctx workflow.Context, input *forecastservice.DescribeDatasetGroupInput) (*forecastservice.DescribeDatasetGroupOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) DescribeDatasetGroup(ctx workflow.Context, input *forecastservice
 	return &output, err
 }
 
-func (a *stub) DescribeDatasetGroupAsync(ctx workflow.Context, input *forecastservice.DescribeDatasetGroupInput) *ForecastServiceDescribeDatasetGroupFuture {
+func (a *stub) DescribeDatasetGroupAsync(ctx workflow.Context, input *forecastservice.DescribeDatasetGroupInput) *DescribeDatasetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.DescribeDatasetGroup", input)
-	return &ForecastServiceDescribeDatasetGroupFuture{Future: future}
+	return &DescribeDatasetGroupFuture{Future: future}
 }
 
 func (a *stub) DescribeDatasetImportJob(ctx workflow.Context, input *forecastservice.DescribeDatasetImportJobInput) (*forecastservice.DescribeDatasetImportJobOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) DescribeDatasetImportJob(ctx workflow.Context, input *forecastser
 	return &output, err
 }
 
-func (a *stub) DescribeDatasetImportJobAsync(ctx workflow.Context, input *forecastservice.DescribeDatasetImportJobInput) *ForecastServiceDescribeDatasetImportJobFuture {
+func (a *stub) DescribeDatasetImportJobAsync(ctx workflow.Context, input *forecastservice.DescribeDatasetImportJobInput) *DescribeDatasetImportJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.DescribeDatasetImportJob", input)
-	return &ForecastServiceDescribeDatasetImportJobFuture{Future: future}
+	return &DescribeDatasetImportJobFuture{Future: future}
 }
 
 func (a *stub) DescribeForecast(ctx workflow.Context, input *forecastservice.DescribeForecastInput) (*forecastservice.DescribeForecastOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) DescribeForecast(ctx workflow.Context, input *forecastservice.Des
 	return &output, err
 }
 
-func (a *stub) DescribeForecastAsync(ctx workflow.Context, input *forecastservice.DescribeForecastInput) *ForecastServiceDescribeForecastFuture {
+func (a *stub) DescribeForecastAsync(ctx workflow.Context, input *forecastservice.DescribeForecastInput) *DescribeForecastFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.DescribeForecast", input)
-	return &ForecastServiceDescribeForecastFuture{Future: future}
+	return &DescribeForecastFuture{Future: future}
 }
 
 func (a *stub) DescribeForecastExportJob(ctx workflow.Context, input *forecastservice.DescribeForecastExportJobInput) (*forecastservice.DescribeForecastExportJobOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) DescribeForecastExportJob(ctx workflow.Context, input *forecastse
 	return &output, err
 }
 
-func (a *stub) DescribeForecastExportJobAsync(ctx workflow.Context, input *forecastservice.DescribeForecastExportJobInput) *ForecastServiceDescribeForecastExportJobFuture {
+func (a *stub) DescribeForecastExportJobAsync(ctx workflow.Context, input *forecastservice.DescribeForecastExportJobInput) *DescribeForecastExportJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.DescribeForecastExportJob", input)
-	return &ForecastServiceDescribeForecastExportJobFuture{Future: future}
+	return &DescribeForecastExportJobFuture{Future: future}
 }
 
 func (a *stub) DescribePredictor(ctx workflow.Context, input *forecastservice.DescribePredictorInput) (*forecastservice.DescribePredictorOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) DescribePredictor(ctx workflow.Context, input *forecastservice.De
 	return &output, err
 }
 
-func (a *stub) DescribePredictorAsync(ctx workflow.Context, input *forecastservice.DescribePredictorInput) *ForecastServiceDescribePredictorFuture {
+func (a *stub) DescribePredictorAsync(ctx workflow.Context, input *forecastservice.DescribePredictorInput) *DescribePredictorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.DescribePredictor", input)
-	return &ForecastServiceDescribePredictorFuture{Future: future}
+	return &DescribePredictorFuture{Future: future}
 }
 
 func (a *stub) GetAccuracyMetrics(ctx workflow.Context, input *forecastservice.GetAccuracyMetricsInput) (*forecastservice.GetAccuracyMetricsOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) GetAccuracyMetrics(ctx workflow.Context, input *forecastservice.G
 	return &output, err
 }
 
-func (a *stub) GetAccuracyMetricsAsync(ctx workflow.Context, input *forecastservice.GetAccuracyMetricsInput) *ForecastServiceGetAccuracyMetricsFuture {
+func (a *stub) GetAccuracyMetricsAsync(ctx workflow.Context, input *forecastservice.GetAccuracyMetricsInput) *GetAccuracyMetricsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.GetAccuracyMetrics", input)
-	return &ForecastServiceGetAccuracyMetricsFuture{Future: future}
+	return &GetAccuracyMetricsFuture{Future: future}
 }
 
 func (a *stub) ListDatasetGroups(ctx workflow.Context, input *forecastservice.ListDatasetGroupsInput) (*forecastservice.ListDatasetGroupsOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) ListDatasetGroups(ctx workflow.Context, input *forecastservice.Li
 	return &output, err
 }
 
-func (a *stub) ListDatasetGroupsAsync(ctx workflow.Context, input *forecastservice.ListDatasetGroupsInput) *ForecastServiceListDatasetGroupsFuture {
+func (a *stub) ListDatasetGroupsAsync(ctx workflow.Context, input *forecastservice.ListDatasetGroupsInput) *ListDatasetGroupsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.ListDatasetGroups", input)
-	return &ForecastServiceListDatasetGroupsFuture{Future: future}
+	return &ListDatasetGroupsFuture{Future: future}
 }
 
 func (a *stub) ListDatasetImportJobs(ctx workflow.Context, input *forecastservice.ListDatasetImportJobsInput) (*forecastservice.ListDatasetImportJobsOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) ListDatasetImportJobs(ctx workflow.Context, input *forecastservic
 	return &output, err
 }
 
-func (a *stub) ListDatasetImportJobsAsync(ctx workflow.Context, input *forecastservice.ListDatasetImportJobsInput) *ForecastServiceListDatasetImportJobsFuture {
+func (a *stub) ListDatasetImportJobsAsync(ctx workflow.Context, input *forecastservice.ListDatasetImportJobsInput) *ListDatasetImportJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.ListDatasetImportJobs", input)
-	return &ForecastServiceListDatasetImportJobsFuture{Future: future}
+	return &ListDatasetImportJobsFuture{Future: future}
 }
 
 func (a *stub) ListDatasets(ctx workflow.Context, input *forecastservice.ListDatasetsInput) (*forecastservice.ListDatasetsOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) ListDatasets(ctx workflow.Context, input *forecastservice.ListDat
 	return &output, err
 }
 
-func (a *stub) ListDatasetsAsync(ctx workflow.Context, input *forecastservice.ListDatasetsInput) *ForecastServiceListDatasetsFuture {
+func (a *stub) ListDatasetsAsync(ctx workflow.Context, input *forecastservice.ListDatasetsInput) *ListDatasetsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.ListDatasets", input)
-	return &ForecastServiceListDatasetsFuture{Future: future}
+	return &ListDatasetsFuture{Future: future}
 }
 
 func (a *stub) ListForecastExportJobs(ctx workflow.Context, input *forecastservice.ListForecastExportJobsInput) (*forecastservice.ListForecastExportJobsOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) ListForecastExportJobs(ctx workflow.Context, input *forecastservi
 	return &output, err
 }
 
-func (a *stub) ListForecastExportJobsAsync(ctx workflow.Context, input *forecastservice.ListForecastExportJobsInput) *ForecastServiceListForecastExportJobsFuture {
+func (a *stub) ListForecastExportJobsAsync(ctx workflow.Context, input *forecastservice.ListForecastExportJobsInput) *ListForecastExportJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.ListForecastExportJobs", input)
-	return &ForecastServiceListForecastExportJobsFuture{Future: future}
+	return &ListForecastExportJobsFuture{Future: future}
 }
 
 func (a *stub) ListForecasts(ctx workflow.Context, input *forecastservice.ListForecastsInput) (*forecastservice.ListForecastsOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) ListForecasts(ctx workflow.Context, input *forecastservice.ListFo
 	return &output, err
 }
 
-func (a *stub) ListForecastsAsync(ctx workflow.Context, input *forecastservice.ListForecastsInput) *ForecastServiceListForecastsFuture {
+func (a *stub) ListForecastsAsync(ctx workflow.Context, input *forecastservice.ListForecastsInput) *ListForecastsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.ListForecasts", input)
-	return &ForecastServiceListForecastsFuture{Future: future}
+	return &ListForecastsFuture{Future: future}
 }
 
 func (a *stub) ListPredictors(ctx workflow.Context, input *forecastservice.ListPredictorsInput) (*forecastservice.ListPredictorsOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) ListPredictors(ctx workflow.Context, input *forecastservice.ListP
 	return &output, err
 }
 
-func (a *stub) ListPredictorsAsync(ctx workflow.Context, input *forecastservice.ListPredictorsInput) *ForecastServiceListPredictorsFuture {
+func (a *stub) ListPredictorsAsync(ctx workflow.Context, input *forecastservice.ListPredictorsInput) *ListPredictorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.ListPredictors", input)
-	return &ForecastServiceListPredictorsFuture{Future: future}
+	return &ListPredictorsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *forecastservice.ListTagsForResourceInput) (*forecastservice.ListTagsForResourceOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *forecastservice.
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *forecastservice.ListTagsForResourceInput) *ForecastServiceListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *forecastservice.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.ListTagsForResource", input)
-	return &ForecastServiceListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *forecastservice.TagResourceInput) (*forecastservice.TagResourceOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *forecastservice.TagResou
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *forecastservice.TagResourceInput) *ForecastServiceTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *forecastservice.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.TagResource", input)
-	return &ForecastServiceTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *forecastservice.UntagResourceInput) (*forecastservice.UntagResourceOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *forecastservice.UntagR
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *forecastservice.UntagResourceInput) *ForecastServiceUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *forecastservice.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.UntagResource", input)
-	return &ForecastServiceUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateDatasetGroup(ctx workflow.Context, input *forecastservice.UpdateDatasetGroupInput) (*forecastservice.UpdateDatasetGroupOutput, error) {
@@ -649,7 +649,7 @@ func (a *stub) UpdateDatasetGroup(ctx workflow.Context, input *forecastservice.U
 	return &output, err
 }
 
-func (a *stub) UpdateDatasetGroupAsync(ctx workflow.Context, input *forecastservice.UpdateDatasetGroupInput) *ForecastServiceUpdateDatasetGroupFuture {
+func (a *stub) UpdateDatasetGroupAsync(ctx workflow.Context, input *forecastservice.UpdateDatasetGroupInput) *UpdateDatasetGroupFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.forecastservice.UpdateDatasetGroup", input)
-	return &ForecastServiceUpdateDatasetGroupFuture{Future: future}
+	return &UpdateDatasetGroupFuture{Future: future}
 }

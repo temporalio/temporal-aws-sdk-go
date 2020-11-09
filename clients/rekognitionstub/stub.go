@@ -16,518 +16,518 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type RekognitionCompareFacesFuture struct {
+type CompareFacesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionCompareFacesFuture) Get(ctx workflow.Context) (*rekognition.CompareFacesOutput, error) {
+func (r *CompareFacesFuture) Get(ctx workflow.Context) (*rekognition.CompareFacesOutput, error) {
 	var output rekognition.CompareFacesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionCreateCollectionFuture struct {
+type CreateCollectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionCreateCollectionFuture) Get(ctx workflow.Context) (*rekognition.CreateCollectionOutput, error) {
+func (r *CreateCollectionFuture) Get(ctx workflow.Context) (*rekognition.CreateCollectionOutput, error) {
 	var output rekognition.CreateCollectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionCreateProjectFuture struct {
+type CreateProjectFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionCreateProjectFuture) Get(ctx workflow.Context) (*rekognition.CreateProjectOutput, error) {
+func (r *CreateProjectFuture) Get(ctx workflow.Context) (*rekognition.CreateProjectOutput, error) {
 	var output rekognition.CreateProjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionCreateProjectVersionFuture struct {
+type CreateProjectVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionCreateProjectVersionFuture) Get(ctx workflow.Context) (*rekognition.CreateProjectVersionOutput, error) {
+func (r *CreateProjectVersionFuture) Get(ctx workflow.Context) (*rekognition.CreateProjectVersionOutput, error) {
 	var output rekognition.CreateProjectVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionCreateStreamProcessorFuture struct {
+type CreateStreamProcessorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionCreateStreamProcessorFuture) Get(ctx workflow.Context) (*rekognition.CreateStreamProcessorOutput, error) {
+func (r *CreateStreamProcessorFuture) Get(ctx workflow.Context) (*rekognition.CreateStreamProcessorOutput, error) {
 	var output rekognition.CreateStreamProcessorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionDeleteCollectionFuture struct {
+type DeleteCollectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionDeleteCollectionFuture) Get(ctx workflow.Context) (*rekognition.DeleteCollectionOutput, error) {
+func (r *DeleteCollectionFuture) Get(ctx workflow.Context) (*rekognition.DeleteCollectionOutput, error) {
 	var output rekognition.DeleteCollectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionDeleteFacesFuture struct {
+type DeleteFacesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionDeleteFacesFuture) Get(ctx workflow.Context) (*rekognition.DeleteFacesOutput, error) {
+func (r *DeleteFacesFuture) Get(ctx workflow.Context) (*rekognition.DeleteFacesOutput, error) {
 	var output rekognition.DeleteFacesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionDeleteProjectFuture struct {
+type DeleteProjectFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionDeleteProjectFuture) Get(ctx workflow.Context) (*rekognition.DeleteProjectOutput, error) {
+func (r *DeleteProjectFuture) Get(ctx workflow.Context) (*rekognition.DeleteProjectOutput, error) {
 	var output rekognition.DeleteProjectOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionDeleteProjectVersionFuture struct {
+type DeleteProjectVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionDeleteProjectVersionFuture) Get(ctx workflow.Context) (*rekognition.DeleteProjectVersionOutput, error) {
+func (r *DeleteProjectVersionFuture) Get(ctx workflow.Context) (*rekognition.DeleteProjectVersionOutput, error) {
 	var output rekognition.DeleteProjectVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionDeleteStreamProcessorFuture struct {
+type DeleteStreamProcessorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionDeleteStreamProcessorFuture) Get(ctx workflow.Context) (*rekognition.DeleteStreamProcessorOutput, error) {
+func (r *DeleteStreamProcessorFuture) Get(ctx workflow.Context) (*rekognition.DeleteStreamProcessorOutput, error) {
 	var output rekognition.DeleteStreamProcessorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionDescribeCollectionFuture struct {
+type DescribeCollectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionDescribeCollectionFuture) Get(ctx workflow.Context) (*rekognition.DescribeCollectionOutput, error) {
+func (r *DescribeCollectionFuture) Get(ctx workflow.Context) (*rekognition.DescribeCollectionOutput, error) {
 	var output rekognition.DescribeCollectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionDescribeProjectVersionsFuture struct {
+type DescribeProjectVersionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionDescribeProjectVersionsFuture) Get(ctx workflow.Context) (*rekognition.DescribeProjectVersionsOutput, error) {
+func (r *DescribeProjectVersionsFuture) Get(ctx workflow.Context) (*rekognition.DescribeProjectVersionsOutput, error) {
 	var output rekognition.DescribeProjectVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionDescribeProjectsFuture struct {
+type DescribeProjectsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionDescribeProjectsFuture) Get(ctx workflow.Context) (*rekognition.DescribeProjectsOutput, error) {
+func (r *DescribeProjectsFuture) Get(ctx workflow.Context) (*rekognition.DescribeProjectsOutput, error) {
 	var output rekognition.DescribeProjectsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionDescribeStreamProcessorFuture struct {
+type DescribeStreamProcessorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionDescribeStreamProcessorFuture) Get(ctx workflow.Context) (*rekognition.DescribeStreamProcessorOutput, error) {
+func (r *DescribeStreamProcessorFuture) Get(ctx workflow.Context) (*rekognition.DescribeStreamProcessorOutput, error) {
 	var output rekognition.DescribeStreamProcessorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionDetectCustomLabelsFuture struct {
+type DetectCustomLabelsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionDetectCustomLabelsFuture) Get(ctx workflow.Context) (*rekognition.DetectCustomLabelsOutput, error) {
+func (r *DetectCustomLabelsFuture) Get(ctx workflow.Context) (*rekognition.DetectCustomLabelsOutput, error) {
 	var output rekognition.DetectCustomLabelsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionDetectFacesFuture struct {
+type DetectFacesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionDetectFacesFuture) Get(ctx workflow.Context) (*rekognition.DetectFacesOutput, error) {
+func (r *DetectFacesFuture) Get(ctx workflow.Context) (*rekognition.DetectFacesOutput, error) {
 	var output rekognition.DetectFacesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionDetectLabelsFuture struct {
+type DetectLabelsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionDetectLabelsFuture) Get(ctx workflow.Context) (*rekognition.DetectLabelsOutput, error) {
+func (r *DetectLabelsFuture) Get(ctx workflow.Context) (*rekognition.DetectLabelsOutput, error) {
 	var output rekognition.DetectLabelsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionDetectModerationLabelsFuture struct {
+type DetectModerationLabelsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionDetectModerationLabelsFuture) Get(ctx workflow.Context) (*rekognition.DetectModerationLabelsOutput, error) {
+func (r *DetectModerationLabelsFuture) Get(ctx workflow.Context) (*rekognition.DetectModerationLabelsOutput, error) {
 	var output rekognition.DetectModerationLabelsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionDetectTextFuture struct {
+type DetectTextFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionDetectTextFuture) Get(ctx workflow.Context) (*rekognition.DetectTextOutput, error) {
+func (r *DetectTextFuture) Get(ctx workflow.Context) (*rekognition.DetectTextOutput, error) {
 	var output rekognition.DetectTextOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionGetCelebrityInfoFuture struct {
+type GetCelebrityInfoFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionGetCelebrityInfoFuture) Get(ctx workflow.Context) (*rekognition.GetCelebrityInfoOutput, error) {
+func (r *GetCelebrityInfoFuture) Get(ctx workflow.Context) (*rekognition.GetCelebrityInfoOutput, error) {
 	var output rekognition.GetCelebrityInfoOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionGetCelebrityRecognitionFuture struct {
+type GetCelebrityRecognitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionGetCelebrityRecognitionFuture) Get(ctx workflow.Context) (*rekognition.GetCelebrityRecognitionOutput, error) {
+func (r *GetCelebrityRecognitionFuture) Get(ctx workflow.Context) (*rekognition.GetCelebrityRecognitionOutput, error) {
 	var output rekognition.GetCelebrityRecognitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionGetContentModerationFuture struct {
+type GetContentModerationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionGetContentModerationFuture) Get(ctx workflow.Context) (*rekognition.GetContentModerationOutput, error) {
+func (r *GetContentModerationFuture) Get(ctx workflow.Context) (*rekognition.GetContentModerationOutput, error) {
 	var output rekognition.GetContentModerationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionGetFaceDetectionFuture struct {
+type GetFaceDetectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionGetFaceDetectionFuture) Get(ctx workflow.Context) (*rekognition.GetFaceDetectionOutput, error) {
+func (r *GetFaceDetectionFuture) Get(ctx workflow.Context) (*rekognition.GetFaceDetectionOutput, error) {
 	var output rekognition.GetFaceDetectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionGetFaceSearchFuture struct {
+type GetFaceSearchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionGetFaceSearchFuture) Get(ctx workflow.Context) (*rekognition.GetFaceSearchOutput, error) {
+func (r *GetFaceSearchFuture) Get(ctx workflow.Context) (*rekognition.GetFaceSearchOutput, error) {
 	var output rekognition.GetFaceSearchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionGetLabelDetectionFuture struct {
+type GetLabelDetectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionGetLabelDetectionFuture) Get(ctx workflow.Context) (*rekognition.GetLabelDetectionOutput, error) {
+func (r *GetLabelDetectionFuture) Get(ctx workflow.Context) (*rekognition.GetLabelDetectionOutput, error) {
 	var output rekognition.GetLabelDetectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionGetPersonTrackingFuture struct {
+type GetPersonTrackingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionGetPersonTrackingFuture) Get(ctx workflow.Context) (*rekognition.GetPersonTrackingOutput, error) {
+func (r *GetPersonTrackingFuture) Get(ctx workflow.Context) (*rekognition.GetPersonTrackingOutput, error) {
 	var output rekognition.GetPersonTrackingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionGetSegmentDetectionFuture struct {
+type GetSegmentDetectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionGetSegmentDetectionFuture) Get(ctx workflow.Context) (*rekognition.GetSegmentDetectionOutput, error) {
+func (r *GetSegmentDetectionFuture) Get(ctx workflow.Context) (*rekognition.GetSegmentDetectionOutput, error) {
 	var output rekognition.GetSegmentDetectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionGetTextDetectionFuture struct {
+type GetTextDetectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionGetTextDetectionFuture) Get(ctx workflow.Context) (*rekognition.GetTextDetectionOutput, error) {
+func (r *GetTextDetectionFuture) Get(ctx workflow.Context) (*rekognition.GetTextDetectionOutput, error) {
 	var output rekognition.GetTextDetectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionIndexFacesFuture struct {
+type IndexFacesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionIndexFacesFuture) Get(ctx workflow.Context) (*rekognition.IndexFacesOutput, error) {
+func (r *IndexFacesFuture) Get(ctx workflow.Context) (*rekognition.IndexFacesOutput, error) {
 	var output rekognition.IndexFacesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionListCollectionsFuture struct {
+type ListCollectionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionListCollectionsFuture) Get(ctx workflow.Context) (*rekognition.ListCollectionsOutput, error) {
+func (r *ListCollectionsFuture) Get(ctx workflow.Context) (*rekognition.ListCollectionsOutput, error) {
 	var output rekognition.ListCollectionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionListFacesFuture struct {
+type ListFacesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionListFacesFuture) Get(ctx workflow.Context) (*rekognition.ListFacesOutput, error) {
+func (r *ListFacesFuture) Get(ctx workflow.Context) (*rekognition.ListFacesOutput, error) {
 	var output rekognition.ListFacesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionListStreamProcessorsFuture struct {
+type ListStreamProcessorsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionListStreamProcessorsFuture) Get(ctx workflow.Context) (*rekognition.ListStreamProcessorsOutput, error) {
+func (r *ListStreamProcessorsFuture) Get(ctx workflow.Context) (*rekognition.ListStreamProcessorsOutput, error) {
 	var output rekognition.ListStreamProcessorsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionRecognizeCelebritiesFuture struct {
+type RecognizeCelebritiesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionRecognizeCelebritiesFuture) Get(ctx workflow.Context) (*rekognition.RecognizeCelebritiesOutput, error) {
+func (r *RecognizeCelebritiesFuture) Get(ctx workflow.Context) (*rekognition.RecognizeCelebritiesOutput, error) {
 	var output rekognition.RecognizeCelebritiesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionSearchFacesFuture struct {
+type SearchFacesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionSearchFacesFuture) Get(ctx workflow.Context) (*rekognition.SearchFacesOutput, error) {
+func (r *SearchFacesFuture) Get(ctx workflow.Context) (*rekognition.SearchFacesOutput, error) {
 	var output rekognition.SearchFacesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionSearchFacesByImageFuture struct {
+type SearchFacesByImageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionSearchFacesByImageFuture) Get(ctx workflow.Context) (*rekognition.SearchFacesByImageOutput, error) {
+func (r *SearchFacesByImageFuture) Get(ctx workflow.Context) (*rekognition.SearchFacesByImageOutput, error) {
 	var output rekognition.SearchFacesByImageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionStartCelebrityRecognitionFuture struct {
+type StartCelebrityRecognitionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionStartCelebrityRecognitionFuture) Get(ctx workflow.Context) (*rekognition.StartCelebrityRecognitionOutput, error) {
+func (r *StartCelebrityRecognitionFuture) Get(ctx workflow.Context) (*rekognition.StartCelebrityRecognitionOutput, error) {
 	var output rekognition.StartCelebrityRecognitionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionStartContentModerationFuture struct {
+type StartContentModerationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionStartContentModerationFuture) Get(ctx workflow.Context) (*rekognition.StartContentModerationOutput, error) {
+func (r *StartContentModerationFuture) Get(ctx workflow.Context) (*rekognition.StartContentModerationOutput, error) {
 	var output rekognition.StartContentModerationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionStartFaceDetectionFuture struct {
+type StartFaceDetectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionStartFaceDetectionFuture) Get(ctx workflow.Context) (*rekognition.StartFaceDetectionOutput, error) {
+func (r *StartFaceDetectionFuture) Get(ctx workflow.Context) (*rekognition.StartFaceDetectionOutput, error) {
 	var output rekognition.StartFaceDetectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionStartFaceSearchFuture struct {
+type StartFaceSearchFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionStartFaceSearchFuture) Get(ctx workflow.Context) (*rekognition.StartFaceSearchOutput, error) {
+func (r *StartFaceSearchFuture) Get(ctx workflow.Context) (*rekognition.StartFaceSearchOutput, error) {
 	var output rekognition.StartFaceSearchOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionStartLabelDetectionFuture struct {
+type StartLabelDetectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionStartLabelDetectionFuture) Get(ctx workflow.Context) (*rekognition.StartLabelDetectionOutput, error) {
+func (r *StartLabelDetectionFuture) Get(ctx workflow.Context) (*rekognition.StartLabelDetectionOutput, error) {
 	var output rekognition.StartLabelDetectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionStartPersonTrackingFuture struct {
+type StartPersonTrackingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionStartPersonTrackingFuture) Get(ctx workflow.Context) (*rekognition.StartPersonTrackingOutput, error) {
+func (r *StartPersonTrackingFuture) Get(ctx workflow.Context) (*rekognition.StartPersonTrackingOutput, error) {
 	var output rekognition.StartPersonTrackingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionStartProjectVersionFuture struct {
+type StartProjectVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionStartProjectVersionFuture) Get(ctx workflow.Context) (*rekognition.StartProjectVersionOutput, error) {
+func (r *StartProjectVersionFuture) Get(ctx workflow.Context) (*rekognition.StartProjectVersionOutput, error) {
 	var output rekognition.StartProjectVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionStartSegmentDetectionFuture struct {
+type StartSegmentDetectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionStartSegmentDetectionFuture) Get(ctx workflow.Context) (*rekognition.StartSegmentDetectionOutput, error) {
+func (r *StartSegmentDetectionFuture) Get(ctx workflow.Context) (*rekognition.StartSegmentDetectionOutput, error) {
 	var output rekognition.StartSegmentDetectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionStartStreamProcessorFuture struct {
+type StartStreamProcessorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionStartStreamProcessorFuture) Get(ctx workflow.Context) (*rekognition.StartStreamProcessorOutput, error) {
+func (r *StartStreamProcessorFuture) Get(ctx workflow.Context) (*rekognition.StartStreamProcessorOutput, error) {
 	var output rekognition.StartStreamProcessorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionStartTextDetectionFuture struct {
+type StartTextDetectionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionStartTextDetectionFuture) Get(ctx workflow.Context) (*rekognition.StartTextDetectionOutput, error) {
+func (r *StartTextDetectionFuture) Get(ctx workflow.Context) (*rekognition.StartTextDetectionOutput, error) {
 	var output rekognition.StartTextDetectionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionStopProjectVersionFuture struct {
+type StopProjectVersionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionStopProjectVersionFuture) Get(ctx workflow.Context) (*rekognition.StopProjectVersionOutput, error) {
+func (r *StopProjectVersionFuture) Get(ctx workflow.Context) (*rekognition.StopProjectVersionOutput, error) {
 	var output rekognition.StopProjectVersionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type RekognitionStopStreamProcessorFuture struct {
+type StopStreamProcessorFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *RekognitionStopStreamProcessorFuture) Get(ctx workflow.Context) (*rekognition.StopStreamProcessorOutput, error) {
+func (r *StopStreamProcessorFuture) Get(ctx workflow.Context) (*rekognition.StopStreamProcessorOutput, error) {
 	var output rekognition.StopStreamProcessorOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -539,9 +539,9 @@ func (a *stub) CompareFaces(ctx workflow.Context, input *rekognition.CompareFace
 	return &output, err
 }
 
-func (a *stub) CompareFacesAsync(ctx workflow.Context, input *rekognition.CompareFacesInput) *RekognitionCompareFacesFuture {
+func (a *stub) CompareFacesAsync(ctx workflow.Context, input *rekognition.CompareFacesInput) *CompareFacesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.CompareFaces", input)
-	return &RekognitionCompareFacesFuture{Future: future}
+	return &CompareFacesFuture{Future: future}
 }
 
 func (a *stub) CreateCollection(ctx workflow.Context, input *rekognition.CreateCollectionInput) (*rekognition.CreateCollectionOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) CreateCollection(ctx workflow.Context, input *rekognition.CreateC
 	return &output, err
 }
 
-func (a *stub) CreateCollectionAsync(ctx workflow.Context, input *rekognition.CreateCollectionInput) *RekognitionCreateCollectionFuture {
+func (a *stub) CreateCollectionAsync(ctx workflow.Context, input *rekognition.CreateCollectionInput) *CreateCollectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.CreateCollection", input)
-	return &RekognitionCreateCollectionFuture{Future: future}
+	return &CreateCollectionFuture{Future: future}
 }
 
 func (a *stub) CreateProject(ctx workflow.Context, input *rekognition.CreateProjectInput) (*rekognition.CreateProjectOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) CreateProject(ctx workflow.Context, input *rekognition.CreateProj
 	return &output, err
 }
 
-func (a *stub) CreateProjectAsync(ctx workflow.Context, input *rekognition.CreateProjectInput) *RekognitionCreateProjectFuture {
+func (a *stub) CreateProjectAsync(ctx workflow.Context, input *rekognition.CreateProjectInput) *CreateProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.CreateProject", input)
-	return &RekognitionCreateProjectFuture{Future: future}
+	return &CreateProjectFuture{Future: future}
 }
 
 func (a *stub) CreateProjectVersion(ctx workflow.Context, input *rekognition.CreateProjectVersionInput) (*rekognition.CreateProjectVersionOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) CreateProjectVersion(ctx workflow.Context, input *rekognition.Cre
 	return &output, err
 }
 
-func (a *stub) CreateProjectVersionAsync(ctx workflow.Context, input *rekognition.CreateProjectVersionInput) *RekognitionCreateProjectVersionFuture {
+func (a *stub) CreateProjectVersionAsync(ctx workflow.Context, input *rekognition.CreateProjectVersionInput) *CreateProjectVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.CreateProjectVersion", input)
-	return &RekognitionCreateProjectVersionFuture{Future: future}
+	return &CreateProjectVersionFuture{Future: future}
 }
 
 func (a *stub) CreateStreamProcessor(ctx workflow.Context, input *rekognition.CreateStreamProcessorInput) (*rekognition.CreateStreamProcessorOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) CreateStreamProcessor(ctx workflow.Context, input *rekognition.Cr
 	return &output, err
 }
 
-func (a *stub) CreateStreamProcessorAsync(ctx workflow.Context, input *rekognition.CreateStreamProcessorInput) *RekognitionCreateStreamProcessorFuture {
+func (a *stub) CreateStreamProcessorAsync(ctx workflow.Context, input *rekognition.CreateStreamProcessorInput) *CreateStreamProcessorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.CreateStreamProcessor", input)
-	return &RekognitionCreateStreamProcessorFuture{Future: future}
+	return &CreateStreamProcessorFuture{Future: future}
 }
 
 func (a *stub) DeleteCollection(ctx workflow.Context, input *rekognition.DeleteCollectionInput) (*rekognition.DeleteCollectionOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) DeleteCollection(ctx workflow.Context, input *rekognition.DeleteC
 	return &output, err
 }
 
-func (a *stub) DeleteCollectionAsync(ctx workflow.Context, input *rekognition.DeleteCollectionInput) *RekognitionDeleteCollectionFuture {
+func (a *stub) DeleteCollectionAsync(ctx workflow.Context, input *rekognition.DeleteCollectionInput) *DeleteCollectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.DeleteCollection", input)
-	return &RekognitionDeleteCollectionFuture{Future: future}
+	return &DeleteCollectionFuture{Future: future}
 }
 
 func (a *stub) DeleteFaces(ctx workflow.Context, input *rekognition.DeleteFacesInput) (*rekognition.DeleteFacesOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) DeleteFaces(ctx workflow.Context, input *rekognition.DeleteFacesI
 	return &output, err
 }
 
-func (a *stub) DeleteFacesAsync(ctx workflow.Context, input *rekognition.DeleteFacesInput) *RekognitionDeleteFacesFuture {
+func (a *stub) DeleteFacesAsync(ctx workflow.Context, input *rekognition.DeleteFacesInput) *DeleteFacesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.DeleteFaces", input)
-	return &RekognitionDeleteFacesFuture{Future: future}
+	return &DeleteFacesFuture{Future: future}
 }
 
 func (a *stub) DeleteProject(ctx workflow.Context, input *rekognition.DeleteProjectInput) (*rekognition.DeleteProjectOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) DeleteProject(ctx workflow.Context, input *rekognition.DeleteProj
 	return &output, err
 }
 
-func (a *stub) DeleteProjectAsync(ctx workflow.Context, input *rekognition.DeleteProjectInput) *RekognitionDeleteProjectFuture {
+func (a *stub) DeleteProjectAsync(ctx workflow.Context, input *rekognition.DeleteProjectInput) *DeleteProjectFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.DeleteProject", input)
-	return &RekognitionDeleteProjectFuture{Future: future}
+	return &DeleteProjectFuture{Future: future}
 }
 
 func (a *stub) DeleteProjectVersion(ctx workflow.Context, input *rekognition.DeleteProjectVersionInput) (*rekognition.DeleteProjectVersionOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) DeleteProjectVersion(ctx workflow.Context, input *rekognition.Del
 	return &output, err
 }
 
-func (a *stub) DeleteProjectVersionAsync(ctx workflow.Context, input *rekognition.DeleteProjectVersionInput) *RekognitionDeleteProjectVersionFuture {
+func (a *stub) DeleteProjectVersionAsync(ctx workflow.Context, input *rekognition.DeleteProjectVersionInput) *DeleteProjectVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.DeleteProjectVersion", input)
-	return &RekognitionDeleteProjectVersionFuture{Future: future}
+	return &DeleteProjectVersionFuture{Future: future}
 }
 
 func (a *stub) DeleteStreamProcessor(ctx workflow.Context, input *rekognition.DeleteStreamProcessorInput) (*rekognition.DeleteStreamProcessorOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) DeleteStreamProcessor(ctx workflow.Context, input *rekognition.De
 	return &output, err
 }
 
-func (a *stub) DeleteStreamProcessorAsync(ctx workflow.Context, input *rekognition.DeleteStreamProcessorInput) *RekognitionDeleteStreamProcessorFuture {
+func (a *stub) DeleteStreamProcessorAsync(ctx workflow.Context, input *rekognition.DeleteStreamProcessorInput) *DeleteStreamProcessorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.DeleteStreamProcessor", input)
-	return &RekognitionDeleteStreamProcessorFuture{Future: future}
+	return &DeleteStreamProcessorFuture{Future: future}
 }
 
 func (a *stub) DescribeCollection(ctx workflow.Context, input *rekognition.DescribeCollectionInput) (*rekognition.DescribeCollectionOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) DescribeCollection(ctx workflow.Context, input *rekognition.Descr
 	return &output, err
 }
 
-func (a *stub) DescribeCollectionAsync(ctx workflow.Context, input *rekognition.DescribeCollectionInput) *RekognitionDescribeCollectionFuture {
+func (a *stub) DescribeCollectionAsync(ctx workflow.Context, input *rekognition.DescribeCollectionInput) *DescribeCollectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.DescribeCollection", input)
-	return &RekognitionDescribeCollectionFuture{Future: future}
+	return &DescribeCollectionFuture{Future: future}
 }
 
 func (a *stub) DescribeProjectVersions(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) (*rekognition.DescribeProjectVersionsOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) DescribeProjectVersions(ctx workflow.Context, input *rekognition.
 	return &output, err
 }
 
-func (a *stub) DescribeProjectVersionsAsync(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) *RekognitionDescribeProjectVersionsFuture {
+func (a *stub) DescribeProjectVersionsAsync(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) *DescribeProjectVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.DescribeProjectVersions", input)
-	return &RekognitionDescribeProjectVersionsFuture{Future: future}
+	return &DescribeProjectVersionsFuture{Future: future}
 }
 
 func (a *stub) DescribeProjects(ctx workflow.Context, input *rekognition.DescribeProjectsInput) (*rekognition.DescribeProjectsOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) DescribeProjects(ctx workflow.Context, input *rekognition.Describ
 	return &output, err
 }
 
-func (a *stub) DescribeProjectsAsync(ctx workflow.Context, input *rekognition.DescribeProjectsInput) *RekognitionDescribeProjectsFuture {
+func (a *stub) DescribeProjectsAsync(ctx workflow.Context, input *rekognition.DescribeProjectsInput) *DescribeProjectsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.DescribeProjects", input)
-	return &RekognitionDescribeProjectsFuture{Future: future}
+	return &DescribeProjectsFuture{Future: future}
 }
 
 func (a *stub) DescribeStreamProcessor(ctx workflow.Context, input *rekognition.DescribeStreamProcessorInput) (*rekognition.DescribeStreamProcessorOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) DescribeStreamProcessor(ctx workflow.Context, input *rekognition.
 	return &output, err
 }
 
-func (a *stub) DescribeStreamProcessorAsync(ctx workflow.Context, input *rekognition.DescribeStreamProcessorInput) *RekognitionDescribeStreamProcessorFuture {
+func (a *stub) DescribeStreamProcessorAsync(ctx workflow.Context, input *rekognition.DescribeStreamProcessorInput) *DescribeStreamProcessorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.DescribeStreamProcessor", input)
-	return &RekognitionDescribeStreamProcessorFuture{Future: future}
+	return &DescribeStreamProcessorFuture{Future: future}
 }
 
 func (a *stub) DetectCustomLabels(ctx workflow.Context, input *rekognition.DetectCustomLabelsInput) (*rekognition.DetectCustomLabelsOutput, error) {
@@ -693,9 +693,9 @@ func (a *stub) DetectCustomLabels(ctx workflow.Context, input *rekognition.Detec
 	return &output, err
 }
 
-func (a *stub) DetectCustomLabelsAsync(ctx workflow.Context, input *rekognition.DetectCustomLabelsInput) *RekognitionDetectCustomLabelsFuture {
+func (a *stub) DetectCustomLabelsAsync(ctx workflow.Context, input *rekognition.DetectCustomLabelsInput) *DetectCustomLabelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.DetectCustomLabels", input)
-	return &RekognitionDetectCustomLabelsFuture{Future: future}
+	return &DetectCustomLabelsFuture{Future: future}
 }
 
 func (a *stub) DetectFaces(ctx workflow.Context, input *rekognition.DetectFacesInput) (*rekognition.DetectFacesOutput, error) {
@@ -704,9 +704,9 @@ func (a *stub) DetectFaces(ctx workflow.Context, input *rekognition.DetectFacesI
 	return &output, err
 }
 
-func (a *stub) DetectFacesAsync(ctx workflow.Context, input *rekognition.DetectFacesInput) *RekognitionDetectFacesFuture {
+func (a *stub) DetectFacesAsync(ctx workflow.Context, input *rekognition.DetectFacesInput) *DetectFacesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.DetectFaces", input)
-	return &RekognitionDetectFacesFuture{Future: future}
+	return &DetectFacesFuture{Future: future}
 }
 
 func (a *stub) DetectLabels(ctx workflow.Context, input *rekognition.DetectLabelsInput) (*rekognition.DetectLabelsOutput, error) {
@@ -715,9 +715,9 @@ func (a *stub) DetectLabels(ctx workflow.Context, input *rekognition.DetectLabel
 	return &output, err
 }
 
-func (a *stub) DetectLabelsAsync(ctx workflow.Context, input *rekognition.DetectLabelsInput) *RekognitionDetectLabelsFuture {
+func (a *stub) DetectLabelsAsync(ctx workflow.Context, input *rekognition.DetectLabelsInput) *DetectLabelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.DetectLabels", input)
-	return &RekognitionDetectLabelsFuture{Future: future}
+	return &DetectLabelsFuture{Future: future}
 }
 
 func (a *stub) DetectModerationLabels(ctx workflow.Context, input *rekognition.DetectModerationLabelsInput) (*rekognition.DetectModerationLabelsOutput, error) {
@@ -726,9 +726,9 @@ func (a *stub) DetectModerationLabels(ctx workflow.Context, input *rekognition.D
 	return &output, err
 }
 
-func (a *stub) DetectModerationLabelsAsync(ctx workflow.Context, input *rekognition.DetectModerationLabelsInput) *RekognitionDetectModerationLabelsFuture {
+func (a *stub) DetectModerationLabelsAsync(ctx workflow.Context, input *rekognition.DetectModerationLabelsInput) *DetectModerationLabelsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.DetectModerationLabels", input)
-	return &RekognitionDetectModerationLabelsFuture{Future: future}
+	return &DetectModerationLabelsFuture{Future: future}
 }
 
 func (a *stub) DetectText(ctx workflow.Context, input *rekognition.DetectTextInput) (*rekognition.DetectTextOutput, error) {
@@ -737,9 +737,9 @@ func (a *stub) DetectText(ctx workflow.Context, input *rekognition.DetectTextInp
 	return &output, err
 }
 
-func (a *stub) DetectTextAsync(ctx workflow.Context, input *rekognition.DetectTextInput) *RekognitionDetectTextFuture {
+func (a *stub) DetectTextAsync(ctx workflow.Context, input *rekognition.DetectTextInput) *DetectTextFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.DetectText", input)
-	return &RekognitionDetectTextFuture{Future: future}
+	return &DetectTextFuture{Future: future}
 }
 
 func (a *stub) GetCelebrityInfo(ctx workflow.Context, input *rekognition.GetCelebrityInfoInput) (*rekognition.GetCelebrityInfoOutput, error) {
@@ -748,9 +748,9 @@ func (a *stub) GetCelebrityInfo(ctx workflow.Context, input *rekognition.GetCele
 	return &output, err
 }
 
-func (a *stub) GetCelebrityInfoAsync(ctx workflow.Context, input *rekognition.GetCelebrityInfoInput) *RekognitionGetCelebrityInfoFuture {
+func (a *stub) GetCelebrityInfoAsync(ctx workflow.Context, input *rekognition.GetCelebrityInfoInput) *GetCelebrityInfoFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.GetCelebrityInfo", input)
-	return &RekognitionGetCelebrityInfoFuture{Future: future}
+	return &GetCelebrityInfoFuture{Future: future}
 }
 
 func (a *stub) GetCelebrityRecognition(ctx workflow.Context, input *rekognition.GetCelebrityRecognitionInput) (*rekognition.GetCelebrityRecognitionOutput, error) {
@@ -759,9 +759,9 @@ func (a *stub) GetCelebrityRecognition(ctx workflow.Context, input *rekognition.
 	return &output, err
 }
 
-func (a *stub) GetCelebrityRecognitionAsync(ctx workflow.Context, input *rekognition.GetCelebrityRecognitionInput) *RekognitionGetCelebrityRecognitionFuture {
+func (a *stub) GetCelebrityRecognitionAsync(ctx workflow.Context, input *rekognition.GetCelebrityRecognitionInput) *GetCelebrityRecognitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.GetCelebrityRecognition", input)
-	return &RekognitionGetCelebrityRecognitionFuture{Future: future}
+	return &GetCelebrityRecognitionFuture{Future: future}
 }
 
 func (a *stub) GetContentModeration(ctx workflow.Context, input *rekognition.GetContentModerationInput) (*rekognition.GetContentModerationOutput, error) {
@@ -770,9 +770,9 @@ func (a *stub) GetContentModeration(ctx workflow.Context, input *rekognition.Get
 	return &output, err
 }
 
-func (a *stub) GetContentModerationAsync(ctx workflow.Context, input *rekognition.GetContentModerationInput) *RekognitionGetContentModerationFuture {
+func (a *stub) GetContentModerationAsync(ctx workflow.Context, input *rekognition.GetContentModerationInput) *GetContentModerationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.GetContentModeration", input)
-	return &RekognitionGetContentModerationFuture{Future: future}
+	return &GetContentModerationFuture{Future: future}
 }
 
 func (a *stub) GetFaceDetection(ctx workflow.Context, input *rekognition.GetFaceDetectionInput) (*rekognition.GetFaceDetectionOutput, error) {
@@ -781,9 +781,9 @@ func (a *stub) GetFaceDetection(ctx workflow.Context, input *rekognition.GetFace
 	return &output, err
 }
 
-func (a *stub) GetFaceDetectionAsync(ctx workflow.Context, input *rekognition.GetFaceDetectionInput) *RekognitionGetFaceDetectionFuture {
+func (a *stub) GetFaceDetectionAsync(ctx workflow.Context, input *rekognition.GetFaceDetectionInput) *GetFaceDetectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.GetFaceDetection", input)
-	return &RekognitionGetFaceDetectionFuture{Future: future}
+	return &GetFaceDetectionFuture{Future: future}
 }
 
 func (a *stub) GetFaceSearch(ctx workflow.Context, input *rekognition.GetFaceSearchInput) (*rekognition.GetFaceSearchOutput, error) {
@@ -792,9 +792,9 @@ func (a *stub) GetFaceSearch(ctx workflow.Context, input *rekognition.GetFaceSea
 	return &output, err
 }
 
-func (a *stub) GetFaceSearchAsync(ctx workflow.Context, input *rekognition.GetFaceSearchInput) *RekognitionGetFaceSearchFuture {
+func (a *stub) GetFaceSearchAsync(ctx workflow.Context, input *rekognition.GetFaceSearchInput) *GetFaceSearchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.GetFaceSearch", input)
-	return &RekognitionGetFaceSearchFuture{Future: future}
+	return &GetFaceSearchFuture{Future: future}
 }
 
 func (a *stub) GetLabelDetection(ctx workflow.Context, input *rekognition.GetLabelDetectionInput) (*rekognition.GetLabelDetectionOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) GetLabelDetection(ctx workflow.Context, input *rekognition.GetLab
 	return &output, err
 }
 
-func (a *stub) GetLabelDetectionAsync(ctx workflow.Context, input *rekognition.GetLabelDetectionInput) *RekognitionGetLabelDetectionFuture {
+func (a *stub) GetLabelDetectionAsync(ctx workflow.Context, input *rekognition.GetLabelDetectionInput) *GetLabelDetectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.GetLabelDetection", input)
-	return &RekognitionGetLabelDetectionFuture{Future: future}
+	return &GetLabelDetectionFuture{Future: future}
 }
 
 func (a *stub) GetPersonTracking(ctx workflow.Context, input *rekognition.GetPersonTrackingInput) (*rekognition.GetPersonTrackingOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) GetPersonTracking(ctx workflow.Context, input *rekognition.GetPer
 	return &output, err
 }
 
-func (a *stub) GetPersonTrackingAsync(ctx workflow.Context, input *rekognition.GetPersonTrackingInput) *RekognitionGetPersonTrackingFuture {
+func (a *stub) GetPersonTrackingAsync(ctx workflow.Context, input *rekognition.GetPersonTrackingInput) *GetPersonTrackingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.GetPersonTracking", input)
-	return &RekognitionGetPersonTrackingFuture{Future: future}
+	return &GetPersonTrackingFuture{Future: future}
 }
 
 func (a *stub) GetSegmentDetection(ctx workflow.Context, input *rekognition.GetSegmentDetectionInput) (*rekognition.GetSegmentDetectionOutput, error) {
@@ -825,9 +825,9 @@ func (a *stub) GetSegmentDetection(ctx workflow.Context, input *rekognition.GetS
 	return &output, err
 }
 
-func (a *stub) GetSegmentDetectionAsync(ctx workflow.Context, input *rekognition.GetSegmentDetectionInput) *RekognitionGetSegmentDetectionFuture {
+func (a *stub) GetSegmentDetectionAsync(ctx workflow.Context, input *rekognition.GetSegmentDetectionInput) *GetSegmentDetectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.GetSegmentDetection", input)
-	return &RekognitionGetSegmentDetectionFuture{Future: future}
+	return &GetSegmentDetectionFuture{Future: future}
 }
 
 func (a *stub) GetTextDetection(ctx workflow.Context, input *rekognition.GetTextDetectionInput) (*rekognition.GetTextDetectionOutput, error) {
@@ -836,9 +836,9 @@ func (a *stub) GetTextDetection(ctx workflow.Context, input *rekognition.GetText
 	return &output, err
 }
 
-func (a *stub) GetTextDetectionAsync(ctx workflow.Context, input *rekognition.GetTextDetectionInput) *RekognitionGetTextDetectionFuture {
+func (a *stub) GetTextDetectionAsync(ctx workflow.Context, input *rekognition.GetTextDetectionInput) *GetTextDetectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.GetTextDetection", input)
-	return &RekognitionGetTextDetectionFuture{Future: future}
+	return &GetTextDetectionFuture{Future: future}
 }
 
 func (a *stub) IndexFaces(ctx workflow.Context, input *rekognition.IndexFacesInput) (*rekognition.IndexFacesOutput, error) {
@@ -847,9 +847,9 @@ func (a *stub) IndexFaces(ctx workflow.Context, input *rekognition.IndexFacesInp
 	return &output, err
 }
 
-func (a *stub) IndexFacesAsync(ctx workflow.Context, input *rekognition.IndexFacesInput) *RekognitionIndexFacesFuture {
+func (a *stub) IndexFacesAsync(ctx workflow.Context, input *rekognition.IndexFacesInput) *IndexFacesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.IndexFaces", input)
-	return &RekognitionIndexFacesFuture{Future: future}
+	return &IndexFacesFuture{Future: future}
 }
 
 func (a *stub) ListCollections(ctx workflow.Context, input *rekognition.ListCollectionsInput) (*rekognition.ListCollectionsOutput, error) {
@@ -858,9 +858,9 @@ func (a *stub) ListCollections(ctx workflow.Context, input *rekognition.ListColl
 	return &output, err
 }
 
-func (a *stub) ListCollectionsAsync(ctx workflow.Context, input *rekognition.ListCollectionsInput) *RekognitionListCollectionsFuture {
+func (a *stub) ListCollectionsAsync(ctx workflow.Context, input *rekognition.ListCollectionsInput) *ListCollectionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.ListCollections", input)
-	return &RekognitionListCollectionsFuture{Future: future}
+	return &ListCollectionsFuture{Future: future}
 }
 
 func (a *stub) ListFaces(ctx workflow.Context, input *rekognition.ListFacesInput) (*rekognition.ListFacesOutput, error) {
@@ -869,9 +869,9 @@ func (a *stub) ListFaces(ctx workflow.Context, input *rekognition.ListFacesInput
 	return &output, err
 }
 
-func (a *stub) ListFacesAsync(ctx workflow.Context, input *rekognition.ListFacesInput) *RekognitionListFacesFuture {
+func (a *stub) ListFacesAsync(ctx workflow.Context, input *rekognition.ListFacesInput) *ListFacesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.ListFaces", input)
-	return &RekognitionListFacesFuture{Future: future}
+	return &ListFacesFuture{Future: future}
 }
 
 func (a *stub) ListStreamProcessors(ctx workflow.Context, input *rekognition.ListStreamProcessorsInput) (*rekognition.ListStreamProcessorsOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) ListStreamProcessors(ctx workflow.Context, input *rekognition.Lis
 	return &output, err
 }
 
-func (a *stub) ListStreamProcessorsAsync(ctx workflow.Context, input *rekognition.ListStreamProcessorsInput) *RekognitionListStreamProcessorsFuture {
+func (a *stub) ListStreamProcessorsAsync(ctx workflow.Context, input *rekognition.ListStreamProcessorsInput) *ListStreamProcessorsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.ListStreamProcessors", input)
-	return &RekognitionListStreamProcessorsFuture{Future: future}
+	return &ListStreamProcessorsFuture{Future: future}
 }
 
 func (a *stub) RecognizeCelebrities(ctx workflow.Context, input *rekognition.RecognizeCelebritiesInput) (*rekognition.RecognizeCelebritiesOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) RecognizeCelebrities(ctx workflow.Context, input *rekognition.Rec
 	return &output, err
 }
 
-func (a *stub) RecognizeCelebritiesAsync(ctx workflow.Context, input *rekognition.RecognizeCelebritiesInput) *RekognitionRecognizeCelebritiesFuture {
+func (a *stub) RecognizeCelebritiesAsync(ctx workflow.Context, input *rekognition.RecognizeCelebritiesInput) *RecognizeCelebritiesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.RecognizeCelebrities", input)
-	return &RekognitionRecognizeCelebritiesFuture{Future: future}
+	return &RecognizeCelebritiesFuture{Future: future}
 }
 
 func (a *stub) SearchFaces(ctx workflow.Context, input *rekognition.SearchFacesInput) (*rekognition.SearchFacesOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) SearchFaces(ctx workflow.Context, input *rekognition.SearchFacesI
 	return &output, err
 }
 
-func (a *stub) SearchFacesAsync(ctx workflow.Context, input *rekognition.SearchFacesInput) *RekognitionSearchFacesFuture {
+func (a *stub) SearchFacesAsync(ctx workflow.Context, input *rekognition.SearchFacesInput) *SearchFacesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.SearchFaces", input)
-	return &RekognitionSearchFacesFuture{Future: future}
+	return &SearchFacesFuture{Future: future}
 }
 
 func (a *stub) SearchFacesByImage(ctx workflow.Context, input *rekognition.SearchFacesByImageInput) (*rekognition.SearchFacesByImageOutput, error) {
@@ -913,9 +913,9 @@ func (a *stub) SearchFacesByImage(ctx workflow.Context, input *rekognition.Searc
 	return &output, err
 }
 
-func (a *stub) SearchFacesByImageAsync(ctx workflow.Context, input *rekognition.SearchFacesByImageInput) *RekognitionSearchFacesByImageFuture {
+func (a *stub) SearchFacesByImageAsync(ctx workflow.Context, input *rekognition.SearchFacesByImageInput) *SearchFacesByImageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.SearchFacesByImage", input)
-	return &RekognitionSearchFacesByImageFuture{Future: future}
+	return &SearchFacesByImageFuture{Future: future}
 }
 
 func (a *stub) StartCelebrityRecognition(ctx workflow.Context, input *rekognition.StartCelebrityRecognitionInput) (*rekognition.StartCelebrityRecognitionOutput, error) {
@@ -924,9 +924,9 @@ func (a *stub) StartCelebrityRecognition(ctx workflow.Context, input *rekognitio
 	return &output, err
 }
 
-func (a *stub) StartCelebrityRecognitionAsync(ctx workflow.Context, input *rekognition.StartCelebrityRecognitionInput) *RekognitionStartCelebrityRecognitionFuture {
+func (a *stub) StartCelebrityRecognitionAsync(ctx workflow.Context, input *rekognition.StartCelebrityRecognitionInput) *StartCelebrityRecognitionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.StartCelebrityRecognition", input)
-	return &RekognitionStartCelebrityRecognitionFuture{Future: future}
+	return &StartCelebrityRecognitionFuture{Future: future}
 }
 
 func (a *stub) StartContentModeration(ctx workflow.Context, input *rekognition.StartContentModerationInput) (*rekognition.StartContentModerationOutput, error) {
@@ -935,9 +935,9 @@ func (a *stub) StartContentModeration(ctx workflow.Context, input *rekognition.S
 	return &output, err
 }
 
-func (a *stub) StartContentModerationAsync(ctx workflow.Context, input *rekognition.StartContentModerationInput) *RekognitionStartContentModerationFuture {
+func (a *stub) StartContentModerationAsync(ctx workflow.Context, input *rekognition.StartContentModerationInput) *StartContentModerationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.StartContentModeration", input)
-	return &RekognitionStartContentModerationFuture{Future: future}
+	return &StartContentModerationFuture{Future: future}
 }
 
 func (a *stub) StartFaceDetection(ctx workflow.Context, input *rekognition.StartFaceDetectionInput) (*rekognition.StartFaceDetectionOutput, error) {
@@ -946,9 +946,9 @@ func (a *stub) StartFaceDetection(ctx workflow.Context, input *rekognition.Start
 	return &output, err
 }
 
-func (a *stub) StartFaceDetectionAsync(ctx workflow.Context, input *rekognition.StartFaceDetectionInput) *RekognitionStartFaceDetectionFuture {
+func (a *stub) StartFaceDetectionAsync(ctx workflow.Context, input *rekognition.StartFaceDetectionInput) *StartFaceDetectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.StartFaceDetection", input)
-	return &RekognitionStartFaceDetectionFuture{Future: future}
+	return &StartFaceDetectionFuture{Future: future}
 }
 
 func (a *stub) StartFaceSearch(ctx workflow.Context, input *rekognition.StartFaceSearchInput) (*rekognition.StartFaceSearchOutput, error) {
@@ -957,9 +957,9 @@ func (a *stub) StartFaceSearch(ctx workflow.Context, input *rekognition.StartFac
 	return &output, err
 }
 
-func (a *stub) StartFaceSearchAsync(ctx workflow.Context, input *rekognition.StartFaceSearchInput) *RekognitionStartFaceSearchFuture {
+func (a *stub) StartFaceSearchAsync(ctx workflow.Context, input *rekognition.StartFaceSearchInput) *StartFaceSearchFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.StartFaceSearch", input)
-	return &RekognitionStartFaceSearchFuture{Future: future}
+	return &StartFaceSearchFuture{Future: future}
 }
 
 func (a *stub) StartLabelDetection(ctx workflow.Context, input *rekognition.StartLabelDetectionInput) (*rekognition.StartLabelDetectionOutput, error) {
@@ -968,9 +968,9 @@ func (a *stub) StartLabelDetection(ctx workflow.Context, input *rekognition.Star
 	return &output, err
 }
 
-func (a *stub) StartLabelDetectionAsync(ctx workflow.Context, input *rekognition.StartLabelDetectionInput) *RekognitionStartLabelDetectionFuture {
+func (a *stub) StartLabelDetectionAsync(ctx workflow.Context, input *rekognition.StartLabelDetectionInput) *StartLabelDetectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.StartLabelDetection", input)
-	return &RekognitionStartLabelDetectionFuture{Future: future}
+	return &StartLabelDetectionFuture{Future: future}
 }
 
 func (a *stub) StartPersonTracking(ctx workflow.Context, input *rekognition.StartPersonTrackingInput) (*rekognition.StartPersonTrackingOutput, error) {
@@ -979,9 +979,9 @@ func (a *stub) StartPersonTracking(ctx workflow.Context, input *rekognition.Star
 	return &output, err
 }
 
-func (a *stub) StartPersonTrackingAsync(ctx workflow.Context, input *rekognition.StartPersonTrackingInput) *RekognitionStartPersonTrackingFuture {
+func (a *stub) StartPersonTrackingAsync(ctx workflow.Context, input *rekognition.StartPersonTrackingInput) *StartPersonTrackingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.StartPersonTracking", input)
-	return &RekognitionStartPersonTrackingFuture{Future: future}
+	return &StartPersonTrackingFuture{Future: future}
 }
 
 func (a *stub) StartProjectVersion(ctx workflow.Context, input *rekognition.StartProjectVersionInput) (*rekognition.StartProjectVersionOutput, error) {
@@ -990,9 +990,9 @@ func (a *stub) StartProjectVersion(ctx workflow.Context, input *rekognition.Star
 	return &output, err
 }
 
-func (a *stub) StartProjectVersionAsync(ctx workflow.Context, input *rekognition.StartProjectVersionInput) *RekognitionStartProjectVersionFuture {
+func (a *stub) StartProjectVersionAsync(ctx workflow.Context, input *rekognition.StartProjectVersionInput) *StartProjectVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.StartProjectVersion", input)
-	return &RekognitionStartProjectVersionFuture{Future: future}
+	return &StartProjectVersionFuture{Future: future}
 }
 
 func (a *stub) StartSegmentDetection(ctx workflow.Context, input *rekognition.StartSegmentDetectionInput) (*rekognition.StartSegmentDetectionOutput, error) {
@@ -1001,9 +1001,9 @@ func (a *stub) StartSegmentDetection(ctx workflow.Context, input *rekognition.St
 	return &output, err
 }
 
-func (a *stub) StartSegmentDetectionAsync(ctx workflow.Context, input *rekognition.StartSegmentDetectionInput) *RekognitionStartSegmentDetectionFuture {
+func (a *stub) StartSegmentDetectionAsync(ctx workflow.Context, input *rekognition.StartSegmentDetectionInput) *StartSegmentDetectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.StartSegmentDetection", input)
-	return &RekognitionStartSegmentDetectionFuture{Future: future}
+	return &StartSegmentDetectionFuture{Future: future}
 }
 
 func (a *stub) StartStreamProcessor(ctx workflow.Context, input *rekognition.StartStreamProcessorInput) (*rekognition.StartStreamProcessorOutput, error) {
@@ -1012,9 +1012,9 @@ func (a *stub) StartStreamProcessor(ctx workflow.Context, input *rekognition.Sta
 	return &output, err
 }
 
-func (a *stub) StartStreamProcessorAsync(ctx workflow.Context, input *rekognition.StartStreamProcessorInput) *RekognitionStartStreamProcessorFuture {
+func (a *stub) StartStreamProcessorAsync(ctx workflow.Context, input *rekognition.StartStreamProcessorInput) *StartStreamProcessorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.StartStreamProcessor", input)
-	return &RekognitionStartStreamProcessorFuture{Future: future}
+	return &StartStreamProcessorFuture{Future: future}
 }
 
 func (a *stub) StartTextDetection(ctx workflow.Context, input *rekognition.StartTextDetectionInput) (*rekognition.StartTextDetectionOutput, error) {
@@ -1023,9 +1023,9 @@ func (a *stub) StartTextDetection(ctx workflow.Context, input *rekognition.Start
 	return &output, err
 }
 
-func (a *stub) StartTextDetectionAsync(ctx workflow.Context, input *rekognition.StartTextDetectionInput) *RekognitionStartTextDetectionFuture {
+func (a *stub) StartTextDetectionAsync(ctx workflow.Context, input *rekognition.StartTextDetectionInput) *StartTextDetectionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.StartTextDetection", input)
-	return &RekognitionStartTextDetectionFuture{Future: future}
+	return &StartTextDetectionFuture{Future: future}
 }
 
 func (a *stub) StopProjectVersion(ctx workflow.Context, input *rekognition.StopProjectVersionInput) (*rekognition.StopProjectVersionOutput, error) {
@@ -1034,9 +1034,9 @@ func (a *stub) StopProjectVersion(ctx workflow.Context, input *rekognition.StopP
 	return &output, err
 }
 
-func (a *stub) StopProjectVersionAsync(ctx workflow.Context, input *rekognition.StopProjectVersionInput) *RekognitionStopProjectVersionFuture {
+func (a *stub) StopProjectVersionAsync(ctx workflow.Context, input *rekognition.StopProjectVersionInput) *StopProjectVersionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.StopProjectVersion", input)
-	return &RekognitionStopProjectVersionFuture{Future: future}
+	return &StopProjectVersionFuture{Future: future}
 }
 
 func (a *stub) StopStreamProcessor(ctx workflow.Context, input *rekognition.StopStreamProcessorInput) (*rekognition.StopStreamProcessorOutput, error) {
@@ -1045,9 +1045,9 @@ func (a *stub) StopStreamProcessor(ctx workflow.Context, input *rekognition.Stop
 	return &output, err
 }
 
-func (a *stub) StopStreamProcessorAsync(ctx workflow.Context, input *rekognition.StopStreamProcessorInput) *RekognitionStopStreamProcessorFuture {
+func (a *stub) StopStreamProcessorAsync(ctx workflow.Context, input *rekognition.StopStreamProcessorInput) *StopStreamProcessorFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.rekognition.StopStreamProcessor", input)
-	return &RekognitionStopStreamProcessorFuture{Future: future}
+	return &StopStreamProcessorFuture{Future: future}
 }
 
 func (a *stub) WaitUntilProjectVersionRunning(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) error {

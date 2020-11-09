@@ -16,40 +16,40 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CancelSigningProfile(ctx workflow.Context, input *signer.CancelSigningProfileInput) (*signer.CancelSigningProfileOutput, error)
-	CancelSigningProfileAsync(ctx workflow.Context, input *signer.CancelSigningProfileInput) *SignerCancelSigningProfileFuture
+	CancelSigningProfileAsync(ctx workflow.Context, input *signer.CancelSigningProfileInput) *CancelSigningProfileFuture
 
 	DescribeSigningJob(ctx workflow.Context, input *signer.DescribeSigningJobInput) (*signer.DescribeSigningJobOutput, error)
-	DescribeSigningJobAsync(ctx workflow.Context, input *signer.DescribeSigningJobInput) *SignerDescribeSigningJobFuture
+	DescribeSigningJobAsync(ctx workflow.Context, input *signer.DescribeSigningJobInput) *DescribeSigningJobFuture
 
 	GetSigningPlatform(ctx workflow.Context, input *signer.GetSigningPlatformInput) (*signer.GetSigningPlatformOutput, error)
-	GetSigningPlatformAsync(ctx workflow.Context, input *signer.GetSigningPlatformInput) *SignerGetSigningPlatformFuture
+	GetSigningPlatformAsync(ctx workflow.Context, input *signer.GetSigningPlatformInput) *GetSigningPlatformFuture
 
 	GetSigningProfile(ctx workflow.Context, input *signer.GetSigningProfileInput) (*signer.GetSigningProfileOutput, error)
-	GetSigningProfileAsync(ctx workflow.Context, input *signer.GetSigningProfileInput) *SignerGetSigningProfileFuture
+	GetSigningProfileAsync(ctx workflow.Context, input *signer.GetSigningProfileInput) *GetSigningProfileFuture
 
 	ListSigningJobs(ctx workflow.Context, input *signer.ListSigningJobsInput) (*signer.ListSigningJobsOutput, error)
-	ListSigningJobsAsync(ctx workflow.Context, input *signer.ListSigningJobsInput) *SignerListSigningJobsFuture
+	ListSigningJobsAsync(ctx workflow.Context, input *signer.ListSigningJobsInput) *ListSigningJobsFuture
 
 	ListSigningPlatforms(ctx workflow.Context, input *signer.ListSigningPlatformsInput) (*signer.ListSigningPlatformsOutput, error)
-	ListSigningPlatformsAsync(ctx workflow.Context, input *signer.ListSigningPlatformsInput) *SignerListSigningPlatformsFuture
+	ListSigningPlatformsAsync(ctx workflow.Context, input *signer.ListSigningPlatformsInput) *ListSigningPlatformsFuture
 
 	ListSigningProfiles(ctx workflow.Context, input *signer.ListSigningProfilesInput) (*signer.ListSigningProfilesOutput, error)
-	ListSigningProfilesAsync(ctx workflow.Context, input *signer.ListSigningProfilesInput) *SignerListSigningProfilesFuture
+	ListSigningProfilesAsync(ctx workflow.Context, input *signer.ListSigningProfilesInput) *ListSigningProfilesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *signer.ListTagsForResourceInput) (*signer.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *signer.ListTagsForResourceInput) *SignerListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *signer.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	PutSigningProfile(ctx workflow.Context, input *signer.PutSigningProfileInput) (*signer.PutSigningProfileOutput, error)
-	PutSigningProfileAsync(ctx workflow.Context, input *signer.PutSigningProfileInput) *SignerPutSigningProfileFuture
+	PutSigningProfileAsync(ctx workflow.Context, input *signer.PutSigningProfileInput) *PutSigningProfileFuture
 
 	StartSigningJob(ctx workflow.Context, input *signer.StartSigningJobInput) (*signer.StartSigningJobOutput, error)
-	StartSigningJobAsync(ctx workflow.Context, input *signer.StartSigningJobInput) *SignerStartSigningJobFuture
+	StartSigningJobAsync(ctx workflow.Context, input *signer.StartSigningJobInput) *StartSigningJobFuture
 
 	TagResource(ctx workflow.Context, input *signer.TagResourceInput) (*signer.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *signer.TagResourceInput) *SignerTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *signer.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *signer.UntagResourceInput) (*signer.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *signer.UntagResourceInput) *SignerUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *signer.UntagResourceInput) *UntagResourceFuture
 
 	WaitUntilSuccessfulSigningJob(ctx workflow.Context, input *signer.DescribeSigningJobInput) error
 	WaitUntilSuccessfulSigningJobAsync(ctx workflow.Context, input *signer.DescribeSigningJobInput) *clients.VoidFuture

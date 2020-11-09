@@ -16,12 +16,12 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type KinesisVideoMediaGetMediaFuture struct {
+type GetMediaFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *KinesisVideoMediaGetMediaFuture) Get(ctx workflow.Context) (*kinesisvideomedia.GetMediaOutput, error) {
+func (r *GetMediaFuture) Get(ctx workflow.Context) (*kinesisvideomedia.GetMediaOutput, error) {
 	var output kinesisvideomedia.GetMediaOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -33,7 +33,7 @@ func (a *stub) GetMedia(ctx workflow.Context, input *kinesisvideomedia.GetMediaI
 	return &output, err
 }
 
-func (a *stub) GetMediaAsync(ctx workflow.Context, input *kinesisvideomedia.GetMediaInput) *KinesisVideoMediaGetMediaFuture {
+func (a *stub) GetMediaAsync(ctx workflow.Context, input *kinesisvideomedia.GetMediaInput) *GetMediaFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.kinesisvideomedia.GetMedia", input)
-	return &KinesisVideoMediaGetMediaFuture{Future: future}
+	return &GetMediaFuture{Future: future}
 }

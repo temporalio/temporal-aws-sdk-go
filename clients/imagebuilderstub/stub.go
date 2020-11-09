@@ -16,463 +16,463 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type ImagebuilderCancelImageCreationFuture struct {
+type CancelImageCreationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderCancelImageCreationFuture) Get(ctx workflow.Context) (*imagebuilder.CancelImageCreationOutput, error) {
+func (r *CancelImageCreationFuture) Get(ctx workflow.Context) (*imagebuilder.CancelImageCreationOutput, error) {
 	var output imagebuilder.CancelImageCreationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderCreateComponentFuture struct {
+type CreateComponentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderCreateComponentFuture) Get(ctx workflow.Context) (*imagebuilder.CreateComponentOutput, error) {
+func (r *CreateComponentFuture) Get(ctx workflow.Context) (*imagebuilder.CreateComponentOutput, error) {
 	var output imagebuilder.CreateComponentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderCreateDistributionConfigurationFuture struct {
+type CreateDistributionConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderCreateDistributionConfigurationFuture) Get(ctx workflow.Context) (*imagebuilder.CreateDistributionConfigurationOutput, error) {
+func (r *CreateDistributionConfigurationFuture) Get(ctx workflow.Context) (*imagebuilder.CreateDistributionConfigurationOutput, error) {
 	var output imagebuilder.CreateDistributionConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderCreateImageFuture struct {
+type CreateImageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderCreateImageFuture) Get(ctx workflow.Context) (*imagebuilder.CreateImageOutput, error) {
+func (r *CreateImageFuture) Get(ctx workflow.Context) (*imagebuilder.CreateImageOutput, error) {
 	var output imagebuilder.CreateImageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderCreateImagePipelineFuture struct {
+type CreateImagePipelineFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderCreateImagePipelineFuture) Get(ctx workflow.Context) (*imagebuilder.CreateImagePipelineOutput, error) {
+func (r *CreateImagePipelineFuture) Get(ctx workflow.Context) (*imagebuilder.CreateImagePipelineOutput, error) {
 	var output imagebuilder.CreateImagePipelineOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderCreateImageRecipeFuture struct {
+type CreateImageRecipeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderCreateImageRecipeFuture) Get(ctx workflow.Context) (*imagebuilder.CreateImageRecipeOutput, error) {
+func (r *CreateImageRecipeFuture) Get(ctx workflow.Context) (*imagebuilder.CreateImageRecipeOutput, error) {
 	var output imagebuilder.CreateImageRecipeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderCreateInfrastructureConfigurationFuture struct {
+type CreateInfrastructureConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderCreateInfrastructureConfigurationFuture) Get(ctx workflow.Context) (*imagebuilder.CreateInfrastructureConfigurationOutput, error) {
+func (r *CreateInfrastructureConfigurationFuture) Get(ctx workflow.Context) (*imagebuilder.CreateInfrastructureConfigurationOutput, error) {
 	var output imagebuilder.CreateInfrastructureConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderDeleteComponentFuture struct {
+type DeleteComponentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderDeleteComponentFuture) Get(ctx workflow.Context) (*imagebuilder.DeleteComponentOutput, error) {
+func (r *DeleteComponentFuture) Get(ctx workflow.Context) (*imagebuilder.DeleteComponentOutput, error) {
 	var output imagebuilder.DeleteComponentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderDeleteDistributionConfigurationFuture struct {
+type DeleteDistributionConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderDeleteDistributionConfigurationFuture) Get(ctx workflow.Context) (*imagebuilder.DeleteDistributionConfigurationOutput, error) {
+func (r *DeleteDistributionConfigurationFuture) Get(ctx workflow.Context) (*imagebuilder.DeleteDistributionConfigurationOutput, error) {
 	var output imagebuilder.DeleteDistributionConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderDeleteImageFuture struct {
+type DeleteImageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderDeleteImageFuture) Get(ctx workflow.Context) (*imagebuilder.DeleteImageOutput, error) {
+func (r *DeleteImageFuture) Get(ctx workflow.Context) (*imagebuilder.DeleteImageOutput, error) {
 	var output imagebuilder.DeleteImageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderDeleteImagePipelineFuture struct {
+type DeleteImagePipelineFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderDeleteImagePipelineFuture) Get(ctx workflow.Context) (*imagebuilder.DeleteImagePipelineOutput, error) {
+func (r *DeleteImagePipelineFuture) Get(ctx workflow.Context) (*imagebuilder.DeleteImagePipelineOutput, error) {
 	var output imagebuilder.DeleteImagePipelineOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderDeleteImageRecipeFuture struct {
+type DeleteImageRecipeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderDeleteImageRecipeFuture) Get(ctx workflow.Context) (*imagebuilder.DeleteImageRecipeOutput, error) {
+func (r *DeleteImageRecipeFuture) Get(ctx workflow.Context) (*imagebuilder.DeleteImageRecipeOutput, error) {
 	var output imagebuilder.DeleteImageRecipeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderDeleteInfrastructureConfigurationFuture struct {
+type DeleteInfrastructureConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderDeleteInfrastructureConfigurationFuture) Get(ctx workflow.Context) (*imagebuilder.DeleteInfrastructureConfigurationOutput, error) {
+func (r *DeleteInfrastructureConfigurationFuture) Get(ctx workflow.Context) (*imagebuilder.DeleteInfrastructureConfigurationOutput, error) {
 	var output imagebuilder.DeleteInfrastructureConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderGetComponentFuture struct {
+type GetComponentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderGetComponentFuture) Get(ctx workflow.Context) (*imagebuilder.GetComponentOutput, error) {
+func (r *GetComponentFuture) Get(ctx workflow.Context) (*imagebuilder.GetComponentOutput, error) {
 	var output imagebuilder.GetComponentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderGetComponentPolicyFuture struct {
+type GetComponentPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderGetComponentPolicyFuture) Get(ctx workflow.Context) (*imagebuilder.GetComponentPolicyOutput, error) {
+func (r *GetComponentPolicyFuture) Get(ctx workflow.Context) (*imagebuilder.GetComponentPolicyOutput, error) {
 	var output imagebuilder.GetComponentPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderGetDistributionConfigurationFuture struct {
+type GetDistributionConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderGetDistributionConfigurationFuture) Get(ctx workflow.Context) (*imagebuilder.GetDistributionConfigurationOutput, error) {
+func (r *GetDistributionConfigurationFuture) Get(ctx workflow.Context) (*imagebuilder.GetDistributionConfigurationOutput, error) {
 	var output imagebuilder.GetDistributionConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderGetImageFuture struct {
+type GetImageFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderGetImageFuture) Get(ctx workflow.Context) (*imagebuilder.GetImageOutput, error) {
+func (r *GetImageFuture) Get(ctx workflow.Context) (*imagebuilder.GetImageOutput, error) {
 	var output imagebuilder.GetImageOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderGetImagePipelineFuture struct {
+type GetImagePipelineFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderGetImagePipelineFuture) Get(ctx workflow.Context) (*imagebuilder.GetImagePipelineOutput, error) {
+func (r *GetImagePipelineFuture) Get(ctx workflow.Context) (*imagebuilder.GetImagePipelineOutput, error) {
 	var output imagebuilder.GetImagePipelineOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderGetImagePolicyFuture struct {
+type GetImagePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderGetImagePolicyFuture) Get(ctx workflow.Context) (*imagebuilder.GetImagePolicyOutput, error) {
+func (r *GetImagePolicyFuture) Get(ctx workflow.Context) (*imagebuilder.GetImagePolicyOutput, error) {
 	var output imagebuilder.GetImagePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderGetImageRecipeFuture struct {
+type GetImageRecipeFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderGetImageRecipeFuture) Get(ctx workflow.Context) (*imagebuilder.GetImageRecipeOutput, error) {
+func (r *GetImageRecipeFuture) Get(ctx workflow.Context) (*imagebuilder.GetImageRecipeOutput, error) {
 	var output imagebuilder.GetImageRecipeOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderGetImageRecipePolicyFuture struct {
+type GetImageRecipePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderGetImageRecipePolicyFuture) Get(ctx workflow.Context) (*imagebuilder.GetImageRecipePolicyOutput, error) {
+func (r *GetImageRecipePolicyFuture) Get(ctx workflow.Context) (*imagebuilder.GetImageRecipePolicyOutput, error) {
 	var output imagebuilder.GetImageRecipePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderGetInfrastructureConfigurationFuture struct {
+type GetInfrastructureConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderGetInfrastructureConfigurationFuture) Get(ctx workflow.Context) (*imagebuilder.GetInfrastructureConfigurationOutput, error) {
+func (r *GetInfrastructureConfigurationFuture) Get(ctx workflow.Context) (*imagebuilder.GetInfrastructureConfigurationOutput, error) {
 	var output imagebuilder.GetInfrastructureConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderImportComponentFuture struct {
+type ImportComponentFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderImportComponentFuture) Get(ctx workflow.Context) (*imagebuilder.ImportComponentOutput, error) {
+func (r *ImportComponentFuture) Get(ctx workflow.Context) (*imagebuilder.ImportComponentOutput, error) {
 	var output imagebuilder.ImportComponentOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderListComponentBuildVersionsFuture struct {
+type ListComponentBuildVersionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderListComponentBuildVersionsFuture) Get(ctx workflow.Context) (*imagebuilder.ListComponentBuildVersionsOutput, error) {
+func (r *ListComponentBuildVersionsFuture) Get(ctx workflow.Context) (*imagebuilder.ListComponentBuildVersionsOutput, error) {
 	var output imagebuilder.ListComponentBuildVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderListComponentsFuture struct {
+type ListComponentsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderListComponentsFuture) Get(ctx workflow.Context) (*imagebuilder.ListComponentsOutput, error) {
+func (r *ListComponentsFuture) Get(ctx workflow.Context) (*imagebuilder.ListComponentsOutput, error) {
 	var output imagebuilder.ListComponentsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderListDistributionConfigurationsFuture struct {
+type ListDistributionConfigurationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderListDistributionConfigurationsFuture) Get(ctx workflow.Context) (*imagebuilder.ListDistributionConfigurationsOutput, error) {
+func (r *ListDistributionConfigurationsFuture) Get(ctx workflow.Context) (*imagebuilder.ListDistributionConfigurationsOutput, error) {
 	var output imagebuilder.ListDistributionConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderListImageBuildVersionsFuture struct {
+type ListImageBuildVersionsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderListImageBuildVersionsFuture) Get(ctx workflow.Context) (*imagebuilder.ListImageBuildVersionsOutput, error) {
+func (r *ListImageBuildVersionsFuture) Get(ctx workflow.Context) (*imagebuilder.ListImageBuildVersionsOutput, error) {
 	var output imagebuilder.ListImageBuildVersionsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderListImagePipelineImagesFuture struct {
+type ListImagePipelineImagesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderListImagePipelineImagesFuture) Get(ctx workflow.Context) (*imagebuilder.ListImagePipelineImagesOutput, error) {
+func (r *ListImagePipelineImagesFuture) Get(ctx workflow.Context) (*imagebuilder.ListImagePipelineImagesOutput, error) {
 	var output imagebuilder.ListImagePipelineImagesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderListImagePipelinesFuture struct {
+type ListImagePipelinesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderListImagePipelinesFuture) Get(ctx workflow.Context) (*imagebuilder.ListImagePipelinesOutput, error) {
+func (r *ListImagePipelinesFuture) Get(ctx workflow.Context) (*imagebuilder.ListImagePipelinesOutput, error) {
 	var output imagebuilder.ListImagePipelinesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderListImageRecipesFuture struct {
+type ListImageRecipesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderListImageRecipesFuture) Get(ctx workflow.Context) (*imagebuilder.ListImageRecipesOutput, error) {
+func (r *ListImageRecipesFuture) Get(ctx workflow.Context) (*imagebuilder.ListImageRecipesOutput, error) {
 	var output imagebuilder.ListImageRecipesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderListImagesFuture struct {
+type ListImagesFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderListImagesFuture) Get(ctx workflow.Context) (*imagebuilder.ListImagesOutput, error) {
+func (r *ListImagesFuture) Get(ctx workflow.Context) (*imagebuilder.ListImagesOutput, error) {
 	var output imagebuilder.ListImagesOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderListInfrastructureConfigurationsFuture struct {
+type ListInfrastructureConfigurationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderListInfrastructureConfigurationsFuture) Get(ctx workflow.Context) (*imagebuilder.ListInfrastructureConfigurationsOutput, error) {
+func (r *ListInfrastructureConfigurationsFuture) Get(ctx workflow.Context) (*imagebuilder.ListInfrastructureConfigurationsOutput, error) {
 	var output imagebuilder.ListInfrastructureConfigurationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderListTagsForResourceFuture struct {
+type ListTagsForResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderListTagsForResourceFuture) Get(ctx workflow.Context) (*imagebuilder.ListTagsForResourceOutput, error) {
+func (r *ListTagsForResourceFuture) Get(ctx workflow.Context) (*imagebuilder.ListTagsForResourceOutput, error) {
 	var output imagebuilder.ListTagsForResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderPutComponentPolicyFuture struct {
+type PutComponentPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderPutComponentPolicyFuture) Get(ctx workflow.Context) (*imagebuilder.PutComponentPolicyOutput, error) {
+func (r *PutComponentPolicyFuture) Get(ctx workflow.Context) (*imagebuilder.PutComponentPolicyOutput, error) {
 	var output imagebuilder.PutComponentPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderPutImagePolicyFuture struct {
+type PutImagePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderPutImagePolicyFuture) Get(ctx workflow.Context) (*imagebuilder.PutImagePolicyOutput, error) {
+func (r *PutImagePolicyFuture) Get(ctx workflow.Context) (*imagebuilder.PutImagePolicyOutput, error) {
 	var output imagebuilder.PutImagePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderPutImageRecipePolicyFuture struct {
+type PutImageRecipePolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderPutImageRecipePolicyFuture) Get(ctx workflow.Context) (*imagebuilder.PutImageRecipePolicyOutput, error) {
+func (r *PutImageRecipePolicyFuture) Get(ctx workflow.Context) (*imagebuilder.PutImageRecipePolicyOutput, error) {
 	var output imagebuilder.PutImageRecipePolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderStartImagePipelineExecutionFuture struct {
+type StartImagePipelineExecutionFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderStartImagePipelineExecutionFuture) Get(ctx workflow.Context) (*imagebuilder.StartImagePipelineExecutionOutput, error) {
+func (r *StartImagePipelineExecutionFuture) Get(ctx workflow.Context) (*imagebuilder.StartImagePipelineExecutionOutput, error) {
 	var output imagebuilder.StartImagePipelineExecutionOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderTagResourceFuture struct {
+type TagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderTagResourceFuture) Get(ctx workflow.Context) (*imagebuilder.TagResourceOutput, error) {
+func (r *TagResourceFuture) Get(ctx workflow.Context) (*imagebuilder.TagResourceOutput, error) {
 	var output imagebuilder.TagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderUntagResourceFuture struct {
+type UntagResourceFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderUntagResourceFuture) Get(ctx workflow.Context) (*imagebuilder.UntagResourceOutput, error) {
+func (r *UntagResourceFuture) Get(ctx workflow.Context) (*imagebuilder.UntagResourceOutput, error) {
 	var output imagebuilder.UntagResourceOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderUpdateDistributionConfigurationFuture struct {
+type UpdateDistributionConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderUpdateDistributionConfigurationFuture) Get(ctx workflow.Context) (*imagebuilder.UpdateDistributionConfigurationOutput, error) {
+func (r *UpdateDistributionConfigurationFuture) Get(ctx workflow.Context) (*imagebuilder.UpdateDistributionConfigurationOutput, error) {
 	var output imagebuilder.UpdateDistributionConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderUpdateImagePipelineFuture struct {
+type UpdateImagePipelineFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderUpdateImagePipelineFuture) Get(ctx workflow.Context) (*imagebuilder.UpdateImagePipelineOutput, error) {
+func (r *UpdateImagePipelineFuture) Get(ctx workflow.Context) (*imagebuilder.UpdateImagePipelineOutput, error) {
 	var output imagebuilder.UpdateImagePipelineOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type ImagebuilderUpdateInfrastructureConfigurationFuture struct {
+type UpdateInfrastructureConfigurationFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *ImagebuilderUpdateInfrastructureConfigurationFuture) Get(ctx workflow.Context) (*imagebuilder.UpdateInfrastructureConfigurationOutput, error) {
+func (r *UpdateInfrastructureConfigurationFuture) Get(ctx workflow.Context) (*imagebuilder.UpdateInfrastructureConfigurationOutput, error) {
 	var output imagebuilder.UpdateInfrastructureConfigurationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -484,9 +484,9 @@ func (a *stub) CancelImageCreation(ctx workflow.Context, input *imagebuilder.Can
 	return &output, err
 }
 
-func (a *stub) CancelImageCreationAsync(ctx workflow.Context, input *imagebuilder.CancelImageCreationInput) *ImagebuilderCancelImageCreationFuture {
+func (a *stub) CancelImageCreationAsync(ctx workflow.Context, input *imagebuilder.CancelImageCreationInput) *CancelImageCreationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CancelImageCreation", input)
-	return &ImagebuilderCancelImageCreationFuture{Future: future}
+	return &CancelImageCreationFuture{Future: future}
 }
 
 func (a *stub) CreateComponent(ctx workflow.Context, input *imagebuilder.CreateComponentInput) (*imagebuilder.CreateComponentOutput, error) {
@@ -495,9 +495,9 @@ func (a *stub) CreateComponent(ctx workflow.Context, input *imagebuilder.CreateC
 	return &output, err
 }
 
-func (a *stub) CreateComponentAsync(ctx workflow.Context, input *imagebuilder.CreateComponentInput) *ImagebuilderCreateComponentFuture {
+func (a *stub) CreateComponentAsync(ctx workflow.Context, input *imagebuilder.CreateComponentInput) *CreateComponentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateComponent", input)
-	return &ImagebuilderCreateComponentFuture{Future: future}
+	return &CreateComponentFuture{Future: future}
 }
 
 func (a *stub) CreateDistributionConfiguration(ctx workflow.Context, input *imagebuilder.CreateDistributionConfigurationInput) (*imagebuilder.CreateDistributionConfigurationOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) CreateDistributionConfiguration(ctx workflow.Context, input *imag
 	return &output, err
 }
 
-func (a *stub) CreateDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.CreateDistributionConfigurationInput) *ImagebuilderCreateDistributionConfigurationFuture {
+func (a *stub) CreateDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.CreateDistributionConfigurationInput) *CreateDistributionConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateDistributionConfiguration", input)
-	return &ImagebuilderCreateDistributionConfigurationFuture{Future: future}
+	return &CreateDistributionConfigurationFuture{Future: future}
 }
 
 func (a *stub) CreateImage(ctx workflow.Context, input *imagebuilder.CreateImageInput) (*imagebuilder.CreateImageOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) CreateImage(ctx workflow.Context, input *imagebuilder.CreateImage
 	return &output, err
 }
 
-func (a *stub) CreateImageAsync(ctx workflow.Context, input *imagebuilder.CreateImageInput) *ImagebuilderCreateImageFuture {
+func (a *stub) CreateImageAsync(ctx workflow.Context, input *imagebuilder.CreateImageInput) *CreateImageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateImage", input)
-	return &ImagebuilderCreateImageFuture{Future: future}
+	return &CreateImageFuture{Future: future}
 }
 
 func (a *stub) CreateImagePipeline(ctx workflow.Context, input *imagebuilder.CreateImagePipelineInput) (*imagebuilder.CreateImagePipelineOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) CreateImagePipeline(ctx workflow.Context, input *imagebuilder.Cre
 	return &output, err
 }
 
-func (a *stub) CreateImagePipelineAsync(ctx workflow.Context, input *imagebuilder.CreateImagePipelineInput) *ImagebuilderCreateImagePipelineFuture {
+func (a *stub) CreateImagePipelineAsync(ctx workflow.Context, input *imagebuilder.CreateImagePipelineInput) *CreateImagePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateImagePipeline", input)
-	return &ImagebuilderCreateImagePipelineFuture{Future: future}
+	return &CreateImagePipelineFuture{Future: future}
 }
 
 func (a *stub) CreateImageRecipe(ctx workflow.Context, input *imagebuilder.CreateImageRecipeInput) (*imagebuilder.CreateImageRecipeOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) CreateImageRecipe(ctx workflow.Context, input *imagebuilder.Creat
 	return &output, err
 }
 
-func (a *stub) CreateImageRecipeAsync(ctx workflow.Context, input *imagebuilder.CreateImageRecipeInput) *ImagebuilderCreateImageRecipeFuture {
+func (a *stub) CreateImageRecipeAsync(ctx workflow.Context, input *imagebuilder.CreateImageRecipeInput) *CreateImageRecipeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateImageRecipe", input)
-	return &ImagebuilderCreateImageRecipeFuture{Future: future}
+	return &CreateImageRecipeFuture{Future: future}
 }
 
 func (a *stub) CreateInfrastructureConfiguration(ctx workflow.Context, input *imagebuilder.CreateInfrastructureConfigurationInput) (*imagebuilder.CreateInfrastructureConfigurationOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) CreateInfrastructureConfiguration(ctx workflow.Context, input *im
 	return &output, err
 }
 
-func (a *stub) CreateInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.CreateInfrastructureConfigurationInput) *ImagebuilderCreateInfrastructureConfigurationFuture {
+func (a *stub) CreateInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.CreateInfrastructureConfigurationInput) *CreateInfrastructureConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateInfrastructureConfiguration", input)
-	return &ImagebuilderCreateInfrastructureConfigurationFuture{Future: future}
+	return &CreateInfrastructureConfigurationFuture{Future: future}
 }
 
 func (a *stub) DeleteComponent(ctx workflow.Context, input *imagebuilder.DeleteComponentInput) (*imagebuilder.DeleteComponentOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) DeleteComponent(ctx workflow.Context, input *imagebuilder.DeleteC
 	return &output, err
 }
 
-func (a *stub) DeleteComponentAsync(ctx workflow.Context, input *imagebuilder.DeleteComponentInput) *ImagebuilderDeleteComponentFuture {
+func (a *stub) DeleteComponentAsync(ctx workflow.Context, input *imagebuilder.DeleteComponentInput) *DeleteComponentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteComponent", input)
-	return &ImagebuilderDeleteComponentFuture{Future: future}
+	return &DeleteComponentFuture{Future: future}
 }
 
 func (a *stub) DeleteDistributionConfiguration(ctx workflow.Context, input *imagebuilder.DeleteDistributionConfigurationInput) (*imagebuilder.DeleteDistributionConfigurationOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) DeleteDistributionConfiguration(ctx workflow.Context, input *imag
 	return &output, err
 }
 
-func (a *stub) DeleteDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.DeleteDistributionConfigurationInput) *ImagebuilderDeleteDistributionConfigurationFuture {
+func (a *stub) DeleteDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.DeleteDistributionConfigurationInput) *DeleteDistributionConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteDistributionConfiguration", input)
-	return &ImagebuilderDeleteDistributionConfigurationFuture{Future: future}
+	return &DeleteDistributionConfigurationFuture{Future: future}
 }
 
 func (a *stub) DeleteImage(ctx workflow.Context, input *imagebuilder.DeleteImageInput) (*imagebuilder.DeleteImageOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) DeleteImage(ctx workflow.Context, input *imagebuilder.DeleteImage
 	return &output, err
 }
 
-func (a *stub) DeleteImageAsync(ctx workflow.Context, input *imagebuilder.DeleteImageInput) *ImagebuilderDeleteImageFuture {
+func (a *stub) DeleteImageAsync(ctx workflow.Context, input *imagebuilder.DeleteImageInput) *DeleteImageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteImage", input)
-	return &ImagebuilderDeleteImageFuture{Future: future}
+	return &DeleteImageFuture{Future: future}
 }
 
 func (a *stub) DeleteImagePipeline(ctx workflow.Context, input *imagebuilder.DeleteImagePipelineInput) (*imagebuilder.DeleteImagePipelineOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) DeleteImagePipeline(ctx workflow.Context, input *imagebuilder.Del
 	return &output, err
 }
 
-func (a *stub) DeleteImagePipelineAsync(ctx workflow.Context, input *imagebuilder.DeleteImagePipelineInput) *ImagebuilderDeleteImagePipelineFuture {
+func (a *stub) DeleteImagePipelineAsync(ctx workflow.Context, input *imagebuilder.DeleteImagePipelineInput) *DeleteImagePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteImagePipeline", input)
-	return &ImagebuilderDeleteImagePipelineFuture{Future: future}
+	return &DeleteImagePipelineFuture{Future: future}
 }
 
 func (a *stub) DeleteImageRecipe(ctx workflow.Context, input *imagebuilder.DeleteImageRecipeInput) (*imagebuilder.DeleteImageRecipeOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) DeleteImageRecipe(ctx workflow.Context, input *imagebuilder.Delet
 	return &output, err
 }
 
-func (a *stub) DeleteImageRecipeAsync(ctx workflow.Context, input *imagebuilder.DeleteImageRecipeInput) *ImagebuilderDeleteImageRecipeFuture {
+func (a *stub) DeleteImageRecipeAsync(ctx workflow.Context, input *imagebuilder.DeleteImageRecipeInput) *DeleteImageRecipeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteImageRecipe", input)
-	return &ImagebuilderDeleteImageRecipeFuture{Future: future}
+	return &DeleteImageRecipeFuture{Future: future}
 }
 
 func (a *stub) DeleteInfrastructureConfiguration(ctx workflow.Context, input *imagebuilder.DeleteInfrastructureConfigurationInput) (*imagebuilder.DeleteInfrastructureConfigurationOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) DeleteInfrastructureConfiguration(ctx workflow.Context, input *im
 	return &output, err
 }
 
-func (a *stub) DeleteInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.DeleteInfrastructureConfigurationInput) *ImagebuilderDeleteInfrastructureConfigurationFuture {
+func (a *stub) DeleteInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.DeleteInfrastructureConfigurationInput) *DeleteInfrastructureConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteInfrastructureConfiguration", input)
-	return &ImagebuilderDeleteInfrastructureConfigurationFuture{Future: future}
+	return &DeleteInfrastructureConfigurationFuture{Future: future}
 }
 
 func (a *stub) GetComponent(ctx workflow.Context, input *imagebuilder.GetComponentInput) (*imagebuilder.GetComponentOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) GetComponent(ctx workflow.Context, input *imagebuilder.GetCompone
 	return &output, err
 }
 
-func (a *stub) GetComponentAsync(ctx workflow.Context, input *imagebuilder.GetComponentInput) *ImagebuilderGetComponentFuture {
+func (a *stub) GetComponentAsync(ctx workflow.Context, input *imagebuilder.GetComponentInput) *GetComponentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetComponent", input)
-	return &ImagebuilderGetComponentFuture{Future: future}
+	return &GetComponentFuture{Future: future}
 }
 
 func (a *stub) GetComponentPolicy(ctx workflow.Context, input *imagebuilder.GetComponentPolicyInput) (*imagebuilder.GetComponentPolicyOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) GetComponentPolicy(ctx workflow.Context, input *imagebuilder.GetC
 	return &output, err
 }
 
-func (a *stub) GetComponentPolicyAsync(ctx workflow.Context, input *imagebuilder.GetComponentPolicyInput) *ImagebuilderGetComponentPolicyFuture {
+func (a *stub) GetComponentPolicyAsync(ctx workflow.Context, input *imagebuilder.GetComponentPolicyInput) *GetComponentPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetComponentPolicy", input)
-	return &ImagebuilderGetComponentPolicyFuture{Future: future}
+	return &GetComponentPolicyFuture{Future: future}
 }
 
 func (a *stub) GetDistributionConfiguration(ctx workflow.Context, input *imagebuilder.GetDistributionConfigurationInput) (*imagebuilder.GetDistributionConfigurationOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) GetDistributionConfiguration(ctx workflow.Context, input *imagebu
 	return &output, err
 }
 
-func (a *stub) GetDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.GetDistributionConfigurationInput) *ImagebuilderGetDistributionConfigurationFuture {
+func (a *stub) GetDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.GetDistributionConfigurationInput) *GetDistributionConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetDistributionConfiguration", input)
-	return &ImagebuilderGetDistributionConfigurationFuture{Future: future}
+	return &GetDistributionConfigurationFuture{Future: future}
 }
 
 func (a *stub) GetImage(ctx workflow.Context, input *imagebuilder.GetImageInput) (*imagebuilder.GetImageOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) GetImage(ctx workflow.Context, input *imagebuilder.GetImageInput)
 	return &output, err
 }
 
-func (a *stub) GetImageAsync(ctx workflow.Context, input *imagebuilder.GetImageInput) *ImagebuilderGetImageFuture {
+func (a *stub) GetImageAsync(ctx workflow.Context, input *imagebuilder.GetImageInput) *GetImageFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetImage", input)
-	return &ImagebuilderGetImageFuture{Future: future}
+	return &GetImageFuture{Future: future}
 }
 
 func (a *stub) GetImagePipeline(ctx workflow.Context, input *imagebuilder.GetImagePipelineInput) (*imagebuilder.GetImagePipelineOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) GetImagePipeline(ctx workflow.Context, input *imagebuilder.GetIma
 	return &output, err
 }
 
-func (a *stub) GetImagePipelineAsync(ctx workflow.Context, input *imagebuilder.GetImagePipelineInput) *ImagebuilderGetImagePipelineFuture {
+func (a *stub) GetImagePipelineAsync(ctx workflow.Context, input *imagebuilder.GetImagePipelineInput) *GetImagePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetImagePipeline", input)
-	return &ImagebuilderGetImagePipelineFuture{Future: future}
+	return &GetImagePipelineFuture{Future: future}
 }
 
 func (a *stub) GetImagePolicy(ctx workflow.Context, input *imagebuilder.GetImagePolicyInput) (*imagebuilder.GetImagePolicyOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) GetImagePolicy(ctx workflow.Context, input *imagebuilder.GetImage
 	return &output, err
 }
 
-func (a *stub) GetImagePolicyAsync(ctx workflow.Context, input *imagebuilder.GetImagePolicyInput) *ImagebuilderGetImagePolicyFuture {
+func (a *stub) GetImagePolicyAsync(ctx workflow.Context, input *imagebuilder.GetImagePolicyInput) *GetImagePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetImagePolicy", input)
-	return &ImagebuilderGetImagePolicyFuture{Future: future}
+	return &GetImagePolicyFuture{Future: future}
 }
 
 func (a *stub) GetImageRecipe(ctx workflow.Context, input *imagebuilder.GetImageRecipeInput) (*imagebuilder.GetImageRecipeOutput, error) {
@@ -693,9 +693,9 @@ func (a *stub) GetImageRecipe(ctx workflow.Context, input *imagebuilder.GetImage
 	return &output, err
 }
 
-func (a *stub) GetImageRecipeAsync(ctx workflow.Context, input *imagebuilder.GetImageRecipeInput) *ImagebuilderGetImageRecipeFuture {
+func (a *stub) GetImageRecipeAsync(ctx workflow.Context, input *imagebuilder.GetImageRecipeInput) *GetImageRecipeFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetImageRecipe", input)
-	return &ImagebuilderGetImageRecipeFuture{Future: future}
+	return &GetImageRecipeFuture{Future: future}
 }
 
 func (a *stub) GetImageRecipePolicy(ctx workflow.Context, input *imagebuilder.GetImageRecipePolicyInput) (*imagebuilder.GetImageRecipePolicyOutput, error) {
@@ -704,9 +704,9 @@ func (a *stub) GetImageRecipePolicy(ctx workflow.Context, input *imagebuilder.Ge
 	return &output, err
 }
 
-func (a *stub) GetImageRecipePolicyAsync(ctx workflow.Context, input *imagebuilder.GetImageRecipePolicyInput) *ImagebuilderGetImageRecipePolicyFuture {
+func (a *stub) GetImageRecipePolicyAsync(ctx workflow.Context, input *imagebuilder.GetImageRecipePolicyInput) *GetImageRecipePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetImageRecipePolicy", input)
-	return &ImagebuilderGetImageRecipePolicyFuture{Future: future}
+	return &GetImageRecipePolicyFuture{Future: future}
 }
 
 func (a *stub) GetInfrastructureConfiguration(ctx workflow.Context, input *imagebuilder.GetInfrastructureConfigurationInput) (*imagebuilder.GetInfrastructureConfigurationOutput, error) {
@@ -715,9 +715,9 @@ func (a *stub) GetInfrastructureConfiguration(ctx workflow.Context, input *image
 	return &output, err
 }
 
-func (a *stub) GetInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.GetInfrastructureConfigurationInput) *ImagebuilderGetInfrastructureConfigurationFuture {
+func (a *stub) GetInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.GetInfrastructureConfigurationInput) *GetInfrastructureConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetInfrastructureConfiguration", input)
-	return &ImagebuilderGetInfrastructureConfigurationFuture{Future: future}
+	return &GetInfrastructureConfigurationFuture{Future: future}
 }
 
 func (a *stub) ImportComponent(ctx workflow.Context, input *imagebuilder.ImportComponentInput) (*imagebuilder.ImportComponentOutput, error) {
@@ -726,9 +726,9 @@ func (a *stub) ImportComponent(ctx workflow.Context, input *imagebuilder.ImportC
 	return &output, err
 }
 
-func (a *stub) ImportComponentAsync(ctx workflow.Context, input *imagebuilder.ImportComponentInput) *ImagebuilderImportComponentFuture {
+func (a *stub) ImportComponentAsync(ctx workflow.Context, input *imagebuilder.ImportComponentInput) *ImportComponentFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ImportComponent", input)
-	return &ImagebuilderImportComponentFuture{Future: future}
+	return &ImportComponentFuture{Future: future}
 }
 
 func (a *stub) ListComponentBuildVersions(ctx workflow.Context, input *imagebuilder.ListComponentBuildVersionsInput) (*imagebuilder.ListComponentBuildVersionsOutput, error) {
@@ -737,9 +737,9 @@ func (a *stub) ListComponentBuildVersions(ctx workflow.Context, input *imagebuil
 	return &output, err
 }
 
-func (a *stub) ListComponentBuildVersionsAsync(ctx workflow.Context, input *imagebuilder.ListComponentBuildVersionsInput) *ImagebuilderListComponentBuildVersionsFuture {
+func (a *stub) ListComponentBuildVersionsAsync(ctx workflow.Context, input *imagebuilder.ListComponentBuildVersionsInput) *ListComponentBuildVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListComponentBuildVersions", input)
-	return &ImagebuilderListComponentBuildVersionsFuture{Future: future}
+	return &ListComponentBuildVersionsFuture{Future: future}
 }
 
 func (a *stub) ListComponents(ctx workflow.Context, input *imagebuilder.ListComponentsInput) (*imagebuilder.ListComponentsOutput, error) {
@@ -748,9 +748,9 @@ func (a *stub) ListComponents(ctx workflow.Context, input *imagebuilder.ListComp
 	return &output, err
 }
 
-func (a *stub) ListComponentsAsync(ctx workflow.Context, input *imagebuilder.ListComponentsInput) *ImagebuilderListComponentsFuture {
+func (a *stub) ListComponentsAsync(ctx workflow.Context, input *imagebuilder.ListComponentsInput) *ListComponentsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListComponents", input)
-	return &ImagebuilderListComponentsFuture{Future: future}
+	return &ListComponentsFuture{Future: future}
 }
 
 func (a *stub) ListDistributionConfigurations(ctx workflow.Context, input *imagebuilder.ListDistributionConfigurationsInput) (*imagebuilder.ListDistributionConfigurationsOutput, error) {
@@ -759,9 +759,9 @@ func (a *stub) ListDistributionConfigurations(ctx workflow.Context, input *image
 	return &output, err
 }
 
-func (a *stub) ListDistributionConfigurationsAsync(ctx workflow.Context, input *imagebuilder.ListDistributionConfigurationsInput) *ImagebuilderListDistributionConfigurationsFuture {
+func (a *stub) ListDistributionConfigurationsAsync(ctx workflow.Context, input *imagebuilder.ListDistributionConfigurationsInput) *ListDistributionConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListDistributionConfigurations", input)
-	return &ImagebuilderListDistributionConfigurationsFuture{Future: future}
+	return &ListDistributionConfigurationsFuture{Future: future}
 }
 
 func (a *stub) ListImageBuildVersions(ctx workflow.Context, input *imagebuilder.ListImageBuildVersionsInput) (*imagebuilder.ListImageBuildVersionsOutput, error) {
@@ -770,9 +770,9 @@ func (a *stub) ListImageBuildVersions(ctx workflow.Context, input *imagebuilder.
 	return &output, err
 }
 
-func (a *stub) ListImageBuildVersionsAsync(ctx workflow.Context, input *imagebuilder.ListImageBuildVersionsInput) *ImagebuilderListImageBuildVersionsFuture {
+func (a *stub) ListImageBuildVersionsAsync(ctx workflow.Context, input *imagebuilder.ListImageBuildVersionsInput) *ListImageBuildVersionsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListImageBuildVersions", input)
-	return &ImagebuilderListImageBuildVersionsFuture{Future: future}
+	return &ListImageBuildVersionsFuture{Future: future}
 }
 
 func (a *stub) ListImagePipelineImages(ctx workflow.Context, input *imagebuilder.ListImagePipelineImagesInput) (*imagebuilder.ListImagePipelineImagesOutput, error) {
@@ -781,9 +781,9 @@ func (a *stub) ListImagePipelineImages(ctx workflow.Context, input *imagebuilder
 	return &output, err
 }
 
-func (a *stub) ListImagePipelineImagesAsync(ctx workflow.Context, input *imagebuilder.ListImagePipelineImagesInput) *ImagebuilderListImagePipelineImagesFuture {
+func (a *stub) ListImagePipelineImagesAsync(ctx workflow.Context, input *imagebuilder.ListImagePipelineImagesInput) *ListImagePipelineImagesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListImagePipelineImages", input)
-	return &ImagebuilderListImagePipelineImagesFuture{Future: future}
+	return &ListImagePipelineImagesFuture{Future: future}
 }
 
 func (a *stub) ListImagePipelines(ctx workflow.Context, input *imagebuilder.ListImagePipelinesInput) (*imagebuilder.ListImagePipelinesOutput, error) {
@@ -792,9 +792,9 @@ func (a *stub) ListImagePipelines(ctx workflow.Context, input *imagebuilder.List
 	return &output, err
 }
 
-func (a *stub) ListImagePipelinesAsync(ctx workflow.Context, input *imagebuilder.ListImagePipelinesInput) *ImagebuilderListImagePipelinesFuture {
+func (a *stub) ListImagePipelinesAsync(ctx workflow.Context, input *imagebuilder.ListImagePipelinesInput) *ListImagePipelinesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListImagePipelines", input)
-	return &ImagebuilderListImagePipelinesFuture{Future: future}
+	return &ListImagePipelinesFuture{Future: future}
 }
 
 func (a *stub) ListImageRecipes(ctx workflow.Context, input *imagebuilder.ListImageRecipesInput) (*imagebuilder.ListImageRecipesOutput, error) {
@@ -803,9 +803,9 @@ func (a *stub) ListImageRecipes(ctx workflow.Context, input *imagebuilder.ListIm
 	return &output, err
 }
 
-func (a *stub) ListImageRecipesAsync(ctx workflow.Context, input *imagebuilder.ListImageRecipesInput) *ImagebuilderListImageRecipesFuture {
+func (a *stub) ListImageRecipesAsync(ctx workflow.Context, input *imagebuilder.ListImageRecipesInput) *ListImageRecipesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListImageRecipes", input)
-	return &ImagebuilderListImageRecipesFuture{Future: future}
+	return &ListImageRecipesFuture{Future: future}
 }
 
 func (a *stub) ListImages(ctx workflow.Context, input *imagebuilder.ListImagesInput) (*imagebuilder.ListImagesOutput, error) {
@@ -814,9 +814,9 @@ func (a *stub) ListImages(ctx workflow.Context, input *imagebuilder.ListImagesIn
 	return &output, err
 }
 
-func (a *stub) ListImagesAsync(ctx workflow.Context, input *imagebuilder.ListImagesInput) *ImagebuilderListImagesFuture {
+func (a *stub) ListImagesAsync(ctx workflow.Context, input *imagebuilder.ListImagesInput) *ListImagesFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListImages", input)
-	return &ImagebuilderListImagesFuture{Future: future}
+	return &ListImagesFuture{Future: future}
 }
 
 func (a *stub) ListInfrastructureConfigurations(ctx workflow.Context, input *imagebuilder.ListInfrastructureConfigurationsInput) (*imagebuilder.ListInfrastructureConfigurationsOutput, error) {
@@ -825,9 +825,9 @@ func (a *stub) ListInfrastructureConfigurations(ctx workflow.Context, input *ima
 	return &output, err
 }
 
-func (a *stub) ListInfrastructureConfigurationsAsync(ctx workflow.Context, input *imagebuilder.ListInfrastructureConfigurationsInput) *ImagebuilderListInfrastructureConfigurationsFuture {
+func (a *stub) ListInfrastructureConfigurationsAsync(ctx workflow.Context, input *imagebuilder.ListInfrastructureConfigurationsInput) *ListInfrastructureConfigurationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListInfrastructureConfigurations", input)
-	return &ImagebuilderListInfrastructureConfigurationsFuture{Future: future}
+	return &ListInfrastructureConfigurationsFuture{Future: future}
 }
 
 func (a *stub) ListTagsForResource(ctx workflow.Context, input *imagebuilder.ListTagsForResourceInput) (*imagebuilder.ListTagsForResourceOutput, error) {
@@ -836,9 +836,9 @@ func (a *stub) ListTagsForResource(ctx workflow.Context, input *imagebuilder.Lis
 	return &output, err
 }
 
-func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *imagebuilder.ListTagsForResourceInput) *ImagebuilderListTagsForResourceFuture {
+func (a *stub) ListTagsForResourceAsync(ctx workflow.Context, input *imagebuilder.ListTagsForResourceInput) *ListTagsForResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListTagsForResource", input)
-	return &ImagebuilderListTagsForResourceFuture{Future: future}
+	return &ListTagsForResourceFuture{Future: future}
 }
 
 func (a *stub) PutComponentPolicy(ctx workflow.Context, input *imagebuilder.PutComponentPolicyInput) (*imagebuilder.PutComponentPolicyOutput, error) {
@@ -847,9 +847,9 @@ func (a *stub) PutComponentPolicy(ctx workflow.Context, input *imagebuilder.PutC
 	return &output, err
 }
 
-func (a *stub) PutComponentPolicyAsync(ctx workflow.Context, input *imagebuilder.PutComponentPolicyInput) *ImagebuilderPutComponentPolicyFuture {
+func (a *stub) PutComponentPolicyAsync(ctx workflow.Context, input *imagebuilder.PutComponentPolicyInput) *PutComponentPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.PutComponentPolicy", input)
-	return &ImagebuilderPutComponentPolicyFuture{Future: future}
+	return &PutComponentPolicyFuture{Future: future}
 }
 
 func (a *stub) PutImagePolicy(ctx workflow.Context, input *imagebuilder.PutImagePolicyInput) (*imagebuilder.PutImagePolicyOutput, error) {
@@ -858,9 +858,9 @@ func (a *stub) PutImagePolicy(ctx workflow.Context, input *imagebuilder.PutImage
 	return &output, err
 }
 
-func (a *stub) PutImagePolicyAsync(ctx workflow.Context, input *imagebuilder.PutImagePolicyInput) *ImagebuilderPutImagePolicyFuture {
+func (a *stub) PutImagePolicyAsync(ctx workflow.Context, input *imagebuilder.PutImagePolicyInput) *PutImagePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.PutImagePolicy", input)
-	return &ImagebuilderPutImagePolicyFuture{Future: future}
+	return &PutImagePolicyFuture{Future: future}
 }
 
 func (a *stub) PutImageRecipePolicy(ctx workflow.Context, input *imagebuilder.PutImageRecipePolicyInput) (*imagebuilder.PutImageRecipePolicyOutput, error) {
@@ -869,9 +869,9 @@ func (a *stub) PutImageRecipePolicy(ctx workflow.Context, input *imagebuilder.Pu
 	return &output, err
 }
 
-func (a *stub) PutImageRecipePolicyAsync(ctx workflow.Context, input *imagebuilder.PutImageRecipePolicyInput) *ImagebuilderPutImageRecipePolicyFuture {
+func (a *stub) PutImageRecipePolicyAsync(ctx workflow.Context, input *imagebuilder.PutImageRecipePolicyInput) *PutImageRecipePolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.PutImageRecipePolicy", input)
-	return &ImagebuilderPutImageRecipePolicyFuture{Future: future}
+	return &PutImageRecipePolicyFuture{Future: future}
 }
 
 func (a *stub) StartImagePipelineExecution(ctx workflow.Context, input *imagebuilder.StartImagePipelineExecutionInput) (*imagebuilder.StartImagePipelineExecutionOutput, error) {
@@ -880,9 +880,9 @@ func (a *stub) StartImagePipelineExecution(ctx workflow.Context, input *imagebui
 	return &output, err
 }
 
-func (a *stub) StartImagePipelineExecutionAsync(ctx workflow.Context, input *imagebuilder.StartImagePipelineExecutionInput) *ImagebuilderStartImagePipelineExecutionFuture {
+func (a *stub) StartImagePipelineExecutionAsync(ctx workflow.Context, input *imagebuilder.StartImagePipelineExecutionInput) *StartImagePipelineExecutionFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.StartImagePipelineExecution", input)
-	return &ImagebuilderStartImagePipelineExecutionFuture{Future: future}
+	return &StartImagePipelineExecutionFuture{Future: future}
 }
 
 func (a *stub) TagResource(ctx workflow.Context, input *imagebuilder.TagResourceInput) (*imagebuilder.TagResourceOutput, error) {
@@ -891,9 +891,9 @@ func (a *stub) TagResource(ctx workflow.Context, input *imagebuilder.TagResource
 	return &output, err
 }
 
-func (a *stub) TagResourceAsync(ctx workflow.Context, input *imagebuilder.TagResourceInput) *ImagebuilderTagResourceFuture {
+func (a *stub) TagResourceAsync(ctx workflow.Context, input *imagebuilder.TagResourceInput) *TagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.TagResource", input)
-	return &ImagebuilderTagResourceFuture{Future: future}
+	return &TagResourceFuture{Future: future}
 }
 
 func (a *stub) UntagResource(ctx workflow.Context, input *imagebuilder.UntagResourceInput) (*imagebuilder.UntagResourceOutput, error) {
@@ -902,9 +902,9 @@ func (a *stub) UntagResource(ctx workflow.Context, input *imagebuilder.UntagReso
 	return &output, err
 }
 
-func (a *stub) UntagResourceAsync(ctx workflow.Context, input *imagebuilder.UntagResourceInput) *ImagebuilderUntagResourceFuture {
+func (a *stub) UntagResourceAsync(ctx workflow.Context, input *imagebuilder.UntagResourceInput) *UntagResourceFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.UntagResource", input)
-	return &ImagebuilderUntagResourceFuture{Future: future}
+	return &UntagResourceFuture{Future: future}
 }
 
 func (a *stub) UpdateDistributionConfiguration(ctx workflow.Context, input *imagebuilder.UpdateDistributionConfigurationInput) (*imagebuilder.UpdateDistributionConfigurationOutput, error) {
@@ -913,9 +913,9 @@ func (a *stub) UpdateDistributionConfiguration(ctx workflow.Context, input *imag
 	return &output, err
 }
 
-func (a *stub) UpdateDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.UpdateDistributionConfigurationInput) *ImagebuilderUpdateDistributionConfigurationFuture {
+func (a *stub) UpdateDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.UpdateDistributionConfigurationInput) *UpdateDistributionConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.UpdateDistributionConfiguration", input)
-	return &ImagebuilderUpdateDistributionConfigurationFuture{Future: future}
+	return &UpdateDistributionConfigurationFuture{Future: future}
 }
 
 func (a *stub) UpdateImagePipeline(ctx workflow.Context, input *imagebuilder.UpdateImagePipelineInput) (*imagebuilder.UpdateImagePipelineOutput, error) {
@@ -924,9 +924,9 @@ func (a *stub) UpdateImagePipeline(ctx workflow.Context, input *imagebuilder.Upd
 	return &output, err
 }
 
-func (a *stub) UpdateImagePipelineAsync(ctx workflow.Context, input *imagebuilder.UpdateImagePipelineInput) *ImagebuilderUpdateImagePipelineFuture {
+func (a *stub) UpdateImagePipelineAsync(ctx workflow.Context, input *imagebuilder.UpdateImagePipelineInput) *UpdateImagePipelineFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.UpdateImagePipeline", input)
-	return &ImagebuilderUpdateImagePipelineFuture{Future: future}
+	return &UpdateImagePipelineFuture{Future: future}
 }
 
 func (a *stub) UpdateInfrastructureConfiguration(ctx workflow.Context, input *imagebuilder.UpdateInfrastructureConfigurationInput) (*imagebuilder.UpdateInfrastructureConfigurationOutput, error) {
@@ -935,7 +935,7 @@ func (a *stub) UpdateInfrastructureConfiguration(ctx workflow.Context, input *im
 	return &output, err
 }
 
-func (a *stub) UpdateInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.UpdateInfrastructureConfigurationInput) *ImagebuilderUpdateInfrastructureConfigurationFuture {
+func (a *stub) UpdateInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.UpdateInfrastructureConfigurationInput) *UpdateInfrastructureConfigurationFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.UpdateInfrastructureConfiguration", input)
-	return &ImagebuilderUpdateInfrastructureConfigurationFuture{Future: future}
+	return &UpdateInfrastructureConfigurationFuture{Future: future}
 }

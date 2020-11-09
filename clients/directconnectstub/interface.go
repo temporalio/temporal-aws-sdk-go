@@ -16,172 +16,172 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AcceptDirectConnectGatewayAssociationProposal(ctx workflow.Context, input *directconnect.AcceptDirectConnectGatewayAssociationProposalInput) (*directconnect.AcceptDirectConnectGatewayAssociationProposalOutput, error)
-	AcceptDirectConnectGatewayAssociationProposalAsync(ctx workflow.Context, input *directconnect.AcceptDirectConnectGatewayAssociationProposalInput) *DirectConnectAcceptDirectConnectGatewayAssociationProposalFuture
+	AcceptDirectConnectGatewayAssociationProposalAsync(ctx workflow.Context, input *directconnect.AcceptDirectConnectGatewayAssociationProposalInput) *AcceptDirectConnectGatewayAssociationProposalFuture
 
 	AllocateConnectionOnInterconnect(ctx workflow.Context, input *directconnect.AllocateConnectionOnInterconnectInput) (*directconnect.Connection, error)
-	AllocateConnectionOnInterconnectAsync(ctx workflow.Context, input *directconnect.AllocateConnectionOnInterconnectInput) *DirectConnectAllocateConnectionOnInterconnectFuture
+	AllocateConnectionOnInterconnectAsync(ctx workflow.Context, input *directconnect.AllocateConnectionOnInterconnectInput) *AllocateConnectionOnInterconnectFuture
 
 	AllocateHostedConnection(ctx workflow.Context, input *directconnect.AllocateHostedConnectionInput) (*directconnect.Connection, error)
-	AllocateHostedConnectionAsync(ctx workflow.Context, input *directconnect.AllocateHostedConnectionInput) *DirectConnectAllocateHostedConnectionFuture
+	AllocateHostedConnectionAsync(ctx workflow.Context, input *directconnect.AllocateHostedConnectionInput) *AllocateHostedConnectionFuture
 
 	AllocatePrivateVirtualInterface(ctx workflow.Context, input *directconnect.AllocatePrivateVirtualInterfaceInput) (*directconnect.VirtualInterface, error)
-	AllocatePrivateVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.AllocatePrivateVirtualInterfaceInput) *DirectConnectAllocatePrivateVirtualInterfaceFuture
+	AllocatePrivateVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.AllocatePrivateVirtualInterfaceInput) *AllocatePrivateVirtualInterfaceFuture
 
 	AllocatePublicVirtualInterface(ctx workflow.Context, input *directconnect.AllocatePublicVirtualInterfaceInput) (*directconnect.VirtualInterface, error)
-	AllocatePublicVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.AllocatePublicVirtualInterfaceInput) *DirectConnectAllocatePublicVirtualInterfaceFuture
+	AllocatePublicVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.AllocatePublicVirtualInterfaceInput) *AllocatePublicVirtualInterfaceFuture
 
 	AllocateTransitVirtualInterface(ctx workflow.Context, input *directconnect.AllocateTransitVirtualInterfaceInput) (*directconnect.AllocateTransitVirtualInterfaceOutput, error)
-	AllocateTransitVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.AllocateTransitVirtualInterfaceInput) *DirectConnectAllocateTransitVirtualInterfaceFuture
+	AllocateTransitVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.AllocateTransitVirtualInterfaceInput) *AllocateTransitVirtualInterfaceFuture
 
 	AssociateConnectionWithLag(ctx workflow.Context, input *directconnect.AssociateConnectionWithLagInput) (*directconnect.Connection, error)
-	AssociateConnectionWithLagAsync(ctx workflow.Context, input *directconnect.AssociateConnectionWithLagInput) *DirectConnectAssociateConnectionWithLagFuture
+	AssociateConnectionWithLagAsync(ctx workflow.Context, input *directconnect.AssociateConnectionWithLagInput) *AssociateConnectionWithLagFuture
 
 	AssociateHostedConnection(ctx workflow.Context, input *directconnect.AssociateHostedConnectionInput) (*directconnect.Connection, error)
-	AssociateHostedConnectionAsync(ctx workflow.Context, input *directconnect.AssociateHostedConnectionInput) *DirectConnectAssociateHostedConnectionFuture
+	AssociateHostedConnectionAsync(ctx workflow.Context, input *directconnect.AssociateHostedConnectionInput) *AssociateHostedConnectionFuture
 
 	AssociateVirtualInterface(ctx workflow.Context, input *directconnect.AssociateVirtualInterfaceInput) (*directconnect.VirtualInterface, error)
-	AssociateVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.AssociateVirtualInterfaceInput) *DirectConnectAssociateVirtualInterfaceFuture
+	AssociateVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.AssociateVirtualInterfaceInput) *AssociateVirtualInterfaceFuture
 
 	ConfirmConnection(ctx workflow.Context, input *directconnect.ConfirmConnectionInput) (*directconnect.ConfirmConnectionOutput, error)
-	ConfirmConnectionAsync(ctx workflow.Context, input *directconnect.ConfirmConnectionInput) *DirectConnectConfirmConnectionFuture
+	ConfirmConnectionAsync(ctx workflow.Context, input *directconnect.ConfirmConnectionInput) *ConfirmConnectionFuture
 
 	ConfirmPrivateVirtualInterface(ctx workflow.Context, input *directconnect.ConfirmPrivateVirtualInterfaceInput) (*directconnect.ConfirmPrivateVirtualInterfaceOutput, error)
-	ConfirmPrivateVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.ConfirmPrivateVirtualInterfaceInput) *DirectConnectConfirmPrivateVirtualInterfaceFuture
+	ConfirmPrivateVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.ConfirmPrivateVirtualInterfaceInput) *ConfirmPrivateVirtualInterfaceFuture
 
 	ConfirmPublicVirtualInterface(ctx workflow.Context, input *directconnect.ConfirmPublicVirtualInterfaceInput) (*directconnect.ConfirmPublicVirtualInterfaceOutput, error)
-	ConfirmPublicVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.ConfirmPublicVirtualInterfaceInput) *DirectConnectConfirmPublicVirtualInterfaceFuture
+	ConfirmPublicVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.ConfirmPublicVirtualInterfaceInput) *ConfirmPublicVirtualInterfaceFuture
 
 	ConfirmTransitVirtualInterface(ctx workflow.Context, input *directconnect.ConfirmTransitVirtualInterfaceInput) (*directconnect.ConfirmTransitVirtualInterfaceOutput, error)
-	ConfirmTransitVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.ConfirmTransitVirtualInterfaceInput) *DirectConnectConfirmTransitVirtualInterfaceFuture
+	ConfirmTransitVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.ConfirmTransitVirtualInterfaceInput) *ConfirmTransitVirtualInterfaceFuture
 
 	CreateBGPPeer(ctx workflow.Context, input *directconnect.CreateBGPPeerInput) (*directconnect.CreateBGPPeerOutput, error)
-	CreateBGPPeerAsync(ctx workflow.Context, input *directconnect.CreateBGPPeerInput) *DirectConnectCreateBGPPeerFuture
+	CreateBGPPeerAsync(ctx workflow.Context, input *directconnect.CreateBGPPeerInput) *CreateBGPPeerFuture
 
 	CreateConnection(ctx workflow.Context, input *directconnect.CreateConnectionInput) (*directconnect.Connection, error)
-	CreateConnectionAsync(ctx workflow.Context, input *directconnect.CreateConnectionInput) *DirectConnectCreateConnectionFuture
+	CreateConnectionAsync(ctx workflow.Context, input *directconnect.CreateConnectionInput) *CreateConnectionFuture
 
 	CreateDirectConnectGateway(ctx workflow.Context, input *directconnect.CreateDirectConnectGatewayInput) (*directconnect.CreateDirectConnectGatewayOutput, error)
-	CreateDirectConnectGatewayAsync(ctx workflow.Context, input *directconnect.CreateDirectConnectGatewayInput) *DirectConnectCreateDirectConnectGatewayFuture
+	CreateDirectConnectGatewayAsync(ctx workflow.Context, input *directconnect.CreateDirectConnectGatewayInput) *CreateDirectConnectGatewayFuture
 
 	CreateDirectConnectGatewayAssociation(ctx workflow.Context, input *directconnect.CreateDirectConnectGatewayAssociationInput) (*directconnect.CreateDirectConnectGatewayAssociationOutput, error)
-	CreateDirectConnectGatewayAssociationAsync(ctx workflow.Context, input *directconnect.CreateDirectConnectGatewayAssociationInput) *DirectConnectCreateDirectConnectGatewayAssociationFuture
+	CreateDirectConnectGatewayAssociationAsync(ctx workflow.Context, input *directconnect.CreateDirectConnectGatewayAssociationInput) *CreateDirectConnectGatewayAssociationFuture
 
 	CreateDirectConnectGatewayAssociationProposal(ctx workflow.Context, input *directconnect.CreateDirectConnectGatewayAssociationProposalInput) (*directconnect.CreateDirectConnectGatewayAssociationProposalOutput, error)
-	CreateDirectConnectGatewayAssociationProposalAsync(ctx workflow.Context, input *directconnect.CreateDirectConnectGatewayAssociationProposalInput) *DirectConnectCreateDirectConnectGatewayAssociationProposalFuture
+	CreateDirectConnectGatewayAssociationProposalAsync(ctx workflow.Context, input *directconnect.CreateDirectConnectGatewayAssociationProposalInput) *CreateDirectConnectGatewayAssociationProposalFuture
 
 	CreateInterconnect(ctx workflow.Context, input *directconnect.CreateInterconnectInput) (*directconnect.Interconnect, error)
-	CreateInterconnectAsync(ctx workflow.Context, input *directconnect.CreateInterconnectInput) *DirectConnectCreateInterconnectFuture
+	CreateInterconnectAsync(ctx workflow.Context, input *directconnect.CreateInterconnectInput) *CreateInterconnectFuture
 
 	CreateLag(ctx workflow.Context, input *directconnect.CreateLagInput) (*directconnect.Lag, error)
-	CreateLagAsync(ctx workflow.Context, input *directconnect.CreateLagInput) *DirectConnectCreateLagFuture
+	CreateLagAsync(ctx workflow.Context, input *directconnect.CreateLagInput) *CreateLagFuture
 
 	CreatePrivateVirtualInterface(ctx workflow.Context, input *directconnect.CreatePrivateVirtualInterfaceInput) (*directconnect.VirtualInterface, error)
-	CreatePrivateVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.CreatePrivateVirtualInterfaceInput) *DirectConnectCreatePrivateVirtualInterfaceFuture
+	CreatePrivateVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.CreatePrivateVirtualInterfaceInput) *CreatePrivateVirtualInterfaceFuture
 
 	CreatePublicVirtualInterface(ctx workflow.Context, input *directconnect.CreatePublicVirtualInterfaceInput) (*directconnect.VirtualInterface, error)
-	CreatePublicVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.CreatePublicVirtualInterfaceInput) *DirectConnectCreatePublicVirtualInterfaceFuture
+	CreatePublicVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.CreatePublicVirtualInterfaceInput) *CreatePublicVirtualInterfaceFuture
 
 	CreateTransitVirtualInterface(ctx workflow.Context, input *directconnect.CreateTransitVirtualInterfaceInput) (*directconnect.CreateTransitVirtualInterfaceOutput, error)
-	CreateTransitVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.CreateTransitVirtualInterfaceInput) *DirectConnectCreateTransitVirtualInterfaceFuture
+	CreateTransitVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.CreateTransitVirtualInterfaceInput) *CreateTransitVirtualInterfaceFuture
 
 	DeleteBGPPeer(ctx workflow.Context, input *directconnect.DeleteBGPPeerInput) (*directconnect.DeleteBGPPeerOutput, error)
-	DeleteBGPPeerAsync(ctx workflow.Context, input *directconnect.DeleteBGPPeerInput) *DirectConnectDeleteBGPPeerFuture
+	DeleteBGPPeerAsync(ctx workflow.Context, input *directconnect.DeleteBGPPeerInput) *DeleteBGPPeerFuture
 
 	DeleteConnection(ctx workflow.Context, input *directconnect.DeleteConnectionInput) (*directconnect.Connection, error)
-	DeleteConnectionAsync(ctx workflow.Context, input *directconnect.DeleteConnectionInput) *DirectConnectDeleteConnectionFuture
+	DeleteConnectionAsync(ctx workflow.Context, input *directconnect.DeleteConnectionInput) *DeleteConnectionFuture
 
 	DeleteDirectConnectGateway(ctx workflow.Context, input *directconnect.DeleteDirectConnectGatewayInput) (*directconnect.DeleteDirectConnectGatewayOutput, error)
-	DeleteDirectConnectGatewayAsync(ctx workflow.Context, input *directconnect.DeleteDirectConnectGatewayInput) *DirectConnectDeleteDirectConnectGatewayFuture
+	DeleteDirectConnectGatewayAsync(ctx workflow.Context, input *directconnect.DeleteDirectConnectGatewayInput) *DeleteDirectConnectGatewayFuture
 
 	DeleteDirectConnectGatewayAssociation(ctx workflow.Context, input *directconnect.DeleteDirectConnectGatewayAssociationInput) (*directconnect.DeleteDirectConnectGatewayAssociationOutput, error)
-	DeleteDirectConnectGatewayAssociationAsync(ctx workflow.Context, input *directconnect.DeleteDirectConnectGatewayAssociationInput) *DirectConnectDeleteDirectConnectGatewayAssociationFuture
+	DeleteDirectConnectGatewayAssociationAsync(ctx workflow.Context, input *directconnect.DeleteDirectConnectGatewayAssociationInput) *DeleteDirectConnectGatewayAssociationFuture
 
 	DeleteDirectConnectGatewayAssociationProposal(ctx workflow.Context, input *directconnect.DeleteDirectConnectGatewayAssociationProposalInput) (*directconnect.DeleteDirectConnectGatewayAssociationProposalOutput, error)
-	DeleteDirectConnectGatewayAssociationProposalAsync(ctx workflow.Context, input *directconnect.DeleteDirectConnectGatewayAssociationProposalInput) *DirectConnectDeleteDirectConnectGatewayAssociationProposalFuture
+	DeleteDirectConnectGatewayAssociationProposalAsync(ctx workflow.Context, input *directconnect.DeleteDirectConnectGatewayAssociationProposalInput) *DeleteDirectConnectGatewayAssociationProposalFuture
 
 	DeleteInterconnect(ctx workflow.Context, input *directconnect.DeleteInterconnectInput) (*directconnect.DeleteInterconnectOutput, error)
-	DeleteInterconnectAsync(ctx workflow.Context, input *directconnect.DeleteInterconnectInput) *DirectConnectDeleteInterconnectFuture
+	DeleteInterconnectAsync(ctx workflow.Context, input *directconnect.DeleteInterconnectInput) *DeleteInterconnectFuture
 
 	DeleteLag(ctx workflow.Context, input *directconnect.DeleteLagInput) (*directconnect.Lag, error)
-	DeleteLagAsync(ctx workflow.Context, input *directconnect.DeleteLagInput) *DirectConnectDeleteLagFuture
+	DeleteLagAsync(ctx workflow.Context, input *directconnect.DeleteLagInput) *DeleteLagFuture
 
 	DeleteVirtualInterface(ctx workflow.Context, input *directconnect.DeleteVirtualInterfaceInput) (*directconnect.DeleteVirtualInterfaceOutput, error)
-	DeleteVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.DeleteVirtualInterfaceInput) *DirectConnectDeleteVirtualInterfaceFuture
+	DeleteVirtualInterfaceAsync(ctx workflow.Context, input *directconnect.DeleteVirtualInterfaceInput) *DeleteVirtualInterfaceFuture
 
 	DescribeConnectionLoa(ctx workflow.Context, input *directconnect.DescribeConnectionLoaInput) (*directconnect.DescribeConnectionLoaOutput, error)
-	DescribeConnectionLoaAsync(ctx workflow.Context, input *directconnect.DescribeConnectionLoaInput) *DirectConnectDescribeConnectionLoaFuture
+	DescribeConnectionLoaAsync(ctx workflow.Context, input *directconnect.DescribeConnectionLoaInput) *DescribeConnectionLoaFuture
 
 	DescribeConnections(ctx workflow.Context, input *directconnect.DescribeConnectionsInput) (*directconnect.Connections, error)
-	DescribeConnectionsAsync(ctx workflow.Context, input *directconnect.DescribeConnectionsInput) *DirectConnectDescribeConnectionsFuture
+	DescribeConnectionsAsync(ctx workflow.Context, input *directconnect.DescribeConnectionsInput) *DescribeConnectionsFuture
 
 	DescribeConnectionsOnInterconnect(ctx workflow.Context, input *directconnect.DescribeConnectionsOnInterconnectInput) (*directconnect.Connections, error)
-	DescribeConnectionsOnInterconnectAsync(ctx workflow.Context, input *directconnect.DescribeConnectionsOnInterconnectInput) *DirectConnectDescribeConnectionsOnInterconnectFuture
+	DescribeConnectionsOnInterconnectAsync(ctx workflow.Context, input *directconnect.DescribeConnectionsOnInterconnectInput) *DescribeConnectionsOnInterconnectFuture
 
 	DescribeDirectConnectGatewayAssociationProposals(ctx workflow.Context, input *directconnect.DescribeDirectConnectGatewayAssociationProposalsInput) (*directconnect.DescribeDirectConnectGatewayAssociationProposalsOutput, error)
-	DescribeDirectConnectGatewayAssociationProposalsAsync(ctx workflow.Context, input *directconnect.DescribeDirectConnectGatewayAssociationProposalsInput) *DirectConnectDescribeDirectConnectGatewayAssociationProposalsFuture
+	DescribeDirectConnectGatewayAssociationProposalsAsync(ctx workflow.Context, input *directconnect.DescribeDirectConnectGatewayAssociationProposalsInput) *DescribeDirectConnectGatewayAssociationProposalsFuture
 
 	DescribeDirectConnectGatewayAssociations(ctx workflow.Context, input *directconnect.DescribeDirectConnectGatewayAssociationsInput) (*directconnect.DescribeDirectConnectGatewayAssociationsOutput, error)
-	DescribeDirectConnectGatewayAssociationsAsync(ctx workflow.Context, input *directconnect.DescribeDirectConnectGatewayAssociationsInput) *DirectConnectDescribeDirectConnectGatewayAssociationsFuture
+	DescribeDirectConnectGatewayAssociationsAsync(ctx workflow.Context, input *directconnect.DescribeDirectConnectGatewayAssociationsInput) *DescribeDirectConnectGatewayAssociationsFuture
 
 	DescribeDirectConnectGatewayAttachments(ctx workflow.Context, input *directconnect.DescribeDirectConnectGatewayAttachmentsInput) (*directconnect.DescribeDirectConnectGatewayAttachmentsOutput, error)
-	DescribeDirectConnectGatewayAttachmentsAsync(ctx workflow.Context, input *directconnect.DescribeDirectConnectGatewayAttachmentsInput) *DirectConnectDescribeDirectConnectGatewayAttachmentsFuture
+	DescribeDirectConnectGatewayAttachmentsAsync(ctx workflow.Context, input *directconnect.DescribeDirectConnectGatewayAttachmentsInput) *DescribeDirectConnectGatewayAttachmentsFuture
 
 	DescribeDirectConnectGateways(ctx workflow.Context, input *directconnect.DescribeDirectConnectGatewaysInput) (*directconnect.DescribeDirectConnectGatewaysOutput, error)
-	DescribeDirectConnectGatewaysAsync(ctx workflow.Context, input *directconnect.DescribeDirectConnectGatewaysInput) *DirectConnectDescribeDirectConnectGatewaysFuture
+	DescribeDirectConnectGatewaysAsync(ctx workflow.Context, input *directconnect.DescribeDirectConnectGatewaysInput) *DescribeDirectConnectGatewaysFuture
 
 	DescribeHostedConnections(ctx workflow.Context, input *directconnect.DescribeHostedConnectionsInput) (*directconnect.Connections, error)
-	DescribeHostedConnectionsAsync(ctx workflow.Context, input *directconnect.DescribeHostedConnectionsInput) *DirectConnectDescribeHostedConnectionsFuture
+	DescribeHostedConnectionsAsync(ctx workflow.Context, input *directconnect.DescribeHostedConnectionsInput) *DescribeHostedConnectionsFuture
 
 	DescribeInterconnectLoa(ctx workflow.Context, input *directconnect.DescribeInterconnectLoaInput) (*directconnect.DescribeInterconnectLoaOutput, error)
-	DescribeInterconnectLoaAsync(ctx workflow.Context, input *directconnect.DescribeInterconnectLoaInput) *DirectConnectDescribeInterconnectLoaFuture
+	DescribeInterconnectLoaAsync(ctx workflow.Context, input *directconnect.DescribeInterconnectLoaInput) *DescribeInterconnectLoaFuture
 
 	DescribeInterconnects(ctx workflow.Context, input *directconnect.DescribeInterconnectsInput) (*directconnect.DescribeInterconnectsOutput, error)
-	DescribeInterconnectsAsync(ctx workflow.Context, input *directconnect.DescribeInterconnectsInput) *DirectConnectDescribeInterconnectsFuture
+	DescribeInterconnectsAsync(ctx workflow.Context, input *directconnect.DescribeInterconnectsInput) *DescribeInterconnectsFuture
 
 	DescribeLags(ctx workflow.Context, input *directconnect.DescribeLagsInput) (*directconnect.DescribeLagsOutput, error)
-	DescribeLagsAsync(ctx workflow.Context, input *directconnect.DescribeLagsInput) *DirectConnectDescribeLagsFuture
+	DescribeLagsAsync(ctx workflow.Context, input *directconnect.DescribeLagsInput) *DescribeLagsFuture
 
 	DescribeLoa(ctx workflow.Context, input *directconnect.DescribeLoaInput) (*directconnect.Loa, error)
-	DescribeLoaAsync(ctx workflow.Context, input *directconnect.DescribeLoaInput) *DirectConnectDescribeLoaFuture
+	DescribeLoaAsync(ctx workflow.Context, input *directconnect.DescribeLoaInput) *DescribeLoaFuture
 
 	DescribeLocations(ctx workflow.Context, input *directconnect.DescribeLocationsInput) (*directconnect.DescribeLocationsOutput, error)
-	DescribeLocationsAsync(ctx workflow.Context, input *directconnect.DescribeLocationsInput) *DirectConnectDescribeLocationsFuture
+	DescribeLocationsAsync(ctx workflow.Context, input *directconnect.DescribeLocationsInput) *DescribeLocationsFuture
 
 	DescribeTags(ctx workflow.Context, input *directconnect.DescribeTagsInput) (*directconnect.DescribeTagsOutput, error)
-	DescribeTagsAsync(ctx workflow.Context, input *directconnect.DescribeTagsInput) *DirectConnectDescribeTagsFuture
+	DescribeTagsAsync(ctx workflow.Context, input *directconnect.DescribeTagsInput) *DescribeTagsFuture
 
 	DescribeVirtualGateways(ctx workflow.Context, input *directconnect.DescribeVirtualGatewaysInput) (*directconnect.DescribeVirtualGatewaysOutput, error)
-	DescribeVirtualGatewaysAsync(ctx workflow.Context, input *directconnect.DescribeVirtualGatewaysInput) *DirectConnectDescribeVirtualGatewaysFuture
+	DescribeVirtualGatewaysAsync(ctx workflow.Context, input *directconnect.DescribeVirtualGatewaysInput) *DescribeVirtualGatewaysFuture
 
 	DescribeVirtualInterfaces(ctx workflow.Context, input *directconnect.DescribeVirtualInterfacesInput) (*directconnect.DescribeVirtualInterfacesOutput, error)
-	DescribeVirtualInterfacesAsync(ctx workflow.Context, input *directconnect.DescribeVirtualInterfacesInput) *DirectConnectDescribeVirtualInterfacesFuture
+	DescribeVirtualInterfacesAsync(ctx workflow.Context, input *directconnect.DescribeVirtualInterfacesInput) *DescribeVirtualInterfacesFuture
 
 	DisassociateConnectionFromLag(ctx workflow.Context, input *directconnect.DisassociateConnectionFromLagInput) (*directconnect.Connection, error)
-	DisassociateConnectionFromLagAsync(ctx workflow.Context, input *directconnect.DisassociateConnectionFromLagInput) *DirectConnectDisassociateConnectionFromLagFuture
+	DisassociateConnectionFromLagAsync(ctx workflow.Context, input *directconnect.DisassociateConnectionFromLagInput) *DisassociateConnectionFromLagFuture
 
 	ListVirtualInterfaceTestHistory(ctx workflow.Context, input *directconnect.ListVirtualInterfaceTestHistoryInput) (*directconnect.ListVirtualInterfaceTestHistoryOutput, error)
-	ListVirtualInterfaceTestHistoryAsync(ctx workflow.Context, input *directconnect.ListVirtualInterfaceTestHistoryInput) *DirectConnectListVirtualInterfaceTestHistoryFuture
+	ListVirtualInterfaceTestHistoryAsync(ctx workflow.Context, input *directconnect.ListVirtualInterfaceTestHistoryInput) *ListVirtualInterfaceTestHistoryFuture
 
 	StartBgpFailoverTest(ctx workflow.Context, input *directconnect.StartBgpFailoverTestInput) (*directconnect.StartBgpFailoverTestOutput, error)
-	StartBgpFailoverTestAsync(ctx workflow.Context, input *directconnect.StartBgpFailoverTestInput) *DirectConnectStartBgpFailoverTestFuture
+	StartBgpFailoverTestAsync(ctx workflow.Context, input *directconnect.StartBgpFailoverTestInput) *StartBgpFailoverTestFuture
 
 	StopBgpFailoverTest(ctx workflow.Context, input *directconnect.StopBgpFailoverTestInput) (*directconnect.StopBgpFailoverTestOutput, error)
-	StopBgpFailoverTestAsync(ctx workflow.Context, input *directconnect.StopBgpFailoverTestInput) *DirectConnectStopBgpFailoverTestFuture
+	StopBgpFailoverTestAsync(ctx workflow.Context, input *directconnect.StopBgpFailoverTestInput) *StopBgpFailoverTestFuture
 
 	TagResource(ctx workflow.Context, input *directconnect.TagResourceInput) (*directconnect.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *directconnect.TagResourceInput) *DirectConnectTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *directconnect.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *directconnect.UntagResourceInput) (*directconnect.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *directconnect.UntagResourceInput) *DirectConnectUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *directconnect.UntagResourceInput) *UntagResourceFuture
 
 	UpdateDirectConnectGatewayAssociation(ctx workflow.Context, input *directconnect.UpdateDirectConnectGatewayAssociationInput) (*directconnect.UpdateDirectConnectGatewayAssociationOutput, error)
-	UpdateDirectConnectGatewayAssociationAsync(ctx workflow.Context, input *directconnect.UpdateDirectConnectGatewayAssociationInput) *DirectConnectUpdateDirectConnectGatewayAssociationFuture
+	UpdateDirectConnectGatewayAssociationAsync(ctx workflow.Context, input *directconnect.UpdateDirectConnectGatewayAssociationInput) *UpdateDirectConnectGatewayAssociationFuture
 
 	UpdateLag(ctx workflow.Context, input *directconnect.UpdateLagInput) (*directconnect.Lag, error)
-	UpdateLagAsync(ctx workflow.Context, input *directconnect.UpdateLagInput) *DirectConnectUpdateLagFuture
+	UpdateLagAsync(ctx workflow.Context, input *directconnect.UpdateLagInput) *UpdateLagFuture
 
 	UpdateVirtualInterfaceAttributes(ctx workflow.Context, input *directconnect.UpdateVirtualInterfaceAttributesInput) (*directconnect.UpdateVirtualInterfaceAttributesOutput, error)
-	UpdateVirtualInterfaceAttributesAsync(ctx workflow.Context, input *directconnect.UpdateVirtualInterfaceAttributesInput) *DirectConnectUpdateVirtualInterfaceAttributesFuture
+	UpdateVirtualInterfaceAttributesAsync(ctx workflow.Context, input *directconnect.UpdateVirtualInterfaceAttributesInput) *UpdateVirtualInterfaceAttributesFuture
 }
 
 func NewClient() Client {

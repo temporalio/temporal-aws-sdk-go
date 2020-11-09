@@ -16,23 +16,23 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type PersonalizeRuntimeGetPersonalizedRankingFuture struct {
+type GetPersonalizedRankingFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PersonalizeRuntimeGetPersonalizedRankingFuture) Get(ctx workflow.Context) (*personalizeruntime.GetPersonalizedRankingOutput, error) {
+func (r *GetPersonalizedRankingFuture) Get(ctx workflow.Context) (*personalizeruntime.GetPersonalizedRankingOutput, error) {
 	var output personalizeruntime.GetPersonalizedRankingOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type PersonalizeRuntimeGetRecommendationsFuture struct {
+type GetRecommendationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *PersonalizeRuntimeGetRecommendationsFuture) Get(ctx workflow.Context) (*personalizeruntime.GetRecommendationsOutput, error) {
+func (r *GetRecommendationsFuture) Get(ctx workflow.Context) (*personalizeruntime.GetRecommendationsOutput, error) {
 	var output personalizeruntime.GetRecommendationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -44,9 +44,9 @@ func (a *stub) GetPersonalizedRanking(ctx workflow.Context, input *personalizeru
 	return &output, err
 }
 
-func (a *stub) GetPersonalizedRankingAsync(ctx workflow.Context, input *personalizeruntime.GetPersonalizedRankingInput) *PersonalizeRuntimeGetPersonalizedRankingFuture {
+func (a *stub) GetPersonalizedRankingAsync(ctx workflow.Context, input *personalizeruntime.GetPersonalizedRankingInput) *GetPersonalizedRankingFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalizeruntime.GetPersonalizedRanking", input)
-	return &PersonalizeRuntimeGetPersonalizedRankingFuture{Future: future}
+	return &GetPersonalizedRankingFuture{Future: future}
 }
 
 func (a *stub) GetRecommendations(ctx workflow.Context, input *personalizeruntime.GetRecommendationsInput) (*personalizeruntime.GetRecommendationsOutput, error) {
@@ -55,7 +55,7 @@ func (a *stub) GetRecommendations(ctx workflow.Context, input *personalizeruntim
 	return &output, err
 }
 
-func (a *stub) GetRecommendationsAsync(ctx workflow.Context, input *personalizeruntime.GetRecommendationsInput) *PersonalizeRuntimeGetRecommendationsFuture {
+func (a *stub) GetRecommendationsAsync(ctx workflow.Context, input *personalizeruntime.GetRecommendationsInput) *GetRecommendationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.personalizeruntime.GetRecommendations", input)
-	return &PersonalizeRuntimeGetRecommendationsFuture{Future: future}
+	return &GetRecommendationsFuture{Future: future}
 }

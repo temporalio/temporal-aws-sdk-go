@@ -16,103 +16,103 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateApplication(ctx workflow.Context, input *appconfig.CreateApplicationInput) (*appconfig.CreateApplicationOutput, error)
-	CreateApplicationAsync(ctx workflow.Context, input *appconfig.CreateApplicationInput) *AppConfigCreateApplicationFuture
+	CreateApplicationAsync(ctx workflow.Context, input *appconfig.CreateApplicationInput) *CreateApplicationFuture
 
 	CreateConfigurationProfile(ctx workflow.Context, input *appconfig.CreateConfigurationProfileInput) (*appconfig.CreateConfigurationProfileOutput, error)
-	CreateConfigurationProfileAsync(ctx workflow.Context, input *appconfig.CreateConfigurationProfileInput) *AppConfigCreateConfigurationProfileFuture
+	CreateConfigurationProfileAsync(ctx workflow.Context, input *appconfig.CreateConfigurationProfileInput) *CreateConfigurationProfileFuture
 
 	CreateDeploymentStrategy(ctx workflow.Context, input *appconfig.CreateDeploymentStrategyInput) (*appconfig.CreateDeploymentStrategyOutput, error)
-	CreateDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.CreateDeploymentStrategyInput) *AppConfigCreateDeploymentStrategyFuture
+	CreateDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.CreateDeploymentStrategyInput) *CreateDeploymentStrategyFuture
 
 	CreateEnvironment(ctx workflow.Context, input *appconfig.CreateEnvironmentInput) (*appconfig.CreateEnvironmentOutput, error)
-	CreateEnvironmentAsync(ctx workflow.Context, input *appconfig.CreateEnvironmentInput) *AppConfigCreateEnvironmentFuture
+	CreateEnvironmentAsync(ctx workflow.Context, input *appconfig.CreateEnvironmentInput) *CreateEnvironmentFuture
 
 	CreateHostedConfigurationVersion(ctx workflow.Context, input *appconfig.CreateHostedConfigurationVersionInput) (*appconfig.CreateHostedConfigurationVersionOutput, error)
-	CreateHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.CreateHostedConfigurationVersionInput) *AppConfigCreateHostedConfigurationVersionFuture
+	CreateHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.CreateHostedConfigurationVersionInput) *CreateHostedConfigurationVersionFuture
 
 	DeleteApplication(ctx workflow.Context, input *appconfig.DeleteApplicationInput) (*appconfig.DeleteApplicationOutput, error)
-	DeleteApplicationAsync(ctx workflow.Context, input *appconfig.DeleteApplicationInput) *AppConfigDeleteApplicationFuture
+	DeleteApplicationAsync(ctx workflow.Context, input *appconfig.DeleteApplicationInput) *DeleteApplicationFuture
 
 	DeleteConfigurationProfile(ctx workflow.Context, input *appconfig.DeleteConfigurationProfileInput) (*appconfig.DeleteConfigurationProfileOutput, error)
-	DeleteConfigurationProfileAsync(ctx workflow.Context, input *appconfig.DeleteConfigurationProfileInput) *AppConfigDeleteConfigurationProfileFuture
+	DeleteConfigurationProfileAsync(ctx workflow.Context, input *appconfig.DeleteConfigurationProfileInput) *DeleteConfigurationProfileFuture
 
 	DeleteDeploymentStrategy(ctx workflow.Context, input *appconfig.DeleteDeploymentStrategyInput) (*appconfig.DeleteDeploymentStrategyOutput, error)
-	DeleteDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.DeleteDeploymentStrategyInput) *AppConfigDeleteDeploymentStrategyFuture
+	DeleteDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.DeleteDeploymentStrategyInput) *DeleteDeploymentStrategyFuture
 
 	DeleteEnvironment(ctx workflow.Context, input *appconfig.DeleteEnvironmentInput) (*appconfig.DeleteEnvironmentOutput, error)
-	DeleteEnvironmentAsync(ctx workflow.Context, input *appconfig.DeleteEnvironmentInput) *AppConfigDeleteEnvironmentFuture
+	DeleteEnvironmentAsync(ctx workflow.Context, input *appconfig.DeleteEnvironmentInput) *DeleteEnvironmentFuture
 
 	DeleteHostedConfigurationVersion(ctx workflow.Context, input *appconfig.DeleteHostedConfigurationVersionInput) (*appconfig.DeleteHostedConfigurationVersionOutput, error)
-	DeleteHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.DeleteHostedConfigurationVersionInput) *AppConfigDeleteHostedConfigurationVersionFuture
+	DeleteHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.DeleteHostedConfigurationVersionInput) *DeleteHostedConfigurationVersionFuture
 
 	GetApplication(ctx workflow.Context, input *appconfig.GetApplicationInput) (*appconfig.GetApplicationOutput, error)
-	GetApplicationAsync(ctx workflow.Context, input *appconfig.GetApplicationInput) *AppConfigGetApplicationFuture
+	GetApplicationAsync(ctx workflow.Context, input *appconfig.GetApplicationInput) *GetApplicationFuture
 
 	GetConfiguration(ctx workflow.Context, input *appconfig.GetConfigurationInput) (*appconfig.GetConfigurationOutput, error)
-	GetConfigurationAsync(ctx workflow.Context, input *appconfig.GetConfigurationInput) *AppConfigGetConfigurationFuture
+	GetConfigurationAsync(ctx workflow.Context, input *appconfig.GetConfigurationInput) *GetConfigurationFuture
 
 	GetConfigurationProfile(ctx workflow.Context, input *appconfig.GetConfigurationProfileInput) (*appconfig.GetConfigurationProfileOutput, error)
-	GetConfigurationProfileAsync(ctx workflow.Context, input *appconfig.GetConfigurationProfileInput) *AppConfigGetConfigurationProfileFuture
+	GetConfigurationProfileAsync(ctx workflow.Context, input *appconfig.GetConfigurationProfileInput) *GetConfigurationProfileFuture
 
 	GetDeployment(ctx workflow.Context, input *appconfig.GetDeploymentInput) (*appconfig.GetDeploymentOutput, error)
-	GetDeploymentAsync(ctx workflow.Context, input *appconfig.GetDeploymentInput) *AppConfigGetDeploymentFuture
+	GetDeploymentAsync(ctx workflow.Context, input *appconfig.GetDeploymentInput) *GetDeploymentFuture
 
 	GetDeploymentStrategy(ctx workflow.Context, input *appconfig.GetDeploymentStrategyInput) (*appconfig.GetDeploymentStrategyOutput, error)
-	GetDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.GetDeploymentStrategyInput) *AppConfigGetDeploymentStrategyFuture
+	GetDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.GetDeploymentStrategyInput) *GetDeploymentStrategyFuture
 
 	GetEnvironment(ctx workflow.Context, input *appconfig.GetEnvironmentInput) (*appconfig.GetEnvironmentOutput, error)
-	GetEnvironmentAsync(ctx workflow.Context, input *appconfig.GetEnvironmentInput) *AppConfigGetEnvironmentFuture
+	GetEnvironmentAsync(ctx workflow.Context, input *appconfig.GetEnvironmentInput) *GetEnvironmentFuture
 
 	GetHostedConfigurationVersion(ctx workflow.Context, input *appconfig.GetHostedConfigurationVersionInput) (*appconfig.GetHostedConfigurationVersionOutput, error)
-	GetHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.GetHostedConfigurationVersionInput) *AppConfigGetHostedConfigurationVersionFuture
+	GetHostedConfigurationVersionAsync(ctx workflow.Context, input *appconfig.GetHostedConfigurationVersionInput) *GetHostedConfigurationVersionFuture
 
 	ListApplications(ctx workflow.Context, input *appconfig.ListApplicationsInput) (*appconfig.ListApplicationsOutput, error)
-	ListApplicationsAsync(ctx workflow.Context, input *appconfig.ListApplicationsInput) *AppConfigListApplicationsFuture
+	ListApplicationsAsync(ctx workflow.Context, input *appconfig.ListApplicationsInput) *ListApplicationsFuture
 
 	ListConfigurationProfiles(ctx workflow.Context, input *appconfig.ListConfigurationProfilesInput) (*appconfig.ListConfigurationProfilesOutput, error)
-	ListConfigurationProfilesAsync(ctx workflow.Context, input *appconfig.ListConfigurationProfilesInput) *AppConfigListConfigurationProfilesFuture
+	ListConfigurationProfilesAsync(ctx workflow.Context, input *appconfig.ListConfigurationProfilesInput) *ListConfigurationProfilesFuture
 
 	ListDeploymentStrategies(ctx workflow.Context, input *appconfig.ListDeploymentStrategiesInput) (*appconfig.ListDeploymentStrategiesOutput, error)
-	ListDeploymentStrategiesAsync(ctx workflow.Context, input *appconfig.ListDeploymentStrategiesInput) *AppConfigListDeploymentStrategiesFuture
+	ListDeploymentStrategiesAsync(ctx workflow.Context, input *appconfig.ListDeploymentStrategiesInput) *ListDeploymentStrategiesFuture
 
 	ListDeployments(ctx workflow.Context, input *appconfig.ListDeploymentsInput) (*appconfig.ListDeploymentsOutput, error)
-	ListDeploymentsAsync(ctx workflow.Context, input *appconfig.ListDeploymentsInput) *AppConfigListDeploymentsFuture
+	ListDeploymentsAsync(ctx workflow.Context, input *appconfig.ListDeploymentsInput) *ListDeploymentsFuture
 
 	ListEnvironments(ctx workflow.Context, input *appconfig.ListEnvironmentsInput) (*appconfig.ListEnvironmentsOutput, error)
-	ListEnvironmentsAsync(ctx workflow.Context, input *appconfig.ListEnvironmentsInput) *AppConfigListEnvironmentsFuture
+	ListEnvironmentsAsync(ctx workflow.Context, input *appconfig.ListEnvironmentsInput) *ListEnvironmentsFuture
 
 	ListHostedConfigurationVersions(ctx workflow.Context, input *appconfig.ListHostedConfigurationVersionsInput) (*appconfig.ListHostedConfigurationVersionsOutput, error)
-	ListHostedConfigurationVersionsAsync(ctx workflow.Context, input *appconfig.ListHostedConfigurationVersionsInput) *AppConfigListHostedConfigurationVersionsFuture
+	ListHostedConfigurationVersionsAsync(ctx workflow.Context, input *appconfig.ListHostedConfigurationVersionsInput) *ListHostedConfigurationVersionsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *appconfig.ListTagsForResourceInput) (*appconfig.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *appconfig.ListTagsForResourceInput) *AppConfigListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *appconfig.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	StartDeployment(ctx workflow.Context, input *appconfig.StartDeploymentInput) (*appconfig.StartDeploymentOutput, error)
-	StartDeploymentAsync(ctx workflow.Context, input *appconfig.StartDeploymentInput) *AppConfigStartDeploymentFuture
+	StartDeploymentAsync(ctx workflow.Context, input *appconfig.StartDeploymentInput) *StartDeploymentFuture
 
 	StopDeployment(ctx workflow.Context, input *appconfig.StopDeploymentInput) (*appconfig.StopDeploymentOutput, error)
-	StopDeploymentAsync(ctx workflow.Context, input *appconfig.StopDeploymentInput) *AppConfigStopDeploymentFuture
+	StopDeploymentAsync(ctx workflow.Context, input *appconfig.StopDeploymentInput) *StopDeploymentFuture
 
 	TagResource(ctx workflow.Context, input *appconfig.TagResourceInput) (*appconfig.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *appconfig.TagResourceInput) *AppConfigTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *appconfig.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *appconfig.UntagResourceInput) (*appconfig.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *appconfig.UntagResourceInput) *AppConfigUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *appconfig.UntagResourceInput) *UntagResourceFuture
 
 	UpdateApplication(ctx workflow.Context, input *appconfig.UpdateApplicationInput) (*appconfig.UpdateApplicationOutput, error)
-	UpdateApplicationAsync(ctx workflow.Context, input *appconfig.UpdateApplicationInput) *AppConfigUpdateApplicationFuture
+	UpdateApplicationAsync(ctx workflow.Context, input *appconfig.UpdateApplicationInput) *UpdateApplicationFuture
 
 	UpdateConfigurationProfile(ctx workflow.Context, input *appconfig.UpdateConfigurationProfileInput) (*appconfig.UpdateConfigurationProfileOutput, error)
-	UpdateConfigurationProfileAsync(ctx workflow.Context, input *appconfig.UpdateConfigurationProfileInput) *AppConfigUpdateConfigurationProfileFuture
+	UpdateConfigurationProfileAsync(ctx workflow.Context, input *appconfig.UpdateConfigurationProfileInput) *UpdateConfigurationProfileFuture
 
 	UpdateDeploymentStrategy(ctx workflow.Context, input *appconfig.UpdateDeploymentStrategyInput) (*appconfig.UpdateDeploymentStrategyOutput, error)
-	UpdateDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.UpdateDeploymentStrategyInput) *AppConfigUpdateDeploymentStrategyFuture
+	UpdateDeploymentStrategyAsync(ctx workflow.Context, input *appconfig.UpdateDeploymentStrategyInput) *UpdateDeploymentStrategyFuture
 
 	UpdateEnvironment(ctx workflow.Context, input *appconfig.UpdateEnvironmentInput) (*appconfig.UpdateEnvironmentOutput, error)
-	UpdateEnvironmentAsync(ctx workflow.Context, input *appconfig.UpdateEnvironmentInput) *AppConfigUpdateEnvironmentFuture
+	UpdateEnvironmentAsync(ctx workflow.Context, input *appconfig.UpdateEnvironmentInput) *UpdateEnvironmentFuture
 
 	ValidateConfiguration(ctx workflow.Context, input *appconfig.ValidateConfigurationInput) (*appconfig.ValidateConfigurationOutput, error)
-	ValidateConfigurationAsync(ctx workflow.Context, input *appconfig.ValidateConfigurationInput) *AppConfigValidateConfigurationFuture
+	ValidateConfigurationAsync(ctx workflow.Context, input *appconfig.ValidateConfigurationInput) *ValidateConfigurationFuture
 }
 
 func NewClient() Client {

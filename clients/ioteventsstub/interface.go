@@ -16,52 +16,52 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateDetectorModel(ctx workflow.Context, input *iotevents.CreateDetectorModelInput) (*iotevents.CreateDetectorModelOutput, error)
-	CreateDetectorModelAsync(ctx workflow.Context, input *iotevents.CreateDetectorModelInput) *IoTEventsCreateDetectorModelFuture
+	CreateDetectorModelAsync(ctx workflow.Context, input *iotevents.CreateDetectorModelInput) *CreateDetectorModelFuture
 
 	CreateInput(ctx workflow.Context, input *iotevents.CreateInputInput) (*iotevents.CreateInputOutput, error)
-	CreateInputAsync(ctx workflow.Context, input *iotevents.CreateInputInput) *IoTEventsCreateInputFuture
+	CreateInputAsync(ctx workflow.Context, input *iotevents.CreateInputInput) *CreateInputFuture
 
 	DeleteDetectorModel(ctx workflow.Context, input *iotevents.DeleteDetectorModelInput) (*iotevents.DeleteDetectorModelOutput, error)
-	DeleteDetectorModelAsync(ctx workflow.Context, input *iotevents.DeleteDetectorModelInput) *IoTEventsDeleteDetectorModelFuture
+	DeleteDetectorModelAsync(ctx workflow.Context, input *iotevents.DeleteDetectorModelInput) *DeleteDetectorModelFuture
 
 	DeleteInput(ctx workflow.Context, input *iotevents.DeleteInputInput) (*iotevents.DeleteInputOutput, error)
-	DeleteInputAsync(ctx workflow.Context, input *iotevents.DeleteInputInput) *IoTEventsDeleteInputFuture
+	DeleteInputAsync(ctx workflow.Context, input *iotevents.DeleteInputInput) *DeleteInputFuture
 
 	DescribeDetectorModel(ctx workflow.Context, input *iotevents.DescribeDetectorModelInput) (*iotevents.DescribeDetectorModelOutput, error)
-	DescribeDetectorModelAsync(ctx workflow.Context, input *iotevents.DescribeDetectorModelInput) *IoTEventsDescribeDetectorModelFuture
+	DescribeDetectorModelAsync(ctx workflow.Context, input *iotevents.DescribeDetectorModelInput) *DescribeDetectorModelFuture
 
 	DescribeInput(ctx workflow.Context, input *iotevents.DescribeInputInput) (*iotevents.DescribeInputOutput, error)
-	DescribeInputAsync(ctx workflow.Context, input *iotevents.DescribeInputInput) *IoTEventsDescribeInputFuture
+	DescribeInputAsync(ctx workflow.Context, input *iotevents.DescribeInputInput) *DescribeInputFuture
 
 	DescribeLoggingOptions(ctx workflow.Context, input *iotevents.DescribeLoggingOptionsInput) (*iotevents.DescribeLoggingOptionsOutput, error)
-	DescribeLoggingOptionsAsync(ctx workflow.Context, input *iotevents.DescribeLoggingOptionsInput) *IoTEventsDescribeLoggingOptionsFuture
+	DescribeLoggingOptionsAsync(ctx workflow.Context, input *iotevents.DescribeLoggingOptionsInput) *DescribeLoggingOptionsFuture
 
 	ListDetectorModelVersions(ctx workflow.Context, input *iotevents.ListDetectorModelVersionsInput) (*iotevents.ListDetectorModelVersionsOutput, error)
-	ListDetectorModelVersionsAsync(ctx workflow.Context, input *iotevents.ListDetectorModelVersionsInput) *IoTEventsListDetectorModelVersionsFuture
+	ListDetectorModelVersionsAsync(ctx workflow.Context, input *iotevents.ListDetectorModelVersionsInput) *ListDetectorModelVersionsFuture
 
 	ListDetectorModels(ctx workflow.Context, input *iotevents.ListDetectorModelsInput) (*iotevents.ListDetectorModelsOutput, error)
-	ListDetectorModelsAsync(ctx workflow.Context, input *iotevents.ListDetectorModelsInput) *IoTEventsListDetectorModelsFuture
+	ListDetectorModelsAsync(ctx workflow.Context, input *iotevents.ListDetectorModelsInput) *ListDetectorModelsFuture
 
 	ListInputs(ctx workflow.Context, input *iotevents.ListInputsInput) (*iotevents.ListInputsOutput, error)
-	ListInputsAsync(ctx workflow.Context, input *iotevents.ListInputsInput) *IoTEventsListInputsFuture
+	ListInputsAsync(ctx workflow.Context, input *iotevents.ListInputsInput) *ListInputsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *iotevents.ListTagsForResourceInput) (*iotevents.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *iotevents.ListTagsForResourceInput) *IoTEventsListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *iotevents.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	PutLoggingOptions(ctx workflow.Context, input *iotevents.PutLoggingOptionsInput) (*iotevents.PutLoggingOptionsOutput, error)
-	PutLoggingOptionsAsync(ctx workflow.Context, input *iotevents.PutLoggingOptionsInput) *IoTEventsPutLoggingOptionsFuture
+	PutLoggingOptionsAsync(ctx workflow.Context, input *iotevents.PutLoggingOptionsInput) *PutLoggingOptionsFuture
 
 	TagResource(ctx workflow.Context, input *iotevents.TagResourceInput) (*iotevents.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *iotevents.TagResourceInput) *IoTEventsTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *iotevents.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *iotevents.UntagResourceInput) (*iotevents.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *iotevents.UntagResourceInput) *IoTEventsUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *iotevents.UntagResourceInput) *UntagResourceFuture
 
 	UpdateDetectorModel(ctx workflow.Context, input *iotevents.UpdateDetectorModelInput) (*iotevents.UpdateDetectorModelOutput, error)
-	UpdateDetectorModelAsync(ctx workflow.Context, input *iotevents.UpdateDetectorModelInput) *IoTEventsUpdateDetectorModelFuture
+	UpdateDetectorModelAsync(ctx workflow.Context, input *iotevents.UpdateDetectorModelInput) *UpdateDetectorModelFuture
 
 	UpdateInput(ctx workflow.Context, input *iotevents.UpdateInputInput) (*iotevents.UpdateInputOutput, error)
-	UpdateInputAsync(ctx workflow.Context, input *iotevents.UpdateInputInput) *IoTEventsUpdateInputFuture
+	UpdateInputAsync(ctx workflow.Context, input *iotevents.UpdateInputInput) *UpdateInputFuture
 }
 
 func NewClient() Client {

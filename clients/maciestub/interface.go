@@ -16,25 +16,25 @@ var _ clients.VoidFuture
 
 type Client interface {
 	AssociateMemberAccount(ctx workflow.Context, input *macie.AssociateMemberAccountInput) (*macie.AssociateMemberAccountOutput, error)
-	AssociateMemberAccountAsync(ctx workflow.Context, input *macie.AssociateMemberAccountInput) *MacieAssociateMemberAccountFuture
+	AssociateMemberAccountAsync(ctx workflow.Context, input *macie.AssociateMemberAccountInput) *AssociateMemberAccountFuture
 
 	AssociateS3Resources(ctx workflow.Context, input *macie.AssociateS3ResourcesInput) (*macie.AssociateS3ResourcesOutput, error)
-	AssociateS3ResourcesAsync(ctx workflow.Context, input *macie.AssociateS3ResourcesInput) *MacieAssociateS3ResourcesFuture
+	AssociateS3ResourcesAsync(ctx workflow.Context, input *macie.AssociateS3ResourcesInput) *AssociateS3ResourcesFuture
 
 	DisassociateMemberAccount(ctx workflow.Context, input *macie.DisassociateMemberAccountInput) (*macie.DisassociateMemberAccountOutput, error)
-	DisassociateMemberAccountAsync(ctx workflow.Context, input *macie.DisassociateMemberAccountInput) *MacieDisassociateMemberAccountFuture
+	DisassociateMemberAccountAsync(ctx workflow.Context, input *macie.DisassociateMemberAccountInput) *DisassociateMemberAccountFuture
 
 	DisassociateS3Resources(ctx workflow.Context, input *macie.DisassociateS3ResourcesInput) (*macie.DisassociateS3ResourcesOutput, error)
-	DisassociateS3ResourcesAsync(ctx workflow.Context, input *macie.DisassociateS3ResourcesInput) *MacieDisassociateS3ResourcesFuture
+	DisassociateS3ResourcesAsync(ctx workflow.Context, input *macie.DisassociateS3ResourcesInput) *DisassociateS3ResourcesFuture
 
 	ListMemberAccounts(ctx workflow.Context, input *macie.ListMemberAccountsInput) (*macie.ListMemberAccountsOutput, error)
-	ListMemberAccountsAsync(ctx workflow.Context, input *macie.ListMemberAccountsInput) *MacieListMemberAccountsFuture
+	ListMemberAccountsAsync(ctx workflow.Context, input *macie.ListMemberAccountsInput) *ListMemberAccountsFuture
 
 	ListS3Resources(ctx workflow.Context, input *macie.ListS3ResourcesInput) (*macie.ListS3ResourcesOutput, error)
-	ListS3ResourcesAsync(ctx workflow.Context, input *macie.ListS3ResourcesInput) *MacieListS3ResourcesFuture
+	ListS3ResourcesAsync(ctx workflow.Context, input *macie.ListS3ResourcesInput) *ListS3ResourcesFuture
 
 	UpdateS3Resources(ctx workflow.Context, input *macie.UpdateS3ResourcesInput) (*macie.UpdateS3ResourcesOutput, error)
-	UpdateS3ResourcesAsync(ctx workflow.Context, input *macie.UpdateS3ResourcesInput) *MacieUpdateS3ResourcesFuture
+	UpdateS3ResourcesAsync(ctx workflow.Context, input *macie.UpdateS3ResourcesInput) *UpdateS3ResourcesFuture
 }
 
 func NewClient() Client {

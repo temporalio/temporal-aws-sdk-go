@@ -16,364 +16,364 @@ var _ clients.VoidFuture
 
 type stub struct{}
 
-type GlacierAbortMultipartUploadFuture struct {
+type AbortMultipartUploadFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierAbortMultipartUploadFuture) Get(ctx workflow.Context) (*glacier.AbortMultipartUploadOutput, error) {
+func (r *AbortMultipartUploadFuture) Get(ctx workflow.Context) (*glacier.AbortMultipartUploadOutput, error) {
 	var output glacier.AbortMultipartUploadOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierAbortVaultLockFuture struct {
+type AbortVaultLockFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierAbortVaultLockFuture) Get(ctx workflow.Context) (*glacier.AbortVaultLockOutput, error) {
+func (r *AbortVaultLockFuture) Get(ctx workflow.Context) (*glacier.AbortVaultLockOutput, error) {
 	var output glacier.AbortVaultLockOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierAddTagsToVaultFuture struct {
+type AddTagsToVaultFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierAddTagsToVaultFuture) Get(ctx workflow.Context) (*glacier.AddTagsToVaultOutput, error) {
+func (r *AddTagsToVaultFuture) Get(ctx workflow.Context) (*glacier.AddTagsToVaultOutput, error) {
 	var output glacier.AddTagsToVaultOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierCompleteMultipartUploadFuture struct {
+type CompleteMultipartUploadFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierCompleteMultipartUploadFuture) Get(ctx workflow.Context) (*glacier.ArchiveCreationOutput, error) {
+func (r *CompleteMultipartUploadFuture) Get(ctx workflow.Context) (*glacier.ArchiveCreationOutput, error) {
 	var output glacier.ArchiveCreationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierCompleteVaultLockFuture struct {
+type CompleteVaultLockFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierCompleteVaultLockFuture) Get(ctx workflow.Context) (*glacier.CompleteVaultLockOutput, error) {
+func (r *CompleteVaultLockFuture) Get(ctx workflow.Context) (*glacier.CompleteVaultLockOutput, error) {
 	var output glacier.CompleteVaultLockOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierCreateVaultFuture struct {
+type CreateVaultFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierCreateVaultFuture) Get(ctx workflow.Context) (*glacier.CreateVaultOutput, error) {
+func (r *CreateVaultFuture) Get(ctx workflow.Context) (*glacier.CreateVaultOutput, error) {
 	var output glacier.CreateVaultOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierDeleteArchiveFuture struct {
+type DeleteArchiveFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierDeleteArchiveFuture) Get(ctx workflow.Context) (*glacier.DeleteArchiveOutput, error) {
+func (r *DeleteArchiveFuture) Get(ctx workflow.Context) (*glacier.DeleteArchiveOutput, error) {
 	var output glacier.DeleteArchiveOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierDeleteVaultFuture struct {
+type DeleteVaultFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierDeleteVaultFuture) Get(ctx workflow.Context) (*glacier.DeleteVaultOutput, error) {
+func (r *DeleteVaultFuture) Get(ctx workflow.Context) (*glacier.DeleteVaultOutput, error) {
 	var output glacier.DeleteVaultOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierDeleteVaultAccessPolicyFuture struct {
+type DeleteVaultAccessPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierDeleteVaultAccessPolicyFuture) Get(ctx workflow.Context) (*glacier.DeleteVaultAccessPolicyOutput, error) {
+func (r *DeleteVaultAccessPolicyFuture) Get(ctx workflow.Context) (*glacier.DeleteVaultAccessPolicyOutput, error) {
 	var output glacier.DeleteVaultAccessPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierDeleteVaultNotificationsFuture struct {
+type DeleteVaultNotificationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierDeleteVaultNotificationsFuture) Get(ctx workflow.Context) (*glacier.DeleteVaultNotificationsOutput, error) {
+func (r *DeleteVaultNotificationsFuture) Get(ctx workflow.Context) (*glacier.DeleteVaultNotificationsOutput, error) {
 	var output glacier.DeleteVaultNotificationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierDescribeJobFuture struct {
+type DescribeJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierDescribeJobFuture) Get(ctx workflow.Context) (*glacier.JobDescription, error) {
+func (r *DescribeJobFuture) Get(ctx workflow.Context) (*glacier.JobDescription, error) {
 	var output glacier.JobDescription
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierDescribeVaultFuture struct {
+type DescribeVaultFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierDescribeVaultFuture) Get(ctx workflow.Context) (*glacier.DescribeVaultOutput, error) {
+func (r *DescribeVaultFuture) Get(ctx workflow.Context) (*glacier.DescribeVaultOutput, error) {
 	var output glacier.DescribeVaultOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierGetDataRetrievalPolicyFuture struct {
+type GetDataRetrievalPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierGetDataRetrievalPolicyFuture) Get(ctx workflow.Context) (*glacier.GetDataRetrievalPolicyOutput, error) {
+func (r *GetDataRetrievalPolicyFuture) Get(ctx workflow.Context) (*glacier.GetDataRetrievalPolicyOutput, error) {
 	var output glacier.GetDataRetrievalPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierGetJobOutputFuture struct {
+type GetJobOutputFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierGetJobOutputFuture) Get(ctx workflow.Context) (*glacier.GetJobOutputOutput, error) {
+func (r *GetJobOutputFuture) Get(ctx workflow.Context) (*glacier.GetJobOutputOutput, error) {
 	var output glacier.GetJobOutputOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierGetVaultAccessPolicyFuture struct {
+type GetVaultAccessPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierGetVaultAccessPolicyFuture) Get(ctx workflow.Context) (*glacier.GetVaultAccessPolicyOutput, error) {
+func (r *GetVaultAccessPolicyFuture) Get(ctx workflow.Context) (*glacier.GetVaultAccessPolicyOutput, error) {
 	var output glacier.GetVaultAccessPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierGetVaultLockFuture struct {
+type GetVaultLockFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierGetVaultLockFuture) Get(ctx workflow.Context) (*glacier.GetVaultLockOutput, error) {
+func (r *GetVaultLockFuture) Get(ctx workflow.Context) (*glacier.GetVaultLockOutput, error) {
 	var output glacier.GetVaultLockOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierGetVaultNotificationsFuture struct {
+type GetVaultNotificationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierGetVaultNotificationsFuture) Get(ctx workflow.Context) (*glacier.GetVaultNotificationsOutput, error) {
+func (r *GetVaultNotificationsFuture) Get(ctx workflow.Context) (*glacier.GetVaultNotificationsOutput, error) {
 	var output glacier.GetVaultNotificationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierInitiateJobFuture struct {
+type InitiateJobFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierInitiateJobFuture) Get(ctx workflow.Context) (*glacier.InitiateJobOutput, error) {
+func (r *InitiateJobFuture) Get(ctx workflow.Context) (*glacier.InitiateJobOutput, error) {
 	var output glacier.InitiateJobOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierInitiateMultipartUploadFuture struct {
+type InitiateMultipartUploadFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierInitiateMultipartUploadFuture) Get(ctx workflow.Context) (*glacier.InitiateMultipartUploadOutput, error) {
+func (r *InitiateMultipartUploadFuture) Get(ctx workflow.Context) (*glacier.InitiateMultipartUploadOutput, error) {
 	var output glacier.InitiateMultipartUploadOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierInitiateVaultLockFuture struct {
+type InitiateVaultLockFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierInitiateVaultLockFuture) Get(ctx workflow.Context) (*glacier.InitiateVaultLockOutput, error) {
+func (r *InitiateVaultLockFuture) Get(ctx workflow.Context) (*glacier.InitiateVaultLockOutput, error) {
 	var output glacier.InitiateVaultLockOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierListJobsFuture struct {
+type ListJobsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierListJobsFuture) Get(ctx workflow.Context) (*glacier.ListJobsOutput, error) {
+func (r *ListJobsFuture) Get(ctx workflow.Context) (*glacier.ListJobsOutput, error) {
 	var output glacier.ListJobsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierListMultipartUploadsFuture struct {
+type ListMultipartUploadsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierListMultipartUploadsFuture) Get(ctx workflow.Context) (*glacier.ListMultipartUploadsOutput, error) {
+func (r *ListMultipartUploadsFuture) Get(ctx workflow.Context) (*glacier.ListMultipartUploadsOutput, error) {
 	var output glacier.ListMultipartUploadsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierListPartsFuture struct {
+type ListPartsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierListPartsFuture) Get(ctx workflow.Context) (*glacier.ListPartsOutput, error) {
+func (r *ListPartsFuture) Get(ctx workflow.Context) (*glacier.ListPartsOutput, error) {
 	var output glacier.ListPartsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierListProvisionedCapacityFuture struct {
+type ListProvisionedCapacityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierListProvisionedCapacityFuture) Get(ctx workflow.Context) (*glacier.ListProvisionedCapacityOutput, error) {
+func (r *ListProvisionedCapacityFuture) Get(ctx workflow.Context) (*glacier.ListProvisionedCapacityOutput, error) {
 	var output glacier.ListProvisionedCapacityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierListTagsForVaultFuture struct {
+type ListTagsForVaultFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierListTagsForVaultFuture) Get(ctx workflow.Context) (*glacier.ListTagsForVaultOutput, error) {
+func (r *ListTagsForVaultFuture) Get(ctx workflow.Context) (*glacier.ListTagsForVaultOutput, error) {
 	var output glacier.ListTagsForVaultOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierListVaultsFuture struct {
+type ListVaultsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierListVaultsFuture) Get(ctx workflow.Context) (*glacier.ListVaultsOutput, error) {
+func (r *ListVaultsFuture) Get(ctx workflow.Context) (*glacier.ListVaultsOutput, error) {
 	var output glacier.ListVaultsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierPurchaseProvisionedCapacityFuture struct {
+type PurchaseProvisionedCapacityFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierPurchaseProvisionedCapacityFuture) Get(ctx workflow.Context) (*glacier.PurchaseProvisionedCapacityOutput, error) {
+func (r *PurchaseProvisionedCapacityFuture) Get(ctx workflow.Context) (*glacier.PurchaseProvisionedCapacityOutput, error) {
 	var output glacier.PurchaseProvisionedCapacityOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierRemoveTagsFromVaultFuture struct {
+type RemoveTagsFromVaultFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierRemoveTagsFromVaultFuture) Get(ctx workflow.Context) (*glacier.RemoveTagsFromVaultOutput, error) {
+func (r *RemoveTagsFromVaultFuture) Get(ctx workflow.Context) (*glacier.RemoveTagsFromVaultOutput, error) {
 	var output glacier.RemoveTagsFromVaultOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierSetDataRetrievalPolicyFuture struct {
+type SetDataRetrievalPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierSetDataRetrievalPolicyFuture) Get(ctx workflow.Context) (*glacier.SetDataRetrievalPolicyOutput, error) {
+func (r *SetDataRetrievalPolicyFuture) Get(ctx workflow.Context) (*glacier.SetDataRetrievalPolicyOutput, error) {
 	var output glacier.SetDataRetrievalPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierSetVaultAccessPolicyFuture struct {
+type SetVaultAccessPolicyFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierSetVaultAccessPolicyFuture) Get(ctx workflow.Context) (*glacier.SetVaultAccessPolicyOutput, error) {
+func (r *SetVaultAccessPolicyFuture) Get(ctx workflow.Context) (*glacier.SetVaultAccessPolicyOutput, error) {
 	var output glacier.SetVaultAccessPolicyOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierSetVaultNotificationsFuture struct {
+type SetVaultNotificationsFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierSetVaultNotificationsFuture) Get(ctx workflow.Context) (*glacier.SetVaultNotificationsOutput, error) {
+func (r *SetVaultNotificationsFuture) Get(ctx workflow.Context) (*glacier.SetVaultNotificationsOutput, error) {
 	var output glacier.SetVaultNotificationsOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierUploadArchiveFuture struct {
+type UploadArchiveFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierUploadArchiveFuture) Get(ctx workflow.Context) (*glacier.ArchiveCreationOutput, error) {
+func (r *UploadArchiveFuture) Get(ctx workflow.Context) (*glacier.ArchiveCreationOutput, error) {
 	var output glacier.ArchiveCreationOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
 }
 
-type GlacierUploadMultipartPartFuture struct {
+type UploadMultipartPartFuture struct {
 	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
-func (r *GlacierUploadMultipartPartFuture) Get(ctx workflow.Context) (*glacier.UploadMultipartPartOutput, error) {
+func (r *UploadMultipartPartFuture) Get(ctx workflow.Context) (*glacier.UploadMultipartPartOutput, error) {
 	var output glacier.UploadMultipartPartOutput
 	err := r.Future.Get(ctx, &output)
 	return &output, err
@@ -385,9 +385,9 @@ func (a *stub) AbortMultipartUpload(ctx workflow.Context, input *glacier.AbortMu
 	return &output, err
 }
 
-func (a *stub) AbortMultipartUploadAsync(ctx workflow.Context, input *glacier.AbortMultipartUploadInput) *GlacierAbortMultipartUploadFuture {
+func (a *stub) AbortMultipartUploadAsync(ctx workflow.Context, input *glacier.AbortMultipartUploadInput) *AbortMultipartUploadFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.AbortMultipartUpload", input)
-	return &GlacierAbortMultipartUploadFuture{Future: future}
+	return &AbortMultipartUploadFuture{Future: future}
 }
 
 func (a *stub) AbortVaultLock(ctx workflow.Context, input *glacier.AbortVaultLockInput) (*glacier.AbortVaultLockOutput, error) {
@@ -396,9 +396,9 @@ func (a *stub) AbortVaultLock(ctx workflow.Context, input *glacier.AbortVaultLoc
 	return &output, err
 }
 
-func (a *stub) AbortVaultLockAsync(ctx workflow.Context, input *glacier.AbortVaultLockInput) *GlacierAbortVaultLockFuture {
+func (a *stub) AbortVaultLockAsync(ctx workflow.Context, input *glacier.AbortVaultLockInput) *AbortVaultLockFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.AbortVaultLock", input)
-	return &GlacierAbortVaultLockFuture{Future: future}
+	return &AbortVaultLockFuture{Future: future}
 }
 
 func (a *stub) AddTagsToVault(ctx workflow.Context, input *glacier.AddTagsToVaultInput) (*glacier.AddTagsToVaultOutput, error) {
@@ -407,9 +407,9 @@ func (a *stub) AddTagsToVault(ctx workflow.Context, input *glacier.AddTagsToVaul
 	return &output, err
 }
 
-func (a *stub) AddTagsToVaultAsync(ctx workflow.Context, input *glacier.AddTagsToVaultInput) *GlacierAddTagsToVaultFuture {
+func (a *stub) AddTagsToVaultAsync(ctx workflow.Context, input *glacier.AddTagsToVaultInput) *AddTagsToVaultFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.AddTagsToVault", input)
-	return &GlacierAddTagsToVaultFuture{Future: future}
+	return &AddTagsToVaultFuture{Future: future}
 }
 
 func (a *stub) CompleteMultipartUpload(ctx workflow.Context, input *glacier.CompleteMultipartUploadInput) (*glacier.ArchiveCreationOutput, error) {
@@ -418,9 +418,9 @@ func (a *stub) CompleteMultipartUpload(ctx workflow.Context, input *glacier.Comp
 	return &output, err
 }
 
-func (a *stub) CompleteMultipartUploadAsync(ctx workflow.Context, input *glacier.CompleteMultipartUploadInput) *GlacierCompleteMultipartUploadFuture {
+func (a *stub) CompleteMultipartUploadAsync(ctx workflow.Context, input *glacier.CompleteMultipartUploadInput) *CompleteMultipartUploadFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.CompleteMultipartUpload", input)
-	return &GlacierCompleteMultipartUploadFuture{Future: future}
+	return &CompleteMultipartUploadFuture{Future: future}
 }
 
 func (a *stub) CompleteVaultLock(ctx workflow.Context, input *glacier.CompleteVaultLockInput) (*glacier.CompleteVaultLockOutput, error) {
@@ -429,9 +429,9 @@ func (a *stub) CompleteVaultLock(ctx workflow.Context, input *glacier.CompleteVa
 	return &output, err
 }
 
-func (a *stub) CompleteVaultLockAsync(ctx workflow.Context, input *glacier.CompleteVaultLockInput) *GlacierCompleteVaultLockFuture {
+func (a *stub) CompleteVaultLockAsync(ctx workflow.Context, input *glacier.CompleteVaultLockInput) *CompleteVaultLockFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.CompleteVaultLock", input)
-	return &GlacierCompleteVaultLockFuture{Future: future}
+	return &CompleteVaultLockFuture{Future: future}
 }
 
 func (a *stub) CreateVault(ctx workflow.Context, input *glacier.CreateVaultInput) (*glacier.CreateVaultOutput, error) {
@@ -440,9 +440,9 @@ func (a *stub) CreateVault(ctx workflow.Context, input *glacier.CreateVaultInput
 	return &output, err
 }
 
-func (a *stub) CreateVaultAsync(ctx workflow.Context, input *glacier.CreateVaultInput) *GlacierCreateVaultFuture {
+func (a *stub) CreateVaultAsync(ctx workflow.Context, input *glacier.CreateVaultInput) *CreateVaultFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.CreateVault", input)
-	return &GlacierCreateVaultFuture{Future: future}
+	return &CreateVaultFuture{Future: future}
 }
 
 func (a *stub) DeleteArchive(ctx workflow.Context, input *glacier.DeleteArchiveInput) (*glacier.DeleteArchiveOutput, error) {
@@ -451,9 +451,9 @@ func (a *stub) DeleteArchive(ctx workflow.Context, input *glacier.DeleteArchiveI
 	return &output, err
 }
 
-func (a *stub) DeleteArchiveAsync(ctx workflow.Context, input *glacier.DeleteArchiveInput) *GlacierDeleteArchiveFuture {
+func (a *stub) DeleteArchiveAsync(ctx workflow.Context, input *glacier.DeleteArchiveInput) *DeleteArchiveFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.DeleteArchive", input)
-	return &GlacierDeleteArchiveFuture{Future: future}
+	return &DeleteArchiveFuture{Future: future}
 }
 
 func (a *stub) DeleteVault(ctx workflow.Context, input *glacier.DeleteVaultInput) (*glacier.DeleteVaultOutput, error) {
@@ -462,9 +462,9 @@ func (a *stub) DeleteVault(ctx workflow.Context, input *glacier.DeleteVaultInput
 	return &output, err
 }
 
-func (a *stub) DeleteVaultAsync(ctx workflow.Context, input *glacier.DeleteVaultInput) *GlacierDeleteVaultFuture {
+func (a *stub) DeleteVaultAsync(ctx workflow.Context, input *glacier.DeleteVaultInput) *DeleteVaultFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.DeleteVault", input)
-	return &GlacierDeleteVaultFuture{Future: future}
+	return &DeleteVaultFuture{Future: future}
 }
 
 func (a *stub) DeleteVaultAccessPolicy(ctx workflow.Context, input *glacier.DeleteVaultAccessPolicyInput) (*glacier.DeleteVaultAccessPolicyOutput, error) {
@@ -473,9 +473,9 @@ func (a *stub) DeleteVaultAccessPolicy(ctx workflow.Context, input *glacier.Dele
 	return &output, err
 }
 
-func (a *stub) DeleteVaultAccessPolicyAsync(ctx workflow.Context, input *glacier.DeleteVaultAccessPolicyInput) *GlacierDeleteVaultAccessPolicyFuture {
+func (a *stub) DeleteVaultAccessPolicyAsync(ctx workflow.Context, input *glacier.DeleteVaultAccessPolicyInput) *DeleteVaultAccessPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.DeleteVaultAccessPolicy", input)
-	return &GlacierDeleteVaultAccessPolicyFuture{Future: future}
+	return &DeleteVaultAccessPolicyFuture{Future: future}
 }
 
 func (a *stub) DeleteVaultNotifications(ctx workflow.Context, input *glacier.DeleteVaultNotificationsInput) (*glacier.DeleteVaultNotificationsOutput, error) {
@@ -484,9 +484,9 @@ func (a *stub) DeleteVaultNotifications(ctx workflow.Context, input *glacier.Del
 	return &output, err
 }
 
-func (a *stub) DeleteVaultNotificationsAsync(ctx workflow.Context, input *glacier.DeleteVaultNotificationsInput) *GlacierDeleteVaultNotificationsFuture {
+func (a *stub) DeleteVaultNotificationsAsync(ctx workflow.Context, input *glacier.DeleteVaultNotificationsInput) *DeleteVaultNotificationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.DeleteVaultNotifications", input)
-	return &GlacierDeleteVaultNotificationsFuture{Future: future}
+	return &DeleteVaultNotificationsFuture{Future: future}
 }
 
 func (a *stub) DescribeJob(ctx workflow.Context, input *glacier.DescribeJobInput) (*glacier.JobDescription, error) {
@@ -495,9 +495,9 @@ func (a *stub) DescribeJob(ctx workflow.Context, input *glacier.DescribeJobInput
 	return &output, err
 }
 
-func (a *stub) DescribeJobAsync(ctx workflow.Context, input *glacier.DescribeJobInput) *GlacierDescribeJobFuture {
+func (a *stub) DescribeJobAsync(ctx workflow.Context, input *glacier.DescribeJobInput) *DescribeJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.DescribeJob", input)
-	return &GlacierDescribeJobFuture{Future: future}
+	return &DescribeJobFuture{Future: future}
 }
 
 func (a *stub) DescribeVault(ctx workflow.Context, input *glacier.DescribeVaultInput) (*glacier.DescribeVaultOutput, error) {
@@ -506,9 +506,9 @@ func (a *stub) DescribeVault(ctx workflow.Context, input *glacier.DescribeVaultI
 	return &output, err
 }
 
-func (a *stub) DescribeVaultAsync(ctx workflow.Context, input *glacier.DescribeVaultInput) *GlacierDescribeVaultFuture {
+func (a *stub) DescribeVaultAsync(ctx workflow.Context, input *glacier.DescribeVaultInput) *DescribeVaultFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.DescribeVault", input)
-	return &GlacierDescribeVaultFuture{Future: future}
+	return &DescribeVaultFuture{Future: future}
 }
 
 func (a *stub) GetDataRetrievalPolicy(ctx workflow.Context, input *glacier.GetDataRetrievalPolicyInput) (*glacier.GetDataRetrievalPolicyOutput, error) {
@@ -517,9 +517,9 @@ func (a *stub) GetDataRetrievalPolicy(ctx workflow.Context, input *glacier.GetDa
 	return &output, err
 }
 
-func (a *stub) GetDataRetrievalPolicyAsync(ctx workflow.Context, input *glacier.GetDataRetrievalPolicyInput) *GlacierGetDataRetrievalPolicyFuture {
+func (a *stub) GetDataRetrievalPolicyAsync(ctx workflow.Context, input *glacier.GetDataRetrievalPolicyInput) *GetDataRetrievalPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.GetDataRetrievalPolicy", input)
-	return &GlacierGetDataRetrievalPolicyFuture{Future: future}
+	return &GetDataRetrievalPolicyFuture{Future: future}
 }
 
 func (a *stub) GetJobOutput(ctx workflow.Context, input *glacier.GetJobOutputInput) (*glacier.GetJobOutputOutput, error) {
@@ -528,9 +528,9 @@ func (a *stub) GetJobOutput(ctx workflow.Context, input *glacier.GetJobOutputInp
 	return &output, err
 }
 
-func (a *stub) GetJobOutputAsync(ctx workflow.Context, input *glacier.GetJobOutputInput) *GlacierGetJobOutputFuture {
+func (a *stub) GetJobOutputAsync(ctx workflow.Context, input *glacier.GetJobOutputInput) *GetJobOutputFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.GetJobOutput", input)
-	return &GlacierGetJobOutputFuture{Future: future}
+	return &GetJobOutputFuture{Future: future}
 }
 
 func (a *stub) GetVaultAccessPolicy(ctx workflow.Context, input *glacier.GetVaultAccessPolicyInput) (*glacier.GetVaultAccessPolicyOutput, error) {
@@ -539,9 +539,9 @@ func (a *stub) GetVaultAccessPolicy(ctx workflow.Context, input *glacier.GetVaul
 	return &output, err
 }
 
-func (a *stub) GetVaultAccessPolicyAsync(ctx workflow.Context, input *glacier.GetVaultAccessPolicyInput) *GlacierGetVaultAccessPolicyFuture {
+func (a *stub) GetVaultAccessPolicyAsync(ctx workflow.Context, input *glacier.GetVaultAccessPolicyInput) *GetVaultAccessPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.GetVaultAccessPolicy", input)
-	return &GlacierGetVaultAccessPolicyFuture{Future: future}
+	return &GetVaultAccessPolicyFuture{Future: future}
 }
 
 func (a *stub) GetVaultLock(ctx workflow.Context, input *glacier.GetVaultLockInput) (*glacier.GetVaultLockOutput, error) {
@@ -550,9 +550,9 @@ func (a *stub) GetVaultLock(ctx workflow.Context, input *glacier.GetVaultLockInp
 	return &output, err
 }
 
-func (a *stub) GetVaultLockAsync(ctx workflow.Context, input *glacier.GetVaultLockInput) *GlacierGetVaultLockFuture {
+func (a *stub) GetVaultLockAsync(ctx workflow.Context, input *glacier.GetVaultLockInput) *GetVaultLockFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.GetVaultLock", input)
-	return &GlacierGetVaultLockFuture{Future: future}
+	return &GetVaultLockFuture{Future: future}
 }
 
 func (a *stub) GetVaultNotifications(ctx workflow.Context, input *glacier.GetVaultNotificationsInput) (*glacier.GetVaultNotificationsOutput, error) {
@@ -561,9 +561,9 @@ func (a *stub) GetVaultNotifications(ctx workflow.Context, input *glacier.GetVau
 	return &output, err
 }
 
-func (a *stub) GetVaultNotificationsAsync(ctx workflow.Context, input *glacier.GetVaultNotificationsInput) *GlacierGetVaultNotificationsFuture {
+func (a *stub) GetVaultNotificationsAsync(ctx workflow.Context, input *glacier.GetVaultNotificationsInput) *GetVaultNotificationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.GetVaultNotifications", input)
-	return &GlacierGetVaultNotificationsFuture{Future: future}
+	return &GetVaultNotificationsFuture{Future: future}
 }
 
 func (a *stub) InitiateJob(ctx workflow.Context, input *glacier.InitiateJobInput) (*glacier.InitiateJobOutput, error) {
@@ -572,9 +572,9 @@ func (a *stub) InitiateJob(ctx workflow.Context, input *glacier.InitiateJobInput
 	return &output, err
 }
 
-func (a *stub) InitiateJobAsync(ctx workflow.Context, input *glacier.InitiateJobInput) *GlacierInitiateJobFuture {
+func (a *stub) InitiateJobAsync(ctx workflow.Context, input *glacier.InitiateJobInput) *InitiateJobFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.InitiateJob", input)
-	return &GlacierInitiateJobFuture{Future: future}
+	return &InitiateJobFuture{Future: future}
 }
 
 func (a *stub) InitiateMultipartUpload(ctx workflow.Context, input *glacier.InitiateMultipartUploadInput) (*glacier.InitiateMultipartUploadOutput, error) {
@@ -583,9 +583,9 @@ func (a *stub) InitiateMultipartUpload(ctx workflow.Context, input *glacier.Init
 	return &output, err
 }
 
-func (a *stub) InitiateMultipartUploadAsync(ctx workflow.Context, input *glacier.InitiateMultipartUploadInput) *GlacierInitiateMultipartUploadFuture {
+func (a *stub) InitiateMultipartUploadAsync(ctx workflow.Context, input *glacier.InitiateMultipartUploadInput) *InitiateMultipartUploadFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.InitiateMultipartUpload", input)
-	return &GlacierInitiateMultipartUploadFuture{Future: future}
+	return &InitiateMultipartUploadFuture{Future: future}
 }
 
 func (a *stub) InitiateVaultLock(ctx workflow.Context, input *glacier.InitiateVaultLockInput) (*glacier.InitiateVaultLockOutput, error) {
@@ -594,9 +594,9 @@ func (a *stub) InitiateVaultLock(ctx workflow.Context, input *glacier.InitiateVa
 	return &output, err
 }
 
-func (a *stub) InitiateVaultLockAsync(ctx workflow.Context, input *glacier.InitiateVaultLockInput) *GlacierInitiateVaultLockFuture {
+func (a *stub) InitiateVaultLockAsync(ctx workflow.Context, input *glacier.InitiateVaultLockInput) *InitiateVaultLockFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.InitiateVaultLock", input)
-	return &GlacierInitiateVaultLockFuture{Future: future}
+	return &InitiateVaultLockFuture{Future: future}
 }
 
 func (a *stub) ListJobs(ctx workflow.Context, input *glacier.ListJobsInput) (*glacier.ListJobsOutput, error) {
@@ -605,9 +605,9 @@ func (a *stub) ListJobs(ctx workflow.Context, input *glacier.ListJobsInput) (*gl
 	return &output, err
 }
 
-func (a *stub) ListJobsAsync(ctx workflow.Context, input *glacier.ListJobsInput) *GlacierListJobsFuture {
+func (a *stub) ListJobsAsync(ctx workflow.Context, input *glacier.ListJobsInput) *ListJobsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.ListJobs", input)
-	return &GlacierListJobsFuture{Future: future}
+	return &ListJobsFuture{Future: future}
 }
 
 func (a *stub) ListMultipartUploads(ctx workflow.Context, input *glacier.ListMultipartUploadsInput) (*glacier.ListMultipartUploadsOutput, error) {
@@ -616,9 +616,9 @@ func (a *stub) ListMultipartUploads(ctx workflow.Context, input *glacier.ListMul
 	return &output, err
 }
 
-func (a *stub) ListMultipartUploadsAsync(ctx workflow.Context, input *glacier.ListMultipartUploadsInput) *GlacierListMultipartUploadsFuture {
+func (a *stub) ListMultipartUploadsAsync(ctx workflow.Context, input *glacier.ListMultipartUploadsInput) *ListMultipartUploadsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.ListMultipartUploads", input)
-	return &GlacierListMultipartUploadsFuture{Future: future}
+	return &ListMultipartUploadsFuture{Future: future}
 }
 
 func (a *stub) ListParts(ctx workflow.Context, input *glacier.ListPartsInput) (*glacier.ListPartsOutput, error) {
@@ -627,9 +627,9 @@ func (a *stub) ListParts(ctx workflow.Context, input *glacier.ListPartsInput) (*
 	return &output, err
 }
 
-func (a *stub) ListPartsAsync(ctx workflow.Context, input *glacier.ListPartsInput) *GlacierListPartsFuture {
+func (a *stub) ListPartsAsync(ctx workflow.Context, input *glacier.ListPartsInput) *ListPartsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.ListParts", input)
-	return &GlacierListPartsFuture{Future: future}
+	return &ListPartsFuture{Future: future}
 }
 
 func (a *stub) ListProvisionedCapacity(ctx workflow.Context, input *glacier.ListProvisionedCapacityInput) (*glacier.ListProvisionedCapacityOutput, error) {
@@ -638,9 +638,9 @@ func (a *stub) ListProvisionedCapacity(ctx workflow.Context, input *glacier.List
 	return &output, err
 }
 
-func (a *stub) ListProvisionedCapacityAsync(ctx workflow.Context, input *glacier.ListProvisionedCapacityInput) *GlacierListProvisionedCapacityFuture {
+func (a *stub) ListProvisionedCapacityAsync(ctx workflow.Context, input *glacier.ListProvisionedCapacityInput) *ListProvisionedCapacityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.ListProvisionedCapacity", input)
-	return &GlacierListProvisionedCapacityFuture{Future: future}
+	return &ListProvisionedCapacityFuture{Future: future}
 }
 
 func (a *stub) ListTagsForVault(ctx workflow.Context, input *glacier.ListTagsForVaultInput) (*glacier.ListTagsForVaultOutput, error) {
@@ -649,9 +649,9 @@ func (a *stub) ListTagsForVault(ctx workflow.Context, input *glacier.ListTagsFor
 	return &output, err
 }
 
-func (a *stub) ListTagsForVaultAsync(ctx workflow.Context, input *glacier.ListTagsForVaultInput) *GlacierListTagsForVaultFuture {
+func (a *stub) ListTagsForVaultAsync(ctx workflow.Context, input *glacier.ListTagsForVaultInput) *ListTagsForVaultFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.ListTagsForVault", input)
-	return &GlacierListTagsForVaultFuture{Future: future}
+	return &ListTagsForVaultFuture{Future: future}
 }
 
 func (a *stub) ListVaults(ctx workflow.Context, input *glacier.ListVaultsInput) (*glacier.ListVaultsOutput, error) {
@@ -660,9 +660,9 @@ func (a *stub) ListVaults(ctx workflow.Context, input *glacier.ListVaultsInput) 
 	return &output, err
 }
 
-func (a *stub) ListVaultsAsync(ctx workflow.Context, input *glacier.ListVaultsInput) *GlacierListVaultsFuture {
+func (a *stub) ListVaultsAsync(ctx workflow.Context, input *glacier.ListVaultsInput) *ListVaultsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.ListVaults", input)
-	return &GlacierListVaultsFuture{Future: future}
+	return &ListVaultsFuture{Future: future}
 }
 
 func (a *stub) PurchaseProvisionedCapacity(ctx workflow.Context, input *glacier.PurchaseProvisionedCapacityInput) (*glacier.PurchaseProvisionedCapacityOutput, error) {
@@ -671,9 +671,9 @@ func (a *stub) PurchaseProvisionedCapacity(ctx workflow.Context, input *glacier.
 	return &output, err
 }
 
-func (a *stub) PurchaseProvisionedCapacityAsync(ctx workflow.Context, input *glacier.PurchaseProvisionedCapacityInput) *GlacierPurchaseProvisionedCapacityFuture {
+func (a *stub) PurchaseProvisionedCapacityAsync(ctx workflow.Context, input *glacier.PurchaseProvisionedCapacityInput) *PurchaseProvisionedCapacityFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.PurchaseProvisionedCapacity", input)
-	return &GlacierPurchaseProvisionedCapacityFuture{Future: future}
+	return &PurchaseProvisionedCapacityFuture{Future: future}
 }
 
 func (a *stub) RemoveTagsFromVault(ctx workflow.Context, input *glacier.RemoveTagsFromVaultInput) (*glacier.RemoveTagsFromVaultOutput, error) {
@@ -682,9 +682,9 @@ func (a *stub) RemoveTagsFromVault(ctx workflow.Context, input *glacier.RemoveTa
 	return &output, err
 }
 
-func (a *stub) RemoveTagsFromVaultAsync(ctx workflow.Context, input *glacier.RemoveTagsFromVaultInput) *GlacierRemoveTagsFromVaultFuture {
+func (a *stub) RemoveTagsFromVaultAsync(ctx workflow.Context, input *glacier.RemoveTagsFromVaultInput) *RemoveTagsFromVaultFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.RemoveTagsFromVault", input)
-	return &GlacierRemoveTagsFromVaultFuture{Future: future}
+	return &RemoveTagsFromVaultFuture{Future: future}
 }
 
 func (a *stub) SetDataRetrievalPolicy(ctx workflow.Context, input *glacier.SetDataRetrievalPolicyInput) (*glacier.SetDataRetrievalPolicyOutput, error) {
@@ -693,9 +693,9 @@ func (a *stub) SetDataRetrievalPolicy(ctx workflow.Context, input *glacier.SetDa
 	return &output, err
 }
 
-func (a *stub) SetDataRetrievalPolicyAsync(ctx workflow.Context, input *glacier.SetDataRetrievalPolicyInput) *GlacierSetDataRetrievalPolicyFuture {
+func (a *stub) SetDataRetrievalPolicyAsync(ctx workflow.Context, input *glacier.SetDataRetrievalPolicyInput) *SetDataRetrievalPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.SetDataRetrievalPolicy", input)
-	return &GlacierSetDataRetrievalPolicyFuture{Future: future}
+	return &SetDataRetrievalPolicyFuture{Future: future}
 }
 
 func (a *stub) SetVaultAccessPolicy(ctx workflow.Context, input *glacier.SetVaultAccessPolicyInput) (*glacier.SetVaultAccessPolicyOutput, error) {
@@ -704,9 +704,9 @@ func (a *stub) SetVaultAccessPolicy(ctx workflow.Context, input *glacier.SetVaul
 	return &output, err
 }
 
-func (a *stub) SetVaultAccessPolicyAsync(ctx workflow.Context, input *glacier.SetVaultAccessPolicyInput) *GlacierSetVaultAccessPolicyFuture {
+func (a *stub) SetVaultAccessPolicyAsync(ctx workflow.Context, input *glacier.SetVaultAccessPolicyInput) *SetVaultAccessPolicyFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.SetVaultAccessPolicy", input)
-	return &GlacierSetVaultAccessPolicyFuture{Future: future}
+	return &SetVaultAccessPolicyFuture{Future: future}
 }
 
 func (a *stub) SetVaultNotifications(ctx workflow.Context, input *glacier.SetVaultNotificationsInput) (*glacier.SetVaultNotificationsOutput, error) {
@@ -715,9 +715,9 @@ func (a *stub) SetVaultNotifications(ctx workflow.Context, input *glacier.SetVau
 	return &output, err
 }
 
-func (a *stub) SetVaultNotificationsAsync(ctx workflow.Context, input *glacier.SetVaultNotificationsInput) *GlacierSetVaultNotificationsFuture {
+func (a *stub) SetVaultNotificationsAsync(ctx workflow.Context, input *glacier.SetVaultNotificationsInput) *SetVaultNotificationsFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.SetVaultNotifications", input)
-	return &GlacierSetVaultNotificationsFuture{Future: future}
+	return &SetVaultNotificationsFuture{Future: future}
 }
 
 func (a *stub) UploadArchive(ctx workflow.Context, input *glacier.UploadArchiveInput) (*glacier.ArchiveCreationOutput, error) {
@@ -726,9 +726,9 @@ func (a *stub) UploadArchive(ctx workflow.Context, input *glacier.UploadArchiveI
 	return &output, err
 }
 
-func (a *stub) UploadArchiveAsync(ctx workflow.Context, input *glacier.UploadArchiveInput) *GlacierUploadArchiveFuture {
+func (a *stub) UploadArchiveAsync(ctx workflow.Context, input *glacier.UploadArchiveInput) *UploadArchiveFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.UploadArchive", input)
-	return &GlacierUploadArchiveFuture{Future: future}
+	return &UploadArchiveFuture{Future: future}
 }
 
 func (a *stub) UploadMultipartPart(ctx workflow.Context, input *glacier.UploadMultipartPartInput) (*glacier.UploadMultipartPartOutput, error) {
@@ -737,9 +737,9 @@ func (a *stub) UploadMultipartPart(ctx workflow.Context, input *glacier.UploadMu
 	return &output, err
 }
 
-func (a *stub) UploadMultipartPartAsync(ctx workflow.Context, input *glacier.UploadMultipartPartInput) *GlacierUploadMultipartPartFuture {
+func (a *stub) UploadMultipartPartAsync(ctx workflow.Context, input *glacier.UploadMultipartPartInput) *UploadMultipartPartFuture {
 	future := workflow.ExecuteActivity(ctx, "aws.glacier.UploadMultipartPart", input)
-	return &GlacierUploadMultipartPartFuture{Future: future}
+	return &UploadMultipartPartFuture{Future: future}
 }
 
 func (a *stub) WaitUntilVaultExists(ctx workflow.Context, input *glacier.DescribeVaultInput) error {

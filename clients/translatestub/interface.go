@@ -16,31 +16,31 @@ var _ clients.VoidFuture
 
 type Client interface {
 	DeleteTerminology(ctx workflow.Context, input *translate.DeleteTerminologyInput) (*translate.DeleteTerminologyOutput, error)
-	DeleteTerminologyAsync(ctx workflow.Context, input *translate.DeleteTerminologyInput) *TranslateDeleteTerminologyFuture
+	DeleteTerminologyAsync(ctx workflow.Context, input *translate.DeleteTerminologyInput) *DeleteTerminologyFuture
 
 	DescribeTextTranslationJob(ctx workflow.Context, input *translate.DescribeTextTranslationJobInput) (*translate.DescribeTextTranslationJobOutput, error)
-	DescribeTextTranslationJobAsync(ctx workflow.Context, input *translate.DescribeTextTranslationJobInput) *TranslateDescribeTextTranslationJobFuture
+	DescribeTextTranslationJobAsync(ctx workflow.Context, input *translate.DescribeTextTranslationJobInput) *DescribeTextTranslationJobFuture
 
 	GetTerminology(ctx workflow.Context, input *translate.GetTerminologyInput) (*translate.GetTerminologyOutput, error)
-	GetTerminologyAsync(ctx workflow.Context, input *translate.GetTerminologyInput) *TranslateGetTerminologyFuture
+	GetTerminologyAsync(ctx workflow.Context, input *translate.GetTerminologyInput) *GetTerminologyFuture
 
 	ImportTerminology(ctx workflow.Context, input *translate.ImportTerminologyInput) (*translate.ImportTerminologyOutput, error)
-	ImportTerminologyAsync(ctx workflow.Context, input *translate.ImportTerminologyInput) *TranslateImportTerminologyFuture
+	ImportTerminologyAsync(ctx workflow.Context, input *translate.ImportTerminologyInput) *ImportTerminologyFuture
 
 	ListTerminologies(ctx workflow.Context, input *translate.ListTerminologiesInput) (*translate.ListTerminologiesOutput, error)
-	ListTerminologiesAsync(ctx workflow.Context, input *translate.ListTerminologiesInput) *TranslateListTerminologiesFuture
+	ListTerminologiesAsync(ctx workflow.Context, input *translate.ListTerminologiesInput) *ListTerminologiesFuture
 
 	ListTextTranslationJobs(ctx workflow.Context, input *translate.ListTextTranslationJobsInput) (*translate.ListTextTranslationJobsOutput, error)
-	ListTextTranslationJobsAsync(ctx workflow.Context, input *translate.ListTextTranslationJobsInput) *TranslateListTextTranslationJobsFuture
+	ListTextTranslationJobsAsync(ctx workflow.Context, input *translate.ListTextTranslationJobsInput) *ListTextTranslationJobsFuture
 
 	StartTextTranslationJob(ctx workflow.Context, input *translate.StartTextTranslationJobInput) (*translate.StartTextTranslationJobOutput, error)
-	StartTextTranslationJobAsync(ctx workflow.Context, input *translate.StartTextTranslationJobInput) *TranslateStartTextTranslationJobFuture
+	StartTextTranslationJobAsync(ctx workflow.Context, input *translate.StartTextTranslationJobInput) *StartTextTranslationJobFuture
 
 	StopTextTranslationJob(ctx workflow.Context, input *translate.StopTextTranslationJobInput) (*translate.StopTextTranslationJobOutput, error)
-	StopTextTranslationJobAsync(ctx workflow.Context, input *translate.StopTextTranslationJobInput) *TranslateStopTextTranslationJobFuture
+	StopTextTranslationJobAsync(ctx workflow.Context, input *translate.StopTextTranslationJobInput) *StopTextTranslationJobFuture
 
 	Text(ctx workflow.Context, input *translate.TextInput) (*translate.TextOutput, error)
-	TextAsync(ctx workflow.Context, input *translate.TextInput) *TranslateTextFuture
+	TextAsync(ctx workflow.Context, input *translate.TextInput) *TextFuture
 }
 
 func NewClient() Client {

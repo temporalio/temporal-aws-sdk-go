@@ -16,91 +16,91 @@ var _ clients.VoidFuture
 
 type Client interface {
 	BatchCheckLayerAvailability(ctx workflow.Context, input *ecr.BatchCheckLayerAvailabilityInput) (*ecr.BatchCheckLayerAvailabilityOutput, error)
-	BatchCheckLayerAvailabilityAsync(ctx workflow.Context, input *ecr.BatchCheckLayerAvailabilityInput) *ECRBatchCheckLayerAvailabilityFuture
+	BatchCheckLayerAvailabilityAsync(ctx workflow.Context, input *ecr.BatchCheckLayerAvailabilityInput) *BatchCheckLayerAvailabilityFuture
 
 	BatchDeleteImage(ctx workflow.Context, input *ecr.BatchDeleteImageInput) (*ecr.BatchDeleteImageOutput, error)
-	BatchDeleteImageAsync(ctx workflow.Context, input *ecr.BatchDeleteImageInput) *ECRBatchDeleteImageFuture
+	BatchDeleteImageAsync(ctx workflow.Context, input *ecr.BatchDeleteImageInput) *BatchDeleteImageFuture
 
 	BatchGetImage(ctx workflow.Context, input *ecr.BatchGetImageInput) (*ecr.BatchGetImageOutput, error)
-	BatchGetImageAsync(ctx workflow.Context, input *ecr.BatchGetImageInput) *ECRBatchGetImageFuture
+	BatchGetImageAsync(ctx workflow.Context, input *ecr.BatchGetImageInput) *BatchGetImageFuture
 
 	CompleteLayerUpload(ctx workflow.Context, input *ecr.CompleteLayerUploadInput) (*ecr.CompleteLayerUploadOutput, error)
-	CompleteLayerUploadAsync(ctx workflow.Context, input *ecr.CompleteLayerUploadInput) *ECRCompleteLayerUploadFuture
+	CompleteLayerUploadAsync(ctx workflow.Context, input *ecr.CompleteLayerUploadInput) *CompleteLayerUploadFuture
 
 	CreateRepository(ctx workflow.Context, input *ecr.CreateRepositoryInput) (*ecr.CreateRepositoryOutput, error)
-	CreateRepositoryAsync(ctx workflow.Context, input *ecr.CreateRepositoryInput) *ECRCreateRepositoryFuture
+	CreateRepositoryAsync(ctx workflow.Context, input *ecr.CreateRepositoryInput) *CreateRepositoryFuture
 
 	DeleteLifecyclePolicy(ctx workflow.Context, input *ecr.DeleteLifecyclePolicyInput) (*ecr.DeleteLifecyclePolicyOutput, error)
-	DeleteLifecyclePolicyAsync(ctx workflow.Context, input *ecr.DeleteLifecyclePolicyInput) *ECRDeleteLifecyclePolicyFuture
+	DeleteLifecyclePolicyAsync(ctx workflow.Context, input *ecr.DeleteLifecyclePolicyInput) *DeleteLifecyclePolicyFuture
 
 	DeleteRepository(ctx workflow.Context, input *ecr.DeleteRepositoryInput) (*ecr.DeleteRepositoryOutput, error)
-	DeleteRepositoryAsync(ctx workflow.Context, input *ecr.DeleteRepositoryInput) *ECRDeleteRepositoryFuture
+	DeleteRepositoryAsync(ctx workflow.Context, input *ecr.DeleteRepositoryInput) *DeleteRepositoryFuture
 
 	DeleteRepositoryPolicy(ctx workflow.Context, input *ecr.DeleteRepositoryPolicyInput) (*ecr.DeleteRepositoryPolicyOutput, error)
-	DeleteRepositoryPolicyAsync(ctx workflow.Context, input *ecr.DeleteRepositoryPolicyInput) *ECRDeleteRepositoryPolicyFuture
+	DeleteRepositoryPolicyAsync(ctx workflow.Context, input *ecr.DeleteRepositoryPolicyInput) *DeleteRepositoryPolicyFuture
 
 	DescribeImageScanFindings(ctx workflow.Context, input *ecr.DescribeImageScanFindingsInput) (*ecr.DescribeImageScanFindingsOutput, error)
-	DescribeImageScanFindingsAsync(ctx workflow.Context, input *ecr.DescribeImageScanFindingsInput) *ECRDescribeImageScanFindingsFuture
+	DescribeImageScanFindingsAsync(ctx workflow.Context, input *ecr.DescribeImageScanFindingsInput) *DescribeImageScanFindingsFuture
 
 	DescribeImages(ctx workflow.Context, input *ecr.DescribeImagesInput) (*ecr.DescribeImagesOutput, error)
-	DescribeImagesAsync(ctx workflow.Context, input *ecr.DescribeImagesInput) *ECRDescribeImagesFuture
+	DescribeImagesAsync(ctx workflow.Context, input *ecr.DescribeImagesInput) *DescribeImagesFuture
 
 	DescribeRepositories(ctx workflow.Context, input *ecr.DescribeRepositoriesInput) (*ecr.DescribeRepositoriesOutput, error)
-	DescribeRepositoriesAsync(ctx workflow.Context, input *ecr.DescribeRepositoriesInput) *ECRDescribeRepositoriesFuture
+	DescribeRepositoriesAsync(ctx workflow.Context, input *ecr.DescribeRepositoriesInput) *DescribeRepositoriesFuture
 
 	GetAuthorizationToken(ctx workflow.Context, input *ecr.GetAuthorizationTokenInput) (*ecr.GetAuthorizationTokenOutput, error)
-	GetAuthorizationTokenAsync(ctx workflow.Context, input *ecr.GetAuthorizationTokenInput) *ECRGetAuthorizationTokenFuture
+	GetAuthorizationTokenAsync(ctx workflow.Context, input *ecr.GetAuthorizationTokenInput) *GetAuthorizationTokenFuture
 
 	GetDownloadUrlForLayer(ctx workflow.Context, input *ecr.GetDownloadUrlForLayerInput) (*ecr.GetDownloadUrlForLayerOutput, error)
-	GetDownloadUrlForLayerAsync(ctx workflow.Context, input *ecr.GetDownloadUrlForLayerInput) *ECRGetDownloadUrlForLayerFuture
+	GetDownloadUrlForLayerAsync(ctx workflow.Context, input *ecr.GetDownloadUrlForLayerInput) *GetDownloadUrlForLayerFuture
 
 	GetLifecyclePolicy(ctx workflow.Context, input *ecr.GetLifecyclePolicyInput) (*ecr.GetLifecyclePolicyOutput, error)
-	GetLifecyclePolicyAsync(ctx workflow.Context, input *ecr.GetLifecyclePolicyInput) *ECRGetLifecyclePolicyFuture
+	GetLifecyclePolicyAsync(ctx workflow.Context, input *ecr.GetLifecyclePolicyInput) *GetLifecyclePolicyFuture
 
 	GetLifecyclePolicyPreview(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) (*ecr.GetLifecyclePolicyPreviewOutput, error)
-	GetLifecyclePolicyPreviewAsync(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) *ECRGetLifecyclePolicyPreviewFuture
+	GetLifecyclePolicyPreviewAsync(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) *GetLifecyclePolicyPreviewFuture
 
 	GetRepositoryPolicy(ctx workflow.Context, input *ecr.GetRepositoryPolicyInput) (*ecr.GetRepositoryPolicyOutput, error)
-	GetRepositoryPolicyAsync(ctx workflow.Context, input *ecr.GetRepositoryPolicyInput) *ECRGetRepositoryPolicyFuture
+	GetRepositoryPolicyAsync(ctx workflow.Context, input *ecr.GetRepositoryPolicyInput) *GetRepositoryPolicyFuture
 
 	InitiateLayerUpload(ctx workflow.Context, input *ecr.InitiateLayerUploadInput) (*ecr.InitiateLayerUploadOutput, error)
-	InitiateLayerUploadAsync(ctx workflow.Context, input *ecr.InitiateLayerUploadInput) *ECRInitiateLayerUploadFuture
+	InitiateLayerUploadAsync(ctx workflow.Context, input *ecr.InitiateLayerUploadInput) *InitiateLayerUploadFuture
 
 	ListImages(ctx workflow.Context, input *ecr.ListImagesInput) (*ecr.ListImagesOutput, error)
-	ListImagesAsync(ctx workflow.Context, input *ecr.ListImagesInput) *ECRListImagesFuture
+	ListImagesAsync(ctx workflow.Context, input *ecr.ListImagesInput) *ListImagesFuture
 
 	ListTagsForResource(ctx workflow.Context, input *ecr.ListTagsForResourceInput) (*ecr.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *ecr.ListTagsForResourceInput) *ECRListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *ecr.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	PutImage(ctx workflow.Context, input *ecr.PutImageInput) (*ecr.PutImageOutput, error)
-	PutImageAsync(ctx workflow.Context, input *ecr.PutImageInput) *ECRPutImageFuture
+	PutImageAsync(ctx workflow.Context, input *ecr.PutImageInput) *PutImageFuture
 
 	PutImageScanningConfiguration(ctx workflow.Context, input *ecr.PutImageScanningConfigurationInput) (*ecr.PutImageScanningConfigurationOutput, error)
-	PutImageScanningConfigurationAsync(ctx workflow.Context, input *ecr.PutImageScanningConfigurationInput) *ECRPutImageScanningConfigurationFuture
+	PutImageScanningConfigurationAsync(ctx workflow.Context, input *ecr.PutImageScanningConfigurationInput) *PutImageScanningConfigurationFuture
 
 	PutImageTagMutability(ctx workflow.Context, input *ecr.PutImageTagMutabilityInput) (*ecr.PutImageTagMutabilityOutput, error)
-	PutImageTagMutabilityAsync(ctx workflow.Context, input *ecr.PutImageTagMutabilityInput) *ECRPutImageTagMutabilityFuture
+	PutImageTagMutabilityAsync(ctx workflow.Context, input *ecr.PutImageTagMutabilityInput) *PutImageTagMutabilityFuture
 
 	PutLifecyclePolicy(ctx workflow.Context, input *ecr.PutLifecyclePolicyInput) (*ecr.PutLifecyclePolicyOutput, error)
-	PutLifecyclePolicyAsync(ctx workflow.Context, input *ecr.PutLifecyclePolicyInput) *ECRPutLifecyclePolicyFuture
+	PutLifecyclePolicyAsync(ctx workflow.Context, input *ecr.PutLifecyclePolicyInput) *PutLifecyclePolicyFuture
 
 	SetRepositoryPolicy(ctx workflow.Context, input *ecr.SetRepositoryPolicyInput) (*ecr.SetRepositoryPolicyOutput, error)
-	SetRepositoryPolicyAsync(ctx workflow.Context, input *ecr.SetRepositoryPolicyInput) *ECRSetRepositoryPolicyFuture
+	SetRepositoryPolicyAsync(ctx workflow.Context, input *ecr.SetRepositoryPolicyInput) *SetRepositoryPolicyFuture
 
 	StartImageScan(ctx workflow.Context, input *ecr.StartImageScanInput) (*ecr.StartImageScanOutput, error)
-	StartImageScanAsync(ctx workflow.Context, input *ecr.StartImageScanInput) *ECRStartImageScanFuture
+	StartImageScanAsync(ctx workflow.Context, input *ecr.StartImageScanInput) *StartImageScanFuture
 
 	StartLifecyclePolicyPreview(ctx workflow.Context, input *ecr.StartLifecyclePolicyPreviewInput) (*ecr.StartLifecyclePolicyPreviewOutput, error)
-	StartLifecyclePolicyPreviewAsync(ctx workflow.Context, input *ecr.StartLifecyclePolicyPreviewInput) *ECRStartLifecyclePolicyPreviewFuture
+	StartLifecyclePolicyPreviewAsync(ctx workflow.Context, input *ecr.StartLifecyclePolicyPreviewInput) *StartLifecyclePolicyPreviewFuture
 
 	TagResource(ctx workflow.Context, input *ecr.TagResourceInput) (*ecr.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *ecr.TagResourceInput) *ECRTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *ecr.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *ecr.UntagResourceInput) (*ecr.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *ecr.UntagResourceInput) *ECRUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *ecr.UntagResourceInput) *UntagResourceFuture
 
 	UploadLayerPart(ctx workflow.Context, input *ecr.UploadLayerPartInput) (*ecr.UploadLayerPartOutput, error)
-	UploadLayerPartAsync(ctx workflow.Context, input *ecr.UploadLayerPartInput) *ECRUploadLayerPartFuture
+	UploadLayerPartAsync(ctx workflow.Context, input *ecr.UploadLayerPartInput) *UploadLayerPartFuture
 
 	WaitUntilImageScanComplete(ctx workflow.Context, input *ecr.DescribeImageScanFindingsInput) error
 	WaitUntilImageScanCompleteAsync(ctx workflow.Context, input *ecr.DescribeImageScanFindingsInput) *clients.VoidFuture

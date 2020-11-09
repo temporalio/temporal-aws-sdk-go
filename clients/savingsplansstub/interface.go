@@ -16,31 +16,31 @@ var _ clients.VoidFuture
 
 type Client interface {
 	CreateSavingsPlan(ctx workflow.Context, input *savingsplans.CreateSavingsPlanInput) (*savingsplans.CreateSavingsPlanOutput, error)
-	CreateSavingsPlanAsync(ctx workflow.Context, input *savingsplans.CreateSavingsPlanInput) *SavingsPlansCreateSavingsPlanFuture
+	CreateSavingsPlanAsync(ctx workflow.Context, input *savingsplans.CreateSavingsPlanInput) *CreateSavingsPlanFuture
 
 	DeleteQueuedSavingsPlan(ctx workflow.Context, input *savingsplans.DeleteQueuedSavingsPlanInput) (*savingsplans.DeleteQueuedSavingsPlanOutput, error)
-	DeleteQueuedSavingsPlanAsync(ctx workflow.Context, input *savingsplans.DeleteQueuedSavingsPlanInput) *SavingsPlansDeleteQueuedSavingsPlanFuture
+	DeleteQueuedSavingsPlanAsync(ctx workflow.Context, input *savingsplans.DeleteQueuedSavingsPlanInput) *DeleteQueuedSavingsPlanFuture
 
 	DescribeSavingsPlanRates(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) (*savingsplans.DescribeSavingsPlanRatesOutput, error)
-	DescribeSavingsPlanRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) *SavingsPlansDescribeSavingsPlanRatesFuture
+	DescribeSavingsPlanRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) *DescribeSavingsPlanRatesFuture
 
 	DescribeSavingsPlans(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansInput) (*savingsplans.DescribeSavingsPlansOutput, error)
-	DescribeSavingsPlansAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansInput) *SavingsPlansDescribeSavingsPlansFuture
+	DescribeSavingsPlansAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansInput) *DescribeSavingsPlansFuture
 
 	DescribeSavingsPlansOfferingRates(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingRatesInput) (*savingsplans.DescribeSavingsPlansOfferingRatesOutput, error)
-	DescribeSavingsPlansOfferingRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingRatesInput) *SavingsPlansDescribeSavingsPlansOfferingRatesFuture
+	DescribeSavingsPlansOfferingRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingRatesInput) *DescribeSavingsPlansOfferingRatesFuture
 
 	DescribeSavingsPlansOfferings(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingsInput) (*savingsplans.DescribeSavingsPlansOfferingsOutput, error)
-	DescribeSavingsPlansOfferingsAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingsInput) *SavingsPlansDescribeSavingsPlansOfferingsFuture
+	DescribeSavingsPlansOfferingsAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingsInput) *DescribeSavingsPlansOfferingsFuture
 
 	ListTagsForResource(ctx workflow.Context, input *savingsplans.ListTagsForResourceInput) (*savingsplans.ListTagsForResourceOutput, error)
-	ListTagsForResourceAsync(ctx workflow.Context, input *savingsplans.ListTagsForResourceInput) *SavingsPlansListTagsForResourceFuture
+	ListTagsForResourceAsync(ctx workflow.Context, input *savingsplans.ListTagsForResourceInput) *ListTagsForResourceFuture
 
 	TagResource(ctx workflow.Context, input *savingsplans.TagResourceInput) (*savingsplans.TagResourceOutput, error)
-	TagResourceAsync(ctx workflow.Context, input *savingsplans.TagResourceInput) *SavingsPlansTagResourceFuture
+	TagResourceAsync(ctx workflow.Context, input *savingsplans.TagResourceInput) *TagResourceFuture
 
 	UntagResource(ctx workflow.Context, input *savingsplans.UntagResourceInput) (*savingsplans.UntagResourceOutput, error)
-	UntagResourceAsync(ctx workflow.Context, input *savingsplans.UntagResourceInput) *SavingsPlansUntagResourceFuture
+	UntagResourceAsync(ctx workflow.Context, input *savingsplans.UntagResourceInput) *UntagResourceFuture
 }
 
 func NewClient() Client {
